@@ -31,3 +31,11 @@ Makefile.in
 # http://www.gnu.org/software/texinfo
 
 /texinfo.tex
+/config/compile
+/config/config.guess
+/config/config.sub
+/config/depcomp
+/config/install-sh
+/config/missing
+build*
+/include/config.hpp.in
