@@ -39,3 +39,5 @@ Makefile.in
 /config/missing
 build*
 /include/config.hpp.in
+/compile_commands.json
+/Makefile
