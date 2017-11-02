@@ -5,14 +5,16 @@
 
 /// \file TupleTypeCat.hpp
 ///
-/// \brief Header file to cat tuple types
+/// \brief Header file to cat \c tuple parameter types, and plain types
 
 namespace SUNphi
 {
-  /// Define a tuple catting all parameter types
+  /// Define a \c tuple catting all tuple parameter types, and plain
+  /// types of all parameters
   ///
-  /// Creates a tuple from all passed parameters. If an argument is a
-  /// tuple, consider its parameter types. Otherwise consider the type itself.
+  /// Creates a \c tuple from all passed parameters. If an argument is
+  /// a tuple, consider its parameter types. Otherwise consider the
+  /// type itself.
   ///
   /// Example:
   /// \code

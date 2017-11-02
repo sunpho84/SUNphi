@@ -9,11 +9,11 @@
 
 namespace SUNphi
 {
-  /// Wraps a simple type into a tuple containing the tuple
+  /// Wraps a simple type into a \c tuple containing the type
   ///
-  /// For a generic type, put the type into a simple tuple, so that
-  /// one can then treat the type homogeneously with other tuple with
-  /// e.g. TupleTypeCatT
+  /// For a generic type, put the type into a simple \c tuple, so that
+  /// it can be treated homogeneously with other tuples in
+  /// e.g. \c TupleTypeCatT
   ///
   /// Example:
   /// \code
@@ -26,11 +26,11 @@ namespace SUNphi
     typedef std::tuple<T> type; ///< Internal mapped type
   };
   
-  /// Remap a tuple type into itself
+  /// Remap a \c tuple type into itself
   ///
-  /// For a generic type, put the type into a simple tuple, so that
-  /// one can then treat the type homogeneously with other tuple with
-  /// e.g. TupleTypeCatT
+  /// For a generic type, put the type into a simple \c tuple, so that
+  /// it can be treated homogeneously with other tuples in
+  /// e.g. \c TupleTypeCatT
   ///
   /// Example:
   /// \code
@@ -43,13 +43,13 @@ namespace SUNphi
     typedef std::tuple<T...> type; ///< Internal mapped type
   };
   
-  /// Put the type into a tuple, if the type is not already a tuple.
+  /// Put the type into a \c tuple, if the type is not already a \c tuple.
   ///
   /// The following situations are possible:
   ///
-  /// \- A non-tuple type is T put inside a tuple<T>
+  /// \li A non-tuple type \c T is put inside a \c tuple<T>
   ///
-  /// \- A tuple<T> is mapped to itself
+  /// \li A \c tuple<T> is mapped to itself
   ///
   /// Example:
   /// \code
