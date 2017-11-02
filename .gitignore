@@ -41,3 +41,6 @@ build*
 /include/config.hpp.in
 /compile_commands.json
 /Makefile
+/GPATH
+/GRTAGS
+/GTAGS
