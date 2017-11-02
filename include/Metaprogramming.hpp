@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the inclusion of all low level metaprogramming
 
+#include <metaprogramming/GroupMacroStatements.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
 
 #endif

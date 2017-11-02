@@ -11,16 +11,16 @@
 /// Example:
 ///
 /// \code
-/// #define SWAP(A,B)						\
-/// GROUP_MACRO_STATEMENTS					\
-/// (								\
-///     decltype(A) TMP=A;					\
-///     A=B;							\
-///     B=TMP;							\
-/// )
+/// #define SWAP(A,B)							\
+///   GROUP_MACRO_STATEMENTS						\
+///   (									\
+///    decltype(A) TMP=A;						\
+///    A=B;								\
+///    B=TMP;								\
+///   )
 ///
 /// int a=5,b=2;
-/// SWAP(a,b)
+/// if(a>b) SWAP(a,b);
 /// \endcode
 ///
 #define GROUP_MACRO_STATEMENTS(...)		\
