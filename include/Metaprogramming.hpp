@@ -7,6 +7,7 @@
 
 #include <metaprogramming/GroupMacroStatements.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
+#include <metaprogramming/TupleTypeCat.hpp>
 #include <metaprogramming/TupleWrap.hpp>
 
 #endif
