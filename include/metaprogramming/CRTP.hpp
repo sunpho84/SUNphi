@@ -3,7 +3,7 @@
 
 /// \file CRTP.hpp
 ///
-/// \brief Header file to support Curiously Recurring Template Pattern
+/// \brief Support for Curiously Recurring Template Pattern
 
 /// Perform the cast to base class needed for CRTP
 ///

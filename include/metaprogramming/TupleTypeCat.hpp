@@ -5,7 +5,7 @@
 
 /// \file TupleTypeCat.hpp
 ///
-/// \brief Header file to cat \c tuple parameter types, and plain types
+/// \brief Concatenate \c tuple parameter types, and plain types
 
 namespace SUNphi
 {

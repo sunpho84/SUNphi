@@ -3,7 +3,7 @@
 
 /// \file GroupMacroStatements.hpp
 ///
-/// \brief Header file for the macro to wrap a multi-statement macro
+/// \brief Macro to wrap a multi-statement macro
 
 
 /// Group a multi-statements macro to avoid breaking if-else clause

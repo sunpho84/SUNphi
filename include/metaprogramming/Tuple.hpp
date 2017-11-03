@@ -3,7 +3,7 @@
 
 /// \file Tuple.hpp
 ///
-/// \brief Header file to define Tuple
+/// \brief Define Tuple
 
 #include <tuple>
 

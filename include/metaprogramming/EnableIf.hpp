@@ -3,7 +3,7 @@
 
 /// \file EnableIf.hpp
 ///
-/// \brief Header file to define constructs derived from EnableIf
+/// \brief Define constructs derived from EnableIf
 
 #include <type_traits>
 
@@ -26,7 +26,7 @@ namespace SUNphi
   template <bool B,class T=void>
   using EnableIfT=typename std::enable_if_t<B,T>::type;
   
-  /// Defines void if parameter B is true
+  /// Defines \c void if parameter B is true
   ///
   /// Explicit specialization of \c EnableIfT for \c T=void .
   ///
@@ -38,6 +38,7 @@ namespace SUNphi
   ///    cout<<in<<endl;
   /// }
   /// \endcode
+  ///
   template <bool B>
   using VoidIf=EnableIfT<B>;
   

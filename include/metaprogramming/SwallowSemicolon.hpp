@@ -3,7 +3,7 @@
 
 /// \file SwallowSemicolon.hpp
 ///
-/// \brief Header file for the macros to swallow a semicolon after a macro
+/// \brief Macro to swallow a semicolon after a macro
 
 
 /// Define an anonymous empty class to eat a dangling semicolon
