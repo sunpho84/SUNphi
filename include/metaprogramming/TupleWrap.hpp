@@ -5,7 +5,7 @@
 ///
 /// \brief Header file to treat homogeneously types and tuples
 
-#include <tuple>
+#include <metaprogramming/Tuple.hpp>
 
 namespace SUNphi
 {
@@ -23,7 +23,7 @@ namespace SUNphi
   template <class T>
   struct TupleWrapImplT
   {
-    typedef std::tuple<T> type; ///< Internal mapped type
+    typedef Tuple<T> type; ///< Internal mapped type
   };
   
   /// Remap a \c tuple type into itself
@@ -37,10 +37,10 @@ namespace SUNphi
   /// typename TupleWrapImplT<tuple<int>>::type test; //std::tuple<int>
   /// \endcode
   ///
-  template <class ... T>
-  struct TupleWrapImplT<std::tuple<T...>>
+  template <class...T>
+  struct TupleWrapImplT<Tuple<T...>>
   {
-    typedef std::tuple<T...> type; ///< Internal mapped type
+    typedef Tuple<T...> type; ///< Internal mapped type
   };
   
   /// Put the type into a \c tuple, if the type is not already a \c tuple.

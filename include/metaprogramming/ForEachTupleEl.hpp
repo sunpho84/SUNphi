@@ -5,41 +5,55 @@
 ///
 /// \brief Header file to loop over all tuple elements
 
-#include <tuple>
+#include <metaprogramming/EnableIf.hpp>
+#include <metaprogramming/Tuple.hpp>
 
 namespace SUNphi
 {
   /// Loop over all \c tuple elements
   ///
-  /// Terminator of recursive call
+  /// Terminator of recursive call, called automaticaly also when the
+  /// tuple is empty.
   ///
-  template<size_t I=0,typename Func,typename... Tp>
-  std::enable_if_t<I==sizeof...(Tp),void>
-  ForEach(const std::tuple<Tp...>&,Func)
+  /// \return void
+  ///
+  template<size_t I=0,typename Func,typename...Tp>
+  VoidIf<I==sizeof...(Tp)>
+  ForEach(const Tuple<Tp...>& t ///< Tuple to act upon
+	  ,Func f)              ///< Function iterating on the tuple
   {
   }
   
   /// Loop over all \c tuple elements
   ///
-  /// Non const access
+  /// Non const access to all elements of the tuple, called
+  /// recursively until I==sizeof...(Tp), incrementing the parameter
+  /// I.
   ///
-  template<size_t I=0,typename Func,typename... Tp>
-  std::enable_if_t< I<sizeof...(Tp),void>
-  ForEach(std::tuple<Tp...>& t,Func f)
+  /// \return void
+  ///
+  template<size_t I=0,typename Func,typename...Tp>
+  VoidIf<(I<sizeof...(Tp))>
+  ForEach(Tuple<Tp...>& t ///< Tuple to act upon
+	  ,Func f)        ///< Function iterating on the tuple
   {
-    f(std::get<I>(t));
+    f(Get<I>(t));
     ForEach<I+1,Func,Tp...>(t,f);
   }
   
   /// Loop over all \c tuple elements
   ///
-  /// Const access
+  /// Const access to all elements of the tuple, called recursively
+  /// until I==sizeof...(Tp), incrementing the parameter I.
   ///
-  template<size_t I=0,typename Func,typename... Tp>
-  std::enable_if_t< I<sizeof...(Tp),void>
-  ForEach(const std::tuple<Tp...>& t,Func f)
+  /// \return void
+  ///
+  template<size_t I=0,typename Func,typename...Tp>
+  VoidIf<(I<sizeof...(Tp))>
+  ForEach(const Tuple<Tp...>& t ///< Tuple to act upon
+	  ,Func f)              ///< Function iterating on the tuple
   {
-    f(std::get<I>(t));
+    f(Get<I>(t));
     ForEach<I+1,Func,Tp...>(t,f);
   }
 }
