@@ -1,6 +1,8 @@
 #ifndef _TENSCOMP_HPP
 #define _TENSCOMP_HPP
 
+#include <utility>
+
 /// \file TensComp.hpp
 ///
 /// \brief Defines the Tensor Components
@@ -9,12 +11,31 @@
 
 namespace SUNphi
 {
+  /// Base struct determining a TensComp, from which all derived TensCompT must inherit
+  ///
+  struct BaseTensComp
+  {
+  };
+  
+  /// Helper to determine that TensComp-inheriting class is a TensComp
+  ///
+  std::true_type IsTensCompImpl(const BaseTensComp&);
+  
+  /// Helper to determine that a non-TensComp-inheriting class is not a TensComp
+  ///
+  std::false_type IsTensCompImpl(...);
+  
+  /// Determine whether the passed class is a TensComp or not
+  ///
+  template<typename T>
+  constexpr bool IsTensComp=decltype(IsTensCompImpl(std::declval<typename std::remove_cv<T>::type>()))::value;
+  
   /// Static version of the TensCompT
   ///
   /// A tensor component with a compile-time known value of max index
   ///
   template <class T,int Size>
-  struct TensCompT
+  struct TensCompT : public BaseTensComp
   {
     static constexpr bool isDynamic=false; ///< Keep track of the fact that the component max value is not dynamic
     static constexpr int  size=Size;       ///< Size of the tensor component (max index value)
@@ -29,7 +50,7 @@ namespace SUNphi
   /// A tensor component with a run-time known value of max index
   ///
   template <class T>
-  struct TensCompT<T,DYNAMIC>
+  struct TensCompT<T,DYNAMIC> : public BaseTensComp
   {
     static constexpr bool isDynamic=true; ///< Keep track of the fact that the component max value is dynamic
     const int &size;                       ///< Size of the tensor (reference to external size)
