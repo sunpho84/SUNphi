@@ -3,7 +3,8 @@
 
 /// \file TypeTraits.hpp
 ///
-/// \brief Defines convenient adaptation of the std type_traits library
+/// \brief Defines convenient adaptation of the std type_traits
+/// library, and extensions useful for the expression handling.
 
 #include <type_traits>
 
@@ -66,6 +67,23 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
+  /// Forces type Derived to be derived from Base
+  ///
+  /// Helper to internally implement the check through a template class
+  ///
+  template <class Base,class Derived>
+  class ConstraintInheritImpl
+  {
+    static_assert(IsBaseOf<Base,Derived>,"Error, type not derived from what expected");
+  };
+
+  /// Forces type Derived to be derived from Base
+  ///
+  /// Wraps the class defining the check
+  ///
+  template <class Base,class Derived>
+  using ConstraintInheritT=decltype(ConstraintInheritImpl<Base,Derived>());
+  
   /// Defines a "Base" identifier and checks for it
   ///
   /// Given a TYPE, defines another empty type prefixing its name with
@@ -76,7 +94,10 @@ namespace SUNphi
   struct Base ## TYPE{};				\
 							\
   template<typename T>					\
-  constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>
+  constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;	\
+							\
+  template<typename T>					\
+  using ConstraintIs ## TYPE=ConstraintInheritT<Base ## TYPE,T>
 }
 
 #endif

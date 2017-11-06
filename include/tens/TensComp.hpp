@@ -9,6 +9,8 @@
 
 namespace SUNphi
 {
+  /// Defines the BaseTensComp type traits
+  ///
   DEFINE_BASE_TYPE(TensComp);
   
   /// Static version of the TensCompT
@@ -41,6 +43,17 @@ namespace SUNphi
   
   /// Counts the number of dynamic components of a list of tensor types
   ///
+  /// Internal implementation, raising a static-assert if not
+  /// inheriting from BaseTensComp.
+  ///
+  template <class T,class=ConstraintInheritT<BaseTensComp,T>>
+    constexpr int NDynCompsImpl()
+  {
+    return T::isDynamic;
+  }
+  
+  /// Counts the number of dynamic components of a list of tensor types
+  ///
   /// Multiple parameter case, calling iteratively itself
   ///
   template <typename T,typename...comps>
@@ -51,8 +64,8 @@ namespace SUNphi
   /// Terminator for the single type case
   ///
   template <class T>
-  constexpr int NDynComps<T> =T::isDynamic;
-  
+  constexpr int NDynComps<T> =NDynCompsImpl<T>();
+
   // template<class T>
   // using is_dynamic_comp_t=std::conditional_t<T::is_dynamic,std::true_type,std::false_type>;
   
