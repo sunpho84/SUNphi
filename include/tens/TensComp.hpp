@@ -1,35 +1,15 @@
 #ifndef _TENSCOMP_HPP
 #define _TENSCOMP_HPP
 
-#include <utility>
-
 /// \file TensComp.hpp
 ///
 /// \brief Defines the Tensor Components
 
-/// TODO: adding a isTensComp check, inheriting
 #include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi
 {
-  /// Base struct determining a TensComp, from which all derived TensCompT must inherit
-  ///
-  struct BaseTensComp
-  {
-  };
-  
-  /// Helper to determine that TensComp-inheriting class is a TensComp
-  ///
-  std::true_type IsTensCompImpl(const BaseTensComp&);
-  
-  /// Helper to determine that a non-TensComp-inheriting class is not a TensComp
-  ///
-  std::false_type IsTensCompImpl(...);
-  
-  /// Determine whether the passed class is a TensComp or not
-  ///
-  template<typename T>
-  constexpr bool IsTensComp=decltype(IsTensCompImpl(std::declval<typename std::remove_cv<T>::type>()))::value;
+  DEFINE_BASE_TYPE(TensComp);
   
   /// Static version of the TensCompT
   ///
