@@ -7,6 +7,16 @@
 
 namespace SUNphi
 {
+  /// Sum of all integers
+  ///
+  template <int Head,int...Tail>
+  constexpr int Sum=Head+Sum<Tail...>;
+
+  /// Sum of all integers, unary case
+  ///
+  template <int Head>
+  constexpr int Sum<Head> =Head;
+  
   /// A struct holding a sequence of integer (similar to stdlib).
   ///
   /// The \c integers are held as parameters of the class. To
@@ -31,7 +41,8 @@ namespace SUNphi
   template <int...Ints>
   struct IntSeq
   {
-    static constexpr int Size=sizeof...(Ints); ///< Length of the sequence of integer
+    static constexpr int size=sizeof...(Ints); ///< Length of the sequence of integer
+    static constexpr int sum=Sum<Ints...>; ///< Sum of all elements
   };
 }
 
