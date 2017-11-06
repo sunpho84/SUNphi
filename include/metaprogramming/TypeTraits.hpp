@@ -42,12 +42,14 @@ namespace SUNphi
   ///
   /// Useful to enable or disable SFINAE specialization. Directly
   /// taken from std library.
+  ///
   template <bool B,class T=void>
   using EnableIfT=typename std::enable_if_t<B,T>::type;
   
   /// Defines \c void if parameter B is true
   ///
   /// Explicit specialization of \c EnableIfT for \c T=void .
+  ///
   template <bool B>
   using VoidIf=EnableIfT<B>;
   
@@ -76,7 +78,7 @@ namespace SUNphi
   {
     static_assert(IsBaseOf<Base,Derived>,"Error, type not derived from what expected");
   };
-
+  
   /// Forces type Derived to be derived from Base
   ///
   /// Wraps the class defining the check

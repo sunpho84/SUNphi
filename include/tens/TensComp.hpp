@@ -65,12 +65,16 @@ namespace SUNphi
   ///
   template <class T>
   constexpr int NDynComps<T> =NDynCompsImpl<T>();
-
-  // template<class T>
-  // using is_dynamic_comp_t=std::conditional_t<T::is_dynamic,std::true_type,std::false_type>;
   
-  // template<class T>
-  // using is_static_comp_t=std::conditional_t<not T::is_dynamic,std::true_type,std::false_type>;
+  /// Checks wheter T is a dynamic tens comp
+  ///
+  template<class T>
+  constexpr bool IsDynamicTensComp=Conditional<T::isDynamic,TrueType,FalseType>::value;
+  
+  /// Checks wheter T is a non-dynamic tens comp
+  ///
+  template<class T>
+  constexpr bool IsStaticComp=Conditional<not T::isDynamic,TrueType,FalseType>::value;
 }
 
 #endif
