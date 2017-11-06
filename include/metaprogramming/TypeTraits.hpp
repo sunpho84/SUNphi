@@ -62,6 +62,42 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// Forward declaration of internal implementation
+  ///
+  template <bool B,typename T,typename F>
+  struct ConditionalImpl;
+  
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// True case of internal implementation
+  ///
+  template <typename T,typename F>
+  struct ConditionalImpl<true,T,F>
+  {
+    typedef T type; ///< Internal type (T)
+  };
+  
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// False case of internal implementation
+  ///
+  template <typename T,typename F>
+  struct ConditionalImpl<false,T,F>
+  {
+    typedef F type; ///< Internal type (F)
+  };
+  
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// Wraps the internal implementation
+  ///
+  template <bool B,typename T,typename F>
+  using Conditional=typename ConditionalImpl<B,T,F>::type;
+  
+  /////////////////////////////////////////////////////////////////////
+  
   /// Identifies whether Base is a base class of Derived
   ///
   template <class Base,class Derived>
