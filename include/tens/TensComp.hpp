@@ -8,6 +8,7 @@
 /// \brief Defines the Tensor Components
 
 /// TODO: adding a isTensComp check, inheriting
+#include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi
 {

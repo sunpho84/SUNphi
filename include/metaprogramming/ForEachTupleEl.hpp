@@ -5,8 +5,8 @@
 ///
 /// \brief Loop over all Tuple elements
 
-#include <metaprogramming/EnableIf.hpp>
 #include <metaprogramming/Tuple.hpp>
+#include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi
 {
