@@ -9,13 +9,13 @@ namespace SUNphi
 {
   /// Sum of all integers
   ///
-  template <int Head,int...Tail>
-  constexpr int Sum=Head+Sum<Tail...>;
+  template <int Head=0,int...Tail>
+  constexpr int hSum=Head+hSum<Tail...>;
   
   /// Sum of all integers, unary case
   ///
   template <int Head>
-  constexpr int Sum<Head> =Head;
+  constexpr int hSum<Head> =Head;
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -44,7 +44,7 @@ namespace SUNphi
   struct IntSeq
   {
     static constexpr int size=sizeof...(Ints); ///< Length of the sequence of integer
-    static constexpr int sum=Sum<Ints...>; ///< Sum of all elements
+    static constexpr int hSum=SUNphi::hSum<Ints...>; ///< Sum of all elements
   };
   
   /////////////////////////////////////////////////////////////////////////
