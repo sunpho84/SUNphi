@@ -44,21 +44,30 @@ namespace SUNphi
   /// taken from std library.
   ///
   template <bool B,class T=void>
-  using EnableIfT=typename std::enable_if_t<B,T>::type;
+  using EnableIf=typename std::enable_if_t<B,T>::type;
   
   /// Defines \c void if parameter B is true
   ///
-  /// Explicit specialization of \c EnableIfT for \c T=void .
+  /// Explicit specialization of \c EnableIf for \c T=void .
   ///
   template <bool B>
-  using VoidIf=EnableIfT<B>;
+  using VoidIf=EnableIf<B>;
   
   /// Defines type T if parameter B is true
   ///
-  /// Explicit specialization of \c EnableIfT forcing an explicit type.
+  /// Explicit specialization of \c EnableIf forcing an explicit type.
   //
   template <bool B,class T>
-  using TypeIf=EnableIfT<B,T>;
+  using TypeIf=EnableIf<B,T>;
+  
+  /////////////////////////////////////////////////////////////////////
+  
+  /// Checks if two types are the same
+  ///
+  /// Strait borrowed from std lib
+  ///
+  template <class T1,class T2>
+  static constexpr bool IsSame=std::is_same<T1,T2>::value;
   
   /////////////////////////////////////////////////////////////////////
   

@@ -179,7 +179,7 @@ namespace SUNphi
   /// Example:
   ///
   /// \code
-  /// typedef RangeSeq<2,3,8> Range; ///IntSeq<2,5>
+  /// typedef RangeSeq<2,3,8> Range; //IntSeq<2,5>
   /// \endcode
   ///
   template <int Min,int Shift,int Max>
