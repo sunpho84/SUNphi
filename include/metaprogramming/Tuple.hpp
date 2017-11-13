@@ -103,7 +103,9 @@ namespace SUNphi
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&
   Get(Tuple<Types...>& t) ///< Tuple from which extract
-  {return std::get<I>(t);}
+  {
+    return std::get<I>(t);
+  }
   
   /// Gets an element from the tuple.
   ///
@@ -113,7 +115,9 @@ namespace SUNphi
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&&
   Get(Tuple<Types...>&& t) ///< Tuple from which extract
-  {return std::get<I>(t);}
+  {
+    return std::get<I>(t);
+  }
   
   /// Gets the element of type T from the tuple.
   ///
@@ -122,7 +126,9 @@ namespace SUNphi
   ///
   template<class T,class...Types>
   constexpr T& Get(Tuple<Types...>& t) ///< Tuple from which extract
-  {return std::get<T>(t);}
+  {
+    return std::get<T>(t);
+  }
   
   /// Gets the element of type T from the tuple.
   ///
@@ -131,7 +137,9 @@ namespace SUNphi
   ///
   template<class T,class...Types>
   constexpr T&& Get(Tuple<Types...>&& t) ///< Tuple from which extract
-  {return std::get<T>(t);}
+  {
+    return std::get<T>(t);
+  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -183,7 +191,7 @@ namespace SUNphi
   /// \return \c void
   ///
   template<size_t I=0,typename Func,typename...Tp>
-  VoidIf<(I<sizeof...(Tp))>
+  VoidIf<(sizeof...(Tp)>I)>
   ForEach(Tuple<Tp...>& t ///< \c Tuple to act upon
 	  ,Func f)        ///< \c Function iterating on the \c Tuple
   {
@@ -202,13 +210,141 @@ namespace SUNphi
   /// \return \c void
   ///
   template<size_t I=0,typename Func,typename...Tp>
-  VoidIf<(I<sizeof...(Tp))>
+  VoidIf<(sizeof...(Tp)>I)>
   ForEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
 	  ,Func f)              ///< \c Function iterating on the \c Tuple
   {
     f(Get<I>(t));
     ForEach<I+1,Func,Tp...>(t,f);
   }
+  
+  /////////////////////////////////////////////////////////////////
+  
+  namespace Impl
+  {
+    /// Gets the position of a type in a list
+    ///
+    /// Forward definition
+    ///
+    template <class T,class...Tp>
+    struct PosOfType;
+    
+    /// Gets the position of a type in a list
+    ///
+    /// Case of matching type
+    ///
+    template <class T,class...Tp>
+    struct PosOfType<T,T,Tp...>
+    {
+      static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
+      static constexpr int value=0; ///< Set the position to 0, the first of the list
+    };
+    
+    /// Gets the position of a type in a list
+    ///
+    /// Case of non-matching type, instantiate iterativerly the searcher
+    ///
+    template <class T,class U,class...Tp>
+    struct PosOfType<T,U,Tp...>
+    {
+      static_assert(sizeof...(Tp),"Type not found in the list");
+      static constexpr int value=1+PosOfType<T,Tp...>::value; ///< Set the position to one more than the nested value
+    };
+    
+    /// Gets the position of a type in a tuple
+    ///
+    /// Wraps the ordinary list searcher
+    ///
+    template <class T,class...Tp>
+    struct PosOfType<T,Tuple<Tp...>>
+    {
+      static constexpr int value=PosOfType<T,Tp...>::value; ///< Position inside the list
+    };
+  } //Impl
+  
+  /// Gets the position of a type in a tuple
+  ///
+  /// Wraps the actual implementation
+  ///
+  /// \code
+  /// int a=PosOfType<int, int,double,char>;        //0
+  /// int b=PosOfType<int, Tuple<int,double,char>>; //0
+  /// int c=PosOfType<int, char,double,char>;       //static_assert (not found)
+  /// int d=PosOfType<int, int,int,char>;           //static_assert (multiple occurency)
+  /// \endcode
+  ///
+  template <class...Tp>
+  constexpr int PosOfType=Impl::PosOfType<Tp...>::value;
+  
+  /////////////////////////////////////////////////////////////////////////
+  
+  /// Filter a \c Tuple on the basis of a list of index
+  ///
+  /// Return a tuple containg the elements of a tuple according to a
+  /// list of indices
+  ///
+  template <int...Ints,class...Tp>
+  auto GetIndexed(const IntSeq<Ints...>&,const Tuple<Tp...> &tp)
+  {
+    return std::make_tuple(std::get<Ints>(tp)...);
+  }
+  
+  /// Gets the head of a \c Tuple
+  ///
+  /// Return a tuple containg the first N elements of a tuple
+  ///
+  template <int N,class...Tp>
+  auto GetHead(const Tuple<Tp...> &tp)
+  {
+    return GetIndexed(IntsUpTo<N>{},tp);
+  }
+  
+  /// Gets the tail of a \c Tuple
+  ///
+  /// Return a tuple containg the last N elements of a tuple
+  ///
+  template <int N,class...Tp>
+  auto GetTail(const Tuple<Tp...> &tp)
+  {
+    constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
+    constexpr int offset=tupleSize-N;      ///< Beginning of returned part
+    return GetIndexed(RangeSeq<offset,1,tupleSize>{},tp);
+  }
+  
+  /// Returns all elements of a \c Tuple but the N-th one
+  ///
+  /// Takes the list of component according to an index containing the
+  /// first [0,N) and (N,Sizeof...(Tuple))
+  ///
+  /// Example:
+  /// \code
+  /// Tuple<int,double,char> e;
+  /// auto GetAllBut<1>(e); // Tuple<int,char>
+  /// \endcode
+  ///
+  template <int N,class...Tp>
+  auto GetAllBut(const Tuple<Tp...> &tp)
+  {
+    constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
+    return GetIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize>>{},tp);
+  }
+  
+  /// Returns all elements of a \c Tuple but the type T
+  ///
+  /// First search the component, then call \c GetAllBut with the
+  /// found position as a parameter
+  ///
+  /// Example:
+  /// \code
+  /// Tuple<int,double,char> e;
+  /// auto GetAllBut<double>(e); // Tuple<int,char>
+  /// \endcode
+  ///
+  template <class T,class...Tp>
+  auto GetAllBut(const Tuple<Tp...> &tp)
+  {
+    return GetAllBut<PosOfType<T,Tuple<Tp...>>>(tp);
+  };
 }
 
 #endif
