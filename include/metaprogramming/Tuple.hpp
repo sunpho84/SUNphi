@@ -20,6 +20,29 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Counts the same types
+  ///
+  /// Single pair of types case
+  ///
+  template<class T1,class T2>
+  static constexpr int nOfType=IsSame<T1,T2>;
+  
+  /// Counts the same type
+  ///
+  /// Counts the occurrency of type T inside a tuple
+  ///
+  template<class T,class...Tp>
+  static constexpr int nOfType<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
+  
+  /// Counts the same type
+  ///
+  /// Wrapper to switch tuple and searched type
+  ///
+  template<class T,class...Tp>
+  static constexpr int nOfType<Tuple<Tp...>,T> =nOfType<T,Tp...>;
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Wraps a simple type into a \c Tuple containing the type
   ///
   /// For a generic type, put the type into a simple \c Tuple, so that
@@ -120,12 +143,12 @@ namespace SUNphi
   ///
   /// Example:
   /// \code
-  /// typedef tuple<int,double> T;
-  /// TupleTypeCatT<T,T> test1;    //std::tuple<int,double,int,double>
-  /// TupleTypeCatT<T,char> test2; //std::tuple<int,double,char>
+  /// typedef Tuple<int,double> T;
+  /// TupleTypeCatT<T,T> test1;    //Tuple<int,double,int,double>
+  /// TupleTypeCatT<T,char> test2; //Tuple<int,double,char>
   /// \endcode
   ///
-  template <class ... Tp>
+  template <class...Tp>
   using TupleTypeCatT=decltype(tuple_cat(TupleWrapT<Tp>{}...));
   
   /////////////////////////////////////////////////////////////////
