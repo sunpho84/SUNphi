@@ -5,6 +5,8 @@
 ///
 /// \brief Implements a struct holding a sequence of integers.
 
+#include <metaprogramming/TypeTraits.hpp>
+
 namespace SUNphi
 {
   /// Sum of all integers
@@ -45,6 +47,18 @@ namespace SUNphi
   {
     static constexpr int size=sizeof...(Ints); ///< Length of the sequence of integer
     static constexpr int hSum=SUNphi::hSum<Ints...>; ///< Sum of all elements
+    
+    template <int I> ///< Defines a integer sequence incremented by I
+    using Add=IntSeq<(Ints+I)...>;
+    
+    template <int I> ///< Defines a integer sequence decreased by I
+    using Sub=Add<-I>;
+    
+    template <int I> ///< Define a integer sequence inflated by I
+    using Mul=IntSeq<(Ints*I)...>;
+    
+    template <int I> ///< Define a integer sequence decreased by I
+    using Div=TypeIf<I!=0,Mul<1/I>>;
   };
   
   /////////////////////////////////////////////////////////////////////////
@@ -97,7 +111,79 @@ namespace SUNphi
   /// Wraps the implementation to avoid writing "type"
   ///
   template <class...T>
-  using IntSeqCatT=typename IntSeqCatImpl<T...>::type;
+  using IntSeqCat=typename IntSeqCatImpl<T...>::type;
+  
+  /////////////////////////////////////////////////////////////////////////
+  
+  /// Defines a sequence of integer up to Max (excluded)
+  ///
+  /// Internal implementation, recursively calling itself until 0 or 1
+  ///
+  template <int Max>
+  struct IntsUpToImpl
+  {
+    static constexpr int half=Max/2;                                                   ///< Used to split the list
+    using type=IntSeqCat<typename IntsUpToImpl<half>::type,
+			 typename IntsUpToImpl<Max-half>::type::template Add<half>>;   ///< Internal type holding the two halves
+  };
+  
+  /// Defines a sequence of integer up to Max (excluded)
+  ///
+  /// Implement the terminator, considering a sequence up to 0 (empty)
+  ///
+  template <>
+  struct IntsUpToImpl<0>
+  {
+    using type=IntSeq<>; ///< Empty list
+  };
+  
+  /// Defines a sequence of integer up to Max (excluded)
+  ///
+  /// Implement the terminator, considering a sequence up to 1 (including only 0)
+  ///
+  template <>
+  struct IntsUpToImpl<1>
+  {
+    using type=IntSeq<0>; ///< Trivial list
+  };
+  
+  /// Defines a sequence of integer up to Max (excluded)
+  ///
+  /// Wraps the internal definition
+  ///
+  template <int Max>
+  using IntsUpTo=typename IntsUpToImpl<Max>::type;
+  
+  ///////////////////////////////////////////////////////////////////////
+  
+  /// Defines a sequence of integer with offset and stride (up-open interval)
+  ///
+  /// This is achieved using the Add and Mul from the IntSeq list
+  ///
+  template <int Min,int Shift,int Max>
+  struct RangeSeqImpl
+  {
+    static_assert(Shift,"Shift must be non-zero"); //assert if Shift is zero
+    
+    static constexpr bool nonNull=(Max>Min);                      ///< Mask used to set to zero the Range parameters
+    static constexpr int normalizedMax=nonNull*((Max-Min)/Shift); ///< Maximal value of the normalized range
+    static constexpr int stride=nonNull*Shift;                    ///< Stride among entries
+    static constexpr int offset=nonNull*Min;                      ///< Offset of the sequence
+    using type=typename IntsUpTo<normalizedMax>
+      ::template Mul<stride>
+      ::template Add<offset>;                                     ///< Shifted-strided interval
+  };
+  
+  /// Defines a sequence of integer with offset and stride (up-open interval)
+  ///
+  /// Example:
+  ///
+  /// \code
+  /// typedef RangeSeq<2,3,8> Range; ///IntSeq<2,5>
+  /// \endcode
+  ///
+  template <int Min,int Shift,int Max>
+  using RangeSeq=typename RangeSeqImpl<Min,Shift,Max>::type;
 }
 
 #endif
