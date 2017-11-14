@@ -63,116 +63,125 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
-  /// Internal implementation of sequence-of-integer catter.
-  ///
-  /// Dummy prototype to be specialized with actual case.
-  ///
-  template <class...T>
-  struct IntSeqCatImpl;
-  
-  /// Internal implementation of sequence-of-integer catter.
-  ///
-  /// Takes into account catting a single instance of IntSeq, useful
-  /// also to terminate the catter. Called also when the general case
-  /// runs out of argument.
-  ///
-  /// Example:
-  /// \code
-  /// using Seq=IntSeq<1,2,3,4>;
-  /// IntSeqCatImpl<Seq>::type test; //IntSeq<1,2,3,4>
-  /// \endcode
-  ///
-  template <int...Ints>
-  struct IntSeqCatImpl<IntSeq<Ints...>>
+  namespace Impl
   {
-    typedef IntSeq<Ints...> type; ///< Internally mapped type
-  };
-  
-  /// Internal implementation of sequence-of-integer catter.
-  ///
-  /// Takes into account the general case of an arbitary number of
-  /// IntSeq, instantiating recursively the binary cat types.
-  ///
-  /// Example:
-  /// \code
-  /// using Seq=IntSeq<1,2,3,4>;
-  /// IntSeqCatImpl<Seq,Seq>::type test; //IntSeq<1,2,3,4,1,2,3,4>
-  /// \endcode
-  ///
-  template <int...Ints1,int...Ints2,class...T>
-  struct IntSeqCatImpl<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
-  {
-    using Nested=IntSeq<Ints1...,Ints2...>;                 ///< Binary cat \c Ints1..., \c Ints2..., separated for clarity
-    typedef typename IntSeqCatImpl<Nested,T...>::type type; ///< Result of catting the whole list \c Ints1, \c Ints2,...
-  };
+    /// Internal implementation of sequence-of-integer catter.
+    ///
+    /// Dummy prototype to be specialized with actual case.
+    ///
+    template <class...T>
+    struct IntSeqCat;
+    
+    /// Internal implementation of sequence-of-integer catter.
+    ///
+    /// Takes into account catting a single instance of IntSeq, useful
+    /// also to terminate the catter. Called also when the general case
+    /// runs out of argument.
+    ///
+    /// Example:
+    /// \code
+    /// using Seq=IntSeq<1,2,3,4>;
+    /// IntSeqCat<Seq>::type test; //IntSeq<1,2,3,4>
+    /// \endcode
+    ///
+    template <int...Ints>
+    struct IntSeqCat<IntSeq<Ints...>>
+    {
+      typedef IntSeq<Ints...> type; ///< Internally mapped type
+    };
+    
+    /// Internal implementation of sequence-of-integer catter.
+    ///
+    /// Takes into account the general case of an arbitary number of
+    /// IntSeq, instantiating recursively the binary cat types.
+    ///
+    /// Example:
+    /// \code
+    /// using Seq=IntSeq<1,2,3,4>;
+    /// IntSeqCat<Seq,Seq>::type test; //IntSeq<1,2,3,4,1,2,3,4>
+    /// \endcode
+    ///
+    template <int...Ints1,int...Ints2,class...T>
+    struct IntSeqCat<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
+    {
+      using Nested=IntSeq<Ints1...,Ints2...>;             ///< Binary cat \c Ints1..., \c Ints2..., separated for clarity
+      typedef typename IntSeqCat<Nested,T...>::type type; ///< Result of catting the whole list \c Ints1, \c Ints2,...
+    };
+  }
   
   /// Sequence-of-integer catter.
   ///
   /// Wraps the implementation to avoid writing "type"
   ///
   template <class...T>
-  using IntSeqCat=typename IntSeqCatImpl<T...>::type;
+  using IntSeqCat=typename Impl::IntSeqCat<T...>::type;
   
   /////////////////////////////////////////////////////////////////////////
   
-  /// Defines a sequence of integer up to Max (excluded)
-  ///
-  /// Internal implementation, recursively calling itself until 0 or 1
-  ///
-  template <int Max>
-  struct IntsUpToImpl
+  namespace Impl
   {
-    static constexpr int half=Max/2;                                                   ///< Used to split the list
-    using type=IntSeqCat<typename IntsUpToImpl<half>::type,
-			 typename IntsUpToImpl<Max-half>::type::template Add<half>>;   ///< Internal type holding the two halves
-  };
-  
-  /// Defines a sequence of integer up to Max (excluded)
-  ///
-  /// Implement the terminator, considering a sequence up to 0 (empty)
-  ///
-  template <>
-  struct IntsUpToImpl<0>
-  {
-    using type=IntSeq<>; ///< Empty list
-  };
-  
-  /// Defines a sequence of integer up to Max (excluded)
-  ///
-  /// Implement the terminator, considering a sequence up to 1 (including only 0)
-  ///
-  template <>
-  struct IntsUpToImpl<1>
-  {
-    using type=IntSeq<0>; ///< Trivial list
-  };
+    /// Defines a sequence of integer up to Max (excluded)
+    ///
+    /// Internal implementation, recursively calling itself until 0 or 1
+    ///
+    template <int Max>
+    struct IntsUpTo
+    {
+      static constexpr int half=Max/2;                                               ///< Used to split the list
+      using type=IntSeqCat<typename IntsUpTo<half>::type,
+			   typename IntsUpTo<Max-half>::type::template Add<half>>;   ///< Internal type holding the two halves
+    };
+    
+    /// Defines a sequence of integer up to Max (excluded)
+    ///
+    /// Implement the terminator, considering a sequence up to 0 (empty)
+    ///
+    template <>
+    struct IntsUpTo<0>
+    {
+      using type=IntSeq<>; ///< Empty list
+    };
+    
+    /// Defines a sequence of integer up to Max (excluded)
+    ///
+    /// Implement the terminator, considering a sequence up to 1 (including only 0)
+    ///
+    template <>
+    struct IntsUpTo<1>
+    {
+      using type=IntSeq<0>; ///< Trivial list
+    };
+  }
   
   /// Defines a sequence of integer up to Max (excluded)
   ///
   /// Wraps the internal definition
   ///
   template <int Max>
-  using IntsUpTo=typename IntsUpToImpl<Max>::type;
+  using IntsUpTo=typename Impl::IntsUpTo<Max>::type;
   
   ///////////////////////////////////////////////////////////////////////
   
-  /// Defines a sequence of integer with offset and stride (up-open interval)
-  ///
-  /// This is achieved using the Add and Mul from the IntSeq list
-  ///
-  template <int Min,int Shift,int Max>
-  struct RangeSeqImpl
+  namespace Impl
   {
-    static_assert(Shift,"Shift must be non-zero"); //assert if Shift is zero
-    
-    static constexpr bool nonNull=(Max>Min);                      ///< Mask used to set to zero the Range parameters
-    static constexpr int normalizedMax=nonNull*((Max-Min)/Shift); ///< Maximal value of the normalized range
-    static constexpr int stride=nonNull*Shift;                    ///< Stride among entries
-    static constexpr int offset=nonNull*Min;                      ///< Offset of the sequence
-    using type=typename IntsUpTo<normalizedMax>
-      ::template Mul<stride>
-      ::template Add<offset>;                                     ///< Shifted-strided interval
-  };
+    /// Defines a sequence of integer with offset and stride (up-open interval)
+    ///
+    /// This is achieved using the Add and Mul from the IntSeq list
+    ///
+    template <int Min,int Shift,int Max>
+    struct RangeSeq
+    {
+      static_assert(Shift,"Shift must be non-zero"); //assert if Shift is zero
+      
+      static constexpr bool nonNull=(Max>Min);                      ///< Mask used to set to zero the Range parameters
+      static constexpr int normalizedMax=nonNull*((Max-Min)/Shift); ///< Maximal value of the normalized range
+      static constexpr int stride=nonNull*Shift;                    ///< Stride among entries
+      static constexpr int offset=nonNull*Min;                      ///< Offset of the sequence
+      using type=typename SUNphi::IntsUpTo<normalizedMax>
+	::template Mul<stride>
+	::template Add<offset>;                                     ///< Shifted-strided interval
+    };
+  }
   
   /// Defines a sequence of integer with offset and stride (up-open interval)
   ///
@@ -183,7 +192,7 @@ namespace SUNphi
   /// \endcode
   ///
   template <int Min,int Shift,int Max>
-  using RangeSeq=typename RangeSeqImpl<Min,Shift,Max>::type;
+  using RangeSeq=typename Impl::RangeSeq<Min,Shift,Max>::type;
 }
 
 #endif

@@ -44,37 +44,40 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Wraps a simple type into a \c Tuple containing the type
-  ///
-  /// For a generic type, put the type into a simple \c Tuple, so that
-  /// it can be treated homogeneously with other Tuples in
-  /// e.g. \c TupleTypeCatT
-  ///
-  /// Example:
-  /// \code
-  /// typename TupleWrapImplT<int>::type test; //Tuple<int>
-  /// \endcode
-  ///
-  template <class T>
-  struct TupleWrapImplT
+  namespace Impl
   {
-    typedef Tuple<T> type; ///< Internal mapped type
-  };
-  
-  /// Remap a \c Tuple type into itself
-  ///
-  /// Defines a type equal to the Tuple passed as a parameter.
-  ///
-  /// Example:
-  /// \code
-  /// typename TupleWrapImplT<Tuple<int>>::type test; //Tuple<int>
-  /// \endcode
-  ///
-  template <class...T>
-  struct TupleWrapImplT<Tuple<T...>>
-  {
-    typedef Tuple<T...> type; ///< Internal mapped type
-  };
+    /// Wraps a simple type into a \c Tuple containing the type
+    ///
+    /// For a generic type, put the type into a simple \c Tuple, so that
+    /// it can be treated homogeneously with other Tuples in
+    /// e.g. \c TupleTypeCatT
+    ///
+    /// Example:
+    /// \code
+    /// typename TupleWrap<int>::type test; //Tuple<int>
+    /// \endcode
+    ///
+    template <class T>
+    struct TupleWrap
+    {
+      typedef Tuple<T> type; ///< Internal mapped type
+    };
+    
+    /// Remap a \c Tuple type into itself
+    ///
+    /// Defines a type equal to the Tuple passed as a parameter.
+    ///
+    /// Example:
+    /// \code
+    /// typename TupleWrap<Tuple<int>>::type test; //Tuple<int>
+    /// \endcode
+    ///
+    template <class...T>
+    struct TupleWrap<Tuple<T...>>
+    {
+      typedef Tuple<T...> type; ///< Internal mapped type
+    };
+  }
   
   /// Put the type into a \c Tuple, if the type is not already a \c Tuple.
   ///
@@ -86,12 +89,12 @@ namespace SUNphi
   ///
   /// Example:
   /// \code
-  /// TupleWrapT<int> test1; //sTuple<int>
-  /// TupleWrapT<Tuple<int>> test2; //Tuple<int>
+  /// TupleWrap<int> test1; //sTuple<int>
+  /// TupleWrap<Tuple<int>> test2; //Tuple<int>
   /// \endcode
   ///
   template <class T>
-  using TupleWrapT=typename TupleWrapImplT<T>::type;
+  using TupleWrap=typename Impl::TupleWrap<T>::type;
   
   /////////////////////////////////////////////////////////////////
   
@@ -158,7 +161,7 @@ namespace SUNphi
   /// \endcode
   ///
   template <class...Tp>
-  using TupleTypeCatT=decltype(tuple_cat(TupleWrapT<Tp>{}...));
+  using TupleTypeCatT=decltype(tuple_cat(TupleWrap<Tp>{}...));
   
   /////////////////////////////////////////////////////////////////
   
@@ -260,7 +263,7 @@ namespace SUNphi
     {
       static constexpr int value=PosOfType<T,Tp...>::value; ///< Position inside the list
     };
-  } //Impl
+  }
   
   /// Gets the position of a type in a tuple
   ///
@@ -308,6 +311,7 @@ namespace SUNphi
   {
     constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
     constexpr int offset=tupleSize-N;      ///< Beginning of returned part
+    
     return GetIndexed(RangeSeq<offset,1,tupleSize>{},tp);
   }
   

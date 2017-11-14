@@ -10,6 +10,10 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+  /// Namespace of the internal implementations
+  namespace Impl
+  {
+  }
 }
 
 #endif

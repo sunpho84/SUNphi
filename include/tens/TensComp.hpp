@@ -41,15 +41,18 @@ namespace SUNphi
     TensCompT(const int &size) : size(size) {} ///< Default constructor taking the size as a constant reference
   };
   
-  /// Counts the number of dynamic components of a list of tensor types
-  ///
-  /// Internal implementation, raising a static-assert if not
-  /// inheriting from BaseTensComp.
-  ///
-  template <class T,class=ConstraintInheritT<BaseTensComp,T>>
-    constexpr int NDynCompsImpl()
+  namespace Impl
   {
-    return T::isDynamic;
+    /// Counts the number of dynamic components of a list of tensor types
+    ///
+    /// Internal implementation, raising a static-assert if not
+    /// inheriting from BaseTensComp.
+    ///
+    template <class T,class=ConstraintInheritT<BaseTensComp,T>>
+    constexpr int NDynComps()
+    {
+      return T::isDynamic;
+    }
   }
   
   /// Counts the number of dynamic components of a list of tensor types
@@ -64,7 +67,7 @@ namespace SUNphi
   /// Terminator for the single type case
   ///
   template <class T>
-  constexpr int NDynComps<T> =NDynCompsImpl<T>();
+  constexpr int NDynComps<T> =Impl::NDynComps<T>();
   
   /// Checks wheter T is a dynamic tens comp
   ///
