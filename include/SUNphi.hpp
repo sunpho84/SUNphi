@@ -6,7 +6,7 @@
 
 #include <Metaprogramming.hpp>
 #include <Tens.hpp>
-#include <TemplateExpression.hpp>
+#include <TEx.hpp>
 
 /// Namespace of the SUNphi library
 namespace SUNphi
