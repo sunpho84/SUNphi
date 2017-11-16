@@ -11,7 +11,7 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
-  /// Namespace of the internal implementations
+  /// Namespace of the internal implementation of metaprogramming helpers
   namespace Impl
   {
   }
