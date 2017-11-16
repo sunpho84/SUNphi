@@ -5,6 +5,7 @@
 /// \brief Main include file for the SUNphi library
 
 #include <Metaprogramming.hpp>
+#include <System.hpp>
 #include <Tens.hpp>
 #include <TEx.hpp>
 
