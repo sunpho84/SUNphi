@@ -6,6 +6,7 @@
 /// \brief Header file for the definition of a storage space for a tensor
 
 #include <tens/TensKind.hpp>
+#include <system/Memory.hpp>
 
 namespace SUNphi
 {
@@ -19,17 +20,28 @@ namespace SUNphi
   class TensStor :
     public ConstraintIsTensKind<TK> //Check that TK is a TensKind
   {
-    using type=typename TK::type;
+    using type=typename TK::type;  /// Tuple containg all mapped type
     
-    T *v;
+    T *v; ///< Internal storage
     
   public:
     
+    /// Constructor (test)
+    ///
     TensStor()
     {
       static_assert(TK::nDynamic==0,"Dynamic case not implemented");
+      size_t nel=10;
       
-      
+      v=getRawAlignedMem<T>(nel);
+    }
+    
+    /// Destructor
+    ///
+    ~TensStor()
+    {
+      free(v);
+      v=nullptr;
     }
   };
   
