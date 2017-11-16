@@ -6,5 +6,6 @@
 /// \brief Header file for the inclusion of all tensor description
 
 #include <tens/TensComp.hpp>
+#include <tens/TensKind.hpp>
 
 #endif
