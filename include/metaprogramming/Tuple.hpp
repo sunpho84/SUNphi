@@ -105,7 +105,7 @@ namespace SUNphi
   ///
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&
-  Get(Tuple<Types...>& t) ///< Tuple from which extract
+  get(Tuple<Types...>& t) ///< Tuple from which extract
   {
     return std::get<I>(t);
   }
@@ -117,7 +117,7 @@ namespace SUNphi
   ///
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&&
-  Get(Tuple<Types...>&& t) ///< Tuple from which extract
+  get(Tuple<Types...>&& t) ///< Tuple from which extract
   {
     return std::get<I>(t);
   }
@@ -128,7 +128,7 @@ namespace SUNphi
   /// \return A reference to the T tuple type (if present).
   ///
   template<class T,class...Types>
-  constexpr T& Get(Tuple<Types...>& t) ///< Tuple from which extract
+  constexpr T& get(Tuple<Types...>& t) ///< Tuple from which extract
   {
     return std::get<T>(t);
   }
@@ -139,7 +139,7 @@ namespace SUNphi
   /// \return A move-reference to the T tuple type (if present).
   ///
   template<class T,class...Types>
-  constexpr T&& Get(Tuple<Types...>&& t) ///< Tuple from which extract
+  constexpr T&& get(Tuple<Types...>&& t) ///< Tuple from which extract
   {
     return std::get<T>(t);
   }
@@ -177,7 +177,7 @@ namespace SUNphi
   ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<I==sizeof...(Tp)>
-  ForEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
+  forEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
 	  ,Func f)              ///< \c Function iterating on the Tuple
   {
   }
@@ -195,11 +195,11 @@ namespace SUNphi
   ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<(sizeof...(Tp)>I)>
-  ForEach(Tuple<Tp...>& t ///< \c Tuple to act upon
+  forEach(Tuple<Tp...>& t ///< \c Tuple to act upon
 	  ,Func f)        ///< \c Function iterating on the \c Tuple
   {
-    f(Get<I>(t));
-    ForEach<I+1,Func,Tp...>(t,f);
+    f(get<I>(t));
+    forEach<I+1,Func,Tp...>(t,f);
   }
   
   /// Loop over all \c tuple elements
@@ -214,11 +214,11 @@ namespace SUNphi
   ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<(sizeof...(Tp)>I)>
-  ForEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
+  forEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
 	  ,Func f)              ///< \c Function iterating on the \c Tuple
   {
-    f(Get<I>(t));
-    ForEach<I+1,Func,Tp...>(t,f);
+    f(get<I>(t));
+    forEach<I+1,Func,Tp...>(t,f);
   }
   
   /////////////////////////////////////////////////////////////////
@@ -277,7 +277,7 @@ namespace SUNphi
   /// \endcode
   ///
   template <class...Tp>
-  constexpr int PosOfType=Impl::PosOfType<Tp...>::value;
+  constexpr int posOfType=Impl::PosOfType<Tp...>::value;
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -287,7 +287,7 @@ namespace SUNphi
   /// list of indices
   ///
   template <int...Ints,class...Tp>
-  auto GetIndexed(const IntSeq<Ints...>&,const Tuple<Tp...> &tp)
+  auto getIndexed(const IntSeq<Ints...>&,const Tuple<Tp...> &tp)
   {
     return std::make_tuple(std::get<Ints>(tp)...);
   }
@@ -297,22 +297,22 @@ namespace SUNphi
   /// Return a tuple containg the first N elements of a tuple
   ///
   template <int N,class...Tp>
-  auto GetHead(const Tuple<Tp...> &tp)
+  auto getHead(const Tuple<Tp...> &tp)     ///< Tuple from which to extract
   {
-    return GetIndexed(IntsUpTo<N>{},tp);
+    return getIndexed(IntsUpTo<N>{},tp);
   }
   
   /// Gets the tail of a \c Tuple
   ///
-  /// Return a tuple containg the last N elements of a tuple
+  /// Return a \c Tuple containg the last N elements of a tuple
   ///
   template <int N,class...Tp>
-  auto GetTail(const Tuple<Tp...> &tp)
+  auto getTail(const Tuple<Tp...> &tp)     ///< Tuple from which to extract
   {
-    constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
-    constexpr int offset=tupleSize-N;      ///< Beginning of returned part
+    constexpr int tupleSize=sizeof...(Tp); /// Number of elements in the tuple
+    constexpr int offset=tupleSize-N;      /// Beginning of returned part
     
-    return GetIndexed(RangeSeq<offset,1,tupleSize>{},tp);
+    return getIndexed(RangeSeq<offset,1,tupleSize>{},tp);
   }
   
   /// Returns all elements of a \c Tuple but the N-th one
@@ -327,10 +327,10 @@ namespace SUNphi
   /// \endcode
   ///
   template <int N,class...Tp>
-  auto GetAllBut(const Tuple<Tp...> &tp)
+  auto getAllBut(const Tuple<Tp...> &tp)
   {
     constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
-    return GetIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize>>{},tp);
+    return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize>>{},tp);
   }
   
   /// Returns all elements of a \c Tuple but the type T
@@ -345,9 +345,9 @@ namespace SUNphi
   /// \endcode
   ///
   template <class T,class...Tp>
-  auto GetAllBut(const Tuple<Tp...> &tp)
+  auto getAllBut(const Tuple<Tp...> &tp)
   {
-    return GetAllBut<PosOfType<T,Tuple<Tp...>>>(tp);
+    return getAllBut<posOfType<T,Tuple<Tp...>>>(tp);
   };
 }
 
