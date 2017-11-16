@@ -20,7 +20,7 @@ namespace SUNphi
   /// Call the system routine which allocate memory
   ///
   template <class T=char>
-  T* GetRawAlignedMem(const size_t nel)
+  T* getRawAlignedMem(const size_t nel)
   {
     void* ptr;
     int rc=posix_memalign(&ptr,ALIGNMENT,sizeof(T)*nel);
