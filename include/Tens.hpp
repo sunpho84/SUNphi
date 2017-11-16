@@ -7,5 +7,6 @@
 
 #include <tens/TensComp.hpp>
 #include <tens/TensKind.hpp>
+#include <tens/TensStor.hpp>
 
 #endif
