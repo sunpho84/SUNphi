@@ -5,8 +5,10 @@
 ///
 /// \brief Header file for debugging routines
 
-#include <cstdio>
+#include <execinfo.h>
 #include <iostream>
+
+#include <ios/Print.hpp>
 
 /// Macro to make the crash being more explicit
 ///
@@ -15,21 +17,18 @@
 
 namespace SUNphi
 {
-  /// Variadic print to a stream
+  /// Write the list of called routines
   ///
-  std::ostream& Print(std::ostream& out)
+  inline void printBacktraceList()
   {
-    return out;
-  }
-  
-  /// Variadic print to a stream
-  ///
-  template <class Head,class...Tail>
-  std::ostream& Print(std::ostream& out,const Head& head,const Tail&...tail)
-  {
-    out<<head;
-    if(sizeof...(tail)) out<<" ";
-    return Print(out,tail...);
+    void *callstack[128];
+    int frames=backtrace(callstack,128);
+    char **strs=backtrace_symbols(callstack,frames);
+    
+    std::cerr<<"Backtracing..."<<std::endl;
+    for(int i=0;i<frames;i++) std::cerr<<strs[i]<<std::endl;
+    
+    free(strs);
   }
   
   /// Crash with a detailed message
@@ -39,10 +38,11 @@ namespace SUNphi
   /// robust variadic-template one
   ///
   template <class...Args>
-  void internalCrash(int line,const char *file,const char *func,const Args&...args)
+  void internalCrash(const int line,const char *path,const char *funcName,const Args&...args)
   {
-    Print(std::cerr,"ERROR in function ",func," at line ",line," of file ",file,": \"",args...,"\"\n");
-    //print_backtrace_list();
+    print(std::cerr,"ERROR in function ",funcName," at line ",line," of file ",path,": \"",args...,"\"\n");
+    printBacktraceList();
+    
     exit(1);
   }
 }
