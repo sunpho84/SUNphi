@@ -21,6 +21,18 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
+  /// Product of all integers
+  ///
+  template <int Head=0,int...Tail>
+  constexpr int hMul=Head*hMul<Tail...>;
+  
+  /// Product of all integers, unary case
+  ///
+  template <int Head>
+  constexpr int hMul<Head> =Head;
+  
+  /////////////////////////////////////////////////////////////////////////
+  
   /// A struct holding a sequence of integer (similar to stdlib).
   ///
   /// The \c integers are held as parameters of the class. To
@@ -45,8 +57,9 @@ namespace SUNphi
   template <int...Ints>
   struct IntSeq
   {
-    static constexpr int size=sizeof...(Ints); ///< Length of the sequence of integer
+    static constexpr int size=sizeof...(Ints);       ///< Length of the sequence of integer
     static constexpr int hSum=SUNphi::hSum<Ints...>; ///< Sum of all elements
+    static constexpr int hMul=SUNphi::hMul<Ints...>; ///< Product of all elements
     
     template <int I> ///< Defines a integer sequence incremented by I
     using Add=IntSeq<(Ints+I)...>;
