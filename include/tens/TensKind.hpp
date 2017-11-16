@@ -25,7 +25,7 @@ namespace SUNphi
   /// TensorStorage, or the returned type of a Template Expression
   ///
   template <class...T>
-  class TensKind
+  class TensKind : public BaseTensKind
   {
     //Check that all types are TensComp
     static_assert(IntSeq<IsTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
