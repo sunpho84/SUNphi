@@ -7,6 +7,8 @@
 
 #include <cstdlib>
 
+#include <system/Debug.hpp>
+
 namespace SUNphi
 {
   /// Basic alignement for AVX-512, to be generalized
@@ -22,7 +24,7 @@ namespace SUNphi
   {
     void* ptr;
     int rc=posix_memalign(&ptr,ALIGNMENT,sizeof(T)*nel);
-    if(rc)
+    if(rc) CRASH("Failed to allocate ",nel," elements of size ",sizeof(T),"with alignement",ALIGNMENT);
       
     return static_cast<T*>(ptr);
   }
