@@ -21,12 +21,33 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Counts the same types
+  namespace Impl
+  {
+    /// Check that a type is a tuple
+    ///
+    /// Generic false case
+    ///
+    template <class T>
+    struct IsTuple : public FalseType
+    {
+    };
+    
+    /// Check that a type is a tuple
+    ///
+    /// Specialization for a true tuple
+    ///
+    template <class...Tp>
+    struct IsTuple<Tuple<Tp...>> : public TrueType
+    {
+    };
+  }
+  
+  /// Check that a type is a tuple
   ///
-  /// Single pair of types case
+  /// Gives visibility to the internal implementation
   ///
-  template<class T1,class T2>
-  static constexpr int nOfType=IsSame<T1,T2>;
+  template <class T>
+  constexpr int IsTuple=Impl::IsTuple<T>::value;
   
   /// Counts the same type
   ///
