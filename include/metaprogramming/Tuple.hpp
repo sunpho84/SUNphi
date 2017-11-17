@@ -49,19 +49,83 @@ namespace SUNphi
   template <class T>
   constexpr int IsTuple=Impl::IsTuple<T>::value;
   
-  /// Counts the same type
+  /// Force the type to be a tuple
+  template <class T>
+  struct ConstraintIsTuple
+  {
+    static_assert(IsTuple<T>,"Type is not a tuple");
+  };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Define a Variadic type taking all types of a \c tuple as list of parameters
   ///
-  /// Counts the occurrency of type T inside a tuple
+  /// Example:
   ///
-  template<class T,class...Tp>
-  static constexpr int nOfType<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
+  /// \code
+  /// template <class...Tp>
+  /// struct Test
+  /// {
+  ///    int size=sizeof...(Tp);
+  /// };
+  ///
+  /// DEFINE_VARIADIC_TYPE_FROM_TUPLE(Test);
+  ///
+  /// int size=TestFromTuple<Tuple<int,char>>::size; //2
+  ///
+  /// \endcode
+  ///
+#define DEFINE_VARIADIC_TYPE_FROM_TUPLE(TYPE)				\
+  namespace Impl							\
+  {									\
+    template <class TP,class=FalseType>					\
+      struct TYPE ## FromTuple;						\
+									\
+    template <class...Tp>						\
+      struct TYPE ## FromTuple<Tuple<Tp...>>				\
+    {									\
+      using type=TYPE<Tp...>;						\
+    };									\
+  }									\
+									\
+  template <class TP,class=ConstraintIsTuple<TP>>			\
+  using TYPE ## FromTuple=typename Impl::TYPE ## FromTuple<TP>::type
+  
+  /////////////////////////////////////////////////////////////////
+  
+  namespace Impl
+  {
+    /// Counts the same types
+    ///
+    /// Single pair of types case
+    ///
+    template<class T1,class T2,class=FalseType>
+    static constexpr int nOfTypeInTuple=0;
+    
+    /// Counts the same type
+    ///
+    /// Counts the occurrency of type T inside a tuple
+    ///
+    template<class T,class...Tp>
+    static constexpr int nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
+  }
   
   /// Counts the same type
   ///
-  /// Wrapper to switch tuple and searched type
+  /// Gives external visibility to the implementation
   ///
-  template<class T,class...Tp>
-  static constexpr int nOfType<Tuple<Tp...>,T> =nOfType<T,Tp...>;
+  template <class T,class TP>
+  static constexpr int nOfTypeInTuple=Impl::nOfTypeInTuple<T,TP>;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Contraint a type to be contained in a Tuple
+  ///
+  template <class T,class TP,class=ConstraintIsTuple<TP>>
+  struct ConstraintTupleHasType
+  {
+    static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found");
+  };
   
   /////////////////////////////////////////////////////////////////
   
