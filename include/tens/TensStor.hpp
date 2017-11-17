@@ -33,15 +33,14 @@ namespace SUNphi
       static_assert(TK::nDynamic==0,"Dynamic case not implemented");
       size_t nel=10;
       
-      v=getRawAlignedMem<T>(nel);
+      v=getRawAlignedMem<T>(nel); //allocate
     }
     
     /// Destructor
     ///
     ~TensStor()
     {
-      free(v);
-      v=nullptr;
+      freeMem(v);
     }
   };
   
