@@ -9,7 +9,16 @@
 
 namespace SUNphi
 {
+  /// Defines the BaseTensCompKind type traits
+  ///
+  /// Used to specify the underlying kind of a tensor component
+  ///
+  DEFINE_BASE_TYPE(TensCompKind);
+  
   /// Defines the BaseTensComp type traits
+  ///
+  /// Used to specify the underlying kind and number of component of a
+  /// tensor component
   ///
   DEFINE_BASE_TYPE(TensComp);
   
@@ -24,7 +33,8 @@ namespace SUNphi
   /// made \c DYNAMIC, to be specified at runtime in the storage class
   ///
   template <class T,int Size=DYNAMIC>
-  struct TensComp : public BaseTensComp
+  struct TensComp :
+    public BaseTensComp,ConstraintIsTensCompKind<T>
   {
     using type=T;                         ///< Mapped type
     static constexpr int size=Size;       ///< Size of the tensor component (max index value)
