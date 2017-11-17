@@ -29,6 +29,17 @@ namespace SUNphi
     return static_cast<T*>(ptr);
   }
   
+  /// Free memory and zero the pointer
+  ///
+  /// For the time being it just free the memory, but it would be
+  /// interesting to implement a memory pool
+  ///
+  template <class T>
+  void freeMem(T* &ptr) ///< Pointer getting freed, set to zero
+  {
+    free(ptr);
+    ptr=nullptr;
+  }
 }
 
 #endif
