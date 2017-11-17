@@ -18,6 +18,11 @@ namespace SUNphi
   ///
   DEFINE_BASE_TYPE(TensKind);
   
+  template <class...T>
+  class TensKind;
+  
+  DEFINE_VARIADIC_TYPE_FROM_TUPLE(TensKind);
+  
   /// Tensor Kind used to define the structure of a tensor
   ///
   /// The tensor kind defines the list of components of a tensor. It
@@ -30,17 +35,20 @@ namespace SUNphi
     //Check that all types are TensComp
     static_assert(IntSeq<IsTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
     
-    typedef IntSeq<(T::size==DYNAMIC)...> IsDynamic; ///< An integer sequence defining whether the tuypes are dynamic or not
+    typedef IntSeq<(T::size==DYNAMIC)...> AreDynamic; ///< An integer sequence defining whether the tuypes are dynamic or not
     
   public:
     
     static constexpr int nDynamic=
-      IsDynamic::hSum;       ///< Number of dynamical components
+      AreDynamic::hSum;       ///< Number of dynamical components
     
     //Check that no dynamic type has been asked (temporarily)
     static_assert(nDynamic==0,"Not yet implemented the dynamic case");
     
-    typedef Tuple<T...> type; ///< Tuple containing all types
+    typedef Tuple<T...> Types; ///< Tuple containing all types
+    
+    template <class Tab>
+    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>;
     
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul; ///< Maximal value of the index, restricted to the statical components
