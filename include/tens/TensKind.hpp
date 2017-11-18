@@ -18,9 +18,15 @@ namespace SUNphi
   ///
   DEFINE_BASE_TYPE(TensKind);
   
+  /// \cond SUNphi_INTERNAL
+  /// TensKind, forward definition
+  ///
   template <class...T>
   class TensKind;
+  /// \endcond
   
+  /// Defines a TensKind type from a Tuple type
+  ///
   DEFINE_VARIADIC_TYPE_FROM_TUPLE(TensKind);
   
   /// Tensor Kind used to define the structure of a tensor
@@ -48,7 +54,7 @@ namespace SUNphi
     typedef Tuple<T...> Types; ///< Tuple containing all types
     
     template <class Tab>
-    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>;
+    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>; ///< Get all types but one
     
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul; ///< Maximal value of the index, restricted to the statical components
