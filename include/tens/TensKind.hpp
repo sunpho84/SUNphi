@@ -53,6 +53,8 @@ namespace SUNphi
     
     typedef Tuple<T...> Types; ///< Tuple containing all types
     
+    static constexpr int nTypes=sizeof...(T); ///< Number of types of the kind
+    
     template <class Tab>
     using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>; ///< Get all types but one
     
