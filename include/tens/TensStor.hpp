@@ -5,8 +5,9 @@
 ///
 /// \brief Header file for the definition of a storage space for a tensor
 
-#include <tens/TensKind.hpp>
 #include <system/Memory.hpp>
+#include <tens/Indexer.hpp>
+#include <tens/TensKind.hpp>
 
 namespace SUNphi
 {
@@ -20,11 +21,27 @@ namespace SUNphi
   class TensStor :
     public ConstraintIsTensKind<TK> //Check that TK is a TensKind
   {
-    using type=typename TK::type;  ///< Tuple containg all mapped type
+    using type=typename TK::Types; ///< Tuple containg all mapped type
     
-    T *v; ///< Internal storage
+    /// Internal storage
+    T *v;
     
   public:
+    
+    /// Debug access to internal storage
+    T* &_v=v;
+    
+    /// Evaluate a TensStor given a set of components
+    template <class...Args>
+    friend T& eval(TensStor& ts,Args...args)
+    {
+      static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
+      
+      int id=index<TK>(args...);
+      printf("Index: %d\n",id); //debug
+      
+      return ts.v[id];
+    }
     
     /// Constructor (test)
     ///
