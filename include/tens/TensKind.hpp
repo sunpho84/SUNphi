@@ -41,25 +41,42 @@ namespace SUNphi
     //Check that all types are TensComp
     static_assert(IntSeq<IsTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
     
-    typedef IntSeq<(T::size==DYNAMIC)...> AreDynamic; ///< An integer sequence defining whether the tuypes are dynamic or not
+    /// An integer sequence defining whether the tuypes are dynamic or not
+    typedef IntSeq<(T::size==DYNAMIC)...> AreDynamic;
     
   public:
     
-    static constexpr int nDynamic=
-      AreDynamic::hSum;       ///< Number of dynamical components
+    /// Number of dynamical components
+    static constexpr int nDynamic=AreDynamic::hSum;
     
     //Check that no dynamic type has been asked (temporarily)
     static_assert(nDynamic==0,"Not yet implemented the dynamic case");
     
-    typedef Tuple<T...> Types; ///< Tuple containing all types
+    /// Tuple containing all types
+    typedef Tuple<T...> Types;
     
-    static constexpr int nTypes=sizeof...(T); ///< Number of types of the kind
+    /// Number of types of the kind
+    static constexpr int nTypes=sizeof...(T);
     
+    // /// Position of a given type
+    // template <class Tf>
+    // static constexpr int posOfType=posOfType<Tf,Tuple<T...>>;
+    
+    // /// Get all types before one
+    // template <class Tab>
+    // using AllBeforeType=TensKindFromTuple<decltype(getHead<Tab>(Types{}))>;
+    
+    /// Get all types but one
     template <class Tab>
-    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>; ///< Get all types but one
+    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>;
     
+    // /// Get all types after one
+    // template <class Tab>
+    // using AllAfterType=TensKindFromTuple<decltype(getTail<Tab>(Types{}))>;
+    
+    /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
-      IntSeq<(T::size>=0 ? T::size : 1)...>::hMul; ///< Maximal value of the index, restricted to the statical components
+      IntSeq<(T::size>=0 ? T::size : 1)...>::hMul;
   };
 }
 
