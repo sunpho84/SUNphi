@@ -93,6 +93,25 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Checks if a set of types are the same
+  ///
+  /// Perform an "and" of all single-type check
+  ///
+  template <class Head,class...Tail>
+  static constexpr bool AreSame=IntSeq<IsSame<Head,Tail>...>::hMul;
+  
+  /// Forces a set of types to be the same
+  ///
+  /// Uses AreSame to check
+  ///
+  template <class...Args>
+  class ConstraintAreSame
+  {
+    static_assert(AreSame<Args...>,"Error, types are not the same");
+  };
+  
+  /////////////////////////////////////////////////////////////////////
+  
   namespace Impl
   {
     /// Counts the same types
