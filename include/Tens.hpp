@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the inclusion of all tensor description
 
+#include <tens/Indexer.hpp>
 #include <tens/TensComp.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
