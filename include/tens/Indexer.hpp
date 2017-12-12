@@ -16,7 +16,6 @@ namespace SUNphi
     /// Indexer class to compute an index for a TensKind
     ///
     /// Forward declaration, forbids instantiation
-    ///
     template <class T>
     struct Indexer : ConstraintIsTensKind<T>
     {
@@ -26,7 +25,6 @@ namespace SUNphi
     ///
     /// Recursive implementation definining a nested indexer and
     /// calling it until one component is found
-    ///
     template <class H,class...Oth>
     struct Indexer<TensKind<H,Oth...>>
     {
@@ -53,7 +51,6 @@ namespace SUNphi
     /// Indexer class to compute an index for a TensKind
     ///
     /// Single component case
-    ///
     template <class H>
     struct Indexer<TensKind<H>>
     {

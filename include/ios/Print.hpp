@@ -8,7 +8,6 @@
 namespace SUNphi
 {
   /// Variadic print to a stream
-  ///
   template <class S>
   S& print(S& out)
   {
@@ -16,12 +15,12 @@ namespace SUNphi
   }
   
   /// Variadic print to a stream
-  ///
   template <class S,class Head,class...Tail>
   S& print(S& out,const Head& head,const Tail&...tail)
   {
     out<<head;
     if(sizeof...(tail)) out<<" ";
+    
     return print(out,tail...);
   }
 }

@@ -14,7 +14,6 @@ namespace SUNphi
   /// The creator must accepts any type which qualifies as a TEx (TO
   /// BE FIXED) CHANGE the name of the bound type to B or Bound, and G
   /// for Get type
-  ///
   template <class T,class TG,
 	    class T_TK=typename std::remove_reference_t<T>::TK,
 	    class T_TK_TYPES=typename T_TK::Types>

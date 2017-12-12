@@ -9,7 +9,6 @@
 ///
 /// Overload the ~ operator to implement cast to the basic class of a
 /// CRTP class
-///
 #define DEFINE_CRTP_CAST_OPERATOR(CLASS)		\
   CLASS& operator~()					\
   {							\

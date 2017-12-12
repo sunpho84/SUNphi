@@ -10,7 +10,6 @@
 namespace SUNphi
 {
   /// Defines the BaseTEx type traits
-  ///
   DEFINE_BASE_TYPE(TEx);
   
 }

@@ -5,7 +5,6 @@
 ///
 /// \brief Macro to swallow a semicolon after a macro
 
-
 /*! Define an anonymous empty class to eat a dangling semicolon
   
   Example:

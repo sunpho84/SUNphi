@@ -15,7 +15,6 @@ namespace SUNphi
   /// Define Tuple, a list of arbitrary types.
   ///
   /// Directly aliasing the std library.
-  ///
   template<class...Tp>
   using Tuple=std::tuple<Tp...>;
   
@@ -26,7 +25,6 @@ namespace SUNphi
     /// Check that a type is a tuple
     ///
     /// Generic false case
-    ///
     template <class T>
     struct IsTuple : public FalseType
     {
@@ -35,7 +33,6 @@ namespace SUNphi
     /// Check that a type is a tuple
     ///
     /// Specialization for a true tuple
-    ///
     template <class...Tp>
     struct IsTuple<Tuple<Tp...>> : public TrueType
     {
@@ -45,7 +42,6 @@ namespace SUNphi
   /// Check that a type is a tuple
   ///
   /// Gives visibility to the internal implementation
-  ///
   template <class T>
   constexpr int IsTuple=Impl::IsTuple<T>::value;
   
@@ -74,7 +70,6 @@ namespace SUNphi
   /// int size=TestFromTuple<Tuple<int,char>>::size; //2
   ///
   /// \endcode
-  ///
 #define DEFINE_VARIADIC_TYPE_FROM_TUPLE(TYPE)				\
   namespace Impl							\
   {									\
@@ -96,14 +91,12 @@ namespace SUNphi
   /// Checks if a set of types are the same
   ///
   /// Perform an "and" of all single-type check
-  ///
   template <class Head,class...Tail>
   static constexpr bool AreSame=IntSeq<IsSame<Head,Tail>...>::hMul;
   
   /// Forces a set of types to be the same
   ///
   /// Uses AreSame to check
-  ///
   template <class...Args>
   class ConstraintAreSame
   {
@@ -117,14 +110,12 @@ namespace SUNphi
     /// Counts the same types
     ///
     /// Single pair of types case
-    ///
     template<class T1,class T2,class=FalseType>
     static constexpr int nOfTypeInTuple=0;
     
     /// Counts the same type
     ///
     /// Counts the occurrency of type T inside a tuple
-    ///
     template<class T,class...Tp>
     static constexpr int nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
   }
@@ -132,14 +123,12 @@ namespace SUNphi
   /// Counts the same type
   ///
   /// Gives external visibility to the implementation
-  ///
   template <class T,class TP>
   static constexpr int nOfTypeInTuple=Impl::nOfTypeInTuple<T,TP>;
   
   /////////////////////////////////////////////////////////////////
   
   /// Contraint a type to be contained in a Tuple
-  ///
   template <class T,class TP,class=ConstraintIsTuple<TP>>
   struct ConstraintTupleHasType
   {
@@ -160,11 +149,11 @@ namespace SUNphi
     /// \code
     /// typename TupleWrap<int>::type test; //Tuple<int>
     /// \endcode
-    ///
     template <class T>
     struct TupleWrap
     {
-      typedef Tuple<T> type; ///< Internal mapped type
+      /// Internal mapped type
+      typedef Tuple<T> type;
     };
     
     /// Remap a \c Tuple type into itself
@@ -175,11 +164,11 @@ namespace SUNphi
     /// \code
     /// typename TupleWrap<Tuple<int>>::type test; //Tuple<int>
     /// \endcode
-    ///
     template <class...T>
     struct TupleWrap<Tuple<T...>>
     {
-      typedef Tuple<T...> type; ///< Internal mapped type
+      /// Internal mapped type
+      typedef Tuple<T...> type;
     };
   }
   
@@ -196,7 +185,6 @@ namespace SUNphi
   /// TupleWrap<int> test1; //sTuple<int>
   /// TupleWrap<Tuple<int>> test2; //Tuple<int>
   /// \endcode
-  ///
   template <class T>
   using TupleWrap=typename Impl::TupleWrap<T>::type;
   
@@ -206,10 +194,9 @@ namespace SUNphi
   ///
   /// Directly aliasing the std library. L-value case.
   /// \return A reference to the I tuple element.
-  ///
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&
-  get(Tuple<Types...>& t) ///< Tuple from which extract
+  get(Tuple<Types...>& t)
   {
     return std::get<I>(t);
   }
@@ -218,10 +205,9 @@ namespace SUNphi
   ///
   /// Directly aliasing the std library. R-value case
   /// \return A move-reference to the I tuple element.
-  ///
   template<std::size_t I,class...Types>
   constexpr std::tuple_element_t<I,Tuple<Types...>>&&
-  get(Tuple<Types...>&& t) ///< Tuple from which extract
+  get(Tuple<Types...>&& t)
   {
     return std::get<I>(t);
   }
@@ -230,9 +216,8 @@ namespace SUNphi
   ///
   /// Directly aliasing the std library. L-value case.
   /// \return A reference to the T tuple type (if present).
-  ///
   template<class T,class...Types>
-  constexpr T& get(Tuple<Types...>& t) ///< Tuple from which extract
+  constexpr T& get(Tuple<Types...>& t)
   {
     return std::get<T>(t);
   }
@@ -241,9 +226,8 @@ namespace SUNphi
   ///
   /// Directly aliasing the std library. R-value case.
   /// \return A move-reference to the T tuple type (if present).
-  ///
   template<class T,class...Types>
-  constexpr T&& get(Tuple<Types...>&& t) ///< Tuple from which extract
+  constexpr T&& get(Tuple<Types...>&& t)
   {
     return std::get<T>(t);
   }
@@ -263,7 +247,6 @@ namespace SUNphi
   /// TupleTypeCatT<T,T> test1;    //Tuple<int,double,int,double>
   /// TupleTypeCatT<T,char> test2; //Tuple<int,double,char>
   /// \endcode
-  ///
   template <class...Tp>
   using TupleTypeCatT=decltype(tuple_cat(TupleWrap<Tp>{}...));
   
@@ -278,7 +261,6 @@ namespace SUNphi
   /// \tparam Func \c Function type
   /// \tparam Tp... The Tuple parameters
   /// \return \c void
-  ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<I==sizeof...(Tp)>
   forEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
@@ -296,7 +278,6 @@ namespace SUNphi
   /// \tparam Func \c Function type
   /// \tparam Tp... The \c Tuple parameters
   /// \return \c void
-  ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<(sizeof...(Tp)>I)>
   forEach(Tuple<Tp...>& t ///< \c Tuple to act upon
@@ -315,7 +296,6 @@ namespace SUNphi
   /// \tparam Func \c Function type
   /// \tparam Tp... The \c Tuple parameters
   /// \return \c void
-  ///
   template<size_t I=0,typename Func,typename...Tp>
   VoidIf<(sizeof...(Tp)>I)>
   forEach(const Tuple<Tp...>& t ///< \c Tuple to act upon
@@ -332,40 +312,41 @@ namespace SUNphi
     /// Gets the position of a type in a list
     ///
     /// Forward definition
-    ///
     template <class T,class...Tp>
     struct PosOfType;
     
     /// Gets the position of a type in a list
     ///
     /// Case of matching type
-    ///
     template <class T,class...Tp>
     struct PosOfType<T,T,Tp...>
     {
       static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
-      static constexpr int value=0; ///< Set the position to 0, the first of the list
+      
+      /// Set the position to 0, the first of the list
+      static constexpr int value=0;
     };
     
     /// Gets the position of a type in a list
     ///
     /// Case of non-matching type, instantiate iterativerly the searcher
-    ///
     template <class T,class U,class...Tp>
     struct PosOfType<T,U,Tp...>
     {
       static_assert(sizeof...(Tp),"Type not found in the list");
-      static constexpr int value=1+PosOfType<T,Tp...>::value; ///< Set the position to one more than the nested value
+      
+      /// Set the position to one more than the nested value
+      static constexpr int value=1+PosOfType<T,Tp...>::value;
     };
     
     /// Gets the position of a type in a tuple
     ///
     /// Wraps the ordinary list searcher
-    ///
     template <class T,class...Tp>
     struct PosOfType<T,Tuple<Tp...>>
     {
-      static constexpr int value=PosOfType<T,Tp...>::value; ///< Position inside the list
+      /// Position inside the list
+      static constexpr int value=PosOfType<T,Tp...>::value;
     };
   }
   
@@ -379,7 +360,6 @@ namespace SUNphi
   /// int c=PosOfType<int, char,double,char>;       //static_assert (not found)
   /// int d=PosOfType<int, int,int,char>;           //static_assert (multiple occurency)
   /// \endcode
-  ///
   template <class...Tp>
   constexpr int posOfType=Impl::PosOfType<Tp...>::value;
   
@@ -389,7 +369,6 @@ namespace SUNphi
   ///
   /// Return a tuple containg the elements of a tuple according to a
   /// list of indices
-  ///
   template <int...Ints,class...Tp>
   auto getIndexed(const IntSeq<Ints...>&,const Tuple<Tp...> &tp)
   {
@@ -399,7 +378,6 @@ namespace SUNphi
   /// Gets the head of a \c Tuple
   ///
   /// Return a tuple containg the first N elements of a tuple
-  ///
   template <int N,class...Tp>
   auto getHead(const Tuple<Tp...> &tp)     ///< Tuple from which to extract
   {
@@ -409,7 +387,6 @@ namespace SUNphi
   /// Gets the tail of a \c Tuple
   ///
   /// Return a \c Tuple containg the last N elements of a tuple
-  ///
   template <int N,class...Tp>
   auto getTail(const Tuple<Tp...> &tp)     ///< Tuple from which to extract
   {
@@ -429,11 +406,12 @@ namespace SUNphi
   /// Tuple<int,double,char> e;
   /// auto GetAllBut<1>(e); // Tuple<int,char>
   /// \endcode
-  ///
   template <int N,class...Tp>
   auto getAllBut(const Tuple<Tp...> &tp)
   {
-    constexpr int tupleSize=sizeof...(Tp); ///< Number of elements in the tuple
+    /// Number of elements in the tuple
+    constexpr int tupleSize=sizeof...(Tp);
+    
     return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize>>{},tp);
   }
   
@@ -447,7 +425,6 @@ namespace SUNphi
   /// Tuple<int,double,char> e;
   /// auto GetAllBut<double>(e); // Tuple<int,char>
   /// \endcode
-  ///
   template <class T,class...Tp>
   auto getAllBut(const Tuple<Tp...> &tp)
   {

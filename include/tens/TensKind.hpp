@@ -15,18 +15,15 @@
 namespace SUNphi
 {
   /// Defines the BaseTensKind type traits
-  ///
   DEFINE_BASE_TYPE(TensKind);
   
   /// \cond SUNphi_INTERNAL
   /// TensKind, forward definition
-  ///
   template <class...T>
   class TensKind;
   /// \endcond
   
   /// Defines a TensKind type from a Tuple type
-  ///
   DEFINE_VARIADIC_TYPE_FROM_TUPLE(TensKind);
   
   /// Tensor Kind used to define the structure of a tensor
@@ -34,7 +31,6 @@ namespace SUNphi
   /// The tensor kind defines the list of components of a tensor. It
   /// is used to the define the underlying set of components of a \c
   /// TensorStorage, or the returned type of a Template Expression
-  ///
   template <class...T>
   class TensKind : public BaseTensKind
   {

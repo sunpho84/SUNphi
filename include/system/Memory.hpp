@@ -12,13 +12,11 @@
 namespace SUNphi
 {
   /// Basic alignement for AVX-512, to be generalized
-  ///
   static constexpr size_t ALIGNMENT=64;
   
   /// Get aligned memory
   ///
   /// Call the system routine which allocate memory
-  ///
   template <class T=char>
   T* getRawAlignedMem(const size_t nel)
   {
@@ -33,7 +31,6 @@ namespace SUNphi
   ///
   /// For the time being it just free the memory, but it would be
   /// interesting to implement a memory pool
-  ///
   template <class T>
   void freeMem(T* &ptr) ///< Pointer getting freed, set to zero
   {

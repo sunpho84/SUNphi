@@ -16,12 +16,12 @@ namespace SUNphi
   /// The tensor kind defines the list of components of a tensor. It
   /// is used to the define the underlying set of components of a \c
   /// TensorStorage, or the returned type of a Template Expression
-  ///
   template <class TK,class T>
   class TensStor :
     public ConstraintIsTensKind<TK> //Check that TK is a TensKind
   {
-    using type=typename TK::Types; ///< Tuple containg all mapped type
+    /// Tuple containg all mapped type
+    using type=typename TK::Types;
     
     /// Internal storage
     T *v;
@@ -44,7 +44,6 @@ namespace SUNphi
     }
     
     /// Constructor (test)
-    ///
     TensStor()
     {
       static_assert(TK::nDynamic==0,"Dynamic case not implemented");
@@ -54,7 +53,6 @@ namespace SUNphi
     }
     
     /// Destructor
-    ///
     ~TensStor()
     {
       freeMem(v);
