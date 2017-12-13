@@ -9,6 +9,7 @@
 #include <System.hpp>
 #include <Tens.hpp>
 #include <TEx.hpp>
+#include <Utility.hpp>
 
 /// Namespace of the SUNphi library
 namespace SUNphi
