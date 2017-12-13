@@ -12,10 +12,10 @@ namespace SUNphi
   /// Class to bind a component of a TEx
   ///
   /// The creator must accepts any type which qualifies as a TEx (TO
-  /// BE FIXED) CHANGE the name of the bound type to B or Bound, and G
-  /// for Get type
-  template <class T,class TG,
-	    class T_TK=typename std::remove_reference_t<T>::TK,
+  /// BE FIXED)
+  template <class B, // Bound type
+	    class TG, // Get type
+	    class T_TK=typename std::remove_reference_t<B>::TK,
 	    class T_TK_TYPES=typename T_TK::Types>
   class Binder :
     public ConstraintIsTensKind<T_TK>,
@@ -27,11 +27,12 @@ namespace SUNphi
   public:
     
     /// Reference to the object from which to get
-    Conditional<T::isStoring,T&,T> ref;
+    Conditional<B::isStoring,B&,B> ref;
     
     /// Index to get
     int id;
     
+    /// Returns whether this TEx is storing
     static constexpr bool isStoring=false;
     
     /// TensorKind of the bound expression
@@ -48,14 +49,15 @@ namespace SUNphi
       return eval(binder.ref,binder.id,args...);
     }
     
-    /// Creator taking a rvalue
-    Binder(T&& ref,int id) : ref(ref),id(id)
+    /// Constructor taking a rvalue
+    Binder(B&& ref,int id) : ref(ref),id(id)
     {
     }
     
-    // Binder(T& ref,int id) : ref(ref),id(id)
-    // {
-    // }
+    /// Constructor taking lvalue
+    Binder(B& ref,int id) : ref(ref),id(id)
+    {
+    }
     
   };
 }
