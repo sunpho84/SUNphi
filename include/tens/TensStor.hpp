@@ -33,11 +33,11 @@ namespace SUNphi
     
     /// Evaluate a TensStor given a set of components
     template <class...Args>
-    friend T& eval(TensStor& ts,Args...args)
+    friend T& eval(TensStor& ts,const Args&...args)
     {
       static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
       
-      int id=index<TK>(args...);
+      const int id=index<TK>(std::forward<const Args>(args)...);
       printf("Index: %d\n",id); //debug
       
       return ts.v[id];

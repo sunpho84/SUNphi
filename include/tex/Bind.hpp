@@ -44,9 +44,9 @@ namespace SUNphi
     
     /// Evaluator
     template <class...Args>
-    friend decltype(auto) eval(Binder &binder,Args...args)
+    friend decltype(auto) eval(Binder& binder,const Args&...args)
     {
-      return eval(binder.ref,binder.id,args...);
+      return eval(binder.ref,binder.id,std::forward<const Args>(args)...);
     }
     
     /// Constructor taking a rvalue

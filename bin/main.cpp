@@ -98,8 +98,6 @@ auto spin(T&& ref,const int id)
   return bind(std::forward<T>(ref),Spin{},id);
 }
 
-
-
 // template <class...Tp>
 // constexpr int countUniqueTypes=Sum<(countTypeIsSame<Tp,Tp...> ==1)...>;
 
@@ -108,17 +106,20 @@ using MyTK=TensKind<Color,Spin>;
 class MyTens
 {
   using TS=TensStor<MyTK,double>;
+
 public:
+  
   typedef MyTK TK;
   TS v;
   
   static constexpr bool isStoring=true;
   
   template <class...Comps>
-  friend double& eval(MyTens& t,Comps...comps)
+  friend double& eval(MyTens& t,const Comps&...comps)
   {
     static_assert(sizeof...(comps)==TK::nTypes,"The number of arguments must be the same of the number");
-    return eval(t.v,comps...);
+    
+    return eval(t.v,std::forward<const Comps>(comps)...);
   }
 };
 
