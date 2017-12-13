@@ -43,21 +43,10 @@ auto bind(Binder<Nested,NestedTg>& ref,const Tg&,const int id)
     bind(bind(ref.ref,Tg{},id),NestedTg{},nestedId);
 }
 
-template <class T>
-auto color(T& ref,const int id)
-{
-  return ::bind(ref,Color{},id);
-}
-
-template <class T>
-auto spin(T& ref,const int id)
-{
-  return ::bind(ref,Spin{},id);
-}
 
 
 template <typename T,class Tg>
-auto bind(T&& ref,const Tg&,const int id)
+auto bind(T&& ref,const int id)
 {
   return Binder<T,Tg>(std::forward<T>(ref),id);
 }
@@ -69,47 +58,32 @@ namespace SUNphi
   template <typename Nested,                                        // Type referred from the nested bounder
 	    typename NestedTg,                                      // Type got by the nested bounder
 	    class Tg,                                               // Type to get
-	    int Swap>                                               // Switch to activate one or the other case
-  struct NestedBind;
-  
-  template <typename Nested,                                        // Type referred from the nested bounder
-	    typename NestedTg,                                      // Type got by the nested bounder
-	    class Tg>                                               // Type to get
-  struct NestedBind<Nested,NestedTg,Tg,true>
+	    class B=Binder<Nested,NestedTg>,                        // Type to be bound
+	    class NestedTK=typename Nested::TK,                     // Tensor Kind of nested bounder
+	    class NestedTypes=typename NestedTK::Types,             // Types of the Tensor Kind of nested bounder
+	    int NestedNestedTgPos=posOfType<NestedTg,NestedTypes>,  // Position inside the nested reference of the type got by the nested bounder
+	    int NestedTgPos=posOfType<Tg,NestedTypes>,              // Position inside the nested reference of the type to get
+	    int Swap=(NestedTgPos>NestedNestedTgPos)>
+  struct NestedBinder
   {
-    static auto bind(Binder<Nested,NestedTg>&& ref,const int id)
-    {
-      const int nestedId=ref.id;
-      
-      return Binder<Binder<Nested,Tg>,NestedTg>(Binder<Nested,Tg>(ref.ref,id),nestedId);
-    }
+    typedef SUNphi::Conditional<Swap,Tg,NestedTg> intTg;
+    typedef SUNphi::Conditional<Swap,NestedTg,Tg> extTg;
+    typedef Binder<Nested,intTg> intBinder;
+    typedef Binder<intBinder,extTg> extBinder;
+    
+    extBinder binder;
+    
+    NestedBinder(Binder<Nested,NestedTg>&& ref,const int id) : binder(intBinder(ref.ref,(Swap?id:ref.id)),(Swap?ref.id:id)) {}
   };
-  
-  template <typename Nested,                                        // Type referred from the nested bounder
-	    typename NestedTg,                                      // Type got by the nested bounder
-	    class Tg>                                               // Type to get
-  struct NestedBind<Nested,NestedTg,Tg,false>
-  {
-    static auto bind(Binder<Nested,NestedTg>&& ref,const int id)
-    {
-      return Binder<Binder<Nested,NestedTg>,Tg>(std::forward<Binder<Nested,NestedTg>>(ref),id);
-    }
-  };
-}
+  }
 }
 
 template <typename Nested,
 	  typename NestedTg,
-	  class Tg,
-	  class B=Binder<Nested,NestedTg>,                        // Type to be bound
-	  class NestedTK=typename Nested::TK,                     // Tensor Kind of nested bounder
-	  class NestedTypes=typename NestedTK::Types,             // Types of the Tensor Kind of nested bounder
-	  int NestedNestedTgPos=posOfType<NestedTg,NestedTypes>,  // Position inside the nested reference of the type got by the nested bounder
-	  int NestedTgPos=posOfType<Tg,NestedTypes>,              // Position inside the nested reference of the type to get
-	  int Swap=(NestedTgPos>NestedNestedTgPos)>
+	  class Tg>
 auto bind(Binder<Nested,NestedTg>&& ref,const Tg&,const int id)
 {
-  return Impl::NestedBind<Nested,NestedTg,Tg,Swap>::bind(std::forward<Binder<Nested,NestedTg>>(ref),id);
+  return Impl::NestedBinder<Nested,NestedTg,Tg>(std::forward<Binder<Nested,NestedTg>>(ref),id).binder;
 }
 
 template <class T>
