@@ -86,7 +86,7 @@ namespace SUNphi
     ///
     /// Dummy prototype to be specialized with actual case.
     template <class...T>
-    struct IntSeqCat;
+    struct _IntSeqCat;
     
     /// Internal implementation of sequence-of-integer catter.
     ///
@@ -100,7 +100,7 @@ namespace SUNphi
     /// IntSeqCat<Seq>::type test; //IntSeq<1,2,3,4>
     /// \endcode
     template <int...Ints>
-    struct IntSeqCat<IntSeq<Ints...>>
+    struct _IntSeqCat<IntSeq<Ints...>>
     {
       typedef IntSeq<Ints...> type; ///< Internally mapped type
     };
@@ -116,13 +116,13 @@ namespace SUNphi
     /// IntSeqCat<Seq,Seq>::type test; //IntSeq<1,2,3,4,1,2,3,4>
     /// \endcode
     template <int...Ints1,int...Ints2,class...T>
-    struct IntSeqCat<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
+    struct _IntSeqCat<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
     {
       /// Binary cat \c Ints1..., \c Ints2..., separated for clarity
       using Nested=IntSeq<Ints1...,Ints2...>;
       
       /// Result of catting the whole list \c Ints1, \c Ints2,...
-      typedef typename IntSeqCat<Nested,T...>::type type;
+      typedef typename _IntSeqCat<Nested,T...>::type type;
     };
   }
   
@@ -130,7 +130,7 @@ namespace SUNphi
   ///
   /// Wraps the implementation to avoid writing "type"
   template <class...T>
-  using IntSeqCat=typename Impl::IntSeqCat<T...>::type;
+  using IntSeqCat=typename Impl::_IntSeqCat<T...>::type;
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -140,21 +140,21 @@ namespace SUNphi
     ///
     /// Internal implementation, recursively calling itself until 0 or 1
     template <int Max>
-    struct IntsUpTo
+    struct _IntsUpTo
     {
       /// Used to split the list
       static constexpr int half=Max/2;
       
       /// Internal type holding the two halves
-      using type=IntSeqCat<typename IntsUpTo<half>::type,
-			   typename IntsUpTo<Max-half>::type::template Add<half>>;
+      using type=IntSeqCat<typename _IntsUpTo<half>::type,
+			   typename _IntsUpTo<Max-half>::type::template Add<half>>;
     };
     
     /// Defines a sequence of integer up to Max (excluded)
     ///
     /// Implement the terminator, considering a sequence up to 0 (empty)
     template <>
-    struct IntsUpTo<0>
+    struct _IntsUpTo<0>
     {
       /// Empty list
       using type=IntSeq<>;
@@ -164,7 +164,7 @@ namespace SUNphi
     ///
     /// Implement the terminator, considering a sequence up to 1 (including only 0)
     template <>
-    struct IntsUpTo<1>
+    struct _IntsUpTo<1>
     {
       /// Trivial list
       using type=IntSeq<0>;
@@ -175,7 +175,7 @@ namespace SUNphi
   ///
   /// Wraps the internal definition
   template <int Max>
-  using IntsUpTo=typename Impl::IntsUpTo<Max>::type;
+  using IntsUpTo=typename Impl::_IntsUpTo<Max>::type;
   
   ///////////////////////////////////////////////////////////////////////
   
@@ -185,7 +185,7 @@ namespace SUNphi
     ///
     /// This is achieved using the Add and Mul from the IntSeq list
     template <int Min,int Shift,int Max>
-    struct RangeSeq
+    struct _RangeSeq
     {
       static_assert(Shift,"Shift must be non-zero"); //assert if Shift is zero
       
@@ -216,7 +216,7 @@ namespace SUNphi
   /// typedef RangeSeq<2,3,8> Range; //IntSeq<2,5>
   /// \endcode
   template <int Min,int Shift,int Max>
-  using RangeSeq=typename Impl::RangeSeq<Min,Shift,Max>::type;
+  using RangeSeq=typename Impl::_RangeSeq<Min,Shift,Max>::type;
 }
 
 #endif

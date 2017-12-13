@@ -69,13 +69,13 @@ namespace SUNphi
     ///
     /// Forward declaration of internal implementation
     template <bool B,typename T,typename F>
-    struct Conditional;
+    struct _Conditional;
     
     /// Provides type T if B is true, or F if is false
     ///
     /// True case of internal implementation
     template <typename T,typename F>
-    struct Conditional<true,T,F>
+    struct _Conditional<true,T,F>
     {
       /// Internal type (T)
       typedef T type;
@@ -85,7 +85,7 @@ namespace SUNphi
     ///
     /// False case of internal implementation
     template <typename T,typename F>
-    struct Conditional<false,T,F>
+    struct _Conditional<false,T,F>
     {
       /// Internal type (F)
       typedef F type;
@@ -96,7 +96,7 @@ namespace SUNphi
   ///
   /// Wraps the internal implementation
   template <bool B,typename T,typename F>
-  using Conditional=typename Impl::Conditional<B,T,F>::type;
+  using Conditional=typename Impl::_Conditional<B,T,F>::type;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -112,7 +112,7 @@ namespace SUNphi
     ///
     /// Helper to internally implement the check through a template class
     template <class Base,class Derived>
-    class ConstraintInherit
+    class _ConstraintInherit
     {
       static_assert(IsBaseOf<Base,Derived>,"Error, type not derived from what expected");
     };
@@ -122,7 +122,7 @@ namespace SUNphi
   ///
   /// Wraps the class defining the check
   template <class Base,class Derived>
-  using ConstraintInherit=decltype(Impl::ConstraintInherit<Base,Derived>());
+  using ConstraintInherit=decltype(Impl::_ConstraintInherit<Base,Derived>());
   
   /// Defines a "Base" identifier and checks for it
   ///

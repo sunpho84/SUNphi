@@ -26,7 +26,7 @@ namespace SUNphi
     ///
     /// Generic false case
     template <class T>
-    struct IsTuple : public FalseType
+    struct _IsTuple : public FalseType
     {
     };
     
@@ -34,7 +34,7 @@ namespace SUNphi
     ///
     /// Specialization for a true tuple
     template <class...Tp>
-    struct IsTuple<Tuple<Tp...>> : public TrueType
+    struct _IsTuple<Tuple<Tp...>> : public TrueType
     {
     };
   }
@@ -43,7 +43,7 @@ namespace SUNphi
   ///
   /// Gives visibility to the internal implementation
   template <class T>
-  constexpr int IsTuple=Impl::IsTuple<T>::value;
+  constexpr int IsTuple=Impl::_IsTuple<T>::value;
   
   /// Force the type to be a tuple
   template <class T>
@@ -74,17 +74,17 @@ namespace SUNphi
   namespace Impl							\
   {									\
     template <class TP,class=FalseType>					\
-      struct TYPE ## FromTuple;						\
+      struct _ ## TYPE ## FromTuple;					\
 									\
     template <class...Tp>						\
-      struct TYPE ## FromTuple<Tuple<Tp...>>				\
+      struct _ ## TYPE ## FromTuple<Tuple<Tp...>>			\
     {									\
       using type=TYPE<Tp...>;						\
     };									\
   }									\
 									\
   template <class TP,class=ConstraintIsTuple<TP>>			\
-  using TYPE ## FromTuple=typename Impl::TYPE ## FromTuple<TP>::type
+  using TYPE ## FromTuple=typename Impl::_ ## TYPE ## FromTuple<TP>::type
   
   /////////////////////////////////////////////////////////////////
   
@@ -111,20 +111,20 @@ namespace SUNphi
     ///
     /// Single pair of types case
     template<class T1,class T2,class=FalseType>
-    static constexpr int nOfTypeInTuple=0;
+    static constexpr int _nOfTypeInTuple=0;
     
     /// Counts the same type
     ///
     /// Counts the occurrency of type T inside a tuple
     template<class T,class...Tp>
-    static constexpr int nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
+    static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
   }
   
   /// Counts the same type
   ///
   /// Gives external visibility to the implementation
   template <class T,class TP>
-  static constexpr int nOfTypeInTuple=Impl::nOfTypeInTuple<T,TP>;
+  static constexpr int nOfTypeInTuple=Impl::_nOfTypeInTuple<T,TP>;
   
   /////////////////////////////////////////////////////////////////
   
@@ -150,7 +150,7 @@ namespace SUNphi
     /// typename TupleWrap<int>::type test; //Tuple<int>
     /// \endcode
     template <class T>
-    struct TupleWrap
+    struct _TupleWrap
     {
       /// Internal mapped type
       typedef Tuple<T> type;
@@ -165,7 +165,7 @@ namespace SUNphi
     /// typename TupleWrap<Tuple<int>>::type test; //Tuple<int>
     /// \endcode
     template <class...T>
-    struct TupleWrap<Tuple<T...>>
+    struct _TupleWrap<Tuple<T...>>
     {
       /// Internal mapped type
       typedef Tuple<T...> type;
@@ -186,7 +186,7 @@ namespace SUNphi
   /// TupleWrap<Tuple<int>> test2; //Tuple<int>
   /// \endcode
   template <class T>
-  using TupleWrap=typename Impl::TupleWrap<T>::type;
+  using TupleWrap=typename Impl::_TupleWrap<T>::type;
   
   /////////////////////////////////////////////////////////////////
   
@@ -313,13 +313,13 @@ namespace SUNphi
     ///
     /// Forward definition
     template <class T,class...Tp>
-    struct PosOfType;
+    struct _PosOfType;
     
     /// Gets the position of a type in a list
     ///
     /// Case of matching type
     template <class T,class...Tp>
-    struct PosOfType<T,T,Tp...>
+    struct _PosOfType<T,T,Tp...>
     {
       static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
       
@@ -331,22 +331,22 @@ namespace SUNphi
     ///
     /// Case of non-matching type, instantiate iterativerly the searcher
     template <class T,class U,class...Tp>
-    struct PosOfType<T,U,Tp...>
+    struct _PosOfType<T,U,Tp...>
     {
       static_assert(sizeof...(Tp),"Type not found in the list");
       
       /// Set the position to one more than the nested value
-      static constexpr int value=1+PosOfType<T,Tp...>::value;
+      static constexpr int value=1+_PosOfType<T,Tp...>::value;
     };
     
     /// Gets the position of a type in a tuple
     ///
     /// Wraps the ordinary list searcher
     template <class T,class...Tp>
-    struct PosOfType<T,Tuple<Tp...>>
+    struct _PosOfType<T,Tuple<Tp...>>
     {
       /// Position inside the list
-      static constexpr int value=PosOfType<T,Tp...>::value;
+      static constexpr int value=_PosOfType<T,Tp...>::value;
     };
   }
   
@@ -361,7 +361,7 @@ namespace SUNphi
   /// int d=PosOfType<int, int,int,char>;           //static_assert (multiple occurency)
   /// \endcode
   template <class...Tp>
-  constexpr int posOfType=Impl::PosOfType<Tp...>::value;
+  constexpr int posOfType=Impl::_PosOfType<Tp...>::value;
   
   /////////////////////////////////////////////////////////////////////////
   

@@ -17,7 +17,7 @@ namespace SUNphi
     ///
     /// Forward declaration, forbids instantiation
     template <class T>
-    struct Indexer : ConstraintIsTensKind<T>
+    struct _Indexer : ConstraintIsTensKind<T>
     {
     };
     
@@ -26,7 +26,7 @@ namespace SUNphi
     /// Recursive implementation definining a nested indexer and
     /// calling it until one component is found
     template <class H,class...Oth>
-    struct Indexer<TensKind<H,Oth...>>
+    struct _Indexer<TensKind<H,Oth...>>
     {
       /// Size of the top-level class
       static constexpr int headSize=H::size;
@@ -38,7 +38,7 @@ namespace SUNphi
       {
 	static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
 	//Nested indexer
-	using Nested=Indexer<TensKind<Oth...>>;
+	using Nested=_Indexer<TensKind<Oth...>>;
 	//Nested value
 	const int nested=Nested::index(tail...);
 	//Current component
@@ -52,7 +52,7 @@ namespace SUNphi
     ///
     /// Single component case
     template <class H>
-    struct Indexer<TensKind<H>>
+    struct _Indexer<TensKind<H>>
     {
       /// Size of the top-level class
       static constexpr int headSize=H::size;
@@ -69,11 +69,10 @@ namespace SUNphi
   /// Index function for a TensKind
   ///
   /// Wraps the call to the Indexer class method
-  ///
   template <class TK,class...Args>
   static constexpr int index(const Args&...args)
   {
-    return Impl::Indexer<TK>::index(args...);
+    return Impl::_Indexer<TK>::index(args...);
   }
 }
 
