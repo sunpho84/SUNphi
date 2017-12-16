@@ -18,7 +18,7 @@ namespace SUNphi
   /// TensorStorage, or the returned type of a Template Expression
   template <class TK,class T>
   class TensStor :
-    public ConstraintIsTensKind<TK> //Check that TK is a TensKind
+    public ConstraintIsTensKind<TK> // Check that TK is a TensKind
   {
     /// Tuple containg all mapped type
     using type=typename TK::Types;
@@ -38,7 +38,7 @@ namespace SUNphi
       static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
       
       const int id=index<TK>(std::forward<const Args>(args)...);
-      printf("Index: %d\n",id); //debug
+      //printf("Index: %d\n",id); //debug
       
       return ts.v[id];
     }
@@ -50,7 +50,7 @@ namespace SUNphi
       static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
       
       const int id=index<TK>(std::forward<const Args>(args)...);
-      printf("Index: %d\n",id); //debug
+      //printf("Index: %d\n",id); //debug
       
       return ts.v[id];
     }
@@ -59,7 +59,7 @@ namespace SUNphi
     TensStor()
     {
       static_assert(TK::nDynamic==0,"Dynamic case not implemented");
-      size_t nel=10;
+      size_t nel=TK::maxStaticIdx;
       
       v=getRawAlignedMem<T>(nel); //allocate
     }
