@@ -147,7 +147,7 @@ int main()
       }
   
   auto binder1=spin(color(cicc,1),3);
-    //auto binder2=color(spin(cicc,2),1);
+  //auto binder2=color(spin(cicc,2),1);
   
   // eval(binder1)=8.0;
   printf("ANNA %lg\n",eval(binder1));
