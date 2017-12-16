@@ -6,6 +6,9 @@
 using namespace std;
 using namespace SUNphi;
 
+constexpr int NCOL=3;
+constexpr int NSPIN=4;
+
 struct ColorKind : public BaseTensCompKind
 {
 };
@@ -14,12 +17,20 @@ struct SpinKind : public BaseTensCompKind
 {
 };
 
-struct Color : public TensComp<ColorKind,3>
+struct Color : public TensComp<ColorKind,NCOL>
 {
+  static string name()
+  {
+    return "color";
+  }
 };
 
-struct Spin : public TensComp<SpinKind,4>
+struct Spin : public TensComp<SpinKind,NSPIN>
 {
+  static string name()
+  {
+    return "spin";
+  }
 };
 
 template <typename Tk,class Tg>
