@@ -27,7 +27,7 @@ namespace SUNphi
   public:
     
     /// Reference to the object from which to get
-    Conditional<B::isStoring,B&,B> ref;
+    Conditional<RemoveReference<B>::isStoring,B&,B> ref;
     
     /// Index to get
     const int id;
@@ -46,14 +46,14 @@ namespace SUNphi
     template <class...Args>
     friend decltype(auto) eval(Binder& binder,const Args&...args)
     {
-      return eval(binder.ref,binder.id,std::forward<const Args>(args)...);
+      return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
     
     /// Evaluator returning const
     template <class...Args>
     friend decltype(auto) eval(const Binder& binder,const Args&...args)
     {
-      return eval(binder.ref,binder.id,std::forward<const Args>(args)...);
+      return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
     
     /// Constructor taking a rvalue
@@ -61,10 +61,10 @@ namespace SUNphi
     {
     }
     
-    /// Constructor taking lvalue
-    Binder(B& ref,int id) : ref(ref),id(id)
-    {
-    }
+    // /// Constructor taking lvalue
+    // Binder(B& ref,int id) : ref(ref),id(id)
+    // {
+    // }
     
   };
 }
