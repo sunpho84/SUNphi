@@ -34,15 +34,16 @@ namespace SUNphi
       
       /// Compute the index, given a set of components
       template <class...Tail,class=ConstraintAreSame<int,Tail...>>
-      static constexpr int index(const int &head,const Tail&...tail)
+      static constexpr int index(const int& head,const Tail&...tail)
       {
 	static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
 	//Nested indexer
 	using Nested=_Indexer<TensKind<Oth...>>;
 	//Nested value
-	const int nested=Nested::index(tail...);
+	const int nested=Nested::index(std::forward<const Tail>(tail)...);
 	//Current component
 	const int thisComp=head;
+	//std::cout<<"Nested: "<<nested<<" , nested_head_size: "<<Nested::headSize<<" , thiscomp: "<<thisComp<<" , thissize: "<<headSize<<std::endl;
 	//Compose nested value, size and this component
 	return nested+Nested::headSize*thisComp;
       }
@@ -59,8 +60,9 @@ namespace SUNphi
       static_assert(headSize!=DYNAMIC,"Not yet implemented");
       
       /// Compute the index, given a set of components
-      static constexpr int index(const int &head)
+      static int index(const int& head)
       {
+	//std::cout<<"Non-Nested , thiscomp: "<<head<<" , thissize: "<<headSize<<std::endl;
 	return head;
       }
     };

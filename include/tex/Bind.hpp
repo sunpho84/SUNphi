@@ -30,7 +30,7 @@ namespace SUNphi
     Conditional<B::isStoring,B&,B> ref;
     
     /// Index to get
-    int id;
+    const int id;
     
     /// Returns whether this TEx is storing
     static constexpr bool isStoring=false;
@@ -45,6 +45,13 @@ namespace SUNphi
     /// Evaluator
     template <class...Args>
     friend decltype(auto) eval(Binder& binder,const Args&...args)
+    {
+      return eval(binder.ref,binder.id,std::forward<const Args>(args)...);
+    }
+    
+    /// Evaluator returning const
+    template <class...Args>
+    friend decltype(auto) eval(const Binder& binder,const Args&...args)
     {
       return eval(binder.ref,binder.id,std::forward<const Args>(args)...);
     }

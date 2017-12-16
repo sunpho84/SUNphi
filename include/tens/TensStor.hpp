@@ -31,9 +31,21 @@ namespace SUNphi
     /// Debug access to internal storage
     T* &_v=v;
     
-    /// Evaluate a TensStor given a set of components
+    /// Returns a non-const reference to a TensStor given a set of components
     template <class...Args>
     friend T& eval(TensStor& ts,const Args&...args)
+    {
+      static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
+      
+      const int id=index<TK>(std::forward<const Args>(args)...);
+      printf("Index: %d\n",id); //debug
+      
+      return ts.v[id];
+    }
+    
+    /// Returns a const reference to a TensStor given a set of components
+    template <class...Args>
+    friend const T& eval(const TensStor& ts,const Args&...args)
     {
       static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
       
