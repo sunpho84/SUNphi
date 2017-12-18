@@ -11,6 +11,11 @@
 
 namespace SUNphi
 {
+  /// A Tensor class
+  ///
+  /// Container with a given TensKind structure and fundamental type,
+  /// holding resources for the storage of the data and providing
+  /// evaluator
   template <typename TK,   // List of tensor components
 	    typename Fund> // Fundamental type
   class Tens :
@@ -31,13 +36,13 @@ namespace SUNphi
   public:
     
     /// Returns a constant reference to v
-    const TensStor<Tk,Fund>& get_v() const
+    const TensStor<Tk,Fund>& getStor() const
     {
       return v;
     }
     
     /// Returns a non-constant reference to v
-    TensStor<Tk,Fund>& get_v()
+    TensStor<Tk,Fund>& getStor()
     {
       return v;
     }
