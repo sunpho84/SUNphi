@@ -11,11 +11,12 @@
 
 namespace SUNphi
 {
-  /// Tensor Kind used to define the structure of a tensor
+  /// Tensor Storage holding the resources for a tensor
   ///
-  /// The tensor kind defines the list of components of a tensor. It
-  /// is used to the define the underlying set of components of a \c
-  /// TensorStorage, or the returned type of a Template Expression
+  /// The tensor storage allocates and deallocates the memory location
+  /// where a tensor is materially stored, keeping track of the amount
+  /// of memory allocated. Facilities to reallocate the memory are
+  /// provided
   template <class TK,class T>
   class TensStor :
     public ConstraintIsTensKind<TK> // Check that TK is a TensKind
@@ -24,7 +25,7 @@ namespace SUNphi
     using type=typename TK::Types;
     
     /// Internal storage
-    T *v;
+    T* v;
     
   public:
     
