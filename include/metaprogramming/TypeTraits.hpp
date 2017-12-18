@@ -63,40 +63,37 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
-  namespace Impl
-  {
-    /// Provides type T if B is true, or F if is false
-    ///
-    /// Forward declaration of internal implementation
-    template <bool B,typename T,typename F>
-    struct _Conditional;
-    
-    /// Provides type T if B is true, or F if is false
-    ///
-    /// True case of internal implementation
-    template <typename T,typename F>
-    struct _Conditional<true,T,F>
-    {
-      /// Internal type (T)
-      typedef T type;
-    };
-    
-    /// Provides type T if B is true, or F if is false
-    ///
-    /// False case of internal implementation
-    template <typename T,typename F>
-    struct _Conditional<false,T,F>
-    {
-      /// Internal type (F)
-      typedef F type;
-    };
-  }
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// Forward declaration of internal implementation
+  template <bool B,typename T,typename F>
+  struct _Conditional;
   
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// True case of internal implementation
+  template <typename T,typename F>
+  struct _Conditional<true,T,F>
+  {
+    /// Internal type (T)
+    typedef T type;
+  };
+  
+  /// Provides type T if B is true, or F if is false
+  ///
+  /// False case of internal implementation
+  template <typename T,typename F>
+  struct _Conditional<false,T,F>
+  {
+    /// Internal type (F)
+    typedef F type;
+  };
+    
   /// Provides type T if B is true, or F if is false
   ///
   /// Wraps the internal implementation
   template <bool B,typename T,typename F>
-  using Conditional=typename Impl::_Conditional<B,T,F>::type;
+  using Conditional=typename _Conditional<B,T,F>::type;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -106,23 +103,52 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
-  namespace Impl
-  {
-    /// Forces type Derived to be derived from Base
-    ///
-    /// Helper to internally implement the check through a template class
-    template <class Base,class Derived>
-    class _ConstraintInherit
-    {
-      static_assert(IsBaseOf<Base,Derived>,"Error, type not derived from what expected");
-    };
-  }
+  /// Static assert if DERIVED does not derive from BASE
+#define STATIC_ASSERT_IF_NOT_BASE_OF(BASE,DERIVED)			\
+  static_assert(IsBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
   /// Forces type Derived to be derived from Base
-  ///
-  /// Wraps the class defining the check
   template <class Base,class Derived>
-  using ConstraintInherit=decltype(Impl::_ConstraintInherit<Base,Derived>());
+  class ConstraintIsBaseOf
+  {
+    STATIC_ASSERT_IF_NOT_BASE_OF(Base,Derived);
+  };
+  
+  //////////////////////////////////////////////////////////////////////
+  
+  /// Identifies whether a type is a floating-point
+  template <class T>
+  constexpr bool IsFloatingPoint=std::is_floating_point<T>::value;
+
+  /// Static assert if the type T is not a floating-point
+#define STATIC_ASSERT_IF_NOT_FLOATING_POINT(T)				\
+  static_assert(IsFloatingPoint<T>,"Error, type is not a floating point")
+  
+  /// Forces the type to be a floating-point
+  template <class T>
+  class ConstraintIsFloatingPoint
+  {
+    STATIC_ASSERT_IF_NOT_FLOATING_POINT(T);
+  };
+  
+  //////////////////////////////////////////////////////////////////////
+  
+  /// Identifies whether a type is an integer-like
+  template <class T>
+  constexpr bool IsIntegral=std::is_integral<T>::value;
+  
+  /// Static assert if the type T is not an integer-like
+#define STATIC_ASSERT_IF_NOT_INTEGRAL(T)			\
+  static_assert(IsIntegral<T>,"Error, type is not an integral")
+  
+  /// Forces the type to be integer-like
+  template <class T>
+  class ConstraintIsIntegral
+  {
+    STATIC_ASSERT_IF_NOT_INTEGRAL(T);
+  };
+  
+  //////////////////////////////////////////////////////////////////////
   
   /// Defines a "Base" identifier and checks for it
   ///
@@ -136,7 +162,7 @@ namespace SUNphi
   constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;	\
 							\
   template<typename T>					\
-  using ConstraintIs ## TYPE=ConstraintInherit<Base ## TYPE,T>
+  using ConstraintIs ## TYPE=ConstraintIsBaseOf<Base ## TYPE,T>
 }
 
 #endif
