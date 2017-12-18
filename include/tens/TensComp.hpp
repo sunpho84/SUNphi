@@ -40,4 +40,16 @@ namespace SUNphi
   };
 }
 
+/// Definies a \c TensComp, with name TYPE and max N
+#define DEFINE_NAMED_TENS_COMP(TYPE,N)					\
+  /*! Tensor component of \c TYPE Kind */				\
+  struct TYPE : public TensComp<TYPE ## Kind,N>				\
+  {									\
+    /*! Returns the name of the type, as a std string. TO BE IMPROVED */ \
+    static std::string name()						\
+    {									\
+      return #TYPE;							\
+    }									\
+  }
+
 #endif
