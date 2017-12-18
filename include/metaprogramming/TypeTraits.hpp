@@ -119,7 +119,7 @@ namespace SUNphi
   /// Identifies whether a type is a floating-point
   template <class T>
   constexpr bool IsFloatingPoint=std::is_floating_point<T>::value;
-
+  
   /// Static assert if the type T is not a floating-point
 #define STATIC_ASSERT_IF_NOT_FLOATING_POINT(T)				\
   static_assert(IsFloatingPoint<T>,"Error, type is not a floating point")
@@ -155,13 +155,15 @@ namespace SUNphi
   /// Given a TYPE, defines another empty type prefixing its name with
   /// "Base", and defines a check IsTYPE to probe wheter a certain
   /// type inherit from TYPE
-#define DEFINE_BASE_TYPE(TYPE)				\
-  struct Base ## TYPE{};				\
-							\
-  template<typename T>					\
-  constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;	\
-							\
-  template<typename T>					\
+#define DEFINE_BASE_TYPE(TYPE)						\
+  struct Base ## TYPE{};						\
+									\
+  /*! Expression which is true if T inherits from \c BASE ## TYPE */	\
+  template<typename T>							\
+  constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;			\
+									\
+  /*! Class  forcing T to inherits from \c BASE ## TYPE */		\
+  template<typename T>							\
   using ConstraintIs ## TYPE=ConstraintIsBaseOf<Base ## TYPE,T>
 }
 

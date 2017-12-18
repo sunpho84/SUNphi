@@ -40,7 +40,7 @@ namespace SUNphi
   };
 }
 
-/// Definies a \c TensComp, with name TYPE and max N
+/// Defines a \c TensComp, with name TYPE and max N
 #define DEFINE_NAMED_TENS_COMP(TYPE,N)					\
   /*! Tensor component of \c TYPE Kind */				\
   struct TYPE : public TensComp<TYPE ## Kind,N>				\

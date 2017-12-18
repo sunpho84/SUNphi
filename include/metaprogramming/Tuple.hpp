@@ -87,15 +87,27 @@ namespace SUNphi
   ///
   /// \endcode
 #define DEFINE_VARIADIC_TYPE_FROM_TUPLE(TYPE)				\
+									\
+  /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
+  /*!                                                                     */ \
+  /*! Forward declaration of the internal implementation                  */ \
   template <class TP,class=FalseType>					\
   struct _ ## TYPE ## FromTuple;					\
   									\
+  /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
+  /*!                                                                     */ \
+  /*! Actual iplementation                                                */ \
   template <class...Tp>							\
   struct _ ## TYPE ## FromTuple<Tuple<Tp...>>				\
   {									\
+  									\
+    /*! Type which is defined out of the tuple */			\
     using type=TYPE<Tp...>;						\
   };									\
 									\
+  /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
+  /*!                                                                     */ \
+  /*! Gives visibility to the internal implementation                     */ \
   template <class TP,class=ConstraintIsTuple<TP>>			\
   using TYPE ## FromTuple=typename _ ## TYPE ## FromTuple<TP>::type
   
