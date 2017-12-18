@@ -125,7 +125,7 @@ namespace SUNphi
   }
   
   /// Defines a Binder named NAME for type Tg
-#define DEFINE_BINDER_FUN(NAME,TG)					\
+#define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
   template <class T>							\
   auto NAME(T&& ref,const int id)					\
