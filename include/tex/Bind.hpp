@@ -11,8 +11,8 @@ namespace SUNphi
 {
   /// Class to bind a component of a TEx
   ///
-  /// The creator must accepts any type which qualifies as a TEx (TO
-  /// BE FIXED)
+  /// The creator should accepts any type which qualifies as a TEx (TO
+  /// BE FIXED?)
   template <typename TG, // Type to get
 	    typename B,  // Type to bind
 	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
@@ -57,7 +57,7 @@ namespace SUNphi
       return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
     
-    /// Constructor taking a rvalue
+    /// Constructor taking a universal reference (hopefully)
     Binder(B&& ref,int id) : ref(ref),id(id)
     {
     }
@@ -68,6 +68,70 @@ namespace SUNphi
     // }
     
   };
+  
+  /// Bind the \c id component of type \c Tg from expression \c ref
+  ///
+  /// Plain binder getting an unbind expression
+  template <typename Tg,                         // Type to get
+	    typename Tk,                         // TensKind of the ref, deduced from argument
+	    typename=ConstraintIsTensKind<Tk>,   // Force ref to be a TensKind
+	    typename=ConstraintIsTensComp<Tg>>   // Force binding type to be a TensComp
+  auto bind(Tk&& ref,                     ///< Quantity to bind to
+	    const int id)                 ///< Entry of the component to bind
+  {
+    //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
+    return Binder<Tg,Tk>(std::forward<Tk>(ref),id);
+  }
+  
+  /// Bind the \c id component of type \c Tg from expression \c ref
+  ///
+  /// Nested binder getting an already bound expression, swapping the
+  /// inner and outer types and components if needed.
+  template <typename Tg,                        // Type to get
+	    typename InNested,                  // Type referred from the nested bounder
+	    typename InNestedTg,                // Type got by the nested bounder
+	    typename=ConstraintIsTensComp<Tg>>  // Force binding type to be a TensComp
+  auto bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
+	    const int id)                           ///< Component to get
+  {
+    // Tensor Kind of input nested binder
+    using InNestedTk=typename RemoveReference<InNested>::Tk;
+    // Types of the Tensor Kind of nested bounder
+    using NestedTypes=typename InNestedTk::Types;
+    // Position inside the nested reference of the type got by the nested bounder
+    constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
+    // Position inside the nested reference of the type to get
+    static constexpr int NestedTgPos=posOfType<Tg,NestedTypes>;
+    // Keep note of whether we need to swap
+    constexpr bool swap=(NestedTgPos>InNestedNestedTgPos);
+    // Type got by the output nested binder
+    using OutNestedTg=Conditional<swap,Tg,InNestedTg>;
+    // Type got by the output binder
+    using OutTg=Conditional<swap,InNestedTg,Tg>;
+    // Nested component
+    const int nestedId=ref.id;
+    // Out external component
+    const int outNestedId=(swap?id:nestedId);
+    // Out component
+    const int outId=(swap?nestedId:id);
+    // Output Nested binder
+    auto outNestedBinder=bind<OutNestedTg>(std::forward<InNested>(ref.ref),outNestedId);
+    // Type of the output nested binder
+    using OutNestedBinder=decltype(outNestedBinder);
+    
+    //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
+    // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
+    return Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId);
+  }
+  
+  /// Defines a Binder named NAME for type Tg
+#define DEFINE_BINDER_FUN(NAME,TG)					\
+  /*! Get a reference to the \c TG component \c id of \c ref */		\
+  template <class T>							\
+  auto NAME(T&& ref,const int id)					\
+  {									\
+    return bind<TG>(std::forward<T>(ref),id);				\
+  }
 }
 
 #endif
