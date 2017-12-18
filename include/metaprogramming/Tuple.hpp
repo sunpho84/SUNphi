@@ -128,11 +128,15 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Assert if the type T is not in the types of tuple TP
+#define STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP)			\
+  static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found")
+  
   /// Contraint a type to be contained in a Tuple
   template <class T,class TP,class=ConstraintIsTuple<TP>>
   struct ConstraintTupleHasType
   {
-    static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found");
+    STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP);
   };
   
   /////////////////////////////////////////////////////////////////
