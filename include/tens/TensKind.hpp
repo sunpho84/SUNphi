@@ -77,6 +77,13 @@ namespace SUNphi
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul;
   };
+  
+  /// Defines a \c TensKind named TYPE
+#define DEFINE_TENS_KIND(TYPE)						\
+  /*! \c TensKind TYPE to be used for relative \c TensComp */		\
+  struct TYPE ## Kind : public BaseTensCompKind				\
+  {									\
+  }
 }
 
 #endif
