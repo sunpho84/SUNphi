@@ -20,37 +20,53 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  namespace Impl
+  /// Check that a type is a tuple
+  ///
+  /// Generic false case
+  template <class T>
+  struct _IsTuple : public FalseType
   {
-    /// Check that a type is a tuple
-    ///
-    /// Generic false case
-    template <class T>
-    struct _IsTuple : public FalseType
-    {
-    };
-    
-    /// Check that a type is a tuple
-    ///
-    /// Specialization for a true tuple
-    template <class...Tp>
-    struct _IsTuple<Tuple<Tp...>> : public TrueType
-    {
-    };
-  }
+  };
+  
+  /// Check that a type is a tuple
+  ///
+  /// Specialization for a true tuple
+  template <class...Tp>
+  struct _IsTuple<Tuple<Tp...>> : public TrueType
+  {
+  };
   
   /// Check that a type is a tuple
   ///
   /// Gives visibility to the internal implementation
   template <class T>
-  constexpr int IsTuple=Impl::_IsTuple<T>::value;
+  constexpr int IsTuple=_IsTuple<T>::value;
+
+  /// Assert if the type is not a Tuple
+#define STATIC_ASSERT_IS_TUPLE(T)			\
+  static_assert(IsTuple<T>,"Type is not a tuple")
   
-  /// Force the type to be a tuple
+  /// Constraint the class T to be a Tuple
   template <class T>
   struct ConstraintIsTuple
   {
-    static_assert(IsTuple<T>,"Type is not a tuple");
+    STATIC_ASSERT_IS_TUPLE(T);
   };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Counts the types inside a Tuple
+  ///
+  /// Generic type case, forbids instantiation
+  template <class T,class=ConstraintIsTuple<T>>
+  static constexpr int nTypesInTuple=0;
+  
+  /// Counts the types inside a Tuple
+  ///
+  /// Real Tuple case
+  template <class...Tp>
+  static constexpr int nTypesInTuple<Tuple<Tp...>>
+  =sizeof...(Tp);
   
   /////////////////////////////////////////////////////////////////
   
@@ -71,20 +87,17 @@ namespace SUNphi
   ///
   /// \endcode
 #define DEFINE_VARIADIC_TYPE_FROM_TUPLE(TYPE)				\
-  namespace Impl							\
+  template <class TP,class=FalseType>					\
+  struct _ ## TYPE ## FromTuple;					\
+  									\
+  template <class...Tp>							\
+  struct _ ## TYPE ## FromTuple<Tuple<Tp...>>				\
   {									\
-    template <class TP,class=FalseType>					\
-      struct _ ## TYPE ## FromTuple;					\
-									\
-    template <class...Tp>						\
-      struct _ ## TYPE ## FromTuple<Tuple<Tp...>>			\
-    {									\
-      using type=TYPE<Tp...>;						\
-    };									\
-  }									\
+    using type=TYPE<Tp...>;						\
+  };									\
 									\
   template <class TP,class=ConstraintIsTuple<TP>>			\
-  using TYPE ## FromTuple=typename Impl::_ ## TYPE ## FromTuple<TP>::type
+  using TYPE ## FromTuple=typename _ ## TYPE ## FromTuple<TP>::type
   
   /////////////////////////////////////////////////////////////////
   
@@ -105,26 +118,56 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
-  namespace Impl
-  {
-    /// Counts the same types
-    ///
-    /// Single pair of types case
-    template<class T1,class T2,class=FalseType>
-    static constexpr int _nOfTypeInTuple=0;
-    
-    /// Counts the same type
-    ///
-    /// Counts the occurrency of type T inside a tuple
-    template<class T,class...Tp>
-    static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
-  }
+  /// Counts the same types
+  ///
+  /// Single pair of types case - forbids implementation
+  template<class T1,class T2,class=FalseType>
+  static constexpr int _nOfTypeInTuple=0;
+  
+  /// Counts the same type
+  ///
+  /// Counts the occurrency of type T inside a tuple
+  template<class T,class...Tp>
+  static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
   
   /// Counts the same type
   ///
   /// Gives external visibility to the implementation
   template <class T,class TP>
-  static constexpr int nOfTypeInTuple=Impl::_nOfTypeInTuple<T,TP>;
+  static constexpr int nOfTypeInTuple=_nOfTypeInTuple<T,TP>;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Count the number of different types in a Tuple
+  ///
+  /// Generic type - forbids instantiation
+  template <class T,class=ConstraintIsTuple<T>>
+  static constexpr int nDiffTypesInTuple=0;
+  
+  /// Count the number of different types in a Tuple
+  ///
+  /// Real tuple case
+  template <class...Tp>
+  static constexpr int nDiffTypesInTuple<Tuple<Tp...>>
+  =IntSeq<(nOfTypeInTuple<Tp,Tuple<Tp...>> ==1)...>::hSum;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Check whether all types of a Tuple are different
+  template <class T,class=ConstraintIsTuple<T>>
+  static constexpr bool tupleTypesAreAllDifferent
+  =nDiffTypesInTuple<T> ==nTypesInTuple<T>;
+  
+  /// Assert if the tuple contains multiple times a given type
+#define STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T)	\
+  static_assert(tupleTypesAreAllDifferent<T>,"Types in the tuple are not all different")
+  
+  /// Constraint all types in the tuple to be different
+  template <class T,class=ConstraintIsTuple<T>>
+  struct ConstraintTupleTypesAreAllDifferent
+  {
+    STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T);
+  };
   
   /////////////////////////////////////////////////////////////////
   
@@ -132,7 +175,7 @@ namespace SUNphi
 #define STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP)			\
   static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found")
   
-  /// Contraint a type to be contained in a Tuple
+  /// Constraint a type to be contained in a Tuple
   template <class T,class TP,class=ConstraintIsTuple<TP>>
   struct ConstraintTupleHasType
   {
@@ -141,40 +184,37 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  namespace Impl
+  /// Wraps a simple type into a \c Tuple containing the type
+  ///
+  /// For a generic type, put the type into a simple \c Tuple, so that
+  /// it can be treated homogeneously with other Tuples in
+  /// e.g. \c TupleTypeCatT
+  ///
+  /// Example:
+  /// \code
+  /// typename TupleWrap<int>::type test; //Tuple<int>
+  /// \endcode
+  template <class T>
+  struct _TupleWrap
   {
-    /// Wraps a simple type into a \c Tuple containing the type
-    ///
-    /// For a generic type, put the type into a simple \c Tuple, so that
-    /// it can be treated homogeneously with other Tuples in
-    /// e.g. \c TupleTypeCatT
-    ///
-    /// Example:
-    /// \code
-    /// typename TupleWrap<int>::type test; //Tuple<int>
-    /// \endcode
-    template <class T>
-    struct _TupleWrap
-    {
-      /// Internal mapped type
-      typedef Tuple<T> type;
-    };
-    
-    /// Remap a \c Tuple type into itself
-    ///
-    /// Defines a type equal to the Tuple passed as a parameter.
-    ///
-    /// Example:
-    /// \code
-    /// typename TupleWrap<Tuple<int>>::type test; //Tuple<int>
-    /// \endcode
-    template <class...T>
-    struct _TupleWrap<Tuple<T...>>
-    {
-      /// Internal mapped type
-      typedef Tuple<T...> type;
-    };
-  }
+    /// Internal mapped type
+    typedef Tuple<T> type;
+  };
+  
+  /// Remap a \c Tuple type into itself
+  ///
+  /// Defines a type equal to the Tuple passed as a parameter.
+  ///
+  /// Example:
+  /// \code
+  /// typename TupleWrap<Tuple<int>>::type test; //Tuple<int>
+  /// \endcode
+  template <class...T>
+  struct _TupleWrap<Tuple<T...>>
+  {
+    /// Internal mapped type
+    typedef Tuple<T...> type;
+  };
   
   /// Put the type into a \c Tuple, if the type is not already a \c Tuple.
   ///
@@ -190,7 +230,7 @@ namespace SUNphi
   /// TupleWrap<Tuple<int>> test2; //Tuple<int>
   /// \endcode
   template <class T>
-  using TupleWrap=typename Impl::_TupleWrap<T>::type;
+  using TupleWrap=typename _TupleWrap<T>::type;
   
   /////////////////////////////////////////////////////////////////
   
@@ -311,48 +351,45 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  namespace Impl
+  /// Gets the position of a type in a list
+  ///
+  /// Forward definition
+  template <class T,class...Tp>
+  struct _PosOfType;
+  
+  /// Gets the position of a type in a list
+  ///
+  /// Case of matching type
+  template <class T,class...Tp>
+  struct _PosOfType<T,T,Tp...>
   {
-    /// Gets the position of a type in a list
-    ///
-    /// Forward definition
-    template <class T,class...Tp>
-    struct _PosOfType;
+    static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
     
-    /// Gets the position of a type in a list
-    ///
-    /// Case of matching type
-    template <class T,class...Tp>
-    struct _PosOfType<T,T,Tp...>
-    {
-      static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
-      
-      /// Set the position to 0, the first of the list
-      static constexpr int value=0;
-    };
+    /// Set the position to 0, the first of the list
+    static constexpr int value=0;
+  };
+  
+  /// Gets the position of a type in a list
+  ///
+  /// Case of non-matching type, instantiate iterativerly the searcher
+  template <class T,class U,class...Tp>
+  struct _PosOfType<T,U,Tp...>
+  {
+    static_assert(sizeof...(Tp),"Type not found in the list");
     
-    /// Gets the position of a type in a list
-    ///
-    /// Case of non-matching type, instantiate iterativerly the searcher
-    template <class T,class U,class...Tp>
-    struct _PosOfType<T,U,Tp...>
-    {
-      static_assert(sizeof...(Tp),"Type not found in the list");
-      
-      /// Set the position to one more than the nested value
-      static constexpr int value=1+_PosOfType<T,Tp...>::value;
-    };
-    
-    /// Gets the position of a type in a tuple
-    ///
-    /// Wraps the ordinary list searcher
-    template <class T,class...Tp>
-    struct _PosOfType<T,Tuple<Tp...>>
-    {
-      /// Position inside the list
-      static constexpr int value=_PosOfType<T,Tp...>::value;
-    };
-  }
+    /// Set the position to one more than the nested value
+    static constexpr int value=1+_PosOfType<T,Tp...>::value;
+  };
+  
+  /// Gets the position of a type in a tuple
+  ///
+  /// Wraps the ordinary list searcher
+  template <class T,class...Tp>
+  struct _PosOfType<T,Tuple<Tp...>>
+  {
+    /// Position inside the list
+    static constexpr int value=_PosOfType<T,Tp...>::value;
+  };
   
   /// Gets the position of a type in a tuple
   ///
@@ -365,7 +402,7 @@ namespace SUNphi
   /// int d=PosOfType<int, int,int,char>;           //static_assert (multiple occurency)
   /// \endcode
   template <class...Tp>
-  constexpr int posOfType=Impl::_PosOfType<Tp...>::value;
+  constexpr int posOfType=_PosOfType<Tp...>::value;
   
   /////////////////////////////////////////////////////////////////////////
   
