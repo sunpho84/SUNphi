@@ -15,14 +15,14 @@ namespace SUNphi
   /// BE FIXED)
   template <class B, // Bound type
 	    class TG, // Get type
-	    class T_TK=typename std::remove_reference_t<B>::TK,
-	    class T_TK_TYPES=typename T_TK::Types>
+	    class TK=typename std::remove_reference_t<B>::Tk,
+	    class TK_TYPES=typename TK::Types>
   class Binder :
-    public ConstraintIsTensKind<T_TK>,
-    public ConstraintTupleHasType<TG,T_TK_TYPES>
+    public ConstraintIsTensKind<TK>,
+    public ConstraintTupleHasType<TG,TK_TYPES>
   {
     /// Nested type Tensor Kind
-    using NestedTK=T_TK;
+    using NestedTk=TK;
     
   public:
     
@@ -36,11 +36,11 @@ namespace SUNphi
     static constexpr bool isStoring=false;
     
     /// TensorKind of the bound expression
-    using TK=typename NestedTK::template AllButType<TG>;
+    using Tk=typename NestedTk::template AllButType<TG>;
     
-    // using InnerTypes=typename NestedTK::template AllAfterType<TG>;
+    // using InnerTypes=typename NestedTk::template AllAfterType<TG>;
     
-    // using OuterTypes=typename NestedTK::template AllBeforeType<TG>;
+    // using OuterTypes=typename NestedTk::template AllBeforeType<TG>;
     
     /// Evaluator
     template <class...Args>

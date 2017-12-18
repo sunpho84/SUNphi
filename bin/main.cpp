@@ -42,7 +42,7 @@ auto bind(Tk&& ref,const Tg&,const int id)
 // template <typename Nested,typename NestedTg,class Tg>
 // auto bind(Binder<Nested,NestedTg>& ref,const Tg&,const int id)
 // {
-//   using NestedTk=typename Nested::TK;
+//   using NestedTk=typename Nested::Tk;
 //   using Tk=Binder<Nested,NestedTg>;
 //   using NestedTypes=typename NestedTk::Types;
 //   constexpr int nestedNestedTgPos=posOfType<NestedTg,NestedTypes>;
@@ -68,9 +68,9 @@ template <typename InNested,                                          // Type re
 auto bind(Binder<InNested,InNestedTg>&& ref,const Tg&,const int id)
 {
   /// Tensor Kind of input nested binder
-  using InNestedTK=typename RemoveReference<InNested>::TK;
+  using InNestedTk=typename RemoveReference<InNested>::Tk;
   /// Types of the Tensor Kind of nested bounder
-  using NestedTypes=typename InNestedTK::Types;
+  using NestedTypes=typename InNestedTk::Types;
   /// Position inside the nested reference of the type got by the nested bounder
   constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
   /// Position inside the nested reference of the type to get
@@ -112,37 +112,18 @@ auto spin(T&& ref,const int id)
 // template <class...Tp>
 // constexpr int countUniqueTypes=Sum<(countTypeIsSame<Tp,Tp...> ==1)...>;
 
-using MyTK=TensKind<Color,Spin>;
-
-class MyTens
-{
-  using TS=TensStor<MyTK,double>;
-  
-public:
-  
-  typedef MyTK TK;
-  TS v;
-  
-  static constexpr bool isStoring=true;
-  
-  template <class...Comps>
-  friend double& eval(MyTens& t,const Comps&...comps)
-  {
-    static_assert(sizeof...(comps)==TK::nTypes,"The number of arguments must be the same of the number");
-    //print(cout,"Components: ",comps...,"\n");
-    return eval(t.v,std::forward<const Comps>(comps)...);
-  }
-};
+using MyTk=TensKind<Color,Spin>;
 
 int main()
 {
-  MyTens cicc;
+  Tens<MyTk,double> cicc;
   
   for(int ic=0;ic<3;ic++)
     for(int id=0;id<4;id++)
       {
-	double &ref=eval(color(spin(cicc,id),ic));
-	printf("%lld %lld\n",(long long int)cicc.v._v,(long long int)&ref);
+	//double &ref=eval(color(spin(cicc,id),ic));
+	double &ref=eval(spin(color(cicc,ic),id));
+	printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
 	ref=3.141592352352;
       }
   
@@ -162,7 +143,7 @@ int main()
 // #endif
   
 // #ifdef WITH
-//   printf("%d\n",Indexer<MyTK>::index(1,2));
+//   printf("%d\n",Indexer<MyTk>::index(1,2));
 // #else
 //   printf("%d\n",6);
 // #endif
