@@ -5,6 +5,8 @@
 ///
 /// \brief Header file for the allocation and deallocation of memory
 
+// TODO: implement memory pool and cacher
+
 #include <cstdlib>
 
 #include <system/Debug.hpp>
