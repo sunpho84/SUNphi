@@ -13,14 +13,15 @@ namespace SUNphi
   ///
   /// The creator must accepts any type which qualifies as a TEx (TO
   /// BE FIXED)
-  template <class B, // Bound type
-	    class TG, // Get type
-	    class TK=typename std::remove_reference_t<B>::Tk,
-	    class TK_TYPES=typename TK::Types>
+  template <typename TG, // Type to get
+	    typename B,  // Type to bind
+	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
+	    typename TK_TYPES=typename TK::Types>                // Types of the tensor kind
   class Binder :
-    public ConstraintIsTensKind<TK>,
-    public ConstraintTupleHasType<TG,TK_TYPES>
+    public ConstraintIsTensKind<TK>,             // Constraint type TK to be a TensKind
+    public ConstraintTupleHasType<TG,TK_TYPES>   // Constraint TG to be in the Types of the TensKind
   {
+    
     /// Nested type Tensor Kind
     using NestedTk=TK;
     

@@ -33,10 +33,10 @@ struct Spin : public TensComp<SpinKind,NSPIN>
   }
 };
 
-template <typename Tk,class Tg>
-auto bind(Tk&& ref,const Tg&,const int id)
+template <typename Tg,typename Tk>
+auto bind(Tk&& ref,const int id)
 {
-  return Binder<Tk,Tg>(std::forward<Tk>(ref),id);
+  return Binder<Tg,Tk>(std::forward<Tk>(ref),id);
 }
 
 // template <typename Nested,typename NestedTg,class Tg>
@@ -62,10 +62,10 @@ auto bind(Tk&& ref,const Tg&,const int id)
 //   return Binder<T,Tg>(std::forward<T>(ref),id);
 // }
 
-template <typename InNested,                                          // Type referred from the nested bounder
-	  typename InNestedTg,                                        // Type got by the nested bounder
-	  typename Tg>                                                // Type to get
-auto bind(Binder<InNested,InNestedTg>&& ref,const Tg&,const int id)
+template <typename Tg,                                                // Type to get
+	  typename InNested,                                          // Type referred from the nested bounder
+	  typename InNestedTg>                                        // Type got by the nested bounder
+auto bind(Binder<InNestedTg,InNested>&& ref,const Tg&,const int id)
 {
   /// Tensor Kind of input nested binder
   using InNestedTk=typename RemoveReference<InNested>::Tk;
@@ -88,25 +88,25 @@ auto bind(Binder<InNested,InNestedTg>&& ref,const Tg&,const int id)
   /// Out component
   const int outId=(swap?nestedId:id);
   /// Output Nested binder
-  auto outNestedBinder=bind(std::forward<InNested>(ref.ref),OutNestedTg{},outNestedId);
+  auto outNestedBinder=bind<OutNestedTg>(std::forward<InNested>(ref.ref),outNestedId);
   /// Type of the output nested binder
   using OutNestedBinder=decltype(outNestedBinder);
   
   // cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
   // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
-  return Binder<OutNestedBinder,OutTg>(std::move(outNestedBinder),outId);
+  return Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId);
 }
 
 template <class T>
 auto color(T&& ref,const int id)
 {
-  return bind(std::forward<T>(ref),Color{},id);
+  return bind<Color>(std::forward<T>(ref),id);
 }
 
 template <class T>
 auto spin(T&& ref,const int id)
 {
-  return bind(std::forward<T>(ref),Spin{},id);
+  return bind<Spin>(std::forward<T>(ref),id);
 }
 
 // template <class...Tp>
