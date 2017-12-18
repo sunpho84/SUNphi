@@ -37,7 +37,7 @@ namespace SUNphi
     // Check that all types are TensComp
     static_assert(IntSeq<IsTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
     
-    // Check that all types are different
+    /// Check that all types are different
     STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(Tuple<T...>);
     
     /// An integer sequence defining whether the tuypes are dynamic or not

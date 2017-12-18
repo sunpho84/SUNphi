@@ -138,13 +138,13 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Count the number of different types in a Tuple
+  /// Count the number of different types in a \c Tuple
   ///
   /// Generic type - forbids instantiation
   template <class T,class=ConstraintIsTuple<T>>
   static constexpr int nDiffTypesInTuple=0;
   
-  /// Count the number of different types in a Tuple
+  /// Count the number of different types in a \c Tuple
   ///
   /// Real tuple case
   template <class...Tp>
@@ -153,12 +153,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Check whether all types of a Tuple are different
+  /// Check whether all types of a \c Tuple are different
   template <class T,class=ConstraintIsTuple<T>>
   static constexpr bool tupleTypesAreAllDifferent
   =nDiffTypesInTuple<T> ==nTypesInTuple<T>;
   
-  /// Assert if the tuple contains multiple times a given type
+  /// Assert if the \c Tuple contains multiple times a given type
 #define STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T)	\
   static_assert(tupleTypesAreAllDifferent<T>,"Types in the tuple are not all different")
   
@@ -171,7 +171,7 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Assert if the type T is not in the types of tuple TP
+  /// Assert if the type \c T is not in the types of tuple \c TP
 #define STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP)			\
   static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found")
   
