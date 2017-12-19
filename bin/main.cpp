@@ -7,22 +7,6 @@ using String=std::string;
 
 namespace SUNphi
 {
-/// Define a \c TensComp named \c TYPE with maximal component \c N
-///
-/// Defines also a binder-instantiator named BINDER, a \c TensKind
-/// suffixing TYPE with Kind, and a constat holding the maximal value,
-/// named \c CONST_NAME
-#define DEFINE_TENS_COMP(BINDER,TYPE,CONST_NAME,N)			\
-									\
-  /*! Maximal value for \c TensKind of type TYPE */			\
-  constexpr int CONST_NAME=N;						\
-									\
-  DEFINE_TENS_KIND(TYPE);						\
-									\
-  DEFINE_NAMED_TENS_COMP(TYPE,N);					\
-									\
-  DEFINE_NAMED_BINDER(TYPE,BINDER)
-  
   DEFINE_TENS_COMP(reim,Compl,NCOMPL,2);
   DEFINE_TENS_COMP(col,Col,NCOL,3);
   DEFINE_TENS_COMP(spin,Spin,NSPIN,4);

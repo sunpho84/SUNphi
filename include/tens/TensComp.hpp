@@ -38,18 +38,41 @@ namespace SUNphi
     /// Size of the tensor component (max index value)
     static constexpr int size=Size;
   };
-}
-
-/// Defines a \c TensComp, with name TYPE and max N
-#define DEFINE_NAMED_TENS_COMP(TYPE,N)					\
+  
+  /// Defines a \c TensKind named TYPE
+#define DEFINE_TENS_COMP_KIND(TYPE)						\
+  /*! \c TensKind TYPE to be used for relative \c TensComp */		\
+  struct TYPE ## Kind : public BaseTensCompKind				\
+  {									\
+  }
+  
+  /// Defines a \c TensComp, with name TYPE and max N
+#define DEFINE_TENS_COMP_CLASS(TYPE,N)					\
   /*! Tensor component of \c TYPE Kind */				\
   struct TYPE : public TensComp<TYPE ## Kind,N>				\
   {									\
-    /*! Returns the name of the type, as a std string. TO BE IMPROVED */ \
-    static std::string name()						\
+    /*! Returns the name of the type */					\
+    static const char* name()						\
     {									\
       return #TYPE;							\
     }									\
   }
+  
+/// Define a \c TensComp named \c TYPE with maximal component \c N
+///
+/// Defines also a binder-instantiator named BINDER, a \c TensKind
+/// suffixing TYPE with Kind, and a constat holding the maximal value,
+/// named \c CONST_NAME
+#define DEFINE_TENS_COMP(BINDER,TYPE,CONST_NAME,N)			\
+									\
+  /*! Maximal value for \c TensKind of type TYPE */			\
+  constexpr int CONST_NAME=N;						\
+									\
+  DEFINE_TENS_COMP_KIND(TYPE);						\
+									\
+  DEFINE_TENS_COMP_CLASS(TYPE,N);					\
+									\
+  DEFINE_NAMED_BINDER(TYPE,BINDER)
+}
 
 #endif
