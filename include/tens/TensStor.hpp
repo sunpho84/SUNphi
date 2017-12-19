@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the definition of a storage space for a tensor
 
+#include <metaprogramming/SwallowSemicolon.hpp>
 #include <system/Memory.hpp>
 #include <tens/Indexer.hpp>
 #include <tens/TensKind.hpp>
@@ -32,29 +33,29 @@ namespace SUNphi
     /// Debug access to internal storage
     T* &_v=v;
     
-    /// Returns a non-const reference to a TensStor given a set of components
-    template <class...Args>
-    friend T& eval(TensStor& ts,const Args&...args)
-    {
-      static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
-      
-      const int id=index<TK>(std::forward<const Args>(args)...);
-      //printf("Index: %d\n",id); //debug
-      
-      return ts.v[id];
-    }
+    /// Defines a const or non-const evaluator
+#define DEFINE_EVAL(CONST_TAG)							\
+    /*! Returns a CONST_TAG reference to a TensStor given a set of components */ \
+    template <class...Args,                          /* Arguments type */ \
+	      class=ConstraintAreSame<int,Args...>>  /* Constrain all args to be integer */ \
+    friend CONST_TAG T& eval(CONST_TAG TensStor& ts, /*!< Reference to the TensStor */ \
+			     const Args&...args)     /*!< Components to extract */ \
+    {									\
+      const int id=index<TK>(std::forward<const Args>(args)...);	\
+      /*printf("Index: %d\n",id);*/ /*debug*/				\
+      									\
+      return ts.v[id];							\
+    }									\
+    SWALLOW_SEMICOLON
     
-    /// Returns a const reference to a TensStor given a set of components
-    template <class...Args>
-    friend const T& eval(const TensStor& ts,const Args&...args)
-    {
-      static_assert(IntSeq<IsSame<Args,int>...>::hMul,"All arguments have to be integer");
-      
-      const int id=index<TK>(std::forward<const Args>(args)...);
-      //printf("Index: %d\n",id); //debug
-      
-      return ts.v[id];
-    }
+    // Defines the non-const evaluator
+    DEFINE_EVAL();
+    
+    // Defines the const evaluator
+    DEFINE_EVAL(const);
+    
+    // Undefine the macro
+#undef DEFINE_EVAL
     
     /// Constructor (test)
     TensStor()

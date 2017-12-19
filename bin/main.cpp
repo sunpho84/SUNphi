@@ -10,6 +10,7 @@ namespace SUNphi
   DEFINE_TENS_COMP(reim,Compl,NCOMPL,2);
   DEFINE_TENS_COMP(col,Col,NCOL,3);
   DEFINE_TENS_COMP(spin,Spin,NSPIN,4);
+  DEFINE_TENS_COMP(site,Site,DUMMY_VOLUME,DYNAMIC);
   
   /// Index of the real part of a \c Compl
   constexpr int REAL_PART_ID=0;
