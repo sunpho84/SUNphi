@@ -7,5 +7,6 @@
 
 #include <utility/Inline.hpp>
 #include <utility/String.hpp>
+#include <utility/Unused.hpp>
 
 #endif
