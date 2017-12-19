@@ -6,5 +6,6 @@
 /// \brief Header file to include all utilities
 
 #include <utility/Inline.hpp>
+#include <utility/String.hpp>
 
 #endif
