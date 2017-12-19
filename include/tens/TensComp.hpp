@@ -51,11 +51,7 @@ namespace SUNphi
   /*! Tensor component of \c TYPE Kind */				\
   struct TYPE : public TensComp<TYPE ## Kind,N>				\
   {									\
-    /*! Returns the name of the type */					\
-    static const char* name()						\
-    {									\
-      return #TYPE;							\
-    }									\
+    PROVIDE_NAME(#TYPE);						\
   }
   
 /// Define a \c TensComp named \c TYPE with maximal component \c N
@@ -66,8 +62,9 @@ namespace SUNphi
 #define DEFINE_TENS_COMP(BINDER,TYPE,CONST_NAME,N)			\
 									\
   /*! Maximal value for \c TensKind of type TYPE */			\
-  constexpr int CONST_NAME=N;						\
-									\
+  constexpr const int CONST_NAME=N;					\
+  MAYBE_UNUSED(CONST_NAME);						\
+  									\
   DEFINE_TENS_COMP_KIND(TYPE);						\
 									\
   DEFINE_TENS_COMP_CLASS(TYPE,N);					\

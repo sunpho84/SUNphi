@@ -18,14 +18,14 @@ namespace SUNphi
     /// List of chars passed as a template in a char array
     const char str[sizeof...(Chars)]{Chars...};
   };
-
-  template <int...Ids>
-  decltype(auto) incapsulateString(const char *str,IntSeq<Ids...>)
-  {
-    return IncapsulatedString<str[Ids]...>();
+  
+  /// Provides a static \c name() method to a class, returning STR
+#define PROVIDE_NAME(STR)						\
+  /*! Returns the name of the type */					\
+  static constexpr const char* name()					\
+  {									\
+    return STR;								\
   }
-  
-  
 }
 
 #endif
