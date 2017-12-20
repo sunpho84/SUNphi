@@ -114,6 +114,19 @@ namespace SUNphi
     STATIC_ASSERT_IF_NOT_BASE_OF(Base,Derived);
   };
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Static assert if not passing exactly N types
+#define STATIC_ASSERT_IF_NOT_N_TYPES(N,UNEXP_PARPACK)				\
+  static_assert(N==sizeof...(UNEXP_PARPACK),"Error, expecting a different number of types")
+  
+  /// Forces types to be in the given number
+  template <int N,class...Args>
+  class ConstraintNTypes
+  {
+    STATIC_ASSERT_IF_NOT_N_TYPES(N,Args);
+  };
+  
   //////////////////////////////////////////////////////////////////////
   
   /// Identifies whether a type is a floating-point
@@ -146,6 +159,28 @@ namespace SUNphi
   class ConstraintIsIntegral
   {
     STATIC_ASSERT_IF_NOT_INTEGRAL(T);
+  };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Identifies whether a set of types are an integer-like
+  template <class Head,class...Tail>
+  constexpr bool AreIntegral=AreIntegral<Head> and AreIntegral<Tail...>;
+  
+  /// Identifies whether a single types is integer-like
+  template <class T>
+  constexpr bool AreIntegral<T>
+  =IsIntegral<T>;
+  
+  /// Static assert if the types T are not an integer-like
+#define STATIC_ASSERT_IF_NOT_INTEGRALS(...)			\
+  static_assert(AreIntegral<__VA_ARGS__>,"Error, types are not all an integral")
+  
+  /// Forces the type to be integer-like
+  template <class...Args>
+  class ConstraintAreIntegrals
+  {
+    STATIC_ASSERT_IF_NOT_INTEGRALS(Args...);
   };
   
   //////////////////////////////////////////////////////////////////////

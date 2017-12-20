@@ -41,7 +41,7 @@ namespace SUNphi
   /// Gives visibility to the internal implementation
   template <class T>
   constexpr int IsTuple=_IsTuple<T>::value;
-
+  
   /// Assert if the type is not a Tuple
 #define STATIC_ASSERT_IS_TUPLE(T)			\
   static_assert(IsTuple<T>,"Type is not a tuple")
