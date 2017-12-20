@@ -10,7 +10,7 @@ namespace SUNphi
   DEFINE_TENS_COMP(reim,Compl,NCOMPL,2);
   DEFINE_TENS_COMP(col,Col,NCOL,3);
   DEFINE_TENS_COMP(spin,Spin,NSPIN,4);
-  DEFINE_TENS_COMP(site,Site,DUMMY_VOLUME,DYNAMIC);
+  DEFINE_TENS_COMP(site,Spacetime,DUMMY_VOLUME,DYNAMIC);
   
   /// Index of the real part of a \c Compl
   constexpr int REAL_PART_ID=0;
@@ -63,28 +63,38 @@ using namespace SUNphi;
 // template <class...Tp>
 // constexpr int countUniqueTypes=Sum<(countTypeIsSame<Tp,Tp...> ==1)...>;
 
-using MyTk=TensKind<Col,Spin,Compl>;
+using MyTk=TensKind<Col,Spacetime,Spin,Compl>;
 
 int main()
 {
-  Tens<MyTk,double> cicc;
+  int vol=10;
+  Tens<MyTk,double> cicc(vol);
+
+  auto &v=cicc.getStor();
   
-  for(int ic=0;ic<NCOL;ic++)
-    for(int id=0;id<NSPIN;id++)
-      for(int ri=0;ri<NCOMPL;ri++)
-      {
-	//double &ref=eval(color(spin(cicc,id),ic));
-	double &ref=eval(reim(spin(col(cicc,ic),id),ri));
-	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
-	ref=3.141592352352;
-      }
+  index<MyTk>(v.dynSizes,0,0,0,0);
   
-  auto binder1=reim(spin(col(cicc,2),3),1);
-  //auto binder2=color(spin(cicc,2),1);
+  //eval(cicc.getStor(),0,0,0,0);
   
-  // eval(binder1)=8.0;
-  printf("ANNA %lg\n",eval(binder1));
+  // for(int ic=0;ic<NCOL;ic++)
+  //   for(int id=0;id<NSPIN;id++)
+  //     for(int ri=0;ri<NCOMPL;ri++)
+  //     {
+  // 	//double &ref=eval(color(spin(cicc,id),ic));
+  // 	double &ref=eval(site(reim(spin(col(cicc,ic),id),ri),0));
+  // 	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
+  // 	ref=3.141592352352;
+  //     }
   
+  // auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  // //auto binder2=color(spin(cicc,2),1);
+  
+  // // eval(binder1)=8.0;
+  // printf("%d\n",cicc.getStor().nel);
+  // printf("ANNA %lg\n",eval(binder1));
+  // cout<<Spacetime::name()<<endl;
+  // cout<<Col::name()<<endl;
+
 // #ifdef WITH
 //   auto binder1=spin(color(cicc,1),2);
 //   eval(binder1)=8.0;

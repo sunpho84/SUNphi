@@ -48,8 +48,8 @@ namespace SUNphi
     /// Number of dynamical components
     static constexpr int nDynamic=AreDynamic::hSum;
     
-    //Check that no dynamic type has been asked (temporarily)
-    static_assert(nDynamic==0,"Not yet implemented the dynamic case");
+    /// Check if the type is fully static
+    static constexpr bool isFullyStatic=(nDynamic==0);
     
     /// Tuple containing all types
     typedef Tuple<T...> Types;

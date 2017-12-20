@@ -10,6 +10,8 @@
 #include <tens/Indexer.hpp>
 #include <tens/TensKind.hpp>
 
+#include <cstdio>
+
 namespace SUNphi
 {
   /// Tensor Storage holding the resources for a tensor
@@ -33,6 +35,9 @@ namespace SUNphi
     /// Debug access to internal storage
     T* &_v=v;
     
+    /// Debug store size
+    int nel;
+    
     /// Defines a const or non-const evaluator
 #define DEFINE_EVAL(CONST_TAG)							\
     /*! Returns a CONST_TAG reference to a TensStor given a set of components */ \
@@ -41,7 +46,7 @@ namespace SUNphi
     friend CONST_TAG T& eval(CONST_TAG TensStor& ts, /*!< Reference to the TensStor */ \
 			     const Args&...args)     /*!< Components to extract */ \
     {									\
-      const int id=index<TK>(std::forward<const Args>(args)...);	\
+      const int id=index<TK>(ts.dynSizes,std::forward<const Args>(args)...); \
       /*printf("Index: %d\n",id);*/ /*debug*/				\
       									\
       return ts.v[id];							\
@@ -57,11 +62,21 @@ namespace SUNphi
     // Undefine the macro
 #undef DEFINE_EVAL
     
+    std::array<int,TK::nDynamic> dynSizes;
+
+    /// \todo the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used!
+    
     /// Constructor (test)
-    TensStor()
+    template <class...DynSizes>                                  // Arguments (sizes)
+    TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
     {
-      static_assert(TK::nDynamic==0,"Dynamic case not implemented");
-      size_t nel=TK::maxStaticIdx;
+      STATIC_ASSERT_IF_NOT_N_TYPES(TK::nDynamic,DynSizes);  // Constrain the arguments to be in the same number of the dynamic components
+      STATIC_ASSERT_IF_NOT_INTEGRALS(DynSizes...);          // Constrain the arguments to be all integer-like
+      printf("Ah ah! %d\n",TK::nDynamic);
+      
+      //static_assert(TK::nDynamic==0,"Dynamic case not implemented");
+      nel=TK::maxStaticIdx;
+      for(const auto &i: dynSizes) nel*=i;
       
       v=getRawAlignedMem<T>(nel); //allocate
     }
