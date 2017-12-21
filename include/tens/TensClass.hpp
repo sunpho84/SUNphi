@@ -28,22 +28,30 @@ namespace SUNphi
     /// Tensor kind of the tensor
     using Tk=TK;
     
-    std::array<int,Tk::nDynamic> &dynSizes=v->dynSizes;
+  private:
     
-    template <class...DynSizes>
-    Tens(const DynSizes...extDynSizes) : v(new TensStor<Tk,Fund>(extDynSizes...))
+    /// Internal storage
+    TensStor<Tk,Fund>* v=nullptr;
+    
+  public:
+    
+    /// Sizes of the dynamical components, reference to the storage
+    std::array<int,Tk::nDynamic> &dynSizes;
+    
+    /// Construct the Tens on the basis of the dynamical sizes passed
+    template <class...DynSizes>                    //   Dynamic size types
+    Tens(const DynSizes&...extDynSizes) :          ///< Passed internal dynamic size
+      v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
+      dynSizes(v->dynSizes)                        //   Assign the storage dynamical size reference
     {
+      STATIC_ASSERT_IF_NOT_N_TYPES(Tk::nDynamic,DynSizes);
     }
     
+    /// Destructor
     ~Tens()
     {
       delete v;
     }
-    
-  private:
-    
-    /// internal storage
-    TensStor<Tk,Fund>* v=nullptr;
     
   public:
     

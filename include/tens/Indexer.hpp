@@ -15,9 +15,10 @@ namespace SUNphi
   {
     /// Indexer class to compute an index for a TensKind
     ///
-    /// Forward declaration, forbids instantiation
-    template <int IDyn,
-	      class T>
+    /// Forward declaration
+    template <int IDyn,          // Index of the current dynamic component
+	      class T,           // Generic type
+	      class=FalseType>   // Forbids instantiation
     struct _Indexer : ConstraintIsTensKind<T>
     {
     };
@@ -25,14 +26,13 @@ namespace SUNphi
     /// Indexer class to compute an index for a TensKind
     ///
     /// Recursive implementation definining a nested indexer and
-    /// calling it until one component is found
-    template <int IDyn,
-	      class H,
-	      class...Oth>
+    /// calling it until one component is found. The check on types is
+    /// done in the externally visible routine.
+    template <int IDyn,     // Index of the current dynamic component in the list
+	      class H,      // Current TensKind
+	      class...Oth>  // Other TensKind
     struct _Indexer<IDyn,TensKind<H,Oth...>>
     {
-      // /// Index of the next dynamic component
-      //static constexpr int iDyn=IDyn;
       /// Size of the top-level class
       static constexpr int headSize=H::size;
       /// Check if this component is dynamic
@@ -41,20 +41,22 @@ namespace SUNphi
       using NestedTk=TensKind<Oth...>;
       /// Nested Dynamic index
       static constexpr int nestedIDyn=(thisDynamic ? IDyn+1 : IDyn);
-      // Nested indexer
+      /// Nested indexer
       using Nested=_Indexer<nestedIDyn,NestedTk>;
       
       /// Compute the index, given a set of components
       ///
-      /// \todo fix the int
-      template <size_t NTotDyn,
-		class Head,
-		class...Tail,
-		class=ConstraintAreIntegrals<Head,Tail...>>
-      static constexpr int index(const std::array<int,NTotDyn>& dynSizes,
-				 const Head& head,
-				 const Tail&...tail)
+      /// Internal implementation
+      /// \todo fix the int types
+      template <size_t NTotDyn,                                // Total number of dynamic components
+		class Head,                                    // Current component type
+		class...Tail,                                  // Other component types
+		class=ConstraintAreIntegrals<Head,Tail...>>    // Constrain all types to be integral
+      static constexpr int index(const std::array<int,NTotDyn>& dynSizes,  ///< Dynamic sizes
+				 const Head& head,                         ///< Current component
+				 const Tail&...tail)                       ///< Other components
       {
+	// Constrain the components to be in the same number of the type
 	static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
 	// Nested value
 	const int nested=Nested::index(std::forward<const std::array<int,NTotDyn>>(dynSizes),std::forward<const Tail>(tail)...);
@@ -66,7 +68,14 @@ namespace SUNphi
 	  Nested::thisDynamic?
 	  dynSizes[nestedIDyn]:
 	  Nested::headSize;
-	printf("NestedDyn: %d, Nested::HeadSize: %d, %d %d\n",Nested::thisDynamic,Nested::headSize,nestedIDyn,dynSizes[nestedIDyn]);
+	if(0)
+	  {
+	    printf("NestedDyn: %d",Nested::thisDynamic);
+	    printf(", Nested::HeadSize: %d",Nested::headSize);
+	    printf(", %d",nestedIDyn);
+	    if(Nested::thisDynamic) printf(" %d",dynSizes[nestedIDyn]);
+	    printf("\n");
+	  }
 	
 	// Compose nested value, size and this component
 	return nested+nestedSize*thisComp;

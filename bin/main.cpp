@@ -63,35 +63,35 @@ using namespace SUNphi;
 // template <class...Tp>
 // constexpr int countUniqueTypes=Sum<(countTypeIsSame<Tp,Tp...> ==1)...>;
 
-using MyTk=TensKind<Col,Spacetime,Spin,Compl>;
+using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
 
 int main()
 {
   int vol=10;
   Tens<MyTk,double> cicc(vol);
 
-  auto &v=cicc.getStor();
+  // auto &v=cicc.getStor();
   
-  index<MyTk>(v.dynSizes,0,0,0,0);
+  // index<MyTk>(v.dynSizes,0,0,0,0);
   
   //eval(cicc.getStor(),0,0,0,0);
   
-  // for(int ic=0;ic<NCOL;ic++)
-  //   for(int id=0;id<NSPIN;id++)
-  //     for(int ri=0;ri<NCOMPL;ri++)
-  //     {
-  // 	//double &ref=eval(color(spin(cicc,id),ic));
-  // 	double &ref=eval(site(reim(spin(col(cicc,ic),id),ri),0));
-  // 	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
-  // 	ref=3.141592352352;
-  //     }
+  for(int ic=0;ic<NCOL;ic++)
+    for(int id=0;id<NSPIN;id++)
+      for(int ri=0;ri<NCOMPL;ri++)
+      {
+  	//double &ref=eval(color(spin(cicc,id),ic));
+  	double &ref=eval(reim(spin(site(col(cicc,ic),0),id),ri));
+  	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
+  	ref=3.141592352352;
+      }
   
-  // auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  auto binder1=site(reim(spin(col(cicc,2),3),1),0);
   // //auto binder2=color(spin(cicc,2),1);
   
   // // eval(binder1)=8.0;
   // printf("%d\n",cicc.getStor().nel);
-  // printf("ANNA %lg\n",eval(binder1));
+  printf("ANNA %lg\n",eval(binder1));
   // cout<<Spacetime::name()<<endl;
   // cout<<Col::name()<<endl;
 

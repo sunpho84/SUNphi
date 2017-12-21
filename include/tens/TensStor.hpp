@@ -36,7 +36,7 @@ namespace SUNphi
     T* &_v=v;
     
     /// Debug store size
-    int nel;
+    int size;
     
     /// Defines a const or non-const evaluator
 #define DEFINE_EVAL(CONST_TAG)							\
@@ -62,28 +62,35 @@ namespace SUNphi
     // Undefine the macro
 #undef DEFINE_EVAL
     
+    /// Dynamic sizes 
     std::array<int,TK::nDynamic> dynSizes;
-
-    /// \todo the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used!
+    
+    /// \todo the array must be replaced with a tuple, whose types
+    /// must be deduced when instatiating the struct, such that int or
+    /// long int or whatever is appropriately used!
     
     /// Constructor (test)
-    template <class...DynSizes>                                  // Arguments (sizes)
+    template <class...DynSizes,                                  // Arguments (sizes)
+	      class=ConstraintNTypes<TK::nDynamic,DynSizes...>>
     TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
     {
-      STATIC_ASSERT_IF_NOT_N_TYPES(TK::nDynamic,DynSizes);  // Constrain the arguments to be in the same number of the dynamic components
-      STATIC_ASSERT_IF_NOT_INTEGRALS(DynSizes...);          // Constrain the arguments to be all integer-like
-      printf("Ah ah! %d\n",TK::nDynamic);
+      // Constrain the arguments to be all integer-like
+      STATIC_ASSERT_IF_NOT_INTEGRALS(DynSizes...);
+      //printf("Ah ah! %d\n",TK::nDynamic);
       
-      //static_assert(TK::nDynamic==0,"Dynamic case not implemented");
-      nel=TK::maxStaticIdx;
-      for(const auto &i: dynSizes) nel*=i;
+      // Compute the size
+      size=TK::maxStaticIdx;
+      for(const auto &i : dynSizes)
+	size*=i;
       
-      v=getRawAlignedMem<T>(nel); //allocate
+      // Allocate
+      v=getRawAlignedMem<T>(size);
     }
     
     /// Destructor
     ~TensStor()
     {
+      // Free
       freeMem(v);
     }
   };

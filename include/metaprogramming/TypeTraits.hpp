@@ -164,7 +164,8 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Identifies whether a set of types are an integer-like
-  template <class Head,class...Tail>
+  template <class Head=int,
+	    class...Tail>
   constexpr bool AreIntegral=AreIntegral<Head> and AreIntegral<Tail...>;
   
   /// Identifies whether a single types is integer-like
