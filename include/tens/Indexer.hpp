@@ -112,10 +112,10 @@ namespace SUNphi
   template <class TK,
 	    size_t NDynamic,
 	    class...Args>
-  static constexpr int index(const std::array<int,NDynamic>& dynSizes,
-			     const Args&...args)
+  static constexpr int index(const std::array<int,NDynamic>& dynSizes, /*!< Sizes of the dynamical components */
+			     const Args&...args)                       /*!< Components index                  */
   {
-    static_assert(TK::nDynamic==NDynamic,"Nuber of dynamci components sizes must agree with the TensKind one");
+    static_assert(TK::nDynamic==NDynamic,"Nuber of dynamic components sizes must agree with the TensKind one");
     return Impl::_Indexer<0,TK>::index(dynSizes,args...);
   }
 }

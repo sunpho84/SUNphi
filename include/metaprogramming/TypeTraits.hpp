@@ -36,10 +36,31 @@ namespace SUNphi
   
   /// Defines type T (default to void) if parameter B is true
   ///
-  /// Useful to enable or disable SFINAE specialization. Directly
-  /// taken from std library.
-  template <bool B,class T=void>
-  using EnableIf=typename std::enable_if_t<B,T>::type;
+  /// Useful to enable or disable SFINAE specialization.
+  /// Generic (false) case
+  template <bool B,       // Boolean constant deciding whether the type is enabled
+	    class T>      // Type to be enabled
+  struct _EnableIf
+  {
+  };
+  
+  /// Defines type T (default to void) if parameter B is true
+  ///
+  /// Useful to enable or disable SFINAE specialization.
+  /// True case
+  template <class T> // Type to be enabled
+  struct _EnableIf<true,T>
+  {
+    /// Type enabled
+    typedef T type;
+  };
+  
+  /// Defines type T (default to void) if parameter B is true
+  ///
+  /// Gives visibility to the internal implementation
+  template <bool B,         // Boolean constant deciding whether the type is enabled
+	    class T=void>   // Type to be enabled
+  using EnableIf=typename _EnableIf<B,T>::type;
   
   /// Defines \c void if parameter B is true
   ///
@@ -50,16 +71,25 @@ namespace SUNphi
   /// Defines type T if parameter B is true
   ///
   /// Explicit specialization of \c EnableIf forcing an explicit type.
-  template <bool B,class T>
+  template <bool B,       // Boolean constant deciding whether the type is enabled
+	    class T>      // Type to be enabled
   using TypeIf=EnableIf<B,T>;
   
   /////////////////////////////////////////////////////////////////////
   
   /// Checks if two types are the same
   ///
-  /// Strait borrowed from std lib
-  template <class T1,class T2>
-  static constexpr bool IsSame=std::is_same<T1,T2>::value;
+  /// Default (false) case
+  template <class T1, // First type to be checked
+	    class T2> // Second type to be checked
+  static constexpr bool IsSame=false;
+  
+  /// Checks if two types are the same
+  ///
+  /// Default (false) case
+  template <class T> // Unique type
+  static constexpr bool IsSame<T,T>
+  =true;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -72,7 +102,8 @@ namespace SUNphi
   /// Provides type T if B is true, or F if is false
   ///
   /// True case of internal implementation
-  template <typename T,typename F>
+  template <typename T,
+	    typename F>
   struct _Conditional<true,T,F>
   {
     /// Internal type (T)
@@ -82,7 +113,8 @@ namespace SUNphi
   /// Provides type T if B is true, or F if is false
   ///
   /// False case of internal implementation
-  template <typename T,typename F>
+  template <typename T,
+	    typename F>
   struct _Conditional<false,T,F>
   {
     /// Internal type (F)
@@ -92,13 +124,16 @@ namespace SUNphi
   /// Provides type T if B is true, or F if is false
   ///
   /// Wraps the internal implementation
-  template <bool B,typename T,typename F>
+  template <bool B,      // Condition enabling one or the other type
+	    typename T,  // T Type enabled if true
+	    typename F>  //F Type enabled if false
   using Conditional=typename _Conditional<B,T,F>::type;
   
   /////////////////////////////////////////////////////////////////////
   
   /// Identifies whether Base is a base class of Derived
-  template <class Base,class Derived>
+  template <class Base,
+	    class Derived>
   constexpr bool IsBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////////
@@ -108,7 +143,8 @@ namespace SUNphi
   static_assert(IsBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
   /// Forces type Derived to be derived from Base
-  template <class Base,class Derived>
+  template <class Base,
+	    class Derived>
   class ConstraintIsBaseOf
   {
     STATIC_ASSERT_IF_NOT_BASE_OF(Base,Derived);
@@ -121,7 +157,8 @@ namespace SUNphi
   static_assert(N==sizeof...(UNEXP_PARPACK),"Error, expecting a different number of types")
   
   /// Forces types to be in the given number
-  template <int N,class...Args>
+  template <int N,
+	    class...Args>
   class ConstraintNTypes
   {
     STATIC_ASSERT_IF_NOT_N_TYPES(N,Args);
