@@ -6,6 +6,7 @@
 
 #include <Ios.hpp>
 #include <Metaprogramming.hpp>
+#include <Physics.hpp>
 #include <System.hpp>
 #include <Tens.hpp>
 #include <TEx.hpp>
@@ -14,10 +15,6 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
-  /// Namespace of the internal implementation of metaprogramming helpers
-  namespace Impl
-  {
-  }
 }
 
 #endif

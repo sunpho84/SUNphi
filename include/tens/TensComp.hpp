@@ -6,6 +6,8 @@
 /// \brief Defines the Tensor Components
 
 #include <metaprogramming/TypeTraits.hpp>
+#include <utility/String.hpp>
+#include <utility/Unused.hpp>
 
 namespace SUNphi
 {

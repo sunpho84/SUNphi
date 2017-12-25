@@ -3,60 +3,6 @@
 #include <array>
 #include <iostream>
 
-using String=std::string;
-
-namespace SUNphi
-{
-  DEFINE_TENS_COMP(reim,Compl,NCOMPL,2);
-  DEFINE_TENS_COMP(col,Col,NCOL,3);
-  DEFINE_TENS_COMP(spin,Spin,NSPIN,4);
-  DEFINE_TENS_COMP(site,Spacetime,DUMMY_VOLUME,DYNAMIC);
-  
-  /// Index of the real part of a \c Compl
-  constexpr int REAL_PART_ID=0;
-  
-  /// Returns a reference to the real part
-  template <typename T>
-  auto real(T&& ref)
-  {
-    return reim(ref,REAL_PART_ID);
-  }
-  
-  /// Index of the imag part of a \c Compl
-  constexpr int IMAG_PART_ID=1;
-  
-  /// Returns a reference to the imag part
-  template <typename T>
-  auto imag(T&& ref)
-  {
-    return reim(ref,IMAG_PART_ID);
-  }
-}
-
-  // template <typename Nested,typename NestedTg,class Tg>
-  // auto bind(Binder<Nested,NestedTg>& ref,const Tg&,const int id)
-  // {
-  //   using NestedTk=typename Nested::Tk;
-  //   using Tk=Binder<Nested,NestedTg>;
-  //   using NestedTypes=typename NestedTk::Types;
-  //   constexpr int nestedNestedTgPos=posOfType<NestedTg,NestedTypes>;
-  //   constexpr int nestedTgPos=posOfType<Tg,NestedTypes>;
-  //   const int nestedId=ref.id;
-  
-  //   return (nestedTgPos>nestedNestedTgPos)?
-  //     Binder<Tk,Tg>(ref,id):
-  //     bind(bind(ref.ref,Tg{},id),NestedTg{},nestedId);
-  // }
-  
-  
-  
-  // template <typename T,class Tg>
-  // auto bind(T&& ref,const int id)
-  // {
-  //   return Binder<T,Tg>(std::forward<T>(ref),id);
-  // }
-  
-
 using namespace std;
 using namespace SUNphi;
 
@@ -69,7 +15,7 @@ int main()
 {
   int vol=10;
   Tens<MyTk,double> cicc(vol);
-
+  
   // auto &v=cicc.getStor();
   
   // index<MyTk>(v.dynSizes,0,0,0,0);
