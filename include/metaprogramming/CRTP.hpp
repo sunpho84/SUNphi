@@ -5,19 +5,24 @@
 ///
 /// \brief Support for Curiously Recurring Template Pattern
 
+#include <metaprogramming/SwallowSemicolon.hpp>
+
 /// Perform the cast to base class needed for CRTP
 ///
 /// Overload the ~ operator to implement cast to the basic class of a
 /// CRTP class
-#define DEFINE_CRTP_CAST_OPERATOR(CLASS)		\
-  CLASS& operator~()					\
+#define PROVIDE_CRTP_CAST_OPERATOR(CLASS)		\
+  /*! Cast operator to class CLASS*/			\
+CLASS& operator~()					\
   {							\
     return *static_cast<CLASS*>(this);			\
   }							\
-  const CLASS& operator~() const			\
+							\
+ /*! Constant cast operator to class CLASS*/		\
+const CLASS& operator~() const				\
   {							\
     return *static_cast<const CLASS*>(this);		\
   }							\
-  CLASS_EAT_SEMICOLON
+ SWALLOW_SEMICOLON
 
 #endif
