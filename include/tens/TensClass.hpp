@@ -44,7 +44,7 @@ namespace SUNphi
       v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
       dynSizes(v->dynSizes)                        //   Assign the storage dynamical size reference
     {
-      STATIC_ASSERT_IF_NOT_N_TYPES(Tk::nDynamic,DynSizes);
+      STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
     }
     
     /// Destructor

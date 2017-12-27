@@ -12,13 +12,13 @@
 /// Overload the ~ operator to implement cast to the basic class of a
 /// CRTP class
 #define PROVIDE_CRTP_CAST_OPERATOR(CLASS)		\
-  /*! Cast operator to class CLASS*/			\
+  /*! Cast operator to class \c CLASS*/			\
 CLASS& operator~()					\
   {							\
     return *static_cast<CLASS*>(this);			\
   }							\
 							\
- /*! Constant cast operator to class CLASS*/		\
+ /*! Constant cast operator to class \c CLASS */	\
 const CLASS& operator~() const				\
   {							\
     return *static_cast<const CLASS*>(this);		\

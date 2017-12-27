@@ -75,7 +75,7 @@ namespace SUNphi
     TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
     {
       // Constrain the arguments to be all integer-like
-      STATIC_ASSERT_IF_NOT_INTEGRALS(DynSizes...);
+      STATIC_ASSERT_ARE_INTEGRALS(DynSizes...);
       //printf("Ah ah! %d\n",TK::nDynamic);
       
       // Compute the size

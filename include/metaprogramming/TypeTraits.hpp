@@ -139,7 +139,7 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////////
   
   /// Static assert if DERIVED does not derive from BASE
-#define STATIC_ASSERT_IF_NOT_BASE_OF(BASE,DERIVED)			\
+#define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\
   static_assert(IsBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
   /// Forces type Derived to be derived from Base
@@ -147,13 +147,13 @@ namespace SUNphi
 	    class Derived>
   class ConstraintIsBaseOf
   {
-    STATIC_ASSERT_IF_NOT_BASE_OF(Base,Derived);
+    STATIC_ASSERT_IS_BASE_OF(Base,Derived);
   };
   
   /////////////////////////////////////////////////////////////////
   
   /// Static assert if not passing exactly N types
-#define STATIC_ASSERT_IF_NOT_N_TYPES(N,UNEXP_PARPACK)				\
+#define STATIC_ASSERT_ARE_N_TYPES(N,UNEXP_PARPACK)			\
   static_assert(N==sizeof...(UNEXP_PARPACK),"Error, expecting a different number of types")
   
   /// Forces types to be in the given number
@@ -161,7 +161,7 @@ namespace SUNphi
 	    class...Args>
   class ConstraintNTypes
   {
-    STATIC_ASSERT_IF_NOT_N_TYPES(N,Args);
+    STATIC_ASSERT_ARE_N_TYPES(N,Args);
   };
   
   //////////////////////////////////////////////////////////////////////
@@ -171,14 +171,14 @@ namespace SUNphi
   constexpr bool IsFloatingPoint=std::is_floating_point<T>::value;
   
   /// Static assert if the type T is not a floating-point
-#define STATIC_ASSERT_IF_NOT_FLOATING_POINT(T)				\
+#define STATIC_ASSERT_IS_FLOATING_POINT(T)				\
   static_assert(IsFloatingPoint<T>,"Error, type is not a floating point")
   
   /// Forces the type to be a floating-point
   template <class T>
   class ConstraintIsFloatingPoint
   {
-    STATIC_ASSERT_IF_NOT_FLOATING_POINT(T);
+    STATIC_ASSERT_IS_FLOATING_POINT(T);
   };
   
   //////////////////////////////////////////////////////////////////////
@@ -188,14 +188,14 @@ namespace SUNphi
   constexpr bool IsIntegral=std::is_integral<T>::value;
   
   /// Static assert if the type T is not an integer-like
-#define STATIC_ASSERT_IF_NOT_INTEGRAL(T)			\
+#define STATIC_ASSERT_IS_INTEGRAL(T)			\
   static_assert(IsIntegral<T>,"Error, type is not an integral")
   
   /// Forces the type to be integer-like
   template <class T>
   class ConstraintIsIntegral
   {
-    STATIC_ASSERT_IF_NOT_INTEGRAL(T);
+    STATIC_ASSERT_IS_INTEGRAL(T);
   };
   
   /////////////////////////////////////////////////////////////////
@@ -211,14 +211,14 @@ namespace SUNphi
   =IsIntegral<T>;
   
   /// Static assert if the types T are not an integer-like
-#define STATIC_ASSERT_IF_NOT_INTEGRALS(...)			\
+#define STATIC_ASSERT_ARE_INTEGRALS(...)			\
   static_assert(AreIntegral<__VA_ARGS__>,"Error, types are not all an integral")
   
   /// Forces the type to be integer-like
   template <class...Args>
   class ConstraintAreIntegrals
   {
-    STATIC_ASSERT_IF_NOT_INTEGRALS(Args...);
+    STATIC_ASSERT_ARE_INTEGRALS(Args...);
   };
   
   //////////////////////////////////////////////////////////////////////
@@ -235,7 +235,7 @@ namespace SUNphi
   template<typename T>							\
   constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;			\
 									\
-  /*! Class  forcing T to inherits from \c BASE ## TYPE */		\
+  /*! Class forcing T to inherits from \c BASE ## TYPE */		\
   template<typename T>							\
   using ConstraintIs ## TYPE=ConstraintIsBaseOf<Base ## TYPE,T>
 }

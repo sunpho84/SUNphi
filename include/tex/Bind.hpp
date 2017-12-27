@@ -5,7 +5,8 @@
 ///
 /// \brief Defines a class which binds a component of a TEx
 
-#include <tens/TensKind.hpp>
+#include <tens/TensClass.hpp>
+#include <tex/BaseTEx.hpp>
 
 namespace SUNphi
 {
@@ -18,10 +19,10 @@ namespace SUNphi
 	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
 	    typename TK_TYPES=typename TK::Types>                // Types of the tensor kind
   class Binder :
+    public TEx<Binder<TG,B>>,
     public ConstraintIsTensKind<TK>,             // Constraint type TK to be a TensKind
     public ConstraintTupleHasType<TG,TK_TYPES>   // Constraint TG to be in the Types of the TensKind
   {
-    
     /// Nested type Tensor Kind
     using NestedTk=TK;
     
@@ -132,6 +133,9 @@ namespace SUNphi
   {									\
     return bind<TG>(std::forward<T>(ref),id);				\
   }
+  
+  // Check that a test Binder is a TEx
+  STATIC_ASSERT_IS_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
 }
 
 #endif

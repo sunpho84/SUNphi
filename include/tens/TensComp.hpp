@@ -33,6 +33,8 @@ namespace SUNphi
     /// Mapped type
     using type=T;
     
+    PROVIDE_CRTP_CAST_OPERATOR(type);
+    
     /// Size of the tensor component (max index value)
     static constexpr int size=Size;
   };
@@ -42,8 +44,6 @@ namespace SUNphi
   /*! Tensor component of \c TYPE Kind */				\
   struct TYPE : public TensComp<TYPE,N>					\
   {									\
-    PROVIDE_CRTP_CAST_OPERATOR(TYPE);					\
-									\
     PROVIDE_NAME(#TYPE);						\
   }
   
