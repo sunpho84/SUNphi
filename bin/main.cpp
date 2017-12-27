@@ -6,15 +6,15 @@
 using namespace std;
 using namespace SUNphi;
 
-// template <class...Tp>
-// constexpr int countUniqueTypes=Sum<(countTypeIsSame<Tp,Tp...> ==1)...>;
 
 using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
+using MyTens=Tens<MyTk,double>;
 
 int main()
 {
+  
   int vol=10;
-  Tens<MyTk,double> cicc(vol);
+  MyTens cicc(vol);
   
   // auto &v=cicc.getStor();
   
