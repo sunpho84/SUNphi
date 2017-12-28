@@ -131,19 +131,24 @@ namespace SUNphi
   /// Counts the same types
   ///
   /// Single pair of types case - forbids implementation
-  template<class T1,class T2,class=FalseType>
+  template<class T1,
+	   class T2,
+	   class=FalseType>
   static constexpr int _nOfTypeInTuple=0;
   
   /// Counts the same type
   ///
   /// Counts the occurrency of type T inside a tuple
-  template<class T,class...Tp>
+  template<class T,
+	   class...Tp>
   static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
   
   /// Counts the same type
   ///
   /// Gives external visibility to the implementation
-  template <class T,class TP>
+  template <class T,
+	    class TP,
+	    class=ConstrainIsTuple<TP>>
   static constexpr int nOfTypeInTuple=_nOfTypeInTuple<T,TP>;
   
   /////////////////////////////////////////////////////////////////
@@ -181,15 +186,22 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Assert if the type \c T is not in the types of tuple \c TP
-#define STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP)			\
-  static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found")
+  /// Return true if \c Tuple Tp contains the type T
+  template <typename T,   // Type to be searched
+	    typename Tp>  // Tuple to search
+  constexpr bool tupleHasType=(nOfTypeInTuple<T,Tp> >0);
   
-  /// Constrain a type to be contained in a Tuple
-  template <class T,class TP,class=ConstrainIsTuple<TP>>
+  /// Assert if the type \c T is not in the types of tuple \c TP
+#define STATIC_ASSERT_TUPLE_HAS_TYPE(T,TP)			\
+  static_assert(tupleHasType<T,TP>,"Searched type not found")
+  
+  /// Constrain a type T to be contained in a \c Tuple
+  template <class T,
+	    class TP,
+	    class=ConstrainIsTuple<TP>>
   struct ConstrainTupleHasType
   {
-    STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP);
+    STATIC_ASSERT_TUPLE_HAS_TYPE(T,TP);
   };
   
   /////////////////////////////////////////////////////////////////
@@ -382,7 +394,9 @@ namespace SUNphi
   /// Gets the position of a type in a list
   ///
   /// Case of non-matching type, instantiate iterativerly the searcher
-  template <class T,class U,class...Tp>
+  template <class T,
+	    class U,
+	    class...Tp>
   struct _PosOfType<T,U,Tp...>
   {
     static_assert(sizeof...(Tp),"Type not found in the list");
