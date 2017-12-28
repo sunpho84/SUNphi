@@ -26,13 +26,15 @@ namespace SUNphi
   /// A tensor component is defined by an internal type and the
   /// associated size, which can be known at compile-time or can be
   /// made \c DYNAMIC, to be specified at runtime in the storage class
-  template <class T,int Size=DYNAMIC>
+  template <class T,            // Type defining the TensComp
+	    int Size=DYNAMIC>   // Size of the TensComp
   struct TensComp :
     public BaseTensComp
   {
     /// Mapped type
     using type=T;
     
+    // Cast to type
     PROVIDE_CRTP_CAST_OPERATOR(type);
     
     /// Size of the tensor component (max index value)
