@@ -135,8 +135,9 @@ namespace SUNphi
     return bind<TG>(std::forward<T>(ref),id);				\
   }
   
+  /// Defines a Binder named NAME for type RwTG or CnTG
 #define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
-  /* Returns a binder to the only row or column type available */	\
+  /*! Returns a binder to the only RwTG or CnTG type available */	\
   template <class T>  /* Type of the bound expression */		\
   auto NAME(T&& ref,      /*!< Quantity to be bound */			\
 	    const int id) /*!< Component to bind    */			\

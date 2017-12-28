@@ -54,19 +54,19 @@ namespace SUNphi
 						\
   MAYBE_UNUSED(hasTwin<T2>);			\
   						\
-  /* Declare the twinned type of T1 */		\
+  /*! Declare the twinned type of T1 */		\
   template <>					\
   struct _TwinCompOf<T1>			\
   {						\
-    /* Twinned type */				\
+    /*! Twinned type */				\
     using type=ConstrainIsTensComp<T2>::type;	\
   };						\
 						\
-  /* Declare the twinned type of T2 */		\
+  /*! Declare the twinned type of T2 */		\
   template <>					\
   class _TwinCompOf<T2>				\
   {						\
-    /* Twinned type */				\
+    /*! Twinned type */				\
     using type=ConstrainIsTensComp<T1>::type;	\
   }
 }
