@@ -148,6 +148,9 @@ namespace SUNphi
   class ConstraintIsBaseOf
   {
     STATIC_ASSERT_IS_BASE_OF(Base,Derived);
+    
+    /// Type checked
+    using type=Derived;
   };
   
   /////////////////////////////////////////////////////////////////
