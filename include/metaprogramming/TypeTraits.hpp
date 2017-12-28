@@ -145,7 +145,7 @@ namespace SUNphi
   /// Forces type Derived to be derived from Base
   template <class Base,
 	    class Derived>
-  class ConstraintIsBaseOf
+  class ConstrainIsBaseOf
   {
     STATIC_ASSERT_IS_BASE_OF(Base,Derived);
     
@@ -162,7 +162,7 @@ namespace SUNphi
   /// Forces types to be in the given number
   template <int N,
 	    class...Args>
-  class ConstraintNTypes
+  class ConstrainNTypes
   {
     STATIC_ASSERT_ARE_N_TYPES(N,Args);
   };
@@ -179,7 +179,7 @@ namespace SUNphi
   
   /// Forces the type to be a floating-point
   template <class T>
-  class ConstraintIsFloatingPoint
+  class ConstrainIsFloatingPoint
   {
     STATIC_ASSERT_IS_FLOATING_POINT(T);
   };
@@ -196,7 +196,7 @@ namespace SUNphi
   
   /// Forces the type to be integer-like
   template <class T>
-  class ConstraintIsIntegral
+  class ConstrainIsIntegral
   {
     STATIC_ASSERT_IS_INTEGRAL(T);
   };
@@ -219,7 +219,7 @@ namespace SUNphi
   
   /// Forces the type to be integer-like
   template <class...Args>
-  class ConstraintAreIntegrals
+  class ConstrainAreIntegrals
   {
     STATIC_ASSERT_ARE_INTEGRALS(Args...);
   };
@@ -240,7 +240,7 @@ namespace SUNphi
 									\
   /*! Class forcing T to inherits from \c BASE ## TYPE */		\
   template<typename T>							\
-  using ConstraintIs ## TYPE=ConstraintIsBaseOf<Base ## TYPE,T>
+  using ConstrainIs ## TYPE=ConstrainIsBaseOf<Base ## TYPE,T>
   
   /////////////////////////////////////////////////////////////////
   

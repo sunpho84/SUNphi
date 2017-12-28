@@ -46,9 +46,9 @@ namespace SUNphi
 #define STATIC_ASSERT_IS_TUPLE(T)			\
   static_assert(IsTuple<T>,"Type is not a tuple")
   
-  /// Constraint the class T to be a Tuple
+  /// Constrain the class T to be a Tuple
   template <class T>
-  struct ConstraintIsTuple
+  struct ConstrainIsTuple
   {
     STATIC_ASSERT_IS_TUPLE(T);
   };
@@ -58,7 +58,7 @@ namespace SUNphi
   /// Counts the types inside a Tuple
   ///
   /// Generic type case, forbids instantiation
-  template <class T,class=ConstraintIsTuple<T>>
+  template <class T,class=ConstrainIsTuple<T>>
   static constexpr int nTypesInTuple=0;
   
   /// Counts the types inside a Tuple
@@ -108,7 +108,7 @@ namespace SUNphi
   /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
   /*!                                                                     */ \
   /*! Gives visibility to the internal implementation                     */ \
-  template <class TP,class=ConstraintIsTuple<TP>>			\
+  template <class TP,class=ConstrainIsTuple<TP>>			\
   using TYPE ## FromTuple=typename _ ## TYPE ## FromTuple<TP>::type
   
   /////////////////////////////////////////////////////////////////
@@ -119,11 +119,11 @@ namespace SUNphi
   template <class Head,class...Tail>
   static constexpr bool AreSame=IntSeq<IsSame<Head,Tail>...>::hMul;
   
-  /// Forces a set of types to be the same
+  /// \brief Forces a set of types to be the same
   ///
   /// Uses AreSame to check
   template <class...Args>
-  class ConstraintAreSame
+  class ConstrainAreSame
   {
     static_assert(AreSame<Args...>,"Error, types are not the same");
   };
@@ -153,7 +153,7 @@ namespace SUNphi
   /// Count the number of different types in a \c Tuple
   ///
   /// Generic type - forbids instantiation
-  template <class T,class=ConstraintIsTuple<T>>
+  template <class T,class=ConstrainIsTuple<T>>
   static constexpr int nDiffTypesInTuple=0;
   
   /// Count the number of different types in a \c Tuple
@@ -166,7 +166,7 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Check whether all types of a \c Tuple are different
-  template <class T,class=ConstraintIsTuple<T>>
+  template <class T,class=ConstrainIsTuple<T>>
   static constexpr bool tupleTypesAreAllDifferent
   =nDiffTypesInTuple<T> ==nTypesInTuple<T>;
   
@@ -174,9 +174,9 @@ namespace SUNphi
 #define STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T)	\
   static_assert(tupleTypesAreAllDifferent<T>,"Types in the tuple are not all different")
   
-  /// Constraint all types in the tuple to be different
-  template <class T,class=ConstraintIsTuple<T>>
-  struct ConstraintTupleTypesAreAllDifferent
+  /// Constrain all types in the tuple to be different
+  template <class T,class=ConstrainIsTuple<T>>
+  struct ConstrainTupleTypesAreAllDifferent
   {
     STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T);
   };
@@ -187,9 +187,9 @@ namespace SUNphi
 #define STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP)			\
   static_assert(nOfTypeInTuple<T,TP> >0,"Searched type not found")
   
-  /// Constraint a type to be contained in a Tuple
-  template <class T,class TP,class=ConstraintIsTuple<TP>>
-  struct ConstraintTupleHasType
+  /// Constrain a type to be contained in a Tuple
+  template <class T,class TP,class=ConstrainIsTuple<TP>>
+  struct ConstrainTupleHasType
   {
     STATIC_ASSERT_IF_TYPE_NOT_IN_TUPLE(T,TP);
   };

@@ -22,7 +22,7 @@ namespace SUNphi
   /// provided
   template <class TK,class T>
   class TensStor :
-    public ConstraintIsTensKind<TK> // Check that TK is a TensKind
+    public ConstrainIsTensKind<TK> // Check that TK is a TensKind
   {
     /// Tuple containg all mapped type
     using type=typename TK::Types;
@@ -42,7 +42,7 @@ namespace SUNphi
 #define DEFINE_EVAL(CONST_TAG)							\
     /*! Returns a CONST_TAG reference to a TensStor given a set of components */ \
     template <class...Args,                          /* Arguments type */ \
-	      class=ConstraintAreSame<int,Args...>>  /* Constrain all args to be integer */ \
+	      class=ConstrainAreSame<int,Args...>>  /* Constrain all args to be integer */ \
     friend CONST_TAG T& eval(CONST_TAG TensStor& ts, /*!< Reference to the TensStor */ \
 			     const Args&...args)     /*!< Components to extract */ \
     {									\
@@ -71,7 +71,7 @@ namespace SUNphi
     
     /// Constructor (test)
     template <class...DynSizes,                                  // Arguments (sizes)
-	      class=ConstraintNTypes<TK::nDynamic,DynSizes...>>
+	      class=ConstrainNTypes<TK::nDynamic,DynSizes...>>
     TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
     {
       // Constrain the arguments to be all integer-like

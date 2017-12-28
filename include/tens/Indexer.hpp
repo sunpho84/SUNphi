@@ -19,7 +19,7 @@ namespace SUNphi
     template <int IDyn,          // Index of the current dynamic component
 	      class T,           // Generic type
 	      class=FalseType>   // Forbids instantiation
-    struct _Indexer : ConstraintIsTensKind<T>
+    struct _Indexer : ConstrainIsTensKind<T>
     {
     };
     
@@ -51,7 +51,7 @@ namespace SUNphi
       template <size_t NTotDyn,                                // Total number of dynamic components
 		class Head,                                    // Current component type
 		class...Tail,                                  // Other component types
-		class=ConstraintAreIntegrals<Head,Tail...>>    // Constrain all types to be integral
+		class=ConstrainAreIntegrals<Head,Tail...>>    // Constrain all types to be integral
       static constexpr int index(const std::array<int,NTotDyn>& dynSizes,  ///< Dynamic sizes
 				 const Head& head,                         ///< Current component
 				 const Tail&...tail)                       ///< Other components

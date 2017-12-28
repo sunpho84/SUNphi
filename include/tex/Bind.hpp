@@ -20,8 +20,8 @@ namespace SUNphi
 	    typename TK_TYPES=typename TK::Types>                // Types of the tensor kind
   class Binder :
     public TEx<Binder<TG,B>>,
-    public ConstraintIsTensKind<TK>,             // Constraint type TK to be a TensKind
-    public ConstraintTupleHasType<TG,TK_TYPES>   // Constraint TG to be in the Types of the TensKind
+    public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
+    public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
   {
     /// Nested type Tensor Kind
     using NestedTk=TK;
@@ -75,8 +75,8 @@ namespace SUNphi
   /// Plain binder getting an unbind expression
   template <typename Tg,                         // Type to get
 	    typename Tk,                         // TensKind of the ref, deduced from argument
-	    typename=ConstraintIsTensKind<Tk>,   // Force ref to be a TensKind
-	    typename=ConstraintIsTensComp<Tg>>   // Force binding type to be a TensComp
+	    typename=ConstrainIsTensKind<Tk>,   // Force ref to be a TensKind
+	    typename=ConstrainIsTensComp<Tg>>   // Force binding type to be a TensComp
   auto bind(Tk&& ref,                     ///< Quantity to bind to
 	    const int id)                 ///< Entry of the component to bind
   {
@@ -91,7 +91,7 @@ namespace SUNphi
   template <typename Tg,                        // Type to get
 	    typename InNested,                  // Type referred from the nested bounder
 	    typename InNestedTg,                // Type got by the nested bounder
-	    typename=ConstraintIsTensComp<Tg>>  // Force binding type to be a TensComp
+	    typename=ConstrainIsTensComp<Tg>>  // Force binding type to be a TensComp
   auto bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
 	    const int id)                           ///< Component to get
   {

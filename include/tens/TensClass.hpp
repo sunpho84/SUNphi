@@ -19,8 +19,8 @@ namespace SUNphi
   template <typename TK,   // List of tensor components
 	    typename Fund> // Fundamental type
   class Tens :
-    public ConstraintIsTensKind<TK>,        // Constraint the TK type to be a TensKind
-    public ConstraintIsFloatingPoint<Fund>  // Constraint the Fund type to be a floating point
+    public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
+    public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
   {
     
   public:
@@ -71,9 +71,9 @@ namespace SUNphi
     static constexpr bool isStoring=true;
     
     /// Evaluate the tensor (returns the index of the internal data)
-    template <class...Comps,                               // Component types
-	      class=ConstraintAreIntegrals<Comps...>,      // Force the components to be integer-like
-	      class=ConstraintNTypes<Tk::nTypes,Comps...>> // Constraint the component to be in the same number of Tk
+    template <class...Comps,                              // Component types
+	      class=ConstrainAreIntegrals<Comps...>,      // Force the components to be integer-like
+	      class=ConstrainNTypes<Tk::nTypes,Comps...>> // Constrain the component to be in the same number of Tk
     friend double& eval(Tens& t,const Comps&...comps) // Component values
     {
       //print(cout,"Components: ",comps...,"\n");
