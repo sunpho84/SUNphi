@@ -52,7 +52,7 @@ namespace SUNphi
     static constexpr bool isFullyStatic=(nDynamic==0);
     
     /// Tuple containing all types
-    typedef Tuple<T...> Types;
+    typedef Tuple<T...> types;
     
     /// Number of types of the kind
     static constexpr int nTypes=sizeof...(T);
@@ -67,7 +67,7 @@ namespace SUNphi
     
     /// Get all types but one
     template <class Tab>
-    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(Types{}))>;
+    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
     
     // /// Get all types after one
     // template <class Tab>

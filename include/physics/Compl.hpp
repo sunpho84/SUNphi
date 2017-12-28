@@ -11,7 +11,7 @@
 namespace SUNphi
 {
   // Define complex number tens comp
-  DEFINE_TENS_COMP(reim,Compl,NCOMPL,2);
+  DEFINE_TENS_COMP(reim,Compl,COMPL,2);
   
   /// Index of the real part of a \c Compl
   constexpr int REAL_PART_ID=0;

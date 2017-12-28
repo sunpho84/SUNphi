@@ -6,12 +6,13 @@
 /// \brief Header file for the inclusion of all spin related types
 
 #include <tens/TensComp.hpp>
+#include <tens/TwinsComp.hpp>
 #include <tex/Bind.hpp>
 
 namespace SUNphi
 {
-  // Define Spin tens comp
-  DEFINE_TENS_COMP(spin,Spin,NSPIN,4);
+  // Defines Spin TensComp
+  DEFINE_RW_CN_TENS_COMP(spin,Spin,SPIN,4);
 }
 
 #endif

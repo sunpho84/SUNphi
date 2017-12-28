@@ -10,6 +10,7 @@
 /// matrices.
 
 #include <tens/TensComp.hpp>
+#include <utility/Unused.hpp>
 
 namespace SUNphi
 {
@@ -43,12 +44,16 @@ namespace SUNphi
   template <>					\
   constexpr bool hasTwin<T1>			\
   =true;					\
+  						\
+  MAYBE_UNUSED(hasTwin<T1>);			\
 						\
   /*! Declare that T2 has a twin */		\
   template <>					\
   constexpr bool hasTwin<T2>			\
   =true;					\
 						\
+  MAYBE_UNUSED(hasTwin<T2>);			\
+  						\
   /* Declare the twinned type of T1 */		\
   template <>					\
   struct _TwinCompOf<T1>			\

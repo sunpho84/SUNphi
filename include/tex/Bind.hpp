@@ -17,7 +17,7 @@ namespace SUNphi
   template <typename TG, // Type to get
 	    typename B,  // Type to bind
 	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
-	    typename TK_TYPES=typename TK::Types>                // Types of the tensor kind
+	    typename TK_TYPES=typename TK::types>                // Types of the tensor kind
   class Binder :
     public TEx<Binder<TG,B>>,
     public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
@@ -98,7 +98,7 @@ namespace SUNphi
     // Tensor Kind of input nested binder
     using InNestedTk=typename RemoveReference<InNested>::Tk;
     // Types of the Tensor Kind of nested bounder
-    using NestedTypes=typename InNestedTk::Types;
+    using NestedTypes=typename InNestedTk::types;
     // Position inside the nested reference of the type got by the nested bounder
     constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
     // Position inside the nested reference of the type to get
@@ -125,13 +125,46 @@ namespace SUNphi
     return Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId);
   }
   
-  /// Defines a Binder named NAME for type Tg
+  /// Defines a Binder named NAME for type TG
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
   template <class T>							\
-  auto NAME(T&& ref,const int id)					\
+  auto NAME(T&& ref,     /*!< Quantity to be bound */			\
+	    const int id) /*!< Compinent to bind    */			\
   {									\
     return bind<TG>(std::forward<T>(ref),id);				\
+  }
+  
+#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
+  /* Returns a binder to the only row or column type available */	\
+  template <class T>  /* Type of the bound expression */		\
+  auto NAME(T&& ref,      /*!< Quantity to be bound */			\
+	    const int id) /*!< Component to bind    */			\
+  {									\
+    /* TensKind of binding expression */				\
+    using Tk=typename RemoveReference<T>::Tk;				\
+    									\
+    /* Tuple containing all Tk types */					\
+    using Tp=typename Tk::types;					\
+    									\
+    /* Check if row type is available */				\
+    constexpr bool hasRw=tupleHasType<Rw ## TG,Tp>;			\
+    									\
+    /* Check if column type is available */				\
+    constexpr bool hasCn=tupleHasType<Cn ## TG,Tp>;			\
+    									\
+    /* Check that not more than one type is available */		\
+    constexpr bool hasOnlyOneType=(hasRw+hasCn<2);			\
+    static_assert(hasOnlyOneType,"Both types Rw and Cn identfied!");	\
+    									\
+    /* Check that at least one type is available */			\
+    constexpr bool hasAtLeastOneType=(hasRw+hasCn>0);			\
+    static_assert(hasAtLeastOneType,"No types Rw and Cn identfied!");	\
+    									\
+    /* Identifies the type to return, on the basis of the check above */ \
+    using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
+    									\
+    return bind<Ret>(std::forward<T>(ref),id);				\
   }
   
   // Check that a test Binder is a TEx

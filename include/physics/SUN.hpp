@@ -6,12 +6,13 @@
 /// \brief Header file for the inclusion of all color types
 
 #include <tens/TensComp.hpp>
+#include <tens/TwinsComp.hpp>
 #include <tex/Bind.hpp>
 
 namespace SUNphi
 {
-  // Define Color tens comp
-  DEFINE_TENS_COMP(col,Col,NCOL,3);
+  // Define Col TensComp
+  DEFINE_RW_CN_TENS_COMP(col,Col,COL,3);
 }
 
 #endif

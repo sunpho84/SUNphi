@@ -25,7 +25,7 @@ namespace SUNphi
     public ConstrainIsTensKind<TK> // Check that TK is a TensKind
   {
     /// Tuple containg all mapped type
-    using type=typename TK::Types;
+    using type=typename TK::types;
     
     /// Internal storage
     T* v;
