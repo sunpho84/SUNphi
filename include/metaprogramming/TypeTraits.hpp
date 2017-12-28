@@ -23,13 +23,13 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////////
   
   /// Returns the type T without any constant volatile qualification
-  template <class T>
+  template <typename T>
   using RemoveCV=typename std::remove_cv<T>::type;
   
   /////////////////////////////////////////////////////////////////////
   
   /// Returns the type T without any reference
-  template <class T>
+  template <typename T>
   using RemoveReference=typename std::remove_reference<T>::type;
   
   /////////////////////////////////////////////////////////////////////
@@ -38,8 +38,8 @@ namespace SUNphi
   ///
   /// Useful to enable or disable SFINAE specialization.
   /// Generic (false) case
-  template <bool B,       // Boolean constant deciding whether the type is enabled
-	    class T>      // Type to be enabled
+  template <bool B,          // Boolean constant deciding whether the type is enabled
+	    typename T>      // Type to be enabled
   struct _EnableIf
   {
   };
@@ -48,7 +48,7 @@ namespace SUNphi
   ///
   /// Useful to enable or disable SFINAE specialization.
   /// True case
-  template <class T> // Type to be enabled
+  template <typename T> // Type to be enabled
   struct _EnableIf<true,T>
   {
     /// Type enabled
@@ -58,8 +58,8 @@ namespace SUNphi
   /// Defines type T (default to void) if parameter B is true
   ///
   /// Gives visibility to the internal implementation
-  template <bool B,         // Boolean constant deciding whether the type is enabled
-	    class T=void>   // Type to be enabled
+  template <bool B,            // Boolean constant deciding whether the type is enabled
+	    typename T=void>   // Type to be enabled
   using EnableIf=typename _EnableIf<B,T>::type;
   
   /// Defines \c void if parameter B is true
@@ -71,8 +71,8 @@ namespace SUNphi
   /// Defines type T if parameter B is true
   ///
   /// Explicit specialization of \c EnableIf forcing an explicit type.
-  template <bool B,       // Boolean constant deciding whether the type is enabled
-	    class T>      // Type to be enabled
+  template <bool B,          // Boolean constant deciding whether the type is enabled
+	    typename T>      // Type to be enabled
   using TypeIf=EnableIf<B,T>;
   
   /////////////////////////////////////////////////////////////////////
@@ -80,14 +80,14 @@ namespace SUNphi
   /// Checks if two types are the same
   ///
   /// Default (false) case
-  template <class T1, // First type to be checked
-	    class T2> // Second type to be checked
+  template <typename T1, // First type to be checked
+	    typename T2> // Second type to be checked
   static constexpr bool IsSame=false;
   
   /// Checks if two types are the same
   ///
   /// Default (false) case
-  template <class T> // Unique type
+  template <typename T> // Unique type
   static constexpr bool IsSame<T,T>
   =true;
   
@@ -96,7 +96,9 @@ namespace SUNphi
   /// Provides type T if B is true, or F if is false
   ///
   /// Forward declaration of internal implementation
-  template <bool B,typename T,typename F>
+  template <bool B,
+	    typename T,
+	    typename F>
   struct _Conditional;
   
   /// Provides type T if B is true, or F if is false
@@ -126,14 +128,14 @@ namespace SUNphi
   /// Wraps the internal implementation
   template <bool B,      // Condition enabling one or the other type
 	    typename T,  // T Type enabled if true
-	    typename F>  //F Type enabled if false
+	    typename F>  // F Type enabled if false
   using Conditional=typename _Conditional<B,T,F>::type;
   
   /////////////////////////////////////////////////////////////////////
   
   /// Identifies whether Base is a base class of Derived
-  template <class Base,
-	    class Derived>
+  template <typename Base,
+	    typename Derived>
   constexpr bool IsBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////////
@@ -143,9 +145,9 @@ namespace SUNphi
   static_assert(IsBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
   /// Forces type Derived to be derived from Base
-  template <class Base,
-	    class Derived>
-  class ConstrainIsBaseOf
+  template <typename Base,
+	    typename Derived>
+  struct ConstrainIsBaseOf
   {
     STATIC_ASSERT_IS_BASE_OF(Base,Derived);
     
@@ -161,8 +163,8 @@ namespace SUNphi
   
   /// Forces types to be in the given number
   template <int N,
-	    class...Args>
-  class ConstrainNTypes
+	    typename...Args>
+  struct ConstrainNTypes
   {
     STATIC_ASSERT_ARE_N_TYPES(N,Args);
   };
@@ -170,7 +172,7 @@ namespace SUNphi
   //////////////////////////////////////////////////////////////////////
   
   /// Identifies whether a type is a floating-point
-  template <class T>
+  template <typename T>
   constexpr bool IsFloatingPoint=std::is_floating_point<T>::value;
   
   /// Static assert if the type T is not a floating-point
@@ -178,8 +180,8 @@ namespace SUNphi
   static_assert(IsFloatingPoint<T>,"Error, type is not a floating point")
   
   /// Forces the type to be a floating-point
-  template <class T>
-  class ConstrainIsFloatingPoint
+  template <typename T>
+  struct ConstrainIsFloatingPoint
   {
     STATIC_ASSERT_IS_FLOATING_POINT(T);
   };
@@ -187,7 +189,7 @@ namespace SUNphi
   //////////////////////////////////////////////////////////////////////
   
   /// Identifies whether a type is an integer-like
-  template <class T>
+  template <typename T>
   constexpr bool IsIntegral=std::is_integral<T>::value;
   
   /// Static assert if the type T is not an integer-like
@@ -195,8 +197,8 @@ namespace SUNphi
   static_assert(IsIntegral<T>,"Error, type is not an integral")
   
   /// Forces the type to be integer-like
-  template <class T>
-  class ConstrainIsIntegral
+  template <typename T>
+  struct ConstrainIsIntegral
   {
     STATIC_ASSERT_IS_INTEGRAL(T);
   };
@@ -204,12 +206,12 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Identifies whether a set of types are an integer-like
-  template <class Head=int,
-	    class...Tail>
+  template <typename Head=int,
+	    typename...Tail>
   constexpr bool AreIntegral=AreIntegral<Head> and AreIntegral<Tail...>;
   
   /// Identifies whether a single types is integer-like
-  template <class T>
+  template <typename T>
   constexpr bool AreIntegral<T>
   =IsIntegral<T>;
   
@@ -218,8 +220,8 @@ namespace SUNphi
   static_assert(AreIntegral<__VA_ARGS__>,"Error, types are not all an integral")
   
   /// Forces the type to be integer-like
-  template <class...Args>
-  class ConstrainAreIntegrals
+  template <typename...Args>
+  struct ConstrainAreIntegrals
   {
     STATIC_ASSERT_ARE_INTEGRALS(Args...);
   };
@@ -273,7 +275,7 @@ namespace SUNphi
   /*!                                                       */		\
   /*! Internal implementation                               */		\
   template <typename Type>						\
-  class HasMember_ ## TAG						\
+  struct HasMember_ ## TAG						\
   {									\
     /*! Internal class of size 1, used if Type has the method */	\
     using Yes=char[1];							\
@@ -288,8 +290,8 @@ namespace SUNphi
       int TAG;								\
     };									\
     									\
-    /*! This class inherit from both Type and Fallback, so it will */	\
-    /*! certainly have the method TAG, possibly two                */	\
+    /*! This class inherits from both Type and Fallback, so it will  */	\
+    /*! certainly have the method TAG, possibly two                  */	\
     struct Derived :							\
       public Type,							\
       public Fallback							\
@@ -328,9 +330,9 @@ namespace SUNphi
   template <typename Type>						\
   constexpr bool hasMember_ ## TAG=HasMember_ ## TAG<Type>::result;	\
   									\
-  /*! Class forcing T to have a member TAG defined */			\
-  template <class T>							\
-  class ConstrainHasMember_ ## TAG					\
+  /*! \brief Class forcing T to have a member "TAG" defined */		\
+  template <typename T>							\
+  struct ConstrainHasMember_ ## TAG					\
   {									\
     STATIC_ASSERT_HAS_MEMBER(TAG,T);					\
   }

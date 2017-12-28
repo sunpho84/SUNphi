@@ -119,9 +119,7 @@ namespace SUNphi
   template <class Head,class...Tail>
   static constexpr bool AreSame=IntSeq<IsSame<Head,Tail>...>::hMul;
   
-  /// \brief Forces a set of types to be the same
-  ///
-  /// Uses AreSame to check
+  /// Forces a set of types to be the same
   template <class...Args>
   class ConstrainAreSame
   {
