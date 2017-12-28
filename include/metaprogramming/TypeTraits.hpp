@@ -251,7 +251,7 @@ namespace SUNphi
   static_assert(hasMember_ ## TAG<__VA_ARGS__>,"Type does not have member " #TAG); \
   
   /// Define a member detecter named hasMember_TAG
-///
+  ///
   /// Example:
   ///
   /// \code
@@ -267,7 +267,7 @@ namespace SUNphi
   ///   bool has=hasMember_ciccio(fuffa);
   ///   return 0;
   /// }
-  ///
+  /// \endcode
 #define DEFINE_HAS_MEMBER(TAG)						\
   /*! Detect if \c Type has member (variable or method) TAG */		\
   /*!                                                       */		\
