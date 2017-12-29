@@ -7,6 +7,7 @@
 
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/SwallowSemicolon.hpp>
 
 namespace SUNphi
 {
@@ -33,6 +34,23 @@ namespace SUNphi
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
+  
+  /// Provides a simple evaluator (const and non-const)
+#define PROVIDE_STRAIGHT_EVALUATOR(T)					\
+  /*! Evaluator for type T */						\
+  template <class...Args>						\
+  friend decltype(auto) eval(T& EXP,const Args&...args)			\
+  {									\
+    return eval(EXP.ref,std::forward<const Args>(args)...);		\
+  }									\
+  									\
+  /*! Evaluator for type T returning const*/				\
+  template <class...Args>						\
+  friend decltype(auto) eval(const T& EXP,const Args&...args)		\
+  {									\
+    return eval(EXP.ref,std::forward<const Args>(args)...);		\
+  }									\
+  SWALLOW_SEMICOLON
 }
 
 #endif
