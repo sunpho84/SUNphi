@@ -31,6 +31,9 @@ namespace SUNphi
     /// Reference of the type to transpose
     Reference<T> ref;
     
+    // Implement the evaluator
+    PROVIDE_STRAIGHT_EVALUATOR(Transposer);
+    
     /// Constructor taking a universal reference
     Transposer(T&& ref) : ref(ref)
     {
@@ -40,6 +43,15 @@ namespace SUNphi
   // Check that a test Transposer is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Transposer<Tens<TensKind<TensComp<double,1>>,double>>);
   
+  /// Transpose expression \c ref
+  ///
+  /// Plain transposer getting a non-transposed expression
+  template <typename T>                   // Type to transpose
+  auto transpose(T&& ref)                 ///< Quantity to transpose
+  {
+    //cout<<"Constructing a transposer for type "<<T::name()<<endl;
+    return Transposer<T>(std::forward<T>(ref));
+  }
 }
 
 #endif
