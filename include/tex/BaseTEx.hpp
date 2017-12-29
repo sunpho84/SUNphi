@@ -16,8 +16,16 @@ namespace SUNphi
   // Defines the check for a member "name"
   DEFINE_HAS_MEMBER(name);
   
-  /// Defines the check for a TEx (empty so far)
-#define STATIC_ASSERT_IS_TEX(...)
+  // Defines the check for a member "isStoring"
+  DEFINE_HAS_MEMBER(isStoring);
+  
+  // Defines the check for a member type "Tk"
+  DEFINE_HAS_MEMBER(Tk);
+  
+  /// Defines the check for a TEx
+#define STATIC_ASSERT_IS_TEX(...)			\
+  STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
+  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
   /// TEmplate Expression
   template <typename T>

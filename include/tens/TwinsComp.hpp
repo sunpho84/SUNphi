@@ -23,13 +23,13 @@ namespace SUNphi
   
   /// Specify the twin component of a given TensComp
   ///
-  /// Internal implementation for generic case
+  /// Internal implementation for generic case, returning the input
   template <class T,                         // Type of which we want to declare the twin
 	    class=ConstrainIsTensComp<T>>    // Constrain T to be a TensComp
   struct _TwinCompOf
   {
-    /// Twinned type: forbids the implementation of a generic case
-    using type=FalseType;
+    /// Twinned type: the same of input type
+    using type=T;
   };
   
   /// Specify the twin component of a given TensComp
@@ -64,7 +64,7 @@ namespace SUNphi
 						\
   /*! Declare the twinned type of T2 */		\
   template <>					\
-  class _TwinCompOf<T2>				\
+  struct _TwinCompOf<T2>			\
   {						\
     /*! Twinned type */				\
     using type=ConstrainIsTensComp<T1>::type;	\

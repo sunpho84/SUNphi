@@ -11,6 +11,7 @@
 #include <metaprogramming/Tuple.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <tens/TensComp.hpp>
+#include <tens/TwinsComp.hpp>
 
 namespace SUNphi
 {
@@ -72,6 +73,9 @@ namespace SUNphi
     // /// Get all types after one
     // template <class Tab>
     // using AllAfterType=TensKindFromTuple<decltype(getTail<Tab>(Types{}))>;
+    
+    /// Get the twinned (transposed) type
+    using Twinned=TensKind<TwinCompOf<T>...>;
     
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=

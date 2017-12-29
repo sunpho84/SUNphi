@@ -5,9 +5,9 @@
 ///
 /// \brief Defines a class which binds a component of a TEx
 
-#include <tens/TensKind.hpp>
-#include <tex/BaseTEx.hpp>
+#include <tens/TensClass.hpp>
 #include <tex/Reference.hpp>
+#include <tex/UnaryTEx.hpp>
 
 namespace SUNphi
 {
@@ -17,7 +17,7 @@ namespace SUNphi
 	    typename TK=typename RemoveReference<B>::Tk, // Tens Kind of the bound type
 	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
   class Binder :
-    public TEx<Binder<TG,B>>,                   // Inherit from TEx to qualify as a TEx
+    public UnaryTEx<Binder<TG,B>>,              // Inherit from UnaryTEx
     public ConstrainIsTEx<B>,                   // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
@@ -39,10 +39,6 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
-    // using InnerTypes=typename NestedTk::template AllAfterType<TG>;
-    
-    // using OuterTypes=typename NestedTk::template AllBeforeType<TG>;
-    
     /// Evaluator
     template <class...Args>
     friend decltype(auto) eval(Binder& binder,const Args&...args)
@@ -57,16 +53,10 @@ namespace SUNphi
       return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
     
-    /// Constructor taking a universal reference (hopefully)
+    /// Constructor taking a universal reference
     Binder(B&& ref,int id) : ref(ref),id(id)
     {
     }
-    
-    // /// Constructor taking lvalue
-    // Binder(B& ref,int id) : ref(ref),id(id)
-    // {
-    // }
-    
   };
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -167,8 +157,8 @@ namespace SUNphi
     return bind<Ret>(std::forward<T>(ref),id);				\
   }
   
-  // Check that a test Binder is a TEx
-  STATIC_ASSERT_IS_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
+  // Check that a test Binder is a UnaryTEx
+  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
 }
 
 #endif

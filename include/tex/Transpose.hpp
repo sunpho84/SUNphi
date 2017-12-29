@@ -5,25 +5,41 @@
 ///
 /// \brief Defines a class which take the transposed of a TEx
 
-#include <tens/TensKind.hpp>
-#include <tex/BaseTEx.hpp>
+#include <tens/TensClass.hpp>
 #include <tex/Reference.hpp>
+#include <tex/UnaryTEx.hpp>
 
 namespace SUNphi
 {
   /// Class to take the transposed of a TEx
-  template <typename A,                                  // Type to transposed
-	    typename TK=typename RemoveReference<A>::Tk, // Tens Kind of the bound type
-	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
+  template <typename T,                                  // Type to be transposed
+	    typename TK=typename RemoveReference<T>::Tk> // Tens Kind of the bound type
   class Transposer :
-    public TEx<Transposer<A>>,                   // Inherit from TEx to qualify as a TEx
-    public ConstrainIsTEx<A>,                    // Constrain B to be a TEx
+    public UnaryTEx<Transposer<T>>,              // Inherit from UnaryTEx
+    public ConstrainIsTEx<T>,                    // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>               // Constrain type TK to be a TensKind
   {
+    
+  public:
+    
+    /// Returns whether this TEx is storing
+    static constexpr bool isStoring=false;
+    
+    /// TensorKind of the bound expression
+    using Tk=typename TK::Twinned;
+    
     /// Reference of the type to transpose
     Reference<T> ref;
     
+    /// Constructor taking a universal reference
+    Transposer(T&& ref) : ref(ref)
+    {
+    }
   };
+  
+  // Check that a test Transposer is a UnaryTEx
+  STATIC_ASSERT_IS_UNARY_TEX(Transposer<Tens<TensKind<TensComp<double,1>>,double>>);
+  
 }
 
 #endif
