@@ -232,9 +232,10 @@ namespace SUNphi
   ///
   /// Given a TYPE, defines another empty type prefixing its name with
   /// "Base", and defines a check IsTYPE to probe wheter a certain
-  /// type inherit from TYPE
-#define DEFINE_BASE_TYPE(TYPE)						\
-  struct Base ## TYPE{};						\
+  /// type inherit from TYPE. All extra arguments can be used to
+  /// specify inheritance from other classes
+#define DEFINE_BASE_TYPE(TYPE,...)					\
+  struct Base ## TYPE __VA_ARGS__ {};					\
 									\
   /*! Expression which is true if T inherits from \c BASE ## TYPE */	\
   template<typename T>							\
@@ -249,8 +250,8 @@ namespace SUNphi
   /// Assert type T to have member TAG
   ///
   /// Note that you need to have defined DEFINE_HAS_MEMBER before
-#define STATIC_ASSERT_HAS_MEMBER(TAG,...)					\
-  static_assert(hasMember_ ## TAG<__VA_ARGS__>,"Type does not have member " #TAG); \
+#define STATIC_ASSERT_HAS_MEMBER(TAG,...)				\
+  static_assert(hasMember_ ## TAG<__VA_ARGS__>,"Type does not have member " #TAG) \
   
   /// Define a member detecter named hasMember_TAG
   ///
