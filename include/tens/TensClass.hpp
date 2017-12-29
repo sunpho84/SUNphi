@@ -8,6 +8,7 @@
 #include <metaprogramming/IntSeq.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
+#include <tex/BaseTEx.hpp>
 
 namespace SUNphi
 {
@@ -19,6 +20,7 @@ namespace SUNphi
   template <typename TK,   // List of tensor components
 	    typename Fund> // Fundamental type
   class Tens :
+    public TEx<Tens<TK,Fund>>,             // Inherit from TEx to qualify as a TEx
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
     public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
   {

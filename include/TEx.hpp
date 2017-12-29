@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the inclusion of all Template Expressions
 
+#include <tex/Adjoint.hpp>
 #include <tex/BaseTEx.hpp>
 #include <tex/Bind.hpp>
 

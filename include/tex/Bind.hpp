@@ -19,7 +19,8 @@ namespace SUNphi
 	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
 	    typename TK_TYPES=typename TK::types>                // Types of the tensor kind
   class Binder :
-    public TEx<Binder<TG,B>>,
+    public TEx<Binder<TG,B>>,                   // Inherit from TEx to qualify as a TEx
+    public ConstrainIsTEx<B>,                   // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
   {
@@ -137,7 +138,7 @@ namespace SUNphi
   
   /// Defines a Binder named NAME for type RwTG or CnTG
 #define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
-  /*! Returns a binder to the only RwTG or CnTG type available */	\
+  /*! Returns a binder to the only Rw TG or Cn TG type available */	\
   template <class T>  /* Type of the bound expression */		\
   auto NAME(T&& ref,      /*!< Quantity to be bound */			\
 	    const int id) /*!< Component to bind    */			\
