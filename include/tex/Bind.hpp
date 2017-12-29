@@ -5,19 +5,16 @@
 ///
 /// \brief Defines a class which binds a component of a TEx
 
-#include <tens/TensClass.hpp>
+#include <tens/TensKind.hpp>
 #include <tex/BaseTEx.hpp>
 
 namespace SUNphi
 {
   /// Class to bind a component of a TEx
-  ///
-  /// The creator should accepts any type which qualifies as a TEx (TO
-  /// BE FIXED?)
-  template <typename TG, // Type to get
-	    typename B,  // Type to bind
-	    typename TK=typename std::remove_reference_t<B>::Tk, // Tens Kind of the bind type
-	    typename TK_TYPES=typename TK::types>                // Types of the tensor kind
+  template <typename TG,                                 // Type to get
+	    typename B,                                  // Type to bind
+	    typename TK=typename RemoveReference<B>::Tk, // Tens Kind of the bound type
+	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
   class Binder :
     public TEx<Binder<TG,B>>,                   // Inherit from TEx to qualify as a TEx
     public ConstrainIsTEx<B>,                   // Constrain B to be a TEx
