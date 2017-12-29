@@ -7,6 +7,7 @@
 
 #include <tens/TensKind.hpp>
 #include <tex/BaseTEx.hpp>
+#include <tex/Reference.hpp>
 
 namespace SUNphi
 {
@@ -19,6 +20,9 @@ namespace SUNphi
     public ConstrainIsTEx<A>,                    // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>               // Constrain type TK to be a TensKind
   {
+    /// Reference of the type to transpose
+    Reference<T> ref;
+    
   };
 }
 

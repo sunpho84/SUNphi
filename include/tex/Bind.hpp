@@ -7,6 +7,7 @@
 
 #include <tens/TensKind.hpp>
 #include <tex/BaseTEx.hpp>
+#include <tex/Reference.hpp>
 
 namespace SUNphi
 {
@@ -27,7 +28,7 @@ namespace SUNphi
   public:
     
     /// Reference to the object from which to get
-    Conditional<RemoveReference<B>::isStoring,B&,B> ref;
+    Reference<B> ref;
     
     /// Index to get
     const int id;
