@@ -61,16 +61,15 @@ namespace SUNphi
   
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
-  /// Plain binder getting an unbind expression
-  template <typename Tg,                         // Type to get
-	    typename Tk,                         // TensKind of the ref, deduced from argument
-	    typename=ConstrainIsTensKind<Tk>,   // Force ref to be a TensKind
-	    typename=ConstrainIsTensComp<Tg>>   // Force binding type to be a TensComp
-  auto bind(Tk&& ref,                     ///< Quantity to bind to
+  /// Returns a plain binder getting from an unbind expression. Checks
+  /// demanded to Binder
+  template <typename Tg,                        // Type to get
+	    typename Tb>                        // Type to bind, deduced from argument
+  auto bind(Tb&& ref,                     ///< Quantity to bind to
 	    const int id)                 ///< Entry of the component to bind
   {
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
-    return Binder<Tg,Tk>(std::forward<Tk>(ref),id);
+    return Binder<Tg,Tb>(std::forward<Tb>(ref),id);
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -79,8 +78,7 @@ namespace SUNphi
   /// inner and outer types and components if needed.
   template <typename Tg,                        // Type to get
 	    typename InNested,                  // Type referred from the nested bounder
-	    typename InNestedTg,                // Type got by the nested bounder
-	    typename=ConstrainIsTensComp<Tg>>  // Force binding type to be a TensComp
+	    typename InNestedTg>                // Type got by the nested bounder
   auto bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
 	    const int id)                           ///< Component to get
   {
@@ -117,8 +115,8 @@ namespace SUNphi
   /// Defines a Binder named NAME for type TG
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
-  template <class T>							\
-  auto NAME(T&& ref,     /*!< Quantity to be bound */			\
+  template <typename T>	  /* Type of the bound expression */		\
+  auto NAME(T&& ref,      /*!< Quantity to be bound */			\
 	    const int id) /*!< Compinent to bind    */			\
   {									\
     return bind<TG>(std::forward<T>(ref),id);				\
@@ -127,9 +125,9 @@ namespace SUNphi
   /// Defines a Binder named NAME for type RwTG or CnTG
 #define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
   /*! Returns a binder to the only Rw TG or Cn TG type available */	\
-  template <class T>  /* Type of the bound expression */		\
-  auto NAME(T&& ref,      /*!< Quantity to be bound */			\
-	    const int id) /*!< Component to bind    */			\
+  template <typename T>   /* Type of the bound expression */		\
+  auto NAME(T&& ref,      /*!< Quantity to be bound       */		\
+	    const int id) /*!< Component to bind          */		\
   {									\
     /* TensKind of binding expression */				\
     using Tk=typename RemoveReference<T>::Tk;				\
