@@ -62,7 +62,7 @@ namespace SUNphi
   /// Set the TEx as not-assignable
 #define NOT_ASSIGNABLE						\
   IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx cannot be assigned */,false)
-
+  
   /// Set the assignability according to the reference
 #define ASSIGNABLE_ACCORDING_TO_REF					\
   IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned according to the reference */,RemoveReference<decltype(ref)>::isAssignable)

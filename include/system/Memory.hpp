@@ -5,7 +5,7 @@
 ///
 /// \brief Header file for the allocation and deallocation of memory
 
-// TODO: implement memory pool and cacher
+/// \todo: implement memory pool and cacher
 
 #include <cstdlib>
 
@@ -13,9 +13,6 @@
 
 namespace SUNphi
 {
-  /// Basic alignement for AVX-512, to be generalized
-  static constexpr size_t ALIGNMENT=64;
-  
   /// Get aligned memory
   ///
   /// Call the system routine which allocate memory
