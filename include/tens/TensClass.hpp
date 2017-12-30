@@ -30,6 +30,10 @@ namespace SUNphi
     /// Tensor kind of the tensor
     using Tk=TK;
     
+    // Attributes
+    ASSIGNABLE;
+    STORING;
+    
   private:
     
     /// Internal storage
@@ -68,9 +72,6 @@ namespace SUNphi
     {
       return *v;
     }
-    
-    /// Keep track that the class is storing data
-    static constexpr bool isStoring=true;
     
     /// Evaluate the tensor (returns the index of the internal data)
     template <class...Comps,                              // Component types

@@ -30,11 +30,15 @@ namespace SUNphi
     /// Reference to the object from which to get
     Reference<B> ref;
     
+    // Attributes
+    NOT_STORING;
+    ASSIGNABLE_ACCORDING_TO_REF;
+    
     /// Index to get
     const int id;
     
-    /// Returns whether this TEx is storing
-    static constexpr bool isStoring=false;
+    /// Returns whether this TEx can be assigned:
+    static constexpr bool canBeAssigned=false;
     
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
@@ -59,6 +63,9 @@ namespace SUNphi
     }
   };
   
+  // Check that a test Binder is a UnaryTEx
+  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
+
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
@@ -154,9 +161,6 @@ namespace SUNphi
     									\
     return bind<Ret>(std::forward<T>(ref),id);				\
   }
-  
-  // Check that a test Binder is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
 }
 
 #endif

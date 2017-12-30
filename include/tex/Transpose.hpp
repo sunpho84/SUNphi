@@ -22,14 +22,15 @@ namespace SUNphi
     
   public:
     
-    /// Returns whether this TEx is storing
-    static constexpr bool isStoring=false;
+    /// Reference of the type to transpose
+    Reference<T> ref;
+    
+    // Attributes
+    NOT_STORING;
+    ASSIGNABLE_ACCORDING_TO_REF;
     
     /// TensorKind of the bound expression
     using Tk=typename TK::Twinned;
-    
-    /// Reference of the type to transpose
-    Reference<T> ref;
     
     // Implement the evaluator
     PROVIDE_STRAIGHT_EVALUATOR(Transposer);

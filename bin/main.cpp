@@ -27,7 +27,7 @@ int main()
       for(int ri=0;ri<NCOMPL;ri++)
       {
   	//double &ref=eval(color(spin(cicc,id),ic));
-  	double &ref=eval(reim(spin(site(col(cicc,ic),0),id),ri));
+  	double &ref=eval(reim(spin(site(col(transpose(transpose(cicc)),ic),0),id),ri));
   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
   	ref=3.141592352352;
       }
