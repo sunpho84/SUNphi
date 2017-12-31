@@ -5,6 +5,8 @@
 ///
 /// \brief Header file to suppress "Unused Variable" warning
 
+#include <metaprogramming/TypeTraits.hpp>
+
 /// Dummy function to be called to suppress "Unused Variable" warning
 ///
 /// Example:
