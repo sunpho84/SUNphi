@@ -4,12 +4,12 @@
 /// \file Memory.hpp
 ///
 /// \brief Header file for the allocation and deallocation of memory
-
 /// \todo: implement memory pool and cacher
 
 #include <cstdlib>
 
 #include <system/Debug.hpp>
+#include <system/SIMD.hpp>
 
 namespace SUNphi
 {

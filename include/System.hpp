@@ -7,5 +7,6 @@
 
 #include <system/Debug.hpp>
 #include <system/Memory.hpp>
+#include <system/SIMD.hpp>
 
 #endif

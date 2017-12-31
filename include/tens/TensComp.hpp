@@ -7,6 +7,7 @@
 
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <system/SIMD.hpp>
 #include <utility/String.hpp>
 #include <utility/Unused.hpp>
 
@@ -39,6 +40,11 @@ namespace SUNphi
     
     /// Size of the tensor component (max index value)
     static constexpr int size=Size;
+    
+    /// Check if compatible with vectorization
+    template <typename F>                      // Fundamental type
+    static constexpr bool isVectorizable=canBeSizeOfSIMDVector<F>(Size);
+    
   };
   
   /// Defines a \c TensComp, with name TYPE and max N
