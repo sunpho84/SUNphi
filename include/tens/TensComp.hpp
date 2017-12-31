@@ -43,7 +43,7 @@ namespace SUNphi
     
     /// Check if compatible with vectorization
     template <typename F>                      // Fundamental type
-    static constexpr bool isVectorizable=canBeSizeOfSIMDVector<F>(Size);
+    static constexpr bool isVectorizable=canBeFactorOfSIMDVector<F>(Size);
     
   };
   

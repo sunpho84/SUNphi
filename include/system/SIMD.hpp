@@ -23,7 +23,14 @@ namespace SUNphi
   template <typename F>                                 //   Fundamental type
   constexpr bool canBeSizeOfSIMDVector(const int size)  ///< Size to be checked
   {
-    return size>0 and size%NSIMD_COMPONENTS<F> ==0;
+    return size>=0 and size%NSIMD_COMPONENTS<F> ==0;
+  }
+  
+  /// Check if a certain number can be a factor of the size of a SIMD vector
+  template <typename F>                                   //   Fundamental type
+  constexpr bool canBeFactorOfSIMDVector(const int size)  ///< Size to be checked
+  {
+    return size>=0 and NSIMD_COMPONENTS<F>%size==0;
   }
 }
 

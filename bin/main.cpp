@@ -12,6 +12,8 @@ using MyTens=Tens<MyTk,double>;
 
 int main()
 {
+  int a=MyTk::firstVectorizingComp<double>;
+  cout<<a<<endl;
   
   int vol=10;
   MyTens cicc(vol);

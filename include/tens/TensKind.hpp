@@ -13,6 +13,8 @@
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
 
+ #include <iostream>
+
 namespace SUNphi
 {
   /// Defines the BaseTensKind type traits
@@ -69,6 +71,37 @@ namespace SUNphi
     /// Get all types but one
     template <class Tab>
     using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
+    
+    /// Return the position of the first component needed to vectorize
+    ///
+    /// If no factorization is possible, returns -1
+    ///
+    /// \todo Add a lenghty description, this is a complicated piece
+    /// of code! The scope is not immediate to get
+    ///
+    /// \todo Add the possibility that the accumaleted size is more
+    /// than needed, so we can split the outermost component to allow
+    /// for other kind of optimization
+    ///
+    /// \todo Include a variation of the vectorization according to
+    /// the kind of SIMD vector
+    template <typename F,                                                              // Fundamental type
+	      int Pos=nTypes-1,                                                        // Component searched at the moment
+	      int InVectorizingSize=1,                                                 // Size of the currently scanned vectorizable components
+	      bool IsLastCheckable=(Pos==0),                                           // Determine if this is the last checkable
+	      int NextPos=(IsLastCheckable?Pos:(Pos-1)),                               // Determine the position of next component
+	      typename G=RemoveReference<decltype(get<Pos>(types{}))>,                 // Get the type of the component under exam
+	      int Size=G::size,                                                        // Size of current component
+	      int OutVectorizingSize=InVectorizingSize*Size,                           // Returned vectorized size, including current component
+	      bool EnoughToVectorize=canBeSizeOfSIMDVector<F>(OutVectorizingSize),     // Check if the accumulated size is enough to vectorize
+	      bool CompIsVectorizing=G::template isVectorizable<F>,                    // Check if the current componente is vectorizable
+	      bool FallBack=(not CompIsVectorizing) or IsLastCheckable>                // Check if we need to fallback
+    constexpr static int firstVectorizingComp=
+      FallBack?                                              // If we need to fallback,
+      -1:                                                    // returns -1, otherwise
+      (EnoughToVectorize?                                    // if we have accumulated enough components,
+       Pos:                                                  // we return current position, otherwise
+       firstVectorizingComp<F,NextPos,OutVectorizingSize>);  // we go to previous component
     
     // /// Get all types after one
     // template <class Tab>
