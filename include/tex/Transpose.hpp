@@ -48,7 +48,7 @@ namespace SUNphi
   ///
   /// Plain transposer getting a non-transposed expression
   template <typename T>                   // Type to transpose
-  auto transpose(T&& ref)                 ///< Quantity to transpose
+  decltype(auto) transpose(T&& ref)       ///< Quantity to transpose
   {
     //cout<<"Constructing a transposer for type "<<T::name()<<endl;
     return Transposer<T>(std::forward<T>(ref));
@@ -57,8 +57,8 @@ namespace SUNphi
   /// Transpose expression \c ref
   ///
   /// Transpose a transposed expression, returning a non-transposed expression
-  template <typename T>                   // Type transposed by the nested transposer
-  auto transpose(Transposer<T>&& ref)     ///< Quantity to un-transpose
+  template <typename T>                             // Type transposed by the nested transposer
+  decltype(auto) transpose(Transposer<T>&& ref)     ///< Quantity to un-transpose
   {
     //cout<<"Constructing a transposer for type "<<T::name()<<endl;
     return std::forward<T>(ref.ref);
