@@ -45,14 +45,14 @@ namespace SUNphi
     
     /// Evaluator
     template <class...Args>
-    friend decltype(auto) eval(Binder& binder,const Args&...args)
+    friend DECLAUTO eval(Binder& binder,const Args&...args)
     {
       return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
     
     /// Evaluator returning const
     template <class...Args>
-    friend decltype(auto) eval(const Binder& binder,const Args&...args)
+    friend DECLAUTO eval(const Binder& binder,const Args&...args)
     {
       return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
     }
@@ -72,8 +72,8 @@ namespace SUNphi
   /// demanded to Binder
   template <typename Tg,                        // Type to get
 	    typename Tb>                        // Type to bind, deduced from argument
-  decltype(auto) bind(Tb&& ref,                     ///< Quantity to bind to
-		      const int id)                 ///< Entry of the component to bind
+  DECLAUTO bind(Tb&& ref,                     ///< Quantity to bind to
+		      const int id)           ///< Entry of the component to bind
   {
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
     return Binder<Tg,Tb>(std::forward<Tb>(ref),id);
@@ -86,8 +86,8 @@ namespace SUNphi
   template <typename Tg,                        // Type to get
 	    typename InNested,                  // Type referred from the nested bounder
 	    typename InNestedTg>                // Type got by the nested bounder
-  decltype(auto) bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
-		      const int id)                           ///< Component to get
+  DECLAUTO bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
+		      const int id)                     ///< Component to get
   {
     // Tensor Kind of input nested binder
     using InNestedTk=typename RemoveReference<InNested>::Tk;
@@ -122,8 +122,8 @@ namespace SUNphi
   /// Defines a Binder named NAME for type TG
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
-  template <typename T>	            /* Type of the bound expression */	\
-  decltype(auto) NAME(T&& ref,      /*!< Quantity to be bound */	\
+  template <typename T>	      /* Type of the bound expression */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound */	\
 		      const int id) /*!< Compinent to bind    */	\
   {									\
     return bind<TG>(std::forward<T>(ref),id);				\
@@ -132,8 +132,8 @@ namespace SUNphi
   /// Defines a Binder named NAME for type RwTG or CnTG
 #define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
   /*! Returns a binder to the only Rw TG or Cn TG type available */	\
-  template <typename T>             /* Type of the bound expression */	\
-  decltype(auto) NAME(T&& ref,      /*!< Quantity to be bound       */	\
+  template <typename T>       /* Type of the bound expression */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound       */	\
 		      const int id) /*!< Component to bind          */	\
   {									\
     /* TensKind of binding expression */				\

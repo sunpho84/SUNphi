@@ -10,6 +10,9 @@
 
 namespace SUNphi
 {
+  /// Short name for decltype(auto)
+#define DECLAUTO decltype(auto)
+  
   /// A bool constant type holding value "true"
   ///
   /// Useful to create SFINAE tests
