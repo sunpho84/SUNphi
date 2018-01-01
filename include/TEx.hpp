@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the inclusion of all Template EXpressions
 
+#include <tex/Assign.hpp>
 #include <tex/BaseTEx.hpp>
 #include <tex/Bind.hpp>
 #include <tex/Reference.hpp>

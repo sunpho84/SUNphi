@@ -70,6 +70,10 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Defines the check for a TEx
+  ///
+  /// \todo add costRead
+  /// \todo add costEval
+  /// \todo add isAliasing
 #define STATIC_ASSERT_IS_TEX(...)			\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__);		\
