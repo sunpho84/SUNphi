@@ -47,14 +47,14 @@ namespace SUNphi
     template <class...Args>
     friend DECLAUTO eval(Binder& binder,const Args&...args)
     {
-      return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
+      return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
     
     /// Evaluator returning const
     template <class...Args>
     friend DECLAUTO eval(const Binder& binder,const Args&...args)
     {
-      return eval(binder.ref,std::forward<const Args>(args)...,binder.id);
+      return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
     
     /// Constructor taking a universal reference
@@ -76,7 +76,7 @@ namespace SUNphi
 		      const int id)           ///< Entry of the component to bind
   {
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
-    return Binder<Tg,Tb>(std::forward<Tb>(ref),id);
+    return Binder<Tg,Tb>(forw<Tb>(ref),id);
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -110,7 +110,7 @@ namespace SUNphi
     // Out component
     const int outId=(swap?nestedId:id);
     // Output Nested binder
-    auto outNestedBinder=bind<OutNestedTg>(std::forward<InNested>(ref.ref),outNestedId);
+    auto outNestedBinder=bind<OutNestedTg>(forw<InNested>(ref.ref),outNestedId);
     // Type of the output nested binder
     using OutNestedBinder=decltype(outNestedBinder);
     
@@ -126,7 +126,7 @@ namespace SUNphi
   DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound */	\
 		      const int id) /*!< Compinent to bind    */	\
   {									\
-    return bind<TG>(std::forward<T>(ref),id);				\
+    return bind<TG>(forw<T>(ref),id);				\
   }
   
   /// Defines a Binder named NAME for type RwTG or CnTG
@@ -159,7 +159,7 @@ namespace SUNphi
     /* Identifies the type to return, on the basis of the check above */ \
     using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
     									\
-    return bind<Ret>(std::forward<T>(ref),id);				\
+    return bind<Ret>(forw<T>(ref),id);				\
   }
 }
 

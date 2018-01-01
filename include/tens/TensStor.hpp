@@ -46,7 +46,7 @@ namespace SUNphi
     friend CONST_TAG T& eval(CONST_TAG TensStor& ts, /*!< Reference to the TensStor */ \
 			     const Args&...args)     /*!< Components to extract */ \
     {									\
-      const int id=index<TK>(ts.dynSizes,std::forward<const Args>(args)...); \
+      const int id=index<TK>(ts.dynSizes,forw<const Args>(args)...); \
       /*printf("Index: %d\n",id);*/ /*debug*/				\
       									\
       return ts.v[id];							\

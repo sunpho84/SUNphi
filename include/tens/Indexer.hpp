@@ -59,7 +59,7 @@ namespace SUNphi
 	// Constrain the components to be in the same number of the type
 	static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
 	// Nested value
-	const int nested=Nested::index(std::forward<const std::array<int,NTotDyn>>(dynSizes),std::forward<const Tail>(tail)...);
+	const int nested=Nested::index(forw<const std::array<int,NTotDyn>>(dynSizes),forw<const Tail>(tail)...);
 	// Current component
 	const int thisComp=head;
 	//std::cout<<"Nested: "<<nested<<" , nested_head_size: "<<Nested::headSize<<" , thiscomp: "<<thisComp<<" , thissize: "<<headSize<<std::endl;

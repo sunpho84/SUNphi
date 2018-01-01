@@ -80,7 +80,7 @@ namespace SUNphi
     friend double& eval(Tens& t,const Comps&...comps) // Component values
     {
       //print(cout,"Components: ",comps...,"\n");
-      return eval(*t.v,std::forward<const Comps>(comps)...);
+      return eval(*t.v,forw<const Comps>(comps)...);
     }
   };
 }

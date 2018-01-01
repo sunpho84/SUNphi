@@ -51,7 +51,7 @@ namespace SUNphi
   DECLAUTO transpose(T&& ref)       ///< Quantity to transpose
   {
     //cout<<"Constructing a transposer for type "<<T::name()<<endl;
-    return Transposer<T>(std::forward<T>(ref));
+    return Transposer<T>(forw<T>(ref));
   }
   
   /// Transpose expression \c ref
@@ -61,7 +61,7 @@ namespace SUNphi
   DECLAUTO transpose(Transposer<T>&& ref)     ///< Quantity to un-transpose
   {
     //cout<<"Constructing a transposer for type "<<T::name()<<endl;
-    return std::forward<T>(ref.ref);
+    return forw<T>(ref.ref);
   }
   
 }

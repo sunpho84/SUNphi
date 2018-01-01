@@ -88,14 +88,14 @@ namespace SUNphi
   template <class...Args>						\
   friend decltype(auto) eval(T& EXP,const Args&...args)			\
   {									\
-    return eval(EXP.ref,std::forward<const Args>(args)...);		\
+    return eval(EXP.ref,forw<const Args>(args)...);		\
   }									\
   									\
   /*! Evaluator for type T returning const*/				\
   template <class...Args>						\
   friend decltype(auto) eval(const T& EXP,const Args&...args)		\
   {									\
-    return eval(EXP.ref,std::forward<const Args>(args)...);		\
+    return eval(EXP.ref,forw<const Args>(args)...);		\
   }									\
   SWALLOW_SEMICOLON
 }

@@ -80,6 +80,21 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
+  /// Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html
+  template <class T,
+	    class U,
+	    class=EnableIf<(std::is_lvalue_reference<T>::value ?
+			    std::is_lvalue_reference<U>::value :
+			    true) and
+			   std::is_convertible <RemoveReference<U>*,
+						RemoveReference<T>*>::value>>
+  constexpr T&& forw(U&& u)
+  {
+    return static_cast<T&&>(u);
+  }
+  
+  /////////////////////////////////////////////////////////////////////
+  
   /// Checks if two types are the same
   ///
   /// Default (false) case

@@ -265,7 +265,7 @@ namespace SUNphi
   constexpr std::tuple_element_t<I,T>&&
   get(T&& t)
   {
-    return std::get<I>(std::forward<T>(t));
+    return std::get<I>(forw<T>(t));
   }
   
   /// Gets the element of type T from the tuple.
@@ -276,7 +276,7 @@ namespace SUNphi
 	   class T>
   constexpr Tg&& get(T&& t)
   {
-    return std::get<Tg>(std::forward<T>(t));
+    return std::get<Tg>(forw<T>(t));
   }
   
   /////////////////////////////////////////////////////////////////
