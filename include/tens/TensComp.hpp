@@ -58,11 +58,11 @@ namespace SUNphi
     PROVIDE_NAME(#TYPE);						\
   }
   
-/// Define a \c TensComp named \c TYPE with maximal component \c N
-///
-/// Defines also a binder-instantiator named BINDER, a \c TensKind
-/// suffixing TYPE with Kind, and a constat holding the maximal value,
-/// named \c NCONST_NAME
+  /// Define a \c TensComp named \c TYPE with maximal component \c N
+  ///
+  /// Defines also a binder-instantiator named BINDER, a \c TensKind
+  /// suffixing TYPE with Kind, and a constat holding the maximal value,
+  /// named \c NCONST_NAME
 #define DEFINE_TENS_COMP(BINDER,TYPE,CONST_NAME,HMANY)			\
 									\
   /*! Maximal value for \c TensKind of type TYPE */			\
@@ -74,10 +74,10 @@ namespace SUNphi
   DEFINE_NAMED_BINDER(TYPE,BINDER)
   
   /// Define row and \c TensComp named \c Rw/CnTYPE with maximal component \c N
-///
-/// Defines also a common binder-instantiator named BINDER, a \c
-/// TensKind suffixing TYPE with Kind, and a constat holding the
-/// maximal value, named \c NCONST_NAME
+  ///
+  /// Defines also a common binder-instantiator named BINDER, a \c
+  /// TensKind suffixing TYPE with Kind, and a constat holding the
+  /// maximal value, named \c NCONST_NAME
 #define DEFINE_RW_CN_TENS_COMP(BINDER,TYPE,CONST_NAME,HMANY)		\
 									\
   /*! Number of components of TYPE type */				\

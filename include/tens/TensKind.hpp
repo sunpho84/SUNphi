@@ -74,17 +74,11 @@ namespace SUNphi
     
     /// Return the position of the first component needed to vectorize
     ///
-    /// If no factorization is possible, returns -1
+    /// Internal implementation, escaping when last checkable
+    /// component is reached
     ///
     /// \todo Add a lenghty description, this is a complicated piece
     /// of code! The scope is not immediate to get
-    ///
-    /// \todo Add the possibility that the accumaleted size is more
-    /// than needed, so we can split the outermost component to allow
-    /// for other kind of optimization
-    ///
-    /// \todo Include a variation of the vectorization according to
-    /// the kind of SIMD vector
     template <typename F,                                                              // Fundamental type
 	      int Pos=nTypes-1,                                                        // Component searched at the moment
 	      int InVectorizingSize=1,                                                 // Size of the currently scanned vectorizable components
@@ -96,12 +90,31 @@ namespace SUNphi
 	      bool EnoughToVectorize=canBeSizeOfSIMDVector<F>(OutVectorizingSize),     // Check if the accumulated size is enough to vectorize
 	      bool CompIsVectorizing=G::template isVectorizable<F>,                    // Check if the current componente is vectorizable
 	      bool FallBack=(not CompIsVectorizing) or IsLastCheckable>                // Check if we need to fallback
-    constexpr static int firstVectorizingComp=
-      FallBack?                                              // If we need to fallback,
-      -1:                                                    // returns -1, otherwise
-      (EnoughToVectorize?                                    // if we have accumulated enough components,
-       Pos:                                                  // we return current position, otherwise
-       firstVectorizingComp<F,NextPos,OutVectorizingSize>);  // we go to previous component
+    struct _firstVectorizingComp
+    {
+      constexpr static int value=
+	FallBack?                                              // If we need to fallback,
+	-1:                                                    // returns -1, otherwise
+	(EnoughToVectorize?                                    // if we have accumulated enough components,
+	 Pos:                                                  // we return current position, otherwise
+	 Conditional<IsLastCheckable,                          // if this is the last checkable component,
+	  std::integral_constant<int,-1>,                      // returns -1 otherwise
+ 	  _firstVectorizingComp<F,NextPos,OutVectorizingSize>  // we go to previous component.
+	 >::value);                                            // Value is obtained through a Conditional to avoid infinite recursion
+    };
+    
+    /// Return the position of the first component needed to vectorize
+    ///
+    /// If no factorization is possible, returns -1
+    ///
+    /// \todo Add the possibility that the accumulated size is more
+    /// than needed, so we can split the outermost component to allow
+    /// for other kind of optimization
+    ///
+    /// \todo Include a variation of the vectorization according to
+    /// the kind of SIMD vector
+    template <typename F>                 // Fundamental type
+    constexpr static int firstVectorizingComp=_firstVectorizingComp<F>::value; // Get the value of the internal implementation
     
     // /// Get all types after one
     // template <class Tab>

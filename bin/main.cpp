@@ -7,16 +7,36 @@ using namespace std;
 using namespace SUNphi;
 
 
-using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
+//using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
+using MyTk=TensKind<Col,Spin,Compl>;
 using MyTens=Tens<MyTk,double>;
+
+void test_transpose()
+{
+  using Su3Tens=Tens<TensKind<RwCol,CnCol>,double>;
+  
+  Su3Tens t;
+  
+  for(int rw_c=0;rw_c<NCOL;rw_c++)
+    for(int cn_c=0;cn_c<NCOL;cn_c++)
+      eval(rwCol(cnCol(transpose(t),cn_c),rw_c))=cn_c;
+  
+  for(int rw_c=0;rw_c<NCOL;rw_c++)
+    for(int cn_c=0;cn_c<NCOL;cn_c++)
+      cout<<cn_c<<" "<<eval(rwCol(cnCol(t,cn_c),rw_c))<<endl;
+}
 
 int main()
 {
   int a=MyTk::firstVectorizingComp<double>;
   cout<<a<<endl;
+  test_transpose();
   
-  int vol=10;
-  MyTens cicc(vol);
+  //int a=MyTk::firstVectorizingComp<double>;
+  //cout<<a<<endl;
+  
+ 
+  MyTens cicc;
   
   // auto &v=cicc.getStor();
   
@@ -29,12 +49,12 @@ int main()
       for(int ri=0;ri<NCOMPL;ri++)
       {
   	//double &ref=eval(color(spin(cicc,id),ic));
-  	double &ref=eval(reim(spin(site(col(transpose(transpose(cicc)),ic),0),id),ri));
+  	double &ref=eval(reim(spin(col(transpose(transpose(cicc)),ic),id),ri));
   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
   	ref=3.141592352352;
       }
   
-  auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  auto binder1=reim(spin(col(cicc,2),3),1);
   // //auto binder2=color(spin(cicc,2),1);
   
   // // eval(binder1)=8.0;
