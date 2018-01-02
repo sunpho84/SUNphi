@@ -41,6 +41,9 @@ namespace SUNphi
     /// Size of the tensor component (max index value)
     static constexpr int size=Size;
     
+    /// Report if the component has dynamic size
+    static constexpr bool isDynamic=(Size!=DYNAMIC);
+    
     /// Check if compatible with vectorization
     template <typename F>                      // Fundamental type
     static constexpr bool isVectorizable=canBeFactorOfSIMDVector<F>(Size);

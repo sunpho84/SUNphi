@@ -42,7 +42,7 @@ namespace SUNphi
   public:
     
     /// Sizes of the dynamical components, reference to the storage
-    std::array<int,Tk::nDynamic> &dynSizes;
+    DynSizes<Tk::nDynamic> &dynSizes;
     
     /// Construct the Tens on the basis of the dynamical sizes passed
     template <class...DynSizes>                    //   Dynamic size types
@@ -77,7 +77,8 @@ namespace SUNphi
     template <class...Comps,                              // Component types
 	      class=ConstrainAreIntegrals<Comps...>,      // Force the components to be integer-like
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> // Constrain the component to be in the same number of Tk
-    friend double& eval(Tens& t,const Comps&...comps) // Component values
+    friend double& eval(Tens& t,              ///< Tensor to evaluate
+			const Comps&...comps) ///< Component values
     {
       //print(cout,"Components: ",comps...,"\n");
       return eval(*t.v,forw<const Comps>(comps)...);

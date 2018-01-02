@@ -63,11 +63,7 @@ namespace SUNphi
 #undef DEFINE_EVAL
     
     /// Dynamic sizes 
-    std::array<int,TK::nDynamic> dynSizes;
-    
-    /// \todo the array must be replaced with a tuple, whose types
-    /// must be deduced when instatiating the struct, such that int or
-    /// long int or whatever is appropriately used!
+    DynSizes<TK::nDynamic> dynSizes;
     
     /// Constructor (test)
     template <class...DynSizes,                                  // Arguments (sizes)
