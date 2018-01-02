@@ -7,6 +7,7 @@
 
 #include <tex/Assign.hpp>
 #include <tex/BaseTEx.hpp>
+#include <tex/BinaryTEx.hpp>
 #include <tex/Bind.hpp>
 #include <tex/Reference.hpp>
 #include <tex/Transpose.hpp>
