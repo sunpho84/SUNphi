@@ -37,22 +37,21 @@ namespace SUNphi
     /// Index to get
     const int id;
     
-    /// Returns whether this TEx can be assigned:
-    static constexpr bool canBeAssigned=false;
-    
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
     /// Evaluator
     template <class...Args>
-    friend DECLAUTO eval(Binder& binder,const Args&...args)
+    friend DECLAUTO eval(Binder& binder,
+			 const Args&...args)
     {
       return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
     
     /// Evaluator returning const
     template <class...Args>
-    friend DECLAUTO eval(const Binder& binder,const Args&...args)
+    friend DECLAUTO eval(const Binder& binder,
+			 const Args&...args)
     {
       return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
