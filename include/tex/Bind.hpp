@@ -45,6 +45,7 @@ namespace SUNphi
     friend DECLAUTO eval(Binder& binder,
 			 const Args&...args)
     {
+      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);
       return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
     
@@ -53,6 +54,7 @@ namespace SUNphi
     friend DECLAUTO eval(const Binder& binder,
 			 const Args&...args)
     {
+      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);
       return eval(binder.ref,forw<const Args>(args)...,binder.id);
     }
     
@@ -122,10 +124,10 @@ namespace SUNphi
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
   template <typename T>	      /* Type of the bound expression */	\
-  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound */	\
-		      const int id) /*!< Compinent to bind    */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound */		\
+		const int id) /*!< Component to bind    */		\
   {									\
-    return bind<TG>(forw<T>(ref),id);				\
+    return bind<TG>(forw<T>(ref),id);					\
   }
   
   /// Defines a Binder named NAME for type RwTG or CnTG
@@ -133,7 +135,7 @@ namespace SUNphi
   /*! Returns a binder to the only Rw TG or Cn TG type available */	\
   template <typename T>       /* Type of the bound expression */	\
   DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound       */	\
-		      const int id) /*!< Component to bind          */	\
+		const int id) /*!< Component to bind          */	\
   {									\
     /* TensKind of binding expression */				\
     using Tk=typename RemoveReference<T>::Tk;				\
@@ -158,7 +160,7 @@ namespace SUNphi
     /* Identifies the type to return, on the basis of the check above */ \
     using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
     									\
-    return bind<Ret>(forw<T>(ref),id);				\
+    return bind<Ret>(forw<T>(ref),id);					\
   }
 }
 
