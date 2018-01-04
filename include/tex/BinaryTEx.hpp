@@ -26,7 +26,9 @@ namespace SUNphi
   
   /// Binary TEmplate Expression
   template <typename T>
-  struct BinaryTEx : public BaseBinaryTEx
+  struct BinaryTEx :
+    public TEx<T>,
+    public BaseBinaryTEx
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };

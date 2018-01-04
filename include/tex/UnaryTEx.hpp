@@ -22,7 +22,9 @@ namespace SUNphi
   
   /// Unary TEmplate Expression
   template <typename T>
-  struct UnaryTEx : public BaseUnaryTEx
+  struct UnaryTEx :
+    public TEx<T>,
+    public BaseUnaryTEx
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
