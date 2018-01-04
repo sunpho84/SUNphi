@@ -9,6 +9,7 @@
 #include <tex/BaseTEx.hpp>
 #include <tex/BinaryTEx.hpp>
 #include <tex/Bind.hpp>
+#include <tex/Conj.hpp>
 #include <tex/Reference.hpp>
 #include <tex/Transpose.hpp>
 #include <tex/UnaryTEx.hpp>
