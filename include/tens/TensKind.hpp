@@ -7,6 +7,10 @@
 ///
 /// The tensor kind defines the list of components that form a tensor
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <metaprogramming/IntSeq.hpp>
 #include <metaprogramming/Tuple.hpp>
 #include <metaprogramming/TypeTraits.hpp>

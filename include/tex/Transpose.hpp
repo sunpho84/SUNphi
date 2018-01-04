@@ -63,7 +63,6 @@ namespace SUNphi
     //cout<<"Constructing a transposer for type "<<T::name()<<endl;
     return forw<T>(ref.ref);
   }
-  
 }
 
 #endif

@@ -5,6 +5,10 @@
 ///
 /// \brief Implements a struct holding a sequence of integers.
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi

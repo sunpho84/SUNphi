@@ -5,6 +5,10 @@
 ///
 /// \brief Defines a class which binds a component of a TEx
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <tens/TensClass.hpp>
 #include <tex/Reference.hpp>
 #include <tex/UnaryTEx.hpp>

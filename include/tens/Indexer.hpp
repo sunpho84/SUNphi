@@ -5,6 +5,10 @@
 ///
 /// \brief Header file for the definition of an indexer
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <metaprogramming/TypeTraits.hpp>
 #include <system/Memory.hpp>
 #include <tens/TensKind.hpp>

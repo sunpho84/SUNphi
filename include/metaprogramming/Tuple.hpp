@@ -5,6 +5,10 @@
 ///
 /// \brief Define Tuple
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <tuple>
 
 #include <metaprogramming/IntSeq.hpp>
@@ -396,7 +400,7 @@ namespace SUNphi
     static constexpr int value=_PosOfType<T,Tp...>::value;
   };
   
-  /// Gets the position of a type in a tuple
+  /// Gets the position of a type in a tuple or list
   ///
   /// Wraps the actual implementation
   ///

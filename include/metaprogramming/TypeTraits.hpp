@@ -6,6 +6,10 @@
 /// \brief Defines convenient adaptation of the std type_traits
 /// library, and extensions useful for the expression handling.
 
+#ifdef HAVE_CONFIG_H
+ #include <config.hpp>
+#endif
+
 #include <type_traits>
 
 namespace SUNphi
