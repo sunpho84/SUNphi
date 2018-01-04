@@ -81,6 +81,17 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
 
 /// Defines a simple way to deal with nesting
+#define UNARY_TEX_GOES_INSIDE(EXT_FUN,UNARY_TEX,INT_FUN)		\
+  /*! Simplify EXT_FUN(UNARY_TEX<T> u) expression */			\
+  /*!                                             */			\
+  /*! Returns INT_FUN(EXT_FUN(u.ref))             */			\
+  template <typename T>                 /* Type of the nested UNARY_TEX */ \
+  DECLAUTO EXT_FUN(UNARY_TEX<T>&& ref)  /*!< Quantity to call           */ \
+  {									\
+    return INT_FUN(EXT_FUN(forw<T>(ref.ref)));				\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
 }
 
 #endif

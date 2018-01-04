@@ -7,6 +7,7 @@
 
 #include <physics/Compl.hpp>
 #include <tens/TensKind.hpp>
+#include <tex/Transpose.hpp>
 #include <tex/UnaryTEx.hpp>
 
 namespace SUNphi
