@@ -5,7 +5,7 @@
 ///
 /// \brief Macro to swallow a semicolon after a macro
 
-/*! Define an anonymous empty class to eat a dangling semicolon
+/*! Eat a dangling semicolon inside a class
   
   Example:
  
@@ -16,7 +16,7 @@
  {						 \
     return NAME;				 \
  }						 \
- SWALLOW_SEMICOLON
+ SWALLOW_SEMICOLON_AT_CLASS_SCOPE
  
  class test
  {
@@ -24,7 +24,26 @@
  };
  \endcode
 */
-#define SWALLOW_SEMICOLON			\
+#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE	\
   class {}
+
+/*! Eat a dangling semicolon at global scope
+  
+  Example:
+ 
+ \code
+ #define DEFINE_FOOER(TYPE,NAME)			 \
+ TYPE NAME()						 \
+ {							 \
+   doing something... 					 \
+ }							 \
+ SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+ 
+ DEFINE_FOER(int,ciccio);
+
+ \endcode
+*/
+#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE	\
+  void neverInstantiatedFunction()
 
 #endif

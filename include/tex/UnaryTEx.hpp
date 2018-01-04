@@ -46,7 +46,7 @@ namespace SUNphi
   {							\
     return ref.isAliasing(alias);			\
   }							\
-  SWALLOW_SEMICOLON
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Set aliasing according to a passed pointer (provided class member)
 #define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
@@ -59,7 +59,7 @@ namespace SUNphi
 									\
     return pAlias==p;							\
   }									\
-  SWALLOW_SEMICOLON
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
 }
 
 #endif

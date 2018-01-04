@@ -51,7 +51,7 @@ namespace SUNphi
       									\
       return ts.v[id];							\
     }									\
-    SWALLOW_SEMICOLON
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
     // Defines the non-const evaluator
     DEFINE_EVAL();

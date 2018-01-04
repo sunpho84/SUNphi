@@ -105,7 +105,7 @@ namespace SUNphi
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
     return eval(EXP.ref,forw<const Args>(args)...);			\
   }									\
-  SWALLOW_SEMICOLON
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
 }
 
 #endif

@@ -23,6 +23,6 @@ const CLASS& operator~() const				\
   {							\
     return *static_cast<const CLASS*>(this);		\
   }							\
- SWALLOW_SEMICOLON
+ SWALLOW_SEMICOLON_AT_CLASS_SCOPE
 
 #endif
