@@ -60,6 +60,27 @@ namespace SUNphi
     return pAlias==p;							\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Implements a duplicated-call canceller
+  ///
+  /// Example
+  /// \code
+  /// Tens<TensKind<Compl>,double> cicc;
+  /// conj(conj(cicc)); // returns cicc
+  /// \endcode
+#define CANCEL_DUPLICATED_UNARY_TEX_CALL(CALLER,UNARY_TEX)		\
+  /*! Simplify CALLER(UNARY_TEX) expression */				\
+  /*!                                      */				\
+  /*! Returns the nested reference         */				\
+  template <typename T>                /* Type of the nested UNARY_TEX */ \
+  DECLAUTO CALLER(UNARY_TEX<T>&& ref)  /*!< Quantity to un-nest       */ \
+  {									\
+  /*cout<<"Simplifying a CALLER for type "<<T::name()<<endl;*/		\
+    return forw<T>(ref.ref);						\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+
+/// Defines a simple way to deal with nesting
 }
 
 #endif

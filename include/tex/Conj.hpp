@@ -77,15 +77,11 @@ namespace SUNphi
     return Conjer<T>(forw<T>(ref));
   }
   
-  /// Conjugate expression \c ref
-  ///
-  /// Conjugate a conjugated expression, returning a non-conjugated expression
-  template <typename T>              // Type conjugated by the nested conjer
-  DECLAUTO conj(Conjer<T>&& ref)     ///< Quantity to un-conjugate
-  {
-    //cout<<"Constructing a conjer for type "<<T::name()<<endl;
-    return forw<T>(ref.ref);
-  }
+  // Simplifies conj(conj)
+  CANCEL_DUPLICATED_UNARY_TEX_CALL(conj,Conjer);
+  
+  // Defines commutativity of Conj with other unary expressions
+  UNARY_TEX_GOES_INSIDE(conj,Transposer,transpose);
 }
 
 #endif

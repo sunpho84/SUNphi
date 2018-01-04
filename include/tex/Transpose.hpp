@@ -55,15 +55,7 @@ namespace SUNphi
     return Transposer<T>(forw<T>(ref));
   }
   
-  /// Transpose expression \c ref
-  ///
-  /// Transpose a transposed expression, returning a non-transposed expression
-  template <typename T>                       // Type transposed by the nested transposer
-  DECLAUTO transpose(Transposer<T>&& ref)     ///< Quantity to un-transpose
-  {
-    //cout<<"Constructing a transposer for type "<<T::name()<<endl;
-    return forw<T>(ref.ref);
-  }
+  CANCEL_DUPLICATED_UNARY_TEX_CALL(transpose,Transposer);
 }
 
 #endif
