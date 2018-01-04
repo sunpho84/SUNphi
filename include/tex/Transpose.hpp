@@ -28,6 +28,7 @@ namespace SUNphi
     // Attributes
     NOT_STORING;
     ASSIGNABLE_ACCORDING_TO_REF;
+    FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
     using Tk=typename TK::Twinned;

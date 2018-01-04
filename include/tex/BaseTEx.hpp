@@ -48,6 +48,11 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  // Defines the check for a member type "isAliasing"
+  DEFINE_HAS_MEMBER(isAliasing);
+  
+  /////////////////////////////////////////////////////////////////
+  
   // Defines the check for a member type "isAssignable"
   DEFINE_HAS_MEMBER(isAssignable);
   
@@ -73,7 +78,8 @@ namespace SUNphi
 #define STATIC_ASSERT_IS_TEX(...)			\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__);		\
-  STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__)
+  STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);	\
+  STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__)
   
   /// TEmplate Expression
   template <typename T>

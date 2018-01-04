@@ -8,7 +8,7 @@
 #include <metaprogramming/IntSeq.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
-#include <tex/BaseTEx.hpp>
+#include <tex/UnaryTEx.hpp>
 
 namespace SUNphi
 {
@@ -20,7 +20,7 @@ namespace SUNphi
   template <typename TK,   // List of tensor components
 	    typename Fund> // Fundamental type
   class Tens :
-    public TEx<Tens<TK,Fund>>,             // Inherit from TEx to qualify as a TEx
+    public UnaryTEx<Tens<TK,Fund>>,        // Inherit from UnaryTEx
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
     public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
   {
@@ -33,6 +33,7 @@ namespace SUNphi
     // Attributes
     ASSIGNABLE;
     STORING;
+    IS_ALIASING_ACCORDING_TO_POINTER(v);
     
   private:
     
@@ -84,6 +85,9 @@ namespace SUNphi
       return eval(*t.v,forw<const Comps>(comps)...);
     }
   };
+  
+  // Check that a test Tens is a UnaryTEx
+  STATIC_ASSERT_IS_TEX(Tens<TensKind<TensComp<double,1>>,double>);
 }
 
 #endif

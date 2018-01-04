@@ -27,9 +27,37 @@ namespace SUNphi
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
   
+  /////////////////////////////////////////////////////////////////
+  
   /// Set the assignability according to the reference
 #define ASSIGNABLE_ACCORDING_TO_REF					\
   IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned according to the reference */,RemoveReference<decltype(ref)>::isAssignable)
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Set aliasing according to the isAliasing of reference
+  /// \todo enforce cehck only with TensClass
+#define FORWARD_IS_ALIASING_TO_REF			\
+  /*! Forward aliasing check to the reference */	\
+  template <typename Tref>				\
+  bool isAliasing(const Tref& alias) const		\
+  {							\
+    return ref.isAliasing(alias);			\
+  }							\
+  SWALLOW_SEMICOLON
+  
+  /// Set aliasing according to a passed pointer (provided class member)
+#define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
+  /*! Check the aliasing with reference */				\
+  template <typename Tref>						\
+  bool isAliasing(const Tref& alias) const				\
+  {									\
+    const void* pAlias=static_cast<const void*>(&alias);		\
+    const void* p=static_cast<const void*>(_p);				\
+									\
+    return pAlias==p;							\
+  }									\
+  SWALLOW_SEMICOLON
 }
 
 #endif
