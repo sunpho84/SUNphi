@@ -132,10 +132,10 @@ namespace SUNphi
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
   template <typename T>	      /* Type of the bound expression */	\
-  DECLAUTO NAME(TEx<T>&& ref, /*!< Quantity to be bind  */		\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bind  */		\
 		const int id) /*!< Component to bind    */		\
   {									\
-    return bind<TG>(forw<T>(~ref),id);					\
+    return bind<TG>(forw<T>(ref),id);					\
   }
   
   /// Defines a Binder named NAME for type RwTG or CnTG
