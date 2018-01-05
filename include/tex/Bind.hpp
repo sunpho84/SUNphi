@@ -45,26 +45,30 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
-    /// Evaluator
-    template <class...Args>
-    friend DECLAUTO eval(Binder& binder,
-			 const Args&...args)
-    {
-      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);
-      return eval(binder.ref,forw<const Args>(args)...,binder.id);
-    }
+    /// Provides the evaluator with or without const attribute
+#define PROVIDE_CONST_OR_NON_CONST_EVALUER(QUALIFIER)			\
+    /*! QUALIFIER Evaluator */						\
+    template <class...Args>						\
+    friend DECLAUTO eval(QUALIFIER Binder& binder,  /*!< binder to eval    */ \
+			 const Args&...args)        /*!< components to get */ \
+    {									\
+      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);			\
+      return eval(binder.ref,forw<const Args>(args)...,binder.id);	\
+    }									\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
-    /// Evaluator returning const
-    template <class...Args>
-    friend DECLAUTO eval(const Binder& binder,
-			 const Args&...args)
-    {
-      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);
-      return eval(binder.ref,forw<const Args>(args)...,binder.id);
-    }
+    // Non constant evaluator
+    PROVIDE_CONST_OR_NON_CONST_EVALUER();
     
-    /// Constructor taking a universal reference
-    Binder(B&& ref,int id) : ref(ref),id(id)
+    // Constant evaluator
+    PROVIDE_CONST_OR_NON_CONST_EVALUER(const);
+    
+#undef PROVIDE_CONST_OR_NON_CONST_EVALUER
+    
+    /// Constructor taking a universal reference and the id
+    Binder(B&& ref, ///< Reference to bind
+	   int id)  ///< Component to get
+      : ref(ref),id(id)
     {
     }
   };
@@ -129,10 +133,10 @@ namespace SUNphi
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
   /*! Get a reference to the \c TG component \c id of \c ref */		\
   template <typename T>	      /* Type of the bound expression */	\
-  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound */		\
+  DECLAUTO NAME(TEx<T>&& ref, /*!< Quantity to be bind  */		\
 		const int id) /*!< Component to bind    */		\
   {									\
-    return bind<TG>(forw<T>(ref),id);					\
+    return bind<TG>(forw<T>(~ref),id);					\
   }
   
   /// Defines a Binder named NAME for type RwTG or CnTG
