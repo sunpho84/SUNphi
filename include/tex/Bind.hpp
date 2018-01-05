@@ -49,7 +49,9 @@ namespace SUNphi
     
     /// Provides the evaluator with or without const qualifier
 #define PROVIDE_CONST_OR_NON_CONST_EVALUATOR(QUALIFIER)			\
-    /*! QUALIFIER Internal Evaluator */					\
+    /*! QUALIFIER Internal Evaluator                              */	\
+    /*!                                                           */	\
+    /*! Insert the id at the correct position in the list of args */	\
     template <class...Args,						\
 	      int...Head,						\
 	      int...Tail>						\
@@ -64,7 +66,11 @@ namespace SUNphi
 		  get<Tail>(targs)...);					\
     }									\
     									\
-    /*! QUALIFIER Evaluator */						\
+    /*! QUALIFIER Evaluator                                          */	\
+    /*!                                                              */ \
+    /*! Pass to the internal implementation the integer sequence     */	\
+    /*! needed to deal properly with the insertion of the arg in the */	\
+    /*! correct position                                             */	\
     template <class...Args>						\
     friend DECLAUTO eval(QUALIFIER Binder& binder,  /*!< binder to eval    */ \
 			 const Args&...args)        /*!< components to get */ \
