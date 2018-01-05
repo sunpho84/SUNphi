@@ -54,6 +54,8 @@ void test_binding()
   
   static_assert(IsSame<decltype(spin(reim(cicc,0),1)),decltype(reim(spin(cicc,1),0))>,"Not the same");
   
+  eval(spin(wrap(reim(cicc,0)),1))=1.923424;
+  cout<<eval(reim(wrap(spin(cicc,1)),0))<<endl;
 }
 
 void test_isAliasing()
@@ -90,53 +92,54 @@ void test_isAliasing()
 //   printf("im: %lg",eval(reim(c2,1)));
 // }
 
-// void test_bind_complicated_expression()
-// {
-//   using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
-//   //using MyTk=TensKind<Col,Spin,Compl>;
-//   using MyTens=Tens<MyTk,double>;
+void test_bind_complicated_expression()
+{
+  using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
+  //using MyTk=TensKind<Col,Spin,Compl>;
+  using MyTens=Tens<MyTk,double>;
 
-//   //int a=MyTk::firstVectorizingComp<double>;
-//   //cout<<a<<endl;
+  //int a=MyTk::firstVectorizingComp<double>;
+  //cout<<a<<endl;
   
-//   int vol=10;
-//   MyTens cicc(vol);
+  int vol=10;
+  MyTens cicc(vol);
   
-//   // auto &v=cicc.getStor();
+  // auto &v=cicc.getStor();
   
-//   // index<MyTk>(v.dynSizes,0,0,0,0);
+  // index<MyTk>(v.dynSizes,0,0,0,0);
   
-//   //eval(cicc.getStor(),0,0,0,0);
+  //eval(cicc.getStor(),0,0,0,0);
   
-//   for(int ic=0;ic<NCOL;ic++)
-//     for(int id=0;id<NSPIN;id++)
-//       for(int ri=0;ri<NCOMPL;ri++)
-//       {
-//   	//double &ref=eval(color(spin(cicc,id),ic));
-//   	double &ref=eval(site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0));
-//   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
-//   	ref=3.141592352352;
-//       }
+  for(int ic=0;ic<NCOL;ic++)
+    for(int id=0;id<NSPIN;id++)
+      for(int ri=0;ri<NCOMPL;ri++)
+      {
+  	//double &ref=eval(color(spin(cicc,id),ic));
+  	double &ref=eval(site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0));
+  	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
+  	ref=3.141592352352;
+      }
   
-//   auto binder1=site(reim(spin(col(cicc,2),3),1),0);
-//   // //auto binder2=color(spin(cicc,2),1);
+  auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  // //auto binder2=color(spin(cicc,2),1);
   
-//   // // eval(binder1)=8.0;
-//   // printf("%d\n",cicc.getStor().nel);
-//   printf("ANNA %lg\n",eval(binder1));
-//   // cout<<Spacetime::name()<<endl;
-//   // cout<<Col::name()<<endl;
+  // // eval(binder1)=8.0;
+  // printf("%d\n",cicc.getStor().nel);
+  printf("ANNA %lg\n",eval(binder1));
+  // cout<<Spacetime::name()<<endl;
+  // cout<<Col::name()<<endl;
 
 
-// }
+}
 
 int main()
 {
   //test_first_vectorizer();
   //test_transpose();
   //test_conj();
-  test_isAliasing();
-  //test_bind_complicated_expression();
+  //test_isAliasing();
+  test_binding();
+  test_bind_complicated_expression();
   
   return 0;
 }
