@@ -14,5 +14,6 @@
 #include <tex/Reference.hpp>
 #include <tex/Transpose.hpp>
 #include <tex/UnaryTEx.hpp>
+#include <tex/Wrap.hpp>
 
 #endif

@@ -29,13 +29,23 @@ using namespace SUNphi;
 // }
 
 #define STATIC_ASSERT_DUPLICATED_CALL_REMOVER(FUN,...)			\
-  static_assert(std::is_same<__VA_ARGS__,RemoveReference<decltype(FUN(FUN(__VA_ARGS__{})))>>::value,"Not same")
+  static_assert(IsSame<							\
+		__VA_ARGS__,						\
+		RemoveReference<decltype(FUN(FUN(__VA_ARGS__{})))>	\
+		>,"Not same")
+
+#define STATIC_ASSERT_DUPLICATED_CALL_ABSORBER(FUN,...)			\
+  static_assert(IsSame<							\
+		RemoveReference<decltype(FUN(__VA_ARGS__{}))>,		\
+		RemoveReference<decltype(FUN(FUN(__VA_ARGS__{})))>	\
+		>,"Not same")
 
 void test_duplicated_call_remover()
 {
   STATIC_ASSERT_DUPLICATED_CALL_REMOVER(conj,Tens<TensKind<Compl>,double>);
   STATIC_ASSERT_DUPLICATED_CALL_REMOVER(transpose,Tens<TensKind<RwCol,CnCol>,double>);
   STATIC_ASSERT_DUPLICATED_CALL_REMOVER(adj,Tens<TensKind<Compl>,double>);
+  STATIC_ASSERT_DUPLICATED_CALL_ABSORBER(wrap,Tens<TensKind<Compl>,double>);
 }
 
 void test_isAliasing()
@@ -44,6 +54,13 @@ void test_isAliasing()
   
   ComplTens t,u;
   
+  //transpose_bis(t);
+  
+  auto a=wrap(Tens<TensKind<Compl>,double>{});
+  auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
+  
+  cout<< IsSame<RemoveReference<decltype(a)>,RemoveReference<decltype(b)>> <<endl;
+  cout<<IsSame<decltype(a),decltype(b)><<endl;
   cout<<"t.isAliasing(t): "<<t.isAliasing(t.getStor())<<endl;
   cout<<"t.isAliasing(u): "<<t.isAliasing(u.getStor())<<endl;
   cout<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor())<<endl;
