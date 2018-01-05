@@ -44,7 +44,7 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
-    /// Provides the evaluator with or without const attribute
+    /// Provides the evaluator with or without const qualifier
 #define PROVIDE_CONST_OR_NON_CONST_EVALUATOR(QUALIFIER)			\
     /*! QUALIFIER Evaluator */						\
     template <class...Args>						\
@@ -56,10 +56,7 @@ namespace SUNphi
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
-    // Non constant evaluator
     PROVIDE_CONST_OR_NON_CONST_EVALUATOR();
-    
-    // Constant evaluator
     PROVIDE_CONST_OR_NON_CONST_EVALUATOR(const);
     
 #undef PROVIDE_CONST_OR_NON_CONST_EVALUATOR
@@ -81,8 +78,8 @@ namespace SUNphi
   /// demanded to Binder
   template <typename Tg,                        // Type to get
 	    typename Tb>                        // Type to bind, deduced from argument
-  DECLAUTO bind(Tb&& ref,                     ///< Quantity to bind to
-		      const int id)           ///< Entry of the component to bind
+  DECLAUTO bind(Tb&& ref,               ///< Quantity to bind to
+		const int id)           ///< Entry of the component to bind
   {
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
     return Binder<Tg,Tb>(forw<Tb>(ref),id);
@@ -92,6 +89,20 @@ namespace SUNphi
   ///
   /// Nested binder getting an already bound expression, swapping the
   /// inner and outer types and components if needed.
+  ///
+  /// \code
+  /// Tens<TensKind<Compl,RwSpin>,double> cicc;
+  /// spin(reim(cicc,0),1);
+  /// reim(spin(cicc,1),0);
+  /// \endcode
+  ///
+  /// This might be not enough to ensure proper evaluation if the
+  /// nesting occurs through a wrapper, as in the following example
+  ///
+  /// \code
+  /// spin(wrap(reim(cicc,0)),1);
+  /// reim(wrap(spin(cicc,1)),0);
+  /// \endcode
   template <typename Tg,                        // Type to get
 	    typename InNested,                  // Type referred from the nested bounder
 	    typename InNestedTg>                // Type got by the nested bounder

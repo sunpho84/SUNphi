@@ -48,6 +48,14 @@ void test_duplicated_call_remover()
   STATIC_ASSERT_DUPLICATED_CALL_ABSORBER(wrap,Tens<TensKind<Compl>,double>);
 }
 
+void test_binding()
+{
+  Tens<TensKind<Compl,RwSpin>,double> cicc;
+  
+  static_assert(IsSame<decltype(spin(reim(cicc,0),1)),decltype(reim(spin(cicc,1),0))>,"Not the same");
+  
+}
+
 void test_isAliasing()
 {
   using ComplTens=Tens<TensKind<Compl>,double>;
