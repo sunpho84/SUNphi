@@ -43,7 +43,8 @@
 
  \endcode
 */
-#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE	\
+#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE			\
+  /*! Forward definition of a never instantiated expression */	\
   void neverInstantiatedFunction()
 
 #endif

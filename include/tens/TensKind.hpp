@@ -17,8 +17,6 @@
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
 
- #include <iostream>
-
 namespace SUNphi
 {
   /// Defines the BaseTensKind type traits
@@ -96,6 +94,7 @@ namespace SUNphi
 	      bool FallBack=(not CompIsVectorizing) or IsLastCheckable>                // Check if we need to fallback
     struct _firstVectorizingComp
     {
+      ///Provides the result of the calculation
       constexpr static int value=
 	FallBack?                                              // If we need to fallback,
 	-1:                                                    // returns -1, otherwise
