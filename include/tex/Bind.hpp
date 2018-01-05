@@ -29,6 +29,9 @@ namespace SUNphi
     /// Nested type Tensor Kind
     using NestedTk=TK;
     
+    // Position inside the reference of the type got by the bounder
+    static constexpr int pos=posOfType<TG,typename NestedTk::types>;
+    
   public:
     
     PROVIDE_UNARY_TEX_REF(B);
@@ -46,16 +49,37 @@ namespace SUNphi
     
     /// Provides the evaluator with or without const qualifier
 #define PROVIDE_CONST_OR_NON_CONST_EVALUATOR(QUALIFIER)			\
+    /*! QUALIFIER Internal Evaluator */					\
+    template <class...Args,						\
+	      int...Head,						\
+	      int...Tail>						\
+    friend DECLAUTO _eval(QUALIFIER Binder& binder,      /*!< binder to eval                           */ \
+			  IntSeq<Head...>,               /*!< list of position of components before id */ \
+			  IntSeq<Tail...>,               /*!< list of position of components after id  */ \
+			  const Tuple<Args...>& targs)   /*!< components to get                        */ \
+    {									\
+      return eval(binder.ref,						\
+		  get<Head>(targs)...,					\
+		  binder.id,						\
+		  get<Tail>(targs)...);					\
+    }									\
+    									\
     /*! QUALIFIER Evaluator */						\
     template <class...Args>						\
     friend DECLAUTO eval(QUALIFIER Binder& binder,  /*!< binder to eval    */ \
 			 const Args&...args)        /*!< components to get */ \
     {									\
       STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);			\
-      return eval(binder.ref,forw<const Args>(args)...,binder.id);	\
+									\
+      using Head=IntsUpTo<pos>;						\
+      using Tail=typename IntsUpTo<TK::nTypes-1-pos>::template Add<pos>; \
+									\
+      return _eval(binder,						\
+		   Head{},						\
+		   Tail{},						\
+		   std::forward_as_tuple(args...));			\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-    
     PROVIDE_CONST_OR_NON_CONST_EVALUATOR();
     PROVIDE_CONST_OR_NON_CONST_EVALUATOR(const);
     
