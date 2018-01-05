@@ -22,8 +22,7 @@ namespace SUNphi
     
   public:
     
-    /// Reference of the type to transpose
-    Reference<T> ref;
+    PROVIDE_UNARY_TEX_REF(T);
     
     // Attributes
     NOT_STORING;

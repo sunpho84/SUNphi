@@ -22,8 +22,7 @@ namespace SUNphi
   {
   public:
     
-  /// Reference to the object to wrap
-    Reference<W> ref;
+    PROVIDE_UNARY_TEX_REF(W);
     
     // Attributes
     NOT_STORING;

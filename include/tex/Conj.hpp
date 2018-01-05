@@ -28,8 +28,7 @@ namespace SUNphi
     
   public:
     
-  /// Reference to the object to conjugate
-    Reference<C> ref;
+    PROVIDE_UNARY_TEX_REF(C);
     
     // Attributes
     NOT_STORING;
@@ -39,10 +38,7 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=TK;
     
-    /// Constructor taking a universal reference
-    Conjer(C&& ref) : ref(ref)
-    {
-    }
+    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer,C);
     
     /// Evaluator
     template <class...Args>
@@ -61,8 +57,6 @@ namespace SUNphi
       
       return sign*val;
     }
-    
-    
   };
   
   // Check that a test Conjer is a UnaryTEx

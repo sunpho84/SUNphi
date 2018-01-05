@@ -29,6 +29,11 @@ namespace SUNphi
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
   
+  /// Provide the reference to the object
+#define PROVIDE_UNARY_TEX_REF(REF_TYPE)		\
+  /*! Reference to the object */		\
+  Reference<REF_TYPE> ref
+  
   /////////////////////////////////////////////////////////////////
   
   /// Set the assignability according to the reference

@@ -31,8 +31,7 @@ namespace SUNphi
     
   public:
     
-    /// Reference to the object from which to get
-    Reference<B> ref;
+    PROVIDE_UNARY_TEX_REF(B);
     
     // Attributes
     NOT_STORING;
