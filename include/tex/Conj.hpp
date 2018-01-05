@@ -68,15 +68,8 @@ namespace SUNphi
   // Check that a test Conjer is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Conjer<Tens<TensKind<Compl>,double>>);
   
-  /// Conjugate expression \c ref
-  ///
-  /// Plain conjer getting a non-conjugated expression
-  template <typename T>        // Type to conjugate
-  DECLAUTO conj(T&& ref)       ///< Quantity to conjugate
-  {
-    //cout<<"Constructing a conjer for type "<<T::name()<<endl;
-    return Conjer<T>(forw<T>(ref));
-  }
+  // Build Conjer from conj
+  SIMPLE_UNARY_TEX_BUILDER(conj,Conjer);
   
   // Simplifies conj(conj)
   CANCEL_DUPLICATED_UNARY_TEX_CALL(conj,Conjer);

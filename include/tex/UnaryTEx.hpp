@@ -61,6 +61,18 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
+  /// Create a simple builder with a name and a UNARY_TEX returned type
+#define SIMPLE_UNARY_TEX_BUILDER(BUILDER,UNARY_TEX)			\
+  /*! Simple UNARY_TEX builder called BUILDER */			\
+  /*!                                         */			\
+  /*! Plain UNARY_TEX getting a plain TEx     */			\
+  template <typename T>              /* Type of the TEx to get */	\
+  DECLAUTO BUILDER(T&& ref)          /*!< Quantity to act upon */	\
+  {									\
+    /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
+    return UNARY_TEX<T>(forw<T>(ref));					\
+  }
+  
   /// Implements a duplicated-call canceller
   ///
   /// Example
@@ -79,10 +91,10 @@ namespace SUNphi
     return forw<T>(ref.ref);						\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
-
+  
 /// Defines a simple way to deal with nesting
 #define UNARY_TEX_GOES_INSIDE(EXT_FUN,UNARY_TEX,INT_FUN)		\
-  /*! Simplify EXT_FUN(UNARY_TEX<T> u) expression */			\
+  /*! Simplify EXT_FUN(UNARY_TEX\<T> u) expression */			\
   /*!                                             */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))             */			\
   template <typename T>                 /* Type of the nested UNARY_TEX */ \
