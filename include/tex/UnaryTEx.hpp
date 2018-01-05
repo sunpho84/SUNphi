@@ -37,6 +37,17 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Defines a simple creator taking a reference
+  ///
+  /// The type is needed because we have chosen dedicated name for
+  /// each UnaryTEx
+#define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX,REF_TYPE)	\
+  /*! Constructor taking a universal reference */		\
+  UNARY_TEX(REF_TYPE&& ref) : ref(ref)				\
+  {								\
+  }								\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
   /// Set aliasing according to the isAliasing of reference
   /// \todo enforce cehck only with TensClass
 #define FORWARD_IS_ALIASING_TO_REF			\
@@ -73,6 +84,27 @@ namespace SUNphi
     return UNARY_TEX<T>(forw<T>(ref));					\
   }
   
+  
+  /// Provides the evaluator with or without const attribute
+#define PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,QUALIFIER)	\
+  /*! QUALIFIER Evaluator for type T */					\
+  template <class...Args>						\
+  friend decltype(auto) eval(QUALIFIER T& EXP,    /*!< Expression to eval */ \
+			     const Args&...args)  /*!< Parameters to pass */ \
+  {									\
+    STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
+    return eval(EXP.ref,forw<QUALIFIER Args>(args)...);			\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Provides a simple evaluator (const and non-const)
+  ///
+  /// We need to specify the type because we chose dedicated type for
+  /// each TEx
+#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(T)				\
+  PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,/**/);		\
+  PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,const);		\
+  
   /// Implements a duplicated-call canceller
   ///
   /// Example
@@ -87,8 +119,25 @@ namespace SUNphi
   template <typename T>                /* Type of the nested UNARY_TEX */ \
   DECLAUTO CALLER(UNARY_TEX<T>&& ref)  /*!< Quantity to un-nest       */ \
   {									\
-  /*cout<<"Simplifying a CALLER for type "<<T::name()<<endl;*/		\
     return forw<T>(ref.ref);						\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
+  /// Implements a duplicated-call absorber
+  ///
+  /// Example
+  /// \code
+  /// Tens<TensKind<Compl>,double> cicc;
+  /// wrap(wrap(cicc)); // returns wrap(cicc)
+  /// \endcode
+#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,UNARY_TEX)		\
+  /*! Simplify CALLER(UNARY_TEX) expression */				\
+  /*!                                      */				\
+  /*! Returns the reference               */				\
+  template <typename T>                /* Type of the nested UNARY_TEX */ \
+  DECLAUTO CALLER(UNARY_TEX<T>&& ref)  /*!< Quantity to absorb         */ \
+  {									\
+    return forw<UNARY_TEX<T>>(ref);						\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
@@ -103,7 +152,6 @@ namespace SUNphi
     return INT_FUN(EXT_FUN(forw<T>(ref.ref)));				\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
-  
 }
 
 #endif

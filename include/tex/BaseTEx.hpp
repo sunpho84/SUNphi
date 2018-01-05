@@ -87,25 +87,6 @@ namespace SUNphi
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
-  
-  /// Provides a simple evaluator (const and non-const)
-#define PROVIDE_STRAIGHT_EVALUATOR(T)					\
-  /*! Evaluator for type T */						\
-  template <class...Args>						\
-  friend decltype(auto) eval(T& EXP,const Args&...args)			\
-  {									\
-    STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(EXP.ref,forw<const Args>(args)...);			\
-  }									\
-  									\
-  /*! Evaluator for type T returning const*/				\
-  template <class...Args>						\
-  friend decltype(auto) eval(const T& EXP,const Args&...args)		\
-  {									\
-    STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(EXP.ref,forw<const Args>(args)...);			\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
 }
 
 #endif

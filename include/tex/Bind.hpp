@@ -46,7 +46,7 @@ namespace SUNphi
     using Tk=typename NestedTk::template AllButType<TG>;
     
     /// Provides the evaluator with or without const attribute
-#define PROVIDE_CONST_OR_NON_CONST_EVALUER(QUALIFIER)			\
+#define PROVIDE_CONST_OR_NON_CONST_EVALUATOR(QUALIFIER)			\
     /*! QUALIFIER Evaluator */						\
     template <class...Args>						\
     friend DECLAUTO eval(QUALIFIER Binder& binder,  /*!< binder to eval    */ \
@@ -58,12 +58,12 @@ namespace SUNphi
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
     // Non constant evaluator
-    PROVIDE_CONST_OR_NON_CONST_EVALUER();
+    PROVIDE_CONST_OR_NON_CONST_EVALUATOR();
     
     // Constant evaluator
-    PROVIDE_CONST_OR_NON_CONST_EVALUER(const);
+    PROVIDE_CONST_OR_NON_CONST_EVALUATOR(const);
     
-#undef PROVIDE_CONST_OR_NON_CONST_EVALUER
+#undef PROVIDE_CONST_OR_NON_CONST_EVALUATOR
     
     /// Constructor taking a universal reference and the id
     Binder(B&& ref, ///< Reference to bind

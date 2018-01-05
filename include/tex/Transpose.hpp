@@ -33,13 +33,8 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename TK::Twinned;
     
-    // Implement the evaluator
-    PROVIDE_STRAIGHT_EVALUATOR(Transposer);
-    
-    /// Constructor taking a universal reference
-    Transposer(T&& ref) : ref(ref)
-    {
-    }
+    PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(Transposer);
+    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Transposer,T);
   };
   
   // Check that a test Transposer is a UnaryTEx
