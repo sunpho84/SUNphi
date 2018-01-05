@@ -91,14 +91,14 @@ namespace SUNphi
   
   
   /// Provides the evaluator with or without const attribute
-#define PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,QUALIFIER)	\
-  /*! QUALIFIER Evaluator for type T */					\
+#define PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(UNARY_TEX,QUALIFIER)	\
+  /*! QUALIFIER Evaluator for expression UNARY_TEX */			\
   template <class...Args>						\
-  friend decltype(auto) eval(QUALIFIER T& EXP,    /*!< Expression to eval */ \
-			     const Args&...args)  /*!< Parameters to pass */ \
+  friend decltype(auto) eval(QUALIFIER UNARY_TEX& exp,  /*!< Expression to eval */ \
+			     const Args&...args)        /*!< Parameters to pass */ \
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(EXP.ref,forw<QUALIFIER Args>(args)...);			\
+    return eval(exp.ref,forw<QUALIFIER Args>(args)...);			\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
