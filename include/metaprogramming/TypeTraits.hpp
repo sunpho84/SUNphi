@@ -27,17 +27,41 @@ namespace SUNphi
   /// Useful to create SFINAE tests
   using FalseType=std::false_type;
   
-  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  
+  /// Empty token to be used in macro expecting qualifier
+#define NON_CONST_QUALIF			\
+  /* */
+  
+  /// Token to be used in macro indicating "const" keyword
+#define CONST_QUALIF				\
+  const
+  
+  /// Empty token to be used in macro expecting the kind of reference
+#define NON_REF					\
+  /* */
+  
+  /// Token to be used in macro indicating "l-value" reference
+#define LVALUE_REF				\
+  &
+  
+  /// Token to be used in macro indicating "r-value" reference
+#define RVALUE_REF				\
+  &&
+  
+  /////////////////////////////////////////////////////////////////
   
   /// Returns the type T without any constant volatile qualification
   template <typename T>
   using RemoveCV=typename std::remove_cv<T>::type;
   
-  /////////////////////////////////////////////////////////////////////
-  
   /// Returns the type T without any reference
   template <typename T>
   using RemoveReference=typename std::remove_reference<T>::type;
+  
+  /// Returns the type T without any reference or qualifier
+  template <typename T>
+  using Unqualified=RemoveCV<RemoveReference<T>>;
   
   /////////////////////////////////////////////////////////////////////
   
