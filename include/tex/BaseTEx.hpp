@@ -83,7 +83,8 @@ namespace SUNphi
   
   /// TEmplate Expression
   template <typename T>
-  struct TEx : public BaseTEx
+  struct TEx :
+    public BaseTEx
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
