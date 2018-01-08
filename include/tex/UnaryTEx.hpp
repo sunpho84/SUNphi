@@ -48,7 +48,7 @@ namespace SUNphi
   /// each UnaryTEx
 #define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX,REF_TYPE)	\
   /*! Constructor taking a universal reference */		\
-  UNARY_TEX(REF_TYPE&& ref) : ref(ref)				\
+  explicit UNARY_TEX(REF_TYPE&& tex) : ref(tex)			\
   {								\
   }								\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
@@ -78,37 +78,33 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Create a simple builder with a name and a UNARY_TEX returned type
-#define SIMPLE_UNARY_TEX_BUILDER(BUILDER,UNARY_TEX)			\
+#define SIMPLE_UNARY_TEX_BUILDER(BUILDER,   /*!< Name of builder fun           */ \
+				 UNARY_TEX) /*!< Name of the UnaryTex to build */ \
   /*! Simple UNARY_TEX builder called BUILDER */			\
   /*!                                         */			\
   /*! Plain UNARY_TEX getting a plain TEx     */			\
-  template <typename T>              /* Type of the TEx to get */	\
-  DECLAUTO BUILDER(T&& ref)          /*!< Quantity to act upon */	\
+  template <typename T>		/* Type of the TEx to get            */	\
+  DECLAUTO BUILDER(T&& tex)     /*!< TEx to act upon                 */ \
   {									\
     /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
-    return UNARY_TEX<T>(forw<T>(ref));					\
-  }
+    return UNARY_TEX<T>(forw<T>(tex));					\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-  
-  /// Provides the evaluator with or without const attribute
-#define PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(UNARY_TEX,QUALIFIER)	\
+  /// Provides the evaluator
+#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(UNARY_TEX)			\
   /*! QUALIFIER Evaluator for expression UNARY_TEX */			\
-  template <class...Args>						\
-  friend decltype(auto) eval(QUALIFIER UNARY_TEX& exp,  /*!< Expression to eval */ \
-			     const Args&...args)        /*!< Parameters to pass */ \
+  template <typename D,							\
+	    typename...Args>						\
+  friend DECLAUTO eval(D&& exp,            /*!< Expression to eval */	\
+		       const Args&...args, /*!< Parameters to pass */	\
+		       TypeIf<Is ## UNARY_TEX<D>,void*> =nullptr,	\
+		       ...)						\
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(exp.ref,forw<QUALIFIER Args>(args)...);			\
+    return eval(exp.ref,forw<const Args>(args)...);			\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-  
-  /// Provides a simple evaluator (const and non-const)
-  ///
-  /// We need to specify the type because we chose dedicated type for
-  /// each TEx
-#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(T)				\
-  PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,/**/);		\
-  PROVIDE_CONST_OR_NON_UNARY_TEX_DEFAULT_EVALUATOR(T,const);		\
   
   /// Implements a duplicated-call canceller
   ///
@@ -117,14 +113,16 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// conj(conj(cicc)); // returns cicc
   /// \endcode
-#define CANCEL_DUPLICATED_UNARY_TEX_CALL(CALLER,UNARY_TEX)		\
+#define CANCEL_DUPLICATED_UNARY_TEX_CALL(CALLER,    /*!< Name of builder */ \
+					 UNARY_TEX) /*!< Type to un-nest */ \
   /*! Simplify CALLER(UNARY_TEX) expression */				\
-  /*!                                      */				\
-  /*! Returns the nested reference         */				\
-  template <typename T>                /* Type of the nested UNARY_TEX */ \
-  DECLAUTO CALLER(UNARY_TEX<T>&& ref)  /*!< Quantity to un-nest       */ \
+  /*!                                       */				\
+  /*! Returns the nested reference          */				\
+  template <typename T,                              /* Type of the expression                  */ \
+	    typename=EnableIf<Is ## UNARY_TEX<T>>>   /* Enable only if tex is already UNARY_TEX */ \
+  DECLAUTO CALLER(T&& tex)	/*!< Quantity to un-nest   */		\
   {									\
-    return forw<T>(ref.ref);						\
+    return tex.ref;							\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
@@ -135,26 +133,31 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// wrap(wrap(cicc)); // returns wrap(cicc)
   /// \endcode
-#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,UNARY_TEX)		\
+#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,     /*!< Name of builder */ \
+					 UNARY_TEX)  /*!< Type to absorb  */ \
   /*! Simplify CALLER(UNARY_TEX) expression */				\
-  /*!                                      */				\
-  /*! Returns the reference               */				\
-  template <typename T>                /* Type of the nested UNARY_TEX */ \
-  DECLAUTO CALLER(UNARY_TEX<T>&& ref)  /*!< Quantity to absorb         */ \
+  /*!                                       */				\
+  /*! Returns the reference                 */				\
+  template <typename D,                            /* Type of the nested UNARY_TEX */ \
+	    typename=EnableIf<Is ## UNARY_TEX<D>>> /* Force D to be a UNARY_TEX    */ \
+  DECLAUTO CALLER(D&& tex)                         /*!< UnaryTEx to absorb         */ \
   {									\
-    return forw<UNARY_TEX<T>>(ref);						\
+    return forw<D>(tex);						\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
 /// Defines a simple way to deal with nesting
-#define UNARY_TEX_GOES_INSIDE(EXT_FUN,UNARY_TEX,INT_FUN)		\
-  /*! Simplify EXT_FUN(UNARY_TEX\<T> u) expression */			\
-  /*!                                             */			\
-  /*! Returns INT_FUN(EXT_FUN(u.ref))             */			\
-  template <typename T>                 /* Type of the nested UNARY_TEX */ \
-  DECLAUTO EXT_FUN(UNARY_TEX<T>&& ref)  /*!< Quantity to call           */ \
+#define UNARY_TEX_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
+			      UNARY_TEX, /*!< Name of the TEx  */	\
+			      INT_FUN)	 /*!< Internal builder */	\
+  /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
+  /*!                                              */			\
+  /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
+  template <typename D,                            /* Type of the nested UNARY_TEX */ \
+	    typename=EnableIf<Is ## UNARY_TEX<D>>> /* Force D to be a UNARY_TEX    */ \
+  DECLAUTO EXT_FUN(D&& tex)                        /*!< UnaryTEx to nest           */ \
   {									\
-    return INT_FUN(EXT_FUN(forw<T>(ref.ref)));				\
+    return INT_FUN(EXT_FUN(tex.ref));					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
 }

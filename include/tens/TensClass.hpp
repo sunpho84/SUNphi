@@ -12,6 +12,9 @@
 
 namespace SUNphi
 {
+  // Base type to qualify as Tens
+  DEFINE_BASE_TYPE(Tens);
+  
   /// A Tensor class
   ///
   /// Container with a given TensKind structure and fundamental type,
@@ -20,6 +23,7 @@ namespace SUNphi
   template <typename TK,   // List of tensor components
 	    typename Fund> // Fundamental type
   class Tens :
+    public BaseTens,                       // Inherit from BaseTens to detect in expression
     public UnaryTEx<Tens<TK,Fund>>,        // Inherit from UnaryTEx
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
     public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
@@ -75,11 +79,13 @@ namespace SUNphi
     }
     
     /// Evaluate the tensor (returns the index of the internal data)
-    template <class...Comps,                              // Component types
+    /// \todo Enable only for Tens TEx
+    template <class T,
+	      class...Comps,                              // Component types
 	      class=ConstrainAreIntegrals<Comps...>,      // Force the components to be integer-like
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> // Constrain the component to be in the same number of Tk
-    friend double& eval(Tens& t,              ///< Tensor to evaluate
-			const Comps&...comps) ///< Component values
+    friend DECLAUTO eval(T&& t,                ///< Tensor to evaluate
+			 const Comps&...comps) ///< Component values
     {
       //print(cout,"Components: ",comps...,"\n");
       return eval(*t.v,forw<const Comps>(comps)...);

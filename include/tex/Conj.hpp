@@ -12,11 +12,15 @@
 
 namespace SUNphi
 {
+  // Base type to qualify as Conjer
+  DEFINE_BASE_TYPE(Conjer);
+  
   /// Class to take the conjugate of a TEx
   template <typename C,                                  // Type of the expression to conjugate
 	    typename TK=typename RemoveReference<C>::Tk, // Tens Kind of the conjugated type
 	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
   class Conjer :
+    public BaseConjer,                             // Inherit from BaseConjer to detect in expression
     public UnaryTEx<Conjer<C>>,                    // Inherit from UnaryTEx
     public ConstrainIsTEx<C>,                      // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>,                // Constrain type TK to be a TensKind

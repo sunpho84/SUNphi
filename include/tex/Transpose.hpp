@@ -11,10 +11,14 @@
 
 namespace SUNphi
 {
+  // Base type to qualify as Transposer
+  DEFINE_BASE_TYPE(Transposer);
+  
   /// Class to take the transposed of a TEx
   template <typename T,                                  // Type to be transposed
 	    typename TK=typename RemoveReference<T>::Tk> // Tens Kind of the bound type
   class Transposer :
+    public BaseTransposer,                       // Inherit from BaseTransposer to detect in expression
     public UnaryTEx<Transposer<T>>,              // Inherit from UnaryTEx
     public ConstrainIsTEx<T>,                    // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>               // Constrain type TK to be a TensKind

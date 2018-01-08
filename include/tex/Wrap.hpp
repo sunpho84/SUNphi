@@ -12,10 +12,14 @@
 
 namespace SUNphi
 {
+  // Base type to qualify as Wrapper
+  DEFINE_BASE_TYPE(Wrapper);
+  
   /// Class to wrap a TEx
   template <typename W,                                  // Type of the expression to wrap
 	    typename TK=typename RemoveReference<W>::Tk> // Tens Kind of the wrapped expression
   class Wrapper :
+    public BaseWrapper,                             // Inherit from BaseWrapper to detect in expression
     public UnaryTEx<Wrapper<W>>,                    // Inherit from UnaryTEx
     public ConstrainIsTEx<W>,                       // Constrain W to be a TEx
     public ConstrainIsTensKind<TK>                  // Constrain type TK to be a TensKind
