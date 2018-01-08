@@ -83,8 +83,10 @@ namespace SUNphi
   /*! Simple UNARY_TEX builder called BUILDER */			\
   /*!                                         */			\
   /*! Plain UNARY_TEX getting a plain TEx     */			\
-  template <typename T>		/* Type of the TEx to get            */	\
-  DECLAUTO BUILDER(T&& tex)     /*!< TEx to act upon                 */ \
+  template <typename T, 	    /* Type of the TEx to get       */	\
+	    typename...Args>						\
+  UNARY_TEX<T> BUILDER(T&& tex,     /*!< TEx to act upon            */	\
+		       Args...)						\
   {									\
     /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
     return UNARY_TEX<T>(forw<T>(tex));					\
@@ -133,29 +135,30 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// wrap(wrap(cicc)); // returns wrap(cicc)
   /// \endcode
-#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,     /*!< Name of builder */ \
-					 UNARY_TEX)  /*!< Type to absorb  */ \
+#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,     /*!< Name of builder                */ \
+					 UNARY_TEX)  /*!< Type to absorb                 */ \
   /*! Simplify CALLER(UNARY_TEX) expression */				\
   /*!                                       */				\
   /*! Returns the reference                 */				\
-  template <typename D,                            /* Type of the nested UNARY_TEX */ \
-	    typename=EnableIf<Is ## UNARY_TEX<D>>> /* Force D to be a UNARY_TEX    */ \
-  DECLAUTO CALLER(D&& tex)                         /*!< UnaryTEx to absorb         */ \
+  /*! \todo enforce const                   */				\
+  template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
+	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
+  DECLAUTO CALLER(D&& tex)      /*!< UnaryTEx to absorb         */	\
   {									\
     return forw<D>(tex);						\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-/// Defines a simple way to deal with nesting
+  /// Defines a simple way to swap nested UnaryTEx
 #define UNARY_TEX_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
 			      UNARY_TEX, /*!< Name of the TEx  */	\
 			      INT_FUN)	 /*!< Internal builder */	\
   /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
-  template <typename D,                            /* Type of the nested UNARY_TEX */ \
-	    typename=EnableIf<Is ## UNARY_TEX<D>>> /* Force D to be a UNARY_TEX    */ \
-  DECLAUTO EXT_FUN(D&& tex)                        /*!< UnaryTEx to nest           */ \
+  template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
+	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
+  DECLAUTO EXT_FUN(D&& tex)     /*!< UnaryTEx to nest           */	\
   {									\
     return INT_FUN(EXT_FUN(tex.ref));					\
   }									\
