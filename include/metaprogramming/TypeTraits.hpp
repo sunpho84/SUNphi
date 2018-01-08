@@ -121,7 +121,22 @@ namespace SUNphi
     return static_cast<T&&>(u);
   }
   
-  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  
+  /// Provides a SFINAE to be used in template par list
+  ///
+  /// This follows
+  /// https://stackoverflow.com/questions/32636275/sfinae-with-variadic-templates
+  /// as in this example
+  /// \code
+  /// template <typename D,
+  ///           SFINAE_ON_TEMPLATE_ARG(IsSame<D,int>)>
+  /// void foo(D i) {} // fails if D is not int
+  /// \endcode
+#define SFINAE_ON_TEMPLATE_ARG(__VA_ARGS__)	\
+  TypeIf<__VA_ARGS__,void*> =nullptr
+  
+  /////////////////////////////////////////////////////////////////
   
   /// Checks if two types are the same
   ///
