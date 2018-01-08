@@ -48,12 +48,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  // Defines the check for a member type "isAliasing"
+  // Defines the check for a member variable "isAliasing"
   DEFINE_HAS_MEMBER(isAliasing);
   
   /////////////////////////////////////////////////////////////////
   
-  // Defines the check for a member type "isAssignable"
+  // Defines the check for a member variable "isAssignable"
   DEFINE_HAS_MEMBER(isAssignable);
   
   /// Provides a isAssignable attribute
