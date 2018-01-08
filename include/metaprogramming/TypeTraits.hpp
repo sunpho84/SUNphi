@@ -194,6 +194,18 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
+  /// Returns const or non const T depending on condition
+  template <bool B,      // Condition
+	    typename T>  // Type
+  using ConstIf=Conditional<B,const T,T>;
+  
+  /// Returns reference of plain type depending on condition
+  template <bool B,      // Condition
+	    typename T>  // Type
+  using RefIf=Conditional<B,T&,T>;
+  
+  /////////////////////////////////////////////////////////////////////
+  
   /// Identifies whether Base is a base class of Derived
   template <typename Base,
 	    typename Derived>
