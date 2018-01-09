@@ -111,16 +111,6 @@ namespace SUNphi
   // Check that a test Binder is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
   
-  /// If the TensComp TC is not present in the TensKind of TEX, returns the twin
-  template <typename Tc,    // Tensor Component searched
-	    typename TEX,   // Type of the expression where to search
- 	    typename=ConstrainIsTensComp<Tc>, // Constrain Tc to be a TensComp
- 	    typename=ConstrainIsTEx<TEX>,     // Constrain TEX to be a TEx
-	    typename TK=typename Unqualified<TEX>::Tk,     // Tens Kind of the TEx
-	    typename TK_TYPES=typename TK::types,          // Types of the tensor kind
-	    bool Has=tupleHasType<Tc,TK_TYPES>>
-  using CompOrTwinned=Conditional<Has,Tc,TwinCompOf<Tc>>;
-  
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks

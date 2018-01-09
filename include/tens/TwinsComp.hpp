@@ -9,7 +9,9 @@
 /// TwinComp is used to distinguish row and column component of
 /// matrices.
 
+#include <metaprogramming/Tuple.hpp>
 #include <tens/TensComp.hpp>
+#include <tex/BaseTEx.hpp>
 #include <utility/Unused.hpp>
 
 namespace SUNphi
@@ -69,6 +71,16 @@ namespace SUNphi
     /*! Twinned type */				\
     using type=ConstrainIsTensComp<T1>::type;	\
   }
+  
+  /// If the TensComp TC is not present in the TensKind of TEX, returns the twin
+  template <typename Tc,   // Tensor Component searched
+	    typename TEX,   // Type of the expression where to search
+ 	    typename=ConstrainIsTensComp<Tc>, // Constrain Tc to be a TensComp
+ 	    typename=ConstrainIsTEx<TEX>,     // Constrain TEX to be a TEx
+	    typename TK=typename Unqualified<TEX>::Tk,     // Tens Kind of the TEx
+	    typename TK_TYPES=typename TK::types,          // Types of the tensor kind
+	    bool Has=tupleHasType<Tc,TK_TYPES>>            // Check if the tuple has type
+  using CompOrTwinned=Conditional<Has,Tc,TwinCompOf<Tc>>;
 }
 
 #endif
