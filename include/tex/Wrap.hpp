@@ -5,7 +5,6 @@
 ///
 /// \brief Header file for the definition of wrapper
 
-#include <physics/Compl.hpp>
 #include <tens/TensKind.hpp>
 #include <tex/Transpose.hpp>
 #include <tex/UnaryTEx.hpp>
@@ -41,7 +40,7 @@ namespace SUNphi
   };
   
   // Check that a test Wrapper is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Wrapper<Tens<TensKind<Compl>,double>>);
+  STATIC_ASSERT_IS_UNARY_TEX(Wrapper<Tens<TensKind<TensComp<double,3>>,double>>);
   
   // Build Wrapper from wrap
   SIMPLE_UNARY_TEX_BUILDER(wrap,Wrapper);
