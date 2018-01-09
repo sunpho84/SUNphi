@@ -45,14 +45,14 @@ namespace SUNphi
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer);
     
     /// Provides either the const or non-const evaluator
-#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
+#define PROVIDE_CONST_OR_NOT_EVALUATOR(QUALIFIER)			\
     /*! QUALIFIER evaluator for Conjer                               */	\
     /*!                                                              */	\
     template <typename...Args>           /* Type of the arguments    */	\
     DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
       QUALIFIER								\
     {									\
-      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);			\
+      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);			\
 									\
       /* Detect if we have to put "-" in the result */			\
       const bool isIm=get<posOfCompl>(Tuple<Args...>(args...));		\
@@ -66,8 +66,8 @@ namespace SUNphi
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
+    PROVIDE_CONST_OR_NOT_EVALUATOR(NON_CONST_QUALIF);
+    PROVIDE_CONST_OR_NOT_EVALUATOR(CONST_QUALIF);
     
 #undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
     
