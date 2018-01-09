@@ -33,6 +33,10 @@ namespace SUNphi
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
   
+  /// Provide the reference to the objects
+#define PROVIDE_BINARY_TEX_REFS			\
+  PROVIDE_TEX_REF(1);				\
+  PROVIDE_TEX_REF(2)
   /// Set the assignability according to the references 1 and 2
 #define ASSIGNABLE_ACCORDING_TO_REF_1_2					\
   IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned according to the references 1 and 2 */, \

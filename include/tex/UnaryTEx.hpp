@@ -31,10 +31,7 @@ namespace SUNphi
   
   /// Provide the reference to the object
 #define PROVIDE_UNARY_TEX_REF			\
-  /*! Type of the binding reference */		\
-  using Ref=_Ref;				\
-  /*! Reference to the object */		\
-  Reference<Ref> ref
+  PROVIDE_TEX_REF()
   
   /////////////////////////////////////////////////////////////////
   
@@ -78,7 +75,7 @@ namespace SUNphi
   
   /// Create a simple builder with a name and a UNARY_TEX returned type
 #define SIMPLE_UNARY_TEX_BUILDER(BUILDER,   /*!< Name of builder fun           */ \
-				 UNARY_TEX) /*!< Name of the UnaryTex to build */ \
+				 UNARY_TEX) /*!< Name of the UnaryTEx to build */ \
   /*! Simple UNARY_TEX builder called BUILDER */			\
   /*!                                         */			\
   /*! Plain UNARY_TEX getting a plain TEx     */			\

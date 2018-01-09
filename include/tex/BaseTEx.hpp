@@ -70,16 +70,25 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Provide the reference to the object
+#define PROVIDE_TEX_REF(NUM)				\
+  /*! Type of the binding reference NUM */		\
+  using Ref ## NUM=_Ref ## NUM;				\
+  /*! Reference to the NUM object */			\
+  Reference<Ref ## NUM> ref ## NUM
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Defines the check for a TEx
   ///
   /// \todo add costRead
   /// \todo add costEval
   /// \todo add isAliasing
 #define STATIC_ASSERT_IS_TEX(...)			\
-  STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
-  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__);		\
+  STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);	\
-  STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__)
+  STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
+  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
   /// TEmplate Expression
   template <typename T>
