@@ -15,18 +15,18 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Transposer);
   
   /// Class to take the transposed of a TEx
-  template <typename T,                                  // Type to be transposed
-	    typename TK=typename RemoveReference<T>::Tk> // Tens Kind of the bound type
+  template <typename _Ref,                                  // Type to be transposed
+	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the bound type
   class Transposer :
-    public BaseTransposer,                       // Inherit from BaseTransposer to detect in expression
-    public UnaryTEx<Transposer<T>>,              // Inherit from UnaryTEx
-    public ConstrainIsTEx<T>,                    // Constrain B to be a TEx
-    public ConstrainIsTensKind<TK>               // Constrain type TK to be a TensKind
+    public BaseTransposer,                        // Inherit from BaseTransposer to detect in expression
+    public UnaryTEx<Transposer<_Ref>>,            // Inherit from UnaryTEx
+    public ConstrainIsTEx<_Ref>,                  // Constrain Ref to be a TEx
+    public ConstrainIsTensKind<TK>                // Constrain type TK to be a TensKind
   {
     
   public:
     
-    PROVIDE_UNARY_TEX_REF(T);
+    PROVIDE_UNARY_TEX_REF;
     
     // Attributes
     NOT_STORING;
@@ -37,7 +37,7 @@ namespace SUNphi
     using Tk=typename TK::Twinned;
     
     PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(Transposer);
-    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Transposer,T);
+    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Transposer);
   };
   
   // Check that a test Transposer is a UnaryTEx

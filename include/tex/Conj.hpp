@@ -16,15 +16,15 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Conjer);
   
   /// Class to take the conjugate of a TEx
-  template <typename C,                                  // Type of the expression to conjugate
-	    typename TK=typename RemoveReference<C>::Tk, // Tens Kind of the conjugated type
-	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
+  template <typename _Ref,                                  // Type of the expression to conjugate
+	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the conjugated type
+	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
   class Conjer :
-    public BaseConjer,                             // Inherit from BaseConjer to detect in expression
-    public UnaryTEx<Conjer<C>>,                    // Inherit from UnaryTEx
-    public ConstrainIsTEx<C>,                      // Constrain B to be a TEx
-    public ConstrainIsTensKind<TK>,                // Constrain type TK to be a TensKind
-    public ConstrainTupleHasType<Compl,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
+    public BaseConjer,                                // Inherit from BaseConjer to detect in expression
+    public UnaryTEx<Conjer<_Ref>>,                    // Inherit from UnaryTEx
+    public ConstrainIsTEx<_Ref>,                      // Constrain _Ref to be a TEx
+    public ConstrainIsTensKind<TK>,                   // Constrain type TK to be a TensKind
+    public ConstrainTupleHasType<Compl,TK_TYPES>      // Constrain TG to be in the Types of the TensKind
   {
     
     /// Position of the Compl component
@@ -32,7 +32,7 @@ namespace SUNphi
     
   public:
     
-    PROVIDE_UNARY_TEX_REF(C);
+    PROVIDE_UNARY_TEX_REF;
     
     // Attributes
     NOT_STORING;
@@ -42,7 +42,7 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=TK;
     
-    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer,C);
+    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer);
     
     /// Evaluator
     template <class...Args>

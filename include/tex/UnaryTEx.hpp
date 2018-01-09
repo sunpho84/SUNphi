@@ -30,9 +30,11 @@ namespace SUNphi
   };
   
   /// Provide the reference to the object
-#define PROVIDE_UNARY_TEX_REF(REF_TYPE)		\
+#define PROVIDE_UNARY_TEX_REF			\
+  /*! Type of the binding reference */		\
+  using Ref=_Ref;				\
   /*! Reference to the object */		\
-  Reference<REF_TYPE> ref
+  Reference<Ref> ref
   
   /////////////////////////////////////////////////////////////////
   
@@ -43,12 +45,9 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Defines a simple creator taking a reference
-  ///
-  /// The type is needed because we have chosen dedicated name for
-  /// each UnaryTEx
-#define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX,REF_TYPE)	\
+#define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
   /*! Constructor taking a universal reference */		\
-  explicit UNARY_TEX(REF_TYPE&& tex) : ref(tex)			\
+  explicit UNARY_TEX(Ref&& tex) : ref(tex)			\
   {								\
   }								\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE

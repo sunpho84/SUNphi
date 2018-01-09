@@ -16,17 +16,17 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Wrapper);
   
   /// Class to wrap a TEx
-  template <typename W,                                  // Type of the expression to wrap
-	    typename TK=typename RemoveReference<W>::Tk> // Tens Kind of the wrapped expression
+  template <typename _Ref,                                  // Type of the expression to wrap
+	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the wrapped expression
   class Wrapper :
-    public BaseWrapper,                             // Inherit from BaseWrapper to detect in expression
-    public UnaryTEx<Wrapper<W>>,                    // Inherit from UnaryTEx
-    public ConstrainIsTEx<W>,                       // Constrain W to be a TEx
-    public ConstrainIsTensKind<TK>                  // Constrain type TK to be a TensKind
+    public BaseWrapper,                                // Inherit from BaseWrapper to detect in expression
+    public UnaryTEx<Wrapper<_Ref>>,                    // Inherit from UnaryTEx
+    public ConstrainIsTEx<_Ref>,                       // Constrain _Ref to be a TEx
+    public ConstrainIsTensKind<TK>                     // Constrain type TK to be a TensKind
   {
   public:
     
-    PROVIDE_UNARY_TEX_REF(W);
+    PROVIDE_UNARY_TEX_REF;
     
     // Attributes
     NOT_STORING;
@@ -36,7 +36,7 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=TK;
     
-    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Wrapper,W);
+    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Wrapper);
     PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(Wrapper);
   };
   

@@ -19,14 +19,14 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Binder);
   
   /// Class to bind a component of a TEx
-  template <typename TG,                                 // Type to get
-	    typename _B,                                  // Type to bind
-	    typename TK=typename RemoveReference<_B>::Tk, // Tens Kind of the bound type
-	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
+  template <typename TG,                                    // Type to get
+	    typename _Ref,                                  // Type to bind
+	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the bound type
+	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
   class Binder :
     public BaseBinder,                          // Inherit from BaseBinderer to detect in expression
-    public UnaryTEx<Binder<TG,_B>>,              // Inherit from UnaryTEx
-    public ConstrainIsTEx<_B>,                   // Constrain B to be a TEx
+    public UnaryTEx<Binder<TG,_Ref>>,           // Inherit from UnaryTEx
+    public ConstrainIsTEx<_Ref>,                // Constrain _Ref to be a TEx
     public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
   {
@@ -38,13 +38,10 @@ namespace SUNphi
     
   public:
     
-    /// Type to bind
-    using B=_B;
-    
     /// Type to get
     using Tg=TG;
     
-    PROVIDE_UNARY_TEX_REF(B);
+    PROVIDE_UNARY_TEX_REF;
     
     // Attributes
     NOT_STORING;
@@ -102,8 +99,8 @@ namespace SUNphi
 #undef PROVIDE_CONST_OR_NON_CONST_EVALUATOR
     
     /// Constructor taking a universal reference and the id
-    explicit Binder(B&& tex, ///< Reference to bind
-		    int id)  ///< Component to get
+    explicit Binder(Ref&& tex, ///< Reference to bind
+		    int id)    ///< Component to get
       : ref(tex),id(id)
     {
     }
@@ -117,15 +114,15 @@ namespace SUNphi
   /// Returns a plain binder getting from an unbind expression. Checks
   /// demanded to Binder
   template <typename Tg,                        // Type to get
-	    typename Tb,                        // Type to bind, deduced from argument
+	    typename Ref,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO bind(Tb&& ref,               ///< Quantity to bind to
+  DECLAUTO bind(Ref&& ref,              ///< Quantity to bind to
 		const int id,           ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
-    return Binder<Tg,Tb>(forw<Tb>(ref),id);
+    return Binder<Tg,Ref>(forw<Ref>(ref),id);
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -155,11 +152,11 @@ namespace SUNphi
     // Type got by the nested bounder
     using InNestedTg=typename Unqualified<T>::Tg;
     // Type of the reference bound by the nested bounder
-    using InNested=typename Unqualified<T>::B;
+    using InNestedRef=typename Unqualified<T>::Ref;
     // Tensor Kind of input nested binder
-    using InNestedTk=typename RemoveReference<InNested>::Tk;
+    using InNestedRefTk=typename RemoveReference<InNestedRef>::Tk;
     // Types of the Tensor Kind of nested bounder
-    using NestedTypes=typename InNestedTk::types;
+    using NestedTypes=typename InNestedRefTk::types;
     // Position inside the nested reference of the type got by the nested bounder
     constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
     // Position inside the nested reference of the type to get
@@ -177,7 +174,7 @@ namespace SUNphi
     // Out component
     const int outId=(swap?nestedId:id);
     // Output Nested binder
-    auto outNestedBinder=bind<OutNestedTg>(forw<InNested>(nb.ref),outNestedId);
+    auto outNestedBinder=bind<OutNestedTg>(forw<InNestedRef>(nb.ref),outNestedId);
     // Type of the output nested binder
     using OutNestedBinder=decltype(outNestedBinder);
     
