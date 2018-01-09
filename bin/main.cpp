@@ -76,28 +76,28 @@ void test_isAliasing()
   cout<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor())<<endl;
 }
 
-// void test_conj()
-// {
-//   using ComplTens=Tens<TensKind<Compl>,double>;
+void test_conj()
+{
+  using ComplTens=Tens<TensKind<Compl>,double>;
   
-//   ComplTens t;
+  ComplTens t;
   
-//   eval(real(t))=1.0;
-//   eval(imag(t))=-3.14598712480;
+  real(t).eval()=1.0;
+  imag(t).eval()=-3.14598712480;
   
-//   auto c1=t;
-//   auto c2=conj(t);
-
-//   printf("im: %lg",eval(reim(c2,0)));
-//   printf("im: %lg",eval(reim(c2,1)));
-// }
+  auto c1=t;
+  auto c2=conj(t);
+  
+  printf("im: %lg",reim(c2,0).eval());
+  printf("im: %lg",reim(c2,1).eval());
+}
 
 void test_bind_complicated_expression()
 {
   using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
   //using MyTk=TensKind<Col,Spin,Compl>;
   using MyTens=Tens<MyTk,double>;
-
+  
   //int a=MyTk::firstVectorizingComp<double>;
   //cout<<a<<endl;
   
@@ -130,14 +130,78 @@ void test_bind_complicated_expression()
   // cout<<Col::name()<<endl;
 }
 
+void test_assigner()
+{
+  using MyTk1=TensKind<Col,Spin,Compl>;
+  using MyTens1=Tens<MyTk1,double>;
+  
+  using MyTk2=TensKind<Spin,Col,Compl>;
+  using MyTens2=Tens<MyTk2,double>;
+  
+  MyTens1 cicc1;
+  MyTens2 cicc2;
+  
+  for(int icol=0;icol<NCOL;icol++)
+    for(int ispin=0;ispin<NSPIN;ispin++)
+      for(int icompl=0;icompl<NCOMPL;icompl++)
+  	col(spin(reim(cicc1,icompl),ispin),icol).eval()=
+  	  icompl+NCOMPL*(ispin+NSPIN*icol);
+
+  auto t2=transpose(cicc2);
+  auto c1=conj(cicc1);
+  auto ass=assign(t2,c1);
+  
+  ass.close();
+  
+  for(int icol=0;icol<NCOL;icol++)
+    for(int ispin=0;ispin<NSPIN;ispin++)
+      for(int icompl=0;icompl<NCOMPL;icompl++)
+  	cout<<col(spin(reim(cicc2,icompl),ispin),icol).eval()<<endl;
+  
+  // using MyTk1=TensKind<Col,Compl>;
+  // using MyTens1=Tens<MyTk1,double>;
+
+  // using MyTk2=TensKind<Col,Compl>;
+  // using MyTens2=Tens<MyTk2,double>;
+
+  // MyTens1 cicc1;
+  // MyTens2 cicc2;
+  
+  // for(int icol=0;icol<NCOL;icol++)
+  //   for(int icompl=0;icompl<NCOMPL;icompl++)
+  //     col(reim(cicc1,icompl),icol).eval()=
+  // 	icompl;
+  
+  // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  // // for(int icol=0;icol<NCOL;icol++)
+  // //   for(int icompl=0;icompl<NCOMPL;icompl++)
+  // //     {
+  // // 	col(reim(cicc2,icompl),icol).eval()=
+  // // 	  col(reim(conj(cicc1),icompl),icol).eval();
+  // // 	cout<<col(reim(cicc2,icompl),icol).eval()<<
+  // // 	  " "<<col(reim(cicc1,icompl),icol).eval()<<endl;
+  // //     }
+  // // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+
+  // auto c1=conj(cicc1);
+  // auto ass=assign(cicc2,c1);
+  //  ass.close();
+  
+  // for(int icol=0;icol<NCOL;icol++)
+  //   for(int icompl=0;icompl<NCOMPL;icompl++)
+  //     cout<<col(reim(cicc2,icompl),icol).eval()<<" "<<col(reim(cicc1,icompl),icol).eval()<<endl;
+  
+}
+
 int main()
 {
   //test_first_vectorizer();
   //test_transpose();
   //test_conj();
   //test_isAliasing();
-  test_binding();
-  test_bind_complicated_expression();
+  //test_binding();
+  //test_bind_complicated_expression();
+  test_assigner();
   
   return 0;
 }
