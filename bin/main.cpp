@@ -54,8 +54,8 @@ void test_binding()
   
   static_assert(IsSame<decltype(spin(reim(cicc,0),1)),decltype(reim(spin(cicc,1),0))>,"Not the same");
   
-  eval(spin(wrap(reim(cicc,0)),1))=1.923424;
-  cout<<eval(reim(wrap(spin(cicc,1)),0))<<endl;
+  spin(wrap(reim(cicc,0)),1).eval()=1.923424;
+  cout<<reim(wrap(spin(cicc,1)),0).eval()<<endl;
 }
 
 void test_isAliasing()
@@ -115,7 +115,7 @@ void test_bind_complicated_expression()
       for(int ri=0;ri<NCOMPL;ri++)
       {
   	//double &ref=eval(color(spin(cicc,id),ic));
-  	double &ref=eval(site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0));
+  	double &ref=site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0).eval();
   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
   	ref=3.141592352352;
       }
@@ -125,11 +125,9 @@ void test_bind_complicated_expression()
   
   // // eval(binder1)=8.0;
   // printf("%d\n",cicc.getStor().nel);
-  printf("ANNA %lg\n",eval(binder1));
+  printf("ANNA %lg\n",binder1.eval());
   // cout<<Spacetime::name()<<endl;
   // cout<<Col::name()<<endl;
-
-
 }
 
 int main()
