@@ -109,7 +109,8 @@ namespace SUNphi
   };
   
   // Check that a test Binder is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
+  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
+				    Tens<TensKind<TensComp<double,1>>,double>>);
   
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///

@@ -17,6 +17,7 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Assigner);
   
   /// Class to wrap a TEx
+  /// \todo add a check on the matching of Lhs Tk with Rhs
   template <typename _Ref1,                                   // Type of lhs expression to assign
 	    typename _Ref2,                                   // Type of rhs expression to assign
 	    typename TKL=typename RemoveReference<_Ref1>::Tk, // Tens Kind of the lhs expression
@@ -54,13 +55,20 @@ namespace SUNphi
     NOT_ASSIGNABLE;
     FORWARD_IS_ALIASING_TO_REF_1_2;
     
-    explicit Assigner(Ref1&& ref1,
-		      const Ref2& ref2) :
+    /// Default constructor for Assigner
+    explicit Assigner(Ref1&& ref1,      ///< Lhs of the assignement
+		      const Ref2& ref2) ///< Rhs of the assignement
+      :
       ref1(ref1),
       ref2(ref2)
     {
     }
     
+    /// Close the assignement
+    ///
+    /// Internal implementation, called when all the components are
+    /// bound and the only missing things is to eval the
+    /// subexpressions.
     template <bool Straight>
     void _close(SFINAE_ON_TEMPLATE_ARG(Straight))
     {
@@ -69,6 +77,11 @@ namespace SUNphi
       ref1.eval()=ref2.eval();
     }
     
+    /// Close the assignement
+    ///
+    /// Internal implementation, called when not all components are
+    /// bound. Close the expressione iteratively, looping on the
+    /// outermost component. A new Assigner is created at every turn.
     template <bool Straight>
     void _close(SFINAE_ON_TEMPLATE_ARG(not Straight))
     {
@@ -84,6 +97,10 @@ namespace SUNphi
 	}
     }
     
+    /// Close the assignement
+    ///
+    /// External interface, called to disambiguate the bound and
+    /// unbound case
     void close()
     {
       const bool straightAssign=(Unqualified<TKL>::nTypes==0) and (TKR::nTypes==0);
@@ -91,11 +108,10 @@ namespace SUNphi
     }
   };
   
-  // // Check that a test Assigner is a BinaryTEx
-  // STATIC_ASSERT_IS_BINARY_TEX(Assigner<
-  // 			      Tens<TensKind<TensComp<double,3>>,double>,
-  // 			      Tens<TensKind<TensComp<double,3>>,double>>);
-
+  // Check that a test Assigner is a BinaryTEx
+  STATIC_ASSERT_IS_BINARY_TEX(Assigner<
+  			      Tens<TensKind<TensComp<double,3>>,double>,
+  			      Tens<TensKind<TensComp<double,3>>,double>>);
   /// Default constructor
   template <typename T1, 	    // Type of the first TEx to get
 	    typename T2, 	    // Type of the second TEx to get
