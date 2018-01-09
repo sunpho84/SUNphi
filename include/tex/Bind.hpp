@@ -33,7 +33,7 @@ namespace SUNphi
     /// Nested type Tensor Kind
     using NestedTk=TK;
     
-    // Position inside the reference of the type got by the bounder
+    /// Position inside the reference of the type got by the bounder
     static constexpr int pos=posOfType<TG,typename NestedTk::types>;
     
   public:
@@ -53,8 +53,9 @@ namespace SUNphi
     
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
-
-#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)\
+    
+    /// Provides either the const or non-const evaluator
+#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
     /*! Provides QUALIFIER evaluator for Binder                      */	\
     /*!                                                              */	\
     /*! Internal Evaluator, inserting the id at the correct          */	\

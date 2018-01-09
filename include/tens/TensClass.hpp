@@ -78,6 +78,7 @@ namespace SUNphi
       return *v;
     }
   
+    /// Provides either the const or non-const evaluator
 #define PROVIDE_EVALUATOR(QUALIFIER)					\
     /*! Evaluate the tensor (returns QUALIFIED reference to internal data) */ \
     template <class...Comps,                              /* Component types                                        */ \
