@@ -117,9 +117,11 @@ namespace SUNphi
   /// Returns a plain binder getting from an unbind expression. Checks
   /// demanded to Binder
   template <typename Tg,                        // Type to get
-	    typename Tb>                        // Type to bind, deduced from argument
+	    typename Tb,                        // Type to bind, deduced from argument
+	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   DECLAUTO bind(Tb&& ref,               ///< Quantity to bind to
-		const int id)           ///< Entry of the component to bind
+		const int id,           ///< Entry of the component to bind
+		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
     return Binder<Tg,Tb>(forw<Tb>(ref),id);
@@ -143,12 +145,16 @@ namespace SUNphi
   /// spin(wrap(reim(cicc,0)),1);
   /// reim(wrap(spin(cicc,1)),0);
   /// \endcode
-  template <typename Tg,                        // Type to get
-	    typename InNested,                  // Type referred from the nested bounder
-	    typename InNestedTg>                // Type got by the nested bounder
-  DECLAUTO bind(Binder<InNestedTg,InNested>&& ref,      ///< Quantity to bind
-		      const int id)                     ///< Component to get
+  template <typename Tg,                         // Type to get
+	    typename T,                          // Type of the nested binder
+	    SFINAE_ON_TEMPLATE_ARG(IsBinder<T>)> // Enable only for Binders
+  DECLAUTO bind(T&& nb,                          ///< Binder to rebind
+		const int id)                    ///< Component to get
   {
+    // Type got by the nested bounder
+    using InNestedTg=typename Unqualified<T>::Tg;
+    // Type of the reference bound by the nested bounder
+    using InNested=typename Unqualified<T>::B;
     // Tensor Kind of input nested binder
     using InNestedTk=typename RemoveReference<InNested>::Tk;
     // Types of the Tensor Kind of nested bounder
@@ -164,13 +170,13 @@ namespace SUNphi
     // Type got by the output binder
     using OutTg=Conditional<swap,InNestedTg,Tg>;
     // Nested component
-    const int nestedId=ref.id;
+    const int nestedId=nb.id;
     // Out external component
     const int outNestedId=(swap?id:nestedId);
     // Out component
     const int outId=(swap?nestedId:id);
     // Output Nested binder
-    auto outNestedBinder=bind<OutNestedTg>(forw<InNested>(ref.ref),outNestedId);
+    auto outNestedBinder=bind<OutNestedTg>(forw<InNested>(nb.ref),outNestedId);
     // Type of the output nested binder
     using OutNestedBinder=decltype(outNestedBinder);
     

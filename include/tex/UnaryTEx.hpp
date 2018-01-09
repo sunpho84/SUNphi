@@ -84,9 +84,9 @@ namespace SUNphi
   /*!                                         */			\
   /*! Plain UNARY_TEX getting a plain TEx     */			\
   template <typename T, 	    /* Type of the TEx to get       */	\
-	    typename...Args>						\
+	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>		\
   UNARY_TEX<T> BUILDER(T&& tex,     /*!< TEx to act upon            */	\
-		       Args...)						\
+		       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
   {									\
     /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
     return UNARY_TEX<T>(forw<T>(tex));					\
@@ -120,8 +120,8 @@ namespace SUNphi
   /*! Simplify CALLER(UNARY_TEX) expression */				\
   /*!                                       */				\
   /*! Returns the nested reference          */				\
-  template <typename T,                              /* Type of the expression                  */ \
-	    typename=EnableIf<Is ## UNARY_TEX<T>>>   /* Enable only if tex is already UNARY_TEX */ \
+  template <typename T,                                   /* Type of the expression                 */ \
+	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<T>)>	  /* Enable only for the UNARY_TEX required */ \
   DECLAUTO CALLER(T&& tex)	/*!< Quantity to un-nest   */		\
   {									\
     return tex.ref;							\
