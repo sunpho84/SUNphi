@@ -15,7 +15,7 @@ namespace SUNphi
   /// Reference to T or new type, depending on wheter the class isStoring
   template <typename T,                 // Type to get reference from
 	    typename=ConstrainIsTEx<T>> // Constrain the type to be a TEx
-  using Reference=Conditional<RemoveReference<T>::isStoring,T&,T>;
+  using Reference=RefIf<Unqualified<T>::isStoring,T>;
 }
 
 #endif
