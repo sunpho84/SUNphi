@@ -86,7 +86,7 @@ namespace SUNphi
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
-    /* print(cout,"Components: ",comps...,"\n"); */			\
+      /* print(std::cout,"Components: ",comps...,"\n"); */		\
       return v->eval(forw<const Comps>(comps)...);			\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
