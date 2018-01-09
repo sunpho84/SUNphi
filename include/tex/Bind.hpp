@@ -15,14 +15,18 @@
 
 namespace SUNphi
 {
+  // Base type to qualify as Binder
+  DEFINE_BASE_TYPE(Binder);
+  
   /// Class to bind a component of a TEx
   template <typename TG,                                 // Type to get
-	    typename B,                                  // Type to bind
-	    typename TK=typename RemoveReference<B>::Tk, // Tens Kind of the bound type
+	    typename _B,                                  // Type to bind
+	    typename TK=typename RemoveReference<_B>::Tk, // Tens Kind of the bound type
 	    typename TK_TYPES=typename TK::types>        // Types of the tensor kind
   class Binder :
-    public UnaryTEx<Binder<TG,B>>,              // Inherit from UnaryTEx
-    public ConstrainIsTEx<B>,                   // Constrain B to be a TEx
+    public BaseBinder,                          // Inherit from BaseBinderer to detect in expression
+    public UnaryTEx<Binder<TG,_B>>,              // Inherit from UnaryTEx
+    public ConstrainIsTEx<_B>,                   // Constrain B to be a TEx
     public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
   {
@@ -33,6 +37,12 @@ namespace SUNphi
     static constexpr int pos=posOfType<TG,typename NestedTk::types>;
     
   public:
+    
+    /// Type to bind
+    using B=_B;
+    
+    /// Type to get
+    using Tg=TG;
     
     PROVIDE_UNARY_TEX_REF(B);
     
@@ -92,9 +102,9 @@ namespace SUNphi
 #undef PROVIDE_CONST_OR_NON_CONST_EVALUATOR
     
     /// Constructor taking a universal reference and the id
-    Binder(B&& ref, ///< Reference to bind
-	   int id)  ///< Component to get
-      : ref(ref),id(id)
+    explicit Binder(B&& tex, ///< Reference to bind
+		    int id)  ///< Component to get
+      : ref(tex),id(id)
     {
     }
   };
