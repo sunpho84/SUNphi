@@ -19,10 +19,10 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Binder);
   
   /// Class to bind a component of a TEx
-  template <typename TG,                                    // Type to get
-	    typename _Ref,                                  // Type to bind
-	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the bound type
-	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
+  template <typename TG,                                        // Type to get
+	    typename _Ref,                                      // Type to bind
+	    typename TK=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
+	    typename TK_TYPES=typename TK::types>               // Types of the tensor kind
   class Binder :
     public BaseBinder,                          // Inherit from BaseBinderer to detect in expression
     public UnaryTEx<Binder<TG,_Ref>>,           // Inherit from UnaryTEx
@@ -111,11 +111,21 @@ namespace SUNphi
   // Check that a test Binder is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,Tens<TensKind<TensComp<double,1>>,double>>);
   
+  /// If the TensComp TC is not present in the TensKind of TEX, returns the twin
+  template <typename Tc,    // Tensor Component searched
+	    typename TEX,   // Type of the expression where to search
+ 	    typename=ConstrainIsTensComp<Tc>, // Constrain Tc to be a TensComp
+ 	    typename=ConstrainIsTEx<TEX>,     // Constrain TEX to be a TEx
+	    typename TK=typename Unqualified<TEX>::Tk,     // Tens Kind of the TEx
+	    typename TK_TYPES=typename TK::types,          // Types of the tensor kind
+	    bool Has=tupleHasType<Tc,TK_TYPES>>
+  using CompOrTwinned=Conditional<Has,Tc,TwinCompOf<Tc>>;
+  
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
   /// demanded to Binder
-  template <typename Tg,                        // Type to get
+  template <typename _Tg,                       // Type to get
 	    typename Ref,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   DECLAUTO bind(Ref&& ref,              ///< Quantity to bind to
@@ -123,6 +133,9 @@ namespace SUNphi
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
+    
+    using Tg=CompOrTwinned<_Tg,Ref>;
+    
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
     return Binder<Tg,Ref>(forw<Ref>(ref),id);
   }
@@ -145,12 +158,14 @@ namespace SUNphi
   /// spin(wrap(reim(cicc,0)),1);
   /// reim(wrap(spin(cicc,1)),0);
   /// \endcode
-  template <typename Tg,                         // Type to get
+  template <typename _Tg,                        // Type to get
 	    typename T,                          // Type of the nested binder
 	    SFINAE_ON_TEMPLATE_ARG(IsBinder<T>)> // Enable only for Binders
   DECLAUTO bind(T&& nb,                          ///< Binder to rebind
 		const int id)                    ///< Component to get
   {
+    // True component searched
+    using Tg=CompOrTwinned<_Tg,T>;
     // Type got by the nested bounder
     using InNestedTg=typename Unqualified<T>::Tg;
     // Type of the reference bound by the nested bounder
@@ -176,7 +191,7 @@ namespace SUNphi
     // Out component
     const int outId=(swap?nestedId:id);
     // Output Nested binder
-    auto outNestedBinder=bind<OutNestedTg>(forw<InNestedRef>(nb.ref),outNestedId);
+    auto outNestedBinder=bind<OutNestedTg>(nb.ref,outNestedId);
     // Type of the output nested binder
     using OutNestedBinder=decltype(outNestedBinder);
     
