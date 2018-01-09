@@ -31,23 +31,18 @@ namespace SUNphi
   
   /// Empty token to be used in macro expecting qualifier
 #define NON_CONST_QUALIF			\
-  /* */
   
   /// Token to be used in macro indicating "const" keyword
-#define CONST_QUALIF				\
-  const
+#define CONST_QUALIF const
   
   /// Empty token to be used in macro expecting the kind of reference
-#define NON_REF					\
-  /* */
+#define NON_REF
   
   /// Token to be used in macro indicating "l-value" reference
-#define LVALUE_REF				\
-  &
+#define LVALUE_REF &
   
   /// Token to be used in macro indicating "r-value" reference
-#define RVALUE_REF				\
-  &&
+#define RVALUE_REF &&
   
   /////////////////////////////////////////////////////////////////
   

@@ -96,11 +96,12 @@ namespace SUNphi
   
   /// Provides const or non-const the evaluator
 #define PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
-  /*! QUALIFIER Evaluator for expression UNARY_TEX */			\
+  /*! QUALIFIER Evaluator                                               */ \
   /*! \todo add/check that const qualifier is properly added to output */ \
   template <typename D,							\
 	    typename...Args>						\
-  DECLAUTO eval(const Args&...args) QUALIFIER /*!< Parameters to pass */ \
+  DECLAUTO eval(const Args&...args) /*!< Parameters to pass */		\
+    QUALIFIER								\
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
     return eval(ref,forw<const Args>(args)...);				\

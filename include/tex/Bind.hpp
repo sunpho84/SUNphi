@@ -56,7 +56,7 @@ namespace SUNphi
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
-    /*! Provides QUALIFIER evaluator for Binder                      */	\
+    /*! QUALIFIER evaluator for Binder                               */	\
     /*!                                                              */	\
     /*! Internal Evaluator, inserting the id at the correct          */	\
     /*! position in the list of args. Check on type B is omitted, as */	\
@@ -105,6 +105,7 @@ namespace SUNphi
       : ref(tex),id(id)
     {
     }
+    
   };
   
   // Check that a test Binder is a UnaryTEx
