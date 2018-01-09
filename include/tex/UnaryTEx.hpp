@@ -164,6 +164,23 @@ namespace SUNphi
     return INT_FUN(EXT_FUN(tex.ref));					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
+  /// Defines a simple way to swap an UnaryTEx from rhs to lhs
+#define UNARY_TEX_GOES_ON_LHS(LHS_FUN,	 /*!< External builder */	\
+			      UNARY_TEX) /*!< Name of the TEx  */	\
+  /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
+  /*!                                              */			\
+  /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
+  template <typename Lhs,                                   /* Type of the lhs TEx                    */ \
+	    typename Rhs,                                   /* Type of the rhs UNARY_TEX              */ \
+	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<Rhs>)>   /* Enable only for the UNARY_TEX required */ \
+  DECLAUTO assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
+		  Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_TEX */ \
+  {									\
+    return assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);			\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
 }
 
 #endif

@@ -48,6 +48,9 @@ namespace SUNphi
   
   // Simplifies transpose(transpose)
   CANCEL_DUPLICATED_UNARY_TEX_CALL(transpose,Transposer);
+  
+  // Move Transposer to the lhs
+  UNARY_TEX_GOES_ON_LHS(transpose,Transposer);
 }
 
 #endif
