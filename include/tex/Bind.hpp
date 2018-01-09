@@ -53,50 +53,50 @@ namespace SUNphi
     
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
-    
-    /// Provides the evaluator with or without const qualifier
-#define PROVIDE_CONST_OR_NON_CONST_EVALUATOR(QUALIFIER)			\
-    /*! QUALIFIER Internal Evaluator                              */	\
-    /*!                                                           */	\
-    /*! Insert the id at the correct position in the list of args */	\
-    template <class...Args,						\
-	      int...Head,						\
-	      int...Tail>						\
-    friend DECLAUTO _eval(QUALIFIER Binder& binder,      /*!< binder to eval                           */ \
-			  IntSeq<Head...>,               /*!< list of position of components before id */ \
-			  IntSeq<Tail...>,               /*!< list of position of components after id  */ \
-			  const Tuple<Args...>& targs)   /*!< components to get                        */ \
+
+#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)\
+    /*! Provides QUALIFIER evaluator for Binder                      */	\
+    /*!                                                              */	\
+    /*! Internal Evaluator, inserting the id at the correct          */	\
+    /*! position in the list of args. Check on type B is omitted, as */	\
+    /*! the function is called only from an already checked context  */ \
+    template <typename...Args, /* Type of the arguments */		\
+	      int...Head,      /* Position of the first set of args, before insertion */ \
+	      int...Tail>      /* Position of the second set of args, after insertion */ \
+    DECLAUTO binder_internal_eval(IntSeq<Head...>,              /*!< List of position of components before id */ \
+				  IntSeq<Tail...>,              /*!< List of position of components after id  */ \
+				  const Tuple<Args...>& targs)  /*!< Components to get                        */ \
+      QUALIFIER								\
     {									\
-      return eval(binder.ref,						\
-		  get<Head>(targs)...,					\
-		  binder.id,						\
-		  get<Tail>(targs)...);					\
+      return ref.eval(get<Head>(targs)...,				\
+		      id,						\
+		      get<Tail>(targs)...);				\
     }									\
-    									\
-    /*! QUALIFIER Evaluator                                          */	\
-    /*!                                                              */ \
-    /*! Pass to the internal implementation the integer sequence     */	\
+									\
+    /*! Evaluator, external interface */				\
+    /*! */								\
+    /*! Pass to the internal implementation the integer sequence */	\
     /*! needed to deal properly with the insertion of the arg in the */	\
-    /*! correct position                                             */	\
-    template <class...Args>						\
-    friend DECLAUTO eval(QUALIFIER Binder& binder,  /*!< binder to eval    */ \
-			 const Args&...args)        /*!< components to get */ \
+    /*! correct position */						\
+    template <typename...Args>           /* Type of the arguments */	\
+    DECLAUTO eval(const Args&...args)    /*!< Components to get */	\
+      QUALIFIER								\
     {									\
       STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);			\
 									\
       using Head=IntsUpTo<pos>;						\
       using Tail=typename IntsUpTo<TK::nTypes-1-pos>::template Add<pos>; \
 									\
-      return _eval(binder,						\
-		   Head{},						\
-		   Tail{},						\
-		   std::forward_as_tuple(args...));			\
+      return binder_internal_eval(Head{},				\
+      				  Tail{},				\
+      				  std::forward_as_tuple(args...));	\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-    PROVIDE_CONST_OR_NON_CONST_EVALUATOR();
-    PROVIDE_CONST_OR_NON_CONST_EVALUATOR(const);
     
-#undef PROVIDE_CONST_OR_NON_CONST_EVALUATOR
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
+    
+#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
     
     /// Constructor taking a universal reference and the id
     explicit Binder(Ref&& tex, ///< Reference to bind

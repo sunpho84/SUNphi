@@ -77,19 +77,24 @@ namespace SUNphi
     {
       return *v;
     }
+  
+#define PROVIDE_EVALUATOR(QUALIFIER)					\
+    /*! Evaluate the tensor (returns QUALIFIED reference to internal data) */ \
+    template <class...Comps,                              /* Component types                                        */ \
+	      class=ConstrainAreIntegrals<Comps...>,      /* Force the components to be integer-like                */ \
+	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
+    QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
+    {									\
+    /* print(cout,"Components: ",comps...,"\n"); */			\
+      return v->eval(forw<const Comps>(comps)...);			\
+    }									\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
-    /// Evaluate the tensor (returns the index of the internal data)
-    /// \todo Enable only for Tens TEx
-    template <class T,
-	      class...Comps,                              // Component types
-	      class=ConstrainAreIntegrals<Comps...>,      // Force the components to be integer-like
-	      class=ConstrainNTypes<Tk::nTypes,Comps...>> // Constrain the component to be in the same number of Tk
-    friend DECLAUTO eval(T&& t,                ///< Tensor to evaluate
-			 const Comps&...comps) ///< Component values
-    {
-      //print(cout,"Components: ",comps...,"\n");
-      return eval(*t.v,forw<const Comps>(comps)...);
-    }
+    PROVIDE_EVALUATOR(NON_CONST_QUALIF);
+    PROVIDE_EVALUATOR(CONST_QUALIF);
+    
+#undef PROVIDE_EVALUATOR
+    
   };
   
   // Check that a test Tens is a UnaryTEx

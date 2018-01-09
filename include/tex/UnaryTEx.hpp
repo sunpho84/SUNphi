@@ -94,20 +94,23 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-  /// Provides the evaluator
-#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(UNARY_TEX)			\
+  /// Provides const or non-const the evaluator
+#define PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
   /*! QUALIFIER Evaluator for expression UNARY_TEX */			\
+  /*! \todo add/check that const qualifier is properly added to output */ \
   template <typename D,							\
 	    typename...Args>						\
-  friend DECLAUTO eval(D&& exp,            /*!< Expression to eval */	\
-		       const Args&...args, /*!< Parameters to pass */	\
-		       TypeIf<Is ## UNARY_TEX<D>,void*> =nullptr,	\
-		       ...)						\
+  DECLAUTO eval(const Args&...args) QUALIFIER /*!< Parameters to pass */ \
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(exp.ref,forw<const Args>(args)...);			\
+    return eval(ref,forw<const Args>(args)...);				\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Provides both const and non-const evaluators
+#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR				\
+  PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF); \
+  PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF)
   
   /// Implements a duplicated-call canceller
   ///

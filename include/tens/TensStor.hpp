@@ -39,30 +39,26 @@ namespace SUNphi
     int size;
     
     /// Defines a const or non-const evaluator
-#define DEFINE_EVAL(CONST_TAG)							\
-    /*! Returns a CONST_TAG reference to a TensStor given a set of components */ \
-    template <class...Args,                          /* Arguments type */ \
-	      class=ConstrainAreSame<int,Args...>>  /* Constrain all args to be integer */ \
-    friend CONST_TAG T& eval(CONST_TAG TensStor& ts, /*!< Reference to the TensStor */ \
-			     const Args&...args)     /*!< Components to extract */ \
+#define PROVIDE_EVAL(QUALIFIER)						\
+    /*! Returns a QUALIFIER reference to a TensStor given a set of components            */ \
+    template <class...Args,                          /* Arguments type                   */ \
+	      class=ConstrainAreSame<int,Args...>>   /* Constrain all args to be integer */ \
+    QUALIFIER T& eval(const Args&...args) QUALIFIER  /*!< Components to extract          */ \
     {									\
-      const int id=index<TK>(ts.dynSizes,forw<const Args>(args)...); \
-      /*printf("Index: %d\n",id);*/ /*debug*/				\
+      const int id=index<TK>(dynSizes,forw<const Args>(args)...);	\
+      /* printf("Index: %d\n",id);*/ /*debug*/				\
       									\
-      return ts.v[id];							\
+      return v[id];							\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
-    // Defines the non-const evaluator
-    DEFINE_EVAL();
-    
-    // Defines the const evaluator
-    DEFINE_EVAL(const);
+    PROVIDE_EVAL(NON_CONST_QUALIF);
+    PROVIDE_EVAL(CONST_QUALIF);
     
     // Undefine the macro
-#undef DEFINE_EVAL
+#undef PROVIDE_EVAL
     
-    /// Dynamic sizes 
+    /// Dynamic sizes
     DynSizes<TK::nDynamic> dynSizes;
     
     /// Constructor (test)

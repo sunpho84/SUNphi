@@ -37,7 +37,7 @@ namespace SUNphi
     using Tk=TK;
     
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Wrapper);
-    PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR(Wrapper);
+    PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR;
   };
   
   // Check that a test Wrapper is a UnaryTEx
