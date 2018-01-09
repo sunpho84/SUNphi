@@ -85,7 +85,7 @@ void test_conj()
   real(t).eval()=1.0;
   imag(t).eval()=-3.14598712480;
   
-  auto c1=t;
+  auto &c1=t;
   auto c2=conj(t);
   
   printf("im: %lg",reim(c2,0).eval());
@@ -147,9 +147,8 @@ void test_assigner()
   	col(spin(reim(cicc1,icompl),ispin),icol).eval()=
   	  icompl+NCOMPL*(ispin+NSPIN*icol);
 
-  auto t2=transpose(cicc2);
-  auto c1=conj(cicc1);
-  auto ass=assign(t2,c1);
+  auto &t2=cicc2;
+  auto ass=assign(t2,adj(cicc1));
   
   ass.close();
   
