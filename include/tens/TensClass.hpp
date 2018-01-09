@@ -39,6 +39,8 @@ namespace SUNphi
     STORING;
     IS_ALIASING_ACCORDING_TO_POINTER(v);
     
+    FORBID_CONSTRUCT_BY_COPY(Tens);
+    
   private:
     
     /// Internal storage

@@ -32,6 +32,8 @@ namespace SUNphi
     
   public:
     
+    FORBID_CONSTRUCT_BY_COPY(TensStor);
+    
     /// Debug access to internal storage
     T* &_v=v;
     

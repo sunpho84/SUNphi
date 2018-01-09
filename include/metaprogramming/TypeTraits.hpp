@@ -46,6 +46,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Delete the copy-constructor
+#define FORBID_CONSTRUCT_BY_COPY(CLASS)		\
+  CLASS(const CLASS&)=delete
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Returns the type T without any constant volatile qualification
   template <typename T>
   using RemoveCV=typename std::remove_cv<T>::type;
