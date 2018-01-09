@@ -97,14 +97,13 @@ namespace SUNphi
   /// Provides const or non-const the evaluator
 #define PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
   /*! QUALIFIER Evaluator                                               */ \
-  /*! \todo add/check that const qualifier is properly added to output */ \
-  template <typename D,							\
-	    typename...Args>						\
+  /*! \todo add/check that const qualifier is properly added to output  */ \
+  template <typename...Args>						\
   DECLAUTO eval(const Args&...args) /*!< Parameters to pass */		\
     QUALIFIER								\
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return eval(ref,forw<const Args>(args)...);				\
+    return ref.eval(forw<const Args>(args)...);				\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
