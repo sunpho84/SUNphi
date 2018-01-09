@@ -123,6 +123,7 @@ namespace SUNphi
 		const int id,           ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
+    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
     return Binder<Tg,Tb>(forw<Tb>(ref),id);
   }

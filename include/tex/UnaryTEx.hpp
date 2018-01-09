@@ -88,6 +88,8 @@ namespace SUNphi
   UNARY_TEX<T> BUILDER(T&& tex,     /*!< TEx to act upon            */	\
 		       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
   {									\
+    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
+  									\
     /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
     return UNARY_TEX<T>(forw<T>(tex));					\
   }									\
