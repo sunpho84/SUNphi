@@ -75,6 +75,9 @@ namespace SUNphi
       for(const auto &i : dynSizes)
 	size*=i;
       
+      // using namespace std;
+      // cout<<__PRETTY_FUNCTION__<<endl;
+      
       // Allocate
       v=getRawAlignedMem<T>(size);
     }
@@ -82,6 +85,9 @@ namespace SUNphi
     /// Destructor
     ~TensStor()
     {
+      // using namespace std;
+      // cout<<__PRETTY_FUNCTION__<<endl;
+      
       // Free
       freeMem(v);
     }

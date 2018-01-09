@@ -100,7 +100,7 @@ namespace SUNphi
     /// Close the assignement
     ///
     /// External interface, called to disambiguate the bound and
-    /// unbound case
+    /// unbound case.
     void close()
     {
       const bool straightAssign=(Unqualified<TKL>::nTypes==0) and (TKR::nTypes==0);
