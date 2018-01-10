@@ -17,9 +17,9 @@ namespace SUNphi
 	    typename T2, 	    // Type of the second TEx to get
 	    typename=EnableIf<IsTEx<T1> and IsTEx<T2> and Unqualified<T1>::isAssignable>,
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO assign(T1&& tex1,        ///< First TEx to act upon
-		  T2&& tex2,        ///< Second TEx to act upon
-		  SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
+  void assign(T1&& tex1,        ///< First TEx to act upon
+	      T2&& tex2,        ///< Second TEx to act upon
+	      SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
@@ -42,13 +42,8 @@ namespace SUNphi
     cout<<endl;
     
     for(int i=0;i<nComps;i++)
-      {
-	auto a=bind<TkHeadR>(forw<T1>(tex1),i);
-	auto b=bind<TkHeadR>(forw<T2>(tex2),i);
-	a=b;
-      }
-    
-    return std::move(tex1);
+	bind<TkHeadR>(forw<T1>(tex1),i)=
+	  bind<TkHeadR>(forw<T2>(tex2),i);
   }
 }
 
