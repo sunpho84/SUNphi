@@ -59,6 +59,14 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Returns the type of the element O of the Tuple Tp
+  template <int O,                           // Order of the type in the Tuple
+	    typename Tp,                     // Tuple type
+	    typename=EnableIf<IsTuple<Tp>>>  // Force Tp to be a Tuple
+  using TupleElementType=typename std::tuple_element<0,Tp>::type;
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Counts the types inside a Tuple
   ///
   /// Generic type case, forbids instantiation
