@@ -18,9 +18,9 @@ namespace SUNphi
   
   /// Returns a reference to the real part
   template <typename T> // Type of variable to be bound
-  auto real(T&& ref)    // Variable to be bound
+  DECLAUTO real(T&& ref)    // Variable to be bound
   {
-    return reim(ref,REAL_PART_ID);
+    return reim(forw<T>(ref),REAL_PART_ID);
   }
   
   /// Index of the imag part of a \c Compl
@@ -28,9 +28,9 @@ namespace SUNphi
   
   /// Returns a reference to the imag part
   template <typename T> // Type of variable to be bound
-  auto imag(T&& ref)    // Variable to be bound
+  DECLAUTO imag(T&& ref)    // Variable to be bound
   {
-    return reim(ref,IMAG_PART_ID);
+    return reim(forw<T>(ref),IMAG_PART_ID);
   }
 }
 
