@@ -131,7 +131,8 @@ namespace SUNphi
   // Check that a test Binder is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
 				    Tens<TensKind<TensComp<double,1>>,double>>);
-  
+
+  // \todo the name is horrible and misleading
   template <bool Unbound,
 	    typename T>
   DECLAUTO _evalIfUnbound(T&& tex,
@@ -144,13 +145,14 @@ namespace SUNphi
   
   template <bool Unbound,
 	    typename T>
-  DECLAUTO _evalIfUnbound(T&& tex,
-			  SFINAE_ON_TEMPLATE_ARG(not Unbound))
+  T&& _evalIfUnbound(T&& tex,
+		     SFINAE_ON_TEMPLATE_ARG(not Unbound))
   {
     //using namespace std;
     //cout<<" not Unbound, storage: "<<getStor(tex)._v<<endl;
     return forw<T>(tex);
   }
+  
   
   template <typename T,
 	    typename=EnableIf<IsTEx<T>>,
@@ -179,12 +181,13 @@ namespace SUNphi
     
     using Tg=CompOrTwinned<_Tg,Ref>;
     
-    auto b=Binder<Tg,Ref>(forw<Ref>(ref),id);
+    if(0)
+      {
+	using namespace std;
+	cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
+      }
     
-    //using namespace std;
-    //cout<<"Constructing a binder "<<&b<<"for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
-    
-    return evalIfUnbound(b);
+    return evalIfUnbound(Binder<Tg,Ref>(forw<Ref>(ref),id));
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
