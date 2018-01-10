@@ -36,6 +36,7 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename TK::Twinned;
     
+    PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(Transposer);
     PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR;
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Transposer);
   };
