@@ -298,7 +298,7 @@ namespace SUNphi
   /// void foo(D i) {} // fails if D is not int
   /// \endcode
 #define SFINAE_ON_TEMPLATE_ARG(...)	\
-  TypeIf<__VA_ARGS__,void*> =nullptr
+  TypeIf<(__VA_ARGS__),void*> =nullptr
   
   /// Provides template par list to unprioritize default SFINAE
   ///
