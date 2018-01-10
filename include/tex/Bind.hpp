@@ -112,6 +112,38 @@ namespace SUNphi
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
 				    Tens<TensKind<TensComp<double,1>>,double>>);
   
+  template <bool Unbound,
+	    typename T>
+  DECLAUTO _evalIfUnbound(T&& tex,
+			 SFINAE_ON_TEMPLATE_ARG(Unbound))
+  {
+    //using namespace std;
+    //cout<<" Unbound, storage: "<<getStor(tex)._v<<endl;
+    return tex.eval();
+  }
+  
+  template <bool Unbound,
+	    typename T>
+  DECLAUTO _evalIfUnbound(T&& tex,
+			  SFINAE_ON_TEMPLATE_ARG(not Unbound))
+  {
+    //using namespace std;
+    //cout<<" not Unbound, storage: "<<getStor(tex)._v<<endl;
+    return forw<T>(tex);
+  }
+  
+  template <typename T,
+	    typename=EnableIf<IsTEx<T>>,
+	    typename Tk=typename Unqualified<T>::Tk,
+	    int N=Tk::nTypes,
+	    bool Unbound=(N==0)>
+  DECLAUTO evalIfUnbound(T&& tex)
+  {
+    //using namespace std;
+    //cout<<"Evaluating if unbound "<<&tex<<", "<<Unbound<<", storage: "<<getStor(tex)._v<<endl;
+    return _evalIfUnbound<Unbound>(forw<T>(tex));
+  }
+  
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
@@ -127,8 +159,12 @@ namespace SUNphi
     
     using Tg=CompOrTwinned<_Tg,Ref>;
     
-    //cout<<"Constructing a binder for type "<<Tg::name()<<endl;
-    return Binder<Tg,Ref>(forw<Ref>(ref),id);
+    auto b=Binder<Tg,Ref>(forw<Ref>(ref),id);
+    
+    //using namespace std;
+    //cout<<"Constructing a binder "<<&b<<"for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
+    
+    return evalIfUnbound(b);
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -188,7 +224,7 @@ namespace SUNphi
     
     //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
     // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
-    return Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId);
+    return evalIfUnbound(Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId));
   }
   
   /// Defines a Binder named NAME for type TG
