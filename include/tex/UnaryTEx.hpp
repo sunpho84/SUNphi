@@ -43,11 +43,33 @@ namespace SUNphi
   
   /// Defines a simple creator taking a reference
 #define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
-  /*! Constructor taking a universal reference */		\
-  explicit UNARY_TEX(Ref&& tex) : ref(tex)			\
-  {								\
-  }								\
+  /*! Constructor taking universal reference */				\
+  template <typename TEX,						\
+	    typename=EnableIf<IsSame<Unqualified<TEX>,Unqualified<Ref>>>> \
+  explicit UNARY_TEX(TEX&& tex) : ref(forw<TEX>(tex))			\
+  {									\
+  }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Defines the assignement operator, calling assign
+#define PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
+  /*! Assign from another tex */					\
+  template <typename Oth>             	/* Other type  */		\
+  UNARY_TEX& operator=(Oth&& tex)	/*!< Other TEx */		\
+  {									\
+  if(0)									\
+    {									\
+      using namespace std;						\
+      cout<<"Operator=, triggering assignement to "<<this<<" of "<<&tex<<endl; \
+    }									\
+    assign(*this,forw<Oth>(tex));					\
+									\
+    return *this;							\
+  }									\
+  /*il binder sta venendo distrutto anzitempo*/	\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /////////////////////////////////////////////////////////////////
   
   /// Set aliasing according to the isAliasing of reference
   /// \todo enforce cehck only with TensClass
@@ -86,7 +108,15 @@ namespace SUNphi
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
   									\
-    /* cout<<"Constructing a UNARY_TEX for type "<<T::name()<<endl; */	\
+    if(0)								\
+      {									\
+	using namespace std;						\
+	constexpr bool IsLvalue=isLvalue<T>;				\
+	constexpr bool IsConst=isConst<T>;				\
+	cout<<"Building " #UNARY_TEX " through " #BUILDER <<endl;	\
+	constexpr bool Is=std::is_reference<T>::value;			\
+	cout<<" IsLvalue: "<<IsLvalue<<", Is: "<<Is<<", IsConst: "<<IsConst<<endl; \
+      }									\
     return UNARY_TEX<T>(forw<T>(tex));					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
@@ -121,11 +151,35 @@ namespace SUNphi
   /*! Simplify CALLER(UNARY_TEX) expression */				\
   /*!                                       */				\
   /*! Returns the nested reference          */				\
-  template <typename T,                                   /* Type of the expression                 */ \
-	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<T>)>	  /* Enable only for the UNARY_TEX required */ \
-  DECLAUTO CALLER(T&& tex)	/*!< Quantity to un-nest   */		\
+  template <typename T,                                    /* Type of the expression                 */ \
+	    typename Ref=typename RemoveReference<T>::Ref, /* Type of the reference                  */ \
+	    bool TexIsLvalue=isLvalue<T>,		   /* Detect if TEx is an lvalue             */ \
+	    bool RefIsLvalue=isLvalue<Ref>,		   /* Detect if Ref is an lvalue             */ \
+	    bool RefIsStoring=Ref::isStoring,		   /* Detect if Ref is storing               */ \
+	    bool Move=RefIsStoring and			   /* Move only if Ref is storing, and 	     */	\
+	    not (RefIsLvalue or TexIsLvalue),		   /*   no lvalue is involved          	     */	\
+	    typename Ret=Conditional<Move,Ref&&,Ref>,      /* Returned type                          */ \
+	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<T>)>	   /* Enable only for the UNARY_TEX required */ \
+  Ret CALLER(T&& tex)	/*!< Quantity to un-nest   */			\
   {									\
-    return tex.ref;							\
+    if(0)								\
+      {									\
+	constexpr bool TexIsConst=isConst<T>;				\
+	constexpr bool RefIsConst=isConst<Ref>;				\
+									\
+	using namespace std;						\
+	cout<<"Removing duplicated call " # CALLER<<" "<<__PRETTY_FUNCTION__<<endl; \
+	constexpr bool TexIs=std::is_reference<T>::value;		\
+	constexpr bool RefIs=std::is_reference<Ref>::value;		\
+	cout<<" TexIsLvalue: "<<TexIsLvalue<<endl;			\
+	cout<<" TexIs: "<<TexIs<<endl;					\
+	cout<<" TexIsConst: "<<TexIsConst<<endl;			\
+	cout<<" RefIsLvalue: "<<RefIsLvalue<<endl;			\
+	cout<<" RefIs: "<<RefIs<<endl;					\
+	cout<<" RefIsConst: "<<RefIsConst<<endl;			\
+      }									\
+									\
+    return static_cast<Ret>(tex.ref);					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
@@ -141,7 +195,6 @@ namespace SUNphi
   /*! Simplify CALLER(UNARY_TEX) expression */				\
   /*!                                       */				\
   /*! Returns the reference                 */				\
-  /*! \todo enforce const                   */				\
   template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
 	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
   DECLAUTO CALLER(D&& tex)      /*!< UnaryTEx to absorb         */	\
@@ -151,6 +204,9 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
   /// Defines a simple way to swap nested UnaryTEx
+  ///
+  /// \todo we need to implement the same check done for
+  /// CANCEL_DUPLICATED_UNARY_TEX_CALL
 #define UNARY_TEX_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
 			      UNARY_TEX, /*!< Name of the TEx  */	\
 			      INT_FUN)	 /*!< Internal builder */	\
@@ -166,6 +222,9 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
   /// Defines a simple way to swap an UnaryTEx from rhs to lhs
+  ///
+  /// \todo why can't we make only const & on rhs?
+  /// \todo we need to enforce TEx
 #define UNARY_TEX_GOES_ON_LHS(LHS_FUN,	 /*!< External builder */	\
 			      UNARY_TEX) /*!< Name of the TEx  */	\
   /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
@@ -174,10 +233,15 @@ namespace SUNphi
   template <typename Lhs,                                   /* Type of the lhs TEx                    */ \
 	    typename Rhs,                                   /* Type of the rhs UNARY_TEX              */ \
 	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<Rhs>)>   /* Enable only for the UNARY_TEX required */ \
-  DECLAUTO assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
-		  Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_TEX */ \
+  void assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
+	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_TEX */ \
   {									\
-    return assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);			\
+    if(1)								\
+      {									\
+	using namespace std;						\
+	cout<<"Moving UNARY_TEX to lhs "<<lhs.getStor()._v<<endl;	\
+      }									\
+    assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);				\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
