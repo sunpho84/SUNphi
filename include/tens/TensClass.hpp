@@ -39,8 +39,6 @@ namespace SUNphi
     STORING;
     IS_ALIASING_ACCORDING_TO_POINTER(v);
     
-    FORBID_CONSTRUCT_BY_COPY(Tens);
-    
   private:
     
     /// Internal storage
@@ -49,20 +47,53 @@ namespace SUNphi
   public:
     
     /// Sizes of the dynamical components, reference to the storage
-    DynSizes<Tk::nDynamic> &dynSizes;
+    DynSizes<Tk::nDynamic>& dynSizes;
     
     /// Construct the Tens on the basis of the dynamical sizes passed
     template <class...DynSizes>                    //   Dynamic size types
-    Tens(const DynSizes&...extDynSizes) :          ///< Passed internal dynamic size
+    explicit Tens(const DynSizes&...extDynSizes) : ///< Passed internal dynamic size
       v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
       dynSizes(v->dynSizes)                        //   Assign the storage dynamical size reference
     {
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"TensClass alloc: "<<this<<endl;
+	}
       STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
+    }
+    
+    Tens(const Tens& oth) :
+      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
+      dynSizes(v->dynSizes)               //   Assign the storage dynamical size reference
+    {
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"Tens copy constructor!"<<endl;
+	}
+    }
+    
+    Tens(Tens&& oth) : dynSizes(oth.dynSizes)
+    {
+      v=oth.v;
+      oth.v=nullptr;
+      
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"Tens move constructor!"<<endl;
+	}
     }
     
     /// Destructor
     ~Tens()
     {
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"TensClass dealloc: "<<this<<endl;
+	}
       delete v;
     }
     
@@ -88,7 +119,7 @@ namespace SUNphi
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
-      /* print(std::cout,"Components: ",comps...,"\n"); */		\
+      if(1) print(std::cout,"Components: ",&v,comps...,"\n");		\
       return v->eval(forw<const Comps>(comps)...);			\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
@@ -98,10 +129,26 @@ namespace SUNphi
     
 #undef PROVIDE_EVALUATOR
     
+    PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(Tens);
+    
   };
   
   // Check that a test Tens is a UnaryTEx
   STATIC_ASSERT_IS_TEX(Tens<TensKind<TensComp<double,1>>,double>);
+  
+  template <typename T,
+	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<T> and not IsTens<T>)>
+  DECLAUTO getStor(T&& t)
+  {
+    return getStor(t.ref);
+  }
+  
+  template <typename T,
+	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<T> and IsTens<T>)>
+  DECLAUTO getStor(T&& t)
+  {
+    return t.getStor();
+  }
 }
 
 #endif

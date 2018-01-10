@@ -32,8 +32,6 @@ namespace SUNphi
     
   public:
     
-    FORBID_CONSTRUCT_BY_COPY(TensStor);
-    
     /// Debug access to internal storage
     T* &_v=v;
     
@@ -63,32 +61,56 @@ namespace SUNphi
     /// Dynamic sizes
     DynSizes<TK::nDynamic> dynSizes;
     
-    /// Constructor (test)
-    template <class...DynSizes,                                  // Arguments (sizes)
-	      class=ConstrainNTypes<TK::nDynamic,DynSizes...>>
-    TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
+    /// Allocator
+    void alloc()
     {
-      // Constrain the arguments to be all integer-like
-      STATIC_ASSERT_ARE_INTEGRALS(DynSizes...);
-      //printf("Ah ah! %d\n",TK::nDynamic);
-      
       // Compute the size
       size=TK::maxStaticIdx;
       for(const auto &i : dynSizes)
 	size*=i;
       
-      // using namespace std;
-      // cout<<__PRETTY_FUNCTION__<<endl;
-      
       // Allocate
       v=getRawAlignedMem<T>(size);
+      
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+	}
+    }
+    
+    /// Constructor (test)
+    template <class...DynSizes,                                  // Arguments (sizes)
+	      class=ConstrainNTypes<TK::nDynamic,DynSizes...>>
+    explicit TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
+    {
+      // Constrain the arguments to be all integer-like
+      STATIC_ASSERT_ARE_INTEGRALS(DynSizes...);
+      //printf("Ah ah! %d\n",TK::nDynamic);
+      
+      alloc();
+    }
+    
+    /// Copy constructor (test)
+    ///
+    /// \todo improve memcpy, this could be parallelized in many ways,
+    /// we have to implement memory manager soon
+    explicit TensStor(const TensStor& oth) : dynSizes(oth.dynSizes)
+    {
+      alloc();
+      
+      for(int i=0;i<size;i++)
+	v[i]=oth.v[i];
     }
     
     /// Destructor
     ~TensStor()
     {
-      // using namespace std;
-      // cout<<__PRETTY_FUNCTION__<<endl;
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"TensStor destructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+	}
       
       // Free
       freeMem(v);
