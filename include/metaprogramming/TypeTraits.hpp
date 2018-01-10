@@ -50,20 +50,6 @@ namespace SUNphi
 #define FORBID_CONSTRUCT_BY_COPY(CLASS)		\
   CLASS(const CLASS&)=delete
   
-  /////////////////////////////////////////////////////////////////
-  
-  /// Returns the type T without any constant volatile qualification
-  template <typename T>
-  using RemoveCV=typename std::remove_cv<T>::type;
-  
-  /// Returns the type T without any reference
-  template <typename T>
-  using RemoveReference=typename std::remove_reference<T>::type;
-  
-  /// Returns the type T without any reference or qualifier
-  template <typename T>
-  using Unqualified=RemoveCV<RemoveReference<T>>;
-  
   /////////////////////////////////////////////////////////////////////
   
   /// Defines type T (default to void) if parameter B is true
@@ -106,21 +92,6 @@ namespace SUNphi
   template <bool B,          // Boolean constant deciding whether the type is enabled
 	    typename T>      // Type to be enabled
   using TypeIf=EnableIf<B,T>;
-  
-  /////////////////////////////////////////////////////////////////////
-  
-  /// Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html
-  template <class T,
-	    class U,
-	    class=EnableIf<(std::is_lvalue_reference<T>::value ?
-			    std::is_lvalue_reference<U>::value :
-			    true) and
-			   std::is_convertible <RemoveReference<U>*,
-						RemoveReference<T>*>::value>>
-  constexpr T&& forw(U&& u)
-  {
-    return static_cast<T&&>(u);
-  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -169,7 +140,7 @@ namespace SUNphi
     /// Internal type (F)
     typedef F type;
   };
-    
+  
   /// Provides type T if B is true, or F if is false
   ///
   /// Wraps the internal implementation
@@ -178,24 +149,75 @@ namespace SUNphi
 	    typename F>  // F Type enabled if false
   using Conditional=typename _Conditional<B,T,F>::type;
   
-  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
   
-  /// Returns const or non const T depending on condition
-  template <bool B,      // Condition
-	    typename T>  // Type
-  using ConstIf=Conditional<B,const T,T>;
+  /// Returns the type T without any reference
+  template <typename T>
+  using RemoveReference=typename std::remove_reference<T>::type;
+  
+  /// Check if the type is lvalue reference
+  template <typename T>
+  constexpr bool isLvalue=std::is_lvalue_reference<T>::value;
+  
+  /// Check if the type is rvalue reference
+  template <typename T>
+  constexpr bool isRvalue=std::is_rvalue_reference<T>::value;
   
   /// Returns reference of plain type depending on condition
-  template <bool B,      // Condition
-	    typename T>  // Type
+  template <bool B,                          // Condition
+	    typename _T,                     // Type
+	    typename T=RemoveReference<_T>>  // Remove reference from type
   using RefIf=Conditional<B,T&,T>;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the type T without any constant volatile qualification
+  template <typename T>
+  using RemoveCV=typename std::remove_cv<T>::type;
+  
+  /// Returns whether T is const or not
+  template <typename T>  // Type
+  constexpr bool isConst=std::is_const<T>::value;
+  
+  /// Returns const or non const T depending on condition
+  template <bool B,       // Condition
+	    typename _T,  // Type
+	    typename T=RemoveCV<_T>>  // Remove const from type
+  using ConstIf=Conditional<B,const T,T>;
+  
+  /////////////////////////////////////////////////////////////////////
+  
+  /// Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html
+  template <class T,
+	    class U,
+	    class=EnableIf<(isLvalue<T> ?
+			    isLvalue<U> :
+			    true) and
+			   std::is_convertible <RemoveReference<U>*,
+						RemoveReference<T>*>::value>>
+  constexpr T&& forw(U&& u)
+  {
+    return static_cast<T&&>(u);
+  }
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the type T without any reference or qualifier
+  template <typename T>
+  using Unqualified=RemoveCV<RemoveReference<T>>;
   
   /////////////////////////////////////////////////////////////////////
   
   /// Identifies whether Base is a base class of Derived
-  template <typename Base,
-	    typename Derived>
+  template <typename Base,     // The type that can be base
+	    typename Derived>  // The type where Base is searched
   constexpr bool IsBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// See http://ericniebler.com/2013/08/07/universal-references-and-the-copy-constructo/
+#define UNIVERSAL_REFERENCE_CONSTRUCTOR_OF_WRAPPER_DISABLE(T,WRAPPER)	\
+  typename=EnableIf<not IsBaseOf<WRAPPER<T>,T>>
   
   /////////////////////////////////////////////////////////////////////
   
