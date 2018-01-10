@@ -13,9 +13,14 @@
 namespace SUNphi
 {
   /// Reference to T or new type, depending on wheter the class isStoring
-  template <typename T,                 // Type to get reference from
-	    typename=ConstrainIsTEx<T>> // Constrain the type to be a TEx
-  using Reference=RefIf<Unqualified<T>::isStoring,T>;
+  ///
+  /// Const qualifier is passed throughout
+  /// \todo add funcntionality as in Eigen
+  template <typename T,                                // Type to get reference from
+	    typename=ConstrainIsTEx<T>,                // Constrain the type to be a TEx
+	    bool IsStoring=Unqualified<T>::isStoring,  // Check if it is storing
+	    bool IsLvalue=isLvalue<T>>                 // Check if lvalue
+  using Reference=RefIf<IsStoring and IsLvalue,RemoveReference<T>>;
 }
 
 #endif
