@@ -99,11 +99,31 @@ namespace SUNphi
     
 #undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
     
+    PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(Binder);
+    
     /// Constructor taking a universal reference and the id
-    explicit Binder(Ref&& tex, ///< Reference to bind
+    ///
+    /// \todo add check on TEX
+    template <typename TEX,						\
+	      typename=EnableIf<IsSame<Unqualified<TEX>,Unqualified<Ref>>>> \
+    explicit Binder(TEX&& tex, ///< Reference to bind
 		    int id)    ///< Component to get
-      : ref(tex),id(id)
+      : ref(forw<TEX>(tex)),id(id)
     {
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"Constructing binder "<<this<<endl;
+	}
+    }
+    
+    ~Binder()
+    {
+      if(1)
+	{
+	  using namespace std;
+	  cout<<"Destroying binder "<<this<<endl;
+	}
     }
     
   };
