@@ -117,6 +117,7 @@ namespace SUNphi
 	}
     }
     
+    /// Destructor
     ~Binder()
     {
       if(1)
@@ -131,50 +132,61 @@ namespace SUNphi
   // Check that a test Binder is a UnaryTEx
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
 				    Tens<TensKind<TensComp<double,1>>,double>>);
-
-  // \todo the name is horrible and misleading
-  template <bool Unbound,
-	    typename T>
-  DECLAUTO _evalIfUnbound(T&& tex,
-			 SFINAE_ON_TEMPLATE_ARG(Unbound))
+  
+  /// Return the evaluation of the TEx
+  template <bool IsFullyBound, // Flag to disambiguate
+	    typename TEX>      // Type of the TEx
+  DECLAUTO _evalIfFullyBound(TEX&& tex,                            ///< Expression to evaluate
+			     SFINAE_ON_TEMPLATE_ARG(IsFullyBound)) //   Force fully bound case
   {
-    //using namespace std;
-    //cout<<" Unbound, storage: "<<getStor(tex)._v<<endl;
+    if(0)
+      {
+	using namespace std;
+	cout<<" FullyBound, storage: "<<getStor(tex)._v<<endl;
+      }
     return tex.eval();
   }
   
-  template <bool Unbound,
-	    typename T>
-  T&& _evalIfUnbound(T&& tex,
-		     SFINAE_ON_TEMPLATE_ARG(not Unbound))
+  /// Return the TEx itself
+  template <bool IsFullyBound, // Flag to disambiguate
+	    typename TEX>      // Type of the TEx
+  DECLAUTO _evalIfFullyBound(TEX&& tex,                                ///< Expression to evaluate
+			     SFINAE_ON_TEMPLATE_ARG(not IsFullyBound)) //   Force not fully bound case
   {
-    //using namespace std;
-    //cout<<" not Unbound, storage: "<<getStor(tex)._v<<endl;
-    return forw<T>(tex);
+    if(0)
+      {
+	using namespace std;
+	cout<<" not FullyBound, storage: "<<getStor(tex)._v<<endl;
+      }
+    return forw<TEX>(tex);
   }
   
-  
-  template <typename T,
-	    typename=EnableIf<IsTEx<T>>,
-	    typename Tk=typename Unqualified<T>::Tk,
-	    int N=Tk::nTypes,
-	    bool Unbound=(N==0)>
-  DECLAUTO evalIfUnbound(T&& tex)
+  /// Return the TEx itself or its evaluation, if fully bound
+  template <typename TEX,                                // Type of expression
+	    typename=EnableIf<IsTEx<TEX>>,               // Force to be a TEx
+	    typename Tk=typename Unqualified<TEX>::Tk,   // Get the TensKind
+	    int N=Tk::nTypes,                            // Count the free components of TEx
+	    bool FullyBound=(N==0)>                      // Check if fully bound
+  DECLAUTO evalIfFullyBound(TEX&& tex)                   ///< TEx to be treated
   {
-    //using namespace std;
-    //cout<<"Evaluating if unbound "<<&tex<<", "<<Unbound<<", storage: "<<getStor(tex)._v<<endl;
-    return _evalIfUnbound<Unbound>(forw<T>(tex));
+    if(0)
+      {
+	using namespace std;
+	cout<<"Evaluating if unbound "<<&tex<<", "<<FullyBound<<", storage: "<<getStor(tex)._v<<endl;
+      }
+    
+    return _evalIfFullyBound<FullyBound>(forw<TEX>(tex));
   }
   
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
-  /// demanded to Binder
+  /// demanded to Binder.
   template <typename _Tg,                       // Type to get
 	    typename Ref,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO bind(Ref&& ref,              ///< Quantity to bind to
-		const int id,           ///< Entry of the component to bind
+  DECLAUTO bind(Ref&& ref,                     ///< Quantity to bind to
+		const int id,                  ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
@@ -187,7 +199,7 @@ namespace SUNphi
 	cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
       }
     
-    return evalIfUnbound(Binder<Tg,Ref>(forw<Ref>(ref),id));
+    return evalIfFullyBound(Binder<Tg,Ref>(forw<Ref>(ref),id));
   }
   
   // /// Bind the \c id component of type \c Tg from expression \c ref
@@ -243,7 +255,7 @@ namespace SUNphi
     
   //   //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
   //   // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
-  //   return evalIfUnbound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
+  //   return evalIfFullyBound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
   // }
   
   /// Defines a Binder named NAME for type TG

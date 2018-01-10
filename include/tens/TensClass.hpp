@@ -63,6 +63,7 @@ namespace SUNphi
       STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
     }
     
+    /// Copy constructor
     Tens(const Tens& oth) :
       v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
       dynSizes(v->dynSizes)               //   Assign the storage dynamical size reference
@@ -74,6 +75,7 @@ namespace SUNphi
 	}
     }
     
+    /// Move constructor
     Tens(Tens&& oth) : dynSizes(oth.dynSizes)
     {
       v=oth.v;
@@ -136,18 +138,36 @@ namespace SUNphi
   // Check that a test Tens is a UnaryTEx
   STATIC_ASSERT_IS_TEX(Tens<TensKind<TensComp<double,1>>,double>);
   
-  template <typename T,
-	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<T> and not IsTens<T>)>
-  DECLAUTO getStor(T&& t)
+  /// Get the storage of a TEx
+  ///
+  /// default case, asserting if tex is not a UnaryTEx as needed
+  template <typename TEX,      // Type of the TEx
+	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
+  void getStor(TEX&& tex,      ///< TEx to be searched
+	       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
-    return getStor(t.ref);
+    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
+    STATIC_ASSERT_IS_UNARY_TEX(TEX);
   }
   
-  template <typename T,
-	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<T> and IsTens<T>)>
-  DECLAUTO getStor(T&& t)
+  /// Get the storage of a TEx
+  ///
+  /// In this case we are treating a UnaryTEx which is not a Tens
+  template <typename TEX,     // Type of the TEx
+	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<TEX> and not IsTens<TEX>)>
+  auto& getStor(TEX&& tex)    ///< TEx to be searched
   {
-    return t.getStor();
+    return getStor(tex.ref);
+  }
+  
+  /// Get the storage of a TEx
+  ///
+  /// In this case we are treating a UnaryTEx which is a Tens
+  template <typename TEX,     // Type of the TEx
+	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<TEX> and IsTens<TEX>)>
+  auto& getStor(TEX&& tex)    ///< TEx to be searched
+  {
+    return tex.getStor();
   }
 }
 
