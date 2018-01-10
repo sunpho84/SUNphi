@@ -190,65 +190,61 @@ namespace SUNphi
     return evalIfUnbound(Binder<Tg,Ref>(forw<Ref>(ref),id));
   }
   
-  /// Bind the \c id component of type \c Tg from expression \c ref
-  ///
-  /// Nested binder getting an already bound expression, swapping the
-  /// inner and outer types and components if needed.
-  ///
-  /// \code
-  /// Tens<TensKind<Compl,RwSpin>,double> cicc;
-  /// spin(reim(cicc,0),1);
-  /// reim(spin(cicc,1),0);
-  /// \endcode
-  ///
-  /// This might be not enough to ensure proper evaluation if the
-  /// nesting occurs through a wrapper, as in the following example
-  ///
-  /// \code
-  /// spin(wrap(reim(cicc,0)),1);
-  /// reim(wrap(spin(cicc,1)),0);
-  /// \endcode
-  template <typename _Tg,                        // Type to get
-	    typename T,                          // Type of the nested binder
-	    SFINAE_ON_TEMPLATE_ARG(IsBinder<T>)> // Enable only for Binders
-  DECLAUTO bind(T&& nb,                          ///< Binder to rebind
-		const int id)                    ///< Component to get
-  {
-    // True component searched
-    using Tg=CompOrTwinned<_Tg,T>;
-    // Type got by the nested bounder
-    using InNestedTg=typename Unqualified<T>::Tg;
-    // Type of the reference bound by the nested bounder
-    using InNestedRef=typename Unqualified<T>::Ref;
-    // Tensor Kind of input nested binder
-    using InNestedRefTk=typename RemoveReference<InNestedRef>::Tk;
-    // Types of the Tensor Kind of nested bounder
-    using NestedTypes=typename InNestedRefTk::types;
-    // Position inside the nested reference of the type got by the nested bounder
-    constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
-    // Position inside the nested reference of the type to get
-    static constexpr int NestedTgPos=posOfType<Tg,NestedTypes>;
-    // Keep note of whether we need to swap
-    constexpr bool swap=(NestedTgPos>InNestedNestedTgPos);
-    // Type got by the output nested binder
-    using OutNestedTg=Conditional<swap,Tg,InNestedTg>;
-    // Type got by the output binder
-    using OutTg=Conditional<swap,InNestedTg,Tg>;
-    // Nested component
-    const int nestedId=nb.id;
-    // Out external component
-    const int outNestedId=(swap?id:nestedId);
-    // Out component
-    const int outId=(swap?nestedId:id);
-    // Output Nested binder
-    auto outNestedBinder=bind<OutNestedTg>(nb.ref,outNestedId);
-    // Type of the output nested binder
-    using OutNestedBinder=decltype(outNestedBinder);
+  // /// Bind the \c id component of type \c Tg from expression \c ref
+  // ///
+  // /// Nested binder getting an already bound expression, swapping the
+  // /// inner and outer types and components if needed.
+  // ///
+  // /// \code
+  // /// Tens<TensKind<Compl,RwSpin>,double> cicc;
+  // /// spin(reim(cicc,0),1);
+  // /// reim(spin(cicc,1),0);
+  // /// \endcode
+  // ///
+  // /// This might be not enough to ensure proper evaluation if the
+  // /// nesting occurs through a wrapper, as in the following example
+  // ///
+  // /// \code
+  // /// spin(wrap(reim(cicc,0)),1);
+  // /// reim(wrap(spin(cicc,1)),0);
+  // /// \endcode
+  // template <typename _Tg,                        // Type to get
+  // 	    typename InNestedTg,                 //Type got by the nested bounder
+  // 	    typename InNestedRef>                // Type of the nested binder
+  // DECLAUTO bind(const Binder<InNestedTg,InNestedRef>& nb,                          ///< Binder to rebind
+  // 		const int id)                    ///< Component to get
+  // {
+  //   // True component searched
+  //   using Tg=CompOrTwinned<_Tg,Binder<InNestedTg,InNestedRef>>;
+  //   // Tensor Kind of input nested binder
+  //   using InNestedRefTk=typename RemoveReference<InNestedRef>::Tk;
+  //   // Types of the Tensor Kind of nested bounder
+  //   using NestedTypes=typename InNestedRefTk::types;
+  //   // Position inside the nested reference of the type got by the nested bounder
+  //   constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
+  //   // Position inside the nested reference of the type to get
+  //   static constexpr int NestedTgPos=posOfType<Tg,NestedTypes>;
+  //   // Keep note of whether we need to swap
+  //   constexpr bool swap=(NestedTgPos>InNestedNestedTgPos);
+  //   // Type got by the output nested binder
+  //   using OutNestedTg=Conditional<swap,Tg,InNestedTg>;
+  //   // Type got by the output binder
+  //   using OutTg=Conditional<swap,InNestedTg,Tg>;
+  //   // Nested component
+  //   const int nestedId=nb.id;
+  //   // Out external component
+  //   const int outNestedId=(swap?id:nestedId);
+  //   // Out component
+  //   const int outId=(swap?nestedId:id);
+  //   // Output Nested binder
+  //   auto outNestedBinder=bind<OutNestedTg>(nb.ref,outNestedId);
+  //   // Type of the output nested binder
+  //   using OutNestedBinder=decltype(outNestedBinder);
     
-    //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
-    // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
-    return evalIfUnbound(Binder<OutTg,OutNestedBinder>(std::move(outNestedBinder),outId));
-  }
+  //   //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
+  //   // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
+  //   return evalIfUnbound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
+  // }
   
   /// Defines a Binder named NAME for type TG
 #define DEFINE_NAMED_BINDER(TG,NAME)					\
