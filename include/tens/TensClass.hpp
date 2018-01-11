@@ -108,7 +108,8 @@ namespace SUNphi
     {
       return *v;
     }
-
+    
+    /// Enable or not printing the components
 #ifdef DEBUG_TENS
     #define DEBUG_TENS_COMPONENTS 1
 #else

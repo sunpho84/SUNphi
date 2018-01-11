@@ -4,3 +4,6 @@ AM_CPPFLAGS=-I$(top_srcdir)/include
 
 bin_PROGRAMS=main
 main_SOURCES=main.cpp
+
+bin_PROGRAMS+=test
+test_SOURCES=test.cpp
