@@ -55,11 +55,10 @@ namespace SUNphi
       v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
       dynSizes(v->dynSizes)                        //   Assign the storage dynamical size reference
     {
-      if(1)
-	{
+#ifdef DEBUG_TENS
 	  using namespace std;
 	  cout<<"TensClass alloc: "<<this<<endl;
-	}
+#endif
       STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
     }
     
@@ -68,11 +67,10 @@ namespace SUNphi
       v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
       dynSizes(v->dynSizes)               //   Assign the storage dynamical size reference
     {
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"Tens copy constructor!"<<endl;
-	}
+#ifdef DEBUG_TENS
+      using namespace std;
+      cout<<"Tens copy constructor!"<<endl;
+#endif
     }
     
     /// Move constructor
@@ -81,21 +79,19 @@ namespace SUNphi
       v=oth.v;
       oth.v=nullptr;
       
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"Tens move constructor!"<<endl;
-	}
+#ifdef DEBUG_TENS
+      using namespace std;
+      cout<<"Tens move constructor!"<<endl;
+#endif
     }
     
     /// Destructor
     ~Tens()
     {
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"TensClass dealloc: "<<this<<endl;
-	}
+#ifdef DEBUG_TENS
+      using namespace std;
+      cout<<"TensClass dealloc: "<<this<<endl;
+#endif
       delete v;
     }
     
@@ -112,6 +108,12 @@ namespace SUNphi
     {
       return *v;
     }
+
+#ifdef DEBUG_TENS
+    #define DEBUG_TENS_COMPONENTS 1
+#else
+    #define DEBUG_TENS_COMPONENTS 0
+#endif
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_EVALUATOR(QUALIFIER)					\
@@ -121,7 +123,7 @@ namespace SUNphi
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
-      if(1) print(std::cout,"Components: ",&v,comps...,"\n");		\
+      if(DEBUG_TENS_COMPONENTS) print(std::cout,"Components: ",&v,comps...,"\n");	\
       return v->eval(forw<const Comps>(comps)...);			\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE

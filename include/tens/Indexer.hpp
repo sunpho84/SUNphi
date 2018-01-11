@@ -78,14 +78,13 @@ namespace SUNphi
 	Nested::thisDynamic?
 	dynSizes[nestedIDyn]:
 	Nested::headSize;
-      if(0)
-	{
+#ifdef DEBUG_INDEXER
 	  printf("NestedDyn: %d",Nested::thisDynamic);
 	  printf(", Nested::HeadSize: %d",Nested::headSize);
 	  printf(", %d",nestedIDyn);
 	  if(Nested::thisDynamic) printf(" %d",dynSizes[nestedIDyn]);
 	  printf("\n");
-	}
+#endif
       
       // Compose nested value, size and this component
       return nested+nestedSize*thisComp;

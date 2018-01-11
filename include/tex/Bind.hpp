@@ -110,21 +110,19 @@ namespace SUNphi
 		    int id)    ///< Component to get
       : ref(forw<TEX>(tex)),id(id)
     {
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"Constructing binder "<<this<<endl;
-	}
+#ifdef DEBUG_BINDER
+      using namespace std;
+      cout<<"Constructing binder "<<this<<endl;
+#endif
     }
     
     /// Destructor
     ~Binder()
     {
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"Destroying binder "<<this<<endl;
-	}
+#ifdef DEBUG_BINDER
+      using namespace std;
+      cout<<"Destroying binder "<<this<<endl;
+#endif
     }
     
   };
@@ -139,26 +137,27 @@ namespace SUNphi
   DECLAUTO _evalIfFullyBound(TEX&& tex,                            ///< Expression to evaluate
 			     SFINAE_ON_TEMPLATE_ARG(IsFullyBound)) //   Force fully bound case
   {
-    if(0)
-      {
-	using namespace std;
-	cout<<" FullyBound, storage: "<<getStor(tex)._v<<endl;
-      }
+#ifdef DEBUG_BINDER
+    using namespace std;
+    cout<<" FullyBound, storage: "<<getStor(tex)._v<<endl;
+#endif
     return tex.eval();
   }
   
   /// Return the TEx itself
   template <bool IsFullyBound, // Flag to disambiguate
 	    typename TEX>      // Type of the TEx
-  DECLAUTO _evalIfFullyBound(TEX&& tex,                                ///< Expression to evaluate
-			     SFINAE_ON_TEMPLATE_ARG(not IsFullyBound)) //   Force not fully bound case
+  TEX _evalIfFullyBound(TEX&& tex,                                ///< Expression to evaluate
+			SFINAE_ON_TEMPLATE_ARG(not IsFullyBound)) //   Force not fully bound case
   {
-    if(0)
-      {
-	using namespace std;
-	cout<<" not FullyBound, storage: "<<getStor(tex)._v<<endl;
-      }
-    return forw<TEX>(tex);
+#ifdef DEBUG_BINDER
+    using namespace std;
+    cout<<" not FullyBound, storage: "<<getStor(tex)._v<<endl;
+    cout<<" is_lvalue: "<<isLvalue<TEX><<endl;
+    cout<<" is_rvalue: "<<isRvalue<TEX><<endl;
+    cout.flush();
+#endif
+    return tex;
   }
   
   /// Return the TEx itself or its evaluation, if fully bound
@@ -169,11 +168,10 @@ namespace SUNphi
 	    bool FullyBound=(N==0)>                      // Check if fully bound
   DECLAUTO evalIfFullyBound(TEX&& tex)                   ///< TEx to be treated
   {
-    if(0)
-      {
-	using namespace std;
-	cout<<"Evaluating if unbound "<<&tex<<", "<<FullyBound<<", storage: "<<getStor(tex)._v<<endl;
-      }
+#ifdef DEBUG_BINDER
+    using namespace std;
+    cout<<"Evaluating if unbound "<<&tex<<", "<<FullyBound<<", storage: "<<getStor(tex)._v<<endl;
+#endif
     
     return _evalIfFullyBound<FullyBound>(forw<TEX>(tex));
   }
@@ -193,11 +191,10 @@ namespace SUNphi
     
     using Tg=CompOrTwinned<_Tg,Ref>;
     
-    if(0)
-      {
-	using namespace std;
-	cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
-      }
+#ifdef DEBUG_BINDER
+    using namespace std;
+    cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
+#endif
     
     return evalIfFullyBound(Binder<Tg,Ref>(forw<Ref>(ref),id));
   }

@@ -72,11 +72,10 @@ namespace SUNphi
       // Allocate
       v=getRawAlignedMem<T>(size);
       
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
-	}
+#ifdef DEBUG_STOR
+      using namespace std;
+      cout<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+#endif
     }
     
     /// Constructor (test)
@@ -106,11 +105,10 @@ namespace SUNphi
     /// Destructor
     ~TensStor()
     {
-      if(1)
-	{
-	  using namespace std;
-	  cout<<"TensStor destructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
-	}
+#ifdef DEBUG_STOR
+      using namespace std;
+      cout<<"TensStor destructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+#endif
       
       // Free
       freeMem(v);

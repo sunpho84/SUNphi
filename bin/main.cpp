@@ -1,3 +1,7 @@
+//#define EVAL .eval()
+
+//#define EVAL
+
 #include <SUNphi.hpp>
 
 #include <array>
@@ -9,29 +13,29 @@ using namespace SUNphi;
 #define WHEREAMY				\
     cout<<"///////////////////////////////////////////////////////////////// "<<__PRETTY_FUNCTION__<<"/////////////////////////////////////////////////////////////////"<<endl
 
-
 // void test_first_vectorizer()
 // {
 //   int a=MyTk::firstVectorizingComp<double>;
 //   cout<<a<<endl;
 // }
 
-// void test_transpose()
-// {
-//   WHEREAMY;
+
+void test_transpose()
+{
+  WHEREAMY;
   
-//   using Su3Tens=Tens<TensKind<RwCol,CnCol>,double>;
+  using Su3Tens=Tens<TensKind<RwCol,CnCol>,double>;
   
-//   Su3Tens t;
+  Su3Tens t;
   
-//   for(int rw_c=0;rw_c<NCOL;rw_c++)
-//     for(int cn_c=0;cn_c<NCOL;cn_c++)
-//       rwCol(cnCol(transpose(t),cn_c),rw_c)=cn_c;
+  for(int rw_c=0;rw_c<NCOL;rw_c++)
+    for(int cn_c=0;cn_c<NCOL;cn_c++)
+      rwCol(cnCol(transpose(t),cn_c),rw_c)=cn_c;
   
-//   for(int rw_c=0;rw_c<NCOL;rw_c++)
-//     for(int cn_c=0;cn_c<NCOL;cn_c++)
-//       cout<<cn_c<<" "<<rwCol(cnCol(t,cn_c),rw_c)<<endl;
-// }
+  for(int rw_c=0;rw_c<NCOL;rw_c++)
+    for(int cn_c=0;cn_c<NCOL;cn_c++)
+      cout<<cn_c<<" "<<rwCol(cnCol(t,cn_c),rw_c)<<endl;
+}
 
 #define STATIC_ASSERT_DUPLICATED_CALL_REMOVER(FUN,...)			\
   static_assert(IsSame<							\
@@ -55,38 +59,41 @@ void test_duplicated_call_remover()
   STATIC_ASSERT_DUPLICATED_CALL_ABSORBER(wrap,Tens<TensKind<Compl>,double>);
 }
 
-// void test_binding()
-// {
-//   WHEREAMY;
+void test_binding()
+{
+  WHEREAMY;
   
-//   Tens<TensKind<RwSpin,Compl>,double> cicc;
+  Tens<TensKind<RwSpin,Compl>,double> cicc;
   
-//   reim(spin(cicc,0),0)=1.923424;
+  //reim(spin(cicc,0),0)=1.923424;
+  auto d=spin(cicc,0);
+  auto &e=reim(d,0);
+  e=1.9234424;
   
-//   cout<<&spin(reim(cicc,0),0)<<" "<<cicc.getStor()._v<<endl;
-//   //cout<<reim(a,0)<<endl;
+  cout<<spin(reim(cicc,0),0)<<" "<<cicc.getStor()._v<<endl;
+  //cout<<reim(a,0)<<endl;
   
-//   //spin(wrap(reim(cicc,0)),1)=1.0;
-//   //cout<<"is_lvalue: "<<is_lvalue_reference<decltype()>::value<<endl;;
-// }
+  //spin(wrap(reim(cicc,0)),1)=1.0;
+  //cout<<"is_lvalue: "<<is_lvalue_reference<decltype()>::value<<endl;;
+}
 
-// void test_isAliasing()
-// {
-//   using ComplTens=Tens<TensKind<Compl>,double>;
+void test_isAliasing()
+{
+  using ComplTens=Tens<TensKind<Compl>,double>;
   
-//   ComplTens t,u;
+  ComplTens t,u;
   
-//   //transpose_bis(t);
+  //transpose_bis(t);
   
-//   auto a=wrap(Tens<TensKind<Compl>,double>{});
-//   auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
+  auto a=wrap(Tens<TensKind<Compl>,double>{});
+  auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
   
-//   cout<< IsSame<RemoveReference<decltype(a)>,RemoveReference<decltype(b)>> <<endl;
-//   cout<<IsSame<decltype(a),decltype(b)><<endl;
-//   cout<<"t.isAliasing(t): "<<t.isAliasing(t.getStor())<<endl;
-//   cout<<"t.isAliasing(u): "<<t.isAliasing(u.getStor())<<endl;
-//   cout<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor())<<endl;
-// }
+  cout<< IsSame<RemoveReference<decltype(a)>,RemoveReference<decltype(b)>> <<endl;
+  cout<<IsSame<decltype(a),decltype(b)><<endl;
+  cout<<"t.isAliasing(t): "<<t.isAliasing(t.getStor())<<endl;
+  cout<<"t.isAliasing(u): "<<t.isAliasing(u.getStor())<<endl;
+  cout<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor())<<endl;
+}
 
 void test_conj()
 {
@@ -102,54 +109,54 @@ void test_conj()
   //auto &c1=t;
   auto c2=conj(t);
   
-  printf("im: %lg",reim(c2,0));
-  printf("im: %lg",reim(c2,1));
+  printf("re: %lg vs %lg\n",real(c2),real(t));
+  printf("im: %lg vs %lg\n",imag(c2),imag(t));
 }
 
-// void test_bind_complicated_expression()
-// {
-//   WHEREAMY;
+void test_bind_complicated_expression()
+{
+  WHEREAMY;
   
-//   Tens<TensKind<Compl>,double> t;
-//   auto tr=transpose(wrap(wrap(t)));
-//   reim(transpose(tr),0)=1.0;
-//   reim(transpose(transpose(Tens<TensKind<Compl>,double>{})),0)=1.0;
-//        //const double &e=reim(conj()),0);
-//   using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
-//   //using MyTk=TensKind<Col,Spin,Compl>;
-//   using MyTens=Tens<MyTk,double>;
+  Tens<TensKind<Compl>,double> t;
+  auto tr=transpose(wrap(wrap(t)));
+  reim(transpose(tr),0)=1.0;
+  //reim(transpose(transpose(Tens<TensKind<Compl>,double>{})),0)=1.0;
+       //const double &e=reim(conj()),0);
+  using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
+  //using MyTk=TensKind<Col,Spin,Compl>;
+  using MyTens=Tens<MyTk,double>;
   
-//   //int a=MyTk::firstVectorizingComp<double>;
-//   //cout<<a<<endl;
+  //int a=MyTk::firstVectorizingComp<double>;
+  //cout<<a<<endl;
   
-//   int vol=10;
-//   MyTens cicc(vol);
+  int vol=10;
+  MyTens cicc(vol);
   
-//   // auto &v=cicc.getStor();
+  // auto &v=cicc.getStor();
   
-//   // index<MyTk>(v.dynSizes,0,0,0,0);
+  // index<MyTk>(v.dynSizes,0,0,0,0);
   
-//   //eval(cicc.getStor(),0,0,0,0);
+  //eval(cicc.getStor(),0,0,0,0);
   
-//   for(int ic=0;ic<NCOL;ic++)
-//     for(int id=0;id<NSPIN;id++)
-//       for(int ri=0;ri<NCOMPL;ri++)
-//       {
-//   	//double &ref=eval(color(spin(cicc,id),ic));
-//   	double &ref=site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0);
-//   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
-//   	ref=3.141592352352;
-//       }
+  for(int ic=0;ic<NCOL;ic++)
+    for(int id=0;id<NSPIN;id++)
+      for(int ri=0;ri<NCOMPL;ri++)
+      {
+  	//double &ref=eval(color(spin(cicc,id),ic));
+  	double &ref=site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0);
+  	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
+  	ref=3.141592352352;
+      }
   
-//   auto binder1=site(reim(spin(col(cicc,2),3),1),0);
-//   // //auto binder2=color(spin(cicc,2),1);
+  auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  // //auto binder2=color(spin(cicc,2),1);
   
-//   // // eval(binder1)=8.0;
-//   // printf("%d\n",cicc.getStor().nel);
-//   printf("ANNA %lg\n",binder1);
-//   // cout<<Spacetime::name()<<endl;
-//   // cout<<Col::name()<<endl;
-//  }
+  // // eval(binder1)=8.0;
+  // printf("%d\n",cicc.getStor().nel);
+  printf("ANNA %lg\n",binder1);
+  // cout<<Spacetime::name()<<endl;
+  // cout<<Col::name()<<endl;
+ }
 
 // void test_assigner()
 // {
@@ -169,7 +176,7 @@ void test_conj()
 //   for(int icol=0;icol<NCOL;icol++)
 //     for(int ispin=0;ispin<NSPIN;ispin++)
 //       for(int icompl=0;icompl<NCOMPL;icompl++)
-//   	col(spin(reim(cicc1,icompl),ispin),icol)=
+//   	col(spin(reim(cicc1,icompl),ispin),icol) EVAL=
 //   	  icompl+NCOMPL*(ispin+NSPIN*icol);
   
 //   MyTens2 cicc3;
@@ -233,9 +240,9 @@ int main()
   //test_first_vectorizer();
   //test_transpose();
   test_conj();
-  //test_isAliasing();
-  //test_binding();
-  //test_bind_complicated_expression();
+  test_isAliasing();
+  test_binding();
+  test_bind_complicated_expression();
   test_duplicated_call_remover();
   //test_assigner();
   
