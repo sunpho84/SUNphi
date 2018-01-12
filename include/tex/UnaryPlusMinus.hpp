@@ -11,8 +11,9 @@
 namespace SUNphi
 {
   /// Implement +tex: decays into tex itself
-  template <typename T>             // Type of the expression
-  DECLAUTO operator+(TEx<T>&& tex)  ///< Expression
+  template <typename T,             // Type of the expression
+	    SFINAE_ON_TEMPLATE_ARG(IsTEx<T>)>
+  DECLAUTO operator+(T&& tex)       ///< Expression
   {
     return ~tex;
   }
