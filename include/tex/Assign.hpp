@@ -23,13 +23,19 @@ namespace SUNphi
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
-    using TKR=typename RemoveReference<T2>::Tk; // Tens Kind of the rhs expression
+    // Tens Kind of the rhs expression
+    using TKR=typename RemoveReference<T2>::Tk;
     
-    using TkHeadR=Unqualified<TupleElementType<0,typename TKR::types>>;
-    const int nComps=TkHeadR::size;
+    // Outermost TensComp of rhs
+    using RhsFirstComp=Unqualified<TupleElementType<0,typename TKR::types>>;
     
+    // Maximal value reachable from the component
+    const int maxEntry=RhsFirstComp::size;
+    static_assert(maxEntry>=0,"Dynamic case not still taken into account, we need to think on it");
+    
+#ifdef DEBUG_ASSIGN
     using namespace std;
-    cout<<" Assign: "<<TkHeadR::name()<<" "<<nComps;
+    cout<<" Assign: "<<RhsFirstComp::name()<<" "<<maxEntry;
     cout.flush();
     cout<<", tex1: "<<&tex1;
     cout.flush();
@@ -40,10 +46,12 @@ namespace SUNphi
     cout<<", storage2: "<<getStor(tex2)._v;
     cout.flush();
     cout<<endl;
+#endif
     
-    for(int i=0;i<nComps;i++)
-	bind<TkHeadR>(forw<T1>(tex1),i)=
-	  bind<TkHeadR>(forw<T2>(tex2),i);
+    // Assigns all entries
+    for(int i=0;i<maxEntry;i++)
+      bind<RhsFirstComp>(forw<T1>(tex1),i)=
+	bind<RhsFirstComp>(forw<T2>(tex2),i);
   }
 }
 
