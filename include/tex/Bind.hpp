@@ -19,20 +19,16 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Binder);
   
   /// Class to bind a component of a TEx
-  template <typename TG,                                        // Type to get
-	    typename _Ref,                                      // Type to bind
-	    typename TK=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
-	    typename TK_TYPES=typename TK::types>               // Types of the tensor kind
+  template <typename TG,                                              // Type to get
+	    typename _Ref,                                            // Type to bind
+	    typename NestedTk=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
+	    typename NestedTypes=typename NestedTk::types>            // Types of the tensor kind
   class Binder :
-    public BaseBinder,                          // Inherit from BaseBinderer to detect in expression
-    public UnaryTEx<Binder<TG,_Ref>>,           // Inherit from UnaryTEx
-    public ConstrainIsTEx<_Ref>,                // Constrain _Ref to be a TEx
-    public ConstrainIsTensKind<TK>,             // Constrain type TK to be a TensKind
-    public ConstrainTupleHasType<TG,TK_TYPES>   // Constrain TG to be in the Types of the TensKind
+    public BaseBinder,                             // Inherit from BaseBinderer to detect in expression
+    public UnaryTEx<Binder<TG,_Ref>>,              // Inherit from UnaryTEx
+    public ConstrainIsTEx<_Ref>,                   // Constrain _Ref to be a TEx
+    public ConstrainTupleHasType<TG,NestedTypes>   // Constrain TG to be in the Types of the TensKind
   {
-    /// Nested type Tensor Kind
-    using NestedTk=TK;
-    
     /// Position inside the reference of the type got by the bounder
     static constexpr int pos=posOfType<TG,typename NestedTk::types>;
     
@@ -74,19 +70,30 @@ namespace SUNphi
 		      get<Tail>(targs)...);				\
     }									\
 									\
-    /*! Evaluator, external interface */				\
-    /*! */								\
-    /*! Pass to the internal implementation the integer sequence */	\
+    /*! Evaluator, external interface                                */	\
+    /*!                                                              */	\
+    /*! Pass to the internal implementation the integer sequence     */	\
     /*! needed to deal properly with the insertion of the arg in the */	\
     /*! correct position */						\
-    template <typename...Args>           /* Type of the arguments */	\
-    DECLAUTO eval(const Args&...args)    /*!< Components to get */	\
+    template <typename...Args>           /* Type of the arguments    */	\
+    DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
       QUALIFIER								\
     {									\
-      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes-1,args);			\
+      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
 									\
       using Head=IntsUpTo<pos>;						\
-      using Tail=typename IntsUpTo<TK::nTypes-1-pos>::template Add<pos>; \
+									\
+      if(0)								\
+	{								\
+	  using namespace std;						\
+	  cout<<" evaluating binder of component "<<Tg::name();		\
+	  cout<<" position in NestedTk: "<<pos;				\
+	  cout<<" of "<<NestedTk::nTypes<<" types,";			\
+	  cout<<" id: "<<id;						\
+	  cout<<endl;							\
+	}								\
+      									\
+      using Tail=typename IntsUpTo<Tk::nTypes-pos>::template Add<pos>; \
 									\
       return binder_internal_eval(Head{},				\
       				  Tail{},				\
@@ -112,7 +119,7 @@ namespace SUNphi
     {
 #ifdef DEBUG_BINDER
       using namespace std;
-      cout<<"Constructing binder "<<this<<endl;
+      cout<<"Constructing binder "<<this<<", type "<<TG::name()<<", component: "<<id<<endl;
 #endif
     }
     
