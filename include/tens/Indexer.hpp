@@ -36,7 +36,7 @@ namespace SUNphi
   /// Indexer class to compute an index for a TensKind
   ///
   /// Recursive implementation definining a nested indexer and
-  /// calling it until one component is found. The check on types is
+  /// calling it until no component is found. The check on types is
   /// done in the externally visible routine.
   template <int IDyn,     // Index of the current dynamic component in the list
 	    class H,      // Current TensKind
@@ -63,68 +63,97 @@ namespace SUNphi
 	      class...Tail,                                  // Other component types
 	      class=ConstrainAreIntegrals<Head,Tail...>>     // Constrain all types to be integral
     static constexpr int index(const DynSizes<NTotDyn>& dynSizes,  ///< Dynamic sizes
+			       const int in,                       ///< External partial index
 			       const Head& head,                   ///< Current component
 			       const Tail&...tail)                 ///< Other components
     {
       // Constrain the components to be in the same number of the type
       static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
-      // Nested value
-      const int nested=Nested::index(forw<const DynSizes<NTotDyn>>(dynSizes),forw<const Tail>(tail)...);
+      
       // Current component
       const int thisComp=head;
-      //std::cout<<"Nested: "<<nested<<" , nested_head_size: "<<Nested::headSize<<" , thiscomp: "<<thisComp<<" , thissize: "<<headSize<<std::endl;
-      // Nested size
-      const int nestedSize=
-	Nested::thisDynamic?
-	dynSizes[nestedIDyn]:
-	Nested::headSize;
+      
+      // Current size
+      const int size=
+	thisDynamic?
+	dynSizes[IDyn]:
+	headSize;
+      
 #ifdef DEBUG_INDEXER
-	  printf("NestedDyn: %d",Nested::thisDynamic);
-	  printf(", Nested::HeadSize: %d",Nested::headSize);
-	  printf(", %d",nestedIDyn);
-	  if(Nested::thisDynamic) printf(" %d",dynSizes[nestedIDyn]);
-	  printf("\n");
+      printf("Is Nested , thiscomp: %d , is Dyn: %d",thisComp,thisDynamic);
+      printf(", HeadSize: %d",headSize);
+      printf(", Size: %d",size);
+      printf(", %d",IDyn);
+      if(thisDynamic) printf(" %d",dynSizes[IDyn]);
+      printf("\n");
 #endif
       
-      // Compose nested value, size and this component
-      return nested+nestedSize*thisComp;
+      // Compute the result
+      int out=thisComp+size*in;
+      
+      // Nested value
+      return Nested::index(forw<const DynSizes<NTotDyn>>(dynSizes),out,forw<const Tail>(tail)...);
     }
   };
   
   /// Indexer class to compute an index for a TensKind
   ///
-  /// Single component case
-  template <int IDyn,
-	    class Head>
-  struct _Indexer<IDyn,TensKind<Head>>
+  /// Zero component case (terminator)
+  template <int IDyn>   // Position of the first dynamic component
+  struct _Indexer<IDyn,TensKind<>>
   {
-    /// Size of the top-level class
-    static constexpr int headSize=Head::size;
-    /// Check if this component is dynamic
-    static constexpr bool thisDynamic=(headSize==DYNAMIC);
-    
     /// Compute the index, given a set of components
     /// \todo add check
     template <size_t NTotDyn>
-    static int index(const DynSizes<NTotDyn>& dynSizes,
-		     const int& head)
+    static int index(const DynSizes<NTotDyn>& dynSizes, ///< Dynamic sizes
+		     const int value)                   ///< External partial index
     {
-      //std::cout<<"Non-Nested , thiscomp: "<<head<<" , thissize: "<<headSize<<std::endl;
-      return head;
+#ifdef DEBUG_INDEXER
+      std::cout<<"Non-Nested , value: "<<value<<std::endl;
+#endif
+      return value;
     }
   };
   
   /// Index function for a TensKind
   ///
   /// Wraps the call to the Indexer class method
-  template <class TK,
-	    size_t NDynamic,
-	    class...Args>
+  /// The index is built in this way.
+  /// Let us assume three component case
+  ///
+  /// \code
+  /// a+Na*(b+Nb*c)
+  /// \endcode
+  ///
+  /// this is changed into a more homogeneous
+  ///
+  /// \code
+  /// a+Na*(b+Nb*(c+Nc*0))
+  /// \endcode
+  ///
+  /// so that every component needs to perform the following operation
+  ///
+  /// \code
+  /// i+N*ext
+  /// \endcode
+  ///
+  /// where \c ext is the result of the calculation for the outer
+  /// component. Starting from 0, the calculation ends when no more
+  /// component is present (terminating case).
+  template <class TK,         // Tensor Kind
+	    size_t NDynamic,  // Number of dynamic components
+	    class...Args>     // Types of the components
   static constexpr int index(const DynSizes<NDynamic>& dynSizes, ///< Sizes of the dynamical components
 			     const Args&...args)                 ///< Components index
   {
     static_assert(TK::nDynamic==NDynamic,"Nuber of dynamic components sizes must agree with the TensKind one");
-    return _Indexer<0,TK>::index(dynSizes,args...);
+    STATIC_ASSERT_ARE_INTEGRALS(Args...);
+    
+#ifdef DEBUG_INDEXER
+    print(std::cout,"Components:",args...,"\n");
+#endif
+    
+    return _Indexer<0,TK>::index(dynSizes,0,args...);
   }
 }
 
