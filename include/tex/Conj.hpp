@@ -42,6 +42,11 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=TK;
     
+    /// We can merge up to where we bind
+    static constexpr int nMergeableComps=
+      std::min(Ref::nMergeableComps,
+	       posOfCompl);
+    
     SAME_COMP_SIZES_OF_REF;
     
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer);

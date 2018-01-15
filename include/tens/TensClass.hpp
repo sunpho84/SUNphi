@@ -46,6 +46,9 @@ namespace SUNphi
     
   public:
     
+    /// All components can be merged
+    constexpr static int nMergeableComps=Tk::nTypes;
+    
     /// Returns the size of a component
     template <typename TC>
     int compSize() const
