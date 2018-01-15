@@ -39,6 +39,37 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
+  /// Returns the position of the first non-occurrency of I
+  ///
+  /// Internal implementaton
+  template <int I,       // Element to search
+	    int Pos,     // Position currently reached
+	    int Head,    // First component to be searched
+	    int...Ints>  // Other components
+  constexpr int _firstNon()
+  {
+    if constexpr(I!=Head or sizeof...(Ints)==0)
+      return Pos;
+    else
+      return _firstNon<I,Pos+1,Ints...>();
+  }
+  
+  /// Returns the position of the first non-occurrency of I
+  ///
+  /// General case
+  template <int I,       // Element to search
+	    int...Ints>  // Components
+  [[ maybe_unused ]]
+  constexpr int firstNon=_firstNon<I,0,Ints...>();
+  
+  /// Returns the position of the first non-occurrency of I
+  ///
+  /// Empty sequence
+  template <int I>       // Element to search
+  constexpr int firstNon<I> =0;
+  
+  /////////////////////////////////////////////////////////////////////////
+  
   /// Product of all integers
   template <int Head=0,
 	    int...Tail>
@@ -84,6 +115,10 @@ namespace SUNphi
     template <int I>
     static constexpr int hSumFirst=SUNphi::hSumFirst<I,Ints...>;
     
+    /// Take first position wher I does not occur
+    template <int I>
+    static constexpr int firstNon=SUNphi::firstNon<I,Ints...>;
+    
     /// Product of all elements
     static constexpr int hMul=SUNphi::hMul<Ints...>;
     
@@ -102,7 +137,8 @@ namespace SUNphi
     /// Define a new integer sequence decreased by a constant factor I
     template <int I>
     using Div=TypeIf<I!=0,Mul<1/I>>;
-  };
+    
+};
   
   /////////////////////////////////////////////////////////////////////////
   
