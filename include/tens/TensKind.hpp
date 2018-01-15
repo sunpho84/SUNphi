@@ -28,7 +28,33 @@ namespace SUNphi
   class TensKind;
   /// \endcond
   
+  /// Dynamic sizes of a Tens
+  ///
+  /// \todo the array must be replaced with a tuple, whose types
+  /// must be deduced when instatiating the struct, such that int or
+  /// long int or whatever is appropriately used!
+  template <int N>
+  using DynSizes=std::array<int,N>;
+  
+  // Provide a checker for dynSizes presence
+  DEFINE_HAS_MEMBER(dynSizes);
+  
+  /// Returns whether T is a dynamic component
+  template <typename T>
+  static constexpr bool isDynamic=T::isDynamic;
+  
   /// Defines a TensKind type from a Tuple type
+  /// Static assert if TC is not dynamic
+#define STATIC_ASSERT_IS_DYNAMIC(TC)					\
+  static_assert(isDynamic<TC>,"Error, Tens Comp is not dynamic")
+  
+  /// Forces type Tc to be a dynamic TensComp
+  template <typename Tc>
+  struct ConstrainIsDynamic
+  {
+    STATIC_ASSERT_IS_DYNAMIC(Tc);
+  };
+  
   DEFINE_VARIADIC_TYPE_FROM_TUPLE(TensKind);
   
   /// Tensor Kind used to define the structure of a tensor
@@ -62,6 +88,13 @@ namespace SUNphi
     /// Number of types of the kind
     static constexpr int nTypes=sizeof...(T);
     
+    /// Returns the position of a dynamical size
+    template <typename TC,
+	      typename=ConstrainIsTensComp<TC>,
+	      typename=ConstrainIsDynamic<TC>>
+    static constexpr TypeIf<IsTensComp<TC> and isDynamic<TC>,int>
+    dynCompPos=AreDynamic::template hSumFirst<posOfType<TC,types>>;
+    
     // /// Position of a given type
     // template <class Tf>
     // static constexpr int posOfType=posOfType<Tf,Tuple<T...>>;
@@ -73,7 +106,7 @@ namespace SUNphi
     /// Get all types but one
     template <class Tab>
     using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
-    
+
     /// Return the position of the first component needed to vectorize
     ///
     /// Internal implementation, escaping when last checkable
