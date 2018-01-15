@@ -407,7 +407,7 @@ namespace SUNphi
   template <int...Ints,
 	    class...Tp>
   auto getIndexed(const IntSeq<Ints...>&,
-		  const Tuple<Tp...> &tp)
+		  const Tuple<Tp...>& tp)
   {
     return std::make_tuple(std::get<Ints>(tp)...);
   }

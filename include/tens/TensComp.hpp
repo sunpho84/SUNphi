@@ -42,7 +42,7 @@ namespace SUNphi
     static constexpr int size=Size;
     
     /// Report if the component has dynamic size
-    static constexpr bool isDynamic=(Size!=DYNAMIC);
+    static constexpr bool isDynamic=(Size==DYNAMIC);
     
     /// Check if compatible with vectorization
     template <typename F>                      // Fundamental type
