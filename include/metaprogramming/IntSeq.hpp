@@ -16,6 +16,7 @@ namespace SUNphi
   /// Sum of all integers
   template <int Head=0,
 	    int...Tail>
+  [[ maybe_unused ]]
   constexpr int hSum=Head+hSum<Tail...>;
   
   /// Sum of all integers, unary case
@@ -24,9 +25,24 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
+  /// Sum of all integers up to I (excluded)
+  template <int I,
+	    int Head=0,
+	    int...Tail>
+  [[ maybe_unused ]]
+  constexpr int hSumFirst=(I>0)*Head+hSumFirst<I-1,Tail...>;
+  
+  /// Sum of all integers up to I (excluded),unary case
+  template <int I,
+	    int Head>
+  constexpr int hSumFirst<I,Head> =(I>0)*Head;
+  
+  /////////////////////////////////////////////////////////////////////////
+  
   /// Product of all integers
   template <int Head=0,
 	    int...Tail>
+  [[ maybe_unused ]]
   constexpr int hMul=Head*hMul<Tail...>;
   
   /// Product of all integers, unary case
@@ -63,6 +79,10 @@ namespace SUNphi
     
     /// Sum of all elements
     static constexpr int hSum=SUNphi::hSum<Ints...>;
+    
+    /// Sum of all elements
+    template <int I>
+    static constexpr int hSumFirst=SUNphi::hSumFirst<I,Ints...>;
     
     /// Product of all elements
     static constexpr int hMul=SUNphi::hMul<Ints...>;
