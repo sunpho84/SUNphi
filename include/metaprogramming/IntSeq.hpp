@@ -138,7 +138,7 @@ namespace SUNphi
     template <int I>
     using Div=TypeIf<I!=0,Mul<1/I>>;
     
-};
+  };
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -186,7 +186,6 @@ namespace SUNphi
     /// Result of catting the whole list \c Ints1, \c Ints2,...
     typedef typename _IntSeqCat<Nested,T...>::type type;
   };
-  
   
   /// Sequence-of-integer catter.
   ///
@@ -241,7 +240,9 @@ namespace SUNphi
   /// Defines a sequence of integer with offset and stride (up-open interval)
   ///
   /// This is achieved using the Add and Mul from the IntSeq list
-  template <int Min,int Shift,int Max>
+  template <int Min,
+	    int Shift,
+	    int Max>
   struct _RangeSeq
   {
     //assert if Shift is zero
@@ -272,8 +273,20 @@ namespace SUNphi
   /// \code
   /// typedef RangeSeq<2,3,8> Range; //IntSeq<2,5>
   /// \endcode
-  template <int Min,int Shift,int Max>
+  template <int Min,   // Starting point
+	    int Shift, // Stride
+	    int Max>   // End point (not included)
   using RangeSeq=typename _RangeSeq<Min,Shift,Max>::type;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Defines a IntSeq of size Num, all containing Entry as entry
+  template <int Num,   // Number of components
+	    int Val> // Value to be used
+  using IntSeqOfSameNumb=
+    typename IntsUpTo<Num>::
+    template Mul<0>::
+    template Add<Val>;
 }
 
 #endif
