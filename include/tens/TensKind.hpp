@@ -160,6 +160,9 @@ namespace SUNphi
     /// Get the twinned (transposed) type
     using Twinned=TensKind<TwinCompOf<T>...>;
     
+    /// Reports whether a component is Matricial or not
+    using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
+    
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul;
