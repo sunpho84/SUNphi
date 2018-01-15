@@ -29,7 +29,7 @@ namespace SUNphi
     
     // Attributes
     NOT_STORING;
-    NOT_ASSIGNABLE; /// \todo check that we want this to happen
+    NOT_ASSIGNABLE;
     FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
