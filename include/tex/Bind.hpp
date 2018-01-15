@@ -138,72 +138,41 @@ namespace SUNphi
   STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
 				    Tens<TensKind<TensComp<double,1>>,double>>);
   
-  /// Return the evaluation of the TEx
-  template <bool IsFullyBound, // Flag to disambiguate
-	    typename TEX>      // Type of the TEx
-  DECLAUTO _evalIfFullyBound(TEX&& tex,                            ///< Expression to evaluate
-			     SFINAE_ON_TEMPLATE_ARG(IsFullyBound)) //   Force fully bound case
-  {
-#ifdef DEBUG_BINDER
-    using namespace std;
-    cout<<" FullyBound, storage: "<<getStor(tex)._v<<endl;
-#endif
-    return tex.eval();
-  }
-  
-  /// Return the TEx itself
-  template <bool IsFullyBound, // Flag to disambiguate
-	    typename TEX>      // Type of the TEx
-  TEX _evalIfFullyBound(TEX&& tex,                                ///< Expression to evaluate
-			SFINAE_ON_TEMPLATE_ARG(not IsFullyBound)) //   Force not fully bound case
-  {
-#ifdef DEBUG_BINDER
-    using namespace std;
-    cout<<" not FullyBound, storage: "<<getStor(tex)._v<<endl;
-    cout<<" is_lvalue: "<<isLvalue<TEX><<endl;
-    cout<<" is_rvalue: "<<isRvalue<TEX><<endl;
-    cout.flush();
-#endif
-    return tex;
-  }
-  
-  /// Return the TEx itself or its evaluation, if fully bound
-  template <typename TEX,                                // Type of expression
-	    typename=EnableIf<IsTEx<TEX>>,               // Force to be a TEx
-	    typename Tk=typename Unqualified<TEX>::Tk,   // Get the TensKind
-	    int N=Tk::nTypes,                            // Count the free components of TEx
-	    bool FullyBound=(N==0)>                      // Check if fully bound
-  DECLAUTO evalIfFullyBound(TEX&& tex)                   ///< TEx to be treated
-  {
-#ifdef DEBUG_BINDER
-    using namespace std;
-    cout<<"Evaluating if unbound "<<&tex<<", "<<FullyBound<<", storage: "<<getStor(tex)._v<<endl;
-#endif
-    
-    return _evalIfFullyBound<FullyBound>(forw<TEX>(tex));
-  }
-  
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
   /// demanded to Binder.
   template <typename _Tg,                       // Type to get
-	    typename Ref,                       // Type to bind, deduced from argument
+	    typename TEX,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO bind(Ref&& ref,                     ///< Quantity to bind to
+  DECLAUTO bind(TEX&& tex,                     ///< Quantity to bind to
 		const int id,                  ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
-    using Tg=CompOrTwinned<_Tg,Ref>;
+    using Tg=CompOrTwinned<_Tg,TEX>;
     
 #ifdef DEBUG_BINDER
     using namespace std;
     cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
 #endif
+
+    // Build the binder
+    Binder<Tg,TEX> b(forw<TEX>(tex),id);
     
-    return evalIfFullyBound(Binder<Tg,Ref>(forw<Ref>(ref),id));
+    // Get the TensKind
+    using Tk=typename Unqualified<TEX>::Tk;
+    // Count the free components of TEx
+    constexpr int N=Tk::nTypes;
+    // Check if fully bound
+    constexpr bool FullyBound=(N==1);
+    
+    // Evaluate if fully bound
+    if constexpr(FullyBound)
+       return b.eval();
+    else
+      return b;
   }
   
   // /// Bind the \c id component of type \c Tg from expression \c ref

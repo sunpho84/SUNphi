@@ -28,7 +28,7 @@ namespace SUNphi
   ///
   /// Generic false case
   template <class T>
-  struct _IsTuple : public FalseType
+  struct _isTuple : public FalseType
   {
   };
   
@@ -36,7 +36,7 @@ namespace SUNphi
   ///
   /// Specialization for a true tuple
   template <class...Tp>
-  struct _IsTuple<Tuple<Tp...>> : public TrueType
+  struct _isTuple<Tuple<Tp...>> : public TrueType
   {
   };
   
@@ -44,11 +44,12 @@ namespace SUNphi
   ///
   /// Gives visibility to the internal implementation
   template <class T>
-  constexpr int IsTuple=_IsTuple<T>::value;
+  [[maybe_unused]]
+  constexpr int isTuple=_isTuple<Unqualified<T>>::value;
   
   /// Assert if the type is not a Tuple
 #define STATIC_ASSERT_IS_TUPLE(T)			\
-  static_assert(IsTuple<T>,"Type is not a tuple")
+  static_assert(isTuple<T>,"Type is not a tuple")
   
   /// Constrain the class T to be a Tuple
   template <class T>
@@ -62,24 +63,16 @@ namespace SUNphi
   /// Returns the type of the element O of the Tuple Tp
   template <int O,                           // Order of the type in the Tuple
 	    typename Tp,                     // Tuple type
-	    typename=EnableIf<IsTuple<Tp>>>  // Force Tp to be a Tuple
+	    typename=EnableIf<isTuple<Tp>>>  // Force Tp to be a Tuple
   using TupleElementType=typename std::tuple_element<0,Tp>::type;
   
   /////////////////////////////////////////////////////////////////
   
-  /// Counts the types inside a Tuple
-  ///
-  /// Generic type case, forbids instantiation
-  template <class T,
-	    class=ConstrainIsTuple<T>>
-  static constexpr int nTypesInTuple=0;
-  
-  /// Counts the types inside a Tuple
-  ///
-  /// Real Tuple case
-  template <class...Tp>
-  static constexpr int nTypesInTuple<Tuple<Tp...>>
-  =sizeof...(Tp);
+  /// Total number of elements in a \c Tuple
+  template <typename T,
+	    typename=EnableIf<isTuple<T>>>
+  [[maybe_unused]]
+  constexpr int tupleSize=std::tuple_size<Unqualified<T>>::value;
   
   /////////////////////////////////////////////////////////////////
   
@@ -131,13 +124,14 @@ namespace SUNphi
   ///
   /// Perform an "and" of all single-type check
   template <class Head,class...Tail>
-  static constexpr bool AreSame=IntSeq<IsSame<Head,Tail>...>::hMul;
+  [[ maybe_unused ]]
+  static constexpr bool areSame=IntSeq<IsSame<Head,Tail>...>::hMul;
   
   /// Forces a set of types to be the same
   template <class...Args>
   class ConstrainAreSame
   {
-    static_assert(AreSame<Args...>,"Error, types are not the same");
+    static_assert(areSame<Args...>,"Error, types are not the same");
   };
   
   /////////////////////////////////////////////////////////////////////
@@ -148,6 +142,7 @@ namespace SUNphi
   template <class T1,
 	    class T2,
 	    class=FalseType>
+  [[ maybe_unused ]]
   static constexpr int _nOfTypeInTuple=0;
   
   /// Counts the same type
@@ -163,6 +158,7 @@ namespace SUNphi
   template <class T,
 	    class TP,
 	    class=ConstrainIsTuple<TP>>
+  [[ maybe_unused ]]
   static constexpr int nOfTypeInTuple=_nOfTypeInTuple<T,TP>;
   
   /////////////////////////////////////////////////////////////////
@@ -171,6 +167,7 @@ namespace SUNphi
   ///
   /// Generic type - forbids instantiation
   template <class T,class=ConstrainIsTuple<T>>
+  [[ maybe_unused ]]
   static constexpr int nDiffTypesInTuple=0;
   
   /// Count the number of different types in a \c Tuple
@@ -185,8 +182,9 @@ namespace SUNphi
   /// Check whether all types of a \c Tuple are different
   template <class T,
 	    class=ConstrainIsTuple<T>>
+  [[ maybe_unused ]]
   static constexpr bool tupleTypesAreAllDifferent
-  =nDiffTypesInTuple<T> ==nTypesInTuple<T>;
+  =nDiffTypesInTuple<T> ==tupleSize<T>;
   
   /// Assert if the \c Tuple contains multiple times a given type
 #define STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T)	\
@@ -204,6 +202,7 @@ namespace SUNphi
   /// Return true if \c Tuple Tp contains the type T
   template <typename T,   // Type to be searched
 	    typename Tp>  // Tuple to search
+  [[ maybe_unused ]]
   constexpr bool tupleHasType=(nOfTypeInTuple<T,Tp> >0);
   
   /// Assert if the type \c T is not in the types of tuple \c TP
@@ -316,24 +315,6 @@ namespace SUNphi
   
   /// Loop over all \c Tuple elements
   ///
-  /// Terminator of recursive call, called automaticaly also when the
-  /// Tuple is empty.
-  ///
-  /// \tparam I Index of the \c Tuple element to extract
-  /// \tparam Func \c Function type
-  /// \tparam Tp... The Tuple parameters
-  /// \return \c void
-  template <size_t I=0,
-	    typename Func,
-	    typename...Tp>
-  VoidIf<I==sizeof...(Tp)>
-  forEach(const Tuple<Tp...>& t, ///< \c Tuple to act upon
-	  Func f)                ///< \c Function iterating on the Tuple
-  {
-  }
-  
-  /// Loop over all \c Tuple elements
-  ///
   /// Non const access to all elements of the \c Tuple, called
   /// recursively until I==sizeof...(Tp), incrementing the parameter
   /// I.
@@ -343,34 +324,17 @@ namespace SUNphi
   /// \tparam Tp... The \c Tuple parameters
   /// \return \c void
   template <size_t I=0,
-	    typename Func,
-	    typename...Tp>
-  VoidIf<(sizeof...(Tp)>I)>
-  forEach(Tuple<Tp...>& t, ///< \c Tuple to act upon
-	  Func f)          ///< \c Function iterating on the \c Tuple
+	    typename T,
+	    typename F,
+	    typename=EnableIf<isTuple<T>>>
+  void forEach(T&& t, ///< \c Tuple to act upon
+	       F&& f) ///< \c Function iterating on the \c Tuple
   {
-    f(get<I>(t));
-    forEach<I+1,Func,Tp...>(t,f);
-  }
-  
-  /// Loop over all \c tuple elements
-  ///
-  /// Const access to all elements of the \c Tuple, called recursively
-  /// until I==sizeof...(Tp), incrementing the parameter I.
-  ///
-  /// \tparam I Index of the \c Tuple element to extract
-  /// \tparam Func \c Function type
-  /// \tparam Tp... The \c Tuple parameters
-  /// \return \c void
-  template <size_t I=0,
-	    typename Func,
-	    typename...Tp>
-  VoidIf<(sizeof...(Tp)>I)>
-  forEach(const Tuple<Tp...>& t, ///< \c Tuple to act upon
-	  Func f)                ///< \c Function iterating on the \c Tuple
-  {
-    f(get<I>(t));
-    forEach<I+1,Func,Tp...>(t,f);
+    if constexpr(I<tupleSize<T>)
+       {
+	 f(get<I>(forw<T>(t)));
+	 forEach<I+1>(forw<T>(t),forw<F>(f));
+       }
   }
   
   /////////////////////////////////////////////////////////////////
@@ -412,7 +376,8 @@ namespace SUNphi
   /// Gets the position of a type in a tuple
   ///
   /// Wraps the ordinary list searcher
-  template <class T,class...Tp>
+  template <class T,
+	    class...Tp>
   struct _PosOfType<T,Tuple<Tp...>>
   {
     /// Position inside the list
@@ -429,8 +394,9 @@ namespace SUNphi
   /// int c=PosOfType<int,char,double,char>;       //static_assert (not found)
   /// int d=PosOfType<int,int,int,char>;           //static_assert (multiple occurency)
   /// \endcode
-  template <class...Tp>
-  constexpr int posOfType=_PosOfType<Tp...>::value;
+  template <class...Args>
+  [[ maybe_unused ]]
+  constexpr int posOfType=_PosOfType<Args...>::value;
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -451,7 +417,7 @@ namespace SUNphi
   /// Return a tuple containg the first N elements of a tuple
   template <int N,
 	    class...Tp>
-  auto getHead(const Tuple<Tp...> &tp)     ///< Tuple from which to extract
+  auto getHead(const Tuple<Tp...>& tp)     ///< Tuple from which to extract
   {
     return getIndexed(IntsUpTo<N>{},tp);
   }
@@ -500,7 +466,7 @@ namespace SUNphi
   /// \endcode
   template <class T,
 	    class...Tp>
-  auto getAllBut(const Tuple<Tp...> &tp)
+  auto getAllBut(const Tuple<Tp...>& tp)
   {
     return getAllBut<posOfType<T,Tuple<Tp...>>>(tp);
   };

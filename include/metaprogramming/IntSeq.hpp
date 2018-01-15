@@ -14,7 +14,8 @@
 namespace SUNphi
 {
   /// Sum of all integers
-  template <int Head=0,int...Tail>
+  template <int Head=0,
+	    int...Tail>
   constexpr int hSum=Head+hSum<Tail...>;
   
   /// Sum of all integers, unary case
@@ -24,7 +25,8 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////////////
   
   /// Product of all integers
-  template <int Head=0,int...Tail>
+  template <int Head=0,
+	    int...Tail>
   constexpr int hMul=Head*hMul<Tail...>;
   
   /// Product of all integers, unary case
@@ -117,7 +119,9 @@ namespace SUNphi
   /// using Seq=IntSeq<1,2,3,4>;
   /// IntSeqCat<Seq,Seq>::type test; //IntSeq<1,2,3,4,1,2,3,4>
   /// \endcode
-  template <int...Ints1,int...Ints2,class...T>
+  template <int...Ints1,
+	    int...Ints2,
+	    class...T>
   struct _IntSeqCat<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
   {
     /// Binary cat \c Ints1..., \c Ints2..., separated for clarity

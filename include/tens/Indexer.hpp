@@ -73,45 +73,36 @@ namespace SUNphi
       // Current component
       const int thisComp=head;
       
-      // Current size
-      const int size=
-	thisDynamic?
-	dynSizes[IDyn]:
-	headSize;
-      
-#ifdef DEBUG_INDEXER
-      printf("Is Nested , thiscomp: %d , is Dyn: %d",thisComp,thisDynamic);
-      printf(", HeadSize: %d",headSize);
-      printf(", Size: %d",size);
-      printf(", %d",IDyn);
-      if(thisDynamic) printf(" %d",dynSizes[IDyn]);
-      printf("\n");
-#endif
-      
-      // Compute the result
-      int out=thisComp+size*in;
-      
       // Nested value
-      return Nested::index(forw<const DynSizes<NTotDyn>>(dynSizes),out,forw<const Tail>(tail)...);
-    }
-  };
-  
-  /// Indexer class to compute an index for a TensKind
-  ///
-  /// Zero component case (terminator)
-  template <int IDyn>   // Position of the first dynamic component
-  struct _Indexer<IDyn,TensKind<>>
-  {
-    /// Compute the index, given a set of components
-    /// \todo add check
-    template <size_t NTotDyn>
-    static int index(const DynSizes<NTotDyn>& dynSizes, ///< Dynamic sizes
-		     const int value)                   ///< External partial index
-    {
+      if constexpr(sizeof...(Tail)>0)
+	{
+	  // Current size
+	  const int size=
+	    thisDynamic?
+	    dynSizes[IDyn]:
+	    headSize;
+      
 #ifdef DEBUG_INDEXER
-      std::cout<<"Non-Nested , value: "<<value<<std::endl;
+	  printf("Is Nested , thiscomp: %d , is Dyn: %d",thisComp,thisDynamic);
+	  printf(", HeadSize: %d",headSize);
+	  printf(", Size: %d",size);
+	  printf(", %d",IDyn);
+	  if(thisDynamic) printf(" %d",dynSizes[IDyn]);
+	  printf("\n");
 #endif
-      return value;
+	  
+	  // Compute the result
+	  int out=thisComp+size*in;
+	  
+	  return Nested::index(forw<const DynSizes<NTotDyn>>(dynSizes),out,forw<const Tail>(tail)...);
+	}
+      else
+	{
+#ifdef DEBUG_INDEXER
+	  std::cout<<"Non-Nested , value: "<<value<<std::endl;
+#endif
+	  return head;
+	}
     }
   };
   

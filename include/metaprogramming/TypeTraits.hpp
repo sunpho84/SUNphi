@@ -377,6 +377,7 @@ namespace SUNphi
 									\
   /*! Expression which is true if T inherits from \c BASE ## TYPE */	\
   template<typename T>							\
+  [[ maybe_unused ]]							\
   constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;			\
 									\
   /*! Class forcing T to inherits from \c BASE ## TYPE */		\
@@ -467,6 +468,7 @@ namespace SUNphi
   /*!                                                                */	\
   /*! Uses SFINAE to induce ambiguity in the detection of the member */	\
   template <typename Type>						\
+  [[ maybe_unused ]]							\
   constexpr bool hasMember_ ## TAG=HasMember_ ## TAG<Type>::result;	\
   									\
   /*! \brief Class forcing T to have a member "TAG" defined */		\

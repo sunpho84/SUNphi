@@ -13,7 +13,7 @@ AC_PROG_RANLIB
 AC_PROG_CC
 AC_PROG_CXX
 AC_LANG([C++])
-AX_CXX_COMPILE_STDCXX(14,noext,mandatory)
+AX_CXX_COMPILE_STDCXX(17,noext,mandatory)
 #activate all warnings
 AX_CXXFLAGS_WARN_ALL
 
