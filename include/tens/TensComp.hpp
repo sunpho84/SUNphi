@@ -63,7 +63,10 @@ namespace SUNphi
   /// Defines also a binder-instantiator named BINDER, a \c TensKind
   /// suffixing TYPE with Kind, and a constat holding the maximal value,
   /// named \c NCONST_NAME
-#define DEFINE_TENS_COMP(BINDER,TYPE,CONST_NAME,HMANY)			\
+#define DEFINE_TENS_COMP(BINDER,					\
+			 TYPE,						\
+			 CONST_NAME,					\
+			 HMANY)						\
 									\
   /*! Maximal value for \c TensKind of type TYPE */			\
   constexpr const int N ## CONST_NAME=HMANY;				\
@@ -78,7 +81,10 @@ namespace SUNphi
   /// Defines also a common binder-instantiator named BINDER, a \c
   /// TensKind suffixing TYPE with Kind, and a constat holding the
   /// maximal value, named \c NCONST_NAME
-#define DEFINE_RW_CN_TENS_COMP(BINDER,TYPE,CONST_NAME,HMANY)		\
+#define DEFINE_RW_CN_TENS_COMP(BINDER,					\
+			       TYPE,					\
+			       CONST_NAME,				\
+			       HMANY)					\
 									\
   /*! Number of components of TYPE type */				\
   constexpr const int N ## CONST_NAME=HMANY;				\

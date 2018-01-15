@@ -48,7 +48,7 @@ namespace SUNphi
     const int id;
     
     /// We can merge up to where we bind
-    static constexpr int nMergeableComps=std::min(Ref::nMergeableComps,pos);
+    //using MergeableCompGroups=IntSeqCat<class T> std::min(Ref::nMergeableComps,pos);
     
     /// Returns the size of a component
     template <typename TC>

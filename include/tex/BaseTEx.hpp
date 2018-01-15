@@ -80,7 +80,7 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   // Check that we know which components can be merged
-  DEFINE_HAS_MEMBER(nMergeableComps);
+  DEFINE_HAS_MEMBER(MergeableCompGroups);
   
   /////////////////////////////////////////////////////////////////
   
@@ -94,7 +94,7 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);		\
-  STATIC_ASSERT_HAS_MEMBER(nMergeableComps,__VA_ARGS__);	\
+  /*STATIC_ASSERT_HAS_MEMBER(MergeableCompGroups,__VA_ARGS__);*/	\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
   /// TEmplate Expression
