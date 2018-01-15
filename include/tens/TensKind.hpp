@@ -36,11 +36,12 @@ namespace SUNphi
   template <int N>
   using DynSizes=std::array<int,N>;
   
-  // Provide a checker for dynSizes presence
-  DEFINE_HAS_MEMBER(dynSizes);
+  // Provide a checker for compSize presence
+  DEFINE_HAS_MEMBER(compSize);
   
   /// Returns whether T is a dynamic component
   template <typename T>
+  [[ maybe_unused ]]
   static constexpr bool isDynamic=T::isDynamic;
   
   /// Defines a TensKind type from a Tuple type
@@ -106,7 +107,7 @@ namespace SUNphi
     /// Get all types but one
     template <class Tab>
     using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
-
+    
     /// Return the position of the first component needed to vectorize
     ///
     /// Internal implementation, escaping when last checkable

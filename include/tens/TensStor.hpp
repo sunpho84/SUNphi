@@ -20,7 +20,8 @@ namespace SUNphi
   /// where a tensor is materially stored, keeping track of the amount
   /// of memory allocated. Facilities to reallocate the memory are
   /// provided
-  template <class TK,class T>
+  template <class TK,
+	    class T>
   class TensStor :
     public ConstrainIsTensKind<TK> // Check that TK is a TensKind
   {
@@ -36,7 +37,7 @@ namespace SUNphi
     T* &_v=v;
     
     /// Debug store size
-    int size;
+    int totSize;
     
     /// Defines a const or non-const evaluator
 #define PROVIDE_EVAL(QUALIFIER)						\
@@ -61,16 +62,26 @@ namespace SUNphi
     /// Dynamic sizes
     DynSizes<TK::nDynamic> dynSizes;
     
+    /// Returns the size of a given component
+    template <typename TC>
+    int compSize() const
+    {
+      if constexpr(isDynamic<TC>)
+	 return dynSizes[TK::template dynCompPos<TC>];
+      else
+	return TC::size;
+    }
+    
     /// Allocator
     void alloc()
     {
       // Compute the size
-      size=TK::maxStaticIdx;
+      totSize=TK::maxStaticIdx;
       for(const auto &i : dynSizes)
-	size*=i;
+	totSize*=i;
       
       // Allocate
-      v=getRawAlignedMem<T>(size);
+      v=getRawAlignedMem<T>(totSize);
       
 #ifdef DEBUG_STOR
       using namespace std;
@@ -98,7 +109,7 @@ namespace SUNphi
     {
       alloc();
       
-      for(int i=0;i<size;i++)
+      for(int i=0;i<totSize;i++)
 	v[i]=oth.v[i];
     }
     

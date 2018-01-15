@@ -46,14 +46,17 @@ namespace SUNphi
     
   public:
     
-    /// Sizes of the dynamical components, reference to the storage
-    DynSizes<Tk::nDynamic>& dynSizes;
+    /// Returns the size of a component
+    template <typename TC>
+    int compSize() const
+    {
+      return v->template compSize<TC>();
+    }
     
     /// Construct the Tens on the basis of the dynamical sizes passed
     template <class...DynSizes>                    //   Dynamic size types
     explicit Tens(const DynSizes&...extDynSizes) : ///< Passed internal dynamic size
-      v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
-      dynSizes(v->dynSizes)                        //   Assign the storage dynamical size reference
+      v(new TensStor<Tk,Fund>(extDynSizes...))    //   Construct the vector before taking the reference
     {
 #ifdef DEBUG_TENS
 	  using namespace std;
@@ -64,8 +67,7 @@ namespace SUNphi
     
     /// Copy constructor
     Tens(const Tens& oth) :
-      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
-      dynSizes(v->dynSizes)               //   Assign the storage dynamical size reference
+      v(new TensStor<Tk,Fund>(*oth.v))   //   Copy the vector
     {
 #ifdef DEBUG_TENS
       using namespace std;
@@ -74,7 +76,7 @@ namespace SUNphi
     }
     
     /// Move constructor
-    Tens(Tens&& oth) : dynSizes(oth.dynSizes)
+    Tens(Tens&& oth)
     {
       v=oth.v;
       oth.v=nullptr;

@@ -42,6 +42,8 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=TK;
     
+    SAME_COMP_SIZES_OF_REF;
+    
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer);
     
     /// Provides either the const or non-const evaluator

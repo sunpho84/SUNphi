@@ -26,6 +26,15 @@ namespace SUNphi
     
   public:
     
+    /// Returns the size of a component
+    ///
+    /// The result is the size of the twinned component
+    template <typename TC>
+    int compSize() const
+    {
+      return ref.template size<TwinCompOf<TC>>();
+    }
+    
     PROVIDE_UNARY_TEX_REF;
     
     // Attributes

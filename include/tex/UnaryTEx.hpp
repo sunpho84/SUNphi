@@ -41,6 +41,18 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Set the size of a component according to the reference
+#define SAME_COMP_SIZES_OF_REF						\
+  /*! Returns the size of a component, matching the reference */	\
+  template <typename TC>						\
+  int compSize() const							\
+  {									\
+    return ref.template compSize<TC>();					\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Defines a simple creator taking a reference
 #define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
   /*! Constructor taking universal reference */				\

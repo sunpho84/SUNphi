@@ -47,6 +47,14 @@ namespace SUNphi
     /// Index to get
     const int id;
     
+    /// Returns the size of a component
+    template <typename TC>
+    int compSize() const
+    {
+      static_assert(not areSame<TG,TC>,"Cannot ask for the size of the bound component");
+      return ref.template compSize<TC>();
+    }
+    
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
@@ -157,7 +165,7 @@ namespace SUNphi
     using namespace std;
     cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
 #endif
-
+    
     // Build the binder
     Binder<Tg,TEX> b(forw<TEX>(tex),id);
     

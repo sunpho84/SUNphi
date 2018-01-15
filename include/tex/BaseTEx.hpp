@@ -85,6 +85,7 @@ namespace SUNphi
   /// \todo add costEval
   /// \todo add isAliasing
 #define STATIC_ASSERT_IS_TEX(...)			\
+  STATIC_ASSERT_HAS_MEMBER(compSize,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);	\
