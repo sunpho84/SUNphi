@@ -68,6 +68,31 @@ namespace SUNphi
   template <int I>       // Element to search
   constexpr int firstNon<I> =0;
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns I element of the sequence
+  ///
+  /// Internal implementation
+  template <int I,       // Position of element to search
+	    int Head,    // First element
+	    int...Tail>  // Other components
+  constexpr int _getIntOfSeq()
+  {
+    if constexpr(I==0)
+      return Head;
+    else
+      {
+	static_assert(I<sizeof...(Tail)+1,"Asking for too large position");
+	return _getIntOfSeq<I-1,Tail...>();
+      }
+  }
+  
+  /// Returns I element of the sequence
+  template <int I,       // Position of element to search
+	    int...Ints>  // Components
+  [[ maybe_unused ]]
+  constexpr int getIntOfSeq=_getIntOfSeq<I,Ints...>();
+  
   /////////////////////////////////////////////////////////////////////////
   
   /// Product of all integers
@@ -81,6 +106,8 @@ namespace SUNphi
   constexpr int hMul<Head> =Head;
   
   /////////////////////////////////////////////////////////////////////////
+  
+  DEFINE_BASE_TYPE(IntSeq);
   
   /// A struct holding a sequence of integer (similar to stdlib).
   ///
@@ -103,7 +130,8 @@ namespace SUNphi
   ///
   /// \tparam Ints the list of integer
   template <int...Ints>
-  struct IntSeq
+  struct IntSeq :
+    public BaseIntSeq
   {
     /// Length of the sequence of integer
     static constexpr int size=sizeof...(Ints);
@@ -138,7 +166,72 @@ namespace SUNphi
     template <int I>
     using Div=TypeIf<I!=0,Mul<1/I>>;
     
+    /// Get the I element of the sequence
+    template <int I>
+    static constexpr int element=getIntOfSeq<I,Ints...>;
+    
+    /////////////////////////////////////////////////////////////////
+    
+    /// Append the first N id of another IntSeq
+    ///
+    /// Internal implementation, forward declaration
+    template <bool,
+	      int N,
+	      typename Right>
+    struct _AppendFirstN;
+    
+    /// Append the first N id of another IntSeq
+    ///
+    /// Internal implementation, taking recursively until N==0
+    template <int N,
+	      int HeadR,
+	      int...TailR>
+    struct _AppendFirstN<true,N,IntSeq<HeadR,TailR...>>
+    {
+      /// Returned type
+      using type=typename IntSeq<Ints...,HeadR>::template AppendFirstN<N-1,IntSeq<TailR...>>;
+    };
+    
+    /// Append the first N id of another IntSeq
+    ///
+    /// Internal implementation, terminator N==0
+    template <int N,
+	      int...R>
+    struct _AppendFirstN<false,N,IntSeq<R...>>
+    {
+      /// Returned type
+      using type=IntSeq<R...>;
+    };
+    
+    /// Append the first N id of another IntSeq
+    ///
+    /// Gives visibility to internal implementation
+    template <int N,
+	      typename ISeq>
+    using AppendFirstN=typename _AppendFirstN<(N>0),N,ISeq>::type;
   };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the first N components of an IntSeq
+  ///
+  /// Internal implementation
+  template <int N,       // Number of id to take
+	    typename ISeq, // IntSeq to operate upon
+	    typename=ConstrainIsIntSeq<ISeq>>
+  struct _IntSeqFirstN
+  {
+    /// Internal type
+    using type=typename IntSeq<>::AppendFirstN<N,ISeq>;
+  };
+  
+  /// Returns the first N components of an IntSeq
+  ///
+  /// Gives visibility to internal implementation
+  template <int N,
+	    typename ISeq,
+	    typename=EnableIf<IsIntSeq<ISeq>>>
+  using FirstN=typename _IntSeqFirstN<N,ISeq>::type;
   
   /////////////////////////////////////////////////////////////////////////
   
@@ -282,11 +375,37 @@ namespace SUNphi
   
   /// Defines a IntSeq of size Num, all containing Entry as entry
   template <int Num,   // Number of components
-	    int Val> // Value to be used
+	    int Val>   // Value to be used
   using IntSeqOfSameNumb=
     typename IntsUpTo<Num>::
     template Mul<0>::
     template Add<Val>;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  
+  /// Filter an IntSeq according to another one
+  ///
+  /// Internal implementation, forward declaration
+  template <typename Is,
+	    typename Fi>
+  struct _FilterIntSeq;
+  
+  /// Filter an IntSeq according to another one
+  ///
+  /// Internal implementation
+  template <int...Ints,
+	    int...Ids>
+  struct _FilterIntSeq<IntSeq<Ints...>,IntSeq<Ids...>>
+  {
+    /// Internal type
+    using type=IntSeq<getIntOfSeq<Ids,Ints...>...>;
+  };
+  
+  /// Filter an IntSeq according to another one
+  template <typename Is,
+	    typename Fi>
+  using FilterIntSeq=typename _FilterIntSeq<Is,Fi>::type;
 }
 
 #endif
