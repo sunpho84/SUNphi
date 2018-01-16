@@ -14,9 +14,6 @@
 
 namespace SUNphi
 {
-  /// Short name for decltype(auto)
-#define DECLAUTO decltype(auto)
-  
   /// A bool constant type holding value "true"
   ///
   /// Useful to create SFINAE tests
@@ -195,21 +192,6 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////
   
-  /// Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html
-  template <class T,
-	    class U,
-	    class=EnableIf<(isLvalue<T> ?
-			    isLvalue<U> :
-			    true) and
-			   std::is_convertible <RemoveReference<U>*,
-						RemoveReference<T>*>::value>>
-  constexpr T&& forw(U&& u)
-  {
-    return static_cast<T&&>(u);
-  }
-  
-  /////////////////////////////////////////////////////////////////////
-  
   /// Identifies whether Base is a base class of Derived
   template <typename Base,     // The type that can be base
 	    typename Derived>  // The type where Base is searched
@@ -217,12 +199,6 @@ namespace SUNphi
   constexpr bool isBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////
-  
-  /// See http://ericniebler.com/2013/08/07/universal-references-and-the-copy-constructo/
-#define UNIVERSAL_REFERENCE_CONSTRUCTOR_OF_WRAPPER_DISABLE(T,WRAPPER)	\
-  typename=EnableIf<not IsBaseOf<WRAPPER<T>,T>>
-  
-  /////////////////////////////////////////////////////////////////////
   
   /// Static assert if DERIVED does not derive from BASE
 #define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\

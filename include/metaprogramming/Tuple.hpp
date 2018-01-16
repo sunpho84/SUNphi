@@ -13,6 +13,7 @@
 
 #include <metaprogramming/IntSeq.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/UniversalReferences.hpp>
 
 namespace SUNphi
 {

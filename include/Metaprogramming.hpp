@@ -11,5 +11,6 @@
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/Tuple.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/UniversalReferences.hpp>
 
 #endif
