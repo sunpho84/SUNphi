@@ -22,7 +22,7 @@ namespace SUNphi
   {
     out<<head;
     
-    if constexpr(sizeof...(tail))
+    if constexpr(sizeof...(tail)>0)
       {
 	out<<" ";
 	return print(out,forw<Tail>(tail)...);
