@@ -7,6 +7,7 @@
 
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/IntSeq.hpp>
+#include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/Tuple.hpp>
 #include <metaprogramming/TypeTraits.hpp>
