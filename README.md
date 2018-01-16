@@ -4,7 +4,7 @@ SU(N) on Phi architecture
 
 A simple example
 
-```
+```c++
 #include <SUNphi>
 
 using namespaces std;
