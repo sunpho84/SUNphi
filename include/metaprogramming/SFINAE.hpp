@@ -65,7 +65,11 @@ namespace SUNphi
   STATIC_ASSERT_ARE_N_TYPES(0,DummyTypes)
   
   //////////////////////////////////////////////////////////////////////
-
+  
+  // Not sure that this is a good ide
+  // #define IF17(...)   if constexpr(__VA_ARGS__)
+  
+  // #define ELSE17	 else
 }
 
 #endif
