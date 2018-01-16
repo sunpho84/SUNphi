@@ -30,7 +30,6 @@ Makefile.in
 
 # http://www.gnu.org/software/texinfo
 
-/texinfo.tex
 /config/compile
 /config/config.guess
 /config/config.sub
