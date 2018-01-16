@@ -32,7 +32,7 @@ namespace SUNphi
     template <typename TC>
     int compSize() const
     {
-      return ref.template size<TwinCompOf<TC>>();
+      return ref.template compSize<TwinCompOf<TC>>();
     }
     
     PROVIDE_UNARY_TEX_REF;
