@@ -9,24 +9,25 @@ AC_CANONICAL_HOST
 
 AC_PROG_RANLIB
 
-#enable C and C++
+# Enable C and C++
 AC_PROG_CC
 AC_PROG_CXX
 AC_LANG([C++])
 AX_CXX_COMPILE_STDCXX(17,noext,mandatory)
-#activate all warnings
+
+# Activate all warnings
 AX_CXXFLAGS_WARN_ALL
 
-#silent automake
+# Silent automake
 AM_SILENT_RULES([yes])
 
-##search openMP
+# Search for OpenMP
 AC_OPENMP
 CFLAGS="$CXXFLAGS $OPENMP_CFLAGS"
 CPPFLAGS="$CPPFLAGS $OPENMP_CPPFLAGS"
 CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
 
-#doxygen
+# Configure doxygen
 DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
 DX_PDF_FEATURE(OFF)
 DX_PS_FEATURE(OFF)
@@ -34,7 +35,7 @@ DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
  
-#configure output
+# Configure output
 AC_CONFIG_FILES(Makefile bin/Makefile config/Doxyfile)
  
 AC_OUTPUT
