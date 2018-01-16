@@ -1,7 +1,7 @@
 #ifndef _UNIVERSALREFERENCE_HPP
 #define _UNIVERSALREFERENCE_HPP
 
-/// \file UniversalReference.hpp
+/// \file UniversalReferences.hpp
 ///
 /// \brief Defines convenient macro and types for Universal References
 ///
