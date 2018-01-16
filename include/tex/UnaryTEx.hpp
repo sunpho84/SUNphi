@@ -251,7 +251,7 @@ namespace SUNphi
     if(1)								\
       {									\
 	using namespace std;						\
-	cout<<"Moving UNARY_TEX to lhs "<<lhs.getStor()._v<<endl;	\
+	cout<<"Moving " #UNARY_TEX "to lhs"<<endl;	\
       }									\
     assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);				\
   }									\
