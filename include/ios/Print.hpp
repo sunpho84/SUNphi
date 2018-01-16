@@ -5,6 +5,8 @@
 ///
 /// \brief Header file to Print on a stream
 
+#include <metaprogramming/UniversalReferences.hpp>
+
 namespace SUNphi
 {
   /// Variadic print to a stream
@@ -16,12 +18,17 @@ namespace SUNphi
   
   /// Variadic print to a stream
   template <class S,class Head,class...Tail>
-  S& print(S& out,const Head& head,const Tail&...tail)
+  DECLAUTO print(S& out,const Head& head,Tail&&...tail)
   {
     out<<head;
-    if(sizeof...(tail)) out<<" ";
     
-    return print(out,tail...);
+    if constexpr(sizeof...(tail))
+      {
+	out<<" ";
+	return print(out,forw<Tail>(tail)...);
+      }
+    else
+      return out;
   }
 }
 
