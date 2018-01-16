@@ -30,8 +30,7 @@ namespace SUNphi
     using RhsFirstComp=Unqualified<TupleElementType<0,typename TKR::types>>;
     
     // Maximal value reachable from the component
-    const int maxEntry=RhsFirstComp::size;
-    static_assert(maxEntry>=0,"Dynamic case not still taken into account, we need to think on it");
+    const int maxEntry=tex2.template compSize<RhsFirstComp>();
     
 #ifdef DEBUG_ASSIGN
     using namespace std;
