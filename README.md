@@ -7,7 +7,7 @@ A simple example:
 ```c++
 #include <SUNphi>
 
-using namespaces std;
+using namespaces SUNphi;
 
 int main()
 {
