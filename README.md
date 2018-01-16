@@ -2,8 +2,8 @@
 SU(N) on Phi architecture
 
 
-A simple example
-
+A simple example, this code
+x
 ```c++
 #include <SUNphi>
 
@@ -18,6 +18,21 @@ int main()
       MyTens ciccio(vol),ciaccio(vol);
       
       spin(transpose(ciccio),1)=spin(adj(conj(ciaccio)),1);
+      
+      return 0;
+}
+```
+
+produces a code as if this code has been compiled
+
+```c++
+int main()
+{
+      double* a=new double[1152];
+      
+      for(int i=0;i<3;i++)
+         for(int j=0;j<96;j++)
+            ciccio[j+96*(1+4*i)]=ciaccio[j+96*(1+4*i)];
       
       return 0;
 }
