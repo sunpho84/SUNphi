@@ -2,8 +2,8 @@
 SU(N) on Phi architecture
 
 
-A simple example, this code
-x
+A simple example:
+
 ```c++
 #include <SUNphi>
 
@@ -23,17 +23,21 @@ int main()
 }
 ```
 
-produces a code as if this code has been compiled
+The previous code produces an assembly almost identical to this:
 
 ```c++
 int main()
 {
-      double* a=new double[1152];
+      double* ciccio=new double[1152];
+      double* ciaccio=new double[1152];
       
       for(int i=0;i<3;i++)
          for(int j=0;j<96;j++)
             ciccio[j+96*(1+4*i)]=ciaccio[j+96*(1+4*i)];
-      
+
+      delete[] ciccio;
+      delete[] ciaccio;
+
       return 0;
 }
 ```
