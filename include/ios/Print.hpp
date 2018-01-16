@@ -10,6 +10,8 @@
 namespace SUNphi
 {
   /// Variadic print to a stream
+  ///
+  /// Empty case
   template <class S>
   S& print(S& out)
   {
