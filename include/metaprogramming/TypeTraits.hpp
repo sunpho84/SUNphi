@@ -100,13 +100,14 @@ namespace SUNphi
   /// Default (false) case
   template <typename T1, // First type to be checked
 	    typename T2> // Second type to be checked
-  static constexpr bool IsSame=false;
+  [[ maybe_unused ]]
+  static constexpr bool isSame=false;
   
   /// Checks if two types are the same
   ///
-  /// Default (false) case
-  template <typename T> // Unique type
-  static constexpr bool IsSame<T,T>
+  /// True case
+  template <typename T> // Specialize with a unique type
+  static constexpr bool isSame<T,T>
   =true;
   
   /////////////////////////////////////////////////////////////////////
@@ -157,10 +158,12 @@ namespace SUNphi
   
   /// Check if the type is lvalue reference
   template <typename T>
+  [[ maybe_unused ]]
   constexpr bool isLvalue=std::is_lvalue_reference<T>::value;
   
   /// Check if the type is rvalue reference
   template <typename T>
+  [[ maybe_unused ]]
   constexpr bool isRvalue=std::is_rvalue_reference<T>::value;
   
   /// Returns reference of plain type depending on condition
@@ -177,6 +180,7 @@ namespace SUNphi
   
   /// Returns whether T is const or not
   template <typename T>  // Type
+  [[ maybe_unused ]]
   constexpr bool isConst=std::is_const<T>::value;
   
   /// Returns const or non const T depending on condition
@@ -184,6 +188,10 @@ namespace SUNphi
 	    typename _T,  // Type
 	    typename T=RemoveCV<_T>>  // Remove const from type
   using ConstIf=Conditional<B,const T,T>;
+  
+  /// Returns the type T without any reference or qualifier
+  template <typename T>
+  using Unqualified=RemoveCV<RemoveReference<T>>;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -200,18 +208,13 @@ namespace SUNphi
     return static_cast<T&&>(u);
   }
   
-  /////////////////////////////////////////////////////////////////
-  
-  /// Returns the type T without any reference or qualifier
-  template <typename T>
-  using Unqualified=RemoveCV<RemoveReference<T>>;
-  
   /////////////////////////////////////////////////////////////////////
   
   /// Identifies whether Base is a base class of Derived
   template <typename Base,     // The type that can be base
 	    typename Derived>  // The type where Base is searched
-  constexpr bool IsBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
+  [[ maybe_unused]]
+  constexpr bool isBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////
   
@@ -223,7 +226,7 @@ namespace SUNphi
   
   /// Static assert if DERIVED does not derive from BASE
 #define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\
-  static_assert(IsBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
+  static_assert(isBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
   /// Forces type Derived to be derived from Base
   template <typename Base,
@@ -254,11 +257,12 @@ namespace SUNphi
   
   /// Identifies whether a type is a floating-point
   template <typename T>
-  constexpr bool IsFloatingPoint=std::is_floating_point<T>::value;
+  [[ maybe_unused ]]
+  constexpr bool isFloatingPoint=std::is_floating_point<T>::value;
   
   /// Static assert if the type T is not a floating-point
 #define STATIC_ASSERT_IS_FLOATING_POINT(T)				\
-  static_assert(IsFloatingPoint<T>,"Error, type is not a floating point")
+  static_assert(isFloatingPoint<T>,"Error, type is not a floating point")
   
   /// Forces the type to be a floating-point
   template <typename T>
@@ -271,11 +275,12 @@ namespace SUNphi
   
   /// Identifies whether a type is an integer-like
   template <typename T>
-  constexpr bool IsIntegral=std::is_integral<T>::value;
+  [[ maybe_unused ]]
+  constexpr bool isIntegral=std::is_integral<T>::value;
   
   /// Static assert if the type T is not an integer-like
 #define STATIC_ASSERT_IS_INTEGRAL(T)			\
-  static_assert(IsIntegral<T>,"Error, type is not an integral")
+  static_assert(isIntegral<T>,"Error, type is not an integral")
   
   /// Forces the type to be integer-like
   template <typename T>
@@ -286,19 +291,20 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Identifies whether a set of types are an integer-like
+  /// Identifies whether a set of types are a integer-like
   template <typename Head=int,
 	    typename...Tail>
-  constexpr bool AreIntegral=AreIntegral<Head> and AreIntegral<Tail...>;
+  [[ maybe_unused ]]
+  constexpr bool areIntegrals=areIntegrals<Head> and areIntegrals<Tail...>;
   
   /// Identifies whether a single types is integer-like
   template <typename T>
-  constexpr bool AreIntegral<T>
-  =IsIntegral<T>;
+  constexpr bool areIntegrals<T>
+  =isIntegral<T>;
   
   /// Static assert if the types T are not an integer-like
 #define STATIC_ASSERT_ARE_INTEGRALS(...)			\
-  static_assert(AreIntegral<__VA_ARGS__>,"Error, types are not all an integral")
+  static_assert(areIntegrals<__VA_ARGS__>,"Error, types are not all an integral")
   
   /// Forces the type to be integer-like
   template <typename...Args>
@@ -307,7 +313,7 @@ namespace SUNphi
     STATIC_ASSERT_ARE_INTEGRALS(Args...);
   };
   
-  /////////////////////////////////////////////////////////////////  
+  /////////////////////////////////////////////////////////////////
   
   /// Defines a "Base" identifier and checks for it
   ///
@@ -321,7 +327,7 @@ namespace SUNphi
   /*! Expression which is true if T inherits from \c BASE ## TYPE */	\
   template<typename T>							\
   [[ maybe_unused ]]							\
-  constexpr bool Is ## TYPE=IsBaseOf<Base ## TYPE,T>;			\
+  constexpr bool is ## TYPE=isBaseOf<Base ## TYPE,T>;			\
 									\
   /*! Class forcing T to inherits from \c BASE ## TYPE */		\
   template<typename T>							\

@@ -230,7 +230,7 @@ namespace SUNphi
   /// Gives visibility to internal implementation
   template <int N,
 	    typename ISeq,
-	    typename=EnableIf<IsIntSeq<ISeq>>>
+	    typename=EnableIf<isIntSeq<ISeq>>>
   using FirstN=typename _IntSeqFirstN<N,ISeq>::type;
   
   /////////////////////////////////////////////////////////////////////////

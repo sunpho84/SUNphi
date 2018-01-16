@@ -125,7 +125,7 @@ namespace SUNphi
   /// Perform an "and" of all single-type check
   template <class Head,class...Tail>
   [[ maybe_unused ]]
-  static constexpr bool areSame=IntSeq<IsSame<Head,Tail>...>::hMul;
+  static constexpr bool areSame=IntSeq<isSame<Head,Tail>...>::hMul;
   
   /// Forces a set of types to be the same
   template <class...Args>
@@ -150,7 +150,7 @@ namespace SUNphi
   /// Counts the occurrency of type T inside a tuple
   template <class T,
 	    class...Tp>
-  static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<IsSame<T,Tp>...>;
+  static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<isSame<T,Tp>...>;
   
   /// Counts the same type
   ///
@@ -353,7 +353,7 @@ namespace SUNphi
 	    class...Tp>
   struct _PosOfType<T,T,Tp...>
   {
-    static_assert(hSum<IsSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
+    static_assert(hSum<isSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
     
     /// Set the position to 0, the first of the list
     static constexpr int value=0;

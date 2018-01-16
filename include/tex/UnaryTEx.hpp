@@ -57,7 +57,7 @@ namespace SUNphi
 #define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
   /*! Constructor taking universal reference */				\
   template <typename TEX,						\
-	    typename=EnableIf<IsSame<Unqualified<TEX>,Unqualified<Ref>>>> \
+	    typename=EnableIf<isSame<Unqualified<TEX>,Unqualified<Ref>>>> \
   explicit UNARY_TEX(TEX&& tex) : ref(forw<TEX>(tex))			\
   {									\
   }									\
@@ -171,7 +171,7 @@ namespace SUNphi
 	    bool Move=RefIsStoring and			   /* Move only if Ref is storing, and 	     */	\
 	    not (RefIsLvalue or TexIsLvalue),		   /*   no lvalue is involved          	     */	\
 	    typename Ret=Conditional<Move,Ref&&,Ref>,      /* Returned type                          */ \
-	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<T>)>	   /* Enable only for the UNARY_TEX required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<T>)>	   /* Enable only for the UNARY_TEX required */ \
   Ret CALLER(T&& tex)	/*!< Quantity to un-nest   */			\
   {									\
     if(0)								\
@@ -208,7 +208,7 @@ namespace SUNphi
   /*!                                       */				\
   /*! Returns the reference                 */				\
   template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
-	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
   DECLAUTO CALLER(D&& tex)      /*!< UnaryTEx to absorb         */	\
   {									\
     return forw<D>(tex);						\
@@ -226,7 +226,7 @@ namespace SUNphi
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
   template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
-	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
   DECLAUTO EXT_FUN(D&& tex)     /*!< UnaryTEx to nest           */	\
   {									\
     return INT_FUN(EXT_FUN(tex.ref));					\
@@ -244,7 +244,7 @@ namespace SUNphi
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
   template <typename Lhs,                                   /* Type of the lhs TEx                    */ \
 	    typename Rhs,                                   /* Type of the rhs UNARY_TEX              */ \
-	    SFINAE_ON_TEMPLATE_ARG(Is ## UNARY_TEX<Rhs>)>   /* Enable only for the UNARY_TEX required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<Rhs>)>   /* Enable only for the UNARY_TEX required */ \
   void assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
 	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_TEX */ \
   {									\

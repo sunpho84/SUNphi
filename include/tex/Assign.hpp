@@ -15,7 +15,7 @@ namespace SUNphi
   /// Default assigner
   template <typename T1, 	    // Type of the first TEx to get
 	    typename T2, 	    // Type of the second TEx to get
-	    typename=EnableIf<IsTEx<T1> and IsTEx<T2> and Unqualified<T1>::isAssignable>,
+	    typename=EnableIf<isTEx<T1> and isTEx<T2> and Unqualified<T1>::isAssignable>,
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   void assign(T1&& tex1,        ///< First TEx to act upon
 	      T2&& tex2,        ///< Second TEx to act upon

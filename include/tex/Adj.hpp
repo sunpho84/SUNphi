@@ -13,7 +13,7 @@ namespace SUNphi
 {
   /// Adjoint expression \c ref
   template <typename T,       // Type to adjoint
-	    SFINAE_ON_TEMPLATE_ARG(IsTEx<T>)>
+	    SFINAE_ON_TEMPLATE_ARG(isTEx<T>)>
   DECLAUTO adj(T&& ref)       ///< Quantity to adjoint
   {
     //cout<<"Adjoining type "<<T::name()<<endl;

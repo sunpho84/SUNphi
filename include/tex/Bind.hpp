@@ -9,6 +9,7 @@
  #include <config.hpp>
 #endif
 
+#include <metaprogramming/SFINAE.hpp>
 #include <tens/TensClass.hpp>
 #include <tex/Reference.hpp>
 #include <tex/UnaryTEx.hpp>
@@ -123,7 +124,7 @@ namespace SUNphi
     ///
     /// \todo add check on TEX
     template <typename TEX,						\
-	      typename=EnableIf<IsSame<Unqualified<TEX>,Unqualified<Ref>>>> \
+	      typename=EnableIf<isSame<Unqualified<TEX>,Unqualified<Ref>>>> \
     explicit Binder(TEX&& tex, ///< Reference to bind
 		    int id)    ///< Component to get
       : ref(forw<TEX>(tex)),id(id)

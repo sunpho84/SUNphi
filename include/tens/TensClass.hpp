@@ -6,6 +6,7 @@
 /// \brief Header file for the Tens class
 
 #include <metaprogramming/IntSeq.hpp>
+#include <metaprogramming/SFINAE.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
 #include <tex/UnaryTEx.hpp>
@@ -162,7 +163,7 @@ namespace SUNphi
   ///
   /// In this case we are treating a UnaryTEx which is not a Tens
   template <typename TEX,     // Type of the TEx
-	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<TEX> and not IsTens<TEX>)>
+	    SFINAE_ON_TEMPLATE_ARG(isUnaryTEx<TEX> and not isTens<TEX>)>
   auto& getStor(TEX&& tex)    ///< TEx to be searched
   {
     return getStor(tex.ref);
@@ -172,7 +173,7 @@ namespace SUNphi
   ///
   /// In this case we are treating a UnaryTEx which is a Tens
   template <typename TEX,     // Type of the TEx
-	    SFINAE_ON_TEMPLATE_ARG(IsUnaryTEx<TEX> and IsTens<TEX>)>
+	    SFINAE_ON_TEMPLATE_ARG(isUnaryTEx<TEX> and isTens<TEX>)>
   auto& getStor(TEX&& tex)    ///< TEx to be searched
   {
     return tex.getStor();

@@ -67,7 +67,7 @@ namespace SUNphi
   class TensKind : public BaseTensKind
   {
     // Check that all types are TensComp
-    static_assert(IntSeq<IsTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
+    static_assert(IntSeq<isTensComp<T>...>::hSum==sizeof...(T),"Cannot define a TensKind for types not inheriting from TensComp");
     
     /// Check that all types are different
     STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(Tuple<T...>);
@@ -93,7 +93,7 @@ namespace SUNphi
     template <typename TC,
 	      typename=ConstrainIsTensComp<TC>,
 	      typename=ConstrainIsDynamic<TC>>
-    static constexpr TypeIf<IsTensComp<TC> and isDynamic<TC>,int>
+    static constexpr TypeIf<isTensComp<TC> and isDynamic<TC>,int>
     dynCompPos=AreDynamic::template hSumFirst<posOfType<TC,types>>;
     
     // /// Position of a given type
