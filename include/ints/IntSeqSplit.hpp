@@ -1,7 +1,7 @@
-#ifndef _SPLIT_HPP
-#define _SPLIT_HPP
+#ifndef _INTSEQSPLIT_HPP
+#define _INTSEQSPLIT_HPP
 
-/// \file Split.hpp
+/// \file IntSeqSplit.hpp
 ///
 /// \brief Take portions of integer sequences
 
