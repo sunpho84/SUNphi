@@ -66,7 +66,7 @@ namespace SUNphi
   
   //////////////////////////////////////////////////////////////////////
   
-  // Not sure that this is a good ide
+  // Not sure that this is a good idea
   // #define IF17(...)   if constexpr(__VA_ARGS__)
   
   // #define ELSE17	 else
