@@ -11,7 +11,6 @@
  #include <config.hpp>
 #endif
 
-#include <metaprogramming/IntSeq.hpp>
 #include <metaprogramming/Tuple.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <tens/TensComp.hpp>

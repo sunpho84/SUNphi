@@ -11,7 +11,6 @@
 
 #include <tuple>
 
-#include <metaprogramming/IntSeq.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 

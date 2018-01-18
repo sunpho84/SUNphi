@@ -1,8 +1,6 @@
 #ifndef _STRING_HPP
 #define _STRING_HPP
 
-#include <metaprogramming/IntSeq.hpp>
-
 /// \file String.hpp
 ///
 /// \brief Header file to support string operations

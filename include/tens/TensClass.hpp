@@ -5,7 +5,6 @@
 ///
 /// \brief Header file for the Tens class
 
-#include <metaprogramming/IntSeq.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
