@@ -39,6 +39,43 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
+  template <bool AlsoEqual,
+	    int First,
+	    int Second,
+	    int...Tail>
+  constexpr bool _areOrderedMin2();
+  
+  template <bool AlsoEqual,
+	    int...Ints>
+  constexpr bool _areOrdered()
+  {
+    if constexpr(sizeof...(Ints)<2)
+       return true;
+    else
+      return _areOrderedMin2<AlsoEqual,Ints...>();
+  }
+  
+  template <bool AlsoEqual,
+	    int First,
+	    int Second,
+	    int...Tail>
+  constexpr bool _areOrderedMin2()
+  {
+    constexpr bool compa=AlsoEqual?(First<=Second):(First<Second);
+    
+    return compa and _areOrdered<AlsoEqual,Second,Tail...>();
+  }
+  
+  template <int...Ints>
+  constexpr bool areOrdered=
+    _areOrdered<true,Ints...>();
+  
+  template <int...Ints>
+  constexpr bool areOrderedAndDifferent=
+    _areOrdered<false,Ints...>();
+  
+  /////////////////////////////////////////////////////////////////////////
+  
   /// Returns the position of the first non-occurrency of I
   ///
   /// Internal implementaton
@@ -105,8 +142,7 @@ namespace SUNphi
   template <int Head>
   constexpr int hMul<Head> =Head;
   
-  /////////////////////////////////////////////////////////////////////////
-  
+  /////////////////////////////////////////////////////////////////
   DEFINE_BASE_TYPE(IntSeq);
   
   /// A struct holding a sequence of integer (similar to stdlib).
@@ -169,6 +205,10 @@ namespace SUNphi
     /// Get the I element of the sequence
     template <int I>
     static constexpr int element=getIntOfSeq<I,Ints...>;
+    
+    static constexpr int isOrdered=areOrdered<Ints...>;
+    
+    static constexpr int isOrderedAndDifferent=areOrderedAndDifferent<Ints...>;
     
     /////////////////////////////////////////////////////////////////
     
