@@ -37,7 +37,13 @@ namespace SUNphi
   
   /// Set the assignability according to the reference
 #define ASSIGNABLE_ACCORDING_TO_REF					\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned according to the reference */,RemoveReference<decltype(ref)>::isAssignable)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned if the reference can */,RemoveReference<decltype(ref)>::isAssignable)
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Set the mergeable component equal to the reference
+#define MERGEABLE_ACCORDING_TO_REF					\
+  PROVIDE_MERGEABLE_COMPS(/*! The components of this TEx can be merged as the reference one */,typename RemoveReference<decltype(ref)>::MergeableComps)
   
   /////////////////////////////////////////////////////////////////
   

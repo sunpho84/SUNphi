@@ -37,8 +37,7 @@ namespace SUNphi
     
     SAME_COMP_SIZES_OF_REF;
     
-    /// Wrap prevents merging
-    static constexpr int nMergeableComps=0;
+    MERGEABLE_ACCORDING_TO_REF;
     
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Wrapper);
     PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR;

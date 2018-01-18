@@ -47,8 +47,7 @@ namespace SUNphi
     
   public:
     
-    /// All components can be merged
-    using MergeableCompGroups=IntSeqOfSameNumb<Tk::nTypes,0>;
+    PROVIDE_MERGEABLE_COMPS(/* By default, all components can be merged */,IntSeq<0,Tk::nTypes>);
     
     /// Returns the size of a component
     template <typename TC>
