@@ -151,6 +151,7 @@ namespace SUNphi
 	    typename=ConstrainIsIntSeq<T>>
   struct ConstrainIsOrderedIntSeq
   {
+    /// Internal type
     using type=T;
     
     static_assert(isOrderedIntSeq<T>,"IntSeq is not ordered");
@@ -161,6 +162,7 @@ namespace SUNphi
 	    typename=ConstrainIsIntSeq<T>>
   struct ConstrainIsOrderedUniqueIntSeq
   {
+    /// Internal type
     using type=T;
     
     static_assert(T::isOrderedUnique,"IntSeq is not ordered and unique");

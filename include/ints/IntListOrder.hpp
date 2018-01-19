@@ -58,10 +58,13 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
+  /// Constant used to parse first-occurrency case
 #define FIRST_OF 0
   
+  /// Constant used to parse last-occurrency case
 #define LAST_OF 1
   
+  /// Defines a searcher named NAME making the comparison COMPA
 #define DEFINE_SEARCH(DESCRIPTION,FIRST_OR_LAST,NAME,COMPA)		\
   DESCRIPTION								\
   /*!                                                         */	\
@@ -113,7 +116,7 @@ namespace SUNphi
   DEFINE_SEARCH(/*! Returns the position of the last element smaller than I */,LAST_OF,lastSmaller,<);
   
   DEFINE_SEARCH(/*! Returns the position of the first element larger than I */,FIRST_OF,firsLarger,>);
-  DEFINE_SEARCH(/*! Returns the position of the last element largeer than I */,LAST_OF,lastLarger,>);
+  DEFINE_SEARCH(/*! Returns the position of the last element larger than I */,LAST_OF,lastLarger,>);
   
 #undef DEFINE_FIRST_OF
 #undef DEFINE_LAST_OF
