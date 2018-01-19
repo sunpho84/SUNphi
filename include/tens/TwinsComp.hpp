@@ -9,9 +9,9 @@
 /// TwinComp is used to distinguish row and column component of
 /// matrices.
 
-#include <metaprogramming/Tuple.hpp>
 #include <tens/TensComp.hpp>
 #include <tex/BaseTEx.hpp>
+#include <tuple/TupleClass.hpp>
 #include <utility/Unused.hpp>
 
 namespace SUNphi
@@ -21,7 +21,9 @@ namespace SUNphi
   /// Default for a generic TensComp: false
   template <class T,                         // Type to declare not twinned
 	    class=ConstrainIsTensComp<T>>    // Constrain the T to be a TensComp
-  constexpr bool hasTwin=false;
+  [[ maybe_unused ]]
+  constexpr bool hasTwin=
+    false;
   
   /// Specify the twin component of a given TensComp
   ///

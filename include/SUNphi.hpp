@@ -11,6 +11,7 @@
 #include <System.hpp>
 #include <Tens.hpp>
 #include <TEx.hpp>
+#include <Tuple.hpp>
 #include <Utility.hpp>
 
 /// Namespace of the SUNphi library

@@ -8,16 +8,22 @@
 namespace SUNphi
 {
   /// Sum of all integers
-  template <int Head=0,
-	    int...Tail>
+  ///
+  /// Internal implementation
+  template <int...Ints>
   [[ maybe_unused ]]
-  constexpr int hSum=
-    Head+hSum<Tail...>;
+  constexpr int _hSum()
+  {
+    if constexpr(sizeof...(Ints)==0)
+      return 0;
+    else
+      return (Ints + ...);
+  }
   
-  /// Sum of all integers, unary case
-  template <int Head>
-  constexpr int hSum<Head> =
-    Head;
+  /// Sum of all integers
+  template <int...Ints>
+  [[ maybe_unused ]]
+  constexpr int hSum=_hSum<Ints...>();
   
   /////////////////////////////////////////////////////////////////
   
@@ -38,16 +44,9 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Product of all integers
-  template <int Head=0,
-	    int...Tail>
+  template <int...Ints>
   [[ maybe_unused ]]
-  constexpr int hMul=
-    Head*hMul<Tail...>;
-  
-  /// Product of all integers, unary case
-  template <int Head>
-  constexpr int hMul<Head> =
-    Head;
+  constexpr int hMul=(Ints * ...);
 }
 
 #endif

@@ -11,10 +11,13 @@
  #include <config.hpp>
 #endif
 
-#include <metaprogramming/Tuple.hpp>
+#include <array>
+
 #include <metaprogramming/TypeTraits.hpp>
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
+#include <tuple/TupleElements.hpp>
+#include <tuple/TupleOrder.hpp>
 
 namespace SUNphi
 {
