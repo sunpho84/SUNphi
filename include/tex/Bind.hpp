@@ -9,6 +9,8 @@
  #include <config.hpp>
 #endif
 
+#include <ints/IntSeqInsert.hpp>
+#include <ints/IntSeqRemove.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensClass.hpp>
 #include <tex/Reference.hpp>
@@ -48,9 +50,6 @@ namespace SUNphi
     /// Index to get
     const int id;
     
-    /// We can merge up to where we bind
-    //using MergeableCompGroups=IntSeqCat<class T> std::min(Ref::nMergeableComps,pos);
-    
     /// Returns the size of a component
     template <typename TC>
     int compSize() const
@@ -61,6 +60,12 @@ namespace SUNphi
     
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
+    
+    PROVIDE_MERGEABLE_COMPS(/* We have to split at the component where we bind */,
+			    InsertInOrderedUniqueIntSeq<pos
+			    ,RemoveFromOrderedUniqueIntSeq<pos,typename Unqualified<Ref>::MergeableComps,-1>
+			    ,0
+			    ,true>);
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
