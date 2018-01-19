@@ -10,6 +10,7 @@
 #include <ints/IntListOrder.hpp>
 #include <ints/IntSeq.hpp>
 #include <ints/IntSeqCat.hpp>
+#include <ints/IntSeqInsert.hpp>
 #include <ints/IntSeqSplit.hpp>
 #include <ints/Ranges.hpp>
 

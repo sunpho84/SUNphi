@@ -10,6 +10,7 @@
 #include <ints/IntListGetEl.hpp>
 
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/UniversalReferences.hpp>
 
 namespace SUNphi
 {
@@ -80,7 +81,12 @@ namespace SUNphi
     static constexpr int isOrdered=areOrdered<Ints...>;
     
     /// Determine whether the IntSeq elements are ordered and different or not
-    static constexpr int isOrderedAndDifferent=areOrderedAndDifferent<Ints...>;
+    static constexpr int isOrderedUnique=areOrderedAndDifferent<Ints...>;
+    
+    /// Determine whether the element is contained
+    template <int El>
+    static constexpr bool has=
+      firstEq<El,Ints...>!=size;
     
     /////////////////////////////////////////////////////////////////
     
@@ -102,6 +108,7 @@ namespace SUNphi
     {
       /// Returned type
       using type=typename IntSeq<Ints...,HeadR>::template AppendFirstN<N-1,IntSeq<TailR...>>;
+      
     };
     
     /// Append the first N id of another IntSeq
@@ -121,6 +128,42 @@ namespace SUNphi
     template <int N,
 	      typename ISeq>
     using AppendFirstN=typename _AppendFirstN<(N>0),N,ISeq>::type;
+  };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Identifies whether a type is an ordered IntSeq
+  ///
+  /// General case
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isOrderedIntSeq=false;
+  
+  /// Identifies whether a type is an ordered IntSeq
+  ///
+  /// General case
+  template <int...Ints>
+  constexpr bool isOrderedIntSeq<IntSeq<Ints...>> =
+    IntSeq<Ints...>::isOrdered;
+  
+  /// Constrain the IntSeq to be ordered
+  template <typename T,
+	    typename=ConstrainIsIntSeq<T>>
+  struct ConstrainIsOrderedIntSeq
+  {
+    using type=T;
+    
+    static_assert(isOrderedIntSeq<T>,"IntSeq is not ordered");
+  };
+  
+  /// Constrain the IntSeq to be ordered and unique
+  template <typename T,
+	    typename=ConstrainIsIntSeq<T>>
+  struct ConstrainIsOrderedUniqueIntSeq
+  {
+    using type=T;
+    
+    static_assert(T::isOrderedUnique,"IntSeq is not ordered and unique");
   };
 }
 

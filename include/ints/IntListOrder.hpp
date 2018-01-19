@@ -58,36 +58,65 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////////////
   
-  /// Returns the position of the first non-occurrency of I
-  ///
-  /// Internal implementaton
-  template <int I,       // Element to search
-	    int Pos,     // Position currently reached
-	    int Head,    // First component to be searched
-	    int...Ints>  // Other components
-  constexpr int _firstNon()
-  {
-    if constexpr(I!=Head or sizeof...(Ints)==0)
-      return Pos;
-    else
-      return _firstNon<I,Pos+1,Ints...>();
-  }
+#define FIRST_OF 0
   
-  /// Returns the position of the first non-occurrency of I
-  ///
-  /// General case
-  template <int I,       // Element to search
-	    int...Ints>  // Components
-  [[ maybe_unused ]]
-  constexpr int firstNon=
-    _firstNon<I,0,Ints...>();
+#define LAST_OF 1
   
-  /// Returns the position of the first non-occurrency of I
-  ///
-  /// Empty sequence
-  template <int I>       // Element to search
-  constexpr int firstNon<I> =
-    0;
+#define DEFINE_SEARCH(DESCRIPTION,FIRST_OR_LAST,NAME,COMPA)		\
+  DESCRIPTION								\
+  /*!                                                         */	\
+  /*! Internal implementation                                 */	\
+  template <int I,       /* Element to search                 */	\
+	    int Pos,     /* Position currently reached        */	\
+	    int NParsed, /* Number of elements already parsed */	\
+	    int Head,    /* First component to be searched    */	\
+	    int...Tail>  /* Other components                  */	\
+  constexpr int _ ## NAME()						\
+  {									\
+    constexpr bool matching=(Head COMPA I);				\
+    constexpr bool exitAtFirst=(FIRST_OR_LAST==FIRST_OF);		\
+    constexpr bool emptyTail=(sizeof...(Tail)==0);			\
+    constexpr int newPos=(matching?NParsed:Pos);			\
+    									\
+    if constexpr((not emptyTail) and not (matching and exitAtFirst))	\
+      return _ ## NAME<I,newPos,NParsed+1,Tail...>();	                \
+    else								\
+      if constexpr(matching and (exitAtFirst or emptyTail))		\
+		    return newPos;					\
+      else								\
+	return newPos;							\
+  }									\
+									\
+  DESCRIPTION								\
+  /*!                                         */			\
+  /*! General case                            */			\
+  template <int I,       /* Element to search */			\
+	    int...Ints>  /* Components        */			\
+  [[ maybe_unused ]]							\
+  constexpr int NAME=							\
+    _ ## NAME<I,sizeof...(Ints),0,Ints...>();				\
+									\
+  DESCRIPTION								\
+  /*!                                         */			\
+  /*! Empty sequence case                     */			\
+  template <int I>       /* Element to search */			\
+  constexpr int NAME<I> =						\
+    0
+  
+  DEFINE_SEARCH(/*! Returns the position of the first element different from I */,FIRST_OF,firstNon,!=);
+  DEFINE_SEARCH(/*! Returns the position of the last element different from I */,LAST_OF,lastNon,!=);
+  
+  DEFINE_SEARCH(/*! Returns the position of the first element equal to I */,FIRST_OF,firstEq,==);
+  DEFINE_SEARCH(/*! Returns the position of the last element equal to I */,LAST_OF,lastEq,==);
+  
+  DEFINE_SEARCH(/*! Returns the position of the first element smaller than I */,FIRST_OF,firstSmaller,<);
+  DEFINE_SEARCH(/*! Returns the position of the last element smaller than I */,LAST_OF,lastSmaller,<);
+  
+  DEFINE_SEARCH(/*! Returns the position of the first element larger than I */,FIRST_OF,firsLarger,>);
+  DEFINE_SEARCH(/*! Returns the position of the last element largeer than I */,LAST_OF,lastLarger,>);
+  
+#undef DEFINE_FIRST_OF
+#undef DEFINE_LAST_OF
 }
 
 #endif

@@ -61,6 +61,6 @@ namespace SUNphi
   /// Wraps the implementation to avoid writing "type"
   template <class...T>
   using IntSeqCat=typename _IntSeqCat<T...>::type;
-}  
+}
 
 #endif
