@@ -66,18 +66,15 @@ namespace SUNphi
   /// Insert the integer Ins in an ordered unique IntSeq
   ///
   /// Care is taken to ensure that Ins is not already in IS The
-  /// elements after are incremented by IncrAft. Examples:
-  ///
-  /// \code
-  /// using A=IntSeq<0,1,3>;
-  /// using B=InsertInOrderedUnqiueIntSeq<3,A,10>; // IntSeq<0,1,3,13>
-  /// \endcode
+  /// elements after are incremented by IncrAft. See
+  /// InsertInOrderedIntSeq for examples
   template <int Ins,
 	    typename IS,
-	    int IncrAft=0>
+	    int IncrAft=0,
+	    bool IgnoreIfPresent=false>
   using InsertInOrderedUniqueIntSeq=
     typename ConstrainIsOrderedUniqueIntSeq<
-    decltype(_insertInOrderedIntSeq<Ins,IncrAft,false>
+    decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>
 	      (IntSeq<>{},typename ConstrainIsOrderedUniqueIntSeq<IS>::type{}))>::type;
 }
 

@@ -31,7 +31,6 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  
   /// Filter an IntSeq according to another one
   ///
   /// Internal implementation, forward declaration
