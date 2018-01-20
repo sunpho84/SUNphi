@@ -16,7 +16,8 @@ namespace SUNphi
   ///
   /// Directly aliasing the std library.
   template <class...Tp>
-  using Tuple=std::tuple<Tp...>;
+  using Tuple=
+    std::tuple<Tp...>;
   
   /////////////////////////////////////////////////////////////////
   
@@ -41,7 +42,8 @@ namespace SUNphi
   /// Gives visibility to the internal implementation
   template <class T>
   [[maybe_unused]]
-  constexpr int isTuple=_isTuple<Unqualified<T>>::value;
+  constexpr int isTuple=
+    _isTuple<Unqualified<T>>::value;
   
   /// Assert if the type is not a Tuple
 #define STATIC_ASSERT_IS_TUPLE(T)			\
@@ -56,11 +58,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Returns the type of the element O of the Tuple Tp
-  template <int O,                           // Order of the type in the Tuple
+  /// Returns the type of the element I of the Tuple Tp
+  template <int I,                           // Order of the type in the Tuple
 	    typename Tp,                     // Tuple type
 	    typename=EnableIf<isTuple<Tp>>>  // Force Tp to be a Tuple
-  using TupleElementType=typename std::tuple_element<0,Tp>::type;
+  using TupleElementType=
+    typename std::tuple_element<I,Tp>::type;
   
   /////////////////////////////////////////////////////////////////
   
@@ -68,7 +71,8 @@ namespace SUNphi
   template <typename T,
 	    typename=EnableIf<isTuple<T>>>
   [[maybe_unused]]
-  constexpr int tupleSize=std::tuple_size<Unqualified<T>>::value;
+  constexpr int tupleSize=
+    std::tuple_size<Unqualified<T>>::value;
   
   /////////////////////////////////////////////////////////////////
   
@@ -93,7 +97,8 @@ namespace SUNphi
   /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
   /*!                                                                     */ \
   /*! Forward declaration of the internal implementation                  */ \
-  template <class TP,class=FalseType>					\
+  template <class TP,							\
+	    class=FalseType>						\
   struct _ ## TYPE ## FromTuple;					\
   									\
   /*! Defines a variadic type \c TYPE taking the same types of a \c Tuple */ \
@@ -120,9 +125,11 @@ namespace SUNphi
   ///
   /// Perform an "and" of all single-type check
   /// \todo use foldable expression instead
-  template <class Head,class...Tail>
+  template <class Head,
+	    class...Tail>
   [[ maybe_unused ]]
-  static constexpr bool areSame=IntSeq<isSame<Head,Tail>...>::hMul;
+  static constexpr bool areSame=
+    IntSeq<isSame<Head,Tail>...>::hMul;
   
   /// Forces a set of types to be the same
   template <class...Args>
@@ -140,14 +147,16 @@ namespace SUNphi
 	    class T2,
 	    class=FalseType>
   [[ maybe_unused ]]
-  static constexpr int _nOfTypeInTuple=0;
+  static constexpr int _nOfTypeInTuple=
+    0;
   
   /// Counts the same type
   ///
   /// Counts the occurrency of type T inside a tuple
   template <class T,
 	    class...Tp>
-  static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =hSum<isSame<T,Tp>...>;
+  static constexpr int _nOfTypeInTuple<T,Tuple<Tp...>> =
+    hSum<isSame<T,Tp>...>;
   
   /// Counts the same type
   ///
@@ -156,7 +165,8 @@ namespace SUNphi
 	    class TP,
 	    class=ConstrainIsTuple<TP>>
   [[ maybe_unused ]]
-  static constexpr int nOfTypeInTuple=_nOfTypeInTuple<T,TP>;
+  static constexpr int nOfTypeInTuple=
+    _nOfTypeInTuple<T,TP>;
   
   /////////////////////////////////////////////////////////////////
   
@@ -166,7 +176,8 @@ namespace SUNphi
   template <class T,
 	    class=ConstrainIsTuple<T>>
   [[ maybe_unused ]]
-  static constexpr int nDiffTypesInTuple=0;
+  static constexpr int nDiffTypesInTuple=
+    0;
   
   /// Count the number of different types in a \c Tuple
   ///

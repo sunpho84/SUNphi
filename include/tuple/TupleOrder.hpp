@@ -67,7 +67,8 @@ namespace SUNphi
   /// \endcode
   template <class...Args>
   [[ maybe_unused ]]
-  constexpr int posOfType=_PosOfType<Args...>::value;
+  constexpr int posOfType=
+    _PosOfType<Args...>::value;
 }
 
 #endif
