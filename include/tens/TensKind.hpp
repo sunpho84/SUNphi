@@ -13,6 +13,8 @@
 
 #include <array>
 
+
+#include <ints/IntSeqInsert.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
@@ -164,6 +166,9 @@ namespace SUNphi
     
     /// Reports whether a component is Matricial or not
     using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
+    
+    template <typename Is>
+    using InsertTrueTwinnedPos=InsertTrueTwinnedPosOfTuple<Is,types>;
     
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
