@@ -61,11 +61,15 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<TG>;
     
+    // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/* We have to split at the component where we bind */,
-			    InsertInOrderedUniqueIntSeq<pos
-			    ,RemoveFromOrderedUniqueIntSeq<pos,typename Unqualified<Ref>::MergeableComps,-1>
-			    ,0
-			    ,true>);
+			    InsertInOrderedUniqueIntSeq<
+			    pos      // Position where to insert, same of where to remove
+			    ,RemoveFromOrderedUniqueIntSeq<pos,                                       // Position where to remove
+			                                   typename Unqualified<Ref>::MergeableComps, // Nested components
+			                                   -1>                                        // Shift back by 1 after removal
+			    ,0       // Shift 0 after insertion
+			    ,true>); // Ignore if already present
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\

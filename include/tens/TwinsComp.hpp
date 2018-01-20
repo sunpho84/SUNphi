@@ -9,9 +9,11 @@
 /// TwinComp is used to distinguish row and column component of
 /// matrices.
 
+#include <ints/IntSeqInsert.hpp>
 #include <tens/TensComp.hpp>
 #include <tex/BaseTEx.hpp>
 #include <tuple/TupleClass.hpp>
+#include <tuple/TupleOrder.hpp>
 #include <utility/Unused.hpp>
 
 namespace SUNphi
@@ -83,6 +85,60 @@ namespace SUNphi
 	    typename TK_TYPES=typename TK::types,          // Types of the tensor kind
 	    bool Has=tupleHasType<Tc,TK_TYPES>>            // Check if the tuple has type
   using CompOrTwinned=Conditional<Has,Tc,TwinCompOf<Tc>>;
+  
+  /// Insert in the IntSeq the position of all true twinned types
+  ///
+  /// Internal implementation
+  template <int Pos,        // Searched position
+	    int...Ints,     // IntSeq parameters
+	    typename...T>   // TensComp
+  DECLAUTO _InsertTrueTwinnedPosOfTuple(const IntSeq<Ints...>& in, ///< Input IntSeq
+					const Tuple<T...>& types)  ///< Input types
+  {
+      static_assert((isTensComp<T> & ...),"Supported only for tensComp");
+      
+      // Input IntSeq
+      using In=IntSeq<Ints...>;
+      // Input Tuple
+      using Types=Tuple<T...>;
+      // Twinned Tuple
+      using TwTypes=Tuple<TwinCompOf<T>...>;
+      //
+      // Finished the types to check
+      if constexpr(sizeof...(T)<=Pos)
+	 return in;
+      else
+	{
+	  // Type in position Pos
+	  using Comp=Unqualified<TupleElementType<Pos,Types>>;
+	  // Twinned comp
+	  using TwComp=TwinCompOf<Comp>;
+	  
+	  // Check if it is a real twin
+	  constexpr bool isTrueTwin=not isSame<TwComp,Comp>;
+	  // Check if twinned Tuple had original type
+	  constexpr bool hadTwinned=tupleHasType<TwComp,TwTypes>;
+	  
+	  // Result type
+	  using Out=Conditional<isTrueTwin and hadTwinned,
+		                InsertInOrderedIntSeq<Pos,   // Position to insert
+		                                      In,    // List where to insert
+						      0,     // Do not shift fter insertinh
+ 						      true>, // Ignore insertion if present
+				In>;
+	  
+	  return _InsertTrueTwinnedPosOfTuple<Pos+1>(Out{},types);
+	}
+    }
+  
+  /// Insert in the IntSeq the position of all true twinned types
+  ///
+  /// A true twinned type is a type for which the twin is different
+  /// from itself, and is present in the list
+  template <typename Is,  // Integer to be extended
+	    typename Tp>  // Tuple to analyze
+  using InsertTrueTwinnedPosOfTuple=
+    decltype(_InsertTrueTwinnedPosOfTuple<0>(Is{},Tp{}));
 }
 
 #endif

@@ -45,6 +45,11 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename TK::Twinned;
     
+    PROVIDE_MERGEABLE_COMPS(/* We have to split at all true twinned components */,
+			    InsertTrueTwinnedPosOfTuple<
+			       typename Unqualified<Ref>::MergeableComps, // Nested split points
+			       typename Tk::types>);                      // Tuple with components
+    
     /// We can merge up to where we bind
     static constexpr int nMergeableComps=
       std::min(Unqualified<Ref>::nMergeableComps,
