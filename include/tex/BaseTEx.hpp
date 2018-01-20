@@ -117,7 +117,7 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);		\
-  /*STATIC_ASSERT_HAS_MEMBER(MergeableComp,__VA_ARGS__);*/	\
+  STATIC_ASSERT_HAS_MEMBER(MergeableComps,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
   /// TEmplate Expression
