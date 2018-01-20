@@ -132,6 +132,14 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Create an IntSeq with given types
+  template <int...Ints>
+  [[ maybe_unused ]]
+  constexpr DECLAUTO intSeq=
+    IntSeq<Ints...>{};
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Identifies whether a type is an ordered IntSeq
   ///
   /// General case
@@ -164,8 +172,7 @@ namespace SUNphi
   {
     /// Internal type
     using type=T;
-    
-    static_assert(T::isOrderedUnique,"IntSeq is not ordered and unique");
+    static_assert(Unqualified<T>::isOrderedUnique,"IntSeq is not ordered and unique");
   };
 }
 
