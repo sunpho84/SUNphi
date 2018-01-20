@@ -44,6 +44,9 @@ namespace SUNphi
     /// Internal storage
     TensStor<Tk,Fund>* v=nullptr;
     
+    /// Store whether this has been created
+    bool created=false;
+    
   public:
     
     PROVIDE_MERGEABLE_COMPS(/* By default, all components can be merged */,IntSeq<0,Tk::nTypes>);
@@ -58,7 +61,8 @@ namespace SUNphi
     /// Construct the Tens on the basis of the dynamical sizes passed
     template <class...DynSizes>                    //   Dynamic size types
     explicit Tens(const DynSizes&...extDynSizes) : ///< Passed internal dynamic size
-      v(new TensStor<Tk,Fund>(extDynSizes...))    //   Construct the vector before taking the reference
+      v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
+      created(true)                                //   Mark down that we are creating
     {
 #ifdef DEBUG_TENS
 	  using namespace std;
@@ -69,7 +73,8 @@ namespace SUNphi
     
     /// Copy constructor
     Tens(const Tens& oth) :
-      v(new TensStor<Tk,Fund>(*oth.v))   //   Copy the vector
+      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
+      created(true)
     {
 #ifdef DEBUG_TENS
       using namespace std;
@@ -82,6 +87,9 @@ namespace SUNphi
     {
       v=oth.v;
       oth.v=nullptr;
+      
+      created=oth.created;
+      oth.created=false;
       
 #ifdef DEBUG_TENS
       using namespace std;
@@ -96,7 +104,8 @@ namespace SUNphi
       using namespace std;
       cout<<"TensClass dealloc: "<<this<<endl;
 #endif
-      delete v;
+      if(created)
+	delete v;
     }
     
   public:
