@@ -167,8 +167,10 @@ namespace SUNphi
     /// Reports whether a component is Matricial or not
     using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
     
+    /// Insert in the IntSeq Is the points where true twinned types are present
     template <typename Is>
-    using InsertTrueTwinnedPos=InsertTrueTwinnedPosOfTuple<Is,types>;
+    using InsertTrueTwinnedPos=
+      InsertTrueTwinnedPosOfTuple<Is,types>;
     
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
