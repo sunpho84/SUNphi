@@ -11,7 +11,6 @@ namespace SUNphi
   ///
   /// Internal implementation
   template <int...Ints>
-  [[ maybe_unused ]]
   constexpr int _hSum()
   {
     if constexpr(sizeof...(Ints)==0)
@@ -44,9 +43,22 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Product of all integers
+  ///
+  /// Internal implementation
   template <int...Ints>
   [[ maybe_unused ]]
-  constexpr int hMul=(Ints * ...);
+  constexpr int _hMul()
+  {
+    if constexpr(sizeof...(Ints)==0)
+      return 1;
+    else
+      return (Ints * ...);
+  }
+  
+  /// Product of all integers
+  template <int...Ints>
+  [[ maybe_unused ]]
+  constexpr int hMul=_hMul<Ints...>();
 }
 
 #endif
