@@ -85,17 +85,67 @@ namespace SUNphi
       return TC::size;
     }
     
-    // /// returns a components-merged version
-    // template <typename Is>
-    // TensStor<typename TK::template Merged<Is>,T> merged() const
-    // {
+    /// Returns the total size of the range [Beg, End)
+    template <int Beg, // Begin of the range
+	      int End> // End of the range
+    int compsRangeSize() const
+    {
+      // If empty range, returns 0
+      if constexpr(Beg>=End)
+	return 0;
+      else
+	{
+	  // TensComp number Beg
+	  using Tc=TupleElementType<Beg,typename TK::types>;
+	  // Compute this comp size
+	  int tmp=compSize<Tc>();
+	  // If more components present, nest
+	  if constexpr(Beg+1<End)
+	    return tmp*compsRangeSize<Beg+1,End>();
+	  // Otherwise return
+	  else
+	    return tmp;
+	}
+    }
+    
+    /// Creat the full list of sizes dynamical of the grouped comps
+    template <int...Delims,   // Delimiters of the groups
+    	      int...DynComps> // List of dynamical comps
+    DECLAUTO compsRangeGroupsSize(const IntSeq<Delims...>&,
+				  const IntSeq<DynComps...>& mergedDynCompPos) const
+    {
+      using Is=IntSeq<Delims...>;
       
-    //   TensStor<typename TK::template Merged<Is>,T> out(v)
-    // }
+      DynSizes<sizeof...(DynComps)> sizes=
+	{{compsRangeSize<
+	  Is::template element<DynComps>,
+	  Is::template element<DynComps+1>>()...}};
+      
+      return sizes;
+    }
+    
+    /// Returns a components-merged version of the TensStor
+    template <typename Is>  // Integer sequence containing the delimiters
+    DECLAUTO mergedComps() const
+    {
+      // Returned TensKind
+      using MergedTk=typename TK::template Merged<Is>;
+      // Returned type
+      using TOut=TensStor<MergedTk,T>;
+      // Position of the merged dynamical components
+      using MergedDynCompPos=typename MergedTk::DynCompsPos;
+      // Dynamic sizes after merge
+      const DynSizes<MergedTk::nDynamic> mergedDynSizes=compsRangeGroupsSize(Is{},MergedDynCompPos{});
+      
+      return new TOut(mergedDynSizes,v);
+    }
     
     /// Allocator
     void alloc()
     {
+      // Mark down that we are creating
+      created=true;
+      
       // Compute the size
       totSize=TK::maxStaticIdx;
       for(const auto &i : dynSizes)
@@ -111,15 +161,25 @@ namespace SUNphi
     }
     
     /// Constructor (test)
-    template <class...DynSizes,                                  // Arguments (sizes)
-	      class=ConstrainNTypes<TK::nDynamic,DynSizes...>>
-    explicit TensStor(const DynSizes&...extDynSizes) : dynSizes({{extDynSizes...}})
+    template <class...DynSizes,                                               // Arguments (sizes)
+	      typename=EnableIf<areIntegrals<Unqualified<DynSizes>...>>,      // Constrain to be integers
+	      class=ConstrainNTypes<TK::nDynamic,DynSizes...>>                // Constrain to be in the correct number
+    explicit TensStor(DynSizes&&...extDynSizes) :
+      dynSizes({{extDynSizes...}})          // Store the sizes
     {
       // Constrain the arguments to be all integer-like
-      STATIC_ASSERT_ARE_INTEGRALS(DynSizes...);
+      STATIC_ASSERT_ARE_INTEGRALS(Unqualified<DynSizes>...);
       //printf("Ah ah! %d\n",TK::nDynamic);
       
       alloc();
+    }
+    
+    /// Constructor taking dynSizes and pointer (test)
+    explicit TensStor(const DynSizes<TK::nDynamic>& dynSizes,
+		      T* v) :
+      v(v),                       // Copy the ref
+      dynSizes(dynSizes)          // Store the sizes
+    {
     }
     
     /// Copy constructor (test)
@@ -144,7 +204,8 @@ namespace SUNphi
 #endif
       
       // Free
-      freeMem(v);
+      if(created)
+	freeMem(v);
     }
   };
   

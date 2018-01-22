@@ -43,10 +43,6 @@ namespace SUNphi
     
     /// Internal storage
     TensStor<Tk,Fund>* v=nullptr;
-    
-    /// Store whether this has been created
-    bool created=false;
-    
   public:
     
     PROVIDE_MERGEABLE_COMPS(/* By default, all components can be merged */,IntSeq<0,Tk::nTypes>);
@@ -62,8 +58,7 @@ namespace SUNphi
     template <class...DynSizes,                                               //   Dynamic size types
 	      typename=EnableIf<areIntegrals<Unqualified<DynSizes>...>>>      //   Constrain to be integers
     explicit Tens(DynSizes&&...extDynSizes) :                    ///< Passed internal dynamic size
-      v(new TensStor<Tk,Fund>(forw<DynSizes>(extDynSizes)...)),  //   Construct the vector
-      created(true)                                              //   Mark down that we are creating
+      v(new TensStor<Tk,Fund>(forw<DynSizes>(extDynSizes)...))   //   Construct the vector
     {
 #ifdef DEBUG_TENS
 	  using namespace std;
@@ -72,10 +67,15 @@ namespace SUNphi
       STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
     }
     
+    /// Construct the Tens on the basis of a reference storage
+    explicit Tens(TensStor<Tk,Fund>* v) :                        ///< Provided storage
+      v(v)    // The internal storage is built with the reference
+    {
+    }
+    
     /// Copy constructor
     Tens(const Tens& oth) :
-      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
-      created(true)
+      v(new TensStor<Tk,Fund>(*oth.v))   //   Copy the vector
     {
 #ifdef DEBUG_TENS
       using namespace std;
@@ -89,9 +89,6 @@ namespace SUNphi
       v=oth.v;
       oth.v=nullptr;
       
-      created=oth.created;
-      oth.created=false;
-      
 #ifdef DEBUG_TENS
       using namespace std;
       cout<<"Tens move constructor!"<<endl;
@@ -103,13 +100,26 @@ namespace SUNphi
     {
 #ifdef DEBUG_TENS
       using namespace std;
-      cout<<"TensClass dealloc: "<<this<<endl;
+      cout<<"TensClass destroy: "<<this<<endl;
 #endif
-      if(created)
-	delete v;
+      delete v;
     }
     
   public:
+    
+    /// Returns a component-merged reference
+    template <typename Is>
+    DECLAUTO mergedComps() const
+    {
+      // Get a component-merged reference to the storage
+      auto vMerged=v->template mergedComps<Is>();
+      // Returned TensKind
+      using MergedTk=typename Unqualified<decltype(*vMerged)>::Tk;
+      // Returned type
+      using TOut=Tens<MergedTk,Fund>;
+      
+      return TOut(vMerged);
+    }
     
     /// Returns a constant reference to v
     const TensStor<Tk,Fund>& getStor() const
