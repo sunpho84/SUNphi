@@ -221,78 +221,61 @@ namespace SUNphi
       /////////////////////////////////////////////////////////////////
       
       /// Maximal total submultiple of a list of components
-      ///
-      /// Internal implementation
       template <int...Ints>
-      static constexpr int _tensCompsListTotMaxKnownSubMultiple(IntSeq<Ints...>)
-      {
-	return IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
-      }
-      
-      /// Maximal total submultiple of a list of components
-      template <typename Is>
-      static constexpr EnableIf<isIntSeq<Is>,int>
-      tensCompsListTotMaxKnownSubMultiple=
-	_tensCompsListTotMaxKnownSubMultiple(Is{});
-      
-      /////////////////////////////////////////////////////////////////
+      static constexpr int tensCompsListTotMaxKnownSubMultiple=
+	IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
       
       /// Total size of a list of components, minimized to -1
-      ///
-      /// Internal implementation
       template <int...Ints>
-      static constexpr int _tensCompsListTotSize(IntSeq<Ints...>)
-      {
-	return std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
-      }
-      
-      /// Total size of a group of components, minimized to -1
-      template <typename Is>
-      static constexpr EnableIf<isIntSeq<Is>,int>
-      tensCompsListTotSize=
-	_tensCompsListTotSize(Is{});
+      static constexpr int tensCompsListTotSize=
+	std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
       
       /////////////////////////////////////////////////////////////////
       
-      /// Create a TensComp merging the components of group I
+      /// Create a TensComp merging the components IComps
       ///
-      /// Internal implementation
-      template <int I>                  // Index of the group of components to merge
-      struct _TensCompsGroupMerged
+      /// Forward definition
+      template <typename Is>
+      struct TensCompsListMerged;
+      
+      /// Create a TensComp merging the components IComps
+      template <int...IComps>                  // Index of the components to merge
+      struct TensCompsListMerged<IntSeq<IComps...>>
       {
+	/// First component of the groups
+	static constexpr int firstComp=IntSeq<IComps...>::template element<0>;
+	
 	/// Check if we are really merging something
-	static constexpr bool realMerge=(Range<I>::size>1);
+	static constexpr bool realMerge=(sizeof...(IComps)>1);
 	
 	/// Returns a tuple containing the merged components of group I
-	using MergedComps=decltype(getIndexed(Range<I>{},
+	using MergedComps=decltype(getIndexed(intSeq<IComps...>,
 					      types{}));
 	
 	/// Product of all the max known submultiple
-	static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<Range<I>>;
+	static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<IComps...>;
 	
 	/// Returns the totals size of the group
-	static constexpr int totSize=tensCompsListTotSize<Range<I>>;
+	static constexpr int totSize=tensCompsListTotSize<IComps...>;
 	
 	/// Resulting type
 	using type=Conditional<realMerge,
 			       // Merged type if the group was larger than 1
 			       TensComp<MergedComps,totSize,totMaxKnonwSubMultiple>,
 			       // Otherwise return the type itself
-			       TupleElementType<Delims::template element<I>,types>>;
+			       TupleElementType<Delims::template element<firstComp>,types>>;
       };
       
       /// Create a TensComp merging the components of group I
       template <int I>      // Index of the group of components to merge
       using TensCompsGroupMerged=
-	typename _TensCompsGroupMerged<I>::type;
+	typename TensCompsListMerged<Range<I>>::type;
       
-      /// TensKind resulting merging all groups
+      /// TensKind resulting after merging all groups
       using type=TensKind<TensCompsGroupMerged<IGroups>...>;
     };
     
     /// Merged components according to IntSeq Is
-    ///
-    /// \todo add plenty of checks
     template <typename Is>
     using Merged=typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
   };
