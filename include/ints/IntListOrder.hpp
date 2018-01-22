@@ -64,7 +64,7 @@ namespace SUNphi
   /// Constant used to parse last-occurrency case
 #define LAST_OF 1
   
-  /// Defines a searcher named NAME making the comparison COMPA
+  /// Defines a searcher named NAME making the comparison COMPA with an external I
 #define DEFINE_SEARCH(DESCRIPTION,FIRST_OR_LAST,NAME,COMPA)		\
   DESCRIPTION								\
   /*!                                                         */	\

@@ -77,11 +77,19 @@ namespace SUNphi
     using Div=
       TypeIf<I!=0,Mul<1/I>>;
     
+    /// Returns the maximal element of the list
+    static constexpr int max=SUNphi::maxOfList<Ints...>;
+    
     /// Get the I element of the sequence
     template <int I>
     static constexpr int element=
       getIntOfList<I,Ints...>;
     
+    /// Get the first element of the sequence
+    static constexpr int first=element<0>;
+    
+    /// Get the last element of the sequence
+    static constexpr int last=element<size-1>;
     
     /// Determine whether the IntSeq elements are ordered or not
     static constexpr int isOrdered=areOrdered<Ints...>;
