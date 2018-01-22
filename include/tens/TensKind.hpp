@@ -177,6 +177,124 @@ namespace SUNphi
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul;
+    
+    /// Struct used to merge the components of the TensKind
+    ///
+    /// Forward definition
+    template <typename Is,
+	      typename Ir>
+    struct _Merged;
+    
+    /// Determines whether an IntSeq is a valid CastMerge type for the TensKind
+    template <typename Is>
+    static constexpr bool isValidCompMerge=
+      isOrderedIntSeq<Is> and
+      (Is::template element<0> ==0) and
+      (Is::last == nTypes);
+    
+    /// Helper to constrain the cast
+    template <typename Is>
+    struct ConstrainIsValidCompMerge
+    {
+      static_assert(isOrderedIntSeq<Is>,"Not an ordered IntSeq");
+      static_assert(Is::template element<0> ==0, "First element not zero");
+      static_assert(Is::last==nTypes,"Last element not equal to the number of components of the TensKind");
+    };
+    
+    /// Struct used to merge the components of the TensKind
+    template <int...IDelims,
+	      int...IGroups>
+    struct _Merged<IntSeq<IDelims...>,IntSeq<IGroups...>> :
+      public ConstrainIsValidCompMerge<IntSeq<IDelims...>>
+    {
+      /// Delimiters
+      using Delims=IntSeq<IDelims...>;
+      
+      /// Range associated with merge grpup I
+      template <int I>                  // Index of the group of components to merge
+      using Range=
+	RangeSeq<
+	Delims::template element<I>,    // Start
+	1,                              // Offset
+	Delims::template element<I+1>>; // End
+      
+      /////////////////////////////////////////////////////////////////
+      
+      /// Maximal total submultiple of a list of components
+      ///
+      /// Internal implementation
+      template <int...Ints>
+      static constexpr int _tensCompsListTotMaxKnownSubMultiple(IntSeq<Ints...>)
+      {
+	return IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
+      }
+      
+      /// Maximal total submultiple of a list of components
+      template <typename Is>
+      static constexpr EnableIf<isIntSeq<Is>,int>
+      tensCompsListTotMaxKnownSubMultiple=
+	_tensCompsListTotMaxKnownSubMultiple(Is{});
+      
+      /////////////////////////////////////////////////////////////////
+      
+      /// Total size of a list of components, minimized to -1
+      ///
+      /// Internal implementation
+      template <int...Ints>
+      static constexpr int _tensCompsListTotSize(IntSeq<Ints...>)
+      {
+	return std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
+      }
+      
+      /// Total size of a group of components, minimized to -1
+      template <typename Is>
+      static constexpr EnableIf<isIntSeq<Is>,int>
+      tensCompsListTotSize=
+	_tensCompsListTotSize(Is{});
+      
+      /////////////////////////////////////////////////////////////////
+      
+      /// Create a TensComp merging the components of group I
+      ///
+      /// Internal implementation
+      template <int I>                  // Index of the group of components to merge
+      struct _TensCompsGroupMerged
+      {
+	/// Check if we are really merging something
+	static constexpr bool realMerge=(Range<I>::size>1);
+	
+	/// Returns a tuple containing the merged components of group I
+	using MergedComps=decltype(getIndexed(Range<I>{},
+					      types{}));
+	
+	/// Product of all the max known submultiple
+	static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<Range<I>>;
+	
+	/// Returns the totals size of the group
+	static constexpr int totSize=tensCompsListTotSize<Range<I>>;
+	
+	/// Resulting type
+	using type=Conditional<realMerge,
+			       // Merged type if the group was larger than 1
+			       TensComp<MergedComps,totSize,totMaxKnonwSubMultiple>,
+			       // Otherwise return the type itself
+			       TupleElementType<Delims::template element<I>,types>>;
+      };
+      
+      /// Create a TensComp merging the components of group I
+      template <int I>      // Index of the group of components to merge
+      using TensCompsGroupMerged=
+	typename _TensCompsGroupMerged<I>::type;
+      
+      /// TensKind resulting merging all groups
+      using type=TensKind<TensCompsGroupMerged<IGroups>...>;
+    };
+    
+    /// Merged components according to IntSeq Is
+    ///
+    /// \todo add plenty of checks
+    template <typename Is>
+    using Merged=typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
   };
 }
 
