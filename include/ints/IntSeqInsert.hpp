@@ -61,7 +61,7 @@ namespace SUNphi
 	    typename IS,
 	    int IncrAft=0,
 	    bool IgnoreIfPresent=false>
-  using InsertInOrderedIntSeq=decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>(IntSeq<>{},typename ConstrainIsOrderedIntSeq<IS>::type{}));
+  using InsertInOrderedIntSeq=decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>(intSeq<>,typename ConstrainIsOrderedIntSeq<IS>::type{}));
   
   /// Insert the integer Ins in an ordered unique IntSeq
   ///
@@ -75,7 +75,7 @@ namespace SUNphi
   using InsertInOrderedUniqueIntSeq=
     typename ConstrainIsOrderedUniqueIntSeq<
     decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>
-	      (IntSeq<>{},typename ConstrainIsOrderedUniqueIntSeq<IS>::type{}))>::type;
+	      (intSeq<>,typename ConstrainIsOrderedUniqueIntSeq<IS>::type{}))>::type;
 }
 
 #endif

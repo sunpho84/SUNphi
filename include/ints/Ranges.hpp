@@ -95,6 +95,14 @@ namespace SUNphi
 	    int Max>   // End point (not included)
   using RangeSeq=typename _RangeSeq<Min,Shift,Max>::type;
   
+  /// Create a RangeSeq with given types
+  template <int Min,   // Starting point
+	    int Shift, // Stride
+	    int Max>   // End point (not included)
+  [[ maybe_unused ]]
+  constexpr DECLAUTO rangeSeq=
+    RangeSeq<Min,Shift,Max>{};
+  
   /////////////////////////////////////////////////////////////////
   
   /// Defines a IntSeq of size Num, all containing Entry as entry
