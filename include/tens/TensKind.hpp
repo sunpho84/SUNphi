@@ -98,7 +98,8 @@ namespace SUNphi
 	      typename=ConstrainIsTensComp<TC>,
 	      typename=ConstrainIsDynamic<TC>>
     static constexpr TypeIf<isTensComp<TC> and isDynamic<TC>,int>
-    dynCompPos=AreDynamic::template hSumFirst<posOfType<TC,types>>;
+    dynCompPos=
+      AreDynamic::template hSumFirst<posOfType<TC,types>>;
     
     // /// Position of a given type
     // template <class Tf>
@@ -110,7 +111,8 @@ namespace SUNphi
     
     /// Get all types but one
     template <class Tab>
-    using AllButType=TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
+    using AllButType=
+      TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
     
     /// Return the position of the first component needed to vectorize
     ///

@@ -60,7 +60,7 @@ namespace SUNphi
 	 forEach<I+1>(forw<T>(t),forw<F>(f));
        }
   }
-
+  
   /////////////////////////////////////////////////////////////////////////
   
   /// Filter a \c Tuple on the basis of a list of index

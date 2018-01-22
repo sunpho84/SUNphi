@@ -59,23 +59,29 @@ namespace SUNphi
     
     /// Defines a new integer sequence incremented by a constant I
     template <int I>
-    using Add=IntSeq<(Ints+I)...>;
+    using Add=
+      IntSeq<(Ints+I)...>;
     
     /// Defines a new integer sequence decreased by a constant I
     template <int I>
-    using Sub=Add<-I>;
+    using Sub=
+      Add<-I>;
     
     /// Define a new integer sequence inflated by a constant factor I
     template <int I>
-    using Mul=IntSeq<(Ints*I)...>;
+    using Mul=
+      IntSeq<(Ints*I)...>;
     
     /// Define a new integer sequence decreased by a constant factor I
     template <int I>
-    using Div=TypeIf<I!=0,Mul<1/I>>;
+    using Div=
+      TypeIf<I!=0,Mul<1/I>>;
     
     /// Get the I element of the sequence
     template <int I>
-    static constexpr int element=getIntOfList<I,Ints...>;
+    static constexpr int element=
+      getIntOfList<I,Ints...>;
+    
     
     /// Determine whether the IntSeq elements are ordered or not
     static constexpr int isOrdered=areOrdered<Ints...>;
