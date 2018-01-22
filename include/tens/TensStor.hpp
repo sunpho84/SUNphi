@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the definition of a storage space for a tensor
 
+#include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <system/Memory.hpp>
 #include <tens/Indexer.hpp>
@@ -62,15 +63,29 @@ namespace SUNphi
     /// Dynamic sizes
     DynSizes<TK::nDynamic> dynSizes;
     
-    /// Returns the size of a given component
-    template <typename TC>
+    /// Returns the size of a given component in the case it is Dynamic
+    template <typename TC,
+	      SFINAE_ON_TEMPLATE_ARG(isDynamic<TC>)>
+    constexpr int compSize() const
+    {
+      return dynSizes[TK::template dynCompPos<TC>];
+    }
+    
+    /// Returns the size of a given component in the case it is not Dynamic
+    template <typename TC,
+	      SFINAE_ON_TEMPLATE_ARG(not isDynamic<TC>)>
     int compSize() const
     {
-      if constexpr(isDynamic<TC>)
-	 return dynSizes[TK::template dynCompPos<TC>];
-      else
-	return TC::size;
+      return TC::size;
     }
+    
+    // /// returns a components-merged version
+    // template <typename Is>
+    // TensStor<typename TK::template Merged<Is>,T> merged() const
+    // {
+      
+    //   TensStor<typename TK::template Merged<Is>,T> out(v)
+    // }
     
     /// Allocator
     void alloc()
@@ -105,7 +120,8 @@ namespace SUNphi
     ///
     /// \todo improve memcpy, this could be parallelized in many ways,
     /// we have to implement memory manager soon
-    explicit TensStor(const TensStor& oth) : dynSizes(oth.dynSizes)
+    explicit TensStor(const TensStor& oth) :
+      dynSizes(oth.dynSizes)
     {
       alloc();
       
