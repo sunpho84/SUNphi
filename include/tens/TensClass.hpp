@@ -52,7 +52,7 @@ namespace SUNphi
     PROVIDE_MERGEABLE_COMPS(/* By default, all components can be merged */,IntSeq<0,Tk::nTypes>);
     
     /// Returns the size of a component
-    template <typename TC>
+    template <typename TC>  // Name of the component
     int compSize() const
     {
       return v->template compSize<TC>();
