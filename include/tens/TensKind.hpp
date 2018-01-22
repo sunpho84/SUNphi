@@ -207,10 +207,13 @@ namespace SUNphi
     static constexpr int tensCompsListTotMaxKnownSubMultiple=
       IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
     
-    /// Total size of a list of components, minimized to -1
+    /// Total size of a list of components
+    ///
+    /// If any component is dynamic, returns DYNAMIC, otherwise the product
     template <int...Ints>
     static constexpr int tensCompsListTotSize=
-      std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
+      (TupleElementType<Ints,types>::isDynamic | ...) ? DYNAMIC :
+      IntSeq<TupleElementType<Ints,types>::size...>::hMul;
     
     /////////////////////////////////////////////////////////////////
     
