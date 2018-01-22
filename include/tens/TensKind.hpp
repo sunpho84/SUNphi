@@ -83,16 +83,19 @@ namespace SUNphi
     ///
     /// Internal implementation
     template <int NScanned,       // Number of components scanned so far
-	      int...DynCompsPos>  // Dynamical positions found so far
-    static constexpr DECLAUTO _DynCompsPos(const IntSeq<DynCompsPos...>&)
+	      int...CompsPos>  // Dynamical positions found so far
+    static constexpr DECLAUTO _DynCompsPos(const IntSeq<CompsPos...>&)
     {
-      if constexpr(NScanned==nTypes)
-	return intSeq<DynCompsPos...>;
+      if constexpr(NScanned==sizeof...(T))
+	// Returns
+	return intSeq<CompsPos...>;
       else
 	if constexpr(AreDynamic::template element<NScanned>)
-	  return _DynCompsPos<NScanned+1>(intSeq<DynCompsPos...,NScanned>);
+	  // Nest appending
+	  return _DynCompsPos<NScanned+1>(intSeq<CompsPos...,NScanned>);
 	else
-	  return _DynCompsPos<NScanned+1>(intSeq<DynCompsPos...>);
+	  // Nest without appending
+	  return _DynCompsPos<NScanned+1>(intSeq<CompsPos...>);
     }
     
   public:
@@ -197,6 +200,54 @@ namespace SUNphi
     static constexpr int maxStaticIdx=
       IntSeq<(T::size>=0 ? T::size : 1)...>::hMul;
     
+    /////////////////////////////////////////////////////////////////
+    
+    /// Maximal total submultiple of a list of components
+    template <int...Ints>
+    static constexpr int tensCompsListTotMaxKnownSubMultiple=
+      IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
+    
+    /// Total size of a list of components, minimized to -1
+    template <int...Ints>
+    static constexpr int tensCompsListTotSize=
+      std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
+    
+    /////////////////////////////////////////////////////////////////
+    
+    /// Create a TensComp merging the components IComps
+    ///
+    /// Forward definition
+    template <typename Is>
+    struct TensCompsListMerged;
+    
+    /// Create a TensComp merging the components IComps
+    template <int...IComps>                  // Index of the components to merge
+    struct TensCompsListMerged<IntSeq<IComps...>>
+    {
+      /// First component of the groups
+      static constexpr int firstComp=IntSeq<IComps...>::template element<0>;
+      
+      /// Check if we are really merging something
+      static constexpr bool realMerge=(sizeof...(IComps)>1);
+      
+      /// Returns a tuple containing the merged components of group I
+      using MergedComps=decltype(getIndexed(intSeq<IComps...>,
+					    types{}));
+      
+      /// Product of all the max known submultiple
+      static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<IComps...>;
+      
+      /// Returns the totals size of the group
+      static constexpr int totSize=tensCompsListTotSize<IComps...>;
+      
+      /// Resulting type
+      using type=Conditional<realMerge,
+			     // Merged type if the group was larger than 1
+			     TensComp<MergedComps,totSize,totMaxKnonwSubMultiple>,
+			     // Otherwise return the type itself
+			     TupleElementType<firstComp,types>>;
+    };
+    
     /// Struct used to merge the components of the TensKind
     ///
     /// Forward definition
@@ -237,54 +288,6 @@ namespace SUNphi
 	1,                              // Offset
 	Delims::template element<I+1>>; // End
       
-      /////////////////////////////////////////////////////////////////
-      
-      /// Maximal total submultiple of a list of components
-      template <int...Ints>
-      static constexpr int tensCompsListTotMaxKnownSubMultiple=
-	IntSeq<TupleElementType<Ints,types>::maxKnownSubMultiple...>::hMul;
-      
-      /// Total size of a list of components, minimized to -1
-      template <int...Ints>
-      static constexpr int tensCompsListTotSize=
-	std::max(-1,IntSeq<TupleElementType<Ints,types>::size...>::hMul);
-      
-      /////////////////////////////////////////////////////////////////
-      
-      /// Create a TensComp merging the components IComps
-      ///
-      /// Forward definition
-      template <typename Is>
-      struct TensCompsListMerged;
-      
-      /// Create a TensComp merging the components IComps
-      template <int...IComps>                  // Index of the components to merge
-      struct TensCompsListMerged<IntSeq<IComps...>>
-      {
-	/// First component of the groups
-	static constexpr int firstComp=IntSeq<IComps...>::template element<0>;
-	
-	/// Check if we are really merging something
-	static constexpr bool realMerge=(sizeof...(IComps)>1);
-	
-	/// Returns a tuple containing the merged components of group I
-	using MergedComps=decltype(getIndexed(intSeq<IComps...>,
-					      types{}));
-	
-	/// Product of all the max known submultiple
-	static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<IComps...>;
-	
-	/// Returns the totals size of the group
-	static constexpr int totSize=tensCompsListTotSize<IComps...>;
-	
-	/// Resulting type
-	using type=Conditional<realMerge,
-			       // Merged type if the group was larger than 1
-			       TensComp<MergedComps,totSize,totMaxKnonwSubMultiple>,
-			       // Otherwise return the type itself
-			       TupleElementType<Delims::template element<firstComp>,types>>;
-      };
-      
       /// Create a TensComp merging the components of group I
       template <int I>      // Index of the group of components to merge
       using TensCompsGroupMerged=
@@ -296,7 +299,8 @@ namespace SUNphi
     
     /// Merged components according to IntSeq Is
     template <typename Is>
-    using Merged=typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
+    using Merged=
+      typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
   };
 }
 
