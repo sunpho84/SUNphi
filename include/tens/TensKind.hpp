@@ -76,10 +76,29 @@ namespace SUNphi
     /// Check that all types are different
     STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(Tuple<T...>);
     
-    /// An integer sequence defining whether the tuypes are dynamic or not
+    /// An integer sequence defining whether the types are dynamic or not
     typedef IntSeq<(T::size==DYNAMIC)...> AreDynamic;
     
+    /// Position of dynamical components
+    ///
+    /// Internal implementation
+    template <int NScanned,       // Number of components scanned so far
+	      int...DynCompsPos>  // Dynamical positions found so far
+    static constexpr DECLAUTO _DynCompsPos(const IntSeq<DynCompsPos...>&)
+    {
+      if constexpr(NScanned==nTypes)
+	return intSeq<DynCompsPos...>;
+      else
+	if constexpr(AreDynamic::template element<NScanned>)
+	  return _DynCompsPos<NScanned+1>(intSeq<DynCompsPos...,NScanned>);
+	else
+	  return _DynCompsPos<NScanned+1>(intSeq<DynCompsPos...>);
+    }
+    
   public:
+    
+    /// Position of dynamical components
+    using DynCompsPos=decltype(_DynCompsPos<0>(intSeq<>));
     
     /// Number of dynamical components
     static constexpr int nDynamic=AreDynamic::hSum;
