@@ -23,6 +23,14 @@
 
 namespace SUNphi
 {
+  /// Dynamic sizes of a Tens
+  ///
+  /// \todo the array must be replaced with a tuple, whose types
+  /// must be deduced when instatiating the struct, such that int or
+  /// long int or whatever is appropriately used!
+  template <int N>
+  using DynSizes=std::array<int,N>;
+  
   /// Defines the BaseTensKind type traits
   DEFINE_BASE_TYPE(TensKind);
   
