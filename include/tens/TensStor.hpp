@@ -32,7 +32,13 @@ namespace SUNphi
     /// Internal storage
     T* v;
     
+    /// Store whether this has been created or is a reference
+    bool created=false;
+    
   public:
+    
+    /// Tensor Kind mapped
+    using Tk=TK;
     
     /// Debug access to internal storage
     T* &_v=v;

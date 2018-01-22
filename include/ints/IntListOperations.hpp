@@ -62,6 +62,7 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Provide a routine to search the minimal or maximal
 #define DEFINE_SEARCH_MIN_OR_MAX(NAME,		\
 				 DESCR,		\
 				 OPER)		\
