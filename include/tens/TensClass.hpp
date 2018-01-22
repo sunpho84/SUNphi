@@ -59,10 +59,11 @@ namespace SUNphi
     }
     
     /// Construct the Tens on the basis of the dynamical sizes passed
-    template <class...DynSizes>                    //   Dynamic size types
-    explicit Tens(const DynSizes&...extDynSizes) : ///< Passed internal dynamic size
-      v(new TensStor<Tk,Fund>(extDynSizes...)),    //   Construct the vector before taking the reference
-      created(true)                                //   Mark down that we are creating
+    template <class...DynSizes,                                               //   Dynamic size types
+	      typename=EnableIf<areIntegrals<Unqualified<DynSizes>...>>>      //   Constrain to be integers
+    explicit Tens(DynSizes&&...extDynSizes) :                    ///< Passed internal dynamic size
+      v(new TensStor<Tk,Fund>(forw<DynSizes>(extDynSizes)...)),  //   Construct the vector
+      created(true)                                              //   Mark down that we are creating
     {
 #ifdef DEBUG_TENS
 	  using namespace std;
