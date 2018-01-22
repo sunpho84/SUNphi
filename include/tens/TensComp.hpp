@@ -28,7 +28,8 @@ namespace SUNphi
   /// associated size, which can be known at compile-time or can be
   /// made \c DYNAMIC, to be specified at runtime in the storage class
   template <class T,            // Type defining the TensComp
-	    int Size=DYNAMIC>   // Size of the TensComp
+	    int Size=DYNAMIC,   // Size of the TensComp
+	    int MaxKnownSubMultiple=1>   // Given known submultiple (used for DYNAMIC case)
   struct TensComp :
     public BaseTensComp
   {
@@ -43,6 +44,9 @@ namespace SUNphi
     
     /// Report if the component has dynamic size
     static constexpr bool isDynamic=(Size==DYNAMIC);
+    
+    /// If DYNAMIC size, this is used to provide a submultiple of "size"
+    static constexpr int maxKnownSubMultiple=(isDynamic?MaxKnownSubMultiple:size);
     
     /// Check if compatible with vectorization
     template <typename F>                      // Fundamental type
