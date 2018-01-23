@@ -43,17 +43,14 @@ namespace SUNphi
     using Tk=TK;
     
     // We remove at Pos, shift and insert back
-    PROVIDE_MERGEABLE_COMPS(/* We have to split at the component where we bind */,
-			    InsertInOrderedUniqueIntSeq<
-			       posOfCompl,                                // Split at the complex component position
+    PROVIDE_MERGEABLE_COMPS(/* We have to split at the Compl components, and at the next one */,
+			    InsertIntSeqInOrderedIntSeq<
+			       IntSeq<posOfCompl,posOfCompl+1>,           // Split at the complex component position and next one
 			       typename Unqualified<Ref>::MergeableComps, // Nested components
-			       0,                                         // Shift 0 after insertion
+  			       IntSeq<0,0>,                               // Shift 0 after insertion
 			       true>);                                    // Ignore if already present
     
-    /// We can merge up to where we bind
-    static constexpr int nMergeableComps=
-      std::min(Ref::nMergeableComps,
-	       posOfCompl);
+    PROVIDE_UNARY_TEX_SIMPLE_COMPS_MERGER(Conjer);
     
     SAME_COMP_SIZES_OF_REF;
     
