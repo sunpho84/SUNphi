@@ -22,7 +22,8 @@ namespace SUNphi
   /// Sum of all integers
   template <int...Ints>
   [[ maybe_unused ]]
-  constexpr int hSum=_hSum<Ints...>();
+  constexpr int hSum=
+    _hSum<Ints...>();
   
   /////////////////////////////////////////////////////////////////
   
@@ -58,7 +59,8 @@ namespace SUNphi
   /// Product of all integers
   template <int...Ints>
   [[ maybe_unused ]]
-  constexpr int hMul=_hMul<Ints...>();
+  constexpr int hMul=
+    _hMul<Ints...>();
   
   /////////////////////////////////////////////////////////////////
   

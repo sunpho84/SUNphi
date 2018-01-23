@@ -48,11 +48,13 @@ namespace SUNphi
     
     /// Sum of all elements
     template <int I>
-    static constexpr int hSumFirst=SUNphi::hSumFirst<I,Ints...>;
+    static constexpr int hSumFirst=
+      SUNphi::hSumFirst<I,Ints...>;
     
     /// Take first position wher I does not occur
     template <int I>
-    static constexpr int firstNon=SUNphi::firstNon<I,Ints...>;
+    static constexpr int firstNon=
+      SUNphi::firstNon<I,Ints...>;
     
     /// Product of all elements
     static constexpr int hMul=SUNphi::hMul<Ints...>;
@@ -97,10 +99,41 @@ namespace SUNphi
     /// Determine whether the IntSeq elements are ordered and different or not
     static constexpr int isOrderedUnique=areOrderedAndDifferent<Ints...>;
     
-    /// Determine whether the element is contained
-    template <int El>
+    /// Determine whether the elements are contained
+    ///
+    /// Example
+    /// \code
+    /// IntSeq<0,2,2,4>::template has<2>; // true
+    /// IntSeq<0,2,2,4>::template has<4,2>; // true
+    /// IntSeq<0,2,2,4>::template has<5>; // false
+    /// \encode
+    template <int...El>
     static constexpr bool has=
-      firstEq<El,Ints...>!=size;
+      ((firstEq<El,Ints...>!=size) & ...);
+    
+    /// Returns the number of occurrency of El
+    ///
+    /// Example
+    /// \code
+    /// IntSeq<0,2,2,4>::template nOf<2>; // 2
+    /// IntSeq<0,2,2,4>::template nOf<4>; // 1
+    /// IntSeq<0,2,2,4>::template nOf<5>; // 0
+    /// \encode
+    template <int El>
+    static constexpr int nOf=
+      SUNphi::hSum<(Ints==El)...>;
+    
+    /// Checks if an IntSeq is a subset of the current one
+    ///
+    /// Example
+    /// \code
+    /// IntSeq<0,2,2>::template isSubsetOf<IntSeq<0,2,2,4>>; // true
+    /// IntSeq<0,2,2>::template isSubsetOf<IntSeq<0,2,4>>; // false
+    /// \endcode
+    template <typename Is,
+	      typename=EnableIf<isIntSeq<Is>>>
+    static constexpr bool isSubsetOf=
+      ((nOf<Ints> ==Is::template nOf<Ints>) & ...);
     
     /////////////////////////////////////////////////////////////////
     
