@@ -63,7 +63,7 @@ namespace SUNphi
 	    typename IS,
 	    int IncrAft=0,
 	    bool IgnoreIfNotPresent=true>
-  using RemoveFromOrderedIntSeq=decltype(_removeFromOrderedIntSeq<Ins,IncrAft,IgnoreIfNotPresent>(IntSeq<>{},typename ConstrainIsOrderedIntSeq<IS>::type{}));
+  using RemoveFromOrderedIntSeq=decltype(_removeFromOrderedIntSeq<Ins,IncrAft,IgnoreIfNotPresent>(IntSeq<>{},typename ConstrainIsOrderedIntSeq<Unqualified<IS>>::type{}));
   
   /// Remove the integer Rem from an ordered unique IntSeq
   ///
