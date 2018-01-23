@@ -88,7 +88,7 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Provide the MergeableComps type
+  /// Provide the MergeableComps type, and assertMergebaleWith
   ///
   /// The type must be an ordered IntSeq indicating the splitting
   /// point of the TensKind, as in this example:
@@ -100,10 +100,38 @@ namespace SUNphi
   /// \endcode
   /// Provides a isAssignable attribute
 #define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)			\
-  USING(/*! List of points where the TensKind can be split */,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__)
+  USING(/*! List of points where the TensKind can be split */,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \
+									\
+  /*! Assert that a given merging condition is valid */			\
+  template <typename Is,						\
+	    typename=EnableIf<isIntSeq<Is>>>				\
+  static constexpr void assertMergeableWith()				\
+  {									\
+    static_assert(Unqualified<MergeableComps>::template isSubsetOf<Is>,"Unable to merge this components"); \
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   // Check that we know which components can be merged
   DEFINE_HAS_MEMBER(MergeableComps);
+  
+  // Check that we know how to check if merge is valid
+  DEFINE_HAS_MEMBER(assertMergeableWith);
+  
+  /// Provides a mergedComps method, taking Is as template parameter
+#define PROVIDE_MERGED_COMPS(DESCRIPTION,...)				\
+  DESCRIPTION								\
+  template <typename Is>       /* IntSeq delimiting the comps groups */ \
+  DECLAUTO mergedComps() const						\
+  {									\
+    /* Check that we can merge as asked */				\
+    assertMergeableWith<Is>();						\
+									\
+    __VA_ARGS__;							\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  // Check that we know how to merge
+  DEFINE_HAS_MEMBER(mergedComps);
   
   /////////////////////////////////////////////////////////////////
   
@@ -118,6 +146,8 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(MergeableComps,__VA_ARGS__);		\
+  STATIC_ASSERT_HAS_MEMBER(assertMergeableWith,__VA_ARGS__);	\
+  STATIC_ASSERT_HAS_MEMBER(mergedComps,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
   /// TEmplate Expression
