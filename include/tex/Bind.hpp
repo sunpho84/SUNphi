@@ -63,13 +63,22 @@ namespace SUNphi
     
     // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/* We have to split at the component where we bind */,
-			    InsertInOrderedUniqueIntSeq<
+			    InsertInOrderedIntSeq<
 			    pos      // Position where to insert, same of where to remove
-			    ,RemoveFromOrderedUniqueIntSeq<pos,                                       // Position where to remove
-			                                   typename Unqualified<Ref>::MergeableComps, // Nested components
-			                                   -1>                                        // Shift back by 1 after removal
+			    ,RemoveFromOrderedIntSeq<pos,                                       // Position where to remove
+			                             typename Unqualified<Ref>::MergeableComps, // Nested components
+			                             -1>                                        // Shift back by 1 after removal
 			    ,0       // Shift 0 after insertion
 			    ,true>); // Ignore if already present
+    
+    PROVIDE_MERGED_COMPS(/* Takes the external delimiters and insert the position of bind component, shifting forward by 1 afterwards */,
+			 using NestedIs=InsertInOrderedIntSeq<
+			   pos,                 // Position where to insert
+			   Is,                  // External delimiters
+			   1>;                  // Shift 1 after insertion
+			 auto refMerged=ref.template mergedComps<NestedIs>();
+			 return Binder<TG,decltype(refMerged)>(std::move(refMerged),id)
+			 );
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\

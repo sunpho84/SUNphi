@@ -3,6 +3,7 @@
 
 #include <ints/IntListOrder.hpp>
 #include <ints/IntSeq.hpp>
+#include <ints/Ranges.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
 namespace SUNphi
@@ -61,21 +62,48 @@ namespace SUNphi
 	    typename IS,
 	    int IncrAft=0,
 	    bool IgnoreIfPresent=false>
-  using InsertInOrderedIntSeq=decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>(intSeq<>,typename ConstrainIsOrderedIntSeq<IS>::type{}));
+  using InsertInOrderedIntSeq=
+    decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>(intSeq<>,typename ConstrainIsOrderedIntSeq<IS>::type{}));
   
-  /// Insert the integer Ins in an ordered unique IntSeq
-  ///
-  /// Care is taken to ensure that Ins is not already in IS The
-  /// elements after are incremented by IncrAft. See
-  /// InsertInOrderedIntSeq for examples
-  template <int Ins,
-	    typename IS,
-	    int IncrAft=0,
-	    bool IgnoreIfPresent=false>
-  using InsertInOrderedUniqueIntSeq=
-    typename ConstrainIsOrderedUniqueIntSeq<
-    decltype(_insertInOrderedIntSeq<Ins,IncrAft,IgnoreIfPresent>
-	      (intSeq<>,typename ConstrainIsOrderedUniqueIntSeq<IS>::type{}))>::type;
+  /////////////////////////////////////////////////////////////////
+  
+  /// Insert the elements of the IntSeq Is in an ordered IntSeq
+  template <bool IgnoreIfPresent,
+	    int HeadToIns,
+	    int...TailToIns,
+	    int HeadIncrAft,
+	    int...TailIncrAft,
+	    typename Is>
+  DECLAUTO _InsertIntSeqInOrderedIntSeq(const IntSeq<HeadToIns,TailToIns...>& toIns,
+					const IntSeq<HeadIncrAft,TailIncrAft...>& incrAft,
+					const Is&)
+  {
+    // Nested
+    InsertInOrderedIntSeq<HeadToIns,Is,HeadIncrAft,IgnoreIfPresent> tmp;
+    
+    if constexpr(sizeof...(TailToIns)==0)
+      return tmp;
+    else
+      return _InsertIntSeqInOrderedIntSeq<IgnoreIfPresent>(intSeq<TailToIns...>,intSeq<TailIncrAft...>,tmp);
+  }
+  
+  /// Insert the elements of the IntSeq Is in an ordered IntSeq, empty case
+  template <bool IgnoreIfPresent,
+	    typename Is>
+  DECLAUTO _InsertIntSeqInOrderedIntSeq(const IntSeq<>& noIns,const IntSeq<>& noIncrAft,const Is&)
+  {
+    return Is{};
+  }
+  
+  template <typename ToIns,
+	    typename Is,
+	    typename IncrAft=IntSeqOfSameNumb<ToIns::size,0>,
+	    bool IgnoreIfPresent=false,
+	    typename=EnableIf<isIntSeq<ToIns> and
+			      isIntSeq<IncrAft> and
+			      ToIns::size==IncrAft::size>>
+  using InsertIntSeqInOrderedIntSeq=
+    decltype(_InsertIntSeqInOrderedIntSeq<IgnoreIfPresent>(ToIns{},IncrAft{},Is{}));
 }
 
 #endif
