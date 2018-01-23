@@ -68,6 +68,8 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Insert the elements of the IntSeq Is in an ordered IntSeq
+  ///
+  ///Internal implementation
   template <bool IgnoreIfPresent,
 	    int HeadToIns,
 	    int...TailToIns,
@@ -78,16 +80,20 @@ namespace SUNphi
 					const IntSeq<HeadIncrAft,TailIncrAft...>& incrAft,
 					const Is&)
   {
-    // Nested
+    // Insert HeadToIns
     InsertInOrderedIntSeq<HeadToIns,Is,HeadIncrAft,IgnoreIfPresent> tmp;
     
+    // Returns HeadToIns insertion alone if no more present
     if constexpr(sizeof...(TailToIns)==0)
       return tmp;
+    // Nest otherwise
     else
       return _InsertIntSeqInOrderedIntSeq<IgnoreIfPresent>(intSeq<TailToIns...>,intSeq<TailIncrAft...>,tmp);
   }
   
-  /// Insert the elements of the IntSeq Is in an ordered IntSeq, empty case
+  /// Insert the elements of the IntSeq Is in an ordered IntSeq
+  ///
+  /// Internal implementation, empty case
   template <bool IgnoreIfPresent,
 	    typename Is>
   DECLAUTO _InsertIntSeqInOrderedIntSeq(const IntSeq<>& noIns,const IntSeq<>& noIncrAft,const Is&)
@@ -95,13 +101,14 @@ namespace SUNphi
     return Is{};
   }
   
-  template <typename ToIns,
-	    typename Is,
-	    typename IncrAft=IntSeqOfSameNumb<ToIns::size,0>,
-	    bool IgnoreIfPresent=false,
-	    typename=EnableIf<isIntSeq<ToIns> and
-			      isIntSeq<IncrAft> and
-			      ToIns::size==IncrAft::size>>
+  /// Insert the elements of the IntSeq Is in an ordered IntSeq
+  template <typename ToIns,                                     // IntSeq to be inserted
+	    typename Is,                                        // IntSeq where to insert
+	    typename IncrAft=IntSeqOfSameNumb<ToIns::size,0>,   // IntSeq of increments
+	    bool IgnoreIfPresent=false,                         // If set true, ignore each already present entry
+	    typename=EnableIf<isIntSeq<ToIns> and               // Checks that ToIns is an IntSeq
+			      isIntSeq<IncrAft> and             // Checks that IncrAft is an IntSeq
+			      ToIns::size==IncrAft::size>>      // Checks that ToIns and IncrAft have the same number of entries
   using InsertIntSeqInOrderedIntSeq=
     decltype(_InsertIntSeqInOrderedIntSeq<IgnoreIfPresent>(ToIns{},IncrAft{},Is{}));
 }

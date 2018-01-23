@@ -62,7 +62,7 @@ namespace SUNphi
     using Tk=typename NestedTk::template AllButType<TG>;
     
     // We remove at Pos, shift and insert back
-    PROVIDE_MERGEABLE_COMPS(/* We have to split at the component where we bind */,
+    PROVIDE_MERGEABLE_COMPS(/*! We have to split at the component where we bind */,
 			    InsertInOrderedIntSeq<
 			    pos      // Position where to insert, same of where to remove
 			    ,RemoveFromOrderedIntSeq<pos,                                       // Position where to remove
@@ -71,7 +71,7 @@ namespace SUNphi
 			    ,0       // Shift 0 after insertion
 			    ,true>); // Ignore if already present
     
-    PROVIDE_MERGED_COMPS(/* Takes the external delimiters and insert the position of bind component, shifting forward by 1 afterwards */,
+    PROVIDE_MERGED_COMPS(/*! Insert the position of bind component shifting by 1 afterwards */,
 			 using NestedIs=InsertInOrderedIntSeq<
 			   pos,                 // Position where to insert
 			   Is,                  // External delimiters
