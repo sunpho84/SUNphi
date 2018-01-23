@@ -108,18 +108,16 @@ namespace SUNphi
   public:
     
     /// Returns a component-merged reference
-    template <typename Is>
-    DECLAUTO mergedComps() const
-    {
-      // Get a component-merged reference to the storage
-      auto vMerged=v->template mergedComps<Is>();
-      // Returned TensKind
-      using MergedTk=typename Unqualified<decltype(*vMerged)>::Tk;
-      // Returned type
-      using TOut=Tens<MergedTk,Fund>;
-      
-      return TOut(vMerged);
-    }
+    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Create a reference to the same storage with appropriate DynSizes */,
+				  /* Get a component-merged reference to the storage */
+				  auto vMerged=v->template mergedComps<Is>();
+				  /* Returned TensKind */
+				  using MergedTk=typename Unqualified<decltype(*vMerged)>::Tk;
+				  /* Returned type */
+				  using TOut=Tens<MergedTk,Fund>;
+				  
+				  return TOut(vMerged));
+    
     
     /// Returns a constant reference to v
     const TensStor<Tk,Fund>& getStor() const

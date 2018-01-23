@@ -71,14 +71,13 @@ namespace SUNphi
 			    ,0       // Shift 0 after insertion
 			    ,true>); // Ignore if already present
     
-    PROVIDE_MERGED_COMPS(/*! Insert the position of bind component shifting by 1 afterwards */,
-			 using NestedIs=InsertInOrderedIntSeq<
-			   pos,                 // Position where to insert
-			   Is,                  // External delimiters
-			   1>;                  // Shift 1 after insertion
-			 auto refMerged=ref.template mergedComps<NestedIs>();
-			 return Binder<TG,decltype(refMerged)>(std::move(refMerged),id)
-			 );
+    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Insert the position of bind component shifting by 1 afterwards */,
+				  using NestedIs=InsertInOrderedIntSeq<
+				    pos,                 // Position where to insert
+				    Is,                  // External delimiters
+				    1>;                  // Shift 1 after insertion
+				  auto refMerged=ref.template mergedComps<NestedIs>();
+				  return Binder<TG,decltype(refMerged)>(std::move(refMerged),id));
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\

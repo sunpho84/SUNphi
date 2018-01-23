@@ -50,7 +50,7 @@ namespace SUNphi
 			       typename Unqualified<Ref>::MergeableComps, // Nested split points
 			       typename Tk::types>);                      // Tuple with components
     
-    PROVIDE_UNARY_TEX_SIMPLE_COMPS_MERGER(Transposer);
+    PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(Transposer);
     PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(Transposer);
     PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR;
     PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Transposer);

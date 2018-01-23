@@ -44,13 +44,12 @@ namespace SUNphi
   /// Set the mergeable components equal to the reference
 #define MERGEABLE_ACCORDING_TO_REF					\
   PROVIDE_MERGEABLE_COMPS(/*! The components of this TEx can be merged as the reference one */,typename RemoveReference<decltype(ref)>::MergeableComps)
-
+  
   /// Returns a version of the TEx with simple merging structure
-#define PROVIDE_UNARY_TEX_SIMPLE_COMPS_MERGER(UNARY_TEX)	/* Name of the TEx type */ \
-  PROVIDE_MERGED_COMPS(/*!  Returns a component-merged version */,	\
-		       auto refMerged=ref.template mergedComps<Is>();	\
-		       return UNARY_TEX<decltype(refMerged)>(std::move(refMerged)) \
-									)
+#define PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(UNARY_TEX)	/* Name of the TEx type */ \
+  PROVIDE_GET_MERGED_COMPS_VIEW(/*!  Returns a component-merged version */,	\
+				auto refMerged=ref.template mergedComps<Is>(); \
+				return UNARY_TEX<decltype(refMerged)>(std::move(refMerged)))
   
   /////////////////////////////////////////////////////////////////
   

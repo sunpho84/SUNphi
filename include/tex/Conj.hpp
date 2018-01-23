@@ -50,7 +50,7 @@ namespace SUNphi
   			       IntSeq<0,0>,                               // Shift 0 after insertion
 			       true>);                                    // Ignore if already present
     
-    PROVIDE_UNARY_TEX_SIMPLE_COMPS_MERGER(Conjer);
+    PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(Conjer);
     
     SAME_COMP_SIZES_OF_REF;
     
