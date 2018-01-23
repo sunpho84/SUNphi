@@ -176,17 +176,19 @@ namespace SUNphi
   /*! Simplify CALLER(UNARY_TEX) expression */				\
   /*!                                       */				\
   /*! Returns the nested reference          */				\
-  template <typename T,                                    /* Type of the expression                 */ \
-	    typename Ref=typename RemoveReference<T>::Ref, /* Type of the reference                  */ \
-	    bool TexIsLvalue=isLvalue<T>,		   /* Detect if TEx is an lvalue             */ \
-	    bool RefIsLvalue=isLvalue<Ref>,		   /* Detect if Ref is an lvalue             */ \
-	    bool RefIsStoring=Ref::isStoring,		   /* Detect if Ref is storing               */ \
-	    bool Move=RefIsStoring and			   /* Move only if Ref is storing, and 	     */	\
-	    not (RefIsLvalue or TexIsLvalue),		   /*   no lvalue is involved          	     */	\
-	    typename Ret=Conditional<Move,Ref&&,Ref>,      /* Returned type                          */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<T>)>	   /* Enable only for the UNARY_TEX required */ \
+  template <typename T,                                        /* Type of the expression                 */ \
+	    typename RrT=RemoveReference<T>,                   /* T without ref attributes               */ \
+	    typename Ref=typename RrT::Ref,                    /* Type of the reference                  */ \
+	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes             */ \
+	    bool TexIsLvalue=isLvalue<RrT>,		       /* Detect if TEx is an lvalue             */ \
+	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue             */ \
+	    bool RefIsStoring=RrRef::isStoring,		       /* Detect if Ref is storing               */ \
+	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or   */ \
+	    RefIsLvalue or TexIsLvalue,	  	               /*   lvalue is involved         	         */ \
+	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                          */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<RrT>)>      /* Enable only for the UNARY_TEX required */ \
   Ret CALLER(T&& tex)	/*!< Quantity to un-nest   */			\
-  {									\
+  {					\
     if(0)								\
       {									\
 	constexpr bool TexIsConst=isConst<T>;				\
