@@ -116,15 +116,15 @@ namespace SUNphi
 	  
 	  // Check if it is a real twin
 	  constexpr bool isTrueTwin=not isSame<TwComp,Comp>;
-	  // Check if twinned Tuple had original type
-	  constexpr bool hadTwinned=tupleHasType<TwComp,TwTypes>;
+	  // Check if twinned Tuple had original comp
+	  constexpr bool hadTwinned=tupleHasType<Comp,TwTypes>;
 	  
 	  // Result type
 	  using Out=Conditional<isTrueTwin and hadTwinned,
-		                InsertInOrderedIntSeq<Pos,   // Position to insert
-		                                      In,    // List where to insert
-						      0,     // Do not shift fter insertinh
- 						      true>, // Ignore insertion if present
+		                InsertIntSeqInOrderedIntSeq<IntSeq<Pos,Pos+1>,   // Position to insert
+							    In,                  // List where to insert
+							    IntSeq<0,0>,         // Do not shift after inserting
+							    true>,               // Ignore insertion if present
 				In>;
 	  
 	  return _InsertTrueTwinnedPosOfTuple<Pos+1>(Out{},types);
