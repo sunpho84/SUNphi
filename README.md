@@ -8,9 +8,9 @@ name. Hopefully, a modernistic replacement for
 The key idea is to have a numerical library able to operate on tensor
 expression of arbitrary components, in such a way to be completely
 neutral with respect to the internal layout of the object (order of
-the components, kind of the expression, underlying data type), and
+the components, kind of the expression, underlying data type), and to
 enable automatic optimization/parallelization/vectorization of the
-expression execution via an efficient (?) army of metaprogramming
+expression execution, via an efficient (?) army of metaprogramming
 techniques.
 
 Features:
