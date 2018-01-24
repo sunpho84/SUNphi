@@ -32,7 +32,7 @@ Features:
   on how to automatize caching/scattering
 
 - automatic parallelization of free indices via loop fusion (done) and
-  thread pool (...shoukld be easily adaptable/generalizable from Nissa)
+  thread pool (...should be easily adaptable/generalizable from Nissa)
 
 - automatic vectorization on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
