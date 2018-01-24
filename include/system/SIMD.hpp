@@ -17,7 +17,8 @@ namespace SUNphi
   
   /// Number of components of a SIMD vector of type F
   template <typename F> // Fundamental type
-  constexpr int NSIMD_COMPONENTS=ALIGNMENT/sizeof(F);
+  constexpr int NSIMD_COMPONENTS=
+    ALIGNMENT/sizeof(F);
   
   /// Check if a certain number can be the size of a SIMD vector
   template <typename F>                                 //   Fundamental type
