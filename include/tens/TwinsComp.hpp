@@ -48,15 +48,15 @@ namespace SUNphi
   						\
   /*! Declare that T1 has a twin */		\
   template <>					\
-  constexpr bool hasTwin<T1>			\
-  =true;					\
+  constexpr bool hasTwin<T1> =			\
+    true;					\
   						\
   MAYBE_UNUSED(hasTwin<T1>);			\
 						\
   /*! Declare that T2 has a twin */		\
   template <>					\
-  constexpr bool hasTwin<T2>			\
-  =true;					\
+  constexpr bool hasTwin<T2> =			\
+    true;					\
 						\
   MAYBE_UNUSED(hasTwin<T2>);			\
   						\
@@ -130,6 +130,15 @@ namespace SUNphi
 	  return _InsertTrueTwinnedPosOfTuple<Pos+1>(Out{},types);
 	}
     }
+  
+  /// Declares the twin types of a TensComp
+  ///
+  /// Forward declaration, real implementation created by the macro
+  /// which defines a twin pair
+  template <typename T>
+  struct TwinTensCompOf;
+  
+  /////////////////////////////////////////////////////////////////
   
   /// Insert in the IntSeq the position of all true twinned types
   ///
