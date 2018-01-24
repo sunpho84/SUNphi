@@ -112,10 +112,10 @@ namespace SUNphi
   template<>								\
   struct TwinTensCompOf<TYPE>						\
   {									\
-    /* rw type of TYPE TensComp	*/					\
+    /*! rw type of TYPE TensComp	*/				\
     using Rw=Rw ## TYPE;						\
   									\
-    /* cn type of TYPE TensComp	*/					\
+    /*! cn type of TYPE TensComp	*/				\
     using Cn=Cn ## TYPE;						\
   }
 }
