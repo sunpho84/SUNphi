@@ -1,7 +1,6 @@
-# SUNphi
-SU(N) on Phi architecture
+# SUNphi: SU(N) on Phi architecture
 
-A library for running SU(N) (and similar) theories, with multinode,
+A library to simulate SU(N) (and similar) theories, with multinode,
 multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) libary.
