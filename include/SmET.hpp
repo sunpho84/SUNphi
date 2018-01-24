@@ -3,7 +3,7 @@
 
 /// \file SmET.hpp
 ///
-/// \brief Header file for the inclusion of all Template EXpressions
+/// \brief Header file for the inclusion of all SmET
 
 #include <smet/Adj.hpp>
 #include <smet/Assign.hpp>

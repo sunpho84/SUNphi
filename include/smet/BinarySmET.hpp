@@ -3,7 +3,7 @@
 
 /// \file BinarySmET.hpp
 ///
-/// \brief Header file defining basic properties of Binary Template EXpressions
+/// \brief Header file defining basic properties of Binary SmET
 
 #include <smet/BaseSmET.hpp>
 
@@ -24,7 +24,7 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(ref1,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(ref2,__VA_ARGS__)
   
-  /// Binary TEmplate Expression
+  /// Binary SmET
   template <typename T>
   struct BinarySmET :
     public SmET<T>,

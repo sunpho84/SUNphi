@@ -74,7 +74,7 @@ namespace SUNphi
   ///
   /// The tensor kind defines the list of components of a tensor. It
   /// is used to the define the underlying set of components of a \c
-  /// TensorStorage, or the returned type of a Template Expression
+  /// TensorStorage, or the returned type of a SmET
   template <class...T>
   class TensKind : public BaseTensKind
   {

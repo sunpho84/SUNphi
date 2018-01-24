@@ -3,7 +3,7 @@
 
 /// \file UnarySmET.hpp
 ///
-/// \brief Header file defining basic properties of Unary Template EXpressions
+/// \brief Header file defining basic properties of Unary SmET
 
 #include <metaprogramming/SFINAE.hpp>
 #include <smet/BaseSmET.hpp>
@@ -21,7 +21,7 @@ namespace SUNphi
   STATIC_ASSERT_IS_SMET(__VA_ARGS__);			\
   STATIC_ASSERT_HAS_MEMBER(ref,__VA_ARGS__)
   
-  /// Unary TEmplate Expression
+  /// Unary SmET
   template <typename T>
   struct UnarySmET :
     public SmET<T>,

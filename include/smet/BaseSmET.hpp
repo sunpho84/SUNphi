@@ -3,7 +3,7 @@
 
 /// \file BaseSmET.hpp
 ///
-/// \brief Header file defining basic properties of Template Expressions
+/// \brief Header file defining basic properties of Smart Expression Templates
 
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/TypeTraits.hpp>
@@ -156,7 +156,7 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(getMergedCompsView,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
   
-  /// TEmplate Expression
+  /// Smart Expression Templates
   template <typename T>
   struct SmET :
     public BaseSmET
