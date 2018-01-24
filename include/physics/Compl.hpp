@@ -6,7 +6,7 @@
 /// \brief Header file for the definition of complex numbers
 
 #include <tens/TensComp.hpp>
-#include <tex/Bind.hpp>
+#include <smet/Bind.hpp>
 
 namespace SUNphi
 {

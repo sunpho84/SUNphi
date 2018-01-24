@@ -7,7 +7,7 @@
 
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
-#include <tex/Bind.hpp>
+#include <smet/Bind.hpp>
 
 namespace SUNphi
 {

@@ -1,56 +1,56 @@
-#ifndef _UNARYTEX_HPP
-#define _UNARYTEX_HPP
+#ifndef _UNARYSMET_HPP
+#define _UNARYSMET_HPP
 
-/// \file UnaryTEx.hpp
+/// \file UnarySmET.hpp
 ///
 /// \brief Header file defining basic properties of Unary Template EXpressions
 
 #include <metaprogramming/SFINAE.hpp>
-#include <tex/BaseTEx.hpp>
+#include <smet/BaseSmET.hpp>
 
 namespace SUNphi
 {
-  /// Defines the UnaryTEx type traits
-  DEFINE_BASE_TYPE(UnaryTEx,: public BaseTEx);
+  /// Defines the UnarySmET type traits
+  DEFINE_BASE_TYPE(UnarySmET,: public BaseSmET);
   
   // Defines the check for a member type "ref"
   DEFINE_HAS_MEMBER(ref);
   
-  /// Defines the check for a Unary TEx
-#define STATIC_ASSERT_IS_UNARY_TEX(...)			\
-  STATIC_ASSERT_IS_TEX(__VA_ARGS__);			\
+  /// Defines the check for a Unary SmET
+#define STATIC_ASSERT_IS_UNARY_SMET(...)			\
+  STATIC_ASSERT_IS_SMET(__VA_ARGS__);			\
   STATIC_ASSERT_HAS_MEMBER(ref,__VA_ARGS__)
   
   /// Unary TEmplate Expression
   template <typename T>
-  struct UnaryTEx :
-    public TEx<T>,
-    public BaseUnaryTEx
+  struct UnarySmET :
+    public SmET<T>,
+    public BaseUnarySmET
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
   
   /// Provide the reference to the object
-#define PROVIDE_UNARY_TEX_REF			\
-  PROVIDE_TEX_REF()
+#define PROVIDE_UNARY_SMET_REF			\
+  PROVIDE_SMET_REF()
   
   /////////////////////////////////////////////////////////////////
   
   /// Set the assignability according to the reference
 #define ASSIGNABLE_ACCORDING_TO_REF					\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned if the reference can */,RemoveReference<decltype(ref)>::isAssignable)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned if the reference can */,RemoveReference<decltype(ref)>::isAssignable)
   
   /////////////////////////////////////////////////////////////////
   
   /// Set the mergeable components equal to the reference
 #define MERGEABLE_ACCORDING_TO_REF					\
-  PROVIDE_MERGEABLE_COMPS(/*! The components of this TEx can be merged as the reference one */,typename RemoveReference<decltype(ref)>::MergeableComps)
+  PROVIDE_MERGEABLE_COMPS(/*! The components of this SmET can be merged as the reference one */,typename RemoveReference<decltype(ref)>::MergeableComps)
   
-  /// Returns a version of the TEx with simple merging structure
-#define PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(UNARY_TEX)	/* Name of the TEx type */ \
+  /// Returns a version of the SmET with simple merging structure
+#define PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(UNARY_SMET)	/* Name of the SmET type */ \
   PROVIDE_GET_MERGED_COMPS_VIEW(/*!  Returns a component-merged version */,	\
 				auto refMerged=ref.template mergedComps<Is>(); \
-				return UNARY_TEX<decltype(refMerged)>(std::move(refMerged)))
+				return UNARY_SMET<decltype(refMerged)>(std::move(refMerged)))
   
   /////////////////////////////////////////////////////////////////
   
@@ -80,27 +80,27 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Defines a simple creator taking a reference
-#define PROVIDE_UNARY_TEX_SIMPLE_CREATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
+#define PROVIDE_UNARY_SMET_SIMPLE_CREATOR(UNARY_SMET /*!< Name of the UnarySmET */) \
   /*! Constructor taking universal reference */				\
-  template <typename TEX,						\
-	    typename=EnableIf<isSame<Unqualified<TEX>,Unqualified<Ref>>>> \
-  explicit UNARY_TEX(TEX&& tex) : ref(forw<TEX>(tex))			\
+  template <typename SMET,						\
+	    typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref>>>> \
+  explicit UNARY_SMET(SMET&& smet) : ref(forw<SMET>(smet))			\
   {									\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Defines the assignement operator, calling assign
-#define PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(UNARY_TEX /*!< Name of the UnaryTEx */) \
-  /*! Assign from another tex */					\
+#define PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the UnarySmET */) \
+  /*! Assign from another smet */					\
   template <typename Oth>             	/* Other type  */		\
-  UNARY_TEX& operator=(Oth&& tex)	/*!< Other TEx */		\
+  UNARY_SMET& operator=(Oth&& smet)	/*!< Other SmET */		\
   {									\
   if(0)									\
     {									\
       using namespace std;						\
-      cout<<"Operator=, triggering assignement to "<<this<<" of "<<&tex<<endl; \
+      cout<<"Operator=, triggering assignement to "<<this<<" of "<<&smet<<endl; \
     }									\
-    assign(*this,forw<Oth>(tex));					\
+    assign(*this,forw<Oth>(smet));					\
 									\
     return *this;							\
   }									\
@@ -133,15 +133,15 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
-  /// Create a simple builder with a name and a UNARY_TEX returned type
-#define SIMPLE_UNARY_TEX_BUILDER(BUILDER,   /*!< Name of builder fun           */ \
-				 UNARY_TEX) /*!< Name of the UnaryTEx to build */ \
-  /*! Simple UNARY_TEX builder called BUILDER */			\
+  /// Create a simple builder with a name and a UNARY_SMET returned type
+#define SIMPLE_UNARY_SMET_BUILDER(BUILDER,   /*!< Name of builder fun           */ \
+				 UNARY_SMET) /*!< Name of the UnarySmET to build */ \
+  /*! Simple UNARY_SMET builder called BUILDER */			\
   /*!                                         */			\
-  /*! Plain UNARY_TEX getting a plain TEx     */			\
-  template <typename T, 	    /* Type of the TEx to get       */	\
+  /*! Plain UNARY_SMET getting a plain SmET     */			\
+  template <typename T, 	    /* Type of the SmET to get       */	\
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>		\
-  UNARY_TEX<T> BUILDER(T&& tex,     /*!< TEx to act upon            */	\
+  UNARY_SMET<T> BUILDER(T&& smet,     /*!< SmET to act upon            */	\
 		       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
@@ -151,16 +151,16 @@ namespace SUNphi
 	using namespace std;						\
 	constexpr bool IsLvalue=isLvalue<T>;				\
 	constexpr bool IsConst=isConst<T>;				\
-	cout<<"Building " #UNARY_TEX " through " #BUILDER <<endl;	\
+	cout<<"Building " #UNARY_SMET " through " #BUILDER <<endl;	\
 	constexpr bool Is=std::is_reference<T>::value;			\
 	cout<<" IsLvalue: "<<IsLvalue<<", Is: "<<Is<<", IsConst: "<<IsConst<<endl; \
       }									\
-    return UNARY_TEX<T>(forw<T>(tex));					\
+    return UNARY_SMET<T>(forw<T>(smet));					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
   /// Provides const or non-const the evaluator
-#define PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
+#define PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
   /*! QUALIFIER Evaluator                                               */ \
   /*! \todo add/check that const qualifier is properly added to output  */ \
   template <typename...Args>						\
@@ -173,9 +173,9 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Provides both const and non-const evaluators
-#define PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR				\
-  PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF); \
-  PROVIDE_UNARY_TEX_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF)
+#define PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR				\
+  PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF); \
+  PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF)
   
   /// Implements a duplicated-call canceller
   ///
@@ -184,42 +184,42 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// conj(conj(cicc)); // returns cicc
   /// \endcode
-#define CANCEL_DUPLICATED_UNARY_TEX_CALL(CALLER,    /*!< Name of builder */ \
-					 UNARY_TEX) /*!< Type to un-nest */ \
-  /*! Simplify CALLER(UNARY_TEX) expression */				\
+#define CANCEL_DUPLICATED_UNARY_SMET_CALL(CALLER,    /*!< Name of builder */ \
+					 UNARY_SMET) /*!< Type to un-nest */ \
+  /*! Simplify CALLER(UNARY_SMET) expression */				\
   /*!                                       */				\
   /*! Returns the nested reference          */				\
   template <typename T,                                        /* Type of the expression                 */ \
 	    typename RrT=RemoveReference<T>,                   /* T without ref attributes               */ \
 	    typename Ref=typename RrT::Ref,                    /* Type of the reference                  */ \
 	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes             */ \
-	    bool TexIsLvalue=isLvalue<RrT>,		       /* Detect if TEx is an lvalue             */ \
+	    bool SmETIsLvalue=isLvalue<RrT>,		       /* Detect if SmET is an lvalue             */ \
 	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue             */ \
 	    bool RefIsStoring=RrRef::isStoring,		       /* Detect if Ref is storing               */ \
 	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or   */ \
-	    RefIsLvalue or TexIsLvalue,	  	               /*   lvalue is involved         	         */ \
+	    RefIsLvalue or SmETIsLvalue,	  	               /*   lvalue is involved         	         */ \
 	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                          */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<RrT>)>      /* Enable only for the UNARY_TEX required */ \
-  Ret CALLER(T&& tex)	/*!< Quantity to un-nest   */			\
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<RrT>)>      /* Enable only for the UNARY_SMET required */ \
+  Ret CALLER(T&& smet)	/*!< Quantity to un-nest   */			\
   {					\
     if(0)								\
       {									\
-	constexpr bool TexIsConst=isConst<T>;				\
+	constexpr bool SmETIsConst=isConst<T>;				\
 	constexpr bool RefIsConst=isConst<Ref>;				\
 									\
 	using namespace std;						\
 	cout<<"Removing duplicated call " # CALLER<<" "<<__PRETTY_FUNCTION__<<endl; \
-	constexpr bool TexIs=std::is_reference<T>::value;		\
+	constexpr bool SmETIs=std::is_reference<T>::value;		\
 	constexpr bool RefIs=std::is_reference<Ref>::value;		\
-	cout<<" TexIsLvalue: "<<TexIsLvalue<<endl;			\
-	cout<<" TexIs: "<<TexIs<<endl;					\
-	cout<<" TexIsConst: "<<TexIsConst<<endl;			\
+	cout<<" SmETIsLvalue: "<<SmETIsLvalue<<endl;			\
+	cout<<" SmETIs: "<<SmETIs<<endl;					\
+	cout<<" SmETIsConst: "<<SmETIsConst<<endl;			\
 	cout<<" RefIsLvalue: "<<RefIsLvalue<<endl;			\
 	cout<<" RefIs: "<<RefIs<<endl;					\
 	cout<<" RefIsConst: "<<RefIsConst<<endl;			\
       }									\
 									\
-    return static_cast<Ret>(tex.ref);					\
+    return static_cast<Ret>(smet.ref);					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
@@ -230,56 +230,56 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// wrap(wrap(cicc)); // returns wrap(cicc)
   /// \endcode
-#define ABSORB_DUPLICATED_UNARY_TEX_CALL(CALLER,     /*!< Name of builder                */ \
-					 UNARY_TEX)  /*!< Type to absorb                 */ \
-  /*! Simplify CALLER(UNARY_TEX) expression */				\
+#define ABSORB_DUPLICATED_UNARY_SMET_CALL(CALLER,     /*!< Name of builder                */ \
+					 UNARY_SMET)  /*!< Type to absorb                 */ \
+  /*! Simplify CALLER(UNARY_SMET) expression */				\
   /*!                                       */				\
   /*! Returns the reference                 */				\
-  template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
-  DECLAUTO CALLER(D&& tex)      /*!< UnaryTEx to absorb         */	\
+  template <typename D,                                   /* Type of the nested UNARY_SMET           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>	  /* Enable only for the UNARY_SMET required */ \
+  DECLAUTO CALLER(D&& smet)      /*!< UnarySmET to absorb         */	\
   {									\
-    return forw<D>(tex);						\
+    return forw<D>(smet);						\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-  /// Defines a simple way to swap nested UnaryTEx
+  /// Defines a simple way to swap nested UnarySmET
   ///
   /// \todo we need to implement the same check done for
-  /// CANCEL_DUPLICATED_UNARY_TEX_CALL
-#define UNARY_TEX_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
-			      UNARY_TEX, /*!< Name of the TEx  */	\
+  /// CANCEL_DUPLICATED_UNARY_SMET_CALL
+#define UNARY_SMET_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
+			      UNARY_SMET, /*!< Name of the SmET  */	\
 			      INT_FUN)	 /*!< Internal builder */	\
-  /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
+  /*! Simplify EXT_FUN(UNARY_SMET u) expression     */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
-  template <typename D,                                   /* Type of the nested UNARY_TEX           */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<D>)>	  /* Enable only for the UNARY_TEX required */ \
-  DECLAUTO EXT_FUN(D&& tex)     /*!< UnaryTEx to nest           */	\
+  template <typename D,                                   /* Type of the nested UNARY_SMET           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>	  /* Enable only for the UNARY_SMET required */ \
+  DECLAUTO EXT_FUN(D&& smet)     /*!< UnarySmET to nest           */	\
   {									\
-    return INT_FUN(EXT_FUN(tex.ref));					\
+    return INT_FUN(EXT_FUN(smet.ref));					\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-  /// Defines a simple way to swap an UnaryTEx from rhs to lhs
+  /// Defines a simple way to swap an UnarySmET from rhs to lhs
   ///
   /// \todo why can't we make only const & on rhs?
-  /// \todo we need to enforce TEx
-#define UNARY_TEX_GOES_ON_LHS(LHS_FUN,	 /*!< External builder */	\
-			      UNARY_TEX) /*!< Name of the TEx  */	\
-  /*! Simplify EXT_FUN(UNARY_TEX u) expression     */			\
+  /// \todo we need to enforce SmET
+#define UNARY_SMET_GOES_ON_LHS(LHS_FUN,	 /*!< External builder */	\
+			      UNARY_SMET) /*!< Name of the SmET  */	\
+  /*! Simplify EXT_FUN(UNARY_SMET u) expression     */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
-  template <typename Lhs,                                   /* Type of the lhs TEx                    */ \
-	    typename Rhs,                                   /* Type of the rhs UNARY_TEX              */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_TEX<Rhs>)>   /* Enable only for the UNARY_TEX required */ \
+  template <typename Lhs,                                   /* Type of the lhs SmET                    */ \
+	    typename Rhs,                                   /* Type of the rhs UNARY_SMET              */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<Rhs>)>   /* Enable only for the UNARY_SMET required */ \
   void assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
-	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_TEX */ \
+	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_SMET */ \
   {									\
     if(1)								\
       {									\
 	using namespace std;						\
-	cout<<"Moving " #UNARY_TEX "to lhs"<<endl;	\
+	cout<<"Moving " #UNARY_SMET "to lhs"<<endl;	\
       }									\
     assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);				\
   }									\

@@ -3,7 +3,7 @@
 
 /// \file Bind.hpp
 ///
-/// \brief Defines a class which binds a component of a TEx
+/// \brief Defines a class which binds a component of a SmET
 
 #ifdef HAVE_CONFIG_H
  #include <config.hpp>
@@ -13,23 +13,23 @@
 #include <ints/IntSeqRemove.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensClass.hpp>
-#include <tex/Reference.hpp>
-#include <tex/UnaryTEx.hpp>
+#include <smet/Reference.hpp>
+#include <smet/UnarySmET.hpp>
 
 namespace SUNphi
 {
   // Base type to qualify as Binder
   DEFINE_BASE_TYPE(Binder);
   
-  /// Class to bind a component of a TEx
+  /// Class to bind a component of a SmET
   template <typename TG,                                              // Type to get
 	    typename _Ref,                                            // Type to bind
 	    typename NestedTk=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>            // Types of the tensor kind
   class Binder :
     public BaseBinder,                             // Inherit from BaseBinderer to detect in expression
-    public UnaryTEx<Binder<TG,_Ref>>,              // Inherit from UnaryTEx
-    public ConstrainIsTEx<_Ref>,                   // Constrain _Ref to be a TEx
+    public UnarySmET<Binder<TG,_Ref>>,              // Inherit from UnarySmET
+    public ConstrainIsSmET<_Ref>,                   // Constrain _Ref to be a SmET
     public ConstrainTupleHasType<TG,NestedTypes>   // Constrain TG to be in the Types of the TensKind
   {
     /// Position inside the reference of the type got by the bounder
@@ -40,7 +40,7 @@ namespace SUNphi
     /// Type to get
     using Tg=TG;
     
-    PROVIDE_UNARY_TEX_REF;
+    PROVIDE_UNARY_SMET_REF;
     
     // Attributes
     NOT_STORING;
@@ -85,7 +85,7 @@ namespace SUNphi
     /*!                                                              */	\
     /*! Internal Evaluator, inserting the id at the correct          */	\
     /*! position in the list of args. Check on type B is omitted, as */	\
-    /*! the function is called only from an already checked context  */ \
+    /*! the function is called only from an already checked consmett  */ \
     template <typename...Args, /* Type of the arguments */		\
 	      int...Head,      /* Position of the first set of args, before insertion */ \
 	      int...Tail>      /* Position of the second set of args, after insertion */ \
@@ -135,16 +135,16 @@ namespace SUNphi
     
 #undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
     
-    PROVIDE_UNARY_TEX_ASSIGNEMENT_OPERATOR(Binder);
+    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Binder);
     
     /// Constructor taking a universal reference and the id
     ///
-    /// \todo add check on TEX
-    template <typename TEX,						\
-	      typename=EnableIf<isSame<Unqualified<TEX>,Unqualified<Ref>>>> \
-    explicit Binder(TEX&& tex, ///< Reference to bind
+    /// \todo add check on SMET
+    template <typename SMET,						\
+	      typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref>>>> \
+    explicit Binder(SMET&& smet, ///< Reference to bind
 		    int id)    ///< Component to get
-      : ref(forw<TEX>(tex)),id(id)
+      : ref(forw<SMET>(smet)),id(id)
     {
 #ifdef DEBUG_BINDER
       using namespace std;
@@ -163,8 +163,8 @@ namespace SUNphi
     
   };
   
-  // Check that a test Binder is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Binder<TensComp<double,1>,
+  // Check that a test Binder is a UnarySmET
+  STATIC_ASSERT_IS_UNARY_SMET(Binder<TensComp<double,1>,
 				    Tens<TensKind<TensComp<double,1>>,double>>);
   
   /// Bind the \c id component of type \c Tg from expression \c ref
@@ -172,15 +172,15 @@ namespace SUNphi
   /// Returns a plain binder getting from an unbind expression. Checks
   /// demanded to Binder.
   template <typename _Tg,                       // Type to get
-	    typename TEX,                       // Type to bind, deduced from argument
+	    typename SMET,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO bind(TEX&& tex,                     ///< Quantity to bind to
+  DECLAUTO bind(SMET&& smet,                     ///< Quantity to bind to
 		const int id,                  ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
-    using Tg=CompOrTwinned<_Tg,TEX>;
+    using Tg=CompOrTwinned<_Tg,SMET>;
     
 #ifdef DEBUG_BINDER
     using namespace std;
@@ -188,11 +188,11 @@ namespace SUNphi
 #endif
     
     // Build the binder
-    Binder<Tg,TEX> b(forw<TEX>(tex),id);
+    Binder<Tg,SMET> b(forw<SMET>(smet),id);
     
     // Get the TensKind
-    using Tk=typename Unqualified<TEX>::Tk;
-    // Count the free components of TEx
+    using Tk=typename Unqualified<SMET>::Tk;
+    // Count the free components of SmET
     constexpr int N=Tk::nTypes;
     // Check if fully bound
     constexpr bool FullyBound=(N==1);

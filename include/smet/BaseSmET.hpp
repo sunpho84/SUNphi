@@ -1,7 +1,7 @@
-#ifndef _BASETEX_HPP
-#define _BASETEX_HPP
+#ifndef _BASESMET_HPP
+#define _BASESMET_HPP
 
-/// \file BaseTEx.hpp
+/// \file BaseSmET.hpp
 ///
 /// \brief Header file defining basic properties of Template Expressions
 
@@ -12,7 +12,7 @@
 namespace SUNphi
 {
   /// Provides an attribute
-#define STATIC_CONSTEXPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)	\
+#define STATIC_CONSSMETPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)	\
   DESCRIPTION								\
   /*!             */							\
   LONG_DESCRIPTION							\
@@ -27,8 +27,8 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Defines the BaseTEx type traits
-  DEFINE_BASE_TYPE(TEx);
+  /// Defines the BaseSmET type traits
+  DEFINE_BASE_TYPE(SmET);
   
   // Defines the check for a member "name"
   DEFINE_HAS_MEMBER(name);
@@ -40,15 +40,15 @@ namespace SUNphi
   
   /// Provides a isStoring attribute
 #define IS_STORING_ATTRIBUTE(LONG_DESCRIPTION,...)			\
-  STATIC_CONSTEXPR(/*! Returns whether this TEx is storing */,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)
+  STATIC_CONSSMETPR(/*! Returns whether this SmET is storing */,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)
   
-  /// Set the TEx to storing
+  /// Set the SmET to storing
 #define STORING						\
-  IS_STORING_ATTRIBUTE(/*! This TEx is storing */,true)
+  IS_STORING_ATTRIBUTE(/*! This SmET is storing */,true)
   
-  /// Set the TEx to not-storing
+  /// Set the SmET to not-storing
 #define NOT_STORING						\
-  IS_STORING_ATTRIBUTE(/*! This TEx is not storing */,false)
+  IS_STORING_ATTRIBUTE(/*! This SmET is not storing */,false)
   
   /////////////////////////////////////////////////////////////////
   
@@ -67,20 +67,20 @@ namespace SUNphi
   
   /// Provides a isAssignable attribute
 #define IS_ASSIGNABLE_ATTRIBUTE(LONG_DESCRIPTION,...)			\
-  STATIC_CONSTEXPR(/*! Returns whether this TEx can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
+  STATIC_CONSSMETPR(/*! Returns whether this SmET can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
   
-  /// Set the TEx as assignable
+  /// Set the SmET as assignable
 #define ASSIGNABLE						\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx can be assigned */,true)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned */,true)
   
-  /// Set the TEx as not-assignable
+  /// Set the SmET as not-assignable
 #define NOT_ASSIGNABLE						\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This TEx cannot be assigned */,false)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET cannot be assigned */,false)
   
   /////////////////////////////////////////////////////////////////
   
   /// Provide the reference to the object
-#define PROVIDE_TEX_REF(NUM)				\
+#define PROVIDE_SMET_REF(NUM)				\
   /*! Type of the binding reference NUM */		\
   using Ref ## NUM=_Ref ## NUM;				\
   /*! Reference to the NUM object */			\
@@ -141,12 +141,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Defines the check for a TEx
+  /// Defines the check for a SmET
   ///
   /// \todo add costRead
   /// \todo add costEval
   /// \todo add isAliasing
-#define STATIC_ASSERT_IS_TEX(...)				\
+#define STATIC_ASSERT_IS_SMET(...)				\
   STATIC_ASSERT_HAS_MEMBER(compSize,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);		\
@@ -158,8 +158,8 @@ namespace SUNphi
   
   /// TEmplate Expression
   template <typename T>
-  struct TEx :
-    public BaseTEx
+  struct SmET :
+    public BaseSmET
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };

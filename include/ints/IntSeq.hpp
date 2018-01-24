@@ -19,7 +19,7 @@ namespace SUNphi
   /// A struct holding a sequence of integer (similar to stdlib).
   ///
   /// The \c integers are held as parameters of the class. To
-  /// intercept them, use the class in a context in which the integer
+  /// intercept them, use the class in a consmett in which the integer
   /// list are deduced as template parameter, as in this example:
   ///
   /// \code

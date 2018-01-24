@@ -7,22 +7,22 @@
 
 #include <physics/Compl.hpp>
 #include <tens/TensKind.hpp>
-#include <tex/Transpose.hpp>
-#include <tex/UnaryTEx.hpp>
+#include <smet/Transpose.hpp>
+#include <smet/UnarySmET.hpp>
 
 namespace SUNphi
 {
   // Base type to qualify as Conjer
   DEFINE_BASE_TYPE(Conjer);
   
-  /// Class to take the conjugate of a TEx
+  /// Class to take the conjugate of a SmET
   template <typename _Ref,                                  // Type of the expression to conjugate
 	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the conjugated type
 	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
   class Conjer :
     public BaseConjer,                                // Inherit from BaseConjer to detect in expression
-    public UnaryTEx<Conjer<_Ref>>,                    // Inherit from UnaryTEx
-    public ConstrainIsTEx<_Ref>,                      // Constrain _Ref to be a TEx
+    public UnarySmET<Conjer<_Ref>>,                    // Inherit from UnarySmET
+    public ConstrainIsSmET<_Ref>,                      // Constrain _Ref to be a SmET
     public ConstrainIsTensKind<TK>,                   // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<Compl,TK_TYPES>      // Constrain TG to be in the Types of the TensKind
   {
@@ -32,7 +32,7 @@ namespace SUNphi
     
   public:
     
-    PROVIDE_UNARY_TEX_REF;
+    PROVIDE_UNARY_SMET_REF;
     
     // Attributes
     NOT_STORING;
@@ -50,11 +50,11 @@ namespace SUNphi
   			       IntSeq<0,0>,                               // Shift 0 after insertion
 			       true>);                                    // Ignore if already present
     
-    PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(Conjer);
+    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(Conjer);
     
     SAME_COMP_SIZES_OF_REF;
     
-    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Conjer);
+    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(Conjer);
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_EVALUATOR(QUALIFIER)			\
@@ -85,17 +85,17 @@ namespace SUNphi
     
   };
   
-  // Check that a test Conjer is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Conjer<Tens<TensKind<Compl>,double>>);
+  // Check that a test Conjer is a UnarySmET
+  STATIC_ASSERT_IS_UNARY_SMET(Conjer<Tens<TensKind<Compl>,double>>);
   
   // Build Conjer from conj
-  SIMPLE_UNARY_TEX_BUILDER(conj,Conjer);
+  SIMPLE_UNARY_SMET_BUILDER(conj,Conjer);
   
   // Simplifies conj(conj)
-  CANCEL_DUPLICATED_UNARY_TEX_CALL(conj,Conjer);
+  CANCEL_DUPLICATED_UNARY_SMET_CALL(conj,Conjer);
   
   // Defines commutativity of Conj with other unary expressions
-  UNARY_TEX_GOES_INSIDE(conj,Transposer,transpose);
+  UNARY_SMET_GOES_INSIDE(conj,Transposer,transpose);
 }
 
 #endif

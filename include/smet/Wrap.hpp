@@ -6,26 +6,26 @@
 /// \brief Header file for the definition of wrapper
 
 #include <tens/TensKind.hpp>
-#include <tex/Transpose.hpp>
-#include <tex/UnaryTEx.hpp>
+#include <smet/Transpose.hpp>
+#include <smet/UnarySmET.hpp>
 
 namespace SUNphi
 {
   // Base type to qualify as Wrapper
   DEFINE_BASE_TYPE(Wrapper);
   
-  /// Class to wrap a TEx
+  /// Class to wrap a SmET
   template <typename _Ref,                                  // Type of the expression to wrap
 	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the wrapped expression
   class Wrapper :
     public BaseWrapper,                                // Inherit from BaseWrapper to detect in expression
-    public UnaryTEx<Wrapper<_Ref>>,                    // Inherit from UnaryTEx
-    public ConstrainIsTEx<_Ref>,                       // Constrain _Ref to be a TEx
+    public UnarySmET<Wrapper<_Ref>>,                    // Inherit from UnarySmET
+    public ConstrainIsSmET<_Ref>,                       // Constrain _Ref to be a SmET
     public ConstrainIsTensKind<TK>                     // Constrain type TK to be a TensKind
   {
   public:
     
-    PROVIDE_UNARY_TEX_REF;
+    PROVIDE_UNARY_SMET_REF;
     
     // Attributes
     NOT_STORING;
@@ -38,20 +38,20 @@ namespace SUNphi
     SAME_COMP_SIZES_OF_REF;
     
     MERGEABLE_ACCORDING_TO_REF;
-    PROVIDE_UNARY_TEX_SIMPLE_GET_MERGED_COMPS_VIEW(Wrapper);
+    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(Wrapper);
     
-    PROVIDE_UNARY_TEX_SIMPLE_CREATOR(Wrapper);
-    PROVIDE_UNARY_TEX_DEFAULT_EVALUATOR;
+    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(Wrapper);
+    PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR;
   };
   
-  // Check that a test Wrapper is a UnaryTEx
-  STATIC_ASSERT_IS_UNARY_TEX(Wrapper<Tens<TensKind<TensComp<double,3>>,double>>);
+  // Check that a test Wrapper is a UnarySmET
+  STATIC_ASSERT_IS_UNARY_SMET(Wrapper<Tens<TensKind<TensComp<double,3>>,double>>);
   
   // Build Wrapper from wrap
-  SIMPLE_UNARY_TEX_BUILDER(wrap,Wrapper);
+  SIMPLE_UNARY_SMET_BUILDER(wrap,Wrapper);
   
   // Simplifies wrap(wrap)
-  ABSORB_DUPLICATED_UNARY_TEX_CALL(wrap,Wrapper);
+  ABSORB_DUPLICATED_UNARY_SMET_CALL(wrap,Wrapper);
 }
 
 #endif
