@@ -114,7 +114,7 @@ Explenation:
 Ta-da! Some magic occurs at assignement:
 
 - the `adj`-instantiated `transpose` is moved to lhs (so that reading would be sequential)
-- the two nested `transpose` annihilates with each other,leaving out (at
+- the two nested `transpose` annihilates with each other, leaving out (at
   compile time) a reference to "ciaccio"
 - the same occurrs to the `conj`, leaving a reference to ciccio
 - all the most external free indices of the expression are fused, and threadized (soon)
