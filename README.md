@@ -69,8 +69,8 @@ using namespaces SUNphi;
 // - size (8 here) could be marked as DYNAMIC, so that the size can be specified at runtime
 DEFINE_TENS_COMP(myComp,MyComp,CompSize,8);
 
-// A fake copier that (if we were on an avx-512 enabled machine), would copy rhs to lhs
-void av512copy(double& lhs,const double &rhs)
+// A fake copier that (if we were on an AVX-512 enabled machine), would copy rhs to lhs
+void AVX512copy(double& lhs,const double &rhs)
 {
 }
 
@@ -125,7 +125,7 @@ int main()
     // This is (will) be actually dispatched to a thread pool
     #pragma omp parallel for 
     for(int i=0;i<288;i++)
-      avx512copy(_ciccio[8*(1+4*i)],_ciaccio[8*(2+4*i)]);
+       AVX512copy(_ciccio[8*(1+4*i)],_ciaccio[8*(2+4*i)]);
 
     free(_ciccio);
     free(_ciaccio);
