@@ -9,20 +9,22 @@ Features:
 
 - header-only
 
-- highly metaprogrammed, inspired from
+- crazy metaprogramming at work, inspired by
   [Eigen](http://eigen.tuxfamily.org/) and
   [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries
 
 - [C++17](https://en.wikipedia.org/wiki/C%2B%2B17) syntax: God bless
   the [constexpr
   if](http://en.cppreference.com/w/cpp/language/if#Constexpr_If)
-  statements
+  statements. By the time I have finished this library, most compiler
+  will support it (hopefully)
 
-- MPI (not yet, but this will be easy to adapt from Nissa), with
-  plenty of ideas (in my mind) on how to automatize caching/scattering
+- non-shared memory parallelism via MPI (not yet implemented, but this
+  will be easy to adapt from Nissa), with plenty of ideas (in my mind)
+  on how to automatize caching/scattering
 
 - automatic parallelization of free indices via loop fusion (done) and
-  thread pool (easily adaptable from Nissa)
+  thread pool (easily adaptable/generalizable from Nissa)
 
 - automatic vectorization on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
@@ -36,7 +38,8 @@ the following).
 
 Missing: ...a lot of things, most relevantly, MPI, threads and
 vectors... But all of that is in my mind! So far I have implemented
-some basic operations, such as conjugation and transposition.
+some basic operations, such as conjugation and transposition, and
+simple assignement.
 
 
 A simple example of what can be (almost) be done:
