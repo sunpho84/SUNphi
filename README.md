@@ -97,7 +97,7 @@ int main()
     // Explenation:
     // - "spin" get a view of an expression to a specific entry of the
     //   tensor component "Spin", 1 in this case
-    // - "transpose" swap row and color indices
+    // - "transpose" swap row with column indices for colour and spin
     // - "conj" returns a conjugated view on the bracketed expression,
     //   so that getting the real part of it does nothing, while imaginary
     //   get the minus of it
