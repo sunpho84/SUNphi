@@ -5,6 +5,14 @@ multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) libary.
 
+The key idea is to have a numerical library able to operate on tensor
+expression of arbitrary components, in such a way to be completely
+neutral with respect to the internal layout of the object (order of
+the components, kind of the expression, underlying data type), and
+enable automatic optimization/parallelization/vectorization of the
+expression execution via an efficient (?) army of metaprogramming
+techniques.
+
 Features:
 
 - header-only
@@ -24,12 +32,12 @@ Features:
   on how to automatize caching/scattering
 
 - automatic parallelization of free indices via loop fusion (done) and
-  thread pool (easily adaptable/generalizable from Nissa)
+  thread pool (...shoukld be easily adaptable/generalizable from Nissa)
 
 - automatic vectorization on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
-  operation appliable to a given vector size... all still in my mind
-  so far)
+  operation appliable to a given vector size... almost all still in my
+  mind so far)
 
 - fully documented with [Doxygen](www.doxygen.org), otherwise I would
   forget immediately the meaning of what I wrote.
@@ -39,13 +47,14 @@ Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
 carrying an arbitrary number of indices (called "Tensor Component" in
 the following).
 
-Missing: ...a lot of things, most relevantly, MPI, threads and
-vectors... But all of that is in my mind! So far I have implemented
-some basic operations, such as conjugation and transposition, and
-simple assignement.
+Implemented so far: tensor components fusion, reorganization of unary
+expressions such as "conj" and "transpose".
+
+Missing: ...a lot of things, most relevantly, MPI, threads, vectors
+and all useful expressions... But all of that is in my mind!
 
 
-A simple example of what can be (almost) be done:
+A simple example of what can be be done so far:
 
 ```c++
 #include <SUNphi>
