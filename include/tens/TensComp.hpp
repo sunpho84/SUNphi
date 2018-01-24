@@ -107,7 +107,17 @@ namespace SUNphi
   DEFINE_NAMED_RW_OR_COL_BINDER(TYPE,BINDER);				\
 									\
   /*! Declares an alias TYPE to be used when no column or row specified */ \
-  using TYPE=Cn ## TYPE
+  using TYPE=Cn ## TYPE;						\
+  /*! Declares the twin types of TYPE TensComp */			\
+  template<>								\
+  struct TwinTensCompOf<TYPE>						\
+  {									\
+    /* rw type of TYPE TensComp	*/					\
+    using Rw=Rw ## TYPE;						\
+  									\
+    /* cn type of TYPE TensComp	*/					\
+    using Cn=Cn ## TYPE;						\
+  }
 }
 
 #endif
