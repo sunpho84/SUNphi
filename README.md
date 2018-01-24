@@ -79,7 +79,8 @@ int main()
     // Tensor kind: list of tensor components
     // - RwCol is meant to be a "row color" index
     //   (number of colors is specified at configure time)
-    // - Compl is a pair, accessed through real and imag, or reim with either 0 or 1
+    // - Compl is a pair, accessed through real and imag, or reim
+    //   with either 0 or 1 parameter
     // - Spin is an alias for CnSpin (column spin), every "twinned" (column/row)
     //   tensor component access to the Cn version if not specified
     // - Spacetime is internally marked as a "DYNAMIC" component
@@ -90,7 +91,7 @@ int main()
 
     // Provided size for dynamic component "Spacetime"
     int vol=16;
-    // a pair of tensors
+    // A pair of tensors
     MyTens ciccio(vol),ciaccio(vol);
 
     // Example of a nontrivial expression assignement
