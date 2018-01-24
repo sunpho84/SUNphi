@@ -68,7 +68,7 @@ using namespaces SUNphi;
 // - size (8 here) could be marked as DYNAMIC, so that the size can be specified at runtime
 DEFINE_TENS_COMP(myComp,MyComp,CompSize,8);
 
-// A fake copier that (if we were on an avx-512 enabled machine, would copy rhs to lhs)
+// A fake copier that (if we were on an avx-512 enabled machine), would copy rhs to lhs
 void av512copy(double& lhs,const double &rhs)
 {
 }
