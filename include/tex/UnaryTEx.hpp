@@ -5,6 +5,7 @@
 ///
 /// \brief Header file defining basic properties of Unary Template EXpressions
 
+#include <metaprogramming/SFINAE.hpp>
 #include <tex/BaseTEx.hpp>
 
 namespace SUNphi
@@ -53,13 +54,26 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Set the size of a component according to the reference
+  /// Set the size of components according to the reference
 #define SAME_COMP_SIZES_OF_REF						\
   /*! Returns the size of a component, matching the reference */	\
-  template <typename TC>						\
+  template <typename TC,						\
+  	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>		\
+  int compSize(SFINAE_WORSEN_DEFAULT_VERSION_ARGS) const		\
+  {									\
+    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
+    return ref.template compSize<TC>();					\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Set the size of a specific component
+#define PROVIDE_COMP_SIZES_FOR(TC,...)					\
+  /*! Returns the size of component TC */				\
+  template <typename T,							\
+	    SFINAE_ON_TEMPLATE_ARG(isSame<T,TC>)>			\
   int compSize() const							\
   {									\
-    return ref.template compSize<TC>();					\
+    __VA_ARGS__;							\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
