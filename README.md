@@ -1,19 +1,43 @@
 # SUNphi
 SU(N) on Phi architecture
 
-A library for running SU(N) (and similar) theories, with multinode, multicore, supervectorized architectures in mind, and a narcissistic name. Hopefully, a modernistic replacement for [Nissa library](https://github.com/sunpho84/nissa).
+A library for running SU(N) (and similar) theories, with multinode,
+multicore, supervectorized architectures in mind, and a narcissistic
+name. Hopefully, a modernistic replacement for
+[Nissa](https://github.com/sunpho84/nissa) libary.
 
 Features:
+
 - header-only
-- highly metaprogrammed, inspired from [Eigen](http://eigen.tuxfamily.org/) and [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries
-- [C++17](https://en.wikipedia.org/wiki/C%2B%2B17) syntax: God bless the [constexpr if](http://en.cppreference.com/w/cpp/language/if#Constexpr_If) statements
-- MPI (not yet, but this will be easy to adapt from Nissa), with plenty of ideas (in my mind) on how to automatize caching/scattering
-- automatic parallelization of expressions via loop fusion (done) and thread pool (easily adaptable from Nissa)
-- automatic vectorization (via loop splitting and automatic deduction of the set of vector operation appliable to a given vector size)
 
-At the core, the library is an engine to build [Smart Expression Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector carrying an arbitrary number of indices (called "Tensor Component" in the following).
+- highly metaprogrammed, inspired from
+  [Eigen](http://eigen.tuxfamily.org/) and
+  [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries
 
-Missing: ...a lot of things, most relevantly, MPI, threads and vectors... But all of that is in my mind! So far I have implemented some basic operations, such as conjugation and transposition.
+- [C++17](https://en.wikipedia.org/wiki/C%2B%2B17) syntax: God bless
+  the [constexpr
+  if](http://en.cppreference.com/w/cpp/language/if#Constexpr_If)
+  statements
+
+- MPI (not yet, but this will be easy to adapt from Nissa), with
+  plenty of ideas (in my mind) on how to automatize caching/scattering
+
+- automatic parallelization of free indices via loop fusion (done) and
+  thread pool (easily adaptable from Nissa)
+
+- automatic vectorization on the innermost component(s) (via loop
+  fusion or splitting, and automatic deduction of the set of vector
+  operation appliable to a given vector size... all still in my mind
+  so far)
+
+At the core, the library is an engine to build [Smart Expression
+Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
+carrying an arbitrary number of indices (called "Tensor Component" in
+the following).
+
+Missing: ...a lot of things, most relevantly, MPI, threads and
+vectors... But all of that is in my mind! So far I have implemented
+some basic operations, such as conjugation and transposition.
 
 
 A simple example of what can be (almost) be done:
@@ -79,7 +103,7 @@ int main()
     double* _ciaccio=getRawAlignedMem<double>(9216);
 
     // This is (will) be actually dispatched to a thread pool
-    // ... not yet enabled in the code... #pragma omp parallel for
+    // #pragma omp parallel for //... not yet enabled in the code... 
     for(int i=0;i<288;i++)
       avx512copy(_ciccio[8*(1+4*i)],_ciaccio[8*(2+4*i)]);
 
