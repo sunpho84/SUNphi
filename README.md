@@ -6,7 +6,7 @@ name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) libary.
 
 The key idea is to have a numerical library able to operate on tensor
-expression of arbitrary components, in such a way to be completely
+expressions of arbitrary components, in such a way to be completely
 neutral with respect to the internal layout of the object (order of
 the components, kind of the expression, underlying data type), and to
 enable automatic optimization/parallelization/vectorization of the
@@ -25,7 +25,7 @@ Features:
   the [constexpr
   if](http://en.cppreference.com/w/cpp/language/if#Constexpr_If)
   statements. By the time I have finished this library, most compiler
-  will support it (hopefully)
+  will support it (hopefully...)
 
 - non-shared memory parallelism via MPI (not yet implemented, but this
   will be easy to adapt from Nissa), with plenty of ideas (in my mind)
@@ -37,21 +37,22 @@ Features:
 - automatic vectorization on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
   operation appliable to a given vector size... almost all still in my
-  mind so far)
+  mind, so far)
 
 - fully documented with [Doxygen](www.doxygen.org), otherwise I would
-  forget immediately the meaning of what I wrote.
+  forget immediately the meaning of what I write.
 
 At the core, the library is an engine to build [Smart Expression
 Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
-carrying an arbitrary number of indices (called "Tensor Component" in
+carrying an arbitrary number of indices (called "tensor components" in
 the following).
 
 Implemented so far: tensor components fusion, reorganization of unary
 expressions such as "conj" and "transpose".
 
-Missing: ...a lot of things, most relevantly, MPI, threads, vectors
-and all useful expressions... But all of that is in my mind!
+Missing: ...a lot of things, almost everything actually! Most
+relevantly, MPI, threads, vectors and all useful expressions... But
+all of that is sketched and ready to be forgotten.
 
 
 A simple example of what can be be done so far:
@@ -79,7 +80,8 @@ int main()
     // - RwCol is meant to be a "row color" index
     //   (number of colors is specified at configure time)
     // - Compl is a pair, accessed through real and imag, or reim with either 0 or 1
-    // - Spin is an alias for CnSpin (column spin)
+    // - Spin is an alias for CnSpin (column spin), every "twinned" (column/row)
+    //   tensor component access to the Cn version if not specified
     // - Spacetime is internally marked as a "DYNAMIC" component
     using MyTk=TensKind<RwCol,Compl,CnCol,Spacetime,Spin,MyComp>;
     
@@ -95,19 +97,22 @@ int main()
     spin(transpose(ciccio),1)=spin(adj(conj(ciaccio)),2);
 
     // Explenation:
-    // - "spin" get a view of an expression to a specific entry of the
-    //   tensor component "Spin", 1 in this case
-    // - "transpose" swap row with column indices for colour and spin
-    // - "conj" returns a conjugated view on the bracketed expression,
-    //   so that getting the real part of it does nothing, while imaginary
-    //   get the minus of it
-    // - "adj" transposes and takes the conjugated
     //
-    // Tada! Some magic occurs at assignement:
-    // - transposition is moved to lhs (so that reading is sequential)
-    // - the two nested "transposed" occurrency annihilates with each other,
-    //   leaving out (at compile time) a reference to "ciaccio"
-    // - the same occurrs to the conugation
+    // - "spin" gets a view to a specific entry of the tensor component "Spin",
+    //   (1 in this case)
+    // - "transpose" swaps row with column indices (and types in the TensKind
+    //   signature, see above MyTk) for colour and spin
+    // - "conj" returns a conjugated view on the bracketed expression,
+    //   so that getting the real part of it does nothing, while getting the
+    //   imaginary returns minus it
+    // - "adj" transposes and takes the conjugated simultaneously
+    //
+    // Ta-da! Some magic occurs at assignement:
+    //
+    // - transposition is moved to lhs (so that reading would be sequential)
+    // - the two nested "transposed" annihilates with each other,leaving out (at
+    //   compile time) a reference to "ciaccio"
+    // - the same occurrs to the conugation, leaving a reference to ciccio
     // - all the most external free indices of the expression are fused, and threadized (soon)
     // - the innermost component is recognized to be vectorizable (on his way)
     // 
@@ -117,7 +122,7 @@ int main()
     double* _ciaccio=getRawAlignedMem<double>(9216);
 
     // This is (will) be actually dispatched to a thread pool
-    // #pragma omp parallel for //... not yet enabled in the code... 
+    #pragma omp parallel for 
     for(int i=0;i<288;i++)
       avx512copy(_ciccio[8*(1+4*i)],_ciaccio[8*(2+4*i)]);
 
