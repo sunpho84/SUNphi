@@ -25,6 +25,7 @@ addons:
 
 # Build your code e.g. by calling make
 script:
+  - bash config/bootstrap
   - mkdir build
   - cd build
   - ../configure
