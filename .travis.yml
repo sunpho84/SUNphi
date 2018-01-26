@@ -28,7 +28,7 @@ script:
   - bash config/bootstrap
   - mkdir build
   - cd build
-  - ../configure
+  - ../configure CXX=clang++
   - make
 
 # Generate and deploy documentation
