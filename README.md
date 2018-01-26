@@ -1,6 +1,6 @@
 # SUNphi: SU(N) on Phi architecture
 
-**Note**: internal documentation generated with Doxygen is availale
+**Note**: internal documentation generated with Doxygen is available
   [here](https://sunpho84.github.io/SUNphi/html/index.html).
 
 A library to simulate *SU(N)* (and similar) theories, with multinode,
@@ -10,13 +10,13 @@ name. Hopefully, a modernistic replacement for
 
 ### Goals
 
-**The key idea** is to have a numerical library able to operate on tensor
-expressions of arbitrary components, in such a way to be completely
-neutral with respect to the internal layout of the object (order of
-the components, kind of the expression, underlying data type), and to
-enable automatic optimization/parallelization/vectorization of the
-expression execution, via an efficient (?) army of metaprogramming
-techniques.
+**The key idea** is to have a numerical library able to operate on
+tensor expressions of arbitrary components, in such a way to be
+**completely neutral** with respect to the internal layout of the object
+(order of the components, kind of the expression, underlying data
+type), and to enable automatic
+optimization/parallelization/vectorization of the expression
+execution, via an efficient (?) army of metaprogramming techniques.
 
 - At the core, the library is an engine to build [Smart Expression
  Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
