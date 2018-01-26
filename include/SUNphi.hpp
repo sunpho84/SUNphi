@@ -5,9 +5,16 @@
 /// \brief Main include file for the SUNphi library
 
 /// \mainpage
-/// This is the documetation for SUNphi library
+/// This is the documentation for SUNphi library.
 ///
-/// Please use the left panel to navigate to the internal documentation
+/// Front-page is still a canvas, but internally everything is
+/// documented :)
+///
+/// Please use the left panel to navigate to the internal
+/// documentation.
+///
+/// A few methods are missing due to the absence of libclang-enabled
+/// Doxygen on Travis-ci nodes, this will be fixed "soon".
 
 #include <Ints.hpp>
 #include <Ios.hpp>
