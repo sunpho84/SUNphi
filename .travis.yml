@@ -15,6 +15,10 @@ env:
     - GH_REPO_NAME: SUNphi
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
 
+before_install:
+  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
+  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
+
 # Install dependencies
 addons:
   apt:

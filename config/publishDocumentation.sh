@@ -67,7 +67,7 @@ rm -rf *
 # to NO, which it is by default. So creating the file just in case.
 echo "" > .nojekyll
 
-mv ../../docs/* .
+mv $TRAVIS_BUILD_DIR/build/docs/* .
 
 ################################################################################
 ##### Upload the documentation to the gh-pages branch of the repository.   #####
