@@ -39,8 +39,10 @@ Features:
   operation appliable to a given vector size... almost all still in my
   mind, so far)
 
-- fully documented with [Doxygen](www.doxygen.org), otherwise I would
-  forget immediately the meaning of what I write.
+- [fully
+  documented](https://sunpho84.github.io/SUNphi/html/index.html) with
+  [Doxygen](www.doxygen.org), otherwise I would forget immediately the
+  meaning of what I write.
 
 At the core, the library is an engine to build [Smart Expression
 Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
