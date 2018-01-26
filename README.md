@@ -1,6 +1,6 @@
 # SUNphi: SU(N) on Phi architecture
 
-A library to simulate $SU(N)$ (and similar) theories, with multinode,
+A library to simulate *SU(N)* (and similar) theories, with multinode,
 multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) library.
@@ -51,14 +51,19 @@ techniques.
  carrying an arbitrary number of indices (called "tensor components"
  in the following).
 
-- Automatic (or better, *guided*) decomposition of a lattice in sublattice
+- Flexibility to enable vectorization via *site fusion* or other SIMD
+  enabling grouping of the data to operate upon
 
-- Serialization of classes with support for initialization and
+- Automatic (or better, *guided*) decomposition of a lattice in
+  sublattice, using a generalization of the approach used in Nissa
+
+- Serialization of classes with support for default initialization and
  automatic skipping with default values; creation of standard bison
  parser via meta-parsing the sources
 
 - Automatic creation of read or write cache area in tensors, on the
-  basis of the operation acting on the tensor itself and atomic write access
+  basis of the operation acting on the tensor itself (as it was done
+  with the all-to-all remapper in Nissa) and atomic write access
 
 ### Status
 
