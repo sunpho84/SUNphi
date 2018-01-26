@@ -41,4 +41,5 @@ after_success:
   - cd $TRAVIS_BUILD_DIR/build
   - rm -fr docs
   - make doxygen-run
+  - cd $TRAVIS_BUILD_DIR
   - . config/publishDocumentation.sh
