@@ -7,6 +7,10 @@ branches:
 
 compiler: clang
 
+# caching apt
+cache:
+  apt: true
+
 # Environment variables
 env:
   global:
@@ -14,10 +18,6 @@ env:
     - CXX=g++-7
     - GH_REPO_NAME: SUNphi
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
-
-before_install:
-  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
-  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
 
 # Install dependencies
 addons:
@@ -31,6 +31,11 @@ addons:
       - doxygen-gui
       - graphviz
       - g++-7
+
+# installing doxygen
+install:
+- wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
+- sudo dpkg -i doxygen_1.8.13-9_amd64.deb
 
 # Build your code e.g. by calling make
 script:
