@@ -13,7 +13,6 @@ env:
     - CC=gcc-7
     - CXX=g++-7
     - GH_REPO_NAME: SUNphi
-    - DOXYFILE: $TRAVIS_BUILD_DIR/build
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
 
 # Install dependencies
@@ -39,6 +38,7 @@ script:
 
 # Generate and deploy documentation
 after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - echo chmod +x generateDocumentationAndDeploy.sh
-  - echo ./generateDocumentationAndDeploy.sh
+  - cd $TRAVIS_BUILD_DIR/build
+  - rm -fr docs
+  - make doxygen-run
+  - bash config/publishDocumentation.sh
