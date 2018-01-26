@@ -1,9 +1,14 @@
 # SUNphi: SU(N) on Phi architecture
 
+**Note**: internal documentation generated with Doxygen is availale
+  [here](https://sunpho84.github.io/SUNphi/html/index.html).
+
 A library to simulate *SU(N)* (and similar) theories, with multinode,
 multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) library.
+
+### Goals
 
 **The key idea** is to have a numerical library able to operate on tensor
 expressions of arbitrary components, in such a way to be completely
@@ -13,11 +18,30 @@ enable automatic optimization/parallelization/vectorization of the
 expression execution, via an efficient (?) army of metaprogramming
 techniques.
 
+- At the core, the library is an engine to build [Smart Expression
+ Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
+ carrying an arbitrary number of indices (called "tensor components"
+ in the following).
+
+- Flexibility to enable vectorization via *site fusion* or other SIMD
+  enabling grouping of the data to operate upon.
+
+- Automatic (or better, *guided*) decomposition of a lattice in
+  sublattice, using a generalization of the approach used in Nissa.
+
+- Serialization of classes with support for default initialization and
+ automatic skipping with default values; creation of standard bison
+ parser via meta-parsing the sources.
+
+- Automatic creation of read or write cache area in tensors, on the
+  basis of the operation acting on the tensor itself (as it was done
+  with the all-to-all remapper in Nissa) and atomic write access.
+
 ### Features
 
-- header-only (so far)
+- Header-only (so far)
 
-- crazy metaprogramming at work, inspired by
+- Crazy metaprogramming at work, inspired by
   [Eigen](http://eigen.tuxfamily.org/) and
   [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries
 
@@ -27,43 +51,22 @@ techniques.
   statements. By the time I have finished this library, most compiler
   will support it (hopefully...)
 
-- non-shared memory parallelism via MPI (not yet implemented, but this
+- Non-shared memory parallelism via MPI (not yet implemented, but this
   will be easy to adapt from Nissa), with plenty of ideas (in my mind)
   on how to automatize caching/scattering
 
-- automatic parallelization of free indices via loop fusion (done) and
+- Automatic parallelization of free indices via loop fusion (done) and
   thread pool (...should be easily adaptable/generalizable from Nissa)
 
-- automatic vectorization on the innermost component(s) (via loop
+- Automatic vectorization on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
   operation appliable to a given vector size... almost all still in my
   mind, so far)
 
-- [fully
+- [Fully
   documented](https://sunpho84.github.io/SUNphi/html/index.html) with
   [Doxygen](www.doxygen.org), otherwise I would forget immediately the
   meaning of what I write.
-
-### Goals
-
-- At the core, the library is an engine to build [Smart Expression
- Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
- carrying an arbitrary number of indices (called "tensor components"
- in the following).
-
-- Flexibility to enable vectorization via *site fusion* or other SIMD
-  enabling grouping of the data to operate upon
-
-- Automatic (or better, *guided*) decomposition of a lattice in
-  sublattice, using a generalization of the approach used in Nissa
-
-- Serialization of classes with support for default initialization and
- automatic skipping with default values; creation of standard bison
- parser via meta-parsing the sources
-
-- Automatic creation of read or write cache area in tensors, on the
-  basis of the operation acting on the tensor itself (as it was done
-  with the all-to-all remapper in Nissa) and atomic write access
 
 ### Status
 
