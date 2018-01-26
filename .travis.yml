@@ -1,5 +1,6 @@
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false
+
 # Blacklist
 branches:
   except:
@@ -31,11 +32,13 @@ addons:
       - doxygen-gui
       - graphviz
       - g++-7
-
+      - libclang1-5.0
+      - libxapian30
+      
 # installing doxygen
 install:
-- wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
-- sudo dpkg -i doxygen_1.8.13-9_amd64.deb
+  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
+  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
 
 # Build your code e.g. by calling make
 script:
