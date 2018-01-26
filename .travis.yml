@@ -1,10 +1,11 @@
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false
-
 # Blacklist
 branches:
   except:
     - gh-pages
+
+compiler: clang
 
 # Environment variables
 env:
@@ -16,6 +17,8 @@ env:
 # Install dependencies
 addons:
   apt:
+    sources:
+      - ubuntu-toolchain-r-test
     packages:
       - doxygen
       - doxygen-doc
@@ -29,7 +32,7 @@ script:
   - bash config/bootstrap
   - mkdir build
   - cd build
-  - ../configure CXX=clang++
+  - ../configure
   - make
 
 # Generate and deploy documentation
