@@ -1,11 +1,11 @@
 # SUNphi: SU(N) on Phi architecture
 
-A library to simulate SU(N) (and similar) theories, with multinode,
+A library to simulate $SU(N)$ (and similar) theories, with multinode,
 multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
-[Nissa](https://github.com/sunpho84/nissa) libary.
+[Nissa](https://github.com/sunpho84/nissa) library.
 
-The key idea is to have a numerical library able to operate on tensor
+**The key idea** is to have a numerical library able to operate on tensor
 expressions of arbitrary components, in such a way to be completely
 neutral with respect to the internal layout of the object (order of
 the components, kind of the expression, underlying data type), and to
@@ -13,9 +13,9 @@ enable automatic optimization/parallelization/vectorization of the
 expression execution, via an efficient (?) army of metaprogramming
 techniques.
 
-Features:
+### Features
 
-- header-only
+- header-only (so far)
 
 - crazy metaprogramming at work, inspired by
   [Eigen](http://eigen.tuxfamily.org/) and
@@ -44,10 +44,23 @@ Features:
   [Doxygen](www.doxygen.org), otherwise I would forget immediately the
   meaning of what I write.
 
-At the core, the library is an engine to build [Smart Expression
-Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
-carrying an arbitrary number of indices (called "tensor components" in
-the following).
+### Goals
+
+- At the core, the library is an engine to build [Smart Expression
+ Templates](https://arxiv.org/pdf/1104.1729.pdf), applied to vector
+ carrying an arbitrary number of indices (called "tensor components"
+ in the following).
+
+- Automatic (or better, *guided*) decomposition of a lattice in sublattice
+
+- Serialization of classes with support for initialization and
+ automatic skipping with default values; creation of standard bison
+ parser via meta-parsing the sources
+
+- Automatic creation of read or write cache area in tensors, on the
+  basis of the operation acting on the tensor itself and atomic write access
+
+### Status
 
 Implemented so far: tensor components fusion, reorganization of unary
 expressions such as "conj" and "transpose".
@@ -56,6 +69,7 @@ Missing: ...a lot of things, almost everything actually! Most
 relevantly, MPI, threads, vectors and all useful expressions... But
 all of that is sketched and ready to be forgotten.
 
+### Examples
 
 A simple example of what can be be done so far:
 
