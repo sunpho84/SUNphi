@@ -35,7 +35,11 @@ execution, via an efficient (?) army of metaprogramming techniques.
 
 - Automatic creation of read or write cache area in tensors, on the
   basis of the operation acting on the tensor itself (as it was done
-  with the all-to-all remapper in Nissa) and atomic write access.
+  with the all-to-all remapper in Nissa) and atomic write access to
+  ensure cache coherece across nodes.
+
+- Automatic creation of compound non-local operations, combining
+  simple ones (e.g. covariant shift).
 
 ### Features
 
