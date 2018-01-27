@@ -74,6 +74,10 @@ mv $TRAVIS_BUILD_DIR/build/docs/* .
 # Only upload if Doxygen successfully created the documentation.
 # Check this by verifying that the html directory and the file html/index.html
 # both exist. This is a good indication that Doxygen did it's work.
+
+echo "List of files present:"
+ls
+
 if [ -d "html" ] && [ -f "html/index.html" ]; then
 
     echo 'Uploading documentation to the gh-pages branch...'

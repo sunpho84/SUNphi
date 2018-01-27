@@ -8,9 +8,7 @@
 /// This is the documentation for SUNphi library.
 ///
 /// Front-page is still a canvas, but internally everything is
-/// documented :)
-///
-/// Please use the left panel to navigate to the internal
+/// documented! Use the left panel to navigate to the internal
 /// documentation.
 ///
 /// A few methods are missing due to the absence of libclang-enabled
