@@ -13,11 +13,55 @@
 #include <ints/IntSeqRemove.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensClass.hpp>
+#include <tens/TensComp.hpp>
 #include <smet/Reference.hpp>
 #include <smet/UnarySmET.hpp>
 
 namespace SUNphi
 {
+  /// Defines a Binder named NAME for type TG
+#define DEFINE_NAMED_BINDER(TG,NAME)					\
+  /*! Get a reference to the \c TG component \c id of \c ref */		\
+  template <typename T>	      /* Type of the bound expression */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bind  */		\
+		const int id) /*!< Component to bind    */		\
+  {									\
+    return bind<TG>(forw<T>(ref),id);					\
+  }
+  
+  /// Defines a Binder named NAME for type RwTG or CnTG
+#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
+  /*! Returns a binder to the only Rw TG or Cn TG type available */	\
+  template <typename T>       /* Type of the bound expression */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound       */	\
+		const int id) /*!< Component to bind          */	\
+  {									\
+    /* TensKind of binding expression */				\
+    using Tk=typename RemoveReference<T>::Tk;				\
+    									\
+    /* Tuple containing all Tk types */					\
+    using Tp=typename Tk::types;					\
+    									\
+    /* Check if row type is available */				\
+    constexpr bool hasRw=tupleHasType<Rw ## TG,Tp>;			\
+    									\
+    /* Check if column type is available */				\
+    constexpr bool hasCn=tupleHasType<Cn ## TG,Tp>;			\
+    									\
+    /* Check that not more than one type is available */		\
+    constexpr bool hasOnlyOneType=(hasRw+hasCn<2);			\
+    static_assert(hasOnlyOneType,"Both types Rw and Cn identfied!");	\
+    									\
+    /* Check that at least one type is available */			\
+    constexpr bool hasAtLeastOneType=(hasRw+hasCn>0);			\
+    static_assert(hasAtLeastOneType,"No types Rw and Cn identfied!");	\
+    									\
+    /* Identifies the type to return, on the basis of the check above */ \
+    using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
+    									\
+    return bind<Ret>(forw<T>(ref),id);					\
+  }
+  
   // Base type to qualify as Binder
   DEFINE_BASE_TYPE(Binder);
   
@@ -30,7 +74,7 @@ namespace SUNphi
     public BaseBinder,                             // Inherit from BaseBinderer to detect in expression
     public UnarySmET<Binder<TG,_Ref>>,              // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                   // Constrain _Ref to be a SmET
-    public ConstrainTupleHasType<TG,NestedTypes>   // Constrain TG to be in the Types of the TensKind
+    public ConstrainTupleHasType<TG,NestedTypes>    // Constrain TG to be in the Types of the TensKind
   {
     /// Position inside the reference of the type got by the bounder
     static constexpr int pos=posOfType<TG,typename NestedTk::types>;
@@ -163,10 +207,6 @@ namespace SUNphi
     
   };
   
-  // Check that a test Binder is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(Binder<TensComp<double,1>,
-				    Tens<TensKind<TensComp<double,1>>,double>>);
-  
   /// Bind the \c id component of type \c Tg from expression \c ref
   ///
   /// Returns a plain binder getting from an unbind expression. Checks
@@ -260,48 +300,12 @@ namespace SUNphi
   //   return evalIfFullyBound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
   // }
   
-  /// Defines a Binder named NAME for type TG
-#define DEFINE_NAMED_BINDER(TG,NAME)					\
-  /*! Get a reference to the \c TG component \c id of \c ref */		\
-  template <typename T>	      /* Type of the bound expression */	\
-  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bind  */		\
-		const int id) /*!< Component to bind    */		\
-  {									\
-    return bind<TG>(forw<T>(ref),id);					\
-  }
+  DEFINE_TENS_COMP(testBind, TestComp, NTestType, 1);
+  using TestKind=TensKind<TestComp>;
+  using TestTens=Tens<TestKind,double>;
   
-  /// Defines a Binder named NAME for type RwTG or CnTG
-#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
-  /*! Returns a binder to the only Rw TG or Cn TG type available */	\
-  template <typename T>       /* Type of the bound expression */	\
-  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound       */	\
-		const int id) /*!< Component to bind          */	\
-  {									\
-    /* TensKind of binding expression */				\
-    using Tk=typename RemoveReference<T>::Tk;				\
-    									\
-    /* Tuple containing all Tk types */					\
-    using Tp=typename Tk::types;					\
-    									\
-    /* Check if row type is available */				\
-    constexpr bool hasRw=tupleHasType<Rw ## TG,Tp>;			\
-    									\
-    /* Check if column type is available */				\
-    constexpr bool hasCn=tupleHasType<Cn ## TG,Tp>;			\
-    									\
-    /* Check that not more than one type is available */		\
-    constexpr bool hasOnlyOneType=(hasRw+hasCn<2);			\
-    static_assert(hasOnlyOneType,"Both types Rw and Cn identfied!");	\
-    									\
-    /* Check that at least one type is available */			\
-    constexpr bool hasAtLeastOneType=(hasRw+hasCn>0);			\
-    static_assert(hasAtLeastOneType,"No types Rw and Cn identfied!");	\
-    									\
-    /* Identifies the type to return, on the basis of the check above */ \
-    using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
-    									\
-    return bind<Ret>(forw<T>(ref),id);					\
-  }
+  // Check that a test Binder is a UnarySmET
+  STATIC_ASSERT_IS_UNARY_SMET(Binder<TestComp,TestTens>);
 }
 
 #endif

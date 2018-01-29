@@ -140,7 +140,7 @@ namespace SUNphi
     // using AllBeforeType=TensKindFromTuple<decltype(getHead<Tab>(Types{}))>;
     
     /// Get all types but one
-    template <class Tab>
+    template <typename Tab>
     using AllButType=
       TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
     
