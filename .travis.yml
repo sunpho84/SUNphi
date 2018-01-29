@@ -43,7 +43,7 @@ install:
    - cd build
    - cmake ..
    - make
-   - make install
+   - sudo make install
 #  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
 #  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
 
