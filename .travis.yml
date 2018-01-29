@@ -63,6 +63,9 @@ after_success:
   - cd $TRAVIS_BUILD_DIR/build
   - rm -fr docs
   - ls /usr/lib/llvm-5.0/lib/
+  - cd /usr/lib/llvm-5.0/lib/
+  - ln -sf libclang-5.0.so.1 libclang.so.5
+  - cd -
   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/llvm-5.0/lib/
   - which clang
   - clang --version
