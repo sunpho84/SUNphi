@@ -41,11 +41,12 @@ install:
    - cd doxygen-1.8.14
    - mkdir build
    - cd build
-   - cmake ..
+   - cmake .. -Duse_libclang=ON
    - make
    - sudo make install
    - cd ../..
    - rm -fr doxygen-1.8.14
+   - doxygen -v
 
 # Build your code e.g. by calling make
 script:
