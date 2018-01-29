@@ -44,8 +44,8 @@ install:
    - cmake ..
    - make
    - sudo make install
-#  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
-#  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
+   - cd ../..
+   - rm -fr doxygen-1.8.14
 
 # Build your code e.g. by calling make
 script:
