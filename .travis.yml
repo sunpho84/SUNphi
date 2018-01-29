@@ -64,6 +64,8 @@ after_success:
   - rm -fr docs
   - ls /usr/lib/llvm-5.0/lib/
   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/llvm-5.0/lib/
+  - which clang
+  - clang --version
   - doxygen -v
   - make doxygen-run
   - cd $TRAVIS_BUILD_DIR
