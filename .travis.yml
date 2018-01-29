@@ -62,6 +62,8 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR/build
   - rm -fr docs
+  - ls /usr/lib/llvm-5.0/lib/
+  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/llvm-5.0/lib/
   - doxygen -v
   - make doxygen-run
   - cd $TRAVIS_BUILD_DIR
