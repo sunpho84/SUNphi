@@ -6,6 +6,7 @@
 /// \brief Access elements of a tuple
 
 #include <ints/Ranges.hpp>
+#include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 #include <tuple/TupleClass.hpp>
 #include <tuple/TupleOrder.hpp>
@@ -68,34 +69,37 @@ namespace SUNphi
   /// Return a tuple containg the elements of a tuple according to a
   /// list of indices
   template <int...Ints,
-	    class...Tp>
-  auto getIndexed(const IntSeq<Ints...>&,
-		  const Tuple<Tp...>& tp)
+	    typename Tp,
+	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  DECLAUTO getIndexed(const IntSeq<Ints...>&,
+		      Tp&& tp)
   {
-    return std::make_tuple(std::get<Ints>(tp)...);
+    return std::make_tuple(std::get<Ints>(forw<Tp>(tp))...);
   }
   
   /// Gets the head of a \c Tuple
   ///
   /// Return a tuple containg the first N elements of a tuple
   template <int N,
-	    class...Tp>
-  auto getHead(const Tuple<Tp...>& tp)     ///< Tuple from which to extract
+	    typename Tp,
+	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  DECLAUTO getHead(Tp&& tp)     ///< Tuple from which to extract
   {
-    return getIndexed(IntsUpTo<N>{},tp);
+    return getIndexed(IntsUpTo<N>{},forw<Tp>(tp));
   }
   
   /// Gets the tail of a \c Tuple
   ///
   /// Return a \c Tuple containg the last N elements of a tuple
   template <int N,
-	    class...Tp>
-  auto getTail(const Tuple<Tp...>& tp)     ///< Tuple from which to extract
+	    typename Tp,
+	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  DECLAUTO getTail(const Tp&& tp)     ///< Tuple from which to extract
   {
-    constexpr int tupleSize=sizeof...(Tp); /// Number of elements in the tuple
-    constexpr int offset=tupleSize-N;      /// Beginning of returned part
+    constexpr int size=tupleSize<Tp>;  // Number of elements in the tuple
+    constexpr int offset=size-N;  // Beginning of returned part
     
-    return getIndexed(RangeSeq<offset,1,tupleSize>{},tp);
+    return getIndexed(RangeSeq<offset,1,size>{},forw<Tp>(tp));
   }
   
   /// Returns all elements of a \c Tuple but the N-th one
@@ -108,13 +112,15 @@ namespace SUNphi
   /// Tuple<int,double,char> e;
   /// auto GetAllBut<1>(e); // Tuple<int,char>
   /// \endcode
-  template <int N,class...Tp>
-  auto getAllBut(const Tuple<Tp...>& tp)
+  template <int N,
+	    typename Tp,
+	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  DECLAUTO getAllBut(Tp&& tp)
   {
     /// Number of elements in the tuple
-    constexpr int tupleSize=sizeof...(Tp);
+    constexpr int size=tupleSize<Tp>;
     
-    return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize>>{},tp);
+    return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,size>>{},forw<Tp>(tp));
   }
   
   /// Returns all elements of a \c Tuple but the type T
@@ -127,11 +133,12 @@ namespace SUNphi
   /// Tuple<int,double,char> e;
   /// auto GetAllBut<double>(e); // Tuple<int,char>
   /// \endcode
-  template <class T,
-	    class...Tp>
-  auto getAllBut(const Tuple<Tp...>& tp)
+  template <typename Tg,
+	    typename Tp,
+	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  DECLAUTO getAllBut(Tp&& tp)
   {
-    return getAllBut<posOfType<T,Tuple<Tp...>>>(tp);
+    return getAllBut<posOfType<Tg,Tp>>(forw<Tp>(tp));
   };
 }
 
