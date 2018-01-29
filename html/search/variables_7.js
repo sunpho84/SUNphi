@@ -18,7 +18,7 @@ var searchData=
   ['hastwin_3c_20cnspin_20_3e',['hasTwin&lt; CnSpin &gt;',['../d3/dd7/namespaceSUNphi.html#a5490d64035bd442c8d8b04af140e0d4a',1,'SUNphi']]],
   ['hastwin_3c_20rwcol_20_3e',['hasTwin&lt; RwCol &gt;',['../d3/dd7/namespaceSUNphi.html#a4160a64e967f7451a34355645037cb8f',1,'SUNphi']]],
   ['hastwin_3c_20rwspin_20_3e',['hasTwin&lt; RwSpin &gt;',['../d3/dd7/namespaceSUNphi.html#a3397dbe45999d9e526fb6b11a1f7378d',1,'SUNphi']]],
-  ['headsize',['headSize',['../d9/d40/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_4_01_4.html#a8561f946dbb5223be213c378be172286',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth...&gt; &gt;']]],
+  ['headsize',['headSize',['../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#ab6471214fbc2a7d1d04adc63418351cb',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;']]],
   ['hmul',['hMul',['../da/def/structSUNphi_1_1IntSeq.html#a9437d6230b77132e7010156c283a3396',1,'SUNphi::IntSeq::hMul()'],['../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438',1,'SUNphi::hMul()']]],
   ['hsum',['hSum',['../da/def/structSUNphi_1_1IntSeq.html#a5e538a17a22dd04dd593b3713b5aeba1',1,'SUNphi::IntSeq::hSum()'],['../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d',1,'SUNphi::hSum()']]],
   ['hsumfirst',['hSumFirst',['../da/def/structSUNphi_1_1IntSeq.html#ac727ce7a3262f130f96762e0502ee11b',1,'SUNphi::IntSeq::hSumFirst()'],['../d3/dd7/namespaceSUNphi.html#ad3de581d6d86339683d44a88c0ddeba9',1,'SUNphi::hSumFirst()']]],
