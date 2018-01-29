@@ -26,10 +26,10 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
+#      - doxygen
+#      - doxygen-doc
+#      - doxygen-latex
+#      - doxygen-gui
       - graphviz
       - g++-7
 #      - libclang1-5.0
@@ -37,6 +37,13 @@ addons:
       
 # installing doxygen
 #install:
+   - wget ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.14.src.tar.gz -O -|tar xzvf -
+   - cd doxygen-1.8.14
+   - mkdir build
+   - cd build
+   - cmake ..
+   - make
+   - make install
 #  - wget http://mirror.optus.net/ubuntu/pool/main/d/doxygen/doxygen_1.8.13-9_amd64.deb
 #  - sudo dpkg -i doxygen_1.8.13-9_amd64.deb
 
