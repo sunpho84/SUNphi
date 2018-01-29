@@ -25,6 +25,8 @@ addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
+      - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-5.0 main'
+        key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
     packages:
 #      - doxygen
 #      - doxygen-doc
@@ -32,7 +34,8 @@ addons:
 #      - doxygen-gui
       - graphviz
       - g++-7
-#      - libclang1-5.0
+      - clang-5.0
+      - libclang1-5.0
 #      - libxapian30
       
 # installing doxygen
