@@ -46,7 +46,6 @@ install:
    - sudo make install
    - cd ../..
    - rm -fr doxygen-1.8.14
-   - doxygen -v
 
 # Build your code e.g. by calling make
 script:
@@ -60,6 +59,7 @@ script:
 after_success:
   - cd $TRAVIS_BUILD_DIR/build
   - rm -fr docs
+  - doxygen -v
   - make doxygen-run
   - cd $TRAVIS_BUILD_DIR
   - . config/publishDocumentation.sh
