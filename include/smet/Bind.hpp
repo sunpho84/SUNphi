@@ -300,12 +300,9 @@ namespace SUNphi
   //   return evalIfFullyBound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
   // }
   
-  DEFINE_TENS_COMP(testBind, TestComp, NTestType, 1);
-  using TestKind=TensKind<TestComp>;
-  using TestTens=Tens<TestKind,double>;
-  
   // Check that a test Binder is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(Binder<TestComp,TestTens>);
+  STATIC_ASSERT_IS_UNARY_SMET(Binder<TensComp<double,1>,
+			      Tens<TensKind<TensComp<double,1>>,double>>);
 }
 
 #endif

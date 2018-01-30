@@ -142,7 +142,7 @@ namespace SUNphi
     /// Get all types but one
     template <typename Tab>
     using AllButType=
-      TensKindFromTuple<decltype(getAllBut<Tab>(types{}))>;
+      TensKindFromTuple<decltype(getAllButType<Tab>(types{}))>;
     
     /// Return the position of the first component needed to vectorize
     ///

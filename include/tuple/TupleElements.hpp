@@ -68,9 +68,8 @@ namespace SUNphi
   ///
   /// Return a tuple containg the elements of a tuple according to a
   /// list of indices
-  template <int...Ints,
-	    typename Tp,
-	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
+  template <typename Tp,
+	    int...Ints>
   DECLAUTO getIndexed(const IntSeq<Ints...>&,
 		      Tp&& tp)
   {
@@ -115,12 +114,9 @@ namespace SUNphi
   template <int N,
 	    typename Tp,
 	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
-  DECLAUTO getAllBut(Tp&& tp)
+  DECLAUTO getAllButPos(Tp&& tp)
   {
-    /// Number of elements in the tuple
-    constexpr int size=tupleSize<Tp>;
-    
-    return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,size>>{},forw<Tp>(tp));
+    return getIndexed(IntSeqCat<IntsUpTo<N>,RangeSeq<N+1,1,tupleSize<Tp>>>{},forw<Tp>(tp));
   }
   
   /// Returns all elements of a \c Tuple but the type T
@@ -136,10 +132,10 @@ namespace SUNphi
   template <typename Tg,
 	    typename Tp,
 	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
-  DECLAUTO getAllBut(Tp&& tp)
+  DECLAUTO getAllButType(Tp&& tp)
   {
-    return getAllBut<posOfType<Tg,Tp>>(forw<Tp>(tp));
-  };
+    return getAllButPos<posOfType<Tg,Tp>>(forw<Tp>(tp));
+  }
 }
 
 #endif
