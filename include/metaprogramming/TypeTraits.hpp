@@ -75,20 +75,23 @@ namespace SUNphi
   /// Gives visibility to the internal implementation
   template <bool B,            // Boolean constant deciding whether the type is enabled
 	    typename T=void>   // Type to be enabled
-  using EnableIf=typename _EnableIf<B,T>::type;
+  using EnableIf=
+    typename _EnableIf<B,T>::type;
   
   /// Defines \c void if parameter B is true
   ///
   /// Explicit specialization of \c EnableIf for \c T=void .
   template <bool B>
-  using VoidIf=EnableIf<B>;
+  using VoidIf=
+    EnableIf<B>;
   
   /// Defines type T if parameter B is true
   ///
   /// Explicit specialization of \c EnableIf forcing an explicit type.
   template <bool B,          // Boolean constant deciding whether the type is enabled
 	    typename T>      // Type to be enabled
-  using TypeIf=EnableIf<B,T>;
+  using TypeIf=
+    EnableIf<B,T>;
   
   /////////////////////////////////////////////////////////////////
   
@@ -98,14 +101,15 @@ namespace SUNphi
   template <typename T1, // First type to be checked
 	    typename T2> // Second type to be checked
   [[ maybe_unused ]]
-  static constexpr bool isSame=false;
+  static constexpr bool isSame=
+    false;
   
   /// Checks if two types are the same
   ///
   /// True case
   template <typename T> // Specialize with a unique type
-  static constexpr bool isSame<T,T>
-  =true;
+  static constexpr bool isSame<T,T> =
+    true;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -145,50 +149,59 @@ namespace SUNphi
   template <bool B,      // Condition enabling one or the other type
 	    typename T,  // T Type enabled if true
 	    typename F>  // F Type enabled if false
-  using Conditional=typename _Conditional<B,T,F>::type;
+  using Conditional=
+    typename _Conditional<B,T,F>::type;
   
   /////////////////////////////////////////////////////////////////
   
   /// Returns the type T without any reference
   template <typename T>
-  using RemoveReference=typename std::remove_reference<T>::type;
+  using RemoveReference=
+    typename std::remove_reference<T>::type;
   
   /// Check if the type is lvalue reference
   template <typename T>
   [[ maybe_unused ]]
-  constexpr bool isLvalue=std::is_lvalue_reference<T>::value;
+  constexpr bool isLvalue=
+    std::is_lvalue_reference<T>::value;
   
   /// Check if the type is rvalue reference
   template <typename T>
   [[ maybe_unused ]]
-  constexpr bool isRvalue=std::is_rvalue_reference<T>::value;
+  constexpr bool isRvalue=
+    std::is_rvalue_reference<T>::value;
   
   /// Returns reference of plain type depending on condition
   template <bool B,                          // Condition
 	    typename _T,                     // Type
 	    typename T=RemoveReference<_T>>  // Remove reference from type
-  using RefIf=Conditional<B,T&,T>;
+  using RefIf=
+    Conditional<B,T&,T>;
   
   /////////////////////////////////////////////////////////////////
   
   /// Returns the type T without any constant volatile qualification
   template <typename T>
-  using RemoveCV=typename std::remove_cv<T>::type;
+  using RemoveCV=
+    typename std::remove_cv<T>::type;
   
   /// Returns whether T is const or not
   template <typename T>  // Type
   [[ maybe_unused ]]
-  constexpr bool isConst=std::is_const<T>::value;
+  constexpr bool isConst=
+    std::is_const<T>::value;
   
   /// Returns const or non const T depending on condition
   template <bool B,       // Condition
 	    typename _T,  // Type
 	    typename T=RemoveCV<_T>>  // Remove const from type
-  using ConstIf=Conditional<B,const T,T>;
+  using ConstIf=
+    Conditional<B,const T,T>;
   
   /// Returns the type T without any reference or qualifier
   template <typename T>
-  using Unqualified=RemoveCV<RemoveReference<T>>;
+  using Unqualified=
+    RemoveCV<RemoveReference<T>>;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -196,7 +209,8 @@ namespace SUNphi
   template <typename Base,     // The type that can be base
 	    typename Derived>  // The type where Base is searched
   [[ maybe_unused]]
-  constexpr bool isBaseOf=std::is_base_of<Base,RemoveReference<Derived>>::value;
+  constexpr bool isBaseOf=
+    std::is_base_of<Base,RemoveReference<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////
   

@@ -30,6 +30,5 @@ namespace SUNphi
   [[ maybe_unused ]]
   constexpr int getIntOfList=
     _getIntOfList<I,Ints...>();
-  
 }
 #endif
