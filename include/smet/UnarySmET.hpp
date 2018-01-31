@@ -84,7 +84,7 @@ namespace SUNphi
   /*! Constructor taking universal reference */				\
   template <typename SMET,						\
 	    typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref>>>> \
-  explicit UNARY_SMET(SMET&& smet) : ref(forw<SMET>(smet))			\
+  explicit UNARY_SMET(SMET&& smet) : ref(forw<SMET>(smet))		\
   {									\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
@@ -104,7 +104,6 @@ namespace SUNphi
 									\
     return *this;							\
   }									\
-  /*il binder sta venendo distrutto anzitempo*/	\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /////////////////////////////////////////////////////////////////
