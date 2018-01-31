@@ -98,7 +98,7 @@ namespace SUNphi
 	// Returns
 	return intSeq<CompsPos...>;
       else
-	if constexpr(AreDynamic::template element<NScanned>)
+	if constexpr(AreDynamic::template element<NScanned>())
 	  // Nest appending
 	  return _DynCompsPos<NScanned+1>(intSeq<CompsPos...,NScanned>);
 	else

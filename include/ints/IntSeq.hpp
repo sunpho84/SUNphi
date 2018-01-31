@@ -84,8 +84,10 @@ namespace SUNphi
     
     /// Get the I element of the sequence
     template <int I>
-    static constexpr int element=
-      getIntOfList<I,Ints...>;
+    static constexpr int element()
+    {
+      return getIntOfList<I,Ints...>;
+    }
     
     /// Get the first element of the sequence
     static constexpr int first=element<0>;
