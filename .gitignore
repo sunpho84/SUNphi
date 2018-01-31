@@ -43,3 +43,4 @@ build*
 /GPATH
 /GRTAGS
 /GTAGS
+/check.sh

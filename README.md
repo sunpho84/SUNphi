@@ -8,6 +8,33 @@ multicore, supervectorized architectures in mind, and a narcissistic
 name. Hopefully, a modernistic replacement for
 [Nissa](https://github.com/sunpho84/nissa) library.
 
+### Why a new independent library for Lattice QCD (and beyond)
+
+- We can shape it for other precise needs
+
+- We know what we implement (and we can trust it... maybe)
+
+- Consolidate experience with other past libraries, avoiding some
+  pitfalls
+
+- Use a modern programming language allows for further future
+  developments, and simplify mainteinment (provided that good practice
+  is adopted while developing it, and a lot of effort is dedicated in
+  documenting)
+
+- Considerable workforce amount availbale if we gather the force
+  currently involved in Nissa, tmLQCD, DDalphaAMG, CVC, and a few
+  other friend-developers
+
+- Glory, fame, success! More probably, blood, chains and dust
+
+### Main strategy line
+
+- Be modern
+
+- If in doubt, take as a reference Grid, and do differently, even
+  better do the opposite
+
 ### Goals
 
 **The key idea** is to have a numerical library able to operate on
@@ -71,6 +98,9 @@ execution, via an efficient (?) army of metaprogramming techniques.
   documented](https://sunpho84.github.io/SUNphi/html/index.html) with
   [Doxygen](www.doxygen.org), otherwise I would forget immediately the
   meaning of what I write.
+
+- Continuous Integration with
+  [Travis](https://travis-ci.org/sunpho84/SUNphi).
 
 ### Status
 
