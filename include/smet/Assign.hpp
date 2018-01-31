@@ -15,7 +15,9 @@ namespace SUNphi
   /// Default assigner
   template <typename T1, 	    // Type of the first SmET to get
 	    typename T2, 	    // Type of the second SmET to get
-	    typename=EnableIf<isSmET<T1> and isSmET<T2> and Unqualified<T1>::isAssignable>,
+	    typename=EnableIf<isSmET<T1> and
+			      isSmET<T2> and
+			      Unqualified<T1>::isAssignable>,
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   void assign(T1&& smet1,        ///< First SmET to act upon
 	      T2&& smet2,        ///< Second SmET to act upon
