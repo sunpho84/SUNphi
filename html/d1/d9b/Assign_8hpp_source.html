@@ -120,50 +120,52 @@ $(document).ready(function(){initNavTree('d1/d9b/Assign_8hpp_source.html','../..
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1,        <span class="comment">// Type of the first SmET to get</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">typename</span> T2,        <span class="comment">// Type of the second SmET to get</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">typename</span>=EnableIf&lt;isSmET&lt;T1&gt; and isSmET&lt;T2&gt; and Unqualified&lt;T1&gt;::isAssignable&gt;,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a>&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">   20</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">assign</a>(T1&amp;&amp; smet1,        </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          T2&amp;&amp; smet2,        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a>)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc">SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Tens Kind of the rhs expression</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">using</span> TKR=<span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#acdfe0d736c1099606a47e63c72238b32">RemoveReference&lt;T2&gt;::Tk</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Outermost TensComp of rhs</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">using</span> RhsFirstComp=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;TupleElementType&lt;0,typename TKR::types&gt;</a>&gt;;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Maximal value reachable from the component</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> maxEntry=smet2.template compSize&lt;RhsFirstComp&gt;();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef DEBUG_ASSIGN</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span>    <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; Assign: &quot;</span>&lt;&lt;RhsFirstComp::name()&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;maxEntry;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    cout.flush();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, smet1: &quot;</span>&lt;&lt;&amp;smet1;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">typename</span>=EnableIf&lt;isSmET&lt;T1&gt; and</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                  isSmET&lt;T2&gt; and</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                  Unqualified&lt;T1&gt;::isAssignable&gt;,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a>&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">   22</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">assign</a>(T1&amp;&amp; smet1,        </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;          T2&amp;&amp; smet2,        </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc">SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Tens Kind of the rhs expression</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">using</span> TKR=<span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#acdfe0d736c1099606a47e63c72238b32">RemoveReference&lt;T2&gt;::Tk</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Outermost TensComp of rhs</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">using</span> RhsFirstComp=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;TupleElementType&lt;0,typename TKR::types&gt;</a>&gt;;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Maximal value reachable from the component</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> maxEntry=smet2.template compSize&lt;RhsFirstComp&gt;();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#ifdef DEBUG_ASSIGN</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span>    <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; Assign: &quot;</span>&lt;&lt;RhsFirstComp::name()&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;maxEntry;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    cout.flush();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, smet2: &quot;</span>&lt;&lt;&amp;smet2;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, smet1: &quot;</span>&lt;&lt;&amp;smet1;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    cout.flush();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, storage1: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(smet1)._v;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, smet2: &quot;</span>&lt;&lt;&amp;smet2;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    cout.flush();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, storage2: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(smet2)._v;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, storage1: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(smet1)._v;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cout.flush();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    cout&lt;&lt;endl;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span>    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Assigns all entries</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;maxEntry;i++)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      bind&lt;RhsFirstComp&gt;(forw&lt;T1&gt;(smet1),i)=</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    bind&lt;RhsFirstComp&gt;(forw&lt;T2&gt;(smet2),i);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;, storage2: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(smet2)._v;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    cout.flush();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    cout&lt;&lt;endl;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Assigns all entries</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;maxEntry;i++)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      bind&lt;RhsFirstComp&gt;(forw&lt;T1&gt;(smet1),i)=</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    bind&lt;RhsFirstComp&gt;(forw&lt;T2&gt;(smet2),i);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSUNphi_html_acdfe0d736c1099606a47e63c72238b32"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#acdfe0d736c1099606a47e63c72238b32">SUNphi::RemoveReference</a></div><div class="ttdeci">typename std::remove_reference&lt; T &gt;::type RemoveReference</div><div class="ttdoc">Returns the type T without any reference. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00160">TypeTraits.hpp:160</a></div></div>
 <div class="ttc" id="Reference_8hpp_html"><div class="ttname"><a href="../../d3/d78/Reference_8hpp.html">Reference.hpp</a></div><div class="ttdoc">Defines a class which defines a reference to another SmET. </div></div>
 <div class="ttc" id="TensKind_8hpp_html"><div class="ttname"><a href="../../d6/d3f/TensKind_8hpp.html">TensKind.hpp</a></div><div class="ttdoc">Defines the Tensor Kind. </div></div>
-<div class="ttc" id="namespaceSUNphi_html_a6af7ce1951586e2afdaf5d6b3decba20"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">SUNphi::assign</a></div><div class="ttdeci">void assign(T1 &amp;&amp;smet1, T2 &amp;&amp;smet2, DummyTypes...)</div><div class="ttdoc">Default assigner. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d9b/Assign_8hpp_source.html#l00020">Assign.hpp:20</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a6af7ce1951586e2afdaf5d6b3decba20"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">SUNphi::assign</a></div><div class="ttdeci">void assign(T1 &amp;&amp;smet1, T2 &amp;&amp;smet2, DummyTypes...)</div><div class="ttdoc">Default assigner. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d9b/Assign_8hpp_source.html#l00022">Assign.hpp:22</a></div></div>
 <div class="ttc" id="TensClass_8hpp_html"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html">TensClass.hpp</a></div><div class="ttdoc">Header file for the Tens class. </div></div>
 <div class="ttc" id="SFINAE_8hpp_html_a42eb945edda2b3040077165cb738a391"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00056">SFINAE.hpp:56</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a2cc8a85a94d4b30bda1982ddf49b7913"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">SUNphi::Unqualified</a></div><div class="ttdeci">RemoveCV&lt; RemoveReference&lt; T &gt;&gt; Unqualified</div><div class="ttdoc">Returns the type T without any reference or qualifier. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00204">TypeTraits.hpp:204</a></div></div>
