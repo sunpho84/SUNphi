@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -66,6 +73,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dc/de1/Bind_8hpp_source.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_bf7086a74b01aa569c5a5ea4dca574e8.html">smet</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Bind.hpp</div>  </div>
@@ -102,327 +119,333 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ints/IntSeqRemove.hpp&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d4/d77/SFINAE_8hpp.html">metaprogramming/SFINAE.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../dc/d8f/TensClass_8hpp.html">tens/TensClass.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d3/d78/Reference_8hpp.html">smet/Reference.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d4/dbe/UnarySmET_8hpp.html">smet/UnarySmET.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>SUNphi</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// Base type to qualify as Binder</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a>(Binder);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TG,                                              <span class="comment">// Type to get</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">typename</span> _Ref,                                            <span class="comment">// Type to bind</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">typename</span> NestedTk=<span class="keyword">typename</span> RemoveReference&lt;_Ref&gt;::Tk,     <span class="comment">// Tens Kind of the bound type</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">typename</span> NestedTypes=<span class="keyword">typename</span> NestedTk::types&gt;            <span class="comment">// Types of the tensor kind</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html">   29</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder</a> :</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span> BaseBinder,                             <span class="comment">// Inherit from BaseBinderer to detect in expression</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">UnarySmET</a>&lt;Binder&lt;TG,_Ref&gt;&gt;,              <span class="comment">// Inherit from UnarySmET</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span> ConstrainIsSmET&lt;_Ref&gt;,                   <span class="comment">// Constrain _Ref to be a SmET</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html">ConstrainTupleHasType</a>&lt;TG,NestedTypes&gt;   <span class="comment">// Constrain TG to be in the Types of the TensKind</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">   36</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>=posOfType&lt;TG,typename NestedTk::types&gt;;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">   41</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">Tg</a>=TG;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ad1d3f8cc65a380d06eac32ec6fe5b122">   43</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a0a0751428badd51f5f8873fc1c5d05df">PROVIDE_UNARY_SMET_REF</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Attributes</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a7d38f7639bbc7b89da53337e27e4ecf5">   46</a></span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d">NOT_STORING</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a5bd336096268c55c9bb4e6ea72020e84">   47</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#acf456643d7fa52906ed6901cec0a9a39">ASSIGNABLE_ACCORDING_TO_REF</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aca3fe214b2558fc87985ae44e0edd5fb">   48</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">   51</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">id</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TC&gt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">   55</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">compSize</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      static_assert(not areSame&lt;TG,TC&gt;,<span class="stringliteral">&quot;Cannot ask for the size of the bound component&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>.template compSize&lt;TC&gt;();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">   62</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">Tk</a>=<span class="keyword">typename</span> NestedTk::template AllButType&lt;TG&gt;;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// We remove at Pos, shift and insert back</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <a class="code" href="../../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b">InsertInOrderedIntSeq</a>&lt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>      <span class="comment">// Position where to insert, same of where to remove</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                ,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#af0e3e9b7bb526323339af195b620568d">RemoveFromOrderedIntSeq</a>&lt;<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>,                                       <span class="comment">// Position where to remove</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                         <span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;Ref&gt;::MergeableComps</a>, <span class="comment">// Nested components</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                         -1&gt;                                        <span class="comment">// Shift back by 1 after removal</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                ,0       <span class="comment">// Shift 0 after insertion</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69">   72</a></span>&#160;                ,<span class="keyword">true</span>&gt;); <span class="comment">// Ignore if already present</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a>(,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                  <span class="keyword">using</span> NestedIs=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b">InsertInOrderedIntSeq</a>&lt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>,                 <span class="comment">// Position where to insert</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    Is,                  <span class="comment">// External delimiters</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    1&gt;;                  <span class="comment">// Shift 1 after insertion</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                  <span class="keyword">auto</span> refMerged=<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>.template mergedComps&lt;NestedIs&gt;();</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aaad7515b3db0fb7820fa6cb44631a75c">   80</a></span>&#160;                  <span class="keywordflow">return</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder&lt;TG,decltype(refMerged)&gt;</a>(std::move(refMerged),<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">id</a>));</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d7/d7a/TensComp_8hpp.html">tens/TensComp.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d3/d78/Reference_8hpp.html">smet/Reference.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="../../d4/dbe/UnarySmET_8hpp.html">smet/UnarySmET.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>SUNphi</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#a5c60188918795703bcda3222ddfdb332">   23</a></span>&#160;<span class="preprocessor">#define DEFINE_NAMED_BINDER(TG,NAME)                    \</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;       </span><span class="comment">/* Type of the bound expression */</span><span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">  DECLAUTO NAME(T&amp;&amp; ref,            \</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">        const int id)       \</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    return bind&lt;TG&gt;(forw&lt;T&gt;(ref),id);                   \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">  }</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#aae511eac51fb63109bb85127c6004e56">   33</a></span>&#160;<span class="preprocessor">#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)              \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;       </span><span class="comment">/* Type of the bound expression */</span><span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">  DECLAUTO NAME(T&amp;&amp; ref,        \</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">        const int id)   \</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">    </span><span class="comment">/* TensKind of binding expression */</span><span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">    using Tk=typename RemoveReference&lt;T&gt;::Tk;               \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Tuple containing all Tk types */</span><span class="preprocessor">                 \</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">    using Tp=typename Tk::types;                    \</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check if row type is available */</span><span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    constexpr bool hasRw=tupleHasType&lt;Rw ## TG,Tp&gt;;         \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check if column type is available */</span><span class="preprocessor">             \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">    constexpr bool hasCn=tupleHasType&lt;Cn ## TG,Tp&gt;;         \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that not more than one type is available */</span><span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    constexpr bool hasOnlyOneType=(hasRw+hasCn&lt;2);          \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    static_assert(hasOnlyOneType,&quot;Both types Rw and Cn identfied!&quot;);    \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that at least one type is available */</span><span class="preprocessor">         \</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    constexpr bool hasAtLeastOneType=(hasRw+hasCn&gt;0);           \</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    static_assert(hasAtLeastOneType,&quot;No types Rw and Cn identfied!&quot;);   \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Identifies the type to return, on the basis of the check above */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    using Ret=Conditional&lt;hasRw,Rw ## TG,Cn ## TG&gt;;         \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    return bind&lt;Ret&gt;(forw&lt;T&gt;(ref),id);                  \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">  }</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// Base type to qualify as Binder</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a>(Binder);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TG,                                              <span class="comment">// Type to get</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">typename</span> _Ref,                                            <span class="comment">// Type to bind</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">typename</span> NestedTk=<span class="keyword">typename</span> RemoveReference&lt;_Ref&gt;::Tk,     <span class="comment">// Tens Kind of the bound type</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">typename</span> NestedTypes=<span class="keyword">typename</span> NestedTk::types&gt;            <span class="comment">// Types of the tensor kind</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html">   73</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder</a> :</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span> BaseBinder,                             <span class="comment">// Inherit from BaseBinderer to detect in expression</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">UnarySmET</a>&lt;Binder&lt;TG,_Ref&gt;&gt;,              <span class="comment">// Inherit from UnarySmET</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span> ConstrainIsSmET&lt;_Ref&gt;,                   <span class="comment">// Constrain _Ref to be a SmET</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html">ConstrainTupleHasType</a>&lt;TG,NestedTypes&gt;    <span class="comment">// Constrain TG to be in the Types of the TensKind</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">   80</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>=posOfType&lt;TG,typename NestedTk::types&gt;;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">   83</a></span>&#160;<span class="preprocessor">#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)       \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">    template &lt;typename...Args, </span><span class="comment">/* Type of the arguments */</span><span class="preprocessor">      \</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">          int...Head,      </span><span class="comment">/* Position of the first set of args, before insertion */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">          int...Tail&gt;      </span><span class="comment">/* Position of the second set of args, after insertion */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">    DECLAUTO binder_internal_eval(IntSeq&lt;Head...&gt;,               \</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">                  IntSeq&lt;Tail...&gt;,               \</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">                  const Tuple&lt;Args...&gt;&amp; targs)   \</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">      QUALIFIER                             \</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">    {                                   \</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">      return ref.eval(get&lt;Head&gt;(targs)...,              \</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">              id,                       \</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">              get&lt;Tail&gt;(targs)...);             \</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">    }                                   \</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">                        \</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    template &lt;typename...Args&gt;           </span><span class="comment">/* Type of the arguments    */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    DECLAUTO eval(const Args&amp;...args)       \</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">      QUALIFIER                             \</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    {                                   \</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);           \</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">      using Head=IntsUpTo&lt;pos&gt;;                     \</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">      if(0)                             \</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">    {                               \</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">      using namespace std;                      \</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; evaluating binder of component &quot;&lt;&lt;Tg::name();     \</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; position in NestedTk: &quot;&lt;&lt;pos;             \</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; of &quot;&lt;&lt;NestedTk::nTypes&lt;&lt;&quot; types,&quot;;            \</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; id: &quot;&lt;&lt;id;                        \</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">      cout&lt;&lt;endl;                           \</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">    }                               \</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">      using Tail=typename IntsUpTo&lt;Tk::nTypes-pos&gt;::template Add&lt;pos&gt;; \</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">      return binder_internal_eval(Head{},               \</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">                      Tail{},               \</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">                      std::forward_as_tuple(args...));  \</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">    }                                   \</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor"></span>    </div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">  133</a></span>&#160;    <a class="code" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(<a class="code" href="../../d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971">NON_CONST_QUALIF</a>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#acc6a322fb67d20517f92c0003be1a41a">  134</a></span>&#160;    <a class="code" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(<a class="code" href="../../d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240">CONST_QUALIF</a>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor"></span>    </div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a7b88eeaf7a0d68c271620693788a5607">  138</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a5fd7a607d078d7ee1e6c1fa063686a1a">PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SMET,                        \</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          typename=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a36390d39df970fd50dd457210d0079f4">EnableIf&lt;isSame&lt;Unqualified&lt;SMET&gt;</a>,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;Ref&gt;</a>&gt;&gt;&gt; \</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">  145</a></span>&#160;    explicit <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">Binder</a>(SMET&amp;&amp; smet, </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span>)    </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      : <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c">forw</a>&lt;SMET&gt;(smet)),id(id)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor"></span>      <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Constructing binder &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;<span class="stringliteral">&quot;, type &quot;</span>&lt;&lt;TG::name()&lt;&lt;<span class="stringliteral">&quot;, component: &quot;</span>&lt;&lt;<span class="keywordtype">id</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">  156</a></span>&#160;    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">~Binder</a>()</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor"></span>      <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Destroying binder &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor"></span>    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  };</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="comment">// Check that a test Binder is a UnarySmET</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b">STATIC_ASSERT_IS_UNARY_SMET</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">Binder</a>&lt;TensComp&lt;double,1&gt;,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    Tens&lt;TensKind&lt;TensComp&lt;double,1&gt;&gt;,<span class="keywordtype">double</span>&gt;&gt;);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tg,                       <span class="comment">// Type to get</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keyword">typename</span> SMET,                       <span class="comment">// Type to bind, deduced from argument</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a>&gt;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">  177</a></span>&#160;  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">bind</a>(SMET&amp;&amp; smet,                     </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>,                  </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a>)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="../../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc">SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</a>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">Tg</a>=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb">CompOrTwinned&lt;_Tg,SMET&gt;</a>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor"></span>    <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Constructing a binder for type &quot;</span>&lt;&lt;Tg::name()&lt;&lt;<span class="stringliteral">&quot; , storage: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>)._v&lt;&lt;endl;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor"></span>    </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">// Build the binder</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder&lt;Tg,SMET&gt;</a> b(forw&lt;SMET&gt;(smet),<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">// Get the TensKind</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">Tk</a>=<span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;SMET&gt;::Tk</a>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// Count the free components of SmET</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    constexpr <span class="keywordtype">int</span> N=Tk::nTypes;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// Check if fully bound</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    constexpr <span class="keywordtype">bool</span> FullyBound=(N==1);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">// Evaluate if fully bound</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> constexpr(FullyBound)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;       <span class="keywordflow">return</span> b.<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">eval</a>();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordflow">return</span> b;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="comment">// /// Bind the \c id component of type \c Tg from expression \c ref</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="comment">// ///</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="comment">// /// Nested binder getting an already bound expression, swapping the</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="comment">// /// inner and outer types and components if needed.</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="comment">// ///</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="comment">// /// \code</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// /// Tens&lt;TensKind&lt;Compl,RwSpin&gt;,double&gt; cicc;</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="comment">// /// spin(reim(cicc,0),1);</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="comment">// /// reim(spin(cicc,1),0);</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="comment">// /// \endcode</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="comment">// ///</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="comment">// /// This might be not enough to ensure proper evaluation if the</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// /// nesting occurs through a wrapper, as in the following example</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="comment">// ///</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="comment">// /// \code</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="comment">// /// spin(wrap(reim(cicc,0)),1);</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="comment">// /// reim(wrap(spin(cicc,1)),0);</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// /// \endcode</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="comment">// template &lt;typename _Tg,                        // Type to get</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="comment">//        typename InNestedTg,                 //Type got by the nested bounder</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="comment">//        typename InNestedRef&gt;                // Type of the nested binder</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="comment">// DECLAUTO bind(const Binder&lt;InNestedTg,InNestedRef&gt;&amp; nb,                          ///&lt; Binder to rebind</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="comment">//        const int id)                    ///&lt; Component to get</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="comment">// {</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="comment">//   // True component searched</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">//   using Tg=CompOrTwinned&lt;_Tg,Binder&lt;InNestedTg,InNestedRef&gt;&gt;;</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="comment">//   // Tensor Kind of input nested binder</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">//   using InNestedRefTk=typename RemoveReference&lt;InNestedRef&gt;::Tk;</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">//   // Types of the Tensor Kind of nested bounder</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">//   using NestedTypes=typename InNestedRefTk::types;</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">//   // Position inside the nested reference of the type got by the nested bounder</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">//   constexpr int InNestedNestedTgPos=posOfType&lt;InNestedTg,NestedTypes&gt;;</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">//   // Position inside the nested reference of the type to get</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">//   static constexpr int NestedTgPos=posOfType&lt;Tg,NestedTypes&gt;;</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">//   // Keep note of whether we need to swap</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">//   constexpr bool swap=(NestedTgPos&gt;InNestedNestedTgPos);</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="comment">//   // Type got by the output nested binder</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">//   using OutNestedTg=Conditional&lt;swap,Tg,InNestedTg&gt;;</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="comment">//   // Type got by the output binder</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="comment">//   using OutTg=Conditional&lt;swap,InNestedTg,Tg&gt;;</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="comment">//   // Nested component</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="comment">//   const int nestedId=nb.id;</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">//   // Out external component</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">//   const int outNestedId=(swap?id:nestedId);</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="comment">//   // Out component</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">//   const int outId=(swap?nestedId:id);</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">//   // Output Nested binder</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="comment">//   auto outNestedBinder=bind&lt;OutNestedTg&gt;(nb.ref,outNestedId);</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">//   // Type of the output nested binder</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">//   using OutNestedBinder=decltype(outNestedBinder);</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">//   //cout&lt;&lt;&quot;Constructing a nested binder for type &quot;&lt;&lt;Tg::name()&lt;&lt;&quot;, internal binder gets: &quot;&lt;&lt;InNestedTg::name()&lt;&lt;&quot;, swap: &quot;&lt;&lt;swap&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="comment">//   // cout&lt;&lt;&quot;OutTg: &quot;&lt;&lt;OutTg::name()&lt;&lt;&quot; &quot;&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">//   return evalIfFullyBound(Binder&lt;OutTg,OutNestedBinder&gt;(outNestedBinder,outId));</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// }</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  </div>
-<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#a5c60188918795703bcda3222ddfdb332">  264</a></span>&#160;<span class="preprocessor">#define DEFINE_NAMED_BINDER(TG,NAME)                    \</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">        \</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;       </span><span class="comment">/* Type of the bound expression */</span><span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">  DECLAUTO NAME(T&amp;&amp; ref,            \</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">        const int id)       \</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">    return bind&lt;TG&gt;(forw&lt;T&gt;(ref),id);                   \</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">  }</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#aae511eac51fb63109bb85127c6004e56">  274</a></span>&#160;<span class="preprocessor">#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)              \</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;       </span><span class="comment">/* Type of the bound expression */</span><span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">  DECLAUTO NAME(T&amp;&amp; ref,        \</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">        const int id)   \</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">    </span><span class="comment">/* TensKind of binding expression */</span><span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">    using Tk=typename RemoveReference&lt;T&gt;::Tk;               \</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Tuple containing all Tk types */</span><span class="preprocessor">                 \</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">    using Tp=typename Tk::types;                    \</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check if row type is available */</span><span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">    constexpr bool hasRw=tupleHasType&lt;Rw ## TG,Tp&gt;;         \</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check if column type is available */</span><span class="preprocessor">             \</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">    constexpr bool hasCn=tupleHasType&lt;Cn ## TG,Tp&gt;;         \</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that not more than one type is available */</span><span class="preprocessor">        \</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">    constexpr bool hasOnlyOneType=(hasRw+hasCn&lt;2);          \</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">    static_assert(hasOnlyOneType,&quot;Both types Rw and Cn identfied!&quot;);    \</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that at least one type is available */</span><span class="preprocessor">         \</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">    constexpr bool hasAtLeastOneType=(hasRw+hasCn&gt;0);           \</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">    static_assert(hasAtLeastOneType,&quot;No types Rw and Cn identfied!&quot;);   \</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Identifies the type to return, on the basis of the check above */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">    using Ret=Conditional&lt;hasRw,Rw ## TG,Cn ## TG&gt;;         \</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">    return bind&lt;Ret&gt;(forw&lt;T&gt;(ref),id);                  \</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">  }</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespaceSUNphi_html_af0e3e9b7bb526323339af195b620568d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af0e3e9b7bb526323339af195b620568d">SUNphi::RemoveFromOrderedIntSeq</a></div><div class="ttdeci">decltype(_removeFromOrderedIntSeq&lt; Ins, IncrAft, IgnoreIfNotPresent &gt;(IntSeq&lt;&gt;{}, typename ConstrainIsOrderedIntSeq&lt; Unqualified&lt; IS &gt;&gt;::type{})) RemoveFromOrderedIntSeq</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00066">IntSeqRemove.hpp:66</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_ac9a2c46dd9e632f609156f396bc02194"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">SUNphi::Binder::Binder</a></div><div class="ttdeci">Binder(SMET &amp;&amp;smet, int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00145">Bind.hpp:145</a></div></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">   85</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">Tg</a>=TG;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ad1d3f8cc65a380d06eac32ec6fe5b122">   87</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a0a0751428badd51f5f8873fc1c5d05df">PROVIDE_UNARY_SMET_REF</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Attributes</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a7d38f7639bbc7b89da53337e27e4ecf5">   90</a></span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d">NOT_STORING</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a5bd336096268c55c9bb4e6ea72020e84">   91</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#acf456643d7fa52906ed6901cec0a9a39">ASSIGNABLE_ACCORDING_TO_REF</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aca3fe214b2558fc87985ae44e0edd5fb">   92</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">   95</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">id</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TC&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">   99</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">compSize</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      static_assert(not areSame&lt;TG,TC&gt;,<span class="stringliteral">&quot;Cannot ask for the size of the bound component&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>.template compSize&lt;TC&gt;();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">  106</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">Tk</a>=<span class="keyword">typename</span> NestedTk::template AllButType&lt;TG&gt;;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// We remove at Pos, shift and insert back</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <a class="code" href="../../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b">InsertInOrderedIntSeq</a>&lt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>      <span class="comment">// Position where to insert, same of where to remove</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                ,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#af0e3e9b7bb526323339af195b620568d">RemoveFromOrderedIntSeq</a>&lt;<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>,                                       <span class="comment">// Position where to remove</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                         <span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;Ref&gt;::MergeableComps</a>, <span class="comment">// Nested components</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                         -1&gt;                                        <span class="comment">// Shift back by 1 after removal</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                ,0       <span class="comment">// Shift 0 after insertion</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69">  116</a></span>&#160;                ,<span class="keyword">true</span>&gt;); <span class="comment">// Ignore if already present</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a>(,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                  <span class="keyword">using</span> NestedIs=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b">InsertInOrderedIntSeq</a>&lt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">pos</a>,                 <span class="comment">// Position where to insert</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    Is,                  <span class="comment">// External delimiters</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    1&gt;;                  <span class="comment">// Shift 1 after insertion</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                  <span class="keyword">auto</span> refMerged=<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>.template mergedComps&lt;NestedIs&gt;();</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#aaad7515b3db0fb7820fa6cb44631a75c">  124</a></span>&#160;                  <span class="keywordflow">return</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder&lt;TG,decltype(refMerged)&gt;</a>(std::move(refMerged),<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">id</a>));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">  127</a></span>&#160;<span class="preprocessor">#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)       \</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">    template &lt;typename...Args, </span><span class="comment">/* Type of the arguments */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">          int...Head,      </span><span class="comment">/* Position of the first set of args, before insertion */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">          int...Tail&gt;      </span><span class="comment">/* Position of the second set of args, after insertion */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">    DECLAUTO binder_internal_eval(IntSeq&lt;Head...&gt;,               \</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">                  IntSeq&lt;Tail...&gt;,               \</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">                  const Tuple&lt;Args...&gt;&amp; targs)   \</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">      QUALIFIER                             \</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">    {                                   \</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">      return ref.eval(get&lt;Head&gt;(targs)...,              \</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">              id,                       \</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">              get&lt;Tail&gt;(targs)...);             \</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">    }                                   \</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">                        \</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">    template &lt;typename...Args&gt;           </span><span class="comment">/* Type of the arguments    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">    DECLAUTO eval(const Args&amp;...args)       \</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">      QUALIFIER                             \</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">    {                                   \</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);           \</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">      using Head=IntsUpTo&lt;pos&gt;;                     \</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">      if(0)                             \</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">    {                               \</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">      using namespace std;                      \</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; evaluating binder of component &quot;&lt;&lt;Tg::name();     \</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; position in NestedTk: &quot;&lt;&lt;pos;             \</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; of &quot;&lt;&lt;NestedTk::nTypes&lt;&lt;&quot; types,&quot;;            \</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">      cout&lt;&lt;&quot; id: &quot;&lt;&lt;id;                        \</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">      cout&lt;&lt;endl;                           \</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">    }                               \</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">      using Tail=typename IntsUpTo&lt;Tk::nTypes-pos&gt;::template Add&lt;pos&gt;; \</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">      return binder_internal_eval(Head{},               \</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">                      Tail{},               \</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">                      std::forward_as_tuple(args...));  \</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">    }                                   \</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">  177</a></span>&#160;    <a class="code" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(<a class="code" href="../../d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971">NON_CONST_QUALIF</a>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#acc6a322fb67d20517f92c0003be1a41a">  178</a></span>&#160;    <a class="code" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(<a class="code" href="../../d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240">CONST_QUALIF</a>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a7b88eeaf7a0d68c271620693788a5607">  182</a></span>&#160;    <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a5fd7a607d078d7ee1e6c1fa063686a1a">PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SMET,                        \</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;          typename=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a36390d39df970fd50dd457210d0079f4">EnableIf&lt;isSame&lt;Unqualified&lt;SMET&gt;</a>,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;Ref&gt;</a>&gt;&gt;&gt; \</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">  189</a></span>&#160;    explicit <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">Binder</a>(SMET&amp;&amp; smet, </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span>)    </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      : <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c">forw</a>&lt;SMET&gt;(smet)),id(id)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor"></span>      <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Constructing binder &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;<span class="stringliteral">&quot;, type &quot;</span>&lt;&lt;TG::name()&lt;&lt;<span class="stringliteral">&quot;, component: &quot;</span>&lt;&lt;<span class="keywordtype">id</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">  200</a></span>&#160;    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">~Binder</a>()</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor"></span>      <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      cout&lt;&lt;<span class="stringliteral">&quot;Destroying binder &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor"></span>    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  };</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _Tg,                       <span class="comment">// Type to get</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keyword">typename</span> SMET,                       <span class="comment">// Type to bind, deduced from argument</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a>&gt;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">  217</a></span>&#160;  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">bind</a>(SMET&amp;&amp; smet,                     </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>,                  </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a>)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="../../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc">SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">Tg</a>=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb">CompOrTwinned&lt;_Tg,SMET&gt;</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#ifdef DEBUG_BINDER</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor"></span>    <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot;Constructing a binder for type &quot;</span>&lt;&lt;Tg::name()&lt;&lt;<span class="stringliteral">&quot; , storage: &quot;</span>&lt;&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">getStor</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">ref</a>)._v&lt;&lt;endl;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor"></span>    </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// Build the binder</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder&lt;Tg,SMET&gt;</a> b(forw&lt;SMET&gt;(smet),<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// Get the TensKind</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">Tk</a>=<span class="keyword">typename</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified&lt;SMET&gt;::Tk</a>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// Count the free components of SmET</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    constexpr <span class="keywordtype">int</span> N=Tk::nTypes;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// Check if fully bound</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    constexpr <span class="keywordtype">bool</span> FullyBound=(N==1);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">// Evaluate if fully bound</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">if</span> constexpr(FullyBound)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;       <span class="keywordflow">return</span> b.<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">eval</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">return</span> b;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="comment">// /// Bind the \c id component of type \c Tg from expression \c ref</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="comment">// ///</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// /// Nested binder getting an already bound expression, swapping the</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">// /// inner and outer types and components if needed.</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="comment">// ///</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// /// \code</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// /// Tens&lt;TensKind&lt;Compl,RwSpin&gt;,double&gt; cicc;</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="comment">// /// spin(reim(cicc,0),1);</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// /// reim(spin(cicc,1),0);</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// /// \endcode</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">// ///</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">// /// This might be not enough to ensure proper evaluation if the</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="comment">// /// nesting occurs through a wrapper, as in the following example</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">// ///</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// /// \code</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">// /// spin(wrap(reim(cicc,0)),1);</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="comment">// /// reim(wrap(spin(cicc,1)),0);</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="comment">// /// \endcode</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">// template &lt;typename _Tg,                        // Type to get</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="comment">//        typename InNestedTg,                 //Type got by the nested bounder</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">//        typename InNestedRef&gt;                // Type of the nested binder</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="comment">// DECLAUTO bind(const Binder&lt;InNestedTg,InNestedRef&gt;&amp; nb,                          ///&lt; Binder to rebind</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="comment">//        const int id)                    ///&lt; Component to get</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">// {</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="comment">//   // True component searched</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="comment">//   using Tg=CompOrTwinned&lt;_Tg,Binder&lt;InNestedTg,InNestedRef&gt;&gt;;</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">//   // Tensor Kind of input nested binder</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="comment">//   using InNestedRefTk=typename RemoveReference&lt;InNestedRef&gt;::Tk;</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="comment">//   // Types of the Tensor Kind of nested bounder</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">//   using NestedTypes=typename InNestedRefTk::types;</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="comment">//   // Position inside the nested reference of the type got by the nested bounder</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">//   constexpr int InNestedNestedTgPos=posOfType&lt;InNestedTg,NestedTypes&gt;;</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">//   // Position inside the nested reference of the type to get</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">//   static constexpr int NestedTgPos=posOfType&lt;Tg,NestedTypes&gt;;</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">//   // Keep note of whether we need to swap</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="comment">//   constexpr bool swap=(NestedTgPos&gt;InNestedNestedTgPos);</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="comment">//   // Type got by the output nested binder</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="comment">//   using OutNestedTg=Conditional&lt;swap,Tg,InNestedTg&gt;;</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">//   // Type got by the output binder</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">//   using OutTg=Conditional&lt;swap,InNestedTg,Tg&gt;;</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="comment">//   // Nested component</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="comment">//   const int nestedId=nb.id;</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="comment">//   // Out external component</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="comment">//   const int outNestedId=(swap?id:nestedId);</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="comment">//   // Out component</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="comment">//   const int outId=(swap?nestedId:id);</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="comment">//   // Output Nested binder</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="comment">//   auto outNestedBinder=bind&lt;OutNestedTg&gt;(nb.ref,outNestedId);</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="comment">//   // Type of the output nested binder</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="comment">//   using OutNestedBinder=decltype(outNestedBinder);</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="comment">//   //cout&lt;&lt;&quot;Constructing a nested binder for type &quot;&lt;&lt;Tg::name()&lt;&lt;&quot;, internal binder gets: &quot;&lt;&lt;InNestedTg::name()&lt;&lt;&quot;, swap: &quot;&lt;&lt;swap&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="comment">//   // cout&lt;&lt;&quot;OutTg: &quot;&lt;&lt;OutTg::name()&lt;&lt;&quot; &quot;&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="comment">//   return evalIfFullyBound(Binder&lt;OutTg,OutNestedBinder&gt;(outNestedBinder,outId));</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="comment">// Check that a test Binder is a UnarySmET</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <a class="code" href="../../d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b">STATIC_ASSERT_IS_UNARY_SMET</a>(<a class="code" href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">Binder</a>&lt;TensComp&lt;double,1&gt;,</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                  Tens&lt;TensKind&lt;TensComp&lt;double,1&gt;&gt;,<span class="keywordtype">double</span>&gt;&gt;);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceSUNphi_html_af0e3e9b7bb526323339af195b620568d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af0e3e9b7bb526323339af195b620568d">SUNphi::RemoveFromOrderedIntSeq</a></div><div class="ttdeci">decltype(_removeFromOrderedIntSeq&lt; Ins, IncrAft, IgnoreIfNotPresent &gt;(IntSeq&lt;&gt;{}, typename ConstrainIsOrderedIntSeq&lt; Unqualified&lt; IS &gt;&gt;::type{})) RemoveFromOrderedIntSeq</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00067">IntSeqRemove.hpp:67</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_ac9a2c46dd9e632f609156f396bc02194"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194">SUNphi::Binder::Binder</a></div><div class="ttdeci">Binder(SMET &amp;&amp;smet, int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00189">Bind.hpp:189</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a5fd7a607d078d7ee1e6c1fa063686a1a"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a5fd7a607d078d7ee1e6c1fa063686a1a">PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET)</div><div class="ttdoc">Defines the assignement operator, calling assign. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00093">UnarySmET.hpp:93</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a4694543d9e93eba33ce35ea6a7cf748b"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b">STATIC_ASSERT_IS_UNARY_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_UNARY_SMET(...)</div><div class="ttdoc">Defines the check for a Unary SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00020">UnarySmET.hpp:20</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html">SFINAE.hpp</a></div><div class="ttdoc">Defines macros to enable or disable template instantiation. </div></div>
 <div class="ttc" id="Reference_8hpp_html"><div class="ttname"><a href="../../d3/d78/Reference_8hpp.html">Reference.hpp</a></div><div class="ttdoc">Defines a class which defines a reference to another SmET. </div></div>
-<div class="ttc" id="namespaceSUNphi_html_a36390d39df970fd50dd457210d0079f4"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a36390d39df970fd50dd457210d0079f4">SUNphi::EnableIf</a></div><div class="ttdeci">typename _EnableIf&lt; B, T &gt;::type EnableIf</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00078">TypeTraits.hpp:78</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a6031cc38d702f910d644e3861daf10ed"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">SUNphi::Binder::Tk</a></div><div class="ttdeci">typename NestedTk::template AllButType&lt; TG &gt; Tk</div><div class="ttdoc">TensorKind of the bound expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00062">Bind.hpp:62</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a36390d39df970fd50dd457210d0079f4"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a36390d39df970fd50dd457210d0079f4">SUNphi::EnableIf</a></div><div class="ttdeci">typename _EnableIf&lt; B, T &gt;::type EnableIf</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00079">TypeTraits.hpp:79</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a6031cc38d702f910d644e3861daf10ed"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a6031cc38d702f910d644e3861daf10ed">SUNphi::Binder::Tk</a></div><div class="ttdeci">typename NestedTk::template AllButType&lt; TG &gt; Tk</div><div class="ttdoc">TensorKind of the bound expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00106">Bind.hpp:106</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a0a0751428badd51f5f8873fc1c5d05df"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a0a0751428badd51f5f8873fc1c5d05df">PROVIDE_UNARY_SMET_REF</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_REF</div><div class="ttdoc">Provide the reference to the object. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00034">UnarySmET.hpp:34</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_a149981a35c9bfdd4bce95d3526bcde3e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">SUNphi::bind</a></div><div class="ttdeci">decltype(auto) bind(SMET &amp;&amp;smet, const int id, DummyTypes...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00177">Bind.hpp:177</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a149981a35c9bfdd4bce95d3526bcde3e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e">SUNphi::bind</a></div><div class="ttdeci">decltype(auto) bind(SMET &amp;&amp;smet, const int id, DummyTypes...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00217">Bind.hpp:217</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html_a06fb0fc8754fd17c1c6023183c638c35"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00127">BaseSmET.hpp:127</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a4a84bf907402b66fa7fab10985ae65c7"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">SUNphi::Binder::~Binder</a></div><div class="ttdeci">~Binder()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00156">Bind.hpp:156</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a09637a3ef6f9e450adcc57ef2e310998"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">SUNphi::Binder::ref</a></div><div class="ttdeci">Reference&lt; Ref &gt; ref</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00043">Bind.hpp:43</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a1008190e2ebd8a8f9ebfebce17840aa2"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">SUNphi::Binder::eval</a></div><div class="ttdeci">decltype(auto) eval(const Args &amp;...args)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00133">Bind.hpp:133</a></div></div>
+<div class="ttc" id="TensComp_8hpp_html"><div class="ttname"><a href="../../d7/d7a/TensComp_8hpp.html">TensComp.hpp</a></div><div class="ttdoc">Defines the Tensor Components. </div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a4a84bf907402b66fa7fab10985ae65c7"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7">SUNphi::Binder::~Binder</a></div><div class="ttdeci">~Binder()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00200">Bind.hpp:200</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a09637a3ef6f9e450adcc57ef2e310998"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">SUNphi::Binder::ref</a></div><div class="ttdeci">Reference&lt; Ref &gt; ref</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00087">Bind.hpp:87</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a1008190e2ebd8a8f9ebfebce17840aa2"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a1008190e2ebd8a8f9ebfebce17840aa2">SUNphi::Binder::eval</a></div><div class="ttdeci">decltype(auto) eval(const Args &amp;...args)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00177">Bind.hpp:177</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_acf456643d7fa52906ed6901cec0a9a39"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#acf456643d7fa52906ed6901cec0a9a39">ASSIGNABLE_ACCORDING_TO_REF</a></div><div class="ttdeci">#define ASSIGNABLE_ACCORDING_TO_REF</div><div class="ttdoc">Set the assignability according to the reference. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00040">UnarySmET.hpp:40</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_aaf747f913dfd917def3660d8d82ae87f"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">SUNphi::Binder::pos</a></div><div class="ttdeci">static constexpr int pos</div><div class="ttdoc">Position inside the reference of the type got by the bounder. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00036">Bind.hpp:36</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_aaf747f913dfd917def3660d8d82ae87f"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f">SUNphi::Binder::pos</a></div><div class="ttdeci">static constexpr int pos</div><div class="ttdoc">Position inside the reference of the type got by the bounder. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00080">Bind.hpp:80</a></div></div>
 <div class="ttc" id="TensClass_8hpp_html"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html">TensClass.hpp</a></div><div class="ttdoc">Header file for the Tens class. </div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_afb28fedb0dca45e29b16214940c42971"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971">NON_CONST_QUALIF</a></div><div class="ttdeci">#define NON_CONST_QUALIF</div><div class="ttdoc">Empty token to be used in macro expecting qualifier. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00030">TypeTraits.hpp:30</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html_a42eb945edda2b3040077165cb738a391"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00056">SFINAE.hpp:56</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_a2cc8a85a94d4b30bda1982ddf49b7913"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">SUNphi::Unqualified</a></div><div class="ttdeci">RemoveCV&lt; RemoveReference&lt; T &gt;&gt; Unqualified</div><div class="ttdoc">Returns the type T without any reference or qualifier. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00191">TypeTraits.hpp:191</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a2cc8a85a94d4b30bda1982ddf49b7913"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">SUNphi::Unqualified</a></div><div class="ttdeci">RemoveCV&lt; RemoveReference&lt; T &gt;&gt; Unqualified</div><div class="ttdoc">Returns the type T without any reference or qualifier. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00204">TypeTraits.hpp:204</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00102">BaseSmET.hpp:102</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a502757d82d3709b40d32e2b1976d1d90"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">SUNphi::Binder::compSize</a></div><div class="ttdeci">int compSize() const </div><div class="ttdoc">Returns the size of a component. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00055">Bind.hpp:55</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html">SUNphi::Binder</a></div><div class="ttdoc">Class to bind a component of a SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00029">Bind.hpp:29</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a502757d82d3709b40d32e2b1976d1d90"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a502757d82d3709b40d32e2b1976d1d90">SUNphi::Binder::compSize</a></div><div class="ttdeci">int compSize() const </div><div class="ttdoc">Returns the size of a component. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00099">Bind.hpp:99</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html">SUNphi::Binder</a></div><div class="ttdoc">Class to bind a component of a SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00073">Bind.hpp:73</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a1d354395c6ec69f519a1908b3d1e1bed"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">SUNphi::getStor</a></div><div class="ttdeci">void getStor(SMET &amp;&amp;smet, DummyTypes...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00171">TensClass.hpp:171</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html">UnarySmET.hpp</a></div><div class="ttdoc">Header file defining basic properties of Unary SmET. </div></div>
-<div class="ttc" id="UnarySmET_8hpp_html_acf9265234e08857af90935005797f736"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a></div><div class="ttdeci">#define FORWARD_IS_ALIASING_TO_REF</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00114">UnarySmET.hpp:114</a></div></div>
+<div class="ttc" id="UnarySmET_8hpp_html_acf9265234e08857af90935005797f736"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a></div><div class="ttdeci">#define FORWARD_IS_ALIASING_TO_REF</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00113">UnarySmET.hpp:113</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_adbfb1ba595e6e69cc8ff87e5df2ef32b"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b">SUNphi::InsertInOrderedIntSeq</a></div><div class="ttdeci">decltype(_insertInOrderedIntSeq&lt; Ins, IncrAft, IgnoreIfPresent &gt;(intSeq&lt;&gt;, typename ConstrainIsOrderedIntSeq&lt; IS &gt;::type{})) InsertInOrderedIntSeq</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/da6/IntSeqInsert_8hpp_source.html#l00066">IntSeqInsert.hpp:66</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html_ac4472c6b6673ff19a71572cb014260dc"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc">SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK</div><div class="ttdoc">Check that no extra arg is passed. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00064">SFINAE.hpp:64</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html_a180ac09cd081f0303641f2482954f66d"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d">NOT_STORING</a></div><div class="ttdeci">#define NOT_STORING</div><div class="ttdoc">Set the SmET to not-storing. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00050">BaseSmET.hpp:50</a></div></div>
-<div class="ttc" id="Bind_8hpp_html_ac676f53d30c2e27ebc3df2a25081e1ad"><div class="ttname"><a href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a></div><div class="ttdeci">#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)</div><div class="ttdoc">Provides either the const or non-const evaluator. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00083">Bind.hpp:83</a></div></div>
+<div class="ttc" id="Bind_8hpp_html_ac676f53d30c2e27ebc3df2a25081e1ad"><div class="ttname"><a href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a></div><div class="ttdeci">#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)</div><div class="ttdoc">Provides either the const or non-const evaluator. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00127">Bind.hpp:127</a></div></div>
 <div class="ttc" id="structSUNphi_1_1UnarySmET_html"><div class="ttname"><a href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">SUNphi::UnarySmET</a></div><div class="ttdoc">Unary SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00026">UnarySmET.hpp:26</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_ac4c107a563349af358447aaee9573240"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240">CONST_QUALIF</a></div><div class="ttdeci">#define CONST_QUALIF</div><div class="ttdoc">Token to be used in macro indicating &quot;const&quot; keyword. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00033">TypeTraits.hpp:33</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_a094b9cd0bcec16332f75c475a4cd06e5"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">SUNphi::Binder::Tg</a></div><div class="ttdeci">TG Tg</div><div class="ttdoc">Type to get. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00041">Bind.hpp:41</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_a094b9cd0bcec16332f75c475a4cd06e5"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5">SUNphi::Binder::Tg</a></div><div class="ttdeci">TG Tg</div><div class="ttdoc">Type to get. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00085">Bind.hpp:85</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a381d1ffbd57db6af9be204d499582fcb"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb">SUNphi::CompOrTwinned</a></div><div class="ttdeci">Conditional&lt; Has, Tc, TwinCompOf&lt; Tc &gt;&gt; CompOrTwinned</div><div class="ttdoc">If the TensComp TC is not present in the TensKind of SMET, returns the twin. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d89/TwinsComp_8hpp_source.html#l00087">TwinsComp.hpp:87</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html_a138ea6f0ae91a1aec99666877d1693f5"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_ARGS</div><div class="ttdoc">Provide empty list of args, used to unprioritize default version. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00060">SFINAE.hpp:60</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a9251c65c4d182426d0be38507c64b84c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c">SUNphi::forw</a></div><div class="ttdeci">constexpr T &amp;&amp; forw(U &amp;&amp;u)</div><div class="ttdoc">Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00028">UniversalReferences.hpp:28</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00300">TypeTraits.hpp:300</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Binder_html_ae2d52c25e8ad2ffffcec553edfa69f9f"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">SUNphi::Binder::id</a></div><div class="ttdeci">const int id</div><div class="ttdoc">Index to get. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00051">Bind.hpp:51</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00314">TypeTraits.hpp:314</a></div></div>
+<div class="ttc" id="classSUNphi_1_1Binder_html_ae2d52c25e8ad2ffffcec553edfa69f9f"><div class="ttname"><a href="../../d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f">SUNphi::Binder::id</a></div><div class="ttdeci">const int id</div><div class="ttdoc">Index to get. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de1/Bind_8hpp_source.html#l00095">Bind.hpp:95</a></div></div>
 <div class="ttc" id="structSUNphi_1_1ConstrainTupleHasType_html"><div class="ttname"><a href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html">SUNphi::ConstrainTupleHasType</a></div><div class="ttdoc">Constrain a type T to be contained in a Tuple. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00225">TupleClass.hpp:225</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_bf7086a74b01aa569c5a5ea4dca574e8.html">smet</a></li><li class="navelem"><a class="el" href="../../dc/de1/Bind_8hpp.html">Bind.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

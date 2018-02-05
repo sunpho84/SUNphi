@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -66,6 +73,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dc/d21/TupleElements_8hpp.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_51edb9926b3d839827add50fffb136ca.html">tuple</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
@@ -97,6 +114,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <p>Access elements of a tuple.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../dd/d15/Ranges_8hpp_source.html">ints/Ranges.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">tuple/TupleClass.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">tuple/TupleOrder.hpp</a>&gt;</code><br/>
@@ -121,29 +139,36 @@ Functions</h2></td></tr>
 <tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTuple&lt;T&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a64e78927e6b14005d3a43ac2a861264e">SUNphi::forEach</a> (T &amp;&amp;t, F &amp;&amp;f)</td></tr>
 <tr class="separator:a64e78927e6b14005d3a43ac2a861264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aced6211577ee878022067a25963807bf"><td class="memTemplParams" colspan="2">template&lt;int... Ints, class... Tp&gt; </td></tr>
-<tr class="memitem:aced6211577ee878022067a25963807bf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aced6211577ee878022067a25963807bf">SUNphi::getIndexed</a> (const IntSeq&lt; Ints...&gt; &amp;, const Tuple&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:aced6211577ee878022067a25963807bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a58dcfdb8adc2566adab78bacdf9dca36">SUNphi::getHead</a> (const Tuple&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0846e706b0a7589b0c7193a0bfead184"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a0846e706b0a7589b0c7193a0bfead184"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0846e706b0a7589b0c7193a0bfead184">SUNphi::getTail</a> (const Tuple&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a0846e706b0a7589b0c7193a0bfead184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6a09f1ee1cc900e9a004a5cb9380c925">SUNphi::getAllBut</a> (const Tuple&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c031eff47914cc075977344c95ea69"><td class="memTemplParams" colspan="2">template&lt;typename Tp , int... Ints&gt; </td></tr>
+<tr class="memitem:a75c031eff47914cc075977344c95ea69"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a75c031eff47914cc075977344c95ea69">SUNphi::getIndexed</a> (const IntSeq&lt; Ints...&gt; &amp;, Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a75c031eff47914cc075977344c95ea69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80105860987af904efaa86d980d8063e"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a80105860987af904efaa86d980d8063e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a80105860987af904efaa86d980d8063e">SUNphi::getHead</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a80105860987af904efaa86d980d8063e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73969b2e282453e65ed9666b1dea3c4c"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a73969b2e282453e65ed9666b1dea3c4c"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a73969b2e282453e65ed9666b1dea3c4c">SUNphi::getTail</a> (const Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a73969b2e282453e65ed9666b1dea3c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1d4e6a729cc833b8f75f171f21456e"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:afb1d4e6a729cc833b8f75f171f21456e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb1d4e6a729cc833b8f75f171f21456e">SUNphi::getAllButPos</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:afb1d4e6a729cc833b8f75f171f21456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplParams" colspan="2">template&lt;typename Tg , typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ace8b3e99e738342e1db2a2e5e589772c">SUNphi::getAllButType</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:ace8b3e99e738342e1db2a2e5e589772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Access elements of a tuple. </p>
 
 <p>Definition in file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 </div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_51edb9926b3d839827add50fffb136ca.html">tuple</a></li><li class="navelem"><a class="el" href="../../dc/d21/TupleElements_8hpp.html">TupleElements.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

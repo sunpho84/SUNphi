@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -66,6 +73,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/df3/Wrap_8hpp_source.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,11 +102,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_bf7086a74b01aa569c5a5ea4dca574e8.html">smet</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Wrap.hpp</div>  </div>
@@ -147,30 +164,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="ttc" id="UnarySmET_8hpp_html_a7976df141233cff14c2fd64449ee8fe0"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a7976df141233cff14c2fd64449ee8fe0">SAME_COMP_SIZES_OF_REF</a></div><div class="ttdeci">#define SAME_COMP_SIZES_OF_REF</div><div class="ttdoc">Set the size of components according to the reference. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00058">UnarySmET.hpp:58</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html_a1824639ee6544c0cdf5522fb36fb3efb"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a1824639ee6544c0cdf5522fb36fb3efb">NOT_ASSIGNABLE</a></div><div class="ttdeci">#define NOT_ASSIGNABLE</div><div class="ttdoc">Set the SmET as not-assignable. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00077">BaseSmET.hpp:77</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a4694543d9e93eba33ce35ea6a7cf748b"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b">STATIC_ASSERT_IS_UNARY_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_UNARY_SMET(...)</div><div class="ttdoc">Defines the check for a Unary SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00020">UnarySmET.hpp:20</a></div></div>
-<div class="ttc" id="UnarySmET_8hpp_html_a197defc79bdd6100b749975adc4ed95d"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a197defc79bdd6100b749975adc4ed95d">PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR</div><div class="ttdoc">Provides both const and non-const evaluators. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00176">UnarySmET.hpp:176</a></div></div>
+<div class="ttc" id="UnarySmET_8hpp_html_a197defc79bdd6100b749975adc4ed95d"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a197defc79bdd6100b749975adc4ed95d">PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR</div><div class="ttdoc">Provides both const and non-const evaluators. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00175">UnarySmET.hpp:175</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a4bc5cc056f559d7aff0ac2d21a09f3fd"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a4bc5cc056f559d7aff0ac2d21a09f3fd">MERGEABLE_ACCORDING_TO_REF</a></div><div class="ttdeci">#define MERGEABLE_ACCORDING_TO_REF</div><div class="ttdoc">Set the mergeable components equal to the reference. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00046">UnarySmET.hpp:46</a></div></div>
 <div class="ttc" id="TensKind_8hpp_html"><div class="ttname"><a href="../../d6/d3f/TensKind_8hpp.html">TensKind.hpp</a></div><div class="ttdoc">Defines the Tensor Kind. </div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a0a0751428badd51f5f8873fc1c5d05df"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a0a0751428badd51f5f8873fc1c5d05df">PROVIDE_UNARY_SMET_REF</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_REF</div><div class="ttdoc">Provide the reference to the object. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00034">UnarySmET.hpp:34</a></div></div>
-<div class="ttc" id="UnarySmET_8hpp_html_ada787a1b5a1562efe3e7aad0c00864e7"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#ada787a1b5a1562efe3e7aad0c00864e7">SIMPLE_UNARY_SMET_BUILDER</a></div><div class="ttdeci">#define SIMPLE_UNARY_SMET_BUILDER(BUILDER,UNARY_SMET)</div><div class="ttdoc">Create a simple builder with a name and a UNARY_SMET returned type. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00137">UnarySmET.hpp:137</a></div></div>
+<div class="ttc" id="UnarySmET_8hpp_html_ada787a1b5a1562efe3e7aad0c00864e7"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#ada787a1b5a1562efe3e7aad0c00864e7">SIMPLE_UNARY_SMET_BUILDER</a></div><div class="ttdeci">#define SIMPLE_UNARY_SMET_BUILDER(BUILDER,UNARY_SMET)</div><div class="ttdoc">Create a simple builder with a name and a UNARY_SMET returned type. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00136">UnarySmET.hpp:136</a></div></div>
 <div class="ttc" id="classSUNphi_1_1Tens_html"><div class="ttname"><a href="../../d8/d1c/classSUNphi_1_1Tens.html">SUNphi::Tens</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00025">TensClass.hpp:25</a></div></div>
 <div class="ttc" id="Transpose_8hpp_html"><div class="ttname"><a href="../../d0/d6d/Transpose_8hpp.html">Transpose.hpp</a></div><div class="ttdoc">Defines a class which take the transposed of a SmET. </div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_a6f10b7a96302efa1146b70080d6bcfb7"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a6f10b7a96302efa1146b70080d6bcfb7">PROVIDE_UNARY_SMET_SIMPLE_CREATOR</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_SIMPLE_CREATOR(UNARY_SMET)</div><div class="ttdoc">Defines a simple creator taking a reference. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00083">UnarySmET.hpp:83</a></div></div>
 <div class="ttc" id="classSUNphi_1_1TensKind_html"><div class="ttname"><a href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3f/TensKind_8hpp_source.html#l00079">TensKind.hpp:79</a></div></div>
 <div class="ttc" id="classSUNphi_1_1Wrapper_html"><div class="ttname"><a href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a></div><div class="ttdoc">Class to wrap a SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/Wrap_8hpp_source.html#l00020">Wrap.hpp:20</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html">UnarySmET.hpp</a></div><div class="ttdoc">Header file defining basic properties of Unary SmET. </div></div>
-<div class="ttc" id="UnarySmET_8hpp_html_acf9265234e08857af90935005797f736"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a></div><div class="ttdeci">#define FORWARD_IS_ALIASING_TO_REF</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00114">UnarySmET.hpp:114</a></div></div>
+<div class="ttc" id="UnarySmET_8hpp_html_acf9265234e08857af90935005797f736"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">FORWARD_IS_ALIASING_TO_REF</a></div><div class="ttdeci">#define FORWARD_IS_ALIASING_TO_REF</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00113">UnarySmET.hpp:113</a></div></div>
 <div class="ttc" id="UnarySmET_8hpp_html_afc2820093362f7611ff80957ba44451d"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#afc2820093362f7611ff80957ba44451d">PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(UNARY_SMET)</div><div class="ttdoc">Returns a version of the SmET with simple merging structure. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00050">UnarySmET.hpp:50</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html_a180ac09cd081f0303641f2482954f66d"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d">NOT_STORING</a></div><div class="ttdeci">#define NOT_STORING</div><div class="ttdoc">Set the SmET to not-storing. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00050">BaseSmET.hpp:50</a></div></div>
 <div class="ttc" id="structSUNphi_1_1UnarySmET_html"><div class="ttname"><a href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">SUNphi::UnarySmET</a></div><div class="ttdoc">Unary SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00026">UnarySmET.hpp:26</a></div></div>
 <div class="ttc" id="classSUNphi_1_1Wrapper_html_a0290c1272ed40753d92784a26bc0954b"><div class="ttname"><a href="../../d1/d77/classSUNphi_1_1Wrapper.html#a0290c1272ed40753d92784a26bc0954b">SUNphi::Wrapper::Tk</a></div><div class="ttdeci">TK Tk</div><div class="ttdoc">TensorKind of the bound expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/df3/Wrap_8hpp_source.html#l00036">Wrap.hpp:36</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00300">TypeTraits.hpp:300</a></div></div>
-<div class="ttc" id="UnarySmET_8hpp_html_a96e94085efa30f83348cbb48f403b3c0"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a96e94085efa30f83348cbb48f403b3c0">ABSORB_DUPLICATED_UNARY_SMET_CALL</a></div><div class="ttdeci">#define ABSORB_DUPLICATED_UNARY_SMET_CALL(CALLER,UNARY_SMET)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00233">UnarySmET.hpp:233</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00314">TypeTraits.hpp:314</a></div></div>
+<div class="ttc" id="UnarySmET_8hpp_html_a96e94085efa30f83348cbb48f403b3c0"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#a96e94085efa30f83348cbb48f403b3c0">ABSORB_DUPLICATED_UNARY_SMET_CALL</a></div><div class="ttdeci">#define ABSORB_DUPLICATED_UNARY_SMET_CALL(CALLER,UNARY_SMET)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00232">UnarySmET.hpp:232</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_bf7086a74b01aa569c5a5ea4dca574e8.html">smet</a></li><li class="navelem"><a class="el" href="../../da/df3/Wrap_8hpp.html">Wrap.hpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

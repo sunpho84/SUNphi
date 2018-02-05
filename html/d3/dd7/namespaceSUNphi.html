@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -66,6 +73,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d3/dd7/namespaceSUNphi.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -80,7 +102,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -572,7 +593,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3">adj</a> (T &amp;&amp;ref)</td></tr>
 <tr class="memdesc:a855b8db955c1f92e1f04c22c0ec834e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjoint expression <code>ref</code>.  <a href="#a855b8db955c1f92e1f04c22c0ec834e3">More...</a><br/></td></tr>
 <tr class="separator:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6af7ce1951586e2afdaf5d6b3decba20"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt; and isSmET&lt;T2&gt; and Unqualified&lt;T1&gt;::isAssignable&gt;, typename... DummyTypes&gt; </td></tr>
+<tr class="memitem:a6af7ce1951586e2afdaf5d6b3decba20"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt; and			      isSmET&lt;T2&gt; and			      Unqualified&lt;T1&gt;::isAssignable&gt;, typename... DummyTypes&gt; </td></tr>
 <tr class="memitem:a6af7ce1951586e2afdaf5d6b3decba20"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6af7ce1951586e2afdaf5d6b3decba20">assign</a> (T1 &amp;&amp;smet1, T2 &amp;&amp;smet2, DummyTypes...)</td></tr>
 <tr class="memdesc:a6af7ce1951586e2afdaf5d6b3decba20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default assigner.  <a href="#a6af7ce1951586e2afdaf5d6b3decba20">More...</a><br/></td></tr>
 <tr class="separator:a6af7ce1951586e2afdaf5d6b3decba20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -677,18 +698,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTuple&lt;T&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a64e78927e6b14005d3a43ac2a861264e">forEach</a> (T &amp;&amp;t, F &amp;&amp;f)</td></tr>
 <tr class="separator:a64e78927e6b14005d3a43ac2a861264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aced6211577ee878022067a25963807bf"><td class="memTemplParams" colspan="2">template&lt;int... Ints, class... Tp&gt; </td></tr>
-<tr class="memitem:aced6211577ee878022067a25963807bf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aced6211577ee878022067a25963807bf">getIndexed</a> (const <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Ints...&gt; &amp;, const <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:aced6211577ee878022067a25963807bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a58dcfdb8adc2566adab78bacdf9dca36">getHead</a> (const <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a58dcfdb8adc2566adab78bacdf9dca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0846e706b0a7589b0c7193a0bfead184"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a0846e706b0a7589b0c7193a0bfead184"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0846e706b0a7589b0c7193a0bfead184">getTail</a> (const <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a0846e706b0a7589b0c7193a0bfead184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memTemplParams" colspan="2">template&lt;int N, class... Tp&gt; </td></tr>
-<tr class="memitem:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6a09f1ee1cc900e9a004a5cb9380c925">getAllBut</a> (const <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Tp...&gt; &amp;tp)</td></tr>
-<tr class="separator:a6a09f1ee1cc900e9a004a5cb9380c925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c031eff47914cc075977344c95ea69"><td class="memTemplParams" colspan="2">template&lt;typename Tp , int... Ints&gt; </td></tr>
+<tr class="memitem:a75c031eff47914cc075977344c95ea69"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a75c031eff47914cc075977344c95ea69">getIndexed</a> (const <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Ints...&gt; &amp;, Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a75c031eff47914cc075977344c95ea69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80105860987af904efaa86d980d8063e"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a80105860987af904efaa86d980d8063e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a80105860987af904efaa86d980d8063e">getHead</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a80105860987af904efaa86d980d8063e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73969b2e282453e65ed9666b1dea3c4c"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a73969b2e282453e65ed9666b1dea3c4c"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a73969b2e282453e65ed9666b1dea3c4c">getTail</a> (const Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:a73969b2e282453e65ed9666b1dea3c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb1d4e6a729cc833b8f75f171f21456e"><td class="memTemplParams" colspan="2">template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:afb1d4e6a729cc833b8f75f171f21456e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb1d4e6a729cc833b8f75f171f21456e">getAllButPos</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:afb1d4e6a729cc833b8f75f171f21456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplParams" colspan="2">template&lt;typename Tg , typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ace8b3e99e738342e1db2a2e5e589772c">getAllButType</a> (Tp &amp;&amp;tp)</td></tr>
+<tr class="separator:ace8b3e99e738342e1db2a2e5e589772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -789,30 +813,26 @@ Variables</h2></td></tr>
 <tr class="memdesc:a326249163f03337f7d6cbda5441e407e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a RangeSeq with given types.  <a href="#a326249163f03337f7d6cbda5441e407e">More...</a><br/></td></tr>
 <tr class="separator:a326249163f03337f7d6cbda5441e407e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc7db564dd647bc10933eb0a67248b8c"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:afc7db564dd647bc10933eb0a67248b8c"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">isSame</a> =false</td></tr>
+<tr class="memitem:afc7db564dd647bc10933eb0a67248b8c"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">isSame</a></td></tr>
 <tr class="separator:afc7db564dd647bc10933eb0a67248b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2ebf308cda3504417f00d9ce87c057"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4e2ebf308cda3504417f00d9ce87c057"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4e2ebf308cda3504417f00d9ce87c057">isSame&lt; T, T &gt;</a> =true</td></tr>
+<tr class="memitem:a4e2ebf308cda3504417f00d9ce87c057"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4e2ebf308cda3504417f00d9ce87c057">isSame&lt; T, T &gt;</a></td></tr>
 <tr class="separator:a4e2ebf308cda3504417f00d9ce87c057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a31cbd161e017ef6fd57019e099d59ce4"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4">isLvalue</a> =std::is_lvalue_reference&lt;T&gt;::value</td></tr>
-<tr class="memdesc:a31cbd161e017ef6fd57019e099d59ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is lvalue reference. <br/></td></tr>
+<tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4">isLvalue</a></td></tr>
+<tr class="memdesc:a31cbd161e017ef6fd57019e099d59ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is lvalue reference.  <a href="#a31cbd161e017ef6fd57019e099d59ce4">More...</a><br/></td></tr>
 <tr class="separator:a31cbd161e017ef6fd57019e099d59ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eb85031c83b699bc6b54c6a864b1af2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1eb85031c83b699bc6b54c6a864b1af2"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1eb85031c83b699bc6b54c6a864b1af2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1eb85031c83b699bc6b54c6a864b1af2">isRvalue</a> =std::is_rvalue_reference&lt;T&gt;::value</td></tr>
-<tr class="memdesc:a1eb85031c83b699bc6b54c6a864b1af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is rvalue reference. <br/></td></tr>
+<tr class="memitem:a1eb85031c83b699bc6b54c6a864b1af2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1eb85031c83b699bc6b54c6a864b1af2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1eb85031c83b699bc6b54c6a864b1af2">isRvalue</a></td></tr>
+<tr class="memdesc:a1eb85031c83b699bc6b54c6a864b1af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is rvalue reference.  <a href="#a1eb85031c83b699bc6b54c6a864b1af2">More...</a><br/></td></tr>
 <tr class="separator:a1eb85031c83b699bc6b54c6a864b1af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3ef26a5128ca9e06a3af3241349f357"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad3ef26a5128ca9e06a3af3241349f357"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad3ef26a5128ca9e06a3af3241349f357"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad3ef26a5128ca9e06a3af3241349f357">isConst</a> =std::is_const&lt;T&gt;::value</td></tr>
-<tr class="memdesc:ad3ef26a5128ca9e06a3af3241349f357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is const or not. <br/></td></tr>
+<tr class="memitem:ad3ef26a5128ca9e06a3af3241349f357"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad3ef26a5128ca9e06a3af3241349f357"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad3ef26a5128ca9e06a3af3241349f357">isConst</a></td></tr>
+<tr class="memdesc:ad3ef26a5128ca9e06a3af3241349f357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is const or not.  <a href="#ad3ef26a5128ca9e06a3af3241349f357">More...</a><br/></td></tr>
 <tr class="separator:ad3ef26a5128ca9e06a3af3241349f357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9b5295825641bc81667e9a03072512ec"></a>
-template&lt;typename Base , typename Derived &gt; </td></tr>
-<tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec">isBaseOf</a> =std::is_base_of&lt;Base,<a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdfe0d736c1099606a47e63c72238b32">RemoveReference</a>&lt;Derived&gt;&gt;::value</td></tr>
-<tr class="memdesc:a9b5295825641bc81667e9a03072512ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether Base is a base class of Derived. <br/></td></tr>
+<tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplParams" colspan="2">template&lt;typename Base , typename Derived &gt; </td></tr>
+<tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec">isBaseOf</a></td></tr>
+<tr class="memdesc:a9b5295825641bc81667e9a03072512ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether Base is a base class of Derived.  <a href="#a9b5295825641bc81667e9a03072512ec">More...</a><br/></td></tr>
 <tr class="separator:a9b5295825641bc81667e9a03072512ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733173cc775b0b0ef9f4cc26c125629d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a733173cc775b0b0ef9f4cc26c125629d"></a>
 template&lt;typename T &gt; </td></tr>
@@ -1004,7 +1024,7 @@ template&lt;bool B, typename T , typename F &gt; </div>
 <p>Provides type T if B is true, or F if is false</p>
 <p>Wraps the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00148">148</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1096,7 @@ template&lt;bool B, typename T  = void&gt; </div>
 <p>Defines type T (default to void) if parameter B is true</p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1264,7 @@ template&lt;int Ins, typename IS , int IncrAft = 0, bool IgnoreIfNotPresent = tr
 <div class="line"><span class="keyword">using</span> B=RemoveFromOrderedIntSeq&lt;w,A,10,true&gt;; <span class="comment">// IntSeq&lt;0,1,13&gt;</span></div>
 <div class="line">INVALID <span class="keyword">using</span> C=InsertInOrderedIntSeq&lt;3,A,10,false&gt;; <span class="comment">// IntSeq&lt;0,1,3,13&gt;</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html">IntSeqRemove.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html">IntSeqRemove.hpp</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1282,7 @@ template&lt;int Ins, typename IS , int IncrAft = 0, bool IgnoreIfPresent = false
 <p>Remove the integer Rem from an ordered unique <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></p>
 <p>Care is taken to ensure that Ins is not already in IS The elements after are incremented by IncrAft. See RemovefromOrderedIntSeq for examples </p>
 
-<p>Definition at line <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html">IntSeqRemove.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d3/db7/IntSeqRemove_8hpp_source.html">IntSeqRemove.hpp</a>.</p>
 
 </div>
 </div>
@@ -1396,7 +1416,7 @@ template&lt;bool B, typename T &gt; </div>
 <p>Defines type T if parameter B is true</p>
 <p>Explicit specialization of <code>EnableIf</code> forcing an explicit type. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1434,7 @@ template&lt;bool B&gt; </div>
 <p>Defines <code>void</code> if parameter B is true</p>
 <p>Explicit specialization of <code>EnableIf</code> for <code>T=void</code> . </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -1945,7 +1965,7 @@ template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&g
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt; and isSmET&lt;T2&gt; and Unqualified&lt;T1&gt;::isAssignable&gt;, typename... DummyTypes&gt; </div>
+template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt; and			      isSmET&lt;T2&gt; and			      Unqualified&lt;T1&gt;::isAssignable&gt;, typename... DummyTypes&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void SUNphi::assign </td>
@@ -1982,7 +2002,7 @@ template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt;
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -2067,7 +2087,7 @@ template&lt;typename _Tg , typename SMET , typename... DummyTypes&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00177">177</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00217">217</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>
@@ -2438,7 +2458,7 @@ template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTu
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -2489,7 +2509,7 @@ template&lt;std::size_t I, class T &gt; </div>
 <p>Directly aliasing the std library. R-value case </p>
 <dl class="section return"><dt>Returns</dt><dd>A move-reference to the I tuple element. </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -2512,20 +2532,20 @@ template&lt;class Tg , class T &gt; </div>
 <p>Directly aliasing the std library. R-value case. </p>
 <dl class="section return"><dt>Returns</dt><dd>A move-reference to the T tuple type (if present). </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6a09f1ee1cc900e9a004a5cb9380c925"></a>
+<a class="anchor" id="afb1d4e6a729cc833b8f75f171f21456e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int N, class... Tp&gt; </div>
+template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto SUNphi::getAllBut </td>
+          <td class="memname">decltype(auto) SUNphi::getAllButPos </td>
           <td>(</td>
-          <td class="paramtype">const Tuple&lt; Tp...&gt; &amp;&#160;</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
           <td class="paramname"><em>tp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2536,27 +2556,46 @@ template&lt;int N, class... Tp&gt; </div>
 <p>Example: </p>
 <div class="fragment"><div class="line">Tuple&lt;int,double,char&gt; e;</div>
 <div class="line"><span class="keyword">auto</span> GetAllBut&lt;1&gt;(e); <span class="comment">// Tuple&lt;int,char&gt;</span></div>
-</div><!-- fragment --><p>Returns all elements of a <code>Tuple</code> but the type T</p>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace8b3e99e738342e1db2a2e5e589772c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Tg , typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::getAllButType </td>
+          <td>(</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
+          <td class="paramname"><em>tp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns all elements of a <code>Tuple</code> but the type T</p>
 <p>First search the component, then call <code>GetAllBut</code> with the found position as a parameter</p>
 <p>Example: </p>
 <div class="fragment"><div class="line">Tuple&lt;int,double,char&gt; e;</div>
 <div class="line"><span class="keyword">auto</span> GetAllBut&lt;double&gt;(e); <span class="comment">// Tuple&lt;int,char&gt;</span></div>
-</div><!-- fragment --> <p>Number of elements in the tuple </p>
-
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00112">112</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a58dcfdb8adc2566adab78bacdf9dca36"></a>
+<a class="anchor" id="a80105860987af904efaa86d980d8063e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int N, class... Tp&gt; </div>
+template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto SUNphi::getHead </td>
+          <td class="memname">decltype(auto) SUNphi::getHead </td>
           <td>(</td>
-          <td class="paramtype">const Tuple&lt; Tp...&gt; &amp;&#160;</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
           <td class="paramname"><em>tp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2571,18 +2610,18 @@ template&lt;int N, class... Tp&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aced6211577ee878022067a25963807bf"></a>
+<a class="anchor" id="a75c031eff47914cc075977344c95ea69"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int... Ints, class... Tp&gt; </div>
+template&lt;typename Tp , int... Ints&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto SUNphi::getIndexed </td>
+          <td class="memname">decltype(auto) SUNphi::getIndexed </td>
           <td>(</td>
           <td class="paramtype">const IntSeq&lt; Ints...&gt; &amp;&#160;</td>
           <td class="paramname">, </td>
@@ -2590,7 +2629,7 @@ template&lt;int... Ints, class... Tp&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Tuple&lt; Tp...&gt; &amp;&#160;</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
           <td class="paramname"><em>tp</em>&#160;</td>
         </tr>
         <tr>
@@ -2603,7 +2642,7 @@ template&lt;int... Ints, class... Tp&gt; </div>
 <p>Filter a <code>Tuple</code> on the basis of a list of index</p>
 <p>Return a tuple containg the elements of a tuple according to a list of indices </p>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -2697,16 +2736,16 @@ template&lt;typename SMET , TypeIf&lt;(isUnarySmET&lt; SMET &gt; and not isTens&
 
 </div>
 </div>
-<a class="anchor" id="a0846e706b0a7589b0c7193a0bfead184"></a>
+<a class="anchor" id="a73969b2e282453e65ed9666b1dea3c4c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;int N, class... Tp&gt; </div>
+template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto SUNphi::getTail </td>
+          <td class="memname">decltype(auto) SUNphi::getTail </td>
           <td>(</td>
-          <td class="paramtype">const Tuple&lt; Tp...&gt; &amp;&#160;</td>
+          <td class="paramtype">const Tp &amp;&amp;&#160;</td>
           <td class="paramname"><em>tp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2714,8 +2753,6 @@ template&lt;int N, class... Tp&gt; </div>
 </div><div class="memdoc">
 <p>Gets the tail of a <code>Tuple</code> </p>
 <p>Return a <code>Tuple</code> containg the last N elements of a tuple </p>
-<p>Number of elements in the tuple</p>
-<p>Beginning of returned part </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tp</td><td>Tuple from which to extract </td></tr>
@@ -2723,7 +2760,7 @@ template&lt;int N, class... Tp&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -3955,7 +3992,27 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment -->
 <p>Create an <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> with given types. </p>
 
-<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b5295825641bc81667e9a03072512ec"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Base , typename Derived &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isBaseOf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_base_of&lt;Base,RemoveReference&lt;Derived&gt;&gt;::value</div>
+</div><!-- fragment -->
+<p>Identifies whether Base is a base class of Derived. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -3976,6 +4033,46 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad3ef26a5128ca9e06a3af3241349f357"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isConst</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_const&lt;T&gt;::value</div>
+</div><!-- fragment -->
+<p>Returns whether T is const or not. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a31cbd161e017ef6fd57019e099d59ce4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isLvalue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_lvalue_reference&lt;T&gt;::value</div>
+</div><!-- fragment -->
+<p>Check if the type is lvalue reference. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a302d28a5e97d3f2dafd2064ed7d1ff02"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3990,7 +4087,7 @@ template&lt;typename T &gt; </div>
 <p>Identifies whether a type is an ordered <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></p>
 <p>General case </p>
 
-<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
 
 </div>
 </div>
@@ -4010,7 +4107,27 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment --><p>Identifies whether a type is an ordered <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></p>
 <p>General case </p>
 
-<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00201">201</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">IntSeq.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1eb85031c83b699bc6b54c6a864b1af2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isRvalue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_rvalue_reference&lt;T&gt;::value</div>
+</div><!-- fragment -->
+<p>Check if the type is rvalue reference. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00171">171</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4024,7 +4141,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::isSame =false</td>
+          <td class="memname">constexpr bool SUNphi::isSame</td>
         </tr>
       </table>
   </td>
@@ -4033,10 +4150,12 @@ template&lt;typename T1 , typename T2 &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks if two types are the same</p>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">false</span></div>
+</div><!-- fragment --><p>Checks if two types are the same</p>
 <p>Default (false) case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4050,7 +4169,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">SUNphi::isSame</a>&lt; T, T &gt; =true</td>
+          <td class="memname">constexpr bool <a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">SUNphi::isSame</a>&lt; T, T &gt;</td>
         </tr>
       </table>
   </td>
@@ -4059,10 +4178,12 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks if two types are the same</p>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">true</span></div>
+</div><!-- fragment --><p>Checks if two types are the same</p>
 <p>True case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4617,11 +4738,15 @@ template&lt;class T , class  = ConstrainIsTuple&lt;T&gt;&gt; </div>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>
