@@ -37,7 +37,6 @@ __AUTHOR__="Jeroen de Bruijn"
 ##### Setup this script and get the current gh-pages branch.               #####
 echo 'Setting up the script...'
 # Exit with nonzero exit code if anything fails
-set -e
 
 # Create a clean working directory for this script.
 mkdir code_docs
