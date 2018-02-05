@@ -15,25 +15,33 @@ name. Hopefully, a modernistic replacement for
 - We know what we implement (and we can trust it... maybe)
 
 - Consolidate experience with other past libraries, avoiding some
-  pitfalls
+  now-recognized pitfalls
 
 - Use a modern programming language allows for further future
   developments, and simplify mainteinment (provided that good practice
   is adopted while developing it, and a lot of effort is dedicated in
   documenting)
 
-- Considerable workforce amount availbale if we gather the force
-  currently involved in Nissa, tmLQCD, DDalphaAMG, CVC, and a few
-  other friend-developers
+- We have onsiderable workforce amount availbale if we gather the
+  force currently involved in
+  [Nissa](https://github.com/sunpho84/nissa),
+  [tmLQCD](https://github.com/etmc/tmLQCD),
+  [DDalphaAMG](https://github.com/sbacchio/DDalphaAMG),
+  [CVC](https://github.com/marcuspetschlies/cvc), and a few other
+  friend-developers
 
-- Glory, fame, success! More probably, blood, chains and dust
+- Glory, fame, success! More probably, blood, chains and dust...
 
 ### Main strategy line
 
-- Be modern
+- Be modern ![really
+  modern](http://afflictor.com/wp-content/uploads/2015/05/imgRetroFuturism1-2.jpg)
 
-- If in doubt, take as a reference Grid, and do differently, even
-  better do the opposite
+- If in doubt, take as a reference Grid, and do differently. Even
+  better, do the opposite
+
+- Get inspiration by available libraries, mix and stir with other
+  codes and try to get the best out of them.
 
 ### Goals
 
@@ -68,7 +76,7 @@ execution, via an efficient (?) army of metaprogramming techniques.
 - Automatic creation of compound non-local operations, combining
   simple ones (e.g. covariant shift).
 
-### Features
+### Format and tools used/envisaged
 
 - Header-only (so far)
 
@@ -101,6 +109,63 @@ execution, via an efficient (?) army of metaprogramming techniques.
 
 - Continuous Integration with
   [Travis](https://travis-ci.org/sunpho84/SUNphi).
+
+### Implementation
+
+- Construction of a syntactic tree of `Tensorial Expressions`
+  (originally I had named them TEx, but I realized this was really a
+  nasty name and diverted to SmET, reflecting the Smart Expression
+  Template nature), e.g. `a*b` defines an node of the class
+  `Multiplier(a,b)`, as `a*b+c` defines an nested nodes
+  `Summer(Multiplier(a,b),c)`
+
+- Simplifcation/restructuration of the syntatic tree at compile time,
+  e.g. (a very simple but important example) on supported
+  architectures `Summer(Multiplier(a,b),c)` would be cast into
+  `SummerMultiplier(c,a,b)`
+
+- This is achieved through the usage of [`Universal
+  References`](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)
+  to support arbitrary subnodes and
+  [`SFINAE`](http://en.cppreference.com/w/cpp/language/sfinae) to
+  enable template specialization of each node constructor
+
+- Another related tool, inspired by Eigen, is that each nodes come
+  with a cost calculation estimator, so that e.g. the double matrix
+  product `a*b*c` can be split into two subproducts with a temporary
+  storage `d=b*c`. Certainly more interestingly,
+  `CovShift(CovShift(a,X),Y)` could be run with or without temporary
+  storage, depending on the lattice partitioning selected, etc
+
+- Incidentally this allows also an automatic calculator of the
+  computational cost, and of performances substained in the
+  calculation of an expression
+
+- Another important aspect is the aliasing checker (inspired by
+  Blaze), allowing to take a straight assigner of buffered one if at
+  compile/runtime an alias with rhs is detected
+
+- Each node holds a `TensorKind`, collection of all the `Tensorial
+  Components`, e.g. `Spin`, `Color`, `Site`, `Complex`, etc. Each
+  `Tensorial Component` represents a fixed or dynamic size, named
+  index component of an expression.  Furthermore a fundamental type
+  (e.g. double, single, half, or quad) is associated to each
+  expression
+  
+- Each node add, removes or modify the Tensorial Components, enabling
+  or not vectorization/fusion of the components
+
+- The position of a tensorial component with respect to the others is
+  free, but reflects the internal order in which the index runs to
+  determine the storage
+
+- This way an expression acting on a given Tensorial Component can
+  treat an arbitary expression with an arbitray `Tensorial Kind`,
+  irrespectively to the presence of other components, and to its
+  position. To make thing clear with an example: once `CovShift` is
+  defined to act on a Tensor Expression provided it comes with a space
+  and color index, it would work on a spincolor lattice field, a
+  colorspin, a spincolorspin etc
 
 ### Status
 
