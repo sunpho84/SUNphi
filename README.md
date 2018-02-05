@@ -10,17 +10,17 @@ name. Hopefully, a modernistic replacement for
 
 ### Why a new independent library for Lattice QCD (and beyond)
 
-- We can shape it for other precise needs
+- We can shape it for other precise needs.
 
-- We know what we implement (and we can trust it... maybe)
+- We know what we implement (and we can trust it... maybe).
 
 - Consolidate experience with other past libraries, avoiding some
-  now-recognized pitfalls
+  now-recognized pitfalls.
 
 - Use a modern programming language allows for further future
   developments, and simplify mainteinment (provided that good practice
   is adopted while developing it, and a lot of effort is dedicated in
-  documenting)
+  documenting).
 
 - We have onsiderable workforce amount availbale if we gather the
   force currently involved in
@@ -28,20 +28,22 @@ name. Hopefully, a modernistic replacement for
   [tmLQCD](https://github.com/etmc/tmLQCD),
   [DDalphaAMG](https://github.com/sbacchio/DDalphaAMG),
   [CVC](https://github.com/marcuspetschlies/cvc), and a few other
-  friend-developers
+  friend-developers.
 
 - Glory, fame, success! More probably, blood, chains and dust...
 
 ### Main strategy line
 
-- Be modern ![really
+![really
   modern](http://afflictor.com/wp-content/uploads/2015/05/imgRetroFuturism1-2.jpg)
 
-- If in doubt, take as a reference Grid, and do differently. Even
-  better, do the opposite
+- Be modern & ambicious.
 
-- Get inspiration by available libraries, mix and stir with other
-  codes and try to get the best out of them.
+- If in doubt, take as a reference Grid, and do **differently**. Even
+  better, do the opposite.
+
+- Get inspiration from available libraries, **mix and stir** with other
+  codes and try to get the best out of them all.
 
 ### Goals
 
@@ -82,25 +84,26 @@ execution, via an efficient (?) army of metaprogramming techniques.
 
 - Crazy metaprogramming at work, inspired by
   [Eigen](http://eigen.tuxfamily.org/) and
-  [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries
+  [Blaze](https://bitbucket.org/blaze-lib/blaze) libraries.
 
 - [C++17](https://en.wikipedia.org/wiki/C%2B%2B17) syntax: God bless
   the [constexpr
   if](http://en.cppreference.com/w/cpp/language/if#Constexpr_If)
-  statements. By the time I have finished this library, most compiler
-  will support it (hopefully...)
+  statements. Clang and Gcc supports it, and by the project is
+  finished, most compiler will support it (hopefully...).
 
 - Non-shared memory parallelism via MPI (not yet implemented, but this
   will be easy to adapt from Nissa), with plenty of ideas (in my mind)
-  on how to automatize caching/scattering
+  on how to automatize caching/scattering.
 
-- Automatic parallelization of free indices via loop fusion (done) and
-  thread pool (...should be easily adaptable/generalizable from Nissa)
+- Automatic **parallelization** of free indices via loop fusion (done)
+  and thread pool (...should be easily adaptable/generalizable from
+  Nissa).
 
-- Automatic vectorization on the innermost component(s) (via loop
+- Automatic **vectorization** on the innermost component(s) (via loop
   fusion or splitting, and automatic deduction of the set of vector
   operation appliable to a given vector size... almost all still in my
-  mind, so far)
+  mind, so far).
 
 - [Fully
   documented](https://sunpho84.github.io/SUNphi/html/index.html) with
@@ -113,51 +116,51 @@ execution, via an efficient (?) army of metaprogramming techniques.
 ### Implementation
 
 - Construction of a syntactic tree of `Tensorial Expressions`
-  (originally I had named them TEx, but I realized this was really a
-  nasty name and diverted to SmET, reflecting the Smart Expression
-  Template nature), e.g. `a*b` defines an node of the class
-  `Multiplier(a,b)`, as `a*b+c` defines an nested nodes
-  `Summer(Multiplier(a,b),c)`
+  (originally I had named them *TEx*, but I realized this was really a
+  nasty name and diverted it to *SmET*, reflecting the Smart
+  Expression Template nature), e.g. `a*b` defines an node of the class
+  `Multiplier(a,b)`, as `a*b+c` defines a nested nodes
+  `Summer(Multiplier(a,b),c)`.
 
 - Simplifcation/restructuration of the syntatic tree at compile time,
   e.g. (a very simple but important example) on supported
   architectures `Summer(Multiplier(a,b),c)` would be cast into
-  `SummerMultiplier(c,a,b)`
+  `SummerMultiplier(c,a,b)`.
 
-- This is achieved through the usage of [`Universal
-  References`](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)
+- This is achieved through the usage of [Universal
+  References](https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers)
   to support arbitrary subnodes and
-  [`SFINAE`](http://en.cppreference.com/w/cpp/language/sfinae) to
-  enable template specialization of each node constructor
+  [SFINAE](http://en.cppreference.com/w/cpp/language/sfinae) to enable
+  template specialization of each node constructor.
 
-- Another related tool, inspired by Eigen, is that each nodes come
-  with a cost calculation estimator, so that e.g. the double matrix
-  product `a*b*c` can be split into two subproducts with a temporary
-  storage `d=b*c`. Certainly more interestingly,
+- Another related feature, inspired by Eigen, is that each nodes come
+  with a cost-calculation estimator, so that e.g. the double matrix
+  product `a*b*c` can be split into two subproducts `a*d` with a
+  temporary storage `d=b*c`. Certainly more interestingly:
   `CovShift(CovShift(a,X),Y)` could be run with or without temporary
-  storage, depending on the lattice partitioning selected, etc
+  storage, depending on the lattice partitioning selected, etc.
 
 - Incidentally this allows also an automatic calculator of the
   computational cost, and of performances substained in the
-  calculation of an expression
+  calculation of an expression.
 
-- Another important aspect is the aliasing checker (inspired by
+- Another important feature is the *aliasing checker* (taken from
   Blaze), allowing to take a straight assigner of buffered one if at
-  compile/runtime an alias with rhs is detected
+  compile/runtime an alias with rhs is detected.
 
 - Each node holds a `TensorKind`, collection of all the `Tensorial
   Components`, e.g. `Spin`, `Color`, `Site`, `Complex`, etc. Each
   `Tensorial Component` represents a fixed or dynamic size, named
-  index component of an expression.  Furthermore a fundamental type
+  index component of an expression. Furthermore a fundamental type
   (e.g. double, single, half, or quad) is associated to each
-  expression
+  expression.
   
 - Each node add, removes or modify the Tensorial Components, enabling
-  or not vectorization/fusion of the components
+  or not vectorization and fusion of the component loops.
 
 - The position of a tensorial component with respect to the others is
   free, but reflects the internal order in which the index runs to
-  determine the storage
+  determine the storage.
 
 - This way an expression acting on a given Tensorial Component can
   treat an arbitary expression with an arbitray `Tensorial Kind`,
@@ -165,7 +168,7 @@ execution, via an efficient (?) army of metaprogramming techniques.
   position. To make thing clear with an example: once `CovShift` is
   defined to act on a Tensor Expression provided it comes with a space
   and color index, it would work on a spincolor lattice field, a
-  colorspin, a spincolorspin etc
+  colorspin, a spincolorspin etc.
 
 ### Status
 
