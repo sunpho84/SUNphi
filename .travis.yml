@@ -5,8 +5,6 @@ branches:
   except:
     - gh-pages
 
-#compiler: clang
-
 # Environment variables
 env:
   global:
