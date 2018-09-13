@@ -21,8 +21,8 @@ namespace SUNphi
 	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
   class Conjer :
     public BaseConjer,                                // Inherit from BaseConjer to detect in expression
-    public UnarySmET<Conjer<_Ref>>,                    // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                      // Constrain _Ref to be a SmET
+    public UnarySmET<Conjer<_Ref>>,                   // Inherit from UnarySmET
+    public ConstrainIsSmET<_Ref>,                     // Constrain _Ref to be a SmET
     public ConstrainIsTensKind<TK>,                   // Constrain type TK to be a TensKind
     public ConstrainTupleHasType<Compl,TK_TYPES>      // Constrain TG to be in the Types of the TensKind
   {
@@ -45,10 +45,10 @@ namespace SUNphi
     // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/* We have to split at the Compl components, and at the next one */,
 			    InsertIntSeqInOrderedIntSeq<
-			       IntSeq<posOfCompl,posOfCompl+1>,           // Split at the complex component position and next one
-			       typename Unqualified<Ref>::MergeableComps, // Nested components
-  			       IntSeq<0,0>,                               // Shift 0 after insertion
-			       true>);                                    // Ignore if already present
+			    IntSeq<posOfCompl,posOfCompl+1>,           // Split at the complex component position and next one
+			    typename Unqualified<Ref>::MergeableComps, // Nested components
+			    IntSeq<0,0>,                               // Shift 0 after insertion
+			    true>);                                    // Ignore if already present
     
     PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(Conjer);
     
@@ -88,9 +88,24 @@ namespace SUNphi
   // Check that a test Conjer is a UnarySmET
   STATIC_ASSERT_IS_UNARY_SMET(Conjer<Tens<TensKind<Compl>,double>>);
   
-  // Build Conjer from conj
-  SIMPLE_UNARY_SMET_BUILDER(conj,Conjer);
-  
+  // Build Conjer from conj, if TensKind is complex
+  template <typename T, 	    // Type of the SmET to get
+	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
+  auto conj(T&& smet,               //!< SmET to act upon
+	    SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
+  {
+    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
+    
+    using TK=typename RemoveReference<T>::Tk; //< Tens Kind of the conjugated type
+    using TK_TYPES=typename TK::types;        //< Types of the tensor kind
+    
+    // If Compl is a type of the TensKind, return the Conjer
+    if constexpr(tupleHasType<Compl,TK_TYPES>)
+      return Conjer<T>(forw<T>(smet));
+    // Otherwise returns the object itself
+    else
+      return smet;
+  }
   // Simplifies conj(conj)
   CANCEL_DUPLICATED_UNARY_SMET_CALL(conj,Conjer);
   
