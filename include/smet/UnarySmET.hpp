@@ -133,15 +133,15 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Create a simple builder with a name and a UNARY_SMET returned type
-#define SIMPLE_UNARY_SMET_BUILDER(BUILDER,   /*!< Name of builder fun           */ \
-				 UNARY_SMET) /*!< Name of the UnarySmET to build */ \
+#define SIMPLE_UNARY_SMET_BUILDER(BUILDER,    /*!< Name of builder fun            */ \
+				  UNARY_SMET) /*!< Name of the UnarySmET to build */ \
   /*! Simple UNARY_SMET builder called BUILDER */			\
-  /*!                                         */			\
-  /*! Plain UNARY_SMET getting a plain SmET     */			\
+  /*!                                          */			\
+  /*! Plain UNARY_SMET getting a plain SmET    */			\
   template <typename T, 	    /* Type of the SmET to get       */	\
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>		\
-  UNARY_SMET<T> BUILDER(T&& smet,     /*!< SmET to act upon            */	\
-		       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
+  UNARY_SMET<T> BUILDER(T&& smet,     /*!< SmET to act upon          */ \
+			SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
   									\
@@ -183,22 +183,22 @@ namespace SUNphi
   /// Tens<TensKind<Compl>,double> cicc;
   /// conj(conj(cicc)); // returns cicc
   /// \endcode
-#define CANCEL_DUPLICATED_UNARY_SMET_CALL(CALLER,    /*!< Name of builder */ \
-					 UNARY_SMET) /*!< Type to un-nest */ \
+#define CANCEL_DUPLICATED_UNARY_SMET_CALL(CALLER,     /*!< Name of builder */ \
+					  UNARY_SMET) /*!< Type to un-nest */ \
   /*! Simplify CALLER(UNARY_SMET) expression */				\
-  /*!                                       */				\
-  /*! Returns the nested reference          */				\
-  template <typename T,                                        /* Type of the expression                 */ \
-	    typename RrT=RemoveReference<T>,                   /* T without ref attributes               */ \
-	    typename Ref=typename RrT::Ref,                    /* Type of the reference                  */ \
-	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes             */ \
+  /*!                                        */				\
+  /*! Returns the nested reference           */				\
+  template <typename T,                                        /* Type of the expression                  */ \
+	    typename RrT=RemoveReference<T>,                   /* T without ref attributes                */ \
+	    typename Ref=typename RrT::Ref,                    /* Type of the reference                   */ \
+	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes              */ \
 	    bool SmETIsLvalue=isLvalue<RrT>,		       /* Detect if SmET is an lvalue             */ \
-	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue             */ \
-	    bool RefIsStoring=RrRef::isStoring,		       /* Detect if Ref is storing               */ \
-	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or   */ \
-	    RefIsLvalue or SmETIsLvalue,	  	               /*   lvalue is involved         	         */ \
-	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                          */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<RrT>)>      /* Enable only for the UNARY_SMET required */ \
+	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue              */ \
+	    bool RefIsStoring=RrRef::isStoring,		       /* Detect if Ref is storing                */ \
+	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or    */ \
+	    RefIsLvalue or SmETIsLvalue,	               /*   lvalue is involved         	          */ \
+	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<RrT>)>     /* Enable only for the UNARY_SMET required */ \
   Ret CALLER(T&& smet)	/*!< Quantity to un-nest   */			\
   {					\
     if(0)								\
