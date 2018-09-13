@@ -86,6 +86,7 @@ var namespaceSUNphi =
     [ "ConstrainAreSame", "d2/d0b/classSUNphi_1_1ConstrainAreSame.html", null ],
     [ "ConstrainTupleTypesAreAllDifferent", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
     [ "ConstrainTupleHasType", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
+    [ "ConstrainTupleHasNotType", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
     [ "_PosOfType", "d8/dcf/structSUNphi_1_1__PosOfType.html", null ],
     [ "_PosOfType< T, T, Tp...>", "df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html", "df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4" ],
     [ "_PosOfType< T, U, Tp...>", "db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html", "db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4" ],

@@ -140,6 +140,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html">SUNphi::ConstrainTupleHasType&lt; T, TP, class &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be contained in a <code>Tuple</code>.  <a href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html">SUNphi::ConstrainTupleHasNotType&lt; T, TP, class &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be not contained in a <code>Tuple</code>.  <a href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -163,6 +166,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#a43129b5b1b4c73d25eff07540494bf6b">STATIC_ASSERT_TUPLE_HAS_TYPE</a>(T, TP)&#160;&#160;&#160;static_assert(tupleHasType&lt;T,TP&gt;,&quot;Searched type not found&quot;)</td></tr>
 <tr class="memdesc:a43129b5b1b4c73d25eff07540494bf6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the type <code>T</code> is not in the types of tuple <code>TP</code>. <br/></td></tr>
 <tr class="separator:a43129b5b1b4c73d25eff07540494bf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29b403bf8ee95174a6ddcf78f414dd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac29b403bf8ee95174a6ddcf78f414dd6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#ac29b403bf8ee95174a6ddcf78f414dd6">STATIC_ASSERT_TUPLE_HAS_NOT_TYPE</a>(T, TP)&#160;&#160;&#160;static_assert(not tupleHasType&lt;T,TP&gt;,&quot;Searched type found&quot;)</td></tr>
+<tr class="memdesc:ac29b403bf8ee95174a6ddcf78f414dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the type <code>T</code> is in the types of tuple <code>TP</code>. <br/></td></tr>
+<tr class="separator:ac29b403bf8ee95174a6ddcf78f414dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>

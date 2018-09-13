@@ -323,6 +323,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html">ConstrainTupleHasType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be contained in a <code>Tuple</code>.  <a href="../../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html">ConstrainTupleHasNotType</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be not contained in a <code>Tuple</code>.  <a href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html">_PosOfType&lt; T, T, Tp...&gt;</a></td></tr>
@@ -610,14 +613,14 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ada6ecc39a6cfeea827baf29795d34967"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada6ecc39a6cfeea827baf29795d34967"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html">Conjer</a>)</td></tr>
 <tr class="separator:ada6ecc39a6cfeea827baf29795d34967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13719b664275b4fe8b2cc3b5b13967c3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... DummyTypes&gt; </td></tr>
-<tr class="memitem:a13719b664275b4fe8b2cc3b5b13967c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html">Conjer</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a13719b664275b4fe8b2cc3b5b13967c3">conj</a> (T &amp;&amp;smet, DummyTypes...)</td></tr>
-<tr class="separator:a13719b664275b4fe8b2cc3b5b13967c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
-<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381b663616baca11ca1606eab5ecb637"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... DummyTypes&gt; </td></tr>
+<tr class="memitem:a381b663616baca11ca1606eab5ecb637"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a> (T &amp;&amp;smet, DummyTypes...)</td></tr>
+<tr class="separator:a381b663616baca11ca1606eab5ecb637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e19f4ffa189059c167b60fd22d8342d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RrT  = RemoveReference&lt;T&gt;, typename Ref  = typename RrT::Ref, typename RrRef  = RemoveReference&lt;Ref&gt;, bool SmETIsLvalue = isLvalue&lt;RrT&gt;, bool RefIsLvalue = isLvalue&lt;RrRef&gt;, bool RefIsStoring = RrRef::isStoring, bool RetByRef = RefIsStoring or  RefIsLvalue or SmETIsLvalue, typename Ret  = Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;, TypeIf&lt;(isConjer&lt; RrT &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a3e19f4ffa189059c167b60fd22d8342d"><td class="memTemplItemLeft" align="right" valign="top">Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3e19f4ffa189059c167b60fd22d8342d">conj</a> (T &amp;&amp;smet)</td></tr>
 <tr class="separator:a3e19f4ffa189059c167b60fd22d8342d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
+<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplParams" colspan="2">template&lt;typename D , TypeIf&lt;(isTransposer&lt; D &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34">conj</a> (D &amp;&amp;smet)</td></tr>
 <tr class="separator:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2261,14 +2264,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a13719b664275b4fe8b2cc3b5b13967c3"></a>
+<a class="anchor" id="a381b663616baca11ca1606eab5ecb637"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename... DummyTypes&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html">Conjer</a>&lt;T&gt; SUNphi::conj </td>
+          <td class="memname">auto SUNphi::conj </td>
           <td>(</td>
           <td class="paramtype">T &amp;&amp;&#160;</td>
           <td class="paramname"><em>smet</em>, </td>
@@ -2286,9 +2289,6 @@ template&lt;typename T , typename... DummyTypes&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt; Name of the <a class="el" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html" title="Unary SmET. ">UnarySmET</a> to build</p>
-<p>Simple <a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html" title="Class to take the conjugate of a SmET. ">Conjer</a> builder called conj</p>
-<p>Plain <a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html" title="Class to take the conjugate of a SmET. ">Conjer</a> getting a plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">smet</td><td><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
@@ -2296,7 +2296,7 @@ template&lt;typename T , typename... DummyTypes&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
 
 </div>
 </div>
@@ -2325,7 +2325,7 @@ template&lt;typename T , typename RrT  = RemoveReference&lt;T&gt;, typename Ref 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
 
 </div>
 </div>
@@ -2354,7 +2354,7 @@ template&lt;typename D , TypeIf&lt;(isTransposer&lt; D &gt;), void * &gt;  = nul
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d8f/Conj_8hpp_source.html#l00113">113</a> of file <a class="el" href="../../d2/d8f/Conj_8hpp_source.html">Conj.hpp</a>.</p>
 
 </div>
 </div>

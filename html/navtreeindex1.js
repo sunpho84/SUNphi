@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14":[3,0,2,6,5,2],
 "d3/d89/TwinsComp_8hpp.html#af5a65f01dc5439c86a23082a0295054b":[3,0,2,6,5,6],
 "d3/d89/TwinsComp_8hpp.html#afe2b4376fdd1cfa02460b88b5bbe852a":[3,0,2,6,5,4],
 "d3/d89/TwinsComp_8hpp_source.html":[3,0,2,6,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d7/d7a/TensComp_8hpp.html#aaee12692b92eb4e29e596a4ed9063f7c":[3,0,2,6,2,2],
 "d7/d7a/TensComp_8hpp.html#af9036a9033272e166cbcdd4f1e517005":[3,0,2,6,2,5],
 "d7/d7a/TensComp_8hpp_source.html":[3,0,2,6,2],
-"d7/da6/structSUNphi_1_1__Indexer.html":[2,0,0,67],
-"d7/dcc/structSUNphi_1_1HasMember__assertMergeableWith_1_1Derived.html":[2,0,0,48,1]
+"d7/da6/structSUNphi_1_1__Indexer.html":[2,0,0,67]
 };

@@ -41,6 +41,7 @@ var searchData=
   ['constrainisvalidcompmerge',['ConstrainIsValidCompMerge',['../d6/d9e/structSUNphi_1_1TensKind_1_1ConstrainIsValidCompMerge.html',1,'SUNphi::TensKind']]],
   ['constrainisvalidcompmerge_3c_20intseq_3c_20idelims_2e_2e_2e_3e_20_3e',['ConstrainIsValidCompMerge&lt; IntSeq&lt; IDelims...&gt; &gt;',['../d6/d9e/structSUNphi_1_1TensKind_1_1ConstrainIsValidCompMerge.html',1,'SUNphi::TensKind']]],
   ['constrainntypes',['ConstrainNTypes',['../d8/d4a/structSUNphi_1_1ConstrainNTypes.html',1,'SUNphi']]],
+  ['constraintuplehasnottype',['ConstrainTupleHasNotType',['../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html',1,'SUNphi']]],
   ['constraintuplehastype',['ConstrainTupleHasType',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintuplehastype_3c_20compl_2c_20tk_5ftypes_20_3e',['ConstrainTupleHasType&lt; Compl, TK_TYPES &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintuplehastype_3c_20tg_2c_20nestedtypes_20_3e',['ConstrainTupleHasType&lt; TG, NestedTypes &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
