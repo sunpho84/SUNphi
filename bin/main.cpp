@@ -9,6 +9,16 @@ using namespace SUNphi;
 
 int main()
 {
+  // Check that conj of a non-complex type object is the same
+  {
+    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using MyTens=Tens<MyTk,double>;
+    
+    MyTens c;
+    
+    STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(conj(c)));
+  }
+  
   using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
   using MyTens=Tens<MyTk,double>;
   
