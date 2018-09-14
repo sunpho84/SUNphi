@@ -196,6 +196,8 @@ var NAVTREEINDEX0 =
 "d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html":[2,0,0,76,1],
 "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html":[2,0,0,11],
 "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html#ac736e481c8022345ba167c6611c153b1":[2,0,0,11,0],
+"d2/dad/UnaryMinus_8hpp.html":[3,0,2,4,8],
+"d2/dad/UnaryMinus_8hpp_source.html":[3,0,2,4,8],
 "d2/dc5/structSUNphi_1_1UnarySmET.html":[2,0,0,65],
 "d2/dc5/structSUNphi_1_1UnarySmET.html#a968fdedc3e4dffd1247a1890e168bae5":[2,0,0,65,1],
 "d2/dc5/structSUNphi_1_1UnarySmET.html#ab9ed5275ecef9dfc025fb6587273ec5e":[2,0,0,65,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "d3/d78/Reference_8hpp.html#a67613102ef7d81f8a719102d11af0c4b":[3,0,2,4,6,0],
 "d3/d78/Reference_8hpp_source.html":[3,0,2,4,6],
 "d3/d89/TwinsComp_8hpp.html":[3,0,2,6,5],
-"d3/d89/TwinsComp_8hpp.html#a381d1ffbd57db6af9be204d499582fcb":[3,0,2,6,5,3],
-"d3/d89/TwinsComp_8hpp.html#a4692578508fbbf9aff7ed592deef12cf":[3,0,2,6,5,7],
-"d3/d89/TwinsComp_8hpp.html#aa6fdac81aaa3fb07cea15eb49af57bb8":[3,0,2,6,5,5]
+"d3/d89/TwinsComp_8hpp.html#a381d1ffbd57db6af9be204d499582fcb":[3,0,2,6,5,3]
 };

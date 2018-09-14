@@ -2,7 +2,8 @@ var searchData=
 [
   ['unary_5fsmet_5fgoes_5finside',['UNARY_SMET_GOES_INSIDE',['../d4/dbe/UnarySmET_8hpp.html#abaa859df3e273c5c021d99c530b94589',1,'UnarySmET.hpp']]],
   ['unary_5fsmet_5fgoes_5fon_5flhs',['UNARY_SMET_GOES_ON_LHS',['../d4/dbe/UnarySmET_8hpp.html#a1dfb49f19c736caadea33ed0c90fba14',1,'UnarySmET.hpp']]],
-  ['unaryplusminus_2ehpp',['UnaryPlusMinus.hpp',['../d8/dd4/UnaryPlusMinus_8hpp.html',1,'']]],
+  ['unaryminus_2ehpp',['UnaryMinus.hpp',['../d2/dad/UnaryMinus_8hpp.html',1,'']]],
+  ['unaryplus_2ehpp',['UnaryPlus.hpp',['../d7/d61/UnaryPlus_8hpp.html',1,'']]],
   ['unarysmet',['UnarySmET',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
   ['unarysmet_2ehpp',['UnarySmET.hpp',['../d4/dbe/UnarySmET_8hpp.html',1,'']]],
   ['unarysmet_3c_20binder_3c_20tg_2c_20_5fref_20_3e_20_3e',['UnarySmET&lt; Binder&lt; TG, _Ref &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
