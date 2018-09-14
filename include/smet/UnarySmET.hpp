@@ -7,6 +7,7 @@
 
 #include <metaprogramming/SFINAE.hpp>
 #include <smet/BaseSmET.hpp>
+#include <smet/Reference.hpp>
 
 namespace SUNphi
 {

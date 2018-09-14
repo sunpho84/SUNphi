@@ -79,15 +79,6 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Provide the reference to the object
-#define PROVIDE_SMET_REF(NUM)				\
-  /*! Type of the binding reference NUM */		\
-  using Ref ## NUM=_Ref ## NUM;				\
-  /*! Reference to the NUM object */			\
-  Reference<Ref ## NUM> ref ## NUM
-  
-  /////////////////////////////////////////////////////////////////
-  
   /// Provide the MergeableComps type, assertMergebaleWith amd getMaximallyMergedCompsView
   ///
   /// The type must be an ordered IntSeq indicating the splitting
