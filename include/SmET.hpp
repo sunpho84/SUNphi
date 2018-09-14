@@ -14,7 +14,8 @@
 #include <smet/Reference.hpp>
 #include <smet/Transpose.hpp>
 #include <smet/UnarySmET.hpp>
-#include <smet/UnaryPlusMinus.hpp>
+#include <smet/UnaryMinus.hpp>
+#include <smet/UnaryPlus.hpp>
 #include <smet/Wrap.hpp>
 
 #endif

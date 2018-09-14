@@ -1,9 +1,9 @@
-#ifndef _UNARYPLUSMINUS_HPP
-#define _UNARYPLUSMINUS_HPP
+#ifndef _UNARYPLUS_HPP
+#define _UNARYPLUS_HPP
 
-/// \file UnaryPlusMinus.hpp
+/// \file UnaryPlus.hpp
 ///
-/// \brief Header file for the definition of +smet or -smet
+/// \brief Header file for the definition of +smet
 
 #include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
