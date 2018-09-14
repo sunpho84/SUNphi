@@ -9,7 +9,7 @@ using namespace SUNphi;
 
 int main()
 {
-  // Check that conj of a non-complex type object is the same
+  // Check that conj of a non-complex type object is the same of original type
   {
     using MyTk=TensKind<RwCol,Spin,CnCol>;
     using MyTens=Tens<MyTk,double>;
@@ -19,6 +19,16 @@ int main()
     STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(conj(c)));
   }
   
+  // Check that UnaryPlus is absorbed
+  {
+    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using MyTens=Tens<MyTk,double>;
+    
+    MyTens c;
+    
+    STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(+c));
+  }
+
   using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
   using MyTens=Tens<MyTk,double>;
   
