@@ -61,7 +61,7 @@ var NAVTREEINDEX2 =
 "d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html":[2,0,0,36,2],
 "d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e":[2,0,0,36,2,0],
 "d8/dd4/UnaryPlusMinus_8hpp.html":[3,0,2,4,8],
-"d8/dd4/UnaryPlusMinus_8hpp.html#a354349b8149f939028a7849cebd58257":[3,0,2,4,8,0],
+"d8/dd4/UnaryPlusMinus_8hpp.html#a165c9c89862d50b23b2f3d674a14aa89":[3,0,2,4,8,0],
 "d8/dd4/UnaryPlusMinus_8hpp_source.html":[3,0,2,4,8],
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html":[2,0,0,14],
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html#ae49e3f4866a57740c2180ce944c47895":[2,0,0,14,0],

@@ -113,7 +113,8 @@ $(document).ready(function(){initNavTree('d8/dd4/UnaryPlusMinus_8hpp.html','../.
 
 <p>Header file for the definition of +smet or -smet.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">smet/BaseSmET.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../d8/dd4/UnaryPlusMinus_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -126,10 +127,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a354349b8149f939028a7849cebd58257"><td class="memTemplParams" colspan="2">template&lt;typename T , SFINAE_ON_TEMPLATE_ARG(isSmET&lt; T &gt;) &gt; </td></tr>
-<tr class="memitem:a354349b8149f939028a7849cebd58257"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a354349b8149f939028a7849cebd58257">SUNphi::operator+</a> (T &amp;&amp;smet)</td></tr>
-<tr class="memdesc:a354349b8149f939028a7849cebd58257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement +smet: decays into smet itself.  <a href="#a354349b8149f939028a7849cebd58257">More...</a><br/></td></tr>
-<tr class="separator:a354349b8149f939028a7849cebd58257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165c9c89862d50b23b2f3d674a14aa89"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a165c9c89862d50b23b2f3d674a14aa89"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a165c9c89862d50b23b2f3d674a14aa89">SUNphi::operator+</a> (T &amp;&amp;smet)</td></tr>
+<tr class="memdesc:a165c9c89862d50b23b2f3d674a14aa89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement +smet: decays into smet itself.  <a href="#a165c9c89862d50b23b2f3d674a14aa89">More...</a><br/></td></tr>
+<tr class="separator:a165c9c89862d50b23b2f3d674a14aa89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the definition of +smet or -smet. </p>
