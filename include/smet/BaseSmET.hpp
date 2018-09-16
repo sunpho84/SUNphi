@@ -108,6 +108,10 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
+  /// States that the class has no mergeable component
+  #define NOT_MERGEABLE \
+    PROVIDE_MERGEABLE_COMPS(IntSeq<>)
+  
   // Check that we know which components can be merged
   DEFINE_HAS_MEMBER(MergeableComps);
   

@@ -35,31 +35,47 @@ namespace SUNphi
   
   /// Provide the reference to the objects
 #define PROVIDE_BINARY_SMET_REFS			\
-  PROVIDE_SMET_REF(1);				\
+  PROVIDE_SMET_REF(1);					\
   PROVIDE_SMET_REF(2)
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Defines a simple creator taking a reference
+#define PROVIDE_BINARY_SMET_SIMPLE_CREATOR(BINARY_SMET /*!< Name of the BinarySmET */) \
+  /*! Constructor taking universal reference */				\
+  template <typename SMET1,						\
+	    typename SMET2,						\
+	    typename=EnableIf<isSame<Unqualified<SMET1>,Unqualified<Ref1>>>, \
+	    typename=EnableIf<isSame<Unqualified<SMET2>,Unqualified<Ref2>>>> \
+  explicit BINARY_SMET(SMET1&& smet1,SMET2&& smet2) : ref1(forw<SMET1>(smet1)),ref2(forw<SMET2>(smet2)) \
+  {									\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Create a simple builder with a name and a BINARY_SMET returned type
-#define SIMPLE_BINARY_SMET_BUILDER(BUILDER,    /*!< Name of builder fun           */ \
-				  BINARY_SMET) /*!< Name of the BinarySmET to build */ \
+#define SIMPLE_BINARY_SMET_BUILDER(BUILDER,     /*!< Name of builder function        */ \
+				   BINARY_SMET) /*!< Name of the BinarySmET to build */ \
   /*! Simple BINARY_SMET builder called BUILDER */			\
   /*!                                          */			\
-  /*! Plain BINARY_SMET getting a pair of plain SmET                    */ \
-  template <typename T1, 	    /* Type of the first SmET to get   */ \
-	    typename T2, 	    /* Type of the second SmET to get  */ \
+  /*! Plain BINARY_SMET getting a pair of plain SmET                 */ \
+  template <typename T1, 	   /* Type of the first SmET to get  */ \
+	    typename T2, 	   /* Type of the second SmET to get */ \
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>		\
-  BINARY_SMET<T1,T2> BUILDER(T1&& smet1,   /*!< First SmET to act upon  */	\
-			    T2&& smet2,   /*!< Second SmET to act upon */	\
-			    SFINAE_WORSEN_DEFAULT_VERSION_ARGS)		\
+  BINARY_SMET<T1,T2> BUILDER(T1&& smet1,   /*!< First SmET to act upon  */ \
+			     T2&& smet2,   /*!< Second SmET to act upon */ \
+			     SFINAE_WORSEN_DEFAULT_VERSION_ARGS)	\
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
-  									\
+    									\
     return BINARY_SMET<T1,T2>(forw<T1>(smet1),forw<T2>(smet2));		\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
   /// Set aliasing according to the isAliasing of references 1 and 2
   /// \todo enforce cehck only with TensClass
-#define FORWARD_IS_ALIASING_TO_REF_1_2			\
+#define FORWARD_IS_ALIASING_TO_REFS			\
   /*! Forward aliasing check to the references */	\
   template <typename Tref>				\
   bool isAliasing(const Tref& alias) const		\
@@ -70,12 +86,6 @@ namespace SUNphi
   }							\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
-  /// Set the assignability according to the references 1 and 2
-#define ASSIGNABLE_ACCORDING_TO_REF_1_2					\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned according to the references 1 and 2 */, \
-			  RemoveReference<decltype(ref1)>::isAssignable and \
-			  RemoveReference<decltype(ref2)>::isAssignable)
-
 }
 
 #endif

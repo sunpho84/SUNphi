@@ -19,7 +19,7 @@ namespace SUNphi
   
   /// Defines the check for a Unary SmET
 #define STATIC_ASSERT_IS_UNARY_SMET(...)			\
-  STATIC_ASSERT_IS_SMET(__VA_ARGS__);			\
+  STATIC_ASSERT_IS_SMET(__VA_ARGS__);				\
   STATIC_ASSERT_HAS_MEMBER(ref,__VA_ARGS__)
   
   /// Unary SmET

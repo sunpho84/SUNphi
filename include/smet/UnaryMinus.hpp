@@ -66,7 +66,7 @@ namespace SUNphi
     PROVIDE_CONST_OR_NOT_EVALUATOR(NON_CONST_QUALIF);
     PROVIDE_CONST_OR_NOT_EVALUATOR(CONST_QUALIF);
     
-#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
+#undef PROVIDE_CONST_OR_NOT_EVALUATOR
     
   };
   
@@ -74,10 +74,18 @@ namespace SUNphi
   STATIC_ASSERT_IS_UNARY_SMET(UMinuser<Tens<TensKind<Spin>,double>>);
   
   // Build UMinuser from uminus
-  SIMPLE_UNARY_SMET_BUILDER(uminus,UMinuser);
+  SIMPLE_UNARY_SMET_BUILDER(uMinus,UMinuser);
   
-  // Simplifies uminus(uminus)
-  CANCEL_DUPLICATED_UNARY_SMET_CALL(uminus,UMinuser);
+  // Simplifies uMinus(uMinus)
+  CANCEL_DUPLICATED_UNARY_SMET_CALL(uMinus,UMinuser);
+  
+  /// Implement -smet: return uminus
+  template <typename T,              // Type of the expression
+	    SFINAE_ON_TEMPLATE_ARG(isSmET<T>)>
+  DECLAUTO operator-(T&& smet)       ///< Expression
+  {
+    return uMinus(forw<T>(smet));
+  }
 }
 
 #endif

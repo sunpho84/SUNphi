@@ -28,7 +28,19 @@ int main()
     
     STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(+c));
   }
-
+  
+  // Check that repeated - is absorbed
+  {
+    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using MyTens=Tens<MyTk,double>;
+    
+    MyTens c;
+    
+    STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(-(-c)));
+  }
+  
+  
+  
   using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
   using MyTens=Tens<MyTk,double>;
   
