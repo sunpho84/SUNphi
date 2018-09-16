@@ -1,6 +1,7 @@
 var structSUNphi_1_1TensComp =
 [
     [ "type", "d1/d96/structSUNphi_1_1TensComp.html#aa7a59e642f782c5731ab75cc4d74d6de", null ],
+    [ "name", "d1/d96/structSUNphi_1_1TensComp.html#a8cb815db8d386afa77ad2f175c6968f3", null ],
     [ "operator~", "d1/d96/structSUNphi_1_1TensComp.html#a184b55c1c6edab8deb0340485991e897", null ],
     [ "operator~", "d1/d96/structSUNphi_1_1TensComp.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc", null ],
     [ "isDynamic", "d1/d96/structSUNphi_1_1TensComp.html#a592ed1584d6f2c9b31f15e8876bc2193", null ],
