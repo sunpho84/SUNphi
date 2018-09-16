@@ -189,20 +189,22 @@ namespace SUNphi
     template <typename F>                 // Fundamental type
     constexpr static int firstVectorizingComp=_firstVectorizingComp<F>::value; // Get the value of the internal implementation
     
-    // /// Get all types after one
+    // /// Get all types after a given one
     // template <class Tab>
     // using AllAfterType=TensKindFromTuple<decltype(getTail<Tab>(Types{}))>;
     
     /// Get the twinned (transposed) type
     using Twinned=TensKind<TwinCompOf<T>...>;
     
-    /// Reports whether a component is Matricial or not
+    /// Reports through an IntSeq whether a component is Matricial or not
     using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
     
     /// Insert in the IntSeq Is the points where true twinned types are present
     template <typename Is>
     using InsertTrueTwinnedPos=
       InsertTrueTwinnedPosOfTuple<Is,types>;
+    
+    /////////////////////////////////////////////////////////////////
     
     /// Maximal value of the index, restricted to the statical components
     static constexpr int maxStaticIdx=
@@ -236,7 +238,7 @@ namespace SUNphi
     struct TensCompsListMerged<IntSeq<IComps...>>
     {
       /// First component of the groups
-      static constexpr int firstComp=IntSeq<IComps...>::template element<0>;
+      static constexpr int firstComp=IntSeq<IComps...>::template element<0>();
       
       /// Check if we are really merging something
       static constexpr bool realMerge=(sizeof...(IComps)>1);
@@ -278,7 +280,7 @@ namespace SUNphi
     struct ConstrainIsValidCompMerge
     {
       static_assert(isOrderedIntSeq<Is>,"Not an ordered IntSeq");
-      static_assert(Is::template element<0> ==0, "First element not zero");
+      static_assert(Is::template element<0>()==0, "First element not zero");
       static_assert(Is::last==nTypes,"Last element not equal to the number of components of the TensKind");
     };
     
@@ -292,12 +294,12 @@ namespace SUNphi
       using Delims=IntSeq<IDelims...>;
       
       /// Range associated with merge grpup I
-      template <int I>                  // Index of the group of components to merge
+      template <int I>                    // Index of the group of components to merge
       using Range=
 	RangeSeq<
-	Delims::template element<I>,    // Start
-	1,                              // Offset
-	Delims::template element<I+1>>; // End
+	Delims::template element<I>(),    // Start
+	1,                                // Offset
+	Delims::template element<I+1>()>; // End
       
       /// Create a TensComp merging the components of group I
       template <int I>      // Index of the group of components to merge

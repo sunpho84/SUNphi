@@ -93,7 +93,7 @@ namespace SUNphi
     static constexpr int first=element<0>;
     
     /// Get the last element of the sequence
-    static constexpr int last=element<size-1>;
+    static constexpr int last=element<size-1>();
     
     /// Determine whether the IntSeq elements are ordered or not
     static constexpr int isOrdered=areOrdered<Ints...>;
