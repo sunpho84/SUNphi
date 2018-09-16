@@ -17,6 +17,7 @@ var searchData=
   ['smet_3c_20conjer_3c_20_5fref_20_3e_20_3e',['SmET&lt; Conjer&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20tens_3c_20tk_2c_20fund_20_3e_20_3e',['SmET&lt; Tens&lt; TK, Fund &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20transposer_3c_20_5fref_20_3e_20_3e',['SmET&lt; Transposer&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
+  ['smet_3c_20uminuser_3c_20_5fref_20_3e_20_3e',['SmET&lt; UMinuser&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20wrapper_3c_20_5fref_20_3e_20_3e',['SmET&lt; Wrapper&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
   ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],

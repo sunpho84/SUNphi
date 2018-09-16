@@ -36,9 +36,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d89/TwinsComp_8hpp.html#a4692578508fbbf9aff7ed592deef12cf",
-"d7/d7a/TensComp_8hpp.html#a99b52d06ddddcb6ae964caff5f4badd3",
-"dc/d6b/BaseSmET_8hpp.html#a3fa6a1b35e4ab4ae10e5f94251cf51be"
+"d3/d6f/structSUNphi_1_1__isTuple.html",
+"d7/d56/structSUNphi_1_1__IntSeqCat_3_01IntSeq_3_01Ints1_8_8_8_4_00_01IntSeq_3_01Ints2_8_8_8_4_00_01T_8_8_8_4.html#ac33969e7741f7c4a10451b9ed6750fc8",
+"dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

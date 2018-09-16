@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['uminus',['uMinus',['../d3/dd7/namespaceSUNphi.html#ab29dbe2468515d50fc89f70faa25dae8',1,'SUNphi::uMinus(T &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#aac1168c9468bb07a3f41508a9ba13222',1,'SUNphi::uMinus(T &amp;&amp;smet)']]],
+  ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html',1,'SUNphi']]],
+  ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html#a00ee36e1237b0a9d63748d57a21402c8',1,'SUNphi::UMinuser']]],
   ['unary_5fsmet_5fgoes_5finside',['UNARY_SMET_GOES_INSIDE',['../d4/dbe/UnarySmET_8hpp.html#abaa859df3e273c5c021d99c530b94589',1,'UnarySmET.hpp']]],
   ['unary_5fsmet_5fgoes_5fon_5flhs',['UNARY_SMET_GOES_ON_LHS',['../d4/dbe/UnarySmET_8hpp.html#a1dfb49f19c736caadea33ed0c90fba14',1,'UnarySmET.hpp']]],
   ['unaryminus_2ehpp',['UnaryMinus.hpp',['../d2/dad/UnaryMinus_8hpp.html',1,'']]],
@@ -10,6 +13,7 @@ var searchData=
   ['unarysmet_3c_20conjer_3c_20_5fref_20_3e_20_3e',['UnarySmET&lt; Conjer&lt; _Ref &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
   ['unarysmet_3c_20tens_3c_20tk_2c_20fund_20_3e_20_3e',['UnarySmET&lt; Tens&lt; TK, Fund &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
   ['unarysmet_3c_20transposer_3c_20_5fref_20_3e_20_3e',['UnarySmET&lt; Transposer&lt; _Ref &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
+  ['unarysmet_3c_20uminuser_3c_20_5fref_20_3e_20_3e',['UnarySmET&lt; UMinuser&lt; _Ref &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
   ['unarysmet_3c_20wrapper_3c_20_5fref_20_3e_20_3e',['UnarySmET&lt; Wrapper&lt; _Ref &gt; &gt;',['../d2/dc5/structSUNphi_1_1UnarySmET.html',1,'SUNphi']]],
   ['universal_5freference_5fconstructor_5fof_5fwrapper_5fdisable',['UNIVERSAL_REFERENCE_CONSTRUCTOR_OF_WRAPPER_DISABLE',['../d2/d7d/UniversalReferences_8hpp.html#a689db65b3412a64c1efda859982934ee',1,'UniversalReferences.hpp']]],
   ['universalreferences_2ehpp',['UniversalReferences.hpp',['../d2/d7d/UniversalReferences_8hpp.html',1,'']]],

@@ -254,11 +254,12 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a1824639ee6544c0cdf5522fb36fb3efb">NOT_ASSIGNABLE</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a>(/*! This SmET cannot be assigned */,false)</td></tr>
 <tr class="memdesc:a1824639ee6544c0cdf5522fb36fb3efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SmET as not-assignable. <br/></td></tr>
 <tr class="separator:a1824639ee6544c0cdf5522fb36fb3efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d649e7888c0e097f62cfbab810753df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a5d649e7888c0e097f62cfbab810753df">PROVIDE_SMET_REF</a>(NUM)</td></tr>
-<tr class="memdesc:a5d649e7888c0e097f62cfbab810753df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the reference to the object.  <a href="#a5d649e7888c0e097f62cfbab810753df">More...</a><br/></td></tr>
-<tr class="separator:a5d649e7888c0e097f62cfbab810753df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fb747dea87a85731b3dbc922b2eacd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(LONG_DESCRIPTION,...)</td></tr>
 <tr class="separator:a04fb747dea87a85731b3dbc922b2eacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0203b7e5ee238f67359df47cdcb16b86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0203b7e5ee238f67359df47cdcb16b86"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0203b7e5ee238f67359df47cdcb16b86">NOT_MERGEABLE</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(IntSeq&lt;&gt;)</td></tr>
+<tr class="memdesc:a0203b7e5ee238f67359df47cdcb16b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">States that the class has no mergeable component. <br/></td></tr>
+<tr class="separator:a0203b7e5ee238f67359df47cdcb16b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06fb0fc8754fd17c1c6023183c638c35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a>(DESCRIPTION,...)</td></tr>
 <tr class="memdesc:a06fb0fc8754fd17c1c6023183c638c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getMergedCompsView method, taking Is as template parameter.  <a href="#a06fb0fc8754fd17c1c6023183c638c35">More...</a><br/></td></tr>
 <tr class="separator:a06fb0fc8754fd17c1c6023183c638c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -342,7 +343,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides a getMergedCompsView method, taking Is as template parameter. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00127">127</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,30 +394,7 @@ Variables</h2></td></tr>
 <div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(IntSeq&lt;0,2&gt;);</div>
 </div><!-- fragment --><p> Provides a isAssignable attribute </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5d649e7888c0e097f62cfbab810753df"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PROVIDE_SMET_REF</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NUM</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        \</div>
-<div class="line">  using Ref ## NUM=_Ref ## NUM;             \           \</div>
-<div class="line">  Reference&lt;Ref ## NUM&gt; ref ## NUM</div>
-</div><!-- fragment -->
-<p>Provide the reference to the object. </p>
-
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -448,7 +426,7 @@ Variables</h2></td></tr>
 <p class="enddd">add isAliasing </p>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>

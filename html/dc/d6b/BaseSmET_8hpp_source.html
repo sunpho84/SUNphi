@@ -170,77 +170,73 @@ $(document).ready(function(){initNavTree('dc/d6b/BaseSmET_8hpp_source.html','../
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">  IS_ASSIGNABLE_ATTRIBUTE(,false)</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span>  </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a5d649e7888c0e097f62cfbab810753df">   83</a></span>&#160;<span class="preprocessor">#define PROVIDE_SMET_REF(NUM)               \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">        \</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">  using Ref ## NUM=_Ref ## NUM;             \</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">  Reference&lt;Ref ## NUM&gt; ref ## NUM</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  </div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">  102</a></span>&#160;<span class="preprocessor">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)           \</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">  USING(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">  template &lt;typename Is,                        \</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">  static constexpr void assertMergeableWith()               \</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,&quot;Unable to merge this components&quot;); \</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">  DECLAUTO getMaximallyMergedCompsView()                \</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">    return getMergedCompsView&lt;MergeableComps&gt;();            \</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">// Check that we know which components can be merged</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a49a64ecc853b0499d52474ba566814f4">  121</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(MergeableComps);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="comment">// Check that we know how to check if merge is valid</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aae9bc0ae600b50d77d6300e7b4905e82">  124</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(assertMergeableWith);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  </div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">  127</a></span>&#160;<span class="preprocessor">#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)          \</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">  DESCRIPTION                               \</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">  template &lt;typename Is&gt;       </span><span class="comment">/* IntSeq delimiting the comps groups */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">  DECLAUTO getMergedCompsView() const                   \</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that we can merge as asked */</span><span class="preprocessor">              \</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">    assertMergeableWith&lt;Is&gt;();                      \</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">    __VA_ARGS__;                            \</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="comment">// Check that we know how to get a MergedCompsView</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a3fa6a1b35e4ab4ae10e5f94251cf51be">  140</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(getMergedCompsView);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">  149</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_SMET(...)              \</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(compSize,__VA_ARGS__);       \</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);     \</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);       \</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);      \</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(MergeableComps,__VA_ARGS__);     \</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(assertMergeableWith,__VA_ARGS__);    \</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(getMergedCompsView,__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d1/d31/structSUNphi_1_1SmET.html">  161</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d1/d31/structSUNphi_1_1SmET.html">SmET</a> :</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">public</span> BaseSmET</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  {</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="../../d1/d31/structSUNphi_1_1SmET.html#ac22d4f153382009ebab0980a4668cbba">  164</a></span>&#160;    <a class="code" href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a>(T);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  };</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">   93</a></span>&#160;<span class="preprocessor">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)           \</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">  USING(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">  template &lt;typename Is,                        \</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">  static constexpr void assertMergeableWith()               \</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,&quot;Unable to merge this components&quot;); \</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">  DECLAUTO getMaximallyMergedCompsView()                \</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    return getMergedCompsView&lt;MergeableComps&gt;();            \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a0203b7e5ee238f67359df47cdcb16b86">  112</a></span>&#160;<span class="preprocessor">  #define NOT_MERGEABLE \</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">    PROVIDE_MERGEABLE_COMPS(IntSeq&lt;&gt;)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">// Check that we know which components can be merged</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a49a64ecc853b0499d52474ba566814f4">  116</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(MergeableComps);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// Check that we know how to check if merge is valid</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aae9bc0ae600b50d77d6300e7b4905e82">  119</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(assertMergeableWith);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">  122</a></span>&#160;<span class="preprocessor">#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)          \</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">  DESCRIPTION                               \</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">  template &lt;typename Is&gt;       </span><span class="comment">/* IntSeq delimiting the comps groups */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">  DECLAUTO getMergedCompsView() const                   \</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that we can merge as asked */</span><span class="preprocessor">              \</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">    assertMergeableWith&lt;Is&gt;();                      \</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">    __VA_ARGS__;                            \</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">// Check that we know how to get a MergedCompsView</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a3fa6a1b35e4ab4ae10e5f94251cf51be">  135</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(getMergedCompsView);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">  144</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_SMET(...)              \</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(compSize,__VA_ARGS__);       \</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);     \</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);       \</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(isStoring,__VA_ARGS__);      \</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(MergeableComps,__VA_ARGS__);     \</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(assertMergeableWith,__VA_ARGS__);    \</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(getMergedCompsView,__VA_ARGS__); \</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d1/d31/structSUNphi_1_1SmET.html">  156</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d1/d31/structSUNphi_1_1SmET.html">SmET</a> :</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">public</span> BaseSmET</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d1/d31/structSUNphi_1_1SmET.html#ac22d4f153382009ebab0980a4668cbba">  159</a></span>&#160;    <a class="code" href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a>(T);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  };</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="TypeTraits_8hpp_html_af0ef22f5cfb3da749d24d242c1801cec"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a></div><div class="ttdeci">#define DEFINE_HAS_MEMBER(TAG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00352">TypeTraits.hpp:352</a></div></div>
 <div class="ttc" id="CRTP_8hpp_html"><div class="ttname"><a href="../../d4/dba/CRTP_8hpp.html">CRTP.hpp</a></div><div class="ttdoc">Support for Curiously Recurring Template Pattern. </div></div>
 <div class="ttc" id="CRTP_8hpp_html_a11605cdec950f2c700cec58fd6759882"><div class="ttname"><a href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a></div><div class="ttdeci">#define PROVIDE_CRTP_CAST_OPERATOR(CLASS)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dba/CRTP_8hpp_source.html#l00016">CRTP.hpp:16</a></div></div>
 <div class="ttc" id="SwallowSemicolon_8hpp_html"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html">SwallowSemicolon.hpp</a></div><div class="ttdoc">Macro to swallow a semicolon after a macro. </div></div>
-<div class="ttc" id="structSUNphi_1_1SmET_html"><div class="ttname"><a href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a></div><div class="ttdoc">Smart Expression Templates. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00161">BaseSmET.hpp:161</a></div></div>
+<div class="ttc" id="structSUNphi_1_1SmET_html"><div class="ttname"><a href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a></div><div class="ttdoc">Smart Expression Templates. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00156">BaseSmET.hpp:156</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html">TypeTraits.hpp</a></div><div class="ttdoc">Defines convenient adaptation of the std type_traits library, and extensions useful for the expressio...</div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00314">TypeTraits.hpp:314</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ebinder',['~Binder',['../d6/db9/classSUNphi_1_1Binder.html#a4a84bf907402b66fa7fab10985ae65c7',1,'SUNphi::Binder']]],
-  ['_7etens',['~Tens',['../d8/d1c/classSUNphi_1_1Tens.html#a2d7335f78ae1f8927dbd098a8a615d36',1,'SUNphi::Tens']]],
-  ['_7etensstor',['~TensStor',['../d3/d22/classSUNphi_1_1TensStor.html#adeb4773c826b3618084574a9ad8d37dc',1,'SUNphi::TensStor']]]
+  ['wrap',['wrap',['../d3/dd7/namespaceSUNphi.html#a466b4b388670320c25f051d69f5514f7',1,'SUNphi::wrap(T &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#aa1491c895b9023d418376db2728889c1',1,'SUNphi::wrap(D &amp;&amp;smet)']]],
+  ['wrapper',['Wrapper',['../d1/d77/classSUNphi_1_1Wrapper.html#a9242b50c006372d9f61102a704941ce2',1,'SUNphi::Wrapper']]]
 ];

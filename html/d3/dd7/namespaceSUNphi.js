@@ -62,6 +62,7 @@ var namespaceSUNphi =
     [ "Binder", "d6/db9/classSUNphi_1_1Binder.html", "d6/db9/classSUNphi_1_1Binder" ],
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html", "d2/d24/classSUNphi_1_1Conjer" ],
     [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
+    [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
     [ "BaseUnarySmET", "df/d49/structSUNphi_1_1BaseUnarySmET.html", null ],
     [ "HasMember_ref", "d4/d83/structSUNphi_1_1HasMember__ref.html", "d4/d83/structSUNphi_1_1HasMember__ref" ],
     [ "ConstrainHasMember_ref", "d6/d0c/structSUNphi_1_1ConstrainHasMember__ref.html", null ],
