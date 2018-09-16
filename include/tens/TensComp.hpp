@@ -52,6 +52,9 @@ namespace SUNphi
     template <typename F>                      // Fundamental type
     static constexpr bool isVectorizable=canBeFactorOfSIMDVector<F>(Size);
     
+    /// Provide a dummy name, maybe we can improve it
+    PROVIDE_NAME("TensComp");
+    
   };
   
   /// Defines a \c TensComp, with name TYPE and max N
