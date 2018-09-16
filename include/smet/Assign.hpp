@@ -13,6 +13,8 @@
 namespace SUNphi
 {
   /// Default assigner
+  ///
+  /// \todo Include comp merger, vectorizer and threader
   template <typename T1, 	    // Type of the first SmET to get
 	    typename T2, 	    // Type of the rhs
 	    typename=EnableIf<isSmET<T1> and
@@ -26,7 +28,6 @@ namespace SUNphi
     
     //take note whether the second member is a SmET, then loop on it
     const bool rhsIsSmET=isSmET<T2>;
-    
     
     if constexpr(rhsIsSmET)
       {

@@ -18,10 +18,10 @@ namespace SUNphi
   template <typename _Ref,                                  // Type to be transposed
 	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the bound type
   class Transposer :
-    public BaseTransposer,                        // Inherit from BaseTransposer to detect in expression
+    public BaseTransposer,                         // Inherit from BaseTransposer to detect in expression
     public UnarySmET<Transposer<_Ref>>,            // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                  // Constrain Ref to be a SmET
-    public ConstrainIsTensKind<TK>                // Constrain type TK to be a TensKind
+    public ConstrainIsTensKind<TK>                 // Constrain type TK to be a TensKind
   {
     
   public:
