@@ -77,11 +77,11 @@ namespace SUNphi
   }
   
   /// If the TensComp TC is not present in the TensKind of SMET, returns the twin
-  template <typename Tc,   // Tensor Component searched
+  template <typename Tc,    // Tensor Component searched
 	    typename SMET,  // Type of the expression where to search
  	    typename=ConstrainIsTensComp<Tc>, // Constrain Tc to be a TensComp
- 	    typename=ConstrainIsSmET<SMET>,     // Constrain SMET to be a SmET
-	    typename TK=typename Unqualified<SMET>::Tk,     // Tens Kind of the SmET
+ 	    typename=ConstrainIsSmET<SMET>,   // Constrain SMET to be a SmET
+	    typename TK=typename Unqualified<SMET>::Tk,    // Tens Kind of the SmET
 	    typename TK_TYPES=typename TK::types,          // Types of the tensor kind
 	    bool Has=tupleHasType<Tc,TK_TYPES>>            // Check if the tuple has type
   using CompOrTwinned=Conditional<Has,Tc,TwinCompOf<Tc>>;
