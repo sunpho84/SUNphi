@@ -10,11 +10,11 @@ using namespace SUNphi;
 template <int P,
 	  template <auto> typename F,
 	  auto...>
-class _TruePosOfVariadicClass;
+class _TruePosOfVariadicList;
 
 template <int P,
 	  template <auto> class F>
-class _TruePosOfVariadicClass<P,F>
+class _TruePosOfVariadicList<P,F>
 {
 public:
   using Out=IntSeq<>;
@@ -31,36 +31,34 @@ template <int P,
 	  template <auto> typename F,
 	  auto Head,
 	  auto...Tail>
-class _TruePosOfVariadicClass<P,F,Head,Tail...>
+class _TruePosOfVariadicList<P,F,Head,Tail...>
 {
 public:
   using Out=IntSeqCat<Conditional<F<Head>::res,
 				  IntSeq<P>,
 				  IntSeq<>>,
-                      typename _TruePosOfVariadicClass<P+1,F,Tail...>::Out>;
+                      typename _TruePosOfVariadicList<P+1,F,Tail...>::Out>;
 };
 
 template <template <auto> typename F,
 	  template <auto...> typename V,
 	  auto...List>
-auto TEMP(V<List...>)
+auto _TruePosOfVariadicClass(V<List...>)
 {
-  return typename _TruePosOfVariadicClass<0, F, List...>::Out{};
+  return typename _TruePosOfVariadicList<0, F, List...>::Out{};
 };
 
 template <template <auto> typename F,
 	  typename L>
 //using TruePosOfVariadicClass=typename _TruePosOfVariadicClass<0,F,List...>::Out;
-using TruePosOfVariadicClass=decltype(TEMP<F>(L{}));
+using TruePosOfVariadicClass=decltype(_TruePosOfVariadicClass<F>(L{}));
 
 int main()
 {
-  TEMP<Fun>(IntSeq<0,1,0,10>{});
-  
   using A=TruePosOfVariadicClass<Fun, IntSeq<0,1,0,10>>;
   
   A aa;
-  int aaa=aa;
+  //int aaa=aa;
   
   
   // Check that conj of a non-complex type object is the same of original type
