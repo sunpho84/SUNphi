@@ -7,58 +7,25 @@
 using namespace std;
 using namespace SUNphi;
 
-template <int P,
-	  template <auto> typename F,
-	  auto...>
-class _TruePosOfVariadicList;
-
-template <int P,
-	  template <auto> class F>
-class _TruePosOfVariadicList<P,F>
-{
-public:
-  using Out=IntSeq<>;
-};
-
+/// Functor to check that the template argument is not null
 template <auto I>
-class Fun
+class IsNotNull
 {
 public:
-  static constexpr bool res=(I!=0);
+  /// Result of the check
+  static constexpr bool res=
+    (I!=0);
 };
 
-template <int P,
-	  template <auto> typename F,
-	  auto Head,
-	  auto...Tail>
-class _TruePosOfVariadicList<P,F,Head,Tail...>
-{
-public:
-  using Out=IntSeqCat<Conditional<F<Head>::res,
-				  IntSeq<P>,
-				  IntSeq<>>,
-                      typename _TruePosOfVariadicList<P+1,F,Tail...>::Out>;
-};
-
-template <template <auto> typename F,
-	  template <auto...> typename V,
-	  auto...List>
-auto _TruePosOfVariadicClass(V<List...>)
-{
-  return typename _TruePosOfVariadicList<0, F, List...>::Out{};
-};
-
-template <template <auto> typename F,
-	  typename L>
-//using TruePosOfVariadicClass=typename _TruePosOfVariadicClass<0,F,List...>::Out;
-using TruePosOfVariadicClass=decltype(_TruePosOfVariadicClass<F>(L{}));
-
+//
 int main()
 {
-  using A=TruePosOfVariadicClass<Fun, IntSeq<0,1,0,10>>;
-  
-  A aa;
-  //int aaa=aa;
+  // Check ability to filter
+  {
+    using A=FilterVariadicClass<IsNotNull, IntSeq<0,1,0,10>>;
+    using B=IntSeq<1,3>;
+    STATIC_ASSERT_IS_BASE_OF(A,B);
+  }
   
   
   // Check that conj of a non-complex type object is the same of original type
