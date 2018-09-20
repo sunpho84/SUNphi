@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SUNphi: _TruePosOfVariadicList&lt; P, F, Head, Tail...&gt; Class Template Reference</title>
+<title>SUNphi: SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt; Class Template Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('dc/d38/class__TruePosOfVariadicList_3_01P_00_01F_00_01Head_00_01Tail_8_8_8_4.html','../../');});
+$(document).ready(function(){initNavTree('dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -107,33 +107,40 @@ $(document).ready(function(){initNavTree('dc/d38/class__TruePosOfVariadicList_3_
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="../../d8/def/class__TruePosOfVariadicList_3_01P_00_01F_00_01Head_00_01Tail_8_8_8_4-members.html">List of all members</a>  </div>
+<a href="../../d5/d43/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">_TruePosOfVariadicList&lt; P, F, Head, Tail...&gt; Class Template Reference</div>  </div>
+<div class="title">SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Get the position of elements of a vector, satisfying a condition.  
+ <a href="../../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d77/Filter_8hpp_source.html">Filter.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aff8338517975bc0e7c3e8dcf414bc118"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8338517975bc0e7c3e8dcf414bc118"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Out</b> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39">IntSeqCat</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3abb9888a607b122507a0322bc2d2d8">Conditional</a>&lt; F&lt; Head &gt;::res, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; P &gt;, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;&gt;&gt;, typename <a class="el" href="../../dd/d16/class__TruePosOfVariadicList.html">_TruePosOfVariadicList</a>&lt; P+1, F, Tail...&gt;::Out &gt;</td></tr>
-<tr class="separator:aff8338517975bc0e7c3e8dcf414bc118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86234f2a9d74249c2fdcc23c568d6927"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86234f2a9d74249c2fdcc23c568d6927"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927">Pos</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac3f6250bba03a221a43a990bfb8d5e09">FilterVariadicList</a>&lt; F, List...&gt;</td></tr>
+<tr class="memdesc:a86234f2a9d74249c2fdcc23c568d6927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions where the condition is true. <br/></td></tr>
+<tr class="separator:a86234f2a9d74249c2fdcc23c568d6927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;int P, template&lt; auto &gt; typename F, auto Head, auto... Tail&gt;<br/>
-class _TruePosOfVariadicList&lt; P, F, Head, Tail...&gt;</h3>
+<div class="textblock"><h3>template&lt;template&lt; auto &gt; typename F, template&lt; auto...&gt; typename V, auto... List&gt;<br/>
+class SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;</h3>
 
+<p>Get the position of elements of a vector, satisfying a condition. </p>
 
-<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d77/Filter_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d9/d77/Filter_8hpp_source.html">Filter.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>bin/<a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a></li>
+<li>include/tuple/<a class="el" href="../../d9/d77/Filter_8hpp_source.html">Filter.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dc/d38/class__TruePosOfVariadicList_3_01P_00_01F_00_01Head_00_01Tail_8_8_8_4.html">_TruePosOfVariadicList< P, F, Head, Tail...></a></li>
+    <li class="navelem"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></li><li class="navelem"><a class="el" href="../../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html">_FilterVariadicClass< F, V< List...> ></a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
