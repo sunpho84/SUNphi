@@ -88,7 +88,7 @@ namespace SUNphi
   // Check that a test Conjer is a UnarySmET
   STATIC_ASSERT_IS_UNARY_SMET(Conjer<Tens<TensKind<Compl>,double>>);
   
-  // Build Conjer from conj, if TensKind is complex
+  /// Build Conjer from conj, if TensKind is complex
   template <typename T, 	    // Type of the SmET to get
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   auto conj(T&& smet,               //!< SmET to act upon
