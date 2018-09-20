@@ -5,6 +5,7 @@
 ///
 /// \brief Topical header to include all Tuple files
 
+#include <tuple/Filter.hpp>
 #include <tuple/TupleClass.hpp>
 #include <tuple/TupleElements.hpp>
 #include <tuple/TupleOrder.hpp>
