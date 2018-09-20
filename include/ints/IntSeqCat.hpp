@@ -36,6 +36,20 @@ namespace SUNphi
   
   /// Internal implementation of sequence-of-integer catter.
   ///
+  /// Takes into account catting nothing.
+  ///
+  /// Example:
+  /// \code
+  /// IntSeqCat<>::type test; //IntSeq<>
+  /// \endcode
+  template <>
+  struct _IntSeqCat<>
+  {
+    typedef IntSeq<> type; ///< Internally mapped type
+  };
+  
+  /// Internal implementation of sequence-of-integer catter.
+  ///
   /// Takes into account the general case of an arbitary number of
   /// IntSeq, instantiating recursively the binary cat types.
   ///
