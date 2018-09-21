@@ -93,10 +93,9 @@ var namespaceSUNphi =
     [ "ConstrainTupleTypesAreAllDifferent", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
     [ "ConstrainTupleHasType", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
     [ "ConstrainTupleHasNotType", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
-    [ "_PosOfType", "d8/dcf/structSUNphi_1_1__PosOfType.html", null ],
-    [ "_PosOfType< T, T, Tp...>", "df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html", "df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4" ],
-    [ "_PosOfType< T, U, Tp...>", "db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html", "db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4" ],
-    [ "_PosOfType< T, Tuple< Tp...> >", "de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4.html", "de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4" ],
+    [ "_PosOfType", "d5/d02/classSUNphi_1_1__PosOfType.html", null ],
+    [ "_PosOfType< assertIfNotPresent, T, T, Tp...>", "d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html", "d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4" ],
+    [ "_PosOfType< assertIfNotPresent, T, U, Tp...>", "d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html", "d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4" ],
     [ "_TupleWrap", "d9/d27/structSUNphi_1_1__TupleWrap.html", "d9/d27/structSUNphi_1_1__TupleWrap" ],
     [ "_TupleWrap< Tuple< T...> >", "d7/de9/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_4_01_4.html", "d7/de9/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_4_01_4" ],
     [ "IncapsulatedString", "da/d56/structSUNphi_1_1IncapsulatedString.html", "da/d56/structSUNphi_1_1IncapsulatedString" ]

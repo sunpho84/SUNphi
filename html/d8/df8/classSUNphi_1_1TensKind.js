@@ -10,6 +10,7 @@ var classSUNphi_1_1TensKind =
     [ "AreDynamic", "d8/df8/classSUNphi_1_1TensKind.html#a55e9d277b2e66ecfd8a01e75eabd3bfc", null ],
     [ "DynCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71", null ],
     [ "InsertTrueTwinnedPos", "d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68", null ],
+    [ "isDiagComp", "d8/df8/classSUNphi_1_1TensKind.html#ab1f37a25729e721bd22189bcbb02fdd6", null ],
     [ "isMatrixComp", "d8/df8/classSUNphi_1_1TensKind.html#af3dac751a554c53d24cc7eeef1b43634", null ],
     [ "Merged", "d8/df8/classSUNphi_1_1TensKind.html#a6d5400cb0230cd0bb4aaa773db9d134c", null ],
     [ "Twinned", "d8/df8/classSUNphi_1_1TensKind.html#af34e7a36a2ef8967ff5c4d2d65c21470", null ],

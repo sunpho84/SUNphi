@@ -25,10 +25,9 @@ var hierarchy =
     [ "SUNphi::_IntsUpTo< 0 >", "de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html", null ],
     [ "SUNphi::_IntsUpTo< 1 >", "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html", null ],
     [ "SUNphi::TensKind< T >::_Merged< Is, Ir >", "d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html", null ],
-    [ "SUNphi::_PosOfType< T, Tp >", "d8/dcf/structSUNphi_1_1__PosOfType.html", null ],
-    [ "SUNphi::_PosOfType< T, T, Tp...>", "df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html", null ],
-    [ "SUNphi::_PosOfType< T, Tuple< Tp...> >", "de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4.html", null ],
-    [ "SUNphi::_PosOfType< T, U, Tp...>", "db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html", null ],
+    [ "SUNphi::_PosOfType< assertIfNotPresent, T, Tp >", "d5/d02/classSUNphi_1_1__PosOfType.html", null ],
+    [ "SUNphi::_PosOfType< assertIfNotPresent, T, T, Tp...>", "d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html", null ],
+    [ "SUNphi::_PosOfType< assertIfNotPresent, T, U, Tp...>", "d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html", null ],
     [ "SUNphi::_RangeSeq< Min, Shift, Max >", "d0/dde/structSUNphi_1_1__RangeSeq.html", null ],
     [ "SUNphi::_TensKindFromTuple< TP, class >", "d8/d33/structSUNphi_1_1__TensKindFromTuple.html", null ],
     [ "SUNphi::_TensKindFromTuple< Tuple< Tp...> >", "da/ded/structSUNphi_1_1__TensKindFromTuple_3_01Tuple_3_01Tp_8_8_8_4_01_4.html", null ],
@@ -211,6 +210,9 @@ var hierarchy =
     [ "SUNphi::HasMember_ref1< Type >::Fallback", "d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html", [
       [ "SUNphi::HasMember_ref1< Type >::Derived", "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html", null ]
     ] ],
+    [ "SUNphi::HasMember_isStoring< Type >::Fallback", "d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html", [
+      [ "SUNphi::HasMember_isStoring< Type >::Derived", "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html", null ]
+    ] ],
     [ "SUNphi::HasMember_compSize< Type >::Fallback", "d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html", [
       [ "SUNphi::HasMember_compSize< Type >::Derived", "d4/dee/structSUNphi_1_1HasMember__compSize_1_1Derived.html", null ]
     ] ],
@@ -231,9 +233,6 @@ var hierarchy =
     ] ],
     [ "SUNphi::HasMember_ref2< Type >::Fallback", "d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html", [
       [ "SUNphi::HasMember_ref2< Type >::Derived", "df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_isStoring< Type >::Fallback", "d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html", [
-      [ "SUNphi::HasMember_isStoring< Type >::Derived", "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_Tk< Type >::Fallback", "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html", [
       [ "SUNphi::HasMember_Tk< Type >::Derived", "d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html", null ]

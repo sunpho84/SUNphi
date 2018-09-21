@@ -173,6 +173,10 @@ template&lt;typename Is &gt; </td></tr>
 <tr class="memitem:aac74bdcfef58ce9fffe7e5418efc2f68"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68">InsertTrueTwinnedPos</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">InsertTrueTwinnedPosOfTuple</a>&lt; Is, <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385">types</a> &gt;</td></tr>
 <tr class="memdesc:aac74bdcfef58ce9fffe7e5418efc2f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert in the <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> Is the points where true twinned types are present. <br/></td></tr>
 <tr class="separator:aac74bdcfef58ce9fffe7e5418efc2f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f37a25729e721bd22189bcbb02fdd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1f37a25729e721bd22189bcbb02fdd6"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#ab1f37a25729e721bd22189bcbb02fdd6">isDiagComp</a> = <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;((not <a class="el" href="../../d3/dd7/namespaceSUNphi.html#af57b31d043a9d8e2e78965d67c095dfc">tupleHasType</a>&lt; T, typename <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385">Twinned::types</a> &gt;) or <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b">posOfTypeNotasserting</a>&lt; T, typename <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385">Twinned::types</a> &gt; &gt;=<a class="el" href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">posOfType</a>&lt; T, <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385">types</a> &gt;)...&gt;</td></tr>
+<tr class="memdesc:ab1f37a25729e721bd22189bcbb02fdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report which components are needed to represent the Diagonal. <br/></td></tr>
+<tr class="separator:ab1f37a25729e721bd22189bcbb02fdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d5400cb0230cd0bb4aaa773db9d134c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6d5400cb0230cd0bb4aaa773db9d134c"></a>
 template&lt;typename Is &gt; </td></tr>
 <tr class="memitem:a6d5400cb0230cd0bb4aaa773db9d134c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a6d5400cb0230cd0bb4aaa773db9d134c">Merged</a> = typename <a class="el" href="../../d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html">_Merged</a>&lt; Is, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt; Is::size-1 &gt;&gt;::type</td></tr>
@@ -236,7 +240,7 @@ class SUNphi::TensKind&lt; T &gt;</h3>
 <p>Tensor Kind used to define the structure of a tensor</p>
 <p>The tensor kind defines the list of components of a tensor. It is used to the define the underlying set of components of a <code>TensorStorage</code>, or the returned type of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a55e9d277b2e66ecfd8a01e75eabd3bfc"></a>
 <div class="memitem">
@@ -261,7 +265,7 @@ template&lt;class... T&gt; </div>
 <p>Check that all types are different. </p>
 <p>An integer sequence defining whether the types are dynamic or not </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -294,7 +298,7 @@ template&lt;int NScanned, int... CompsPos&gt; </div>
 <p>Position of dynamical components</p>
 <p>Internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +329,7 @@ template&lt;typename TC , typename  = ConstrainIsTensComp&lt;TC&gt;, typename  =
 </div><!-- fragment -->
 <p>Returns the position of a dynamical size. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +359,7 @@ template&lt;typename F &gt; </div>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Add the possibility that the accumulated size is more than needed, so we can split the outermost component to allow for other kind of optimization</dd></dl>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Include a variation of the vectorization according to the kind of SIMD vector </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00190">190</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00192">192</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +391,7 @@ template&lt;typename Is &gt; </div>
 </div><!-- fragment -->
 <p>Determines whether an <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> is a valid CastMerge type for the <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00273">273</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00280">280</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +419,7 @@ template&lt;class... T&gt; </div>
 </div><!-- fragment -->
 <p>Maximal value of the index, restricted to the statical components. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00217">217</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +449,7 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment -->
 <p>Maximal total submultiple of a list of components. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00217">217</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -476,7 +480,7 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment --><p>Total size of a list of components</p>
 <p>If any component is dynamic, returns DYNAMIC, otherwise the product </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00231">231</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>

@@ -20,7 +20,7 @@ var searchData=
   ['cncol',['cnCol',['../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['CnSpin',['../dd/d61/structSUNphi_1_1CnSpin.html',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
-  ['col',['Col',['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi::Col()'],['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi::col(T &amp;&amp;ref, const int id)']]],
+  ['col',['col',['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi::col(T &amp;&amp;ref, const int id)'],['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi::Col()']]],
   ['compl',['Compl',['../de/dee/structSUNphi_1_1Compl.html',1,'SUNphi']]],
   ['compl_2ehpp',['Compl.hpp',['../d8/de8/Compl_8hpp.html',1,'']]],
   ['comportwinned',['CompOrTwinned',['../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb',1,'SUNphi']]],

@@ -340,13 +340,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html">ConstrainTupleHasNotType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be not contained in a <code>Tuple</code>.  <a href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html">_PosOfType&lt; T, T, Tp...&gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html">_PosOfType&lt; assertIfNotPresent, T, T, Tp...&gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html">_PosOfType&lt; T, U, Tp...&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4.html">_PosOfType&lt; T, Tuple&lt; Tp...&gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html">_PosOfType&lt; assertIfNotPresent, T, U, Tp...&gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d27/structSUNphi_1_1__TupleWrap.html">_TupleWrap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -749,6 +747,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplParams" colspan="2">template&lt;typename Tg , typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ace8b3e99e738342e1db2a2e5e589772c"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ace8b3e99e738342e1db2a2e5e589772c">getAllButType</a> (Tp &amp;&amp;tp)</td></tr>
 <tr class="separator:ace8b3e99e738342e1db2a2e5e589772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f60dd9c8c3a36f1ace90aa6d021d61a"><td class="memTemplParams" colspan="2">template&lt;bool assertIfNotPresent, typename T &gt; </td></tr>
+<tr class="memitem:a9f60dd9c8c3a36f1ace90aa6d021d61a"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">_posOfType</a> (T, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;&gt;)</td></tr>
+<tr class="separator:a9f60dd9c8c3a36f1ace90aa6d021d61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf81841aec54ab650800087a08062bba"><td class="memTemplParams" colspan="2">template&lt;bool assertIfNotPresent, typename T , typename Head , typename... Tail&gt; </td></tr>
+<tr class="memitem:acf81841aec54ab650800087a08062bba"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acf81841aec54ab650800087a08062bba">_posOfType</a> (T, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Head, Tail...&gt;)</td></tr>
+<tr class="separator:acf81841aec54ab650800087a08062bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1024,9 +1028,22 @@ template&lt;typename T , typename Tp &gt; </td></tr>
 <tr class="memitem:af57b31d043a9d8e2e78965d67c095dfc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af57b31d043a9d8e2e78965d67c095dfc">tupleHasType</a> =(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#af877fd927f6e7f68c60742d9fd6eee75">nOfTypeInTuple</a>&lt;T,Tp&gt; &gt;0)</td></tr>
 <tr class="memdesc:af57b31d043a9d8e2e78965d67c095dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <code>Tuple</code> Tp contains the type T. <br/></td></tr>
 <tr class="separator:af57b31d043a9d8e2e78965d67c095dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42431daa05bf31d8155e3d4f216954fd"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:a42431daa05bf31d8155e3d4f216954fd"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a42431daa05bf31d8155e3d4f216954fd">posOfType</a></td></tr>
-<tr class="separator:a42431daa05bf31d8155e3d4f216954fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00fa242ec59da2fc52f750c44b45c16"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">ASSERT_IF_NOT_PRESENT</a></td></tr>
+<tr class="memdesc:aa00fa242ec59da2fc52f750c44b45c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lament the absence of an element.  <a href="#aa00fa242ec59da2fc52f750c44b45c16">More...</a><br/></td></tr>
+<tr class="separator:aa00fa242ec59da2fc52f750c44b45c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">DO_NOT_ASSERT_IF_NOT_PRESENT</a></td></tr>
+<tr class="memdesc:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not lament the absence of an element.  <a href="#aeb97b1097d4d1f1a5729af1c115fabe7">More...</a><br/></td></tr>
+<tr class="separator:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1704de9acff8e8441dbcf1abc9b5cc01"></a>
+static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a> =-1</td></tr>
+<tr class="memdesc:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the absence of an element. <br/></td></tr>
+<tr class="separator:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5207e39daa5c0744e1daedb9a4058c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Tp &gt; </td></tr>
+<tr class="memitem:aab5207e39daa5c0744e1daedb9a4058c"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">posOfType</a></td></tr>
+<tr class="separator:aab5207e39daa5c0744e1daedb9a4058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c671e5f57b29d843f45c2252580e47b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Tp &gt; </td></tr>
+<tr class="memitem:a2c671e5f57b29d843f45c2252580e47b"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b">posOfTypeNotasserting</a></td></tr>
+<tr class="separator:a2c671e5f57b29d843f45c2252580e47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. </p>
@@ -1114,7 +1131,7 @@ template&lt;int N&gt; </div>
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1251,7 @@ template&lt;typename Is , typename Tp &gt; </div>
 <p>Insert in the <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> the position of all true twinned types</p>
 <p>A true twinned type is a type for which the twin is different from itself, and is present in the list </p>
 
-<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1415,7 @@ template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 <p>Defines a variadic type <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> taking the same types of a <code>Tuple</code> </p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1854,7 +1871,7 @@ template&lt;int Pos, int... Ints, typename... T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
 
 </div>
 </div>
@@ -1981,6 +1998,73 @@ template&lt;int In, int Head, int... Tail&gt; </div>
 <p>Internal implementation </p>
 
 <p>Definition at line <a class="el" href="../../d5/d3e/IntListOperations_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../d5/d3e/IntListOperations_8hpp_source.html">IntListOperations.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f60dd9c8c3a36f1ace90aa6d021d61a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool assertIfNotPresent, typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::_posOfType </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tuple&lt;&gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the position of a type in a tuple</p>
+<p>Internal implementation, empty case </p>
+
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf81841aec54ab650800087a08062bba"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool assertIfNotPresent, typename T , typename Head , typename... Tail&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::_posOfType </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tuple&lt; Head, Tail...&gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the position of a type in a tuple</p>
+<p>Internal implementation, matching case </p>
+<p>Check if T is of the same type of Head</p>
+<p>Position in the nested list</p>
+<p>Mark if present in the Tail </p>
+
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -3603,6 +3687,58 @@ template&lt;class Head , class... Tail&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa00fa242ec59da2fc52f750c44b45c16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::ASSERT_IF_NOT_PRESENT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">true</span></div>
+</div><!-- fragment -->
+<p>Lament the absence of an element. </p>
+
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb97b1097d4d1f1a5729af1c115fabe7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::DO_NOT_ASSERT_IF_NOT_PRESENT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">false</span></div>
+</div><!-- fragment -->
+<p>Do not lament the absence of an element. </p>
+
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acfd6aa2ab268d1e6cefeff93fc36af37"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3800,7 +3936,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) compSize</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -4823,11 +4959,11 @@ template&lt;typename F &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a42431daa05bf31d8155e3d4f216954fd"></a>
+<a class="anchor" id="aab5207e39daa5c0744e1daedb9a4058c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class... Args&gt; </div>
+template&lt;typename T , typename Tp &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr int SUNphi::posOfType</td>
@@ -4835,15 +4971,39 @@ template&lt;class... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">    _PosOfType&lt;Args...&gt;::value</div>
-</div><!-- fragment --><p>Gets the position of a type in a tuple or list</p>
+<div class="line">    _posOfType&lt;ASSERT_IF_NOT_PRESENT&gt;(T{},Tp{})</div>
+</div><!-- fragment --><p>Gets the position of a type in a tuple or list, asserting if not present</p>
 <p>Wraps the actual implementation</p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a=PosOfType&lt;int,int,double,char&gt;;        <span class="comment">//0</span></div>
-<div class="line"><span class="keywordtype">int</span> b=PosOfType&lt;int,Tuple&lt;int,double,char&gt;&gt;; <span class="comment">//0</span></div>
-<div class="line"><span class="keywordtype">int</span> c=PosOfType&lt;int,char,double,char&gt;;       <span class="comment">//static_assert (not found)</span></div>
-<div class="line"><span class="keywordtype">int</span> d=PosOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a=posOfType&lt;int,int,double,char&gt;;        <span class="comment">//0</span></div>
+<div class="line"><span class="keywordtype">int</span> b=posOfType&lt;int,Tuple&lt;int,double,char&gt;&gt;; <span class="comment">//0</span></div>
+<div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//static_assert (not found)</span></div>
+<div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00143">143</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c671e5f57b29d843f45c2252580e47b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::posOfTypeNotasserting</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    _posOfType&lt;ASSERT_IF_NOT_PRESENT&gt;(T{},Tp{})</div>
+</div><!-- fragment --><p>Gets the position of a type in a tuple or list, not asserting if not present</p>
+<p>Wraps the actual implementation</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a=posOfType&lt;int,int,double,char&gt;;        <span class="comment">//0</span></div>
+<div class="line"><span class="keywordtype">int</span> b=posOfType&lt;int,Tuple&lt;int,double,char&gt;&gt;; <span class="comment">//0</span></div>
+<div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//NOT_PRESENT</span></div>
+<div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>

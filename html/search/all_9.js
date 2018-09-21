@@ -35,6 +35,7 @@ var searchData=
   ['isbaseof',['isBaseOf',['../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec',1,'SUNphi']]],
   ['isbinarysmet',['isBinarySmET',['../d3/dd7/namespaceSUNphi.html#a51288383610f27f09988c10874db1abd',1,'SUNphi']]],
   ['isconst',['isConst',['../d3/dd7/namespaceSUNphi.html#ad3ef26a5128ca9e06a3af3241349f357',1,'SUNphi']]],
+  ['isdiagcomp',['isDiagComp',['../d8/df8/classSUNphi_1_1TensKind.html#ab1f37a25729e721bd22189bcbb02fdd6',1,'SUNphi::TensKind']]],
   ['isdynamic',['isDynamic',['../d1/d96/structSUNphi_1_1TensComp.html#a592ed1584d6f2c9b31f15e8876bc2193',1,'SUNphi::TensComp::isDynamic()'],['../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8',1,'SUNphi::isDynamic()']]],
   ['isfloatingpoint',['isFloatingPoint',['../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d',1,'SUNphi']]],
   ['isfullystatic',['isFullyStatic',['../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837',1,'SUNphi::TensKind']]],

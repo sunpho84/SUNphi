@@ -116,49 +116,123 @@ $(document).ready(function(){initNavTree('de/d2d/TupleOrder_8hpp_source.html','.
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>SUNphi</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class </span>T,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">   18</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class </span>T,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html">   25</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;T,T,Tp...&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    static_assert(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d">hSum</a>&lt;isSame&lt;T,Tp&gt;...&gt; ==0,<span class="stringliteral">&quot;Multiple occurrency of the searched type&quot;</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../df/d42/structSUNphi_1_1__PosOfType_3_01T_00_01T_00_01Tp_8_8_8_4.html#a0cc84e30a4137dfd2d0172b7eb0b06fc">   30</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> value=0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  };</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class </span>T,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">class </span>U,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html">   39</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;T,U,Tp...&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    static_assert(<span class="keyword">sizeof</span>...(Tp),<span class="stringliteral">&quot;Type not found in the list&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../db/da0/structSUNphi_1_1__PosOfType_3_01T_00_01U_00_01Tp_8_8_8_4.html#a762ee68f93a4fe29d3e452f14d459a1a">   44</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> value=1+<a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;T,Tp...&gt;::value;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class </span>T,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4.html">   52</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;T,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;Tp...&gt;&gt;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  {</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../de/da5/structSUNphi_1_1__PosOfType_3_01T_00_01Tuple_3_01Tp_8_8_8_4_01_4.html#a9f594732f550393c6197eab1220b272e">   55</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> value=<a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;T,Tp...&gt;::value;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span>...Args&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  [[ maybe_unused ]]</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a42431daa05bf31d8155e3d4f216954fd">   70</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a42431daa05bf31d8155e3d4f216954fd">posOfType</a>=</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;Args...&gt;::value;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  [[ maybe_unused ]]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">   16</a></span>&#160;  <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">ASSERT_IF_NOT_PRESENT</a>=</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  [[ maybe_unused ]]</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">   22</a></span>&#160;  <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">DO_NOT_ASSERT_IF_NOT_PRESENT</a>=</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">   26</a></span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>=-1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> assertIfNotPresent,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">class </span>T,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">   34</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> assertIfNotPresent,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">class </span>T,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html">   43</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;assertIfNotPresent,T,T,Tp...&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Assert multiple occurrency</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    static_assert(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d">hSum</a>&lt;isSame&lt;T,Tp&gt;...&gt; ==0,<span class="stringliteral">&quot;Multiple occurrency of the searched type&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html#aaa79dc7c7b0a7bbebf2ac9baa1590bc2">   51</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> value=</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> assertIfNotPresent,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">class </span>T,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">class </span>U,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">class</span>...Tp&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html">   62</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;assertIfNotPresent,T,U,Tp...&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html#a27a9464b0aca185875f6422f96e1613e">   65</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> n=<span class="keyword">sizeof</span>...(Tp);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html#a2ac38f91382b5f07b8c0a5674b23399f">   68</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> empty=(n&gt;=1);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// Assert that the argument are runout</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    static_assert((not assertIfNotPresent) and (not empty),<span class="stringliteral">&quot;Type not found in the list&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html#ae4889ee370609876bab87d1bc1e8a628">   76</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">int</span> value=</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      empty?</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      1+<a class="code" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a>&lt;assertIfNotPresent,T,Tp...&gt;::value;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> assertIfNotPresent,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">   87</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">_posOfType</a>(T,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;&gt;</a>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Return NOT_PRESENT or assert if empty</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    static_assert(assertIfNotPresent==<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">DO_NOT_ASSERT_IF_NOT_PRESENT</a>,<span class="stringliteral">&quot;Type not found in the list&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> assertIfNotPresent,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">typename</span> T,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">typename</span> Head,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">typename</span>...Tail&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#acf81841aec54ab650800087a08062bba">  102</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">_posOfType</a>(T,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;Head,Tail...&gt;</a>)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    constexpr <span class="keywordtype">bool</span> isHead=</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      isSame&lt;T,Head&gt;;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    constexpr <span class="keywordtype">int</span> posInTail=</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      _posOfType&lt;DO_NOT_ASSERT_IF_NOT_PRESENT&gt;(T{},<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;Tail...&gt;{});</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    constexpr <span class="keywordtype">bool</span> isInTail=</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      posInTail!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// Matching case</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> constexpr(isHead)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    static_assert(not isInTail,<span class="stringliteral">&quot;Multiple case present!&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">if</span> constexpr(isInTail)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;     <span class="keywordflow">return</span> 1+posInTail;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  };</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  [[ maybe_unused ]]</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">  143</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">posOfType</a>=</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    _posOfType&lt;ASSERT_IF_NOT_PRESENT&gt;(T{},Tp{});</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keyword">typename</span> Tp&gt;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  [[ maybe_unused ]]</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b">  159</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b">posOfTypeNotasserting</a>=</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    _posOfType&lt;ASSERT_IF_NOT_PRESENT&gt;(T{},Tp{});</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceSUNphi_html_a1704de9acff8e8441dbcf1abc9b5cc01"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">SUNphi::NOT_PRESENT</a></div><div class="ttdeci">static constexpr int NOT_PRESENT</div><div class="ttdoc">Mark the absence of an element. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00026">TupleOrder.hpp:26</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a9f60dd9c8c3a36f1ace90aa6d021d61a"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">SUNphi::_posOfType</a></div><div class="ttdeci">constexpr int _posOfType(T, Tuple&lt;&gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00087">TupleOrder.hpp:87</a></div></div>
 <div class="ttc" id="TupleClass_8hpp_html"><div class="ttname"><a href="../../d1/d31/TupleClass_8hpp.html">TupleClass.hpp</a></div><div class="ttdoc">Define Tuple. </div></div>
+<div class="ttc" id="namespaceSUNphi_html_aa00fa242ec59da2fc52f750c44b45c16"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">SUNphi::ASSERT_IF_NOT_PRESENT</a></div><div class="ttdeci">static constexpr bool ASSERT_IF_NOT_PRESENT</div><div class="ttdoc">Lament the absence of an element. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00016">TupleOrder.hpp:16</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_aab5207e39daa5c0744e1daedb9a4058c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">SUNphi::posOfType</a></div><div class="ttdeci">constexpr int posOfType</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00143">TupleOrder.hpp:143</a></div></div>
+<div class="ttc" id="classSUNphi_1_1__PosOfType_html"><div class="ttname"><a href="../../d5/d02/classSUNphi_1_1__PosOfType.html">SUNphi::_PosOfType</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00034">TupleOrder.hpp:34</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a08e4ecccf0f9751e631c2660e41e088d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d">SUNphi::hSum</a></div><div class="ttdeci">constexpr int hSum</div><div class="ttdoc">Sum of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00025">IntListOperations.hpp:25</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a2c671e5f57b29d843f45c2252580e47b"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b">SUNphi::posOfTypeNotasserting</a></div><div class="ttdeci">constexpr int posOfTypeNotasserting</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00159">TupleOrder.hpp:159</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_aeb97b1097d4d1f1a5729af1c115fabe7"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">SUNphi::DO_NOT_ASSERT_IF_NOT_PRESENT</a></div><div class="ttdeci">static constexpr bool DO_NOT_ASSERT_IF_NOT_PRESENT</div><div class="ttdoc">Do not lament the absence of an element. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00022">TupleOrder.hpp:22</a></div></div>
 <div class="ttc" id="Ranges_8hpp_html"><div class="ttname"><a href="../../dd/d15/Ranges_8hpp.html">Ranges.hpp</a></div><div class="ttdoc">Provide range creators. </div></div>
-<div class="ttc" id="structSUNphi_1_1__PosOfType_html"><div class="ttname"><a href="../../d8/dcf/structSUNphi_1_1__PosOfType.html">SUNphi::_PosOfType</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00018">TupleOrder.hpp:18</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8bd2374a8eb13af54ead4b5e2e8558c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">SUNphi::Tuple</a></div><div class="ttdeci">std::tuple&lt; Tp...&gt; Tuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00020">TupleClass.hpp:20</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_a42431daa05bf31d8155e3d4f216954fd"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a42431daa05bf31d8155e3d4f216954fd">SUNphi::posOfType</a></div><div class="ttdeci">constexpr int posOfType</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d2d/TupleOrder_8hpp_source.html#l00070">TupleOrder.hpp:70</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

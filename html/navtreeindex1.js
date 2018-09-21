@@ -140,6 +140,7 @@ var NAVTREEINDEX1 =
 "d4/df5/SUN_8hpp.html#acdce53faa1c2c790355655aa46c7175c":[3,0,2,3,4,5],
 "d4/df5/SUN_8hpp.html#aeea08fdb768379f4f657584f4f0ab64d":[3,0,2,3,4,13],
 "d4/df5/SUN_8hpp_source.html":[3,0,2,3,4],
+"d5/d02/classSUNphi_1_1__PosOfType.html":[2,0,0,93],
 "d5/d33/structSUNphi_1_1ConstrainHasMember__getMergedCompsView.html":[2,0,0,52],
 "d5/d3b/Inline_8hpp.html":[3,0,2,8,0],
 "d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a":[3,0,2,8,0,0],
@@ -158,6 +159,8 @@ var NAVTREEINDEX1 =
 "d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,0,1,5],
 "d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9],
 "d5/d3e/IntListOperations_8hpp_source.html":[3,0,2,0,1],
+"d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html":[2,0,0,94],
+"d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html#aaa79dc7c7b0a7bbebf2ac9baa1590bc2":[2,0,0,94,0],
 "d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,2,2],
 "d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d":[3,0,2,2,2,1],
 "d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0":[3,0,2,2,2,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "d7/d03/structSUNphi_1_1HasMember__Tk.html#a0346cd977fe78497daf641c1bfb0b255":[2,0,0,41,4],
 "d7/d03/structSUNphi_1_1HasMember__Tk.html#a3427456e0d672c2e65172d131ffd28e2":[2,0,0,41,6],
 "d7/d03/structSUNphi_1_1HasMember__Tk.html#a4159c3a01d6238078e80e063255a19fa":[2,0,0,41,3],
-"d7/d03/structSUNphi_1_1HasMember__Tk.html#a7b3d1c44ce09a1fce472eab67ab3b000":[2,0,0,41,5],
-"d7/d03/structSUNphi_1_1HasMember__Tk.html#ab32332d8dda8234804c02966fb34ca58":[2,0,0,41,7],
-"d7/d08/structSUNphi_1_1TwinTensCompOf.html":[2,0,0,81],
-"d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html":[2,0,0,38]
+"d7/d03/structSUNphi_1_1HasMember__Tk.html#a7b3d1c44ce09a1fce472eab67ab3b000":[2,0,0,41,5]
 };

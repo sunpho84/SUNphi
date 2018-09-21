@@ -9,5 +9,6 @@ var searchData=
   ['intseqfirstn',['IntSeqFirstN',['../d3/dd7/namespaceSUNphi.html#a0a9b8c90e309f5bde54d2b81863a5177',1,'SUNphi']]],
   ['intseqofsamenumb',['IntSeqOfSameNumb',['../d3/dd7/namespaceSUNphi.html#ae68028b37126a321ff9f863825618e79',1,'SUNphi']]],
   ['intsupto',['IntsUpTo',['../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b',1,'SUNphi']]],
+  ['isdiagcomp',['isDiagComp',['../d8/df8/classSUNphi_1_1TensKind.html#ab1f37a25729e721bd22189bcbb02fdd6',1,'SUNphi::TensKind']]],
   ['ismatrixcomp',['isMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#af3dac751a554c53d24cc7eeef1b43634',1,'SUNphi::TensKind']]]
 ];
