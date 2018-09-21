@@ -7,26 +7,31 @@
 using namespace std;
 using namespace SUNphi;
 
-/// Functor to check that the template argument is not null
-template <auto I>
-class IsNotNull
-{
-public:
-  /// Result of the check
-  static constexpr bool res=
-    (I!=0);
-};
 
 //
 int main()
 {
   // Check ability to filter
   {
-    using A=FilterVariadicClass<IsNotNull, IntSeq<0,1,0,10>>;
+    using A=FilterVariadicClassPos<IsNotNull, IntSeq<0,1,0,10>>;
     using B=IntSeq<1,3>;
     STATIC_ASSERT_IS_BASE_OF(A,B);
   }
-  
+
+  {
+    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using A=IntSeq<1,0,1>;
+    using B=MyTk::IsMatrixComp;
+    STATIC_ASSERT_IS_BASE_OF(A,B);
+    
+    using F=MyTk::DiagComps;
+    
+    
+    
+    using G=TensKind<RwCol,Spin>;
+    STATIC_ASSERT_IS_BASE_OF(G,F);
+    
+  }
   
   // Check that conj of a non-complex type object is the same of original type
   {
