@@ -8,7 +8,7 @@ var classSUNphi_1_1TensKind =
     [ "TensCompsListMerged< IntSeq< IComps...> >", "de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4.html", "de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4" ],
     [ "AllButType", "d8/df8/classSUNphi_1_1TensKind.html#aad1e33d53335ae4f28cb9be6264bcef4", null ],
     [ "AreDynamic", "d8/df8/classSUNphi_1_1TensKind.html#a55e9d277b2e66ecfd8a01e75eabd3bfc", null ],
-    [ "DiagComps", "d8/df8/classSUNphi_1_1TensKind.html#ac59a6957ffde550ac2838175ec67c3aa", null ],
+    [ "Diag", "d8/df8/classSUNphi_1_1TensKind.html#a746264a990ada66a174d8f8d6778aa72", null ],
     [ "DiagCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#a5f54c860b4ac50f95ca650872aded78c", null ],
     [ "DynCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71", null ],
     [ "InsertTrueTwinnedPos", "d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68", null ],
