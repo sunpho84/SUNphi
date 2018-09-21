@@ -10,65 +10,155 @@
 
 namespace SUNphi
 {
+  /// Lament the absence of an element
+  [[ maybe_unused ]]
+  static constexpr bool
+  ASSERT_IF_NOT_PRESENT=
+    true;
+  
+  /// Do not lament the absence of an element
+  [[ maybe_unused ]]
+  static constexpr bool
+  DO_NOT_ASSERT_IF_NOT_PRESENT=
+    false;
+  
+  /// Mark the absence of an element
+  static constexpr int NOT_PRESENT=-1;
+  
   /// Gets the position of a type in a list
   ///
   /// Forward definition
-  template <class T,
+  template <bool assertIfNotPresent,
+	    class T,
 	    class...Tp>
-  struct _PosOfType;
+  class _PosOfType;
   
   /// Gets the position of a type in a list
   ///
   /// Case of matching type
-  template <class T,
+  /// \todo simplify with Conditional, or if constexpr
+  template <bool assertIfNotPresent,
+	    class T,
 	    class...Tp>
-  struct _PosOfType<T,T,Tp...>
+  class _PosOfType<assertIfNotPresent,T,T,Tp...>
   {
+    // Assert multiple occurrency
     static_assert(hSum<isSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
     
+  public:
+    
     /// Set the position to 0, the first of the list
-    static constexpr int value=0;
+    static constexpr int value=
+      0;
   };
   
   /// Gets the position of a type in a list
   ///
   /// Case of non-matching type, instantiate iterativerly the searcher
-  template <class T,
+  template <bool assertIfNotPresent,
+	    class T,
 	    class U,
 	    class...Tp>
-  struct _PosOfType<T,U,Tp...>
+  class _PosOfType<assertIfNotPresent,T,U,Tp...>
   {
-    static_assert(sizeof...(Tp),"Type not found in the list");
+    /// Keep track of the number of elements still present
+    static constexpr int n=sizeof...(Tp);
+    
+    /// Check if empty list
+    static constexpr bool empty=(n>=1);
+    
+    // Assert that the argument are runout
+    static_assert((not assertIfNotPresent) and (not empty),"Type not found in the list");
+    
+  public:
     
     /// Set the position to one more than the nested value
-    static constexpr int value=1+_PosOfType<T,Tp...>::value;
+    static constexpr int value=
+      empty?
+      NOT_PRESENT:
+      1+_PosOfType<assertIfNotPresent,T,Tp...>::value;
   };
   
   /// Gets the position of a type in a tuple
   ///
-  /// Wraps the ordinary list searcher
-  template <class T,
-	    class...Tp>
-  struct _PosOfType<T,Tuple<Tp...>>
+  /// Internal implementation, empty case
+  template <bool assertIfNotPresent,
+	    typename T>
+  constexpr int _posOfType(T,Tuple<>)
   {
-    /// Position inside the list
-    static constexpr int value=_PosOfType<T,Tp...>::value;
+    // Return NOT_PRESENT or assert if empty
+    static_assert(assertIfNotPresent==DO_NOT_ASSERT_IF_NOT_PRESENT,"Type not found in the list");
+    
+    return NOT_PRESENT;
+  }
+  
+  /// Gets the position of a type in a tuple
+  ///
+  /// Internal implementation, matching case
+  template <bool assertIfNotPresent,
+	    typename T,
+	    typename Head,
+	    typename...Tail>
+  constexpr int _posOfType(T,Tuple<Head,Tail...>)
+  {
+    /// Check if T is of the same type of Head
+    constexpr bool isHead=
+      isSame<T,Head>;
+    
+    /// Position in the nested list
+    constexpr int posInTail=
+      _posOfType<DO_NOT_ASSERT_IF_NOT_PRESENT>(T{},Tuple<Tail...>{});
+    
+    /// Mark if present in the Tail
+    constexpr bool isInTail=
+      posInTail!=NOT_PRESENT;
+    
+    // Matching case
+    if constexpr(isHead)
+      {
+	static_assert(not isInTail,"Multiple case present!");
+	
+	return 0;
+      }
+    else
+      if constexpr(isInTail)
+	 return 1+posInTail;
+      else
+	return NOT_PRESENT;
   };
   
-  /// Gets the position of a type in a tuple or list
+  /// Gets the position of a type in a tuple or list, asserting if not present
   ///
   /// Wraps the actual implementation
   ///
   /// \code
-  /// int a=PosOfType<int,int,double,char>;        //0
-  /// int b=PosOfType<int,Tuple<int,double,char>>; //0
-  /// int c=PosOfType<int,char,double,char>;       //static_assert (not found)
-  /// int d=PosOfType<int,int,int,char>;           //static_assert (multiple occurency)
+  /// int a=posOfType<int,int,double,char>;        //0
+  /// int b=posOfType<int,Tuple<int,double,char>>; //0
+  /// int c=posOfType<int,char,double,char>;       //static_assert (not found)
+  /// int d=posOfType<int,int,int,char>;           //static_assert (multiple occurency)
   /// \endcode
-  template <class...Args>
+  template <typename T,
+	    typename Tp>
   [[ maybe_unused ]]
   constexpr int posOfType=
-    _PosOfType<Args...>::value;
+    _posOfType<ASSERT_IF_NOT_PRESENT>(T{},Tp{});
+  
+  /// Gets the position of a type in a tuple or list, not asserting if not present
+  ///
+  /// Wraps the actual implementation
+  ///
+  /// \code
+  /// int a=posOfType<int,int,double,char>;        //0
+  /// int b=posOfType<int,Tuple<int,double,char>>; //0
+  /// int c=posOfType<int,char,double,char>;       //NOT_PRESENT
+  /// int d=posOfType<int,int,int,char>;           //static_assert (multiple occurency)
+  /// \endcode
+  template <typename T,
+	    typename Tp>
+  [[ maybe_unused ]]
+  constexpr int posOfTypeNotasserting=
+    _posOfType<ASSERT_IF_NOT_PRESENT>(T{},Tp{});
+
 }
 
 #endif
