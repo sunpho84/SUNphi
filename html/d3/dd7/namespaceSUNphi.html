@@ -321,6 +321,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html">_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of elements of a vector, satisfying a condition.  <a href="../../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4a/structSUNphi_1_1IsNotNull.html">IsNotNull</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filterer which check non-nullity of its parameter.  <a href="../../d5/d4a/structSUNphi_1_1IsNotNull.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/structSUNphi_1_1__isTuple.html">_isTuple</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dd2/structSUNphi_1_1__isTuple_3_01Tuple_3_01Tp_8_8_8_4_01_4.html">_isTuple&lt; Tuple&lt; Tp...&gt; &gt;</a></td></tr>
@@ -461,9 +464,9 @@ template&lt;typename Tc , typename SMET , typename  = ConstrainIsTensComp&lt;Tc&
 <tr class="memitem:ac3f6250bba03a221a43a990bfb8d5e09"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto &gt; typename F, auto... T&gt; </td></tr>
 <tr class="memitem:ac3f6250bba03a221a43a990bfb8d5e09"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac3f6250bba03a221a43a990bfb8d5e09">FilterVariadicList</a> = typename <a class="el" href="../../d0/d16/classSUNphi_1_1__FilterVariadicList.html">_FilterVariadicList</a>&lt; F, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac6a4b17d20c20aa9fa3428f1233d6190">RangeSeq</a>&lt; 0, 1, sizeof...(T)&gt;, T...&gt;::Res</td></tr>
 <tr class="separator:ac3f6250bba03a221a43a990bfb8d5e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1ba4fb3652b7446db2187b09408b51"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto &gt; typename F, typename L &gt; </td></tr>
-<tr class="memitem:a3f1ba4fb3652b7446db2187b09408b51"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3f1ba4fb3652b7446db2187b09408b51">FilterVariadicClass</a> = typename <a class="el" href="../../d7/df6/classSUNphi_1_1__FilterVariadicClass.html">_FilterVariadicClass</a>&lt; F, L &gt;::Pos</td></tr>
-<tr class="separator:a3f1ba4fb3652b7446db2187b09408b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732dd7fc5ab30528272c05ec74b03fa3"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto &gt; typename F, typename L &gt; </td></tr>
+<tr class="memitem:a732dd7fc5ab30528272c05ec74b03fa3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a732dd7fc5ab30528272c05ec74b03fa3">FilterVariadicClassPos</a> = typename <a class="el" href="../../d7/df6/classSUNphi_1_1__FilterVariadicClass.html">_FilterVariadicClass</a>&lt; F, L &gt;::Pos</td></tr>
+<tr class="separator:a732dd7fc5ab30528272c05ec74b03fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8bd2374a8eb13af54ead4b5e2e8558c"><td class="memTemplParams" colspan="2">template&lt;class... Tp&gt; </td></tr>
 <tr class="memitem:ae8bd2374a8eb13af54ead4b5e2e8558c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a> = std::tuple&lt; Tp...&gt;</td></tr>
 <tr class="separator:ae8bd2374a8eb13af54ead4b5e2e8558c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1125,7 +1128,7 @@ template&lt;int N&gt; </div>
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1163,32 +1166,25 @@ template&lt;bool B, typename T  = void&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a3f1ba4fb3652b7446db2187b09408b51"></a>
+<a class="anchor" id="a732dd7fc5ab30528272c05ec74b03fa3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;template&lt; auto &gt; typename F, typename L &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3f1ba4fb3652b7446db2187b09408b51">SUNphi::FilterVariadicClass</a> = typedef typename <a class="el" href="../../d7/df6/classSUNphi_1_1__FilterVariadicClass.html">_FilterVariadicClass</a>&lt;F,L&gt;::Pos</td>
+          <td class="memname">using <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a732dd7fc5ab30528272c05ec74b03fa3">SUNphi::FilterVariadicClassPos</a> = typedef typename <a class="el" href="../../d7/df6/classSUNphi_1_1__FilterVariadicClass.html">_FilterVariadicClass</a>&lt;F,L&gt;::Pos</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Get the position of elements of a vector, satisfying a condition</p>
 <p>Gets a vector-like incapsulated list of variables, and returns a SeqInt containing the position of those that satisfy a certain condition.</p>
-<p>Example: </p>
+<p>Example:</p>
 <div class="fragment"><div class="line"> :</div>
-<div class="line"><span class="keyword">template</span> &lt;auto I&gt;</div>
-<div class="line"><span class="keyword">class </span><a class="code" href="../../d7/dc1/classIsNotNull.html">IsNotNull</a></div>
-<div class="line">   {</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">     <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> res=(I!=0);</div>
-<div class="line">   };</div>
 <div class="line"></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line">FilterVariadicClass&lt;IsNotNull,IntSeq&lt;0,1,0,10&gt;&gt;; <span class="comment">// IntSeq&lt;0,3&gt;;</span></div>
+<div class="line">FilterVariadicClassPos&lt;IsNotNull,IntSeq&lt;0,1,0,10&gt;&gt;; <span class="comment">// IntSeq&lt;0,3&gt;;</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d9/d77/Filter_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../d9/d77/Filter_8hpp_source.html">Filter.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d77/Filter_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../d9/d77/Filter_8hpp_source.html">Filter.hpp</a>.</p>
 
 </div>
 </div>
@@ -1409,7 +1405,7 @@ template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 <p>Defines a variadic type <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> taking the same types of a <code>Tuple</code> </p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -3930,7 +3926,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) compSize</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
