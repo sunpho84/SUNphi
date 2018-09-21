@@ -78,22 +78,27 @@ namespace SUNphi
   /// condition.
   ///
   /// Example:
-  /// \code:
-  /// template <auto I>
-  /// class IsNotNull
-  ///    {
-  ///     public:
-  ///      static constexpr bool res=(I!=0);
-  ///    };
   ///
-  /// //
-  /// FilterVariadicClass<IsNotNull,IntSeq<0,1,0,10>>; // IntSeq<0,3>;
+  /// \code:
+  ///
+  /// FilterVariadicClassPos<IsNotNull,IntSeq<0,1,0,10>>; // IntSeq<0,3>;
   ///
   /// \endcode
   template <template <auto> typename F,    // Rule to apply
 	    typename L>                    // Class containing the types
-  using FilterVariadicClass=
+  using FilterVariadicClassPos=
     typename _FilterVariadicClass<F,L>::Pos;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Filterer which check non-nullity of its parameter
+  template <auto I>
+  struct IsNotNull
+     {
+       /// Result of the check
+       static constexpr bool res=
+	 (I!=0);
+     };
 }
 
 #endif
