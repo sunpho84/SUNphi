@@ -18,6 +18,7 @@
 #include <metaprogramming/TypeTraits.hpp>
 #include <tens/TensComp.hpp>
 #include <tens/TwinsComp.hpp>
+#include <tuple/Filter.hpp>
 #include <tuple/TupleElements.hpp>
 #include <tuple/TupleOrder.hpp>
 
@@ -200,7 +201,8 @@ namespace SUNphi
       TensKind<TwinCompOf<T>...>;
     
     /// Reports through an IntSeq whether a component is Matricial or not
-    using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
+    using IsMatrixComp=
+      IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
     
     /// Insert in the IntSeq Is the points where true twinned types are present
     template <typename Is>
@@ -208,8 +210,14 @@ namespace SUNphi
       InsertTrueTwinnedPosOfTuple<Is,types>;
     
     /// Report which components are needed to represent the Diagonal
-    using isDiagComp=
+    using IsDiagComp=
       IntSeq<((not tupleHasType<T,typename Twinned::types>) or posOfTypeNotasserting<T,typename Twinned::types> >= posOfType<T,types>)...>;
+    
+    using DiagCompsPos=
+      FilterVariadicClassPos<IsNotNull,IsDiagComp>;
+    
+    using DiagComps=
+      TensKindFromTuple<decltype(getIndexed(DiagCompsPos{},types{}))>;
     
     /////////////////////////////////////////////////////////////////
     
@@ -322,6 +330,7 @@ namespace SUNphi
     using Merged=
       typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
   };
+
 }
 
 #endif
