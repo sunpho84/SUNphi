@@ -340,12 +340,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html">ConstrainTupleHasNotType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain a type T to be not contained in a <code>Tuple</code>.  <a href="../../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d02/classSUNphi_1_1__PosOfType.html">_PosOfType</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html">_PosOfType&lt; assertIfNotPresent, T, T, Tp...&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html">_PosOfType&lt; assertIfNotPresent, T, U, Tp...&gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d27/structSUNphi_1_1__TupleWrap.html">_TupleWrap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/de9/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_4_01_4.html">_TupleWrap&lt; Tuple&lt; T...&gt; &gt;</a></td></tr>
@@ -2029,7 +2023,7 @@ template&lt;bool assertIfNotPresent, typename T &gt; </div>
 <p>Gets the position of a type in a tuple</p>
 <p>Internal implementation, empty case </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -2064,7 +2058,7 @@ template&lt;bool assertIfNotPresent, typename T , typename Head , typename... Ta
 <p>Position in the nested list</p>
 <p>Mark if present in the Tail </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -4979,7 +4973,7 @@ template&lt;typename T , typename Tp &gt; </div>
 <div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//static_assert (not found)</span></div>
 <div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00143">143</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -5003,7 +4997,7 @@ template&lt;typename T , typename Tp &gt; </div>
 <div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//NOT_PRESENT</span></div>
 <div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>

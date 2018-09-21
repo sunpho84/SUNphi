@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['derived',['Derived',['../df/da5/structSUNphi_1_1HasMember__ref_1_1Derived.html',1,'SUNphi::HasMember_ref']]],
   ['derived',['Derived',['../da/df2/structSUNphi_1_1HasMember__name_1_1Derived.html',1,'SUNphi::HasMember_name']]],
-  ['derived',['Derived',['../d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html',1,'SUNphi::HasMember_Tk']]],
+  ['derived',['Derived',['../df/da5/structSUNphi_1_1HasMember__ref_1_1Derived.html',1,'SUNphi::HasMember_ref']]],
   ['derived',['Derived',['../d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html',1,'SUNphi::HasMember_isStoring']]],
+  ['derived',['Derived',['../d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html',1,'SUNphi::HasMember_Tk']]],
   ['derived',['Derived',['../df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html',1,'SUNphi::HasMember_ref2']]],
   ['derived',['Derived',['../de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html',1,'SUNphi::HasMember_ref1']]],
   ['derived',['Derived',['../dd/dc6/structSUNphi_1_1HasMember__isAliasing_1_1Derived.html',1,'SUNphi::HasMember_isAliasing']]],

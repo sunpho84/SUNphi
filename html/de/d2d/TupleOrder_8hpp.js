@@ -1,8 +1,5 @@
 var TupleOrder_8hpp =
 [
-    [ "_PosOfType", "d5/d02/classSUNphi_1_1__PosOfType.html", null ],
-    [ "_PosOfType< assertIfNotPresent, T, T, Tp...>", "d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4.html", "d5/d45/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01T_00_01Tp_8_8_8_4" ],
-    [ "_PosOfType< assertIfNotPresent, T, U, Tp...>", "d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4.html", "d8/dba/classSUNphi_1_1__PosOfType_3_01assertIfNotPresent_00_01T_00_01U_00_01Tp_8_8_8_4" ],
     [ "_posOfType", "de/d2d/TupleOrder_8hpp.html#a9f60dd9c8c3a36f1ace90aa6d021d61a", null ],
     [ "_posOfType", "de/d2d/TupleOrder_8hpp.html#acf81841aec54ab650800087a08062bba", null ],
     [ "ASSERT_IF_NOT_PRESENT", "de/d2d/TupleOrder_8hpp.html#aa00fa242ec59da2fc52f750c44b45c16", null ],
