@@ -25,60 +25,6 @@ namespace SUNphi
   /// Mark the absence of an element
   static constexpr int NOT_PRESENT=-1;
   
-  /// Gets the position of a type in a list
-  ///
-  /// Forward definition
-  template <bool assertIfNotPresent,
-	    class T,
-	    class...Tp>
-  class _PosOfType;
-  
-  /// Gets the position of a type in a list
-  ///
-  /// Case of matching type
-  /// \todo simplify with Conditional, or if constexpr
-  template <bool assertIfNotPresent,
-	    class T,
-	    class...Tp>
-  class _PosOfType<assertIfNotPresent,T,T,Tp...>
-  {
-    // Assert multiple occurrency
-    static_assert(hSum<isSame<T,Tp>...> ==0,"Multiple occurrency of the searched type");
-    
-  public:
-    
-    /// Set the position to 0, the first of the list
-    static constexpr int value=
-      0;
-  };
-  
-  /// Gets the position of a type in a list
-  ///
-  /// Case of non-matching type, instantiate iterativerly the searcher
-  template <bool assertIfNotPresent,
-	    class T,
-	    class U,
-	    class...Tp>
-  class _PosOfType<assertIfNotPresent,T,U,Tp...>
-  {
-    /// Keep track of the number of elements still present
-    static constexpr int n=sizeof...(Tp);
-    
-    /// Check if empty list
-    static constexpr bool empty=(n>=1);
-    
-    // Assert that the argument are runout
-    static_assert((not assertIfNotPresent) and (not empty),"Type not found in the list");
-    
-  public:
-    
-    /// Set the position to one more than the nested value
-    static constexpr int value=
-      empty?
-      NOT_PRESENT:
-      1+_PosOfType<assertIfNotPresent,T,Tp...>::value;
-  };
-  
   /// Gets the position of a type in a tuple
   ///
   /// Internal implementation, empty case
