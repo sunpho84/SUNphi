@@ -29,7 +29,8 @@ namespace SUNphi
   /// must be deduced when instatiating the struct, such that int or
   /// long int or whatever is appropriately used!
   template <int N>
-  using DynSizes=std::array<int,N>;
+  using DynSizes=
+    std::array<int,N>;
   
   /// Defines the BaseTensKind type traits
   DEFINE_BASE_TYPE(TensKind);
@@ -46,7 +47,8 @@ namespace SUNphi
   /// must be deduced when instatiating the struct, such that int or
   /// long int or whatever is appropriately used!
   template <int N>
-  using DynSizes=std::array<int,N>;
+  using DynSizes=
+    std::array<int,N>;
   
   // Provide a checker for compSize presence
   DEFINE_HAS_MEMBER(compSize);
@@ -194,7 +196,8 @@ namespace SUNphi
     // using AllAfterType=TensKindFromTuple<decltype(getTail<Tab>(Types{}))>;
     
     /// Get the twinned (transposed) type
-    using Twinned=TensKind<TwinCompOf<T>...>;
+    using Twinned=
+      TensKind<TwinCompOf<T>...>;
     
     /// Reports through an IntSeq whether a component is Matricial or not
     using isMatrixComp=IntSeq<(hasTwin<T> and tupleHasType<T,typename Twinned::types>)...>;
@@ -203,6 +206,10 @@ namespace SUNphi
     template <typename Is>
     using InsertTrueTwinnedPos=
       InsertTrueTwinnedPosOfTuple<Is,types>;
+    
+    /// Report which components are needed to represent the Diagonal
+    using isDiagComp=
+      IntSeq<((not tupleHasType<T,typename Twinned::types>) or posOfTypeNotasserting<T,typename Twinned::types> >= posOfType<T,types>)...>;
     
     /////////////////////////////////////////////////////////////////
     

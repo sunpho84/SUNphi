@@ -41,7 +41,8 @@ namespace SUNphi
   /// Specify the twin component of a given TensComp
   template <class T,                            // Type of which we want to declare the twin
 	    class=ConstrainIsTensComp<T>>       // Constrain T to be a TensComp
-  using TwinCompOf=typename _TwinCompOf<T>::type;
+  using TwinCompOf=
+    typename _TwinCompOf<T>::type;
   
   /// Declare a pair of TensComp twins one of the other
 #define DECLARE_TENS_COMPS_ARE_TWIN(T1,T2)	\

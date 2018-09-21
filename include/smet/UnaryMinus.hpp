@@ -21,8 +21,8 @@ namespace SUNphi
   class UMinuser :
     public BaseUMinuser,                                // Inherit from BaseUMinuser to detect in expression
     public UnarySmET<UMinuser<_Ref>>,                   // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                     // Constrain _Ref to be a SmET
-    public ConstrainIsTensKind<TK>                    // Constrain type TK to be a TensKind
+    public ConstrainIsSmET<_Ref>,                       // Constrain _Ref to be a SmET
+    public ConstrainIsTensKind<TK>                      // Constrain type TK to be a TensKind
   {
     
   public:
