@@ -24,7 +24,7 @@ int main()
     using B=MyTk::IsMatrixComp;
     STATIC_ASSERT_IS_BASE_OF(A,B);
     
-    using F=MyTk::DiagComps;
+    using F=MyTk::Diag;
     
     
     

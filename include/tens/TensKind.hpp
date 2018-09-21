@@ -213,10 +213,12 @@ namespace SUNphi
     using IsDiagComp=
       IntSeq<((not tupleHasType<T,typename Twinned::types>) or posOfTypeNotasserting<T,typename Twinned::types> >= posOfType<T,types>)...>;
     
+    /// Position of Diagonal components
     using DiagCompsPos=
       FilterVariadicClassPos<IsNotNull,IsDiagComp>;
     
-    using DiagComps=
+    /// TensKind corresponding to the types of the diagonal
+    using Diag=
       TensKindFromTuple<decltype(getIndexed(DiagCompsPos{},types{}))>;
     
     /////////////////////////////////////////////////////////////////
