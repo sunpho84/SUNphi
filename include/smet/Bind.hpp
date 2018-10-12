@@ -71,18 +71,20 @@ namespace SUNphi
 	    typename NestedTk=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>            // Types of the tensor kind
   class Binder :
-    public BaseBinder,                             // Inherit from BaseBinderer to detect in expression
+    public BaseBinder,                              // Inherit from BaseBinderer to detect in expression
     public UnarySmET<Binder<TG,_Ref>>,              // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                   // Constrain _Ref to be a SmET
     public ConstrainTupleHasType<TG,NestedTypes>    // Constrain TG to be in the Types of the TensKind
   {
     /// Position inside the reference of the type got by the bounder
-    static constexpr int pos=posOfType<TG,typename NestedTk::types>;
+    static constexpr int pos=
+      posOfType<TG,typename NestedTk::types>;
     
   public:
     
     /// Type to get
-    using Tg=TG;
+    using Tg=
+      TG;
     
     PROVIDE_UNARY_SMET_REF;
     
@@ -129,7 +131,7 @@ namespace SUNphi
     /*!                                                              */	\
     /*! Internal Evaluator, inserting the id at the correct          */	\
     /*! position in the list of args. Check on type B is omitted, as */	\
-    /*! the function is called only from an already checked consmett  */ \
+    /*! the function is called only from an already checked smet     */ \
     template <typename...Args, /* Type of the arguments */		\
 	      int...Head,      /* Position of the first set of args, before insertion */ \
 	      int...Tail>      /* Position of the second set of args, after insertion */ \
