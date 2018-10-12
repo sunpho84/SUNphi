@@ -71,7 +71,7 @@ namespace SUNphi
 	    typename NestedTk=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>            // Types of the tensor kind
   class Binder :
-    public BaseBinder,                              // Inherit from BaseBinderer to detect in expression
+    public BaseBinder,                              // Inherit from BaseBinder to detect in expression
     public UnarySmET<Binder<TG,_Ref>>,              // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                   // Constrain _Ref to be a SmET
     public ConstrainTupleHasType<TG,NestedTypes>    // Constrain TG to be in the Types of the TensKind
