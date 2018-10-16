@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">using</span> B=<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;1,3&gt;</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(A,B);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// Check on Diag</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
@@ -145,12 +145,12 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// Check relBind</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Compl,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Spacetime,CnCol&gt;</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    MyTens c;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    MyTens c(10);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    c.<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html#a8e8eecf97348fe7763a42ad281366f32">eval</a>(1,2,0,1)=1.0594;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    c.eval(1,2,0,1)=1.0594;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">auto</span> b1=relBind&lt;RwCol,CnCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">auto</span> b2=relBind&lt;CnCol,RwCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
@@ -265,7 +265,6 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="ttc" id="namespaceSUNphi_html_a381b663616baca11ca1606eab5ecb637"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">SUNphi::conj</a></div><div class="ttdeci">auto conj(T &amp;&amp;smet, DummyTypes...)</div><div class="ttdoc">Build Conjer from conj, if TensKind is complex. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8f/Conj_8hpp_source.html#l00094">Conj.hpp:94</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a046e6058a8f86ab1b1925e2c2219c98f"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_BASE_OF(BASE, DERIVED)</div><div class="ttdoc">Static assert if DERIVED does not derive from BASE. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00238">TypeTraits.hpp:238</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a0de5ec06b96b71590411d112e8a0c238"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">SUNphi::cnCol</a></div><div class="ttdeci">decltype(auto) cnCol(T &amp;&amp;ref, const int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df5/SUN_8hpp_source.html#l00015">SUN.hpp:15</a></div></div>
-<div class="ttc" id="classSUNphi_1_1Tens_html_a8e8eecf97348fe7763a42ad281366f32"><div class="ttname"><a href="../../d8/d1c/classSUNphi_1_1Tens.html#a8e8eecf97348fe7763a42ad281366f32">SUNphi::Tens::eval</a></div><div class="ttdeci">Fund &amp; eval(const Comps &amp;...comps)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00163">TensClass.hpp:163</a></div></div>
 <div class="ttc" id="SUNphi_8hpp_html"><div class="ttname"><a href="../../d1/d8b/SUNphi_8hpp.html">SUNphi.hpp</a></div><div class="ttdoc">Main include file for the SUNphi library. </div></div>
 <div class="ttc" id="classSUNphi_1_1Tens_html"><div class="ttname"><a href="../../d8/d1c/classSUNphi_1_1Tens.html">SUNphi::Tens</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00025">TensClass.hpp:25</a></div></div>
 <div class="ttc" id="structSUNphi_1_1IntSeq_html"><div class="ttname"><a href="../../da/def/structSUNphi_1_1IntSeq.html">SUNphi::IntSeq</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/df8/IntSeq_8hpp_source.html#l00040">IntSeq.hpp:40</a></div></div>
