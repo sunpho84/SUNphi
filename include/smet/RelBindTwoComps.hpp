@@ -24,20 +24,20 @@ namespace SUNphi
   
   /// Class to bind a component of a SmET
   ///
-  /// The first type is the visible one, the second one is the bound
-  /// (invisible) one
-  template <typename _BoundToType,                                  // TensKind to which bind
-	    typename _BoundType,                                    // TensKind to bind
+  /// The first type is the bound (invisible) one, the second one is
+  /// the free (visible) one
+  template <typename _BoundType,                                    // TensKind to bind
+	    typename _BoundToType,                                  // TensKind to which bind
 	    typename _Ref,                                          // Type of nested SMeT
 	    typename _Ad,                                           // Adapter of the bound component
 	    typename NestedTk=typename RemoveReference<_Ref>::Tk,   // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>          // Types of the tensor kind
   class RelBinder :
     public BaseRelBinder,                                           // Inherit from BaseRelBinder to detect in expression
-    public UnarySmET<RelBinder<_BoundToType,_BoundType,_Ref,_Ad>>,  // Inherit from UnarySmET
+    public UnarySmET<RelBinder<_BoundType,_BoundToType,_Ref,_Ad>>,  // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                                   // Constrain Ref to be a SmET
-    public ConstrainTupleHasType<_BoundToType,NestedTypes>,         // Constrain the bound type to be in the Types of the TensKind
-    public ConstrainTupleHasType<_BoundType,NestedTypes>            // Constrain the type to which to bind to be in the Types of the TensKind
+    public ConstrainTupleHasType<_BoundType,NestedTypes>,           // Constrain the type to which to bind to be in the Types of the TensKind
+    public ConstrainTupleHasType<_BoundToType,NestedTypes>          // Constrain the bound type to be in the Types of the TensKind
   {
     /// Position inside the reference of the TensKind got by the bounder
     static constexpr int boundPos=
@@ -97,8 +97,8 @@ namespace SUNphi
 				    boundToPos,          // Position where to insert
 				    Is,                  // External delimiters
 				    1>;                  // Shift 1 after insertion
-				  auto refMerged=ref.template mergedComps<NestedIs>();
-				  return RelBinder<_BoundToType,_BoundType,_Ad,decltype(refMerged)>(std::move(refMerged),adapter));
+				  auto refMerged=ref.template getMergedCompsView<NestedIs>();
+				  return RelBinder<_BoundType,_BoundToType,decltype(refMerged),_Ad>(std::move(refMerged),adapter));
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
@@ -205,8 +205,8 @@ namespace SUNphi
   ///
   /// Returns a relative binder getting from an unbind expression.
   /// Checks demanded to RelBinder
-  template <typename _BoundToType,                        // TensKind to which bind
-	    typename _BoundType,                          // TensKind to bind
+  template <typename _BoundType,                          // TensKind to bind
+	    typename _BoundToType,                        // TensKind to which bind
 	    typename SMET,                                // Type to bind, deduced from argument
 	    typename _Ad,                                 // Adapter of the bound component
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
@@ -220,10 +220,10 @@ namespace SUNphi
     constexpr bool areTwinnedOfEachOther=
       isSame<TwinCompOf<_BoundToType>,_BoundType>;
     
-    using BoundToType=
-      Conditional<areTwinnedOfEachOther,_BoundToType,CompOrTwinned<_BoundToType,SMET>>;
     using BoundType=
       Conditional<areTwinnedOfEachOther,_BoundType,CompOrTwinned<_BoundType,SMET>>;
+    using BoundToType=
+      Conditional<areTwinnedOfEachOther,_BoundToType,CompOrTwinned<_BoundToType,SMET>>;
     
 #ifdef DEBUG_REL_BINDER
     using namespace std;
@@ -231,7 +231,7 @@ namespace SUNphi
 #endif
     
     // Build the relative binder
-    RelBinder<BoundToType,BoundType,SMET,_Ad> b(forw<SMET>(smet),forw<_Ad>(adapter));
+    RelBinder<BoundType,BoundToType,SMET,_Ad> b(forw<SMET>(smet),forw<_Ad>(adapter));
     
     return b;
   }
