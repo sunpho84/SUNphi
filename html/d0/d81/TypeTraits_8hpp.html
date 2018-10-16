@@ -250,6 +250,16 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">SUNphi::Unqualified</a> = RemoveCV&lt; RemoveReference&lt; T &gt;&gt;</td></tr>
 <tr class="memdesc:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type T without any reference or qualifier. <br/></td></tr>
 <tr class="separator:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8ae981a52d211ee9e56eff9222363c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7f8ae981a52d211ee9e56eff9222363c"></a>
+template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a7f8ae981a52d211ee9e56eff9222363c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c">SUNphi::AddPointer</a> = std::add_pointer_t&lt; F &gt;</td></tr>
+<tr class="memdesc:a7f8ae981a52d211ee9e56eff9222363c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer-version of F. <br/></td></tr>
+<tr class="separator:a7f8ae981a52d211ee9e56eff9222363c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a716ef8de43987727a6f4d784b9b5d4b1"></a>
+template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a716ef8de43987727a6f4d784b9b5d4b1">SUNphi::AddPointerIfFunction</a> = Conditional&lt; isFunction&lt; F &gt;, AddPointer&lt; F &gt;, F &gt;</td></tr>
+<tr class="memdesc:a716ef8de43987727a6f4d784b9b5d4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns F or F* if F is not a function. <br/></td></tr>
+<tr class="separator:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -275,6 +285,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec">SUNphi::isBaseOf</a></td></tr>
 <tr class="memdesc:a9b5295825641bc81667e9a03072512ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether Base is a base class of Derived.  <a href="#a9b5295825641bc81667e9a03072512ec">More...</a><br/></td></tr>
 <tr class="separator:a9b5295825641bc81667e9a03072512ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc6a306ed5696b5085d995ea080c526"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:addc6a306ed5696b5085d995ea080c526"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#addc6a306ed5696b5085d995ea080c526">SUNphi::isFunction</a></td></tr>
+<tr class="memdesc:addc6a306ed5696b5085d995ea080c526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the passed argument is a function.  <a href="#addc6a306ed5696b5085d995ea080c526">More...</a><br/></td></tr>
+<tr class="separator:addc6a306ed5696b5085d995ea080c526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733173cc775b0b0ef9f4cc26c125629d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a733173cc775b0b0ef9f4cc26c125629d"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a733173cc775b0b0ef9f4cc26c125629d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d">SUNphi::isFloatingPoint</a> =std::is_floating_point&lt;T&gt;::value</td></tr>
@@ -335,7 +349,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00314">314</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00334">334</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +381,7 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00352">352</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00372">372</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -397,7 +411,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Assert type T to have member TAG</p>
 <p>Note that you need to have defined DEFINE_HAS_MEMBER before </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00331">331</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00351">351</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

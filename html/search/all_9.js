@@ -39,6 +39,7 @@ var searchData=
   ['isdynamic',['isDynamic',['../d1/d96/structSUNphi_1_1TensComp.html#a592ed1584d6f2c9b31f15e8876bc2193',1,'SUNphi::TensComp::isDynamic()'],['../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8',1,'SUNphi::isDynamic()']]],
   ['isfloatingpoint',['isFloatingPoint',['../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d',1,'SUNphi']]],
   ['isfullystatic',['isFullyStatic',['../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837',1,'SUNphi::TensKind']]],
+  ['isfunction',['isFunction',['../d3/dd7/namespaceSUNphi.html#addc6a306ed5696b5085d995ea080c526',1,'SUNphi']]],
   ['isintegral',['isIntegral',['../d3/dd7/namespaceSUNphi.html#afdbfd0b9e1a6096c9249ee8a8be02c1d',1,'SUNphi']]],
   ['islvalue',['isLvalue',['../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
   ['ismatrixcomp',['IsMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1',1,'SUNphi::TensKind']]],

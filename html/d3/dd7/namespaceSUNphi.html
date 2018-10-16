@@ -429,6 +429,16 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913">Unqualified</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a309c8f787f444f852361c4c5ca5cfe87">RemoveCV</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdfe0d736c1099606a47e63c72238b32">RemoveReference</a>&lt; T &gt;&gt;</td></tr>
 <tr class="memdesc:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type T without any reference or qualifier. <br/></td></tr>
 <tr class="separator:a2cc8a85a94d4b30bda1982ddf49b7913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f8ae981a52d211ee9e56eff9222363c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7f8ae981a52d211ee9e56eff9222363c"></a>
+template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a7f8ae981a52d211ee9e56eff9222363c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c">AddPointer</a> = std::add_pointer_t&lt; F &gt;</td></tr>
+<tr class="memdesc:a7f8ae981a52d211ee9e56eff9222363c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer-version of F. <br/></td></tr>
+<tr class="separator:a7f8ae981a52d211ee9e56eff9222363c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a716ef8de43987727a6f4d784b9b5d4b1"></a>
+template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a716ef8de43987727a6f4d784b9b5d4b1">AddPointerIfFunction</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3abb9888a607b122507a0322bc2d2d8">Conditional</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#addc6a306ed5696b5085d995ea080c526">isFunction</a>&lt; F &gt;, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c">AddPointer</a>&lt; F &gt;, F &gt;</td></tr>
+<tr class="memdesc:a716ef8de43987727a6f4d784b9b5d4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns F or F* if F is not a function. <br/></td></tr>
+<tr class="separator:a716ef8de43987727a6f4d784b9b5d4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9fe79407aaccb0a970eb3bafd31409"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409">Spin</a> = <a class="el" href="../../dd/d61/structSUNphi_1_1CnSpin.html">CnSpin</a></td></tr>
 <tr class="separator:abd9fe79407aaccb0a970eb3bafd31409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdce53faa1c2c790355655aa46c7175c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c">Col</a> = <a class="el" href="../../d0/da2/structSUNphi_1_1CnCol.html">CnCol</a></td></tr>
@@ -871,6 +881,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a9b5295825641bc81667e9a03072512ec"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec">isBaseOf</a></td></tr>
 <tr class="memdesc:a9b5295825641bc81667e9a03072512ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether Base is a base class of Derived.  <a href="#a9b5295825641bc81667e9a03072512ec">More...</a><br/></td></tr>
 <tr class="separator:a9b5295825641bc81667e9a03072512ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc6a306ed5696b5085d995ea080c526"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:addc6a306ed5696b5085d995ea080c526"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#addc6a306ed5696b5085d995ea080c526">isFunction</a></td></tr>
+<tr class="memdesc:addc6a306ed5696b5085d995ea080c526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the passed argument is a function.  <a href="#addc6a306ed5696b5085d995ea080c526">More...</a><br/></td></tr>
+<tr class="separator:addc6a306ed5696b5085d995ea080c526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733173cc775b0b0ef9f4cc26c125629d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a733173cc775b0b0ef9f4cc26c125629d"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a733173cc775b0b0ef9f4cc26c125629d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d">isFloatingPoint</a> =std::is_floating_point&lt;T&gt;::value</td></tr>
@@ -4354,6 +4368,26 @@ template&lt;typename T &gt; </div>
 <p>Returns whether T is const or not. </p>
 
 <p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="addc6a306ed5696b5085d995ea080c526"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isFunction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    std::is_function_v&lt;F&gt;</div>
+</div><!-- fragment -->
+<p>Returns whether the passed argument is a function. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

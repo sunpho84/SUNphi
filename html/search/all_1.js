@@ -2,6 +2,8 @@ var searchData=
 [
   ['absorb_5fduplicated_5funary_5fsmet_5fcall',['ABSORB_DUPLICATED_UNARY_SMET_CALL',['../d4/dbe/UnarySmET_8hpp.html#a96e94085efa30f83348cbb48f403b3c0',1,'UnarySmET.hpp']]],
   ['add',['Add',['../da/def/structSUNphi_1_1IntSeq.html#af4fb1e09becb6a2ea4c6fda6d6e0f565',1,'SUNphi::IntSeq']]],
+  ['addpointer',['AddPointer',['../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c',1,'SUNphi']]],
+  ['addpointeriffunction',['AddPointerIfFunction',['../d3/dd7/namespaceSUNphi.html#a716ef8de43987727a6f4d784b9b5d4b1',1,'SUNphi']]],
   ['adj',['adj',['../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
   ['adj_2ehpp',['Adj.hpp',['../d8/d3a/Adj_8hpp.html',1,'']]],
   ['alignment',['ALIGNMENT',['../d3/dd7/namespaceSUNphi.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],
