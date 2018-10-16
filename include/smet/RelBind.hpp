@@ -238,7 +238,7 @@ namespace SUNphi
     cout<<"Constructing a rel binder for type "<<BoundType::name()<<" to type:"<<BoundToType::name()<<" , storage: "<<getStor(smet)._v<<endl;
 #endif
     
-    // Build the relative binder. The \c decltype is neede to allow
+    // Build the relative binder. The \c decltype is needed to allow
     // non-member function to be passd as adapter, see
     // https://stackoverflow.com/questions/13233213/can-a-function-type-be-a-class-template-parameter
     RelBinder<BoundType,BoundToType,SMET,decltype(adapter)> b(forw<SMET>(smet),forw<_Ad>(adapter));

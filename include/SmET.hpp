@@ -12,7 +12,7 @@
 #include <smet/Bind.hpp>
 #include <smet/Conj.hpp>
 #include <smet/Reference.hpp>
-#include <smet/RelBindTwoComps.hpp>
+#include <smet/RelBind.hpp>
 #include <smet/Transpose.hpp>
 #include <smet/UnarySmET.hpp>
 #include <smet/UnaryMinus.hpp>

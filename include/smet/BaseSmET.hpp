@@ -127,7 +127,7 @@ namespace SUNphi
   // Check that we know how to check if merge is valid
   DEFINE_HAS_MEMBER(assertMergeableWith);
   
-  /// Provides a getMergedCompsView method, taking Is as template parameter
+  /// Provides a \c getMergedCompsView method, taking Is as template parameter
 #define PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER,DESCRIPTION,...) \
   DESCRIPTION								\
   template <typename Is>       /* IntSeq delimiting the comps groups */ \
@@ -140,7 +140,8 @@ namespace SUNphi
     __VA_ARGS__;							\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-
+  
+  /// Provides a const and not const \c getMergedCompsView metod
 #define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
   PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(,DESCRIPTION,__VA_ARGS__);	\
   PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(const,DESCRIPTION,__VA_ARGS__)
