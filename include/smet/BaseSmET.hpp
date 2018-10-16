@@ -119,10 +119,11 @@ namespace SUNphi
   DEFINE_HAS_MEMBER(assertMergeableWith);
   
   /// Provides a getMergedCompsView method, taking Is as template parameter
-#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
+#define PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER,DESCRIPTION,...) \
   DESCRIPTION								\
   template <typename Is>       /* IntSeq delimiting the comps groups */ \
-  DECLAUTO getMergedCompsView() const					\
+  DECLAUTO getMergedCompsView()						\
+    QUALIFIER								\
   {									\
     /* Check that we can merge as asked */				\
     assertMergeableWith<Is>();						\
@@ -130,6 +131,10 @@ namespace SUNphi
     __VA_ARGS__;							\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+
+#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
+  PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(,DESCRIPTION,__VA_ARGS__);	\
+  PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(const,DESCRIPTION,__VA_ARGS__)
   
   // Check that we know how to get a MergedCompsView
   DEFINE_HAS_MEMBER(getMergedCompsView);
