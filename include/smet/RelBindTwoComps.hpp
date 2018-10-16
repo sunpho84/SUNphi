@@ -66,6 +66,10 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<BoundType>;
     
+    /// Position inside the external TensKind to which to bind
+    static constexpr int extBoundToPos=
+      posOfType<_BoundToType,typename Tk::types>;
+    
   private:
     
     /// Position inside the reference of the TensKind got by the bounder
@@ -75,10 +79,6 @@ namespace SUNphi
     /// Position inside the reference of the TensKind to which to bind
     static constexpr int boundToPos=
       posOfType<_BoundToType,typename NestedTk::types>;
-    
-    /// Position inside the external TensKind to which to bind
-    static constexpr int extBoundToPos=
-      posOfType<_BoundToType,typename Tk::types>;
     
     /// Adapter, used to remap the boundTo component
     _Ad adapter;
@@ -103,13 +103,9 @@ namespace SUNphi
       return ref.template compSize<TC>();
     }
     
-    // We remove at boundPos, shift and insert back
-    PROVIDE_MERGEABLE_COMPS(/*! We have to split at the component where we bind */,
-			    InsertInOrderedIntSeq<
-			    extBoundToPos,                                 // Position where to insert, same of where to remove
-			    typename absBinder::MergeableComps,            // Component which would be mergeable if _BoundToType was absolutely fixed
-			    0,       // Shift 0 after insertion
-			    true>);    // Ignore if already present
+    PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE(/*! We have to split at the component where we bind */,
+							 typename absBinder::MergeableComps, /* Component which would be mergeable if _BoundToType was absolutely fixed */
+							 extBoundToPos /* Position where to insert, same of where to remove */);
     
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Insert the position of bound component shifting by 1 afterwards */,
 				  using NestedIs=InsertInOrderedIntSeq<
@@ -244,7 +240,32 @@ namespace SUNphi
     return b;
   }
   
-  #undef REL_BIND_PROTOTYPE
+#undef REL_BIND_PROTOTYPE
+  
+  /// Internal checks
+  namespace _RelBindInternalChecks
+  {
+    DEFINE_TENS_COMP(tc1,Tc1,NTC1,1);
+    
+    DEFINE_TENS_COMP(tc2,Tc2,NTC2,2);
+    
+    /// TensorKind of the expression
+    using Tk=TensKind<Tc1,Tc2>;
+    
+    /// Tensor class of the expression
+    using T=Tens<Tk,double>;
+    
+    /// Function returning the argument
+    template <typename T>
+    T wire(T t) ///< Argument to be returned
+    {
+      return t;
+    }
+    
+    // Check that a test Binder is a UnarySmET
+    //STATIC_ASSERT_IS_UNARY_SMET(RelBinder<Tc1,Tc2,
+    //				T,decltype(wire<int>)>);
+  }
 }
 
 #endif
