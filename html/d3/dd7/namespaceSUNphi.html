@@ -641,12 +641,12 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplParams" colspan="2">template&lt;typename D , TypeIf&lt;(isTransposer&lt; D &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34">conj</a> (D &amp;&amp;smet)</td></tr>
 <tr class="separator:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5a507db1639e3625bbd3a3c4f8a301"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a>)</td></tr>
-<tr class="separator:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memTemplParams" colspan="2">template&lt;typename _BoundType , typename _BoundToType , typename SMET , typename _Ad , typename... DummyTypes&gt; </td></tr>
 <tr class="memitem:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#adba86c04ecaa9d8f2ea0283a310a9725">relBind</a> (SMET &amp;&amp;smet, _Ad &amp;&amp;adapter, DummyTypes...)</td></tr>
 <tr class="separator:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5a507db1639e3625bbd3a3c4f8a301"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a>)</td></tr>
+<tr class="separator:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7204e7e9af503ae6742627523c92c57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7204e7e9af503ae6742627523c92c57"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d5/dd3/classSUNphi_1_1Transposer.html">Transposer</a>)</td></tr>
 <tr class="separator:ae7204e7e9af503ae6742627523c92c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3234,15 +3234,8 @@ template&lt;typename _BoundType , typename _BoundToType , typename SMET , typena
 <p>Bind the component of type <code>_BoundType</code> to <code>_BoundToType</code> </p>
 <p>Returns a relative binder getting from an unbind expression. Checks demanded to <a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a> </p>
 <p>Check that the two components are not twinned of each other </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">smet</td><td>Quantity to bind to </td></tr>
-    <tr><td class="paramname">adapter</td><td>Adapting function </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p>Definition at line <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html">RelBindTwoComps.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html">RelBindTwoComps.hpp</a>.</p>
 
 </div>
 </div>
@@ -3998,7 +3991,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) getMergedCompsView</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>

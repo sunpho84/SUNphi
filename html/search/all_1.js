@@ -2,7 +2,7 @@ var searchData=
 [
   ['absbinder',['absBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#a0aa989f09b7d6199486112fa56ff0963',1,'SUNphi::RelBinder']]],
   ['absorb_5fduplicated_5funary_5fsmet_5fcall',['ABSORB_DUPLICATED_UNARY_SMET_CALL',['../d4/dbe/UnarySmET_8hpp.html#a96e94085efa30f83348cbb48f403b3c0',1,'UnarySmET.hpp']]],
-  ['adapter',['adapter',['../d5/d1c/classSUNphi_1_1RelBinder.html#ad50bd52ef8f66baf12631faa6f7cd069',1,'SUNphi::RelBinder']]],
+  ['adapter',['adapter',['../d5/d1c/classSUNphi_1_1RelBinder.html#ae86c6b2d36af5daab510be07342eaf76',1,'SUNphi::RelBinder']]],
   ['add',['Add',['../da/def/structSUNphi_1_1IntSeq.html#af4fb1e09becb6a2ea4c6fda6d6e0f565',1,'SUNphi::IntSeq']]],
   ['adj',['adj',['../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
   ['adj_2ehpp',['Adj.hpp',['../d8/d3a/Adj_8hpp.html',1,'']]],

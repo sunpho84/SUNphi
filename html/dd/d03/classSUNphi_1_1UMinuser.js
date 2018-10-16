@@ -9,10 +9,11 @@ var classSUNphi_1_1UMinuser =
     [ "eval", "dd/d03/classSUNphi_1_1UMinuser.html#ae78fe3e6e3cc6bd6392d4ef30c586950", null ],
     [ "eval", "dd/d03/classSUNphi_1_1UMinuser.html#a31e8f25728d7115cc8cf188cc3f24c63", null ],
     [ "getMaximallyMergedCompsView", "dd/d03/classSUNphi_1_1UMinuser.html#a63196e3f6664f7d095ad2c9e84b4de2c", null ],
+    [ "getMergedCompsView", "dd/d03/classSUNphi_1_1UMinuser.html#a4e0c85980b45c0e7551783773d10a6ec", null ],
     [ "getMergedCompsView", "dd/d03/classSUNphi_1_1UMinuser.html#a3ec4fd395c4765821e74154cddd60ca3", null ],
     [ "isAliasing", "dd/d03/classSUNphi_1_1UMinuser.html#a331d0d34e24ba777dcc7b0584a8ed671", null ],
-    [ "operator~", "dd/d03/classSUNphi_1_1UMinuser.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
     [ "operator~", "dd/d03/classSUNphi_1_1UMinuser.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
+    [ "operator~", "dd/d03/classSUNphi_1_1UMinuser.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
     [ "isAssignable", "dd/d03/classSUNphi_1_1UMinuser.html#a0da43d3f25ad1fc53c212c7ba921784f", null ],
     [ "isStoring", "dd/d03/classSUNphi_1_1UMinuser.html#af8b5d20e73225e6d1fac4ec973defb91", null ],
     [ "ref", "dd/d03/classSUNphi_1_1UMinuser.html#a2714c241a5d8b9457c9ce84c665f4890", null ]

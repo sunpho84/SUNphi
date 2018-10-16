@@ -11,6 +11,7 @@ var classSUNphi_1_1Tens =
     [ "eval", "d8/d1c/classSUNphi_1_1Tens.html#a8e8eecf97348fe7763a42ad281366f32", null ],
     [ "eval", "d8/d1c/classSUNphi_1_1Tens.html#a20bd935baadd06f4bba16f8e2729de22", null ],
     [ "getMaximallyMergedCompsView", "d8/d1c/classSUNphi_1_1Tens.html#a7dc85bc7841f22a813b898b277de88d2", null ],
+    [ "getMergedCompsView", "d8/d1c/classSUNphi_1_1Tens.html#a2d44ee125daff8857d7a7f3bb54898f9", null ],
     [ "getMergedCompsView", "d8/d1c/classSUNphi_1_1Tens.html#a2328f56454a30c944301e4990680ee60", null ],
     [ "getStor", "d8/d1c/classSUNphi_1_1Tens.html#ac23e95c2d0f6a74b3a63adb03ea1470c", null ],
     [ "getStor", "d8/d1c/classSUNphi_1_1Tens.html#aa5f87da927e0a26d26017b5a3878ddcf", null ],

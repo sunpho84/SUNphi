@@ -1,7 +1,7 @@
 var searchData=
 [
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
-  ['pos',['Pos',['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()'],['../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f',1,'SUNphi::Binder::pos()']]],
+  ['pos',['pos',['../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f',1,'SUNphi::Binder::pos()'],['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()']]],
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#aafb4b03e762017371c5ef7b2244352c0',1,'SUNphi::Conjer']]],
   ['posoftype',['posOfType',['../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c',1,'SUNphi']]],
   ['posoftypenotasserting',['posOfTypeNotasserting',['../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b',1,'SUNphi']]],
@@ -13,10 +13,10 @@ var searchData=
   ['provide_5fcomp_5fsizes_5ffor',['PROVIDE_COMP_SIZES_FOR',['../d4/dbe/UnarySmET_8hpp.html#aa416877caf88a27bf2a4428687ae5a29',1,'UnarySmET.hpp']]],
   ['provide_5fconst_5for_5fnot_5fdefault_5fevaluator',['PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR',['../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad',1,'Bind.hpp']]],
   ['provide_5fconst_5for_5fnot_5fevaluator',['PROVIDE_CONST_OR_NOT_EVALUATOR',['../d2/d8f/Conj_8hpp.html#a93b876eb47322943cd687070d7d9d88f',1,'PROVIDE_CONST_OR_NOT_EVALUATOR():&#160;Conj.hpp'],['../d2/dad/UnaryMinus_8hpp.html#a93b876eb47322943cd687070d7d9d88f',1,'PROVIDE_CONST_OR_NOT_EVALUATOR():&#160;UnaryMinus.hpp']]],
+  ['provide_5fconst_5for_5fnot_5fget_5fmerged_5fcomps_5fview',['PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW',['../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7',1,'BaseSmET.hpp']]],
   ['provide_5fcrtp_5fcast_5foperator',['PROVIDE_CRTP_CAST_OPERATOR',['../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882',1,'CRTP.hpp']]],
   ['provide_5feval',['PROVIDE_EVAL',['../d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b',1,'TensStor.hpp']]],
   ['provide_5fevaluator',['PROVIDE_EVALUATOR',['../dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789',1,'TensClass.hpp']]],
-  ['provide_5fget_5fmerged_5fcomps_5fview',['PROVIDE_GET_MERGED_COMPS_VIEW',['../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35',1,'BaseSmET.hpp']]],
   ['provide_5fmergeable_5fcomps',['PROVIDE_MERGEABLE_COMPS',['../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd',1,'BaseSmET.hpp']]],
   ['provide_5fname',['PROVIDE_NAME',['../d8/d32/String_8hpp.html#a9c53a2f9c0c7e8b6108db2619a4549ef',1,'String.hpp']]],
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],

@@ -528,11 +528,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="comment">/* Name of the SmET type */</span> <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">\</a></div>
-<div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">  PROVIDE_GET_MERGED_COMPS_VIEW</a>(,   \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="comment">/* Name of the SmET type */</span> \</div>
+<div class="line">  PROVIDE_GET_MERGED_COMPS_VIEW(,   \</div>
 <div class="line">                <span class="keyword">auto</span> refMerged=ref.template mergedComps&lt;Is&gt;(); \</div>
 <div class="line">                <span class="keywordflow">return</span> UNARY_SMET&lt;decltype(refMerged)&gt;(std::move(refMerged)))</div>
-<div class="ttc" id="BaseSmET_8hpp_html_a06fb0fc8754fd17c1c6023183c638c35"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00122">BaseSmET.hpp:122</a></div></div>
 </div><!-- fragment -->
 <p>Returns a version of the SmET with simple merging structure. </p>
 
@@ -639,7 +638,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);             <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(ref,__VA_ARGS__)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00144">BaseSmET.hpp:144</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00149">BaseSmET.hpp:149</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00331">TypeTraits.hpp:331</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Unary SmET. </p>

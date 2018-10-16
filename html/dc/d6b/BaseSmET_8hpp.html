@@ -260,8 +260,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0203b7e5ee238f67359df47cdcb16b86">NOT_MERGEABLE</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(IntSeq&lt;&gt;)</td></tr>
 <tr class="memdesc:a0203b7e5ee238f67359df47cdcb16b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">States that the class has no mergeable component. <br/></td></tr>
 <tr class="separator:a0203b7e5ee238f67359df47cdcb16b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06fb0fc8754fd17c1c6023183c638c35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35">PROVIDE_GET_MERGED_COMPS_VIEW</a>(DESCRIPTION,...)</td></tr>
-<tr class="memdesc:a06fb0fc8754fd17c1c6023183c638c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getMergedCompsView method, taking Is as template parameter.  <a href="#a06fb0fc8754fd17c1c6023183c638c35">More...</a><br/></td></tr>
+<tr class="memitem:afe2d6b314334f646392b6857fb874ff7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7">PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW</a>(QUALIFIER, DESCRIPTION,...)</td></tr>
+<tr class="memdesc:afe2d6b314334f646392b6857fb874ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getMergedCompsView method, taking Is as template parameter.  <a href="#afe2d6b314334f646392b6857fb874ff7">More...</a><br/></td></tr>
+<tr class="separator:afe2d6b314334f646392b6857fb874ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fb0fc8754fd17c1c6023183c638c35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROVIDE_GET_MERGED_COMPS_VIEW</b>(DESCRIPTION,...)</td></tr>
 <tr class="separator:a06fb0fc8754fd17c1c6023183c638c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af892daaf4b484ae98212388ee1bb658b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(...)</td></tr>
 <tr class="separator:af892daaf4b484ae98212388ee1bb658b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -305,6 +307,55 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="afe2d6b314334f646392b6857fb874ff7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">QUALIFIER, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">DESCRIPTION, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">DESCRIPTION                             \</div>
+<div class="line">  template &lt;typename Is&gt;       <span class="comment">/* IntSeq delimiting the comps groups */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
+<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMergedCompsView()                     \</div>
+<div class="line">    QUALIFIER                               \</div>
+<div class="line">  {                                 \</div>
+<div class="line">    <span class="comment">/* Check that we can merge as asked */</span>              \</div>
+<div class="line">    assertMergeableWith&lt;Is&gt;();                      \</div>
+<div class="line">                                    \</div>
+<div class="line">    __VA_ARGS__;                            \</div>
+<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div>
+<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment -->
+<p>Provides a getMergedCompsView method, taking Is as template parameter. </p>
+
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a06fb0fc8754fd17c1c6023183c638c35"></a>
 <div class="memitem">
 <div class="memproto">
@@ -328,22 +379,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">DESCRIPTION                             \</div>
-<div class="line">  template &lt;typename Is&gt;       <span class="comment">/* IntSeq delimiting the comps groups */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
-<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMergedCompsView() const                   \</div>
-<div class="line">  {                                 \</div>
-<div class="line">    <span class="comment">/* Check that we can merge as asked */</span>              \</div>
-<div class="line">    assertMergeableWith&lt;Is&gt;();                      \</div>
-<div class="line">                                    \</div>
-<div class="line">    __VA_ARGS__;                            \</div>
-<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div>
-<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div>
-<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
-<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7">PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW</a>(,DESCRIPTION,__VA_ARGS__);   <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7">\</a></div>
+<div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7">  PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW</a>(<span class="keyword">const</span>,DESCRIPTION,__VA_ARGS__)</div>
+<div class="ttc" id="BaseSmET_8hpp_html_afe2d6b314334f646392b6857fb874ff7"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#afe2d6b314334f646392b6857fb874ff7">PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER, DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00122">BaseSmET.hpp:122</a></div></div>
 </div><!-- fragment -->
-<p>Provides a getMergedCompsView method, taking Is as template parameter. </p>
-
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00122">122</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +466,7 @@ Variables</h2></td></tr>
 <p class="enddd">add isAliasing </p>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
