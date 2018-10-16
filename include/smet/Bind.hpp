@@ -122,7 +122,7 @@ namespace SUNphi
 				    pos,                 // Position where to insert
 				    Is,                  // External delimiters
 				    1>;                  // Shift 1 after insertion
-				  auto refMerged=ref.template mergedComps<NestedIs>();
+				  auto refMerged=ref.template getMergedCompsView<NestedIs>();
 				  return Binder<TG,decltype(refMerged)>(std::move(refMerged),id));
     
     /// Provides either the const or non-const evaluator
