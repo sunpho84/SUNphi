@@ -8,7 +8,6 @@
 using namespace std;
 using namespace SUNphi;
 
-
 //
 int main()
 {
@@ -37,28 +36,31 @@ int main()
   
   // Check relBind
   {
-    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
     
     using MyTens=Tens<MyTk,double>;
     MyTens c;
     
-    c.eval(1,2,1)=1.0594;
+    c.eval(1,2,0,1)=1.0594;
     
     auto b1=relBind<RwCol,CnCol>(c,[](int id){return id;});
     auto b2=relBind<CnCol,RwCol>(c,[](int id){return id;});
     // cout<<decltype(c)::Tk::name()<<endl;
     // cout<<decltype(b1)::Tk::name()<<endl;
     // cout<<decltype(b2)::Tk::name()<<endl;
-    cout<<c.eval(1,2,1)<< " "<<b1.eval(2,1)<<" "<<b2.eval(1,2)<<endl;
+    cout<<c.eval(1,2,0,1)<< " "<<b1.eval(2,0,1)<<" "<<b2.eval(1,2,0)<<endl;
     
     auto bb1=relBind<Spin,Col>(b1,[](int id){return id+1;});
     auto bb2=relBind<Spin,Col>(b2,[](int id){return id+1;});
     
-    cout<<c.eval(1,2,1)<< " "<<bb1.eval(1)<<" "<<bb2.eval(1)<<endl;
+    cout<<c.eval(1,2,0,1)<< " "<<bb1.eval(0,1)<<" "<<bb2.eval(1,0)<<endl;
     
     cout<<decltype(c.getMaximallyMergedCompsView())::Tk::name()<<endl;
-    
+    cout<<" c: "<<decltype(c)::Tk::name()<<endl;
+    cout<<" bb2: "<<decltype(bb2)::Tk::name()<<endl;
     cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
+    
+    
   }
   
   // Check that conj of a non-complex type object is the same of original type

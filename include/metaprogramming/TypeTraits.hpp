@@ -214,6 +214,26 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Returns whether the passed argument is a function
+  template <typename F>
+  [[ maybe_unused ]]
+  constexpr bool isFunction=
+    std::is_function_v<F>;
+  
+  /// Returns a pointer-version of F
+  template <typename F>
+  using AddPointer=
+    std::add_pointer_t<F>;
+  
+  /// Returns F or F* if F is not a function
+  template <typename F>
+  using AddPointerIfFunction=
+    Conditional<isFunction<F>,
+		AddPointer<F>,
+		F>;
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Static assert if DERIVED does not derive from BASE
 #define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\
   static_assert(isBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")

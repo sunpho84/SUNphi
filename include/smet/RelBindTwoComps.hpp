@@ -27,7 +27,7 @@ namespace SUNphi
 	    typename _Ad,                         /* Adapter of the bound component      */ \
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>     		\
   DECLAUTO relBind(SMET&& smet,                   /*!< Quantity to bind to */ \
-		   _Ad&& adapter,                 /*!< Adapting function   */ \
+		   _Ad adapter,                   /*!< Adapting function   */ \
 		   SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   
   // Forward definition of relBind function, needed because used from the class
@@ -81,7 +81,11 @@ namespace SUNphi
       posOfType<_BoundToType,typename NestedTk::types>;
     
     /// Adapter, used to remap the boundTo component
-    _Ad adapter;
+    ///
+    /// The pointer is needed to allow non-member function to be
+    /// passed as adaptor, see:
+    /// https://stackoverflow.com/questions/13233213/can-a-function-type-be-a-class-template-parameter
+    AddPointerIfFunction<_Ad> adapter;
     
     /// Dummy type, in which the _BoundType is absolutely bound
     using absBinder=Binder<_BoundType,_Ref>;
@@ -234,8 +238,10 @@ namespace SUNphi
     cout<<"Constructing a rel binder for type "<<BoundType::name()<<" to type:"<<BoundToType::name()<<" , storage: "<<getStor(smet)._v<<endl;
 #endif
     
-    // Build the relative binder
-    RelBinder<BoundType,BoundToType,SMET,_Ad> b(forw<SMET>(smet),forw<_Ad>(adapter));
+    // Build the relative binder. The \c decltype is neede to allow
+    // non-member function to be passd as adapter, see
+    // https://stackoverflow.com/questions/13233213/can-a-function-type-be-a-class-template-parameter
+    RelBinder<BoundType,BoundToType,SMET,decltype(adapter)> b(forw<SMET>(smet),forw<_Ad>(adapter));
     
     return b;
   }
@@ -263,8 +269,8 @@ namespace SUNphi
     }
     
     // Check that a test Binder is a UnarySmET
-    //STATIC_ASSERT_IS_UNARY_SMET(RelBinder<Tc1,Tc2,
-    //				T,decltype(wire<int>)>);
+    STATIC_ASSERT_IS_UNARY_SMET(RelBinder<Tc1,Tc2,
+				T,decltype(wire<int>)>);
   }
 }
 
