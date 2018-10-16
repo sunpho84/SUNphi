@@ -19,6 +19,20 @@
 
 namespace SUNphi
 {
+  /// Define the prototype for \c relBind function
+#define REL_BIND_PROTOTYPE						\
+  template <typename _BoundType,                  /* TensKind to bind                    */ \
+	    typename _BoundToType,                /* TensKind to which bind              */ \
+	    typename SMET,                        /* Type to bind, deduced from argument */ \
+	    typename _Ad,                         /* Adapter of the bound component      */ \
+	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>     		\
+  DECLAUTO relBind(SMET&& smet,                   /*!< Quantity to bind to */ \
+		   _Ad&& adapter,                 /*!< Adapting function   */ \
+		   SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
+  
+  // Forward definition of relBind function, needed because used from the class
+  REL_BIND_PROTOTYPE;
+  
   // Base type to qualify as RelBinder
   DEFINE_BASE_TYPE(RelBinder);
   
@@ -39,6 +53,21 @@ namespace SUNphi
     public ConstrainTupleHasType<_BoundType,NestedTypes>,           // Constrain the type to which to bind to be in the Types of the TensKind
     public ConstrainTupleHasType<_BoundToType,NestedTypes>          // Constrain the bound type to be in the Types of the TensKind
   {
+    /// Type to bind
+    using BoundType=
+      _BoundType;
+    
+    /// Type to which to bind
+    using BoundToType=
+      _BoundToType;
+    
+  public:
+    
+    /// TensorKind of the bound expression
+    using Tk=typename NestedTk::template AllButType<BoundType>;
+    
+  private:
+    
     /// Position inside the reference of the TensKind got by the bounder
     static constexpr int boundPos=
       posOfType<_BoundType,typename NestedTk::types>;
@@ -47,21 +76,17 @@ namespace SUNphi
     static constexpr int boundToPos=
       posOfType<_BoundToType,typename NestedTk::types>;
     
+    /// Position inside the external TensKind to which to bind
+    static constexpr int extBoundToPos=
+      posOfType<_BoundToType,typename Tk::types>;
+    
+    /// Adapter, used to remap the boundTo component
+    _Ad adapter;
+    
     /// Dummy type, in which the _BoundType is absolutely bound
     using absBinder=Binder<_BoundType,_Ref>;
     
-    /// Adapter, used to remap the boundTo component
-    const _Ad adapter;
-    
   public:
-    
-    /// Type to bind
-    using BoundType=
-      _BoundType;
-    
-    /// Type to which to bind
-    using BoundToType=
-      _BoundToType;
     
     PROVIDE_UNARY_SMET_REF;
     
@@ -78,27 +103,21 @@ namespace SUNphi
       return ref.template compSize<TC>();
     }
     
-    /// TensorKind of the bound expression
-    using Tk=typename NestedTk::template AllButType<BoundType>;
-    
     // We remove at boundPos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/*! We have to split at the component where we bind */,
 			    InsertInOrderedIntSeq<
-			    boundToPos,                                    // Position where to insert, same of where to remove
-			      RemoveFromOrderedIntSeq<
-			        boundToPos,                                // Position where to remove
-			        typename absBinder::MergeableComps,        // Component mergeable if _BoundToType was fixd
-			        -1>,                                       // Shift back by 1 after removal
-			      0,       // Shift 0 after insertion
+			    extBoundToPos,                                 // Position where to insert, same of where to remove
+			    typename absBinder::MergeableComps,            // Component which would be mergeable if _BoundToType was absolutely fixed
+			    0,       // Shift 0 after insertion
 			    true>);    // Ignore if already present
     
-    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Insert the position of bind component shifting by 1 afterwards */,
+    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Insert the position of bound component shifting by 1 afterwards */,
 				  using NestedIs=InsertInOrderedIntSeq<
-				    boundToPos,          // Position where to insert
-				    Is,                  // External delimiters
-				    1>;                  // Shift 1 after insertion
+				    boundPos,          // Position where to insert
+				    Is,                // External delimiters
+				    1>;                // Shift 1 after insertion
 				  auto refMerged=ref.template getMergedCompsView<NestedIs>();
-				  return RelBinder<_BoundType,_BoundToType,decltype(refMerged),_Ad>(std::move(refMerged),adapter));
+				  return relBind<_BoundType,_BoundToType>(std::move(refMerged),adapter));
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
@@ -135,13 +154,9 @@ namespace SUNphi
 									\
       using Head=IntsUpTo<boundPos>;					\
 									\
-      /*! Subtract 1 position if the bound component comes before */	\
-      constexpr int readPos=						\
-	(boundToPos>boundPos)?(boundToPos-1):boundToPos;		\
-									\
       /*! Value of the boundTo component                             */ \
       const auto boundToId=						\
-	get<readPos>(Tuple<Args...>(args...));				\
+	get<extBoundToPos>(Tuple<Args...>(args...));				\
 									\
       /*! Value of the bound component                               */	\
       const decltype(boundToId) boundId=adapter(boundToId);		\
@@ -151,7 +166,7 @@ namespace SUNphi
 	  using namespace std;						\
 	  cout<<" evaluating rel_binder of component "<<_BoundType::name(); \
 	  cout<<" bound to component "<<_BoundToType::name()<<",";	\
-	  cout<<" position where to insert the bound component: "<<readPos; \
+	  cout<<" position where to read the boun-tod component: "<<extBoundToPos; \
 	  cout<<" bound to component "<<_BoundToType::name();		\
 	  cout<<" of "<<NestedTk::nTypes<<" types,";			\
 	  cout<<" boundToId: "<<boundToId;				\
@@ -205,14 +220,7 @@ namespace SUNphi
   ///
   /// Returns a relative binder getting from an unbind expression.
   /// Checks demanded to RelBinder
-  template <typename _BoundType,                          // TensKind to bind
-	    typename _BoundToType,                        // TensKind to which bind
-	    typename SMET,                                // Type to bind, deduced from argument
-	    typename _Ad,                                 // Adapter of the bound component
-	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO relBind(SMET&& smet,                   ///< Quantity to bind to
-		   _Ad&& adapter,                 ///< Adapting function
-		   SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
+  REL_BIND_PROTOTYPE
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
@@ -235,6 +243,8 @@ namespace SUNphi
     
     return b;
   }
+  
+  #undef REL_BIND_PROTOTYPE
 }
 
 #endif
