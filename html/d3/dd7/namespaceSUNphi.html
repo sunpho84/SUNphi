@@ -264,6 +264,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d24/classSUNphi_1_1Conjer.html">Conjer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the conjugate of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../d2/d24/classSUNphi_1_1Conjer.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd3/classSUNphi_1_1Transposer.html">Transposer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the transposed of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../d5/dd3/classSUNphi_1_1Transposer.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -639,6 +641,12 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplParams" colspan="2">template&lt;typename D , TypeIf&lt;(isTransposer&lt; D &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34">conj</a> (D &amp;&amp;smet)</td></tr>
 <tr class="separator:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5a507db1639e3625bbd3a3c4f8a301"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a>)</td></tr>
+<tr class="separator:a5d5a507db1639e3625bbd3a3c4f8a301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memTemplParams" colspan="2">template&lt;typename _BoundToType , typename _BoundType , typename SMET , typename _Ad , typename... DummyTypes&gt; </td></tr>
+<tr class="memitem:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#adba86c04ecaa9d8f2ea0283a310a9725">relBind</a> (SMET &amp;&amp;smet, _Ad &amp;&amp;adapter, DummyTypes...)</td></tr>
+<tr class="separator:adba86c04ecaa9d8f2ea0283a310a9725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7204e7e9af503ae6742627523c92c57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7204e7e9af503ae6742627523c92c57"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d5/dd3/classSUNphi_1_1Transposer.html">Transposer</a>)</td></tr>
 <tr class="separator:ae7204e7e9af503ae6742627523c92c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1124,9 +1132,9 @@ template&lt;int N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
-<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
@@ -2244,7 +2252,7 @@ template&lt;typename _Tg , typename SMET , typename... DummyTypes&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00217">217</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>
@@ -3192,6 +3200,52 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="adba86c04ecaa9d8f2ea0283a310a9725"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _BoundToType , typename _BoundType , typename SMET , typename _Ad , typename... DummyTypes&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::relBind </td>
+          <td>(</td>
+          <td class="paramtype">SMET &amp;&amp;&#160;</td>
+          <td class="paramname"><em>smet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Ad &amp;&amp;&#160;</td>
+          <td class="paramname"><em>adapter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DummyTypes...&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind the component of type <code>_BoundType</code> to <code>_BoundToType</code> </p>
+<p>Returns a relative binder getting from an unbind expression. Checks demanded to <a class="el" href="../../d5/d1c/classSUNphi_1_1RelBinder.html">RelBinder</a> </p>
+<p>Check that the two components are not twinned of each other </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">smet</td><td>Quantity to bind to </td></tr>
+    <tr><td class="paramname">adapter</td><td>Adapting function </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../db/d4b/RelBindTwoComps_8hpp_source.html">RelBindTwoComps.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a35370ddf1fda4f823c41fddfebcb98c8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3671,7 +3725,7 @@ template&lt;class Head , class... Tail&gt; </div>
 <div class="ttc" id="namespaceSUNphi_html_ad672c67c71c13820a0dcd0b12b88b438"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">SUNphi::hMul</a></div><div class="ttdeci">constexpr int hMul</div><div class="ttdoc">Product of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00062">IntListOperations.hpp:62</a></div></div>
 </div><!-- fragment --><p>Checks if a set of types are the same</p>
 <p>Perform an "and" of all single-type check </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
