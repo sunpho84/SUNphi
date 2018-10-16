@@ -41,8 +41,13 @@ namespace SUNphi
     
   private:
     
-    /// Internal storage
-    TensStor<Tk,Fund>* v=nullptr;
+    /// Internal storage, inited to null
+    TensStor<Tk,Fund>* v=
+      nullptr;
+    
+    /// Keep note of whether we need to free at destroy
+    const bool freeAtDestroy;
+    
   public:
     
     PROVIDE_MERGEABLE_COMPS(/* By default, all components can be merged */,IntSeq<0,Tk::nTypes>);
@@ -58,7 +63,8 @@ namespace SUNphi
     template <class...DynSizes,                                               //   Dynamic size types
 	      typename=EnableIf<areIntegrals<Unqualified<DynSizes>...>>>      //   Constrain to be integers
     explicit Tens(DynSizes&&...extDynSizes) :                    ///< Passed internal dynamic size
-      v(new TensStor<Tk,Fund>(forw<DynSizes>(extDynSizes)...))   //   Construct the vector
+      v(new TensStor<Tk,Fund>(forw<DynSizes>(extDynSizes)...)),  //   Construct the vector
+      freeAtDestroy(true)                                        //   We are allocating, so we need to free
     {
 #ifdef DEBUG_TENS
 	  using namespace std;
@@ -69,13 +75,15 @@ namespace SUNphi
     
     /// Construct the Tens on the basis of a reference storage
     explicit Tens(TensStor<Tk,Fund>* v) :                        ///< Provided storage
-      v(v)    // The internal storage is built with the reference
+      v(v),                       // The internal storage is built with the reference
+      freeAtDestroy(false)        // We are not allocating, so we need not to free
     {
     }
     
     /// Copy constructor
     Tens(const Tens& oth) :
-      v(new TensStor<Tk,Fund>(*oth.v))   //   Copy the vector
+      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
+      freeAtDestroy(true)                 //   We are allocating, so we need
     {
 #ifdef DEBUG_TENS
       using namespace std;
@@ -84,7 +92,7 @@ namespace SUNphi
     }
     
     /// Move constructor
-    Tens(Tens&& oth)
+    Tens(Tens&& oth) : freeAtDestroy(oth.freeAtDestroy) // Deallocate according to arg
     {
       v=oth.v;
       oth.v=nullptr;
@@ -102,7 +110,8 @@ namespace SUNphi
       using namespace std;
       cout<<"TensClass destroy: "<<this<<endl;
 #endif
-      delete v;
+      if(freeAtDestroy)
+	delete v;
     }
     
   public:
