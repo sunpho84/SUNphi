@@ -7,7 +7,7 @@ var dir_bf7086a74b01aa569c5a5ea4dca574e8 =
     [ "Bind.hpp", "dc/de1/Bind_8hpp.html", "dc/de1/Bind_8hpp" ],
     [ "Conj.hpp", "d2/d8f/Conj_8hpp.html", "d2/d8f/Conj_8hpp" ],
     [ "Reference.hpp", "d3/d78/Reference_8hpp.html", "d3/d78/Reference_8hpp" ],
-    [ "RelBindTwoComps.hpp", "db/d4b/RelBindTwoComps_8hpp_source.html", null ],
+    [ "RelBind.hpp", "d3/da4/RelBind_8hpp.html", "d3/da4/RelBind_8hpp" ],
     [ "Transpose.hpp", "d0/d6d/Transpose_8hpp.html", "d0/d6d/Transpose_8hpp" ],
     [ "UnaryMinus.hpp", "d2/dad/UnaryMinus_8hpp.html", "d2/dad/UnaryMinus_8hpp" ],
     [ "UnaryPlus.hpp", "d7/d61/UnaryPlus_8hpp.html", "d7/d61/UnaryPlus_8hpp" ],

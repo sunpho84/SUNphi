@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69":[2,0,0,60,0],
+"d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html":[2,0,0,49,2],
+"d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html#a825e2789647ed658ac0f0e58166192f1":[2,0,0,49,2,0],
+"d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html":[2,0,0,34],
 "d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html#ab7c490241d38b2c93b7c152aad69600a":[2,0,0,34,0],
 "d7/d03/structSUNphi_1_1HasMember__Tk.html":[2,0,0,41],
 "d7/d03/structSUNphi_1_1HasMember__Tk.html#a0346cd977fe78497daf641c1bfb0b255":[2,0,0,41,4],
@@ -233,7 +237,6 @@ var NAVTREEINDEX2 =
 "db/d04/Ints_8hpp.html":[3,0,2,9],
 "db/d04/Ints_8hpp_source.html":[3,0,2,9],
 "db/d30/structSUNphi_1_1ConstrainHasMember__isStoring.html":[2,0,0,40],
-"db/d4b/RelBindTwoComps_8hpp_source.html":[3,0,2,4,7],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html":[2,0,0,78,2],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html#a2340c2a9c35649bcd16588b2cdd87319":[2,0,0,78,2,0],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html#a360afc288b27e2be56bf18dba4f2319c":[2,0,0,78,2,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "db/dc6/structSUNphi_1_1HasMember__isAliasing.html#ac9ddce3bea4bb364bad84adc0f46ab3d":[2,0,0,43,5],
 "db/dc6/structSUNphi_1_1HasMember__isAliasing.html#ae32515df2f7ac64a1073ae094ddf0c8e":[2,0,0,43,4],
 "db/dd6/structSUNphi_1_1__TwinCompOf_3_01CnSpin_01_4.html":[2,0,0,30],
-"db/dd6/structSUNphi_1_1__TwinCompOf_3_01CnSpin_01_4.html#a9ce1754b57145c2259af6c9d581130c7":[2,0,0,30,0],
-"db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html":[2,0,0,65,2],
-"db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html#a7328f3425699a6fac2812f7ee886935c":[2,0,0,65,2,0],
-"db/dde/Unused_8hpp.html":[3,0,2,8,2]
+"db/dd6/structSUNphi_1_1__TwinCompOf_3_01CnSpin_01_4.html#a9ce1754b57145c2259af6c9d581130c7":[2,0,0,30,0]
 };

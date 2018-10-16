@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html":[2,0,0,65,2],
+"db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html#a7328f3425699a6fac2812f7ee886935c":[2,0,0,65,2,0],
+"db/dde/Unused_8hpp.html":[3,0,2,8,2],
 "db/dde/Unused_8hpp.html#a49d7da8c222e83ae8d42bb4ca6b7d2ea":[3,0,2,8,2,1],
 "db/dde/Unused_8hpp.html#aec797c5e33c3c2b48b8bc89e51da83bb":[3,0,2,8,2,0],
 "db/dde/Unused_8hpp_source.html":[3,0,2,8,2],
@@ -214,8 +217,8 @@ var NAVTREEINDEX3 =
 "dir_d44c64559bbebec7f509842c48db8b23.html":[3,0,2],
 "dir_f7c9792946d4ae97dc97b9de2773b6b2.html":[3,0,2,3],
 "files.html":[3,0],
-"functions.html":[2,3,0],
 "functions.html":[2,3,0,0],
+"functions.html":[2,3,0],
 "functions_a.html":[2,3,0,1],
 "functions_b.html":[2,3,0,2],
 "functions_c.html":[2,3,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "globals_func.html":[3,1,1],
 "hierarchy.html":[2,2],
 "index.html":[],
-"namespacemembers.html":[1,1,0,0],
-"namespacemembers.html":[1,1,0],
-"namespacemembers_a.html":[1,1,0,1],
-"namespacemembers_b.html":[1,1,0,2]
+"namespacemembers.html":[1,1,0,0]
 };

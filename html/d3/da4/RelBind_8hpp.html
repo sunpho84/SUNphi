@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SUNphi: include/SmET.hpp File Reference</title>
+<title>SUNphi: include/smet/RelBind.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d9/d21/SmET_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('d3/da4/RelBind_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -103,38 +103,66 @@ $(document).ready(function(){initNavTree('d9/d21/SmET_8hpp.html','../../');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">SmET.hpp File Reference</div>  </div>
+<div class="title">RelBind.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for the inclusion of all SmET.  
+<p>Defines a class which binds a component of a SmET w.r.t another.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d8/d3a/Adj_8hpp_source.html">smet/Adj.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d1/d9b/Assign_8hpp_source.html">smet/Assign.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">smet/BaseSmET.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">smet/BinarySmET.hpp</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;ints/IntSeqInsert.hpp&gt;</code><br/>
+<code>#include &lt;ints/IntSeqRemove.hpp&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">tens/TensClass.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d7/d7a/TensComp_8hpp_source.html">tens/TensComp.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/de1/Bind_8hpp_source.html">smet/Bind.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d2/d8f/Conj_8hpp_source.html">smet/Conj.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d3/da4/RelBind_8hpp_source.html">smet/RelBind.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d0/d6d/Transpose_8hpp_source.html">smet/Transpose.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">smet/UnarySmET.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d2/dad/UnaryMinus_8hpp_source.html">smet/UnaryMinus.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d7/d61/UnaryPlus_8hpp_source.html">smet/UnaryPlus.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../da/df3/Wrap_8hpp_source.html">smet/Wrap.hpp</a>&gt;</code><br/>
 </div>
-<p><a href="../../d9/d21/SmET_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="../../d3/da4/RelBind_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a7eb315312e22dc9a9282f5e8c09daff1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>REL_BIND_PROTOTYPE</b></td></tr>
+<tr class="separator:a7eb315312e22dc9a9282f5e8c09daff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac676f53d30c2e27ebc3df2a25081e1ad"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</b>(QUALIFIER)</td></tr>
+<tr class="separator:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for the inclusion of all SmET. </p>
+<div class="textblock"><p>Defines a class which binds a component of a SmET w.r.t another. </p>
 
-<p>Definition in file <a class="el" href="../../d9/d21/SmET_8hpp_source.html">SmET.hpp</a>.</p>
-</div></div><!-- contents -->
+<p>Definition in file <a class="el" href="../../d3/da4/RelBind_8hpp_source.html">RelBind.hpp</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a7eb315312e22dc9a9282f5e8c09daff1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REL_BIND_PROTOTYPE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> _BoundType,                  <span class="comment">/* TensKind to bind                    */</span> \</div>
+<div class="line">        typename _BoundToType,                <span class="comment">/* TensKind to which bind              */</span> \</div>
+<div class="line">        typename SMET,                        <span class="comment">/* Type to bind, deduced from argument */</span> \</div>
+<div class="line">        typename _Ad,                         <span class="comment">/* Adapter of the bound component      */</span> <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">\</a></div>
+<div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a>&gt;           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
+<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> relBind(SMET&amp;&amp; smet,                    \</div>
+<div class="line">           _Ad adapter,                    \</div>
+<div class="line">           <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a>)</div>
+<div class="ttc" id="SFINAE_8hpp_html_a42eb945edda2b3040077165cb738a391"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391">SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00056">SFINAE.hpp:56</a></div></div>
+<div class="ttc" id="SFINAE_8hpp_html_a138ea6f0ae91a1aec99666877d1693f5"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5">SFINAE_WORSEN_DEFAULT_VERSION_ARGS</a></div><div class="ttdeci">#define SFINAE_WORSEN_DEFAULT_VERSION_ARGS</div><div class="ttdoc">Provide empty list of args, used to unprioritize default version. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00060">SFINAE.hpp:60</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d9/d21/SmET_8hpp.html">SmET.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_bf7086a74b01aa569c5a5ea4dca574e8.html">smet</a></li><li class="navelem"><a class="el" href="../../d3/da4/RelBind_8hpp.html">RelBind.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>

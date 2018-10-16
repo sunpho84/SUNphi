@@ -37,9 +37,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView.html#a8c85026deb8eafd2e1102b5b6d637b76",
-"d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html#ab7c490241d38b2c93b7c152aad69600a",
-"db/dde/Unused_8hpp.html#a49d7da8c222e83ae8d42bb4ca6b7d2ea",
-"namespacemembers_c.html"
+"d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69",
+"db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html",
+"namespacemembers.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

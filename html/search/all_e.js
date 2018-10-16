@@ -17,6 +17,7 @@ var searchData=
   ['provide_5fcrtp_5fcast_5foperator',['PROVIDE_CRTP_CAST_OPERATOR',['../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882',1,'CRTP.hpp']]],
   ['provide_5feval',['PROVIDE_EVAL',['../d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b',1,'TensStor.hpp']]],
   ['provide_5fevaluator',['PROVIDE_EVALUATOR',['../dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789',1,'TensClass.hpp']]],
+  ['provide_5fget_5fmerged_5fcomps_5fview',['PROVIDE_GET_MERGED_COMPS_VIEW',['../dc/d6b/BaseSmET_8hpp.html#a06fb0fc8754fd17c1c6023183c638c35',1,'BaseSmET.hpp']]],
   ['provide_5fmergeable_5fcomps',['PROVIDE_MERGEABLE_COMPS',['../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd',1,'BaseSmET.hpp']]],
   ['provide_5fmergeable_5fcomps_5fmarking_5fone_5fas_5fnon_5fmergeable',['PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE',['../dc/d6b/BaseSmET_8hpp.html#a0967a494ce6416d595dbe85bc009df81',1,'BaseSmET.hpp']]],
   ['provide_5fname',['PROVIDE_NAME',['../d8/d32/String_8hpp.html#a9c53a2f9c0c7e8b6108db2619a4549ef',1,'String.hpp']]],
