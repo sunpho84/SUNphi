@@ -111,6 +111,12 @@ namespace SUNphi
     
   public:
     
+    /// Name of the Tk provided with "name()" suffix
+    constexpr static const char* name()
+    {
+      return __PRETTY_FUNCTION__;
+    }
+    
     /// Position of dynamical components
     using DynCompsPos=decltype(_DynCompsPos<0>(intSeq<>));
     

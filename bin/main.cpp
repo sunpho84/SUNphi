@@ -1,6 +1,7 @@
 //#define DEBUG_TENS
 //#define DEBUG_BINDER
 //#define DEBUG_INDEXER
+//#define DEBUG_REL_BINDER
 
 #include <SUNphi.hpp>
 
@@ -18,6 +19,7 @@ int main()
     STATIC_ASSERT_IS_BASE_OF(A,B);
   }
 
+  // Check on Diag
   {
     using MyTk=TensKind<RwCol,Spin,CnCol>;
     using A=IntSeq<1,0,1>;
@@ -31,6 +33,28 @@ int main()
     using G=TensKind<RwCol,Spin>;
     STATIC_ASSERT_IS_BASE_OF(G,F);
     
+  }
+  
+  // Check relBind
+  {
+    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    
+    using MyTens=Tens<MyTk,double>;
+    MyTens c;
+    
+    c.eval(1,2,1)=1.0594;
+    
+    auto b1=relBind<CnCol,RwCol>(c,[](int id){return id;});
+    auto b2=relBind<RwCol,CnCol>(c,[](int id){return id;});
+    // cout<<decltype(c)::Tk::name()<<endl;
+    // cout<<decltype(b1)::Tk::name()<<endl;
+    // cout<<decltype(b2)::Tk::name()<<endl;
+    cout<<c.eval(1,2,1)<< " "<<b1.eval(2,1)<<" "<<b2.eval(1,2)<<endl;
+    
+    auto bb1=relBind<Col,Spin>(b1,[](int id){return id+1;});
+    auto bb2=relBind<Col,Spin>(b2,[](int id){return id+1;});
+    
+    cout<<c.eval(1,2,1)<< " "<<bb1.eval(1)<<" "<<bb2.eval(1)<<endl;
   }
   
   // Check that conj of a non-complex type object is the same of original type

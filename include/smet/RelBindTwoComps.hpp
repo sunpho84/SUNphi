@@ -15,14 +15,11 @@
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensClass.hpp>
 #include <tens/TensComp.hpp>
-#include <smet/Reference.hpp>
-#include <smet/UnarySmET.hpp>
+#include <smet/Bind.hpp>
 
 namespace SUNphi
 {
-  Bisogna costruire tutto suulla base di Bind
-
-// Base type to qualify as RelBinder
+  // Base type to qualify as RelBinder
   DEFINE_BASE_TYPE(RelBinder);
   
   /// Class to bind a component of a SmET
@@ -31,12 +28,13 @@ namespace SUNphi
   /// (invisible) one
   template <typename _BoundToType,                                  // TensKind to which bind
 	    typename _BoundType,                                    // TensKind to bind
-	    typename _Ref,                                          // Type to bind
+	    typename _Ref,                                          // Type of nested SMeT
+	    typename _Ad,                                           // Adapter of the bound component
 	    typename NestedTk=typename RemoveReference<_Ref>::Tk,   // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>          // Types of the tensor kind
   class RelBinder :
     public BaseRelBinder,                                           // Inherit from BaseRelBinder to detect in expression
-    public UnarySmET<RelBinder<_BoundToType,_BoundType,_Ref>>,      // Inherit from UnarySmET
+    public UnarySmET<RelBinder<_BoundToType,_BoundType,_Ref,_Ad>>,  // Inherit from UnarySmET
     public ConstrainIsSmET<_Ref>,                                   // Constrain Ref to be a SmET
     public ConstrainTupleHasType<_BoundToType,NestedTypes>,         // Constrain the bound type to be in the Types of the TensKind
     public ConstrainTupleHasType<_BoundType,NestedTypes>            // Constrain the type to which to bind to be in the Types of the TensKind
@@ -45,9 +43,15 @@ namespace SUNphi
     static constexpr int boundPos=
       posOfType<_BoundType,typename NestedTk::types>;
     
-    /// Position inside the reference of the TensKind to which bind
+    /// Position inside the reference of the TensKind to which to bind
     static constexpr int boundToPos=
       posOfType<_BoundToType,typename NestedTk::types>;
+    
+    /// Dummy type, in which the _BoundType is absolutely bound
+    using absBinder=Binder<_BoundType,_Ref>;
+    
+    /// Adapter, used to remap the boundTo component
+    const _Ad adapter;
     
   public:
     
@@ -77,37 +81,40 @@ namespace SUNphi
     /// TensorKind of the bound expression
     using Tk=typename NestedTk::template AllButType<BoundType>;
     
-    // We remove at Pos, shift and insert back
+    // We remove at boundPos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/*! We have to split at the component where we bind */,
 			    InsertInOrderedIntSeq<
-			    pos      // Position where to insert, same of where to remove
-			    ,RemoveFromOrderedIntSeq<pos,                                       // Position where to remove
-			                             typename Unqualified<Ref>::MergeableComps, // Nested components
-			                             -1>                                        // Shift back by 1 after removal
-			    ,0       // Shift 0 after insertion
-			    ,true>); // Ignore if already present
+			    boundToPos,                                    // Position where to insert, same of where to remove
+			      RemoveFromOrderedIntSeq<
+			        boundToPos,                                // Position where to remove
+			        typename absBinder::MergeableComps,        // Component mergeable if _BoundToType was fixd
+			        -1>,                                       // Shift back by 1 after removal
+			      0,       // Shift 0 after insertion
+			    true>);    // Ignore if already present
     
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Insert the position of bind component shifting by 1 afterwards */,
 				  using NestedIs=InsertInOrderedIntSeq<
-				    pos,                 // Position where to insert
+				    boundToPos,          // Position where to insert
 				    Is,                  // External delimiters
 				    1>;                  // Shift 1 after insertion
 				  auto refMerged=ref.template mergedComps<NestedIs>();
-				  return Binder<TG,decltype(refMerged)>(std::move(refMerged),id));
+				  return RelBinder<_BoundToType,_BoundType,_Ad,decltype(refMerged)>(std::move(refMerged),adapter));
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
-    /*! QUALIFIER evaluator for Binder                               */	\
+    /*! QUALIFIER evaluator for RelBinder                            */ \
     /*!                                                              */	\
     /*! Internal Evaluator, inserting the id at the correct          */	\
     /*! position in the list of args. Check on type B is omitted, as */	\
     /*! the function is called only from an already checked smet     */ \
     template <typename...Args, /* Type of the arguments */		\
+	      typename Id,     /* Type of the argument of the bound component         */ \
 	      int...Head,      /* Position of the first set of args, before insertion */ \
 	      int...Tail>      /* Position of the second set of args, after insertion */ \
-    DECLAUTO binder_internal_eval(IntSeq<Head...>,              /*!< List of position of components before id */ \
-				  IntSeq<Tail...>,              /*!< List of position of components after id  */ \
-				  const Tuple<Args...>& targs)  /*!< Components to get                        */ \
+    DECLAUTO rel_binder_internal_eval(IntSeq<Head...>,              /*!< List of position of components before id */ \
+				      IntSeq<Tail...>,              /*!< List of position of components after id  */ \
+				      const Id& id,	            /*!< Component to insert                      */ \
+				      const Tuple<Args...>& targs)  /*!< Components to get                        */ \
       QUALIFIER								\
     {									\
       return ref.eval(get<Head>(targs)...,				\
@@ -126,23 +133,38 @@ namespace SUNphi
     {									\
       STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
 									\
-      using Head=IntsUpTo<pos>;						\
+      using Head=IntsUpTo<boundPos>;					\
+									\
+      /*! Subtract 1 position if the bound component comes before */	\
+      constexpr int readPos=						\
+	(boundToPos>boundPos)?(boundToPos-1):boundToPos;		\
+									\
+      /*! Value of the boundTo component                             */ \
+      const auto boundToId=						\
+	get<readPos>(Tuple<Args...>(args...));				\
+									\
+      /*! Value of the bound component                               */	\
+      const decltype(boundToId) boundId=adapter(boundToId);		\
 									\
       if(0)								\
 	{								\
 	  using namespace std;						\
-	  cout<<" evaluating binder of component "<<Tg::name();		\
-	  cout<<" position in NestedTk: "<<pos;				\
+	  cout<<" evaluating rel_binder of component "<<_BoundType::name(); \
+	  cout<<" bound to component "<<_BoundToType::name()<<",";	\
+	  cout<<" position where to insert the bound component: "<<readPos; \
+	  cout<<" bound to component "<<_BoundToType::name();		\
 	  cout<<" of "<<NestedTk::nTypes<<" types,";			\
-	  cout<<" id: "<<id;						\
+	  cout<<" boundToId: "<<boundToId;				\
+	  cout<<" boundId: "<<boundId;					\
 	  cout<<endl;							\
 	}								\
       									\
-      using Tail=typename IntsUpTo<Tk::nTypes-pos>::template Add<pos>; \
+      using Tail=RangeSeq<boundPos,1,Tk::nTypes>;			\
 									\
-      return binder_internal_eval(Head{},				\
-      				  Tail{},				\
-      				  std::forward_as_tuple(args...));	\
+      return rel_binder_internal_eval(Head{},				\
+				      Tail{},				\
+				      boundId,				\
+				      std::forward_as_tuple(args...));	\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
@@ -151,130 +173,68 @@ namespace SUNphi
     
 #undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
     
-    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Binder);
+    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(RelBinder);
     
     /// Constructor taking a universal reference and the id
     ///
     /// \todo add check on SMET
     template <typename SMET,						\
 	      typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref>>>> \
-    explicit Binder(SMET&& smet, ///< Reference to bind
-		    int id)    ///< Component to get
-      : ref(forw<SMET>(smet)),id(id)
+    explicit RelBinder(SMET&& smet,          ///< Reference to bind
+		       _Ad&& adapter)        ///< Adapting function
+      : adapter(forw<_Ad>(adapter)),ref(forw<SMET>(smet))
     {
-#ifdef DEBUG_BINDER
+#ifdef DEBUG_REL_BINDER
       using namespace std;
-      cout<<"Constructing binder "<<this<<", type "<<TG::name()<<", component: "<<id<<endl;
+      cout<<"Constructing relative binder "<<this<<", bound type "<<_BoundType::name()<<", bound to type "<<_BoundToType::name()<<endl;
 #endif
     }
     
     /// Destructor
-    ~Binder()
+    ~RelBinder()
     {
-#ifdef DEBUG_BINDER
+#ifdef DEBUG_REL_BINDER
       using namespace std;
-      cout<<"Destroying binder "<<this<<endl;
+      cout<<"Destroying relative binder "<<this<<endl;
 #endif
     }
     
   };
   
-  /// Bind the \c id component of type \c Tg from expression \c ref
+  /// Bind the component of type \c _BoundType to \c _BoundToType
   ///
-  /// Returns a plain binder getting from an unbind expression. Checks
-  /// demanded to Binder.
-  template <typename _Tg,                       // Type to get
-	    typename SMET,                       // Type to bind, deduced from argument
+  /// Returns a relative binder getting from an unbind expression.
+  /// Checks demanded to RelBinder
+  template <typename _BoundToType,                        // TensKind to which bind
+	    typename _BoundType,                          // TensKind to bind
+	    typename SMET,                                // Type to bind, deduced from argument
+	    typename _Ad,                                 // Adapter of the bound component
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  DECLAUTO bind(SMET&& smet,                     ///< Quantity to bind to
-		const int id,                  ///< Entry of the component to bind
-		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
+  DECLAUTO relBind(SMET&& smet,                   ///< Quantity to bind to
+		   _Ad&& adapter,                 ///< Adapting function
+		   SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
-    using Tg=CompOrTwinned<_Tg,SMET>;
+    /// Check that the two components are not twinned of each other
+    constexpr bool areTwinnedOfEachOther=
+      isSame<TwinCompOf<_BoundToType>,_BoundType>;
     
-#ifdef DEBUG_BINDER
+    using BoundToType=
+      Conditional<areTwinnedOfEachOther,_BoundToType,CompOrTwinned<_BoundToType,SMET>>;
+    using BoundType=
+      Conditional<areTwinnedOfEachOther,_BoundType,CompOrTwinned<_BoundType,SMET>>;
+    
+#ifdef DEBUG_REL_BINDER
     using namespace std;
-    cout<<"Constructing a binder for type "<<Tg::name()<<" , storage: "<<getStor(ref)._v<<endl;
+    cout<<"Constructing a rel binder for type "<<BoundType::name()<<" to type:"<<BoundToType::name()<<" , storage: "<<getStor(smet)._v<<endl;
 #endif
     
-    // Build the binder
-    Binder<Tg,SMET> b(forw<SMET>(smet),id);
+    // Build the relative binder
+    RelBinder<BoundToType,BoundType,SMET,_Ad> b(forw<SMET>(smet),forw<_Ad>(adapter));
     
-    // Get the TensKind
-    using Tk=typename Unqualified<SMET>::Tk;
-    // Count the free components of SmET
-    constexpr int N=Tk::nTypes;
-    // Check if fully bound
-    constexpr bool FullyBound=(N==1);
-    
-    // Evaluate if fully bound
-    if constexpr(FullyBound)
-       return b.eval();
-    else
-      return b;
+    return b;
   }
-  
-  // /// Bind the \c id component of type \c Tg from expression \c ref
-  // ///
-  // /// Nested binder getting an already bound expression, swapping the
-  // /// inner and outer types and components if needed.
-  // ///
-  // /// \code
-  // /// Tens<TensKind<Compl,RwSpin>,double> cicc;
-  // /// spin(reim(cicc,0),1);
-  // /// reim(spin(cicc,1),0);
-  // /// \endcode
-  // ///
-  // /// This might be not enough to ensure proper evaluation if the
-  // /// nesting occurs through a wrapper, as in the following example
-  // ///
-  // /// \code
-  // /// spin(wrap(reim(cicc,0)),1);
-  // /// reim(wrap(spin(cicc,1)),0);
-  // /// \endcode
-  // template <typename _Tg,                        // Type to get
-  // 	    typename InNestedTg,                 //Type got by the nested bounder
-  // 	    typename InNestedRef>                // Type of the nested binder
-  // DECLAUTO bind(const Binder<InNestedTg,InNestedRef>& nb,                          ///< Binder to rebind
-  // 		const int id)                    ///< Component to get
-  // {
-  //   // True component searched
-  //   using Tg=CompOrTwinned<_Tg,Binder<InNestedTg,InNestedRef>>;
-  //   // Tensor Kind of input nested binder
-  //   using InNestedRefTk=typename RemoveReference<InNestedRef>::Tk;
-  //   // Types of the Tensor Kind of nested bounder
-  //   using NestedTypes=typename InNestedRefTk::types;
-  //   // Position inside the nested reference of the type got by the nested bounder
-  //   constexpr int InNestedNestedTgPos=posOfType<InNestedTg,NestedTypes>;
-  //   // Position inside the nested reference of the type to get
-  //   static constexpr int NestedTgPos=posOfType<Tg,NestedTypes>;
-  //   // Keep note of whether we need to swap
-  //   constexpr bool swap=(NestedTgPos>InNestedNestedTgPos);
-  //   // Type got by the output nested binder
-  //   using OutNestedTg=Conditional<swap,Tg,InNestedTg>;
-  //   // Type got by the output binder
-  //   using OutTg=Conditional<swap,InNestedTg,Tg>;
-  //   // Nested component
-  //   const int nestedId=nb.id;
-  //   // Out external component
-  //   const int outNestedId=(swap?id:nestedId);
-  //   // Out component
-  //   const int outId=(swap?nestedId:id);
-  //   // Output Nested binder
-  //   auto outNestedBinder=bind<OutNestedTg>(nb.ref,outNestedId);
-  //   // Type of the output nested binder
-  //   using OutNestedBinder=decltype(outNestedBinder);
-    
-  //   //cout<<"Constructing a nested binder for type "<<Tg::name()<<", internal binder gets: "<<InNestedTg::name()<<", swap: "<<swap<<endl;
-  //   // cout<<"OutTg: "<<OutTg::name()<<" "<<endl;
-  //   return evalIfFullyBound(Binder<OutTg,OutNestedBinder>(outNestedBinder,outId));
-  // }
-  
-  // Check that a test Binder is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(Binder<TensComp<double,1>,
-			      Tens<TensKind<TensComp<double,1>>,double>>);
 }
 
 #endif
