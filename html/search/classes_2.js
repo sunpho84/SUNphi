@@ -43,8 +43,6 @@ var searchData=
   ['constrainntypes',['ConstrainNTypes',['../d8/d4a/structSUNphi_1_1ConstrainNTypes.html',1,'SUNphi']]],
   ['constraintuplehasnottype',['ConstrainTupleHasNotType',['../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html',1,'SUNphi']]],
   ['constraintuplehastype',['ConstrainTupleHasType',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
-  ['constraintuplehastype_3c_20_5fboundtotype_2c_20nestedtypes_20_3e',['ConstrainTupleHasType&lt; _BoundToType, NestedTypes &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
-  ['constraintuplehastype_3c_20_5fboundtype_2c_20nestedtypes_20_3e',['ConstrainTupleHasType&lt; _BoundType, NestedTypes &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintuplehastype_3c_20compl_2c_20tk_5ftypes_20_3e',['ConstrainTupleHasType&lt; Compl, TK_TYPES &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintuplehastype_3c_20tg_2c_20nestedtypes_20_3e',['ConstrainTupleHasType&lt; TG, NestedTypes &gt;',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintupletypesarealldifferent',['ConstrainTupleTypesAreAllDifferent',['../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html',1,'SUNphi']]]

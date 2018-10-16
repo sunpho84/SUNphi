@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['size',['size',['../da/def/structSUNphi_1_1IntSeq.html#a59af33ae8081e677624492043a1c8f96',1,'SUNphi::IntSeq::size()'],['../d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c',1,'SUNphi::TensComp::size()']]],
-  ['str',['str',['../da/d56/structSUNphi_1_1IncapsulatedString.html#a8a52c6c2310b782f3f310f8898044635',1,'SUNphi::IncapsulatedString']]],
-  ['stride',['stride',['../d0/dde/structSUNphi_1_1__RangeSeq.html#af51cdb18c4c7d2da07f14807e77a89da',1,'SUNphi::_RangeSeq']]]
+  ['v',['v',['../d8/d1c/classSUNphi_1_1Tens.html#a580ed866f19329da4488f6615349cf06',1,'SUNphi::Tens::v()'],['../d3/d22/classSUNphi_1_1TensStor.html#adac10655e44a07882813127a2e8ff467',1,'SUNphi::TensStor::v()']]],
+  ['value',['value',['../d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9',1,'SUNphi::TensKind::_firstVectorizingComp']]]
 ];

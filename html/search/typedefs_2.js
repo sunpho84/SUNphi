@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['cn',['Cn',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058',1,'SUNphi::TwinTensCompOf&lt; Spin &gt;::Cn()'],['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html#af9e1bc2d7dab5c778394588050fa9ecf',1,'SUNphi::TwinTensCompOf&lt; Col &gt;::Cn()']]],
-  ['col',['Col',['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi']]],
-  ['comportwinned',['CompOrTwinned',['../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb',1,'SUNphi']]],
-  ['conditional',['Conditional',['../d3/dd7/namespaceSUNphi.html#ab3abb9888a607b122507a0322bc2d2d8',1,'SUNphi']]],
-  ['constif',['ConstIf',['../d3/dd7/namespaceSUNphi.html#abb04df0fdde46edb2a9ccb89e9f3c24c',1,'SUNphi']]],
-  ['constrainisbinarysmet',['ConstrainIsBinarySmET',['../d3/dd7/namespaceSUNphi.html#a8f18e555330c9c49c8aead5591d4d66f',1,'SUNphi']]],
-  ['constrainisunarysmet',['ConstrainIsUnarySmET',['../d3/dd7/namespaceSUNphi.html#a992f34d73bae9024a319514b856af282',1,'SUNphi']]]
+  ['delims',['Delims',['../db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html#a2340c2a9c35649bcd16588b2cdd87319',1,'SUNphi::TensKind::_Merged&lt; IntSeq&lt; IDelims...&gt;, IntSeq&lt; IGroups...&gt; &gt;']]],
+  ['diag',['Diag',['../d8/df8/classSUNphi_1_1TensKind.html#a746264a990ada66a174d8f8d6778aa72',1,'SUNphi::TensKind']]],
+  ['diagcompspos',['DiagCompsPos',['../d8/df8/classSUNphi_1_1TensKind.html#a5f54c860b4ac50f95ca650872aded78c',1,'SUNphi::TensKind']]],
+  ['div',['Div',['../da/def/structSUNphi_1_1IntSeq.html#a064d619da46d1aef19bdbd40f050dae8',1,'SUNphi::IntSeq']]],
+  ['dyncompspos',['DynCompsPos',['../d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71',1,'SUNphi::TensKind']]],
+  ['dynsizes',['DynSizes',['../d3/dd7/namespaceSUNphi.html#a25c7721afd2b3e3b7599f481ca341ef3',1,'SUNphi']]]
 ];

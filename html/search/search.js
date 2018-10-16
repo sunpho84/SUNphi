@@ -12,8 +12,8 @@ var indexSectionsWithContent =
   2: "s",
   3: "abcdfimprstuw",
   4: "_abcdefgimnoprstuw~",
-  5: "_abcdefghilmnoprstv",
-  6: "abcdefimnprstuvy",
+  5: "_acdfghilmnoprstv",
+  6: "acdefimnprstuvy",
   7: "acdfilmnprsu",
   8: "t"
 };

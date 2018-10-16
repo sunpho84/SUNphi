@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['insertinorderedintseq',['InsertInOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#adbfb1ba595e6e69cc8ff87e5df2ef32b',1,'SUNphi']]],
-  ['insertintseqinorderedintseq',['InsertIntSeqInOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a6e1cffd48f2496f1acae56b7de775ef9',1,'SUNphi']]],
-  ['inserttruetwinnedpos',['InsertTrueTwinnedPos',['../d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68',1,'SUNphi::TensKind']]],
-  ['inserttruetwinnedposoftuple',['InsertTrueTwinnedPosOfTuple',['../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a',1,'SUNphi']]],
-  ['intseqcat',['IntSeqCat',['../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39',1,'SUNphi']]],
-  ['intseqfilter',['IntSeqFilter',['../d3/dd7/namespaceSUNphi.html#ae60031ca05f637ebafadef8570b5d931',1,'SUNphi']]],
-  ['intseqfirstn',['IntSeqFirstN',['../d3/dd7/namespaceSUNphi.html#a0a9b8c90e309f5bde54d2b81863a5177',1,'SUNphi']]],
-  ['intseqofsamenumb',['IntSeqOfSameNumb',['../d3/dd7/namespaceSUNphi.html#ae68028b37126a321ff9f863825618e79',1,'SUNphi']]],
-  ['intsupto',['IntsUpTo',['../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b',1,'SUNphi']]],
-  ['isdiagcomp',['IsDiagComp',['../d8/df8/classSUNphi_1_1TensKind.html#a656cb1dc0ac2f593ee4df6e4ed1f4c46',1,'SUNphi::TensKind']]],
-  ['ismatrixcomp',['IsMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1',1,'SUNphi::TensKind']]]
+  ['mergeablecomps',['MergeableComps',['../d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69',1,'SUNphi::Binder::MergeableComps()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a7fe19ad93edabc3d78c5d32a290120db',1,'SUNphi::Transposer::MergeableComps()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a7b3d68512eb8a5de9db350f0a31c7fc9',1,'SUNphi::UMinuser::MergeableComps()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a1b32ca7d5e09b323c691645ef40a4a50',1,'SUNphi::Wrapper::MergeableComps()']]],
+  ['merged',['Merged',['../d8/df8/classSUNphi_1_1TensKind.html#a6d5400cb0230cd0bb4aaa773db9d134c',1,'SUNphi::TensKind']]],
+  ['mergedcomps',['MergedComps',['../de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4.html#a944e3a3fab6326a6a10cbf5fb1513bb2',1,'SUNphi::TensKind::TensCompsListMerged&lt; IntSeq&lt; IComps...&gt; &gt;']]],
+  ['mul',['Mul',['../da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df',1,'SUNphi::IntSeq']]]
 ];

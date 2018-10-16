@@ -5,7 +5,7 @@ var NAVTREE =
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ]
@@ -37,9 +37,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/d59/structSUNphi_1_1HasMember__name.html",
-"d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998",
-"da/dff/structSUNphi_1_1Dir.html#a62036115814b61e36c3699da76b23f8f",
-"functions_i.html"
+"d7/d03/structSUNphi_1_1HasMember__Tk.html#a3427456e0d672c2e65172d131ffd28e2",
+"dc/d02/structSUNphi_1_1__IntsUpTo.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

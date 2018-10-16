@@ -62,7 +62,6 @@ var namespaceSUNphi =
     [ "BinarySmET", "d4/d8b/structSUNphi_1_1BinarySmET.html", "d4/d8b/structSUNphi_1_1BinarySmET" ],
     [ "Binder", "d6/db9/classSUNphi_1_1Binder.html", "d6/db9/classSUNphi_1_1Binder" ],
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html", "d2/d24/classSUNphi_1_1Conjer" ],
-    [ "RelBinder", "d5/d1c/classSUNphi_1_1RelBinder.html", "d5/d1c/classSUNphi_1_1RelBinder" ],
     [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
     [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
     [ "BaseUnarySmET", "df/d49/structSUNphi_1_1BaseUnarySmET.html", null ],
