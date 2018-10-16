@@ -10,5 +10,6 @@ var searchData=
   ['firstnon_3c_20i_20_3e',['firstNon&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#a8489c5e282dce70bc43ae47cc5105a67',1,'SUNphi']]],
   ['firstsmaller',['firstSmaller',['../d3/dd7/namespaceSUNphi.html#a8be496e5c941b2899d1231697b5aa73b',1,'SUNphi']]],
   ['firstsmaller_3c_20i_20_3e',['firstSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#a843446251add0d7dcdde2e48554e501d',1,'SUNphi']]],
-  ['firstvectorizingcomp',['firstVectorizingComp',['../d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08',1,'SUNphi::TensKind']]]
+  ['firstvectorizingcomp',['firstVectorizingComp',['../d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08',1,'SUNphi::TensKind']]],
+  ['freeatdestroy',['freeAtDestroy',['../d8/d1c/classSUNphi_1_1Tens.html#a4379060cc47f225df812bc1e1fa343ba',1,'SUNphi::Tens']]]
 ];

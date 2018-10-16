@@ -45,7 +45,7 @@ var hierarchy =
       [ "SUNphi::IntSeq< Ints >", "da/def/structSUNphi_1_1IntSeq.html", null ]
     ] ],
     [ "BaseRelBinder", null, [
-      [ "SUNphi::RelBinder< _BoundToType, _BoundType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
     ] ],
     [ "BaseSmET", null, [
       [ "SUNphi::SmET< Binder< TG, _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
@@ -58,9 +58,9 @@ var hierarchy =
           [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< RelBinder< _BoundToType, _BoundType, _Ref, _Ad > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< RelBinder< _BoundToType, _BoundType, _Ref, _Ad > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::RelBinder< _BoundToType, _BoundType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+      [ "SUNphi::SmET< RelBinder< _BoundType, _BoundToType, _Ref, _Ad > >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::UnarySmET< RelBinder< _BoundType, _BoundToType, _Ref, _Ad > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
+          [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
         ] ]
       ] ],
       [ "SUNphi::SmET< Tens< TK, Fund > >", "d1/d31/structSUNphi_1_1SmET.html", [
@@ -90,7 +90,7 @@ var hierarchy =
         [ "SUNphi::UnarySmET< T >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
         [ "SUNphi::UnarySmET< Binder< TG, _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
         [ "SUNphi::UnarySmET< Conjer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< RelBinder< _BoundToType, _BoundType, _Ref, _Ad > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
+        [ "SUNphi::UnarySmET< RelBinder< _BoundType, _BoundToType, _Ref, _Ad > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
         [ "SUNphi::UnarySmET< Tens< TK, Fund > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
         [ "SUNphi::UnarySmET< Transposer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
         [ "SUNphi::UnarySmET< UMinuser< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
@@ -178,7 +178,7 @@ var hierarchy =
     [ "ConstrainIsSmET", null, [
       [ "SUNphi::Binder< TG, _Ref, NestedTk, NestedTypes >", "d6/db9/classSUNphi_1_1Binder.html", null ],
       [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ],
-      [ "SUNphi::RelBinder< _BoundToType, _BoundType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ],
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ],
       [ "SUNphi::Transposer< _Ref, TK >", "d5/dd3/classSUNphi_1_1Transposer.html", null ],
       [ "SUNphi::UMinuser< _Ref, TK, TK_TYPES >", "dd/d03/classSUNphi_1_1UMinuser.html", null ],
       [ "SUNphi::Wrapper< _Ref, TK >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
@@ -202,10 +202,10 @@ var hierarchy =
     [ "SUNphi::ConstrainTupleHasNotType< T, TP, class >", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
     [ "SUNphi::ConstrainTupleHasType< T, TP, class >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
     [ "SUNphi::ConstrainTupleHasType< _BoundToType, NestedTypes >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", [
-      [ "SUNphi::RelBinder< _BoundToType, _BoundType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
     ] ],
     [ "SUNphi::ConstrainTupleHasType< _BoundType, NestedTypes >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", [
-      [ "SUNphi::RelBinder< _BoundToType, _BoundType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ref, _Ad, NestedTk, NestedTypes >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
     ] ],
     [ "SUNphi::ConstrainTupleHasType< Compl, TK_TYPES >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", [
       [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ]

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['boundpos',['boundPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a46c74867391ed7b60106dd035f12f9e5',1,'SUNphi::RelBinder']]],
-  ['boundtopos',['boundToPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#aed985bd3f9acf5c0391a1620acf51fcc',1,'SUNphi::RelBinder']]]
+  ['boundpos',['boundPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a9be7b4fc0d1b4015dc543ac83bb14b58',1,'SUNphi::RelBinder']]],
+  ['boundtopos',['boundToPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a88c9a23055380d6fe493442ad4ea69f5',1,'SUNphi::RelBinder']]]
 ];

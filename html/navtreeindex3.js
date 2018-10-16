@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"db/d04/Ints_8hpp_source.html":[3,0,2,9],
 "db/d30/structSUNphi_1_1ConstrainHasMember__isStoring.html":[2,0,0,40],
 "db/d4b/RelBindTwoComps_8hpp_source.html":[3,0,2,4,7],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html":[2,0,0,79,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "functions_p.html":[2,3,0,14],
 "functions_r.html":[2,3,0,15],
 "functions_s.html":[2,3,0,16],
-"functions_t.html":[2,3,0,17],
-"functions_type.html":[2,3,3]
+"functions_t.html":[2,3,0,17]
 };
