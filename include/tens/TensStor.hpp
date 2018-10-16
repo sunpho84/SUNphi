@@ -108,7 +108,7 @@ namespace SUNphi
 	}
     }
     
-    /// Creat the full list of sizes dynamical of the grouped comps
+    /// Creat the full list of dynamical sizes of the grouped comps
     template <int...Delims,   // Delimiters of the groups
     	      int...DynComps> // List of dynamical comps
     DECLAUTO compsRangeGroupsSize(const IntSeq<Delims...>&,
@@ -118,8 +118,8 @@ namespace SUNphi
       
       DynSizes<sizeof...(DynComps)> sizes=
 	{{compsRangeSize<
-	  Is::template element<DynComps>,
-	  Is::template element<DynComps+1>>()...}};
+	  Is::template element<DynComps>(),
+	  Is::template element<DynComps+1>()>()...}};
       
       return sizes;
     }

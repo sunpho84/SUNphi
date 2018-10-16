@@ -17,7 +17,7 @@ int main()
     using B=IntSeq<1,3>;
     STATIC_ASSERT_IS_BASE_OF(A,B);
   }
-
+  
   // Check on Diag
   {
     using MyTk=TensKind<RwCol,Spin,CnCol>;
@@ -36,10 +36,10 @@ int main()
   
   // Check relBind
   {
-    using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
+    using MyTk=TensKind<RwCol,Spin,Spacetime,CnCol>;
     
     using MyTens=Tens<MyTk,double>;
-    MyTens c;
+    MyTens c(10);
     
     c.eval(1,2,0,1)=1.0594;
     
