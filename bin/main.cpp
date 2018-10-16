@@ -58,8 +58,7 @@ int main()
     
     cout<<decltype(c.getMaximallyMergedCompsView())::Tk::name()<<endl;
     
-    
-    //cout<<decltype(b2.getMaximallyMergedCompsView())::Tk::name()<<endl;
+    cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
   }
   
   // Check that conj of a non-complex type object is the same of original type
