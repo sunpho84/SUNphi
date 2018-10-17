@@ -21,6 +21,7 @@
 #include <tuple/Filter.hpp>
 #include <tuple/TupleElements.hpp>
 #include <tuple/TupleOrder.hpp>
+#include <tuple/TupleTypeCat.hpp>
 
 namespace SUNphi
 {
@@ -342,8 +343,114 @@ namespace SUNphi
     template <typename Is>
     using Merged=
       typename _Merged<Is,IntsUpTo<Is::size-1>>::type;
+    
+    /////////////////////////////////////////////////////////////////
+    
+  private:
+    
+    /// Blend the TensKind with a list of types
+    ///
+    /// Forward declaration
+    template <typename Tp>
+    class _BlendWithTypes;
+    
+    /// Blend the TensKind with a list of types
+    ///
+    /// It is assumed that the types are TensKind, and the check is
+    /// demanded to the caller
+    template <typename...Oths>              // Other types
+    class _BlendWithTypes<Tuple<Oths...>>
+    {
+      /// Shortcut for the name of the Tuple
+      using Tp=
+	Tuple<Oths...>;
+      
+      /// Intseq holding the information on whether the type has to be
+      /// appended or not
+      using keepType=
+	IntSeq<(not tupleHasType<Oths,types>)...>;
+      
+      /// IntSeq holding the information on whether the position has
+      /// to be appended or not
+      using keepPos=
+	FilterVariadicClassPos<IsNotNull,keepType>;
+      
+    public:
+      
+      /// Result of blending
+      using type=TensKindFromTuple<
+      TupleTypeCatT<T...,
+		    decltype(getIndexed(keepPos{},Tp{}))>>;
+    };
+    
+  public:
+    
+    /// Blend the TensKind with another one
+    ///
+    /// The TensComp already present are not appended.
+    /// Example:
+    ///
+    /// \code
+    ///
+    /// using MyTk1=TensKind<RwCol,Spin>;
+    /// using MyTk2=TensKind<RwCol,CnCol>;
+    ///
+    /// using MyTkBRes=typename MyTk1::BlendWithTensKind<MyTk2>;
+    /// // same asTensKind<RwCol,Spin,CnCol>
+    ///
+    /// \endcode
+    ///
+    template <typename OthTk,
+	      typename=ConstrainIsTensKind<OthTk>>
+    using BlendWithTensKind=
+      typename _BlendWithTypes<typename OthTk::types>::type;
   };
-
+  
+  /// Blend an arbitrary number of \c TensKind
+  ///
+  /// Forward declaration of the internal implementation
+  template <typename...>
+  struct _BlendTensKinds;
+  
+  /// Blend an arbitrary number of \c TensKind
+  ///
+  /// Terminator of the recursion
+  template <typename Tk>     // Incoming TensKind
+  struct _BlendTensKinds<Tk>
+  {
+    /// Constrain all types to be TensKinds
+    using Constr=
+      ConstrainIsTensKind<Tk>;
+    
+    /// Resulting type (trivial type)
+    using type=
+      Tk;
+  };
+  
+  /// Blend an arbitrary number of \c TensKind
+  ///
+  /// Recursive steps
+  template <typename Head1,     // First \c TensKind to blend
+	    typename Head2,     // Second \c TensKind to blend
+	    typename...Tail>    // Other \c TensKind to blend, if any
+  struct _BlendTensKinds<Head1,Head2,Tail...>
+  {
+    /// Constrain all types to be TensKinds
+    using Constr=
+      ConstrainAreTensKinds<Head1,Head2,Tail...>;
+    
+    /// Resulting type, self calling recursively
+    using type=
+      typename _BlendTensKinds<typename Head1::template BlendWithTensKind<Head2>,
+			       Tail...>::type;
+  };
+  
+  /// Blend an arbitrary number of \c TensKind
+  ///
+  /// Gives visibility to the internal implementation
+  template <typename...Args>
+  using BlendTensKinds=
+    typename _BlendTensKinds<Args...>::type;
 }
 
 #endif
