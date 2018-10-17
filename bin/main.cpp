@@ -8,6 +8,7 @@
 using namespace std;
 using namespace SUNphi;
 
+
 //
 int main()
 {
@@ -59,8 +60,6 @@ int main()
     cout<<" c: "<<decltype(c)::Tk::name()<<endl;
     cout<<" bb2: "<<decltype(bb2)::Tk::name()<<endl;
     cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
-    
-    
   }
   
   // Check that conj of a non-complex type object is the same of original type
@@ -83,10 +82,26 @@ int main()
     using MyTens=Tens<MyTk,double>;
     
     MyTens c;
-
+    
     cout<<" "<<posOfType<RwCol,MyTk::Twinned::types><<endl;
     
     STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(+c));
+  }
+  
+  //check the blending of two TensKind
+  {
+    using MyTk1=TensKind<RwCol,Spin>;
+    using MyTk2=TensKind<RwCol,CnCol>;
+    using MyTkBCompa=TensKind<RwCol,Spin,CnCol>;
+    
+    using MyTkBRes1=typename MyTk1::BlendWithTensKind<MyTk2>;
+    STATIC_ASSERT_IS_BASE_OF(MyTkBRes1,MyTkBCompa);
+    
+    using MyTkBRes2=BlendTensKinds<MyTk1,MyTk2>;
+    STATIC_ASSERT_IS_BASE_OF(MyTkBRes2,MyTkBCompa);
+    
+    using MyTkBRes3=BlendTensKinds<MyTk1,MyTk2,MyTk2>;
+    STATIC_ASSERT_IS_BASE_OF(MyTkBRes3,MyTkBCompa);
   }
   
   // Check that repeated - is absorbed
