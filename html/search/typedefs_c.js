@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unqualified',['Unqualified',['../d3/dd7/namespaceSUNphi.html#a2cc8a85a94d4b30bda1982ddf49b7913',1,'SUNphi']]]
+  ['spin',['Spin',['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi']]],
+  ['sub',['Sub',['../da/def/structSUNphi_1_1IntSeq.html#a7495becadb913e86710fe02e2125a073',1,'SUNphi::IntSeq']]]
 ];

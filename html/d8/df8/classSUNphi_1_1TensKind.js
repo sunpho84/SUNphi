@@ -1,5 +1,7 @@
 var classSUNphi_1_1TensKind =
 [
+    [ "_BlendWithTypes", "d7/da3/classSUNphi_1_1TensKind_1_1__BlendWithTypes.html", null ],
+    [ "_BlendWithTypes< Tuple< Oths...> >", "d8/d1e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_4_01_4.html", "d8/d1e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_4_01_4" ],
     [ "_firstVectorizingComp", "d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html", "d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp" ],
     [ "_Merged", "d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html", null ],
     [ "_Merged< IntSeq< IDelims...>, IntSeq< IGroups...> >", "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html", "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4" ],
@@ -8,6 +10,7 @@ var classSUNphi_1_1TensKind =
     [ "TensCompsListMerged< IntSeq< IComps...> >", "de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4.html", "de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4" ],
     [ "AllButType", "d8/df8/classSUNphi_1_1TensKind.html#aad1e33d53335ae4f28cb9be6264bcef4", null ],
     [ "AreDynamic", "d8/df8/classSUNphi_1_1TensKind.html#a55e9d277b2e66ecfd8a01e75eabd3bfc", null ],
+    [ "BlendWithTensKind", "d8/df8/classSUNphi_1_1TensKind.html#a0156824e8af1d46a49e07c904bf841d7", null ],
     [ "Diag", "d8/df8/classSUNphi_1_1TensKind.html#a746264a990ada66a174d8f8d6778aa72", null ],
     [ "DiagCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#a5f54c860b4ac50f95ca650872aded78c", null ],
     [ "DynCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71", null ],

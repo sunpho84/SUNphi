@@ -130,6 +130,10 @@ Inheritance diagram for SUNphi::TensKind&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da3/classSUNphi_1_1TensKind_1_1__BlendWithTypes.html">_BlendWithTypes</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d1e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_4_01_4.html">_BlendWithTypes&lt; Tuple&lt; Oths...&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html">_firstVectorizingComp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html">_Merged</a></td></tr>
@@ -191,6 +195,9 @@ template&lt;typename Is &gt; </td></tr>
 <tr class="memitem:a6d5400cb0230cd0bb4aaa773db9d134c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a6d5400cb0230cd0bb4aaa773db9d134c">Merged</a> = typename <a class="el" href="../../d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html">_Merged</a>&lt; Is, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt; Is::size-1 &gt;&gt;::type</td></tr>
 <tr class="memdesc:a6d5400cb0230cd0bb4aaa773db9d134c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merged components according to <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> Is. <br/></td></tr>
 <tr class="separator:a6d5400cb0230cd0bb4aaa773db9d134c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0156824e8af1d46a49e07c904bf841d7"><td class="memTemplParams" colspan="2">template&lt;typename OthTk , typename  = ConstrainIsTensKind&lt;OthTk&gt;&gt; </td></tr>
+<tr class="memitem:a0156824e8af1d46a49e07c904bf841d7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a0156824e8af1d46a49e07c904bf841d7">BlendWithTensKind</a> = typename <a class="el" href="../../d7/da3/classSUNphi_1_1TensKind_1_1__BlendWithTypes.html">_BlendWithTypes</a>&lt; typename OthTk::types &gt;::type</td></tr>
+<tr class="separator:a0156824e8af1d46a49e07c904bf841d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -201,17 +208,14 @@ static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:acb4377383592c0a41acba13476f65fb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb4377383592c0a41acba13476f65fb8"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8">nDynamic</a> =<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html#a5e538a17a22dd04dd593b3713b5aeba1">AreDynamic::hSum</a></td></tr>
-<tr class="memdesc:acb4377383592c0a41acba13476f65fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dynamical components. <br/></td></tr>
+<tr class="memitem:acb4377383592c0a41acba13476f65fb8"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8">nDynamic</a></td></tr>
+<tr class="memdesc:acb4377383592c0a41acba13476f65fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dynamical components.  <a href="#acb4377383592c0a41acba13476f65fb8">More...</a><br/></td></tr>
 <tr class="separator:acb4377383592c0a41acba13476f65fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a474313cf3006be48e76e25fc2b629837"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a474313cf3006be48e76e25fc2b629837"></a>
-static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837">isFullyStatic</a> =(<a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8">nDynamic</a>==0)</td></tr>
-<tr class="memdesc:a474313cf3006be48e76e25fc2b629837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is fully static. <br/></td></tr>
+<tr class="memitem:a474313cf3006be48e76e25fc2b629837"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837">isFullyStatic</a></td></tr>
+<tr class="memdesc:a474313cf3006be48e76e25fc2b629837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is fully static.  <a href="#a474313cf3006be48e76e25fc2b629837">More...</a><br/></td></tr>
 <tr class="separator:a474313cf3006be48e76e25fc2b629837"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e3a9fe0237fc5acc27b7d7809cf622a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3a9fe0237fc5acc27b7d7809cf622a"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a">nTypes</a> =sizeof...(T)</td></tr>
-<tr class="memdesc:a1e3a9fe0237fc5acc27b7d7809cf622a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of types of the kind. <br/></td></tr>
+<tr class="memitem:a1e3a9fe0237fc5acc27b7d7809cf622a"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a">nTypes</a></td></tr>
+<tr class="memdesc:a1e3a9fe0237fc5acc27b7d7809cf622a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of types of the kind.  <a href="#a1e3a9fe0237fc5acc27b7d7809cf622a">More...</a><br/></td></tr>
 <tr class="separator:a1e3a9fe0237fc5acc27b7d7809cf622a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ded86ef2f6f7088dc33620e902cdec"><td class="memTemplParams" colspan="2">template&lt;typename TC , typename  = ConstrainIsTensComp&lt;TC&gt;, typename  = ConstrainIsDynamic&lt;TC&gt;&gt; </td></tr>
 <tr class="memitem:aa6ded86ef2f6f7088dc33620e902cdec"><td class="memTemplItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1d3772a973a3d548ebb77945ff881e6b">TypeIf</a><br class="typebreak"/>
@@ -220,7 +224,7 @@ static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="memdesc:aa6ded86ef2f6f7088dc33620e902cdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of a dynamical size.  <a href="#aa6ded86ef2f6f7088dc33620e902cdec">More...</a><br/></td></tr>
 <tr class="separator:aa6ded86ef2f6f7088dc33620e902cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba4985f7f8b09e10be7e338a2d844a08"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
-<tr class="memitem:aba4985f7f8b09e10be7e338a2d844a08"><td class="memTemplItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08">firstVectorizingComp</a> =<a class="el" href="../../d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html">_firstVectorizingComp</a>&lt;F&gt;::value</td></tr>
+<tr class="memitem:aba4985f7f8b09e10be7e338a2d844a08"><td class="memTemplItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08">firstVectorizingComp</a></td></tr>
 <tr class="separator:aba4985f7f8b09e10be7e338a2d844a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e449207cc5e6c071717ed8651922ee5"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a5e449207cc5e6c071717ed8651922ee5">maxStaticIdx</a></td></tr>
 <tr class="memdesc:a5e449207cc5e6c071717ed8651922ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal value of the index, restricted to the statical components.  <a href="#a5e449207cc5e6c071717ed8651922ee5">More...</a><br/></td></tr>
@@ -256,7 +260,7 @@ class SUNphi::TensKind&lt; T &gt;</h3>
 <p>Tensor Kind used to define the structure of a tensor</p>
 <p>The tensor kind defines the list of components of a tensor. It is used to the define the underlying set of components of a <code>TensorStorage</code>, or the returned type of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a55e9d277b2e66ecfd8a01e75eabd3bfc"></a>
 <div class="memitem">
@@ -281,7 +285,32 @@ template&lt;class... T&gt; </div>
 <p>Check that all types are different. </p>
 <p>An integer sequence defining whether the types are dynamic or not </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0156824e8af1d46a49e07c904bf841d7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... T&gt; </div>
+<div class="memtemplate">
+template&lt;typename OthTk , typename  = ConstrainIsTensKind&lt;OthTk&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::<a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html#a0156824e8af1d46a49e07c904bf841d7">BlendWithTensKind</a> =  typename <a class="el" href="../../d7/da3/classSUNphi_1_1TensKind_1_1__BlendWithTypes.html">_BlendWithTypes</a>&lt;typename OthTk::types&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Blend the <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a> with another one</p>
+<p>The <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> already present are not appended. Example:</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> MyTk1=TensKind&lt;RwCol,Spin&gt;;</div>
+<div class="line"><span class="keyword">using</span> MyTk2=TensKind&lt;RwCol,CnCol&gt;;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using</span> MyTkBRes=<span class="keyword">typename</span> MyTk1::BlendWithTensKind&lt;MyTk2&gt;;</div>
+<div class="line"><span class="comment">// same asTensKind&lt;RwCol,Spin,CnCol&gt;</span></div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00406">406</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -314,7 +343,7 @@ template&lt;int NScanned, int... CompsPos&gt; </div>
 <p>Position of dynamical components</p>
 <p>Internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +374,7 @@ template&lt;typename TC , typename  = ConstrainIsTensComp&lt;TC&gt;, typename  =
 </div><!-- fragment -->
 <p>Returns the position of a dynamical size. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00145">145</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -361,7 +390,7 @@ template&lt;typename F &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::firstVectorizingComp =<a class="el" href="../../d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html">_firstVectorizingComp</a>&lt;F&gt;::value</td>
+          <td class="memname">constexpr int <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::firstVectorizingComp</td>
         </tr>
       </table>
   </td>
@@ -370,12 +399,42 @@ template&lt;typename F &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the position of the first component needed to vectorize</p>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      _firstVectorizingComp&lt;F&gt;::value</div>
+</div><!-- fragment --><p>Return the position of the first component needed to vectorize</p>
 <p>If no factorization is possible, returns -1</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>Add the possibility that the accumulated size is more than needed, so we can split the outermost component to allow for other kind of optimization</dd></dl>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>Include a variation of the vectorization according to the kind of SIMD vector </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00199">199</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a474313cf3006be48e76e25fc2b629837"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::isFullyStatic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      (<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8">nDynamic</a>==0)</div>
+</div><!-- fragment -->
+<p>Check if the type is fully static. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +466,7 @@ template&lt;typename Is &gt; </div>
 </div><!-- fragment -->
 <p>Determines whether an <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> is a valid CastMerge type for the <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00296">296</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00302">302</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +494,63 @@ template&lt;class... T&gt; </div>
 </div><!-- fragment -->
 <p>Maximal value of the index, restricted to the statical components. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00239">239</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb4377383592c0a41acba13476f65fb8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::nDynamic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html#a5e538a17a22dd04dd593b3713b5aeba1">AreDynamic::hSum</a></div>
+</div><!-- fragment -->
+<p>Number of dynamical components. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e3a9fe0237fc5acc27b7d7809cf622a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">SUNphi::TensKind</a>&lt; T &gt;::nTypes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      <span class="keyword">sizeof</span>...(T)</div>
+</div><!-- fragment -->
+<p>Number of types of the kind. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00137">137</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +580,7 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment -->
 <p>Maximal total submultiple of a list of components. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00240">240</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00246">246</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +611,7 @@ template&lt;int... Ints&gt; </div>
 </div><!-- fragment --><p>Total size of a list of components</p>
 <p>If any component is dynamic, returns DYNAMIC, otherwise the product </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00247">247</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00253">253</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>

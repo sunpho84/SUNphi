@@ -116,13 +116,14 @@ $(document).ready(function(){initNavTree('d2/d33/TupleTypeCat_8hpp_source.html',
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>SUNphi</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span>...Tp&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">   26</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">TupleTypeCatT</a>=decltype(tuple_cat(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a85d1ab1bfca5f3bd9418a65976bbe4f5">TupleWrap&lt;Tp&gt;</a>{}...));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">using</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">TupleTypeCatT</a>=</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">   27</a></span>&#160;    decltype(tuple_cat(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a85d1ab1bfca5f3bd9418a65976bbe4f5">TupleWrap&lt;Tp&gt;</a>{}...));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSUNphi_html_a85d1ab1bfca5f3bd9418a65976bbe4f5"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a85d1ab1bfca5f3bd9418a65976bbe4f5">SUNphi::TupleWrap</a></div><div class="ttdeci">typename _TupleWrap&lt; T &gt;::type TupleWrap</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/df2/TupleWrap_8hpp_source.html#l00058">TupleWrap.hpp:58</a></div></div>
 <div class="ttc" id="TupleWrap_8hpp_html"><div class="ttname"><a href="../../d4/df2/TupleWrap_8hpp.html">TupleWrap.hpp</a></div><div class="ttdoc">Take a Tuple or a single type and returns a Tuple. </div></div>
-<div class="ttc" id="namespaceSUNphi_html_aaa2eb9b96050ad18ba1bf5d84cd0080d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">SUNphi::TupleTypeCatT</a></div><div class="ttdeci">decltype(tuple_cat(TupleWrap&lt; Tp &gt;{}...)) TupleTypeCatT</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d33/TupleTypeCat_8hpp_source.html#l00026">TupleTypeCat.hpp:26</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_aaa2eb9b96050ad18ba1bf5d84cd0080d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">SUNphi::TupleTypeCatT</a></div><div class="ttdeci">decltype(tuple_cat(TupleWrap&lt; Tp &gt;{}...)) TupleTypeCatT</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d33/TupleTypeCat_8hpp_source.html#l00027">TupleTypeCat.hpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

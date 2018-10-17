@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['wrap',['wrap',['../d3/dd7/namespaceSUNphi.html#a466b4b388670320c25f051d69f5514f7',1,'SUNphi::wrap(T &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#aa1491c895b9023d418376db2728889c1',1,'SUNphi::wrap(D &amp;&amp;smet)']]],
-  ['wrap_2ehpp',['Wrap.hpp',['../da/df3/Wrap_8hpp.html',1,'']]],
-  ['wrapper',['Wrapper',['../d1/d77/classSUNphi_1_1Wrapper.html#a9242b50c006372d9f61102a704941ce2',1,'SUNphi::Wrapper']]],
-  ['wrapper',['Wrapper',['../d1/d77/classSUNphi_1_1Wrapper.html',1,'SUNphi']]]
+  ['v',['v',['../d8/d1c/classSUNphi_1_1Tens.html#a580ed866f19329da4488f6615349cf06',1,'SUNphi::Tens::v()'],['../d3/d22/classSUNphi_1_1TensStor.html#adac10655e44a07882813127a2e8ff467',1,'SUNphi::TensStor::v()']]],
+  ['value',['value',['../d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9',1,'SUNphi::TensKind::_firstVectorizingComp']]],
+  ['voidif',['VoidIf',['../d3/dd7/namespaceSUNphi.html#a0599cb789276721d74cf627d5afb69d6',1,'SUNphi']]]
 ];
