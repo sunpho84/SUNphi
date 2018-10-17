@@ -74,8 +74,8 @@ namespace SUNphi
   /// Get the position of elements of a vector, satisfying a condition
   ///
   /// Gets a vector-like incapsulated list of variables, and returns a
-  /// SeqInt containing the position of those that satisfy a certain
-  /// condition.
+  /// \c IntSeq containing the position of those that satisfy a
+  /// certain condition.
   ///
   /// Example:
   ///
@@ -94,11 +94,20 @@ namespace SUNphi
   /// Filterer which check non-nullity of its parameter
   template <auto I>
   struct IsNotNull
-     {
-       /// Result of the check
-       static constexpr bool res=
-	 (I!=0);
-     };
+  {
+    /// Result of the check
+    static constexpr bool res=
+      (I!=0);
+  };
+  
+  /// Filterer which check nothing
+  template <auto I>
+  struct IsAlwaysTrue
+  {
+    /// Result of the check
+    static constexpr bool res=
+      true;
+  };
 }
 
 #endif
