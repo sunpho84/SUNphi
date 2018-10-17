@@ -305,12 +305,13 @@ namespace SUNphi
   template <typename Head=int,
 	    typename...Tail>
   [[ maybe_unused ]]
-  constexpr bool areIntegrals=areIntegrals<Head> and areIntegrals<Tail...>;
+  constexpr bool areIntegrals=
+    areIntegrals<Head> and areIntegrals<Tail...>;
   
   /// Identifies whether a single types is integer-like
   template <typename T>
-  constexpr bool areIntegrals<T>
-  =isIntegral<T>;
+  constexpr bool areIntegrals<T> =
+    isIntegral<T>;
   
   /// Static assert if the types T are not an integer-like
 #define STATIC_ASSERT_ARE_INTEGRALS(...)			\
@@ -334,14 +335,24 @@ namespace SUNphi
 #define DEFINE_BASE_TYPE(TYPE,...)					\
   struct Base ## TYPE __VA_ARGS__ {};					\
 									\
-  /*! Expression which is true if T inherits from \c BASE ## TYPE */	\
+  /*! Expression which is true if T inherits from \c Base ## TYPE */	\
   template<typename T>							\
   [[ maybe_unused ]]							\
-  constexpr bool is ## TYPE=isBaseOf<Base ## TYPE,T>;			\
+  constexpr bool is ## TYPE=						\
+    isBaseOf<Base ## TYPE,T>;						\
 									\
-  /*! Class forcing T to inherits from \c BASE ## TYPE */		\
+  /*! Class forcing T to inherits from \c Base ## TYPE */		\
   template<typename T>							\
-  using ConstrainIs ## TYPE=ConstrainIsBaseOf<Base ## TYPE,T>
+  using ConstrainIs ## TYPE=						\
+    ConstrainIsBaseOf<Base ## TYPE,T>;					\
+									\
+  /*! Static assert if the types do not inherit from \c Base ## TYPE */	\
+  template <typename...Args>						\
+  struct ConstrainAre ## TYPE ## s					\
+  {									\
+    static_assert((is ## TYPE<Args> * ...),				\
+		  "Error, types are not all TYPE");			\
+  }
   
   /////////////////////////////////////////////////////////////////
   
