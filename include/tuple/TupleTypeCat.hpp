@@ -19,11 +19,12 @@ namespace SUNphi
   /// Example:
   /// \code
   /// typedef Tuple<int,double> T;
-  /// TupleTypeCatT<T,T> test1;    //Tuple<int,double,int,double>
-  /// TupleTypeCatT<T,char> test2; //Tuple<int,double,char>
+  /// TupleTypeCatT<T,T> test1;    // Tuple<int,double,int,double>
+  /// TupleTypeCatT<T,char> test2; // Tuple<int,double,char>
   /// \endcode
   template <class...Tp>
-  using TupleTypeCatT=decltype(tuple_cat(TupleWrap<Tp>{}...));
+  using TupleTypeCatT=
+    decltype(tuple_cat(TupleWrap<Tp>{}...));
 }
 
 #endif

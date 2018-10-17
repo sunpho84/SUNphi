@@ -118,19 +118,23 @@ namespace SUNphi
     }
     
     /// Position of dynamical components
-    using DynCompsPos=decltype(_DynCompsPos<0>(intSeq<>));
+    using DynCompsPos=
+      decltype(_DynCompsPos<0>(intSeq<>));
     
     /// Number of dynamical components
-    static constexpr int nDynamic=AreDynamic::hSum;
+    static constexpr int nDynamic=
+      AreDynamic::hSum;
     
     /// Check if the type is fully static
-    static constexpr bool isFullyStatic=(nDynamic==0);
+    static constexpr bool isFullyStatic=
+      (nDynamic==0);
     
     /// Tuple containing all types
     typedef Tuple<T...> types;
     
     /// Number of types of the kind
-    static constexpr int nTypes=sizeof...(T);
+    static constexpr int nTypes=
+      sizeof...(T);
     
     /// Returns the position of a dynamical size
     template <typename TC,
@@ -196,7 +200,8 @@ namespace SUNphi
     /// \todo Include a variation of the vectorization according to
     /// the kind of SIMD vector
     template <typename F>                 // Fundamental type
-    constexpr static int firstVectorizingComp=_firstVectorizingComp<F>::value; // Get the value of the internal implementation
+    constexpr static int firstVectorizingComp=
+      _firstVectorizingComp<F>::value; // Get the value of the internal implementation
     
     // /// Get all types after a given one
     // template <class Tab>
