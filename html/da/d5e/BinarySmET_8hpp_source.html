@@ -133,63 +133,66 @@ $(document).ready(function(){initNavTree('da/d5e/BinarySmET_8hpp_source.html','.
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d1/d31/structSUNphi_1_1SmET.html">SmET</a>&lt;T&gt;,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span> <a class="code" href="../../d2/d98/structSUNphi_1_1BaseBinarySmET.html">BaseBinarySmET</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html#ae428c0589b26060d587c69a498085fb4">   33</a></span>&#160;    <a class="code" href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a>(T);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79">   37</a></span>&#160;<span class="preprocessor">#define PROVIDE_BINARY_SMET_REFS            \</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">  PROVIDE_SMET_REF(1);                  \</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">  PROVIDE_SMET_REF(2)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606">   44</a></span>&#160;<span class="preprocessor">#define PROVIDE_BINARY_SMET_SIMPLE_CREATOR(BINARY_SMET ) \</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">  template &lt;typename SMET1,                     \</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">        typename SMET2,                     \</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isSame&lt;Unqualified&lt;SMET1&gt;,Unqualified&lt;Ref1&gt;&gt;&gt;, \</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isSame&lt;Unqualified&lt;SMET2&gt;,Unqualified&lt;Ref2&gt;&gt;&gt;&gt; \</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">  explicit BINARY_SMET(SMET1&amp;&amp; smet1,SMET2&amp;&amp; smet2) : ref1(forw&lt;SMET1&gt;(smet1)),ref2(forw&lt;SMET2&gt;(smet2)) \</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b">   58</a></span>&#160;<span class="preprocessor">#define SIMPLE_BINARY_SMET_BUILDER(BUILDER,      \</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">                   BINARY_SMET)  \</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">  template &lt;typename T1,       </span><span class="comment">/* Type of the first SmET to get  */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">        typename T2,       </span><span class="comment">/* Type of the second SmET to get */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">        SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS&gt;        \</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">  BINARY_SMET&lt;T1,T2&gt; BUILDER(T1&amp;&amp; smet1,    \</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">                 T2&amp;&amp; smet2,    \</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">                 SFINAE_WORSEN_DEFAULT_VERSION_ARGS)    \</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;               \</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    return BINARY_SMET&lt;T1,T2&gt;(forw&lt;T1&gt;(smet1),forw&lt;T2&gt;(smet2));     \</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">   78</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">  {                         \</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    return                      \</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">      ref1.isAliasing(alias) or             \</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">      ref2.isAliasing(alias);               \</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">  }                         \</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html#a0cec6cc86dbecb8d68ff15e3f2c4eb1f">   33</a></span>&#160;    <a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a>(,<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html#ae428c0589b26060d587c69a498085fb4">   35</a></span>&#160;    <a class="code" href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a>(T);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79">   39</a></span>&#160;<span class="preprocessor">#define PROVIDE_BINARY_SMET_REFS            \</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">  PROVIDE_SMET_REF(1);                  \</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">  PROVIDE_SMET_REF(2)</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606">   46</a></span>&#160;<span class="preprocessor">#define PROVIDE_BINARY_SMET_SIMPLE_CREATOR(BINARY_SMET ) \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">  template &lt;typename SMET1,                     \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        typename SMET2,                     \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isSame&lt;Unqualified&lt;SMET1&gt;,Unqualified&lt;Ref1&gt;&gt;&gt;, \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;isSame&lt;Unqualified&lt;SMET2&gt;,Unqualified&lt;Ref2&gt;&gt;&gt;&gt; \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">  explicit BINARY_SMET(SMET1&amp;&amp; smet1,SMET2&amp;&amp; smet2) : ref1(forw&lt;SMET1&gt;(smet1)),ref2(forw&lt;SMET2&gt;(smet2)) \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b">   60</a></span>&#160;<span class="preprocessor">#define SIMPLE_BINARY_SMET_BUILDER(BUILDER,      \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">                   BINARY_SMET)  \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">  template &lt;typename T1,       </span><span class="comment">/* Type of the first SmET to get  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">        typename T2,       </span><span class="comment">/* Type of the second SmET to get */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">        SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS&gt;        \</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">  BINARY_SMET&lt;T1,T2&gt; BUILDER(T1&amp;&amp; smet1,    \</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">                 T2&amp;&amp; smet2,    \</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">                 SFINAE_WORSEN_DEFAULT_VERSION_ARGS)    \</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;               \</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    return BINARY_SMET&lt;T1,T2&gt;(forw&lt;T1&gt;(smet1),forw&lt;T2&gt;(smet2));     \</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">   80</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">  {                         \</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">    return                      \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">      ref1.isAliasing(alias) or             \</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">      ref2.isAliasing(alias);               \</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">  }                         \</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="TypeTraits_8hpp_html_af0ef22f5cfb3da749d24d242c1801cec"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a></div><div class="ttdeci">#define DEFINE_HAS_MEMBER(TAG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00383">TypeTraits.hpp:383</a></div></div>
 <div class="ttc" id="structSUNphi_1_1BinarySmET_html"><div class="ttname"><a href="../../d4/d8b/structSUNphi_1_1BinarySmET.html">SUNphi::BinarySmET</a></div><div class="ttdoc">Binary SmET. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5e/BinarySmET_8hpp_source.html#l00029">BinarySmET.hpp:29</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html">BaseSmET.hpp</a></div><div class="ttdoc">Header file defining basic properties of Smart Expression Templates. </div></div>
 <div class="ttc" id="CRTP_8hpp_html_a11605cdec950f2c700cec58fd6759882"><div class="ttname"><a href="../../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882">PROVIDE_CRTP_CAST_OPERATOR</a></div><div class="ttdeci">#define PROVIDE_CRTP_CAST_OPERATOR(CLASS)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dba/CRTP_8hpp_source.html#l00016">CRTP.hpp:16</a></div></div>
 <div class="ttc" id="structSUNphi_1_1BaseBinarySmET_html"><div class="ttname"><a href="../../d2/d98/structSUNphi_1_1BaseBinarySmET.html">SUNphi::BaseBinarySmET</a></div><div class="ttdoc">Defines the BinarySmET type traits. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5e/BinarySmET_8hpp_source.html#l00013">BinarySmET.hpp:13</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_a0884c6dc519009fe84cd9832979c88c0"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a></div><div class="ttdeci">#define IS_ASSIGNABLE_ATTRIBUTE(LONG_DESCRIPTION,...)</div><div class="ttdoc">Provides a isAssignable attribute. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00069">BaseSmET.hpp:69</a></div></div>
 <div class="ttc" id="structSUNphi_1_1SmET_html"><div class="ttname"><a href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a></div><div class="ttdoc">Smart Expression Templates. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00171">BaseSmET.hpp:171</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00335">TypeTraits.hpp:335</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

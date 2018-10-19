@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('dc/d6b/BaseSmET_8hpp_source.html','../
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>SUNphi</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a284dfb368364fd9a4584d6ea564aac22">   15</a></span>&#160;<span class="preprocessor">#define STATIC_CONSSMETPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)   \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#aa72cfd64aa2c619d86b562d623b3e0f3">   15</a></span>&#160;<span class="preprocessor">#define STATIC_CONSTEXPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)    \</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  DESCRIPTION                               \</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">                            \</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">  LONG_DESCRIPTION                          \</span></div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('dc/d6b/BaseSmET_8hpp_source.html','../
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a0b67eec99595f3afd38b1a8fc8b740b5">   39</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(isStoring);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  </div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#abc520fc4cb71b5a83c691099e8aa7167">   42</a></span>&#160;<span class="preprocessor">#define IS_STORING_ATTRIBUTE(LONG_DESCRIPTION,...)          \</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">  STATIC_CONSSMETPR(,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">  STATIC_CONSTEXPR(,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span>  </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#abe48d33bc0251dbf6d73789f911e05ae">   46</a></span>&#160;<span class="preprocessor">#define STORING                     \</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">  IS_STORING_ATTRIBUTE(,true)</span></div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('dc/d6b/BaseSmET_8hpp_source.html','../
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#adcf4c7356e247b24603cea4425702143">   66</a></span>&#160;  <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(isAssignable);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  </div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">   69</a></span>&#160;<span class="preprocessor">#define IS_ASSIGNABLE_ATTRIBUTE(LONG_DESCRIPTION,...)           \</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">  STATIC_CONSSMETPR(,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">  STATIC_CONSTEXPR(,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor"></span>  </div>
 <div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d">   73</a></span>&#160;<span class="preprocessor">#define ASSIGNABLE                      \</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">  IS_ASSIGNABLE_ATTRIBUTE(,true)</span></div>
