@@ -159,7 +159,7 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
-  /// Provides const or non-const the evaluator
+  /// Provides const or non-const evaluator
 #define PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER) /*!< Const or not */ \
   /*! QUALIFIER Evaluator                                               */ \
   /*! \todo add/check that const qualifier is properly added to output  */ \

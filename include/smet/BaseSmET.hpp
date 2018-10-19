@@ -12,7 +12,7 @@
 namespace SUNphi
 {
   /// Provides an attribute
-#define STATIC_CONSSMETPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)	\
+#define STATIC_CONSTEXPR(DESCRIPTION,LONG_DESCRIPTION,TYPE,NAME,...)	\
   DESCRIPTION								\
   /*!             */							\
   LONG_DESCRIPTION							\
@@ -40,7 +40,7 @@ namespace SUNphi
   
   /// Provides a isStoring attribute
 #define IS_STORING_ATTRIBUTE(LONG_DESCRIPTION,...)			\
-  STATIC_CONSSMETPR(/*! Returns whether this SmET is storing */,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)
+  STATIC_CONSTEXPR(/*! Returns whether this SmET is storing */,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)
   
   /// Set the SmET to storing
 #define STORING						\
@@ -67,7 +67,7 @@ namespace SUNphi
   
   /// Provides a isAssignable attribute
 #define IS_ASSIGNABLE_ATTRIBUTE(LONG_DESCRIPTION,...)			\
-  STATIC_CONSSMETPR(/*! Returns whether this SmET can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
+  STATIC_CONSTEXPR(/*! Returns whether this SmET can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
   
   /// Set the SmET as assignable
 #define ASSIGNABLE						\
