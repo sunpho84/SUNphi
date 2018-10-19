@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the inclusion of all SmET
 
+#include <smet/Add.hpp>
 #include <smet/Adj.hpp>
 #include <smet/Assign.hpp>
 #include <smet/BaseSmET.hpp>
@@ -14,9 +15,9 @@
 #include <smet/Reference.hpp>
 #include <smet/RelBind.hpp>
 #include <smet/Transpose.hpp>
-#include <smet/UnarySmET.hpp>
 #include <smet/UnaryMinus.hpp>
 #include <smet/UnaryPlus.hpp>
+#include <smet/UnarySmET.hpp>
 #include <smet/Wrap.hpp>
 
 #endif
