@@ -30,6 +30,8 @@ namespace SUNphi
     public SmET<T>,
     public BaseBinarySmET
   {
+    IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can never be lhs */,false);
+    
     PROVIDE_CRTP_CAST_OPERATOR(T);
   };
   
