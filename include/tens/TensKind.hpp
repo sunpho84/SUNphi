@@ -58,7 +58,8 @@ namespace SUNphi
   /// Returns whether T is a dynamic component
   template <typename T>
   [[ maybe_unused ]]
-  static constexpr bool isDynamic=T::isDynamic;
+  static constexpr bool isDynamic=
+    T::isDynamic;
   
   /// Defines a TensKind type from a Tuple type
   /// Static assert if TC is not dynamic
