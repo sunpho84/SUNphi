@@ -416,26 +416,28 @@ $(document).ready(function(){initNavTree('d0/d81/TypeTraits_8hpp_source.html','.
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="preprocessor">  public:                               \</span></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">    \</span></div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">    static constexpr bool result=sizeof(test&lt;Derived&gt;(nullptr))==sizeof(Yes); \</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">  };                                    \</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">    static constexpr bool result=                   \</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">      sizeof(test&lt;Derived&gt;(nullptr))==sizeof(Yes);          \</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">  };                                    \</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="preprocessor"> \</span></div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">  template &lt;typename Type&gt;                      \</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor">  [[ maybe_unused ]]                            \</span></div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">  constexpr bool hasMember_ ## TAG=HasMember_ ## TAG&lt;Type&gt;::result; \</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">        \</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;                         \</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">  struct ConstrainHasMember_ ## TAG                 \</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">    STATIC_ASSERT_HAS_MEMBER(TAG,T);                    \</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">  }</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="preprocessor">  template &lt;typename Type&gt;                      \</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">  [[ maybe_unused ]]                            \</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="preprocessor">  constexpr bool hasMember_ ## TAG=                 \</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">    HasMember_ ## TAG&lt;Type&gt;::result;                    \</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">  template &lt;typename T&gt;                         \</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">  struct ConstrainHasMember_ ## TAG                 \</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">    STATIC_ASSERT_HAS_MEMBER(TAG,T);                    \</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">  }</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8759b2f2db3101a4b7cc0d14c751f28"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8759b2f2db3101a4b7cc0d14c751f28">SUNphi::FalseType</a></div><div class="ttdeci">std::false_type FalseType</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00025">TypeTraits.hpp:25</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_afc7db564dd647bc10933eb0a67248b8c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">SUNphi::isSame</a></div><div class="ttdeci">static constexpr bool isSame</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00104">TypeTraits.hpp:104</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a046e6058a8f86ab1b1925e2c2219c98f"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_BASE_OF(BASE, DERIVED)</div><div class="ttdoc">Static assert if DERIVED does not derive from BASE. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00238">TypeTraits.hpp:238</a></div></div>
