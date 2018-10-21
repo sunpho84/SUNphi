@@ -8,16 +8,120 @@
 using namespace std;
 using namespace SUNphi;
 
+/// Check that \c conj is ignored when Compl is not a component
+///
+/// Check that \c conj of a non-complex type object is the same of
+/// original type
+void checkNonComplConjCancelation()
+{
+  /// Tensor Kind to be used
+  using MyTk=
+    TensKind<RwCol,
+	     Spin,
+	     CnCol>;
+  
+  /// Tensor class to be used
+  using MyTens=
+    Tens<MyTk,
+	 double>;
+  
+  /// Tensor instance
+  MyTens c;
+  
+  /// Result of conj
+  using Res=
+    decltype(conj(c));
+  
+  // Check that the original type is the same of the result
+  STATIC_ASSERT_IS_BASE_OF(MyTens,Res);
+}
+
+/// Check nested \c conj cancelation
+///
+/// Check that \c conj of a complex type object is the same of original
+/// type, by issuing twice \c conj on a Tensor
+void checkNestedConjCancelation()
+{
+  /// Tensor Kind to be used
+  using MyTk=
+    TensKind<RwCol,
+	     Compl,
+	     CnCol>;
+  
+  /// Tensor class to be used
+  using MyTens=
+    Tens<MyTk,
+	 double>;
+  
+  /// Tensor instance
+  MyTens c;
+  
+  /// Result of double conj
+  using Res=
+    decltype(conj(conj(c)));
+  
+  // Check that the original type is the same of the result
+  STATIC_ASSERT_IS_BASE_OF(MyTens,Res);
+}
+
+/// Check duplicated "-" cancellation
+///
+/// Check that repeated minus is canceled, by issuing twice it ovr a tensor
+void checkDuplicatedUMinusCancellation()
+{
+  /// Tensor Kind to be used
+  using MyTk=
+    TensKind<RwCol,
+	     Spin,
+	     CnCol>;
+  
+  /// Tensor class to be used
+  using MyTens=
+    Tens<MyTk,
+	 double>;
+  
+  /// Tensor instance
+  MyTens c;
+  
+  /// Result of double -
+  using Res=
+    decltype(-(-c));
+  
+  // Check that the original type is the same of the result
+  STATIC_ASSERT_IS_BASE_OF(MyTens,Res);
+}
+
+/// Check ability to filter the position of the variadic class
+///
+/// First a variadic class, specifiied by integer of various
+/// value. Then, a filter through "IsNotNull" is issued. Lastly the
+/// type resulting is checked
+void checkFilterVariadicClassPos()
+{
+  /// Variadic class to be filtered
+  using VClass=
+    IntSeq<0,1,0,10>;
+  
+  /// Result of the filtering
+  using Res=
+    FilterVariadicClassPos<IsNotNull,
+			   VClass>;
+  
+  /// Comparison of the fileer
+  using Ref=IntSeq<1,3>;
+  
+  // Check
+  STATIC_ASSERT_IS_BASE_OF(Res,Ref);
+}
 
 //
 int main()
 {
-  // Check ability to filter
-  {
-    using A=FilterVariadicClassPos<IsNotNull, IntSeq<0,1,0,10>>;
-    using B=IntSeq<1,3>;
-    STATIC_ASSERT_IS_BASE_OF(A,B);
-  }
+  checkNonComplConjCancelation();
+  
+  checkNestedConjCancelation();
+  
+  checkFilterVariadicClassPos();
   
   // Check on Diag
   {
@@ -62,17 +166,15 @@ int main()
     cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
   }
   
-  // Check that conj of a non-complex type object is the same of original type
+  if constexpr(0)
   {
-    using MyTk=TensKind<RwCol,Spin,CnCol>;
+    using MyTk=TensKind<RwCol,Spin>;
     using MyTens=Tens<MyTk,double>;
     
-    MyTens c;
+    MyTens a,b;
     
-    STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(conj(c)));
+    //a+b;
   }
-  
-  
   
   //come trovare le componenti non twinnate? crea un IntSeq che dica
   //se le componenti devono essere prese o no, prendi di questo le
@@ -104,15 +206,6 @@ int main()
     STATIC_ASSERT_IS_BASE_OF(MyTkBRes3,MyTkBCompa);
   }
   
-  // Check that repeated - is absorbed
-  {
-    using MyTk=TensKind<RwCol,Spin,CnCol>;
-    using MyTens=Tens<MyTk,double>;
-    
-    MyTens c;
-    
-    STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(-(-c)));
-  }
   
   using MyTk=TensKind<RwCol,Spin,Compl,CnCol>;
   using MyTens=Tens<MyTk,double>;
