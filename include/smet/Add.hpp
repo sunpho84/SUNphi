@@ -24,19 +24,19 @@ namespace SUNphi
     public BinarySmET<Adder<_Ref1,_Ref2>>,    // Inherit from BinarySmET
     public ConstrainAreTensKinds<TK1,TK2>     // Constrain type TK1 and TK2 to be a TensKind
   {
-    
-    STATIC_ASSERT_IS_SMET(_Ref1);
-    STATIC_ASSERT_IS_SMET(_Ref2);
+    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref1>);
+    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref2>);
     
   public:
     
     /// Returns the size of a component
-    ///
-    /// \todo Implement it
     template <typename TC>
     int compSize() const
     {
-      return 0;
+      if constexpr(tupleHasType<TC,TK1::types>)
+	 return ref1.template compSize<TC>();
+      else
+	 return ref2.template compSize<TC>();
     }
     
     PROVIDE_BINARY_SMET_REFS;
