@@ -13,6 +13,7 @@ var searchData=
   ['size',['size',['../da/def/structSUNphi_1_1IntSeq.html#a59af33ae8081e677624492043a1c8f96',1,'SUNphi::IntSeq::size()'],['../d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c',1,'SUNphi::TensComp::size()']]],
   ['smet',['SmET',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_2ehpp',['SmET.hpp',['../d9/d21/SmET_8hpp.html',1,'']]],
+  ['smet_3c_20adder_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['SmET&lt; Adder&lt; _Ref1, _Ref2 &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20binder_3c_20tg_2c_20_5fref_20_3e_20_3e',['SmET&lt; Binder&lt; TG, _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20conjer_3c_20_5fref_20_3e_20_3e',['SmET&lt; Conjer&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20tens_3c_20tk_2c_20fund_20_3e_20_3e',['SmET&lt; Tens&lt; TK, Fund &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],

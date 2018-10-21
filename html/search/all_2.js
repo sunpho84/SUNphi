@@ -5,6 +5,7 @@ var searchData=
   ['baseunarysmet',['BaseUnarySmET',['../df/d49/structSUNphi_1_1BaseUnarySmET.html',1,'SUNphi']]],
   ['binarysmet',['BinarySmET',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['binarysmet_2ehpp',['BinarySmET.hpp',['../da/d5e/BinarySmET_8hpp.html',1,'']]],
+  ['binarysmet_3c_20adder_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['BinarySmET&lt; Adder&lt; _Ref1, _Ref2 &gt; &gt;',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['bind',['bind',['../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e',1,'SUNphi']]],
   ['bind_2ehpp',['Bind.hpp',['../dc/de1/Bind_8hpp.html',1,'']]],
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html#ac9a2c46dd9e632f609156f396bc02194',1,'SUNphi::Binder']]],

@@ -38,8 +38,8 @@ var NAVTREEINDEX =
 "annotated.html",
 "d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView.html",
 "d6/db9/classSUNphi_1_1Binder.html#ac430405cad1f2f67af18e5bb7844a9da",
-"db/d04/Ints_8hpp_source.html",
-"functions_l.html"
+"da/dff/structSUNphi_1_1Dir.html#a8f32340e350d1323f11f48c0b0c0caca",
+"dir_8f2980731aba7ec7b9fcae5764f196e3.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

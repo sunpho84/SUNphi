@@ -199,6 +199,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html">TwinTensCompOf&lt; Col &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the added of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../de/d58/classSUNphi_1_1Adder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d59/structSUNphi_1_1HasMember__name.html">HasMember_name</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html">ConstrainHasMember_name</a></td></tr>
@@ -633,6 +636,18 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2d529bf95ff829484286833ae8aa9c39"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2d529bf95ff829484286833ae8aa9c39"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39">col</a> (T &amp;&amp;ref, const int id)</td></tr>
 <tr class="separator:a2d529bf95ff829484286833ae8aa9c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e03d238492949acb385ccfce0c2ff76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e03d238492949acb385ccfce0c2ff76"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>)</td></tr>
+<tr class="separator:a8e03d238492949acb385ccfce0c2ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1754b62b9032272ae0259188e43d53b"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename... DummyTypes&gt; </td></tr>
+<tr class="memitem:ab1754b62b9032272ae0259188e43d53b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt; T1, T2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab1754b62b9032272ae0259188e43d53b">add</a> (T1 &amp;&amp;smet1, T2 &amp;&amp;smet2, DummyTypes...)</td></tr>
+<tr class="separator:ab1754b62b9032272ae0259188e43d53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
+<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , TypeIf&lt;(isSmET&lt; T1 &gt; and isSmET&lt; T2 &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4d5f8dc4041e8bd7f71656bdb0ea8cf2">operator+</a> (T1 &amp;&amp;smet1, T2 &amp;&amp;smet2)</td></tr>
+<tr class="memdesc:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement smet1+smet2.  <a href="#a4d5f8dc4041e8bd7f71656bdb0ea8cf2">More...</a><br/></td></tr>
+<tr class="separator:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3">adj</a> (T &amp;&amp;ref)</td></tr>
 <tr class="memdesc:a855b8db955c1f92e1f04c22c0ec834e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjoint expression <code>ref</code>.  <a href="#a855b8db955c1f92e1f04c22c0ec834e3">More...</a><br/></td></tr>
@@ -660,8 +675,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a3e19f4ffa189059c167b60fd22d8342d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RrT  = RemoveReference&lt;T&gt;, typename Ref  = typename RrT::Ref, typename RrRef  = RemoveReference&lt;Ref&gt;, bool SmETIsLvalue = isLvalue&lt;RrT&gt;, bool RefIsLvalue = isLvalue&lt;RrRef&gt;, bool RefIsStoring = RrRef::isStoring, bool RetByRef = RefIsStoring or  RefIsLvalue or SmETIsLvalue, typename Ret  = Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;, TypeIf&lt;(isConjer&lt; RrT &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a3e19f4ffa189059c167b60fd22d8342d"><td class="memTemplItemLeft" align="right" valign="top">Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3e19f4ffa189059c167b60fd22d8342d">conj</a> (T &amp;&amp;smet)</td></tr>
 <tr class="separator:a3e19f4ffa189059c167b60fd22d8342d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
-<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplParams" colspan="2">template&lt;typename D , TypeIf&lt;(isTransposer&lt; D &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34">conj</a> (D &amp;&amp;smet)</td></tr>
 <tr class="separator:aa8e94881e2711b5cb720d5839d7ecb34"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1010,10 +1023,9 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a286e1e8ac0e01b9ddd5f33cefceceec1">hasMember_compSize</a> =<a class="el" href="../../de/d50/structSUNphi_1_1HasMember__compSize.html">HasMember_compSize</a> &lt;Type&gt;::result</td></tr>
 <tr class="separator:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a37ad57be7a76d0f6b77f00819f404dc8"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">isDynamic</a> =T::isDynamic</td></tr>
-<tr class="memdesc:a37ad57be7a76d0f6b77f00819f404dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is a dynamic component. <br/></td></tr>
+<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">isDynamic</a></td></tr>
+<tr class="memdesc:a37ad57be7a76d0f6b77f00819f404dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is a dynamic component.  <a href="#a37ad57be7a76d0f6b77f00819f404dc8">More...</a><br/></td></tr>
 <tr class="separator:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4692578508fbbf9aff7ed592deef12cf"><td class="memTemplParams" colspan="2">template&lt;class T , class  = ConstrainIsTensComp&lt;T&gt;&gt; </td></tr>
 <tr class="memitem:a4692578508fbbf9aff7ed592deef12cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4692578508fbbf9aff7ed592deef12cf">hasTwin</a></td></tr>
@@ -1086,7 +1098,7 @@ template&lt;typename... Args&gt; </div>
 <p>Blend an arbitrary number of <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00453">453</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00454">454</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1169,9 +1181,9 @@ template&lt;int N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
@@ -1376,7 +1388,7 @@ template&lt;typename T , typename  = ConstrainIsSmET&lt;T&gt;, bool IsStoring = 
 </div><div class="memdoc">
 <p>Reference to T or new type, depending on wheter the class isStoring</p>
 <p>Const qualifier is passed throughout </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>add funcntionality as in Eigen </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>add funcntionality as in Eigen </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d3/d78/Reference_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d3/d78/Reference_8hpp_source.html">Reference.hpp</a>.</p>
 
@@ -1450,7 +1462,7 @@ template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 <p>Defines a variadic type <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> taking the same types of a <code>Tuple</code> </p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
@@ -2135,6 +2147,52 @@ template&lt;int Rem, int IncrAft, bool IgnoreIfNotPresent, int... Bef, int HeadA
 
 </div>
 </div>
+<a class="anchor" id="ab1754b62b9032272ae0259188e43d53b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 , typename... DummyTypes&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt;T1,T2&gt; SUNphi::add </td>
+          <td>(</td>
+          <td class="paramtype">T1 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>smet1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T2 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>smet2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DummyTypes...&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; Name of the <a class="el" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html" title="Binary SmET. ">BinarySmET</a> to build</p>
+<p>Simple <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to take the added of a SmET. ">Adder</a> builder called add</p>
+<p>Plain <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to take the added of a SmET. ">Adder</a> getting a pair of plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">smet1</td><td>First <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
+    <tr><td class="paramname">smet2</td><td>Second <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a855b8db955c1f92e1f04c22c0ec834e3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2195,7 +2253,7 @@ template&lt;typename T1 , typename T2 , typename  = EnableIf&lt;isSmET&lt;T1&gt;
       </table>
 </div><div class="memdoc">
 <p>Default assigner</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>Include comp merger, vectorizer and threader </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>Include comp merger, vectorizer and threader </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lhs</td><td>First <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
@@ -3149,6 +3207,44 @@ template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&g
 
 </div>
 </div>
+<a class="anchor" id="a4d5f8dc4041e8bd7f71656bdb0ea8cf2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 , TypeIf&lt;(isSmET&lt; T1 &gt; and isSmET&lt; T2 &gt;), void * &gt;  = nullptr&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">T1 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>smet1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T2 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>smet2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implement smet1+smet2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">smet2</td><td>Expression </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a91736494583c431f999e3fa04caf0274"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3783,7 +3879,7 @@ template&lt;class Head , class... Tail&gt; </div>
 <div class="ttc" id="namespaceSUNphi_html_ad672c67c71c13820a0dcd0b12b88b438"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">SUNphi::hMul</a></div><div class="ttdeci">constexpr int hMul</div><div class="ttdoc">Product of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00062">IntListOperations.hpp:62</a></div></div>
 </div><!-- fragment --><p>Checks if a set of types are the same</p>
 <p>Perform an "and" of all single-type check </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
@@ -4466,6 +4562,35 @@ template&lt;typename T &gt; </div>
 <p>Returns whether T is const or not. </p>
 
 <p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37ad57be7a76d0f6b77f00819f404dc8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isDynamic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">T::isDynamic</a></div>
+<div class="ttc" id="namespaceSUNphi_html_a37ad57be7a76d0f6b77f00819f404dc8"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">SUNphi::isDynamic</a></div><div class="ttdeci">static constexpr bool isDynamic</div><div class="ttdoc">Returns whether T is a dynamic component. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d3f/TensKind_8hpp_source.html#l00061">TensKind.hpp:61</a></div></div>
+</div><!-- fragment -->
+<p>Returns whether T is a dynamic component. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>
