@@ -431,7 +431,8 @@ namespace SUNphi
   public:								\
     /*! Result of the check, comparing the size of return type of    */	\
     /*! test with the size of yes			             */	\
-    static constexpr bool result=sizeof(test<Derived>(nullptr))==sizeof(Yes); \
+    static constexpr bool result=					\
+      sizeof(test<Derived>(nullptr))==sizeof(Yes);			\
   };									\
 									\
   /*! Detect if \c Type has member (variable or method) TAG          */ \
@@ -439,7 +440,8 @@ namespace SUNphi
   /*! Uses SFINAE to induce ambiguity in the detection of the member */	\
   template <typename Type>						\
   [[ maybe_unused ]]							\
-  constexpr bool hasMember_ ## TAG=HasMember_ ## TAG<Type>::result;	\
+  constexpr bool hasMember_ ## TAG=					\
+    HasMember_ ## TAG<Type>::result;					\
   									\
   /*! \brief Class forcing T to have a member "TAG" defined */		\
   template <typename T>							\

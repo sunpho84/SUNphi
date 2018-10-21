@@ -28,7 +28,8 @@ namespace SUNphi
   /// Provide the reference to the object
 #define PROVIDE_SMET_REF(NUM)				\
   /*! Type of the binding reference NUM */		\
-  using Ref ## NUM=_Ref ## NUM;				\
+  using Ref ## NUM=					\
+    _Ref ## NUM;					\
   /*! Reference to the NUM object */			\
   Reference<Ref ## NUM> ref ## NUM
   
