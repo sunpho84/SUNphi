@@ -114,6 +114,29 @@ void checkFilterVariadicClassPos()
   STATIC_ASSERT_IS_BASE_OF(Res,Ref);
 }
 
+/// Check the sum of two \c SmET
+///
+/// Two tensors are tried to be summed
+void checkSumOfTwoSmETs()
+{
+  /// Tensor kind to be used
+  using MyTk=
+    TensKind<RwCol,
+	     Spin>;
+  
+  /// Tensor class to be used
+  using MyTens=
+    Tens<MyTk,
+	 double>;
+  
+  /// Tensors used to test the sum
+  MyTens a,b;
+  
+  //c=
+  a+b;
+}
+
+
 //
 int main()
 {
@@ -122,6 +145,8 @@ int main()
   checkNestedConjCancelation();
   
   checkFilterVariadicClassPos();
+  
+  checkSumOfTwoSmETs();
   
   // Check on Diag
   {
@@ -164,16 +189,6 @@ int main()
     cout<<" c: "<<decltype(c)::Tk::name()<<endl;
     cout<<" bb2: "<<decltype(bb2)::Tk::name()<<endl;
     cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
-  }
-  
-  if constexpr(0)
-  {
-    using MyTk=TensKind<RwCol,Spin>;
-    using MyTens=Tens<MyTk,double>;
-    
-    MyTens a,b;
-    
-    //a+b;
   }
   
   //come trovare le componenti non twinnate? crea un IntSeq che dica
