@@ -46,7 +46,11 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REFS;
     
     /// TensorKind of the result
-    using Tk=BlendTensKinds<TK1,TK2>;
+    ///
+    /// \todo Improve, the return type could be decided studying what
+    /// suits best the computational
+    using Tk=
+      BlendTensKinds<TK1,TK2>;
     
     /// \todo fix it
     //NOT_MERGEABLE;
@@ -64,7 +68,8 @@ namespace SUNphi
   template <typename T1,              // Type of the first expression
 	    typename T2,              // Type of the second expression
 	    SFINAE_ON_TEMPLATE_ARG(isSmET<T1> and isSmET<T2>)>
-  DECLAUTO operator+(T1&& smet1,T2&& smet2)       ///< Expression
+  DECLAUTO operator+(T1&& smet1,      ///< First addend
+		     T2&& smet2)      ///< Second addend
   {
     return add(forw<T1>(smet1),forw<T2>(smet2));
   }
