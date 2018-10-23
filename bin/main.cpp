@@ -114,26 +114,88 @@ void checkFilterVariadicClassPos()
   STATIC_ASSERT_IS_BASE_OF(Res,Ref);
 }
 
+#include <sstream>
+
+/// Prints an IntSeq
+template <int...Ints>
+std::string printIntSeq(IntSeq<Ints...>)
+{
+  std::ostringstream os;
+  for(int a : {Ints...})  os<<a<<" ";
+  return os.str();
+}
+
 /// Check the sum of two \c SmET
 ///
 /// Two tensors are tried to be summed
 void checkSumOfTwoSmETs()
 {
-  /// Tensor kind to be used
-  using MyTk=
-    TensKind<RwCol,
-	     Spin>;
+  /// Tensor kind to be used for first SmET
+  using MyTk1=
+    TensKind<CnCol,
+	     RwCol,
+	     CnSpin>;
   
-  /// Tensor class to be used
-  using MyTens=
-    Tens<MyTk,
+  /// Tensor kind to be used for second SmET
+  using MyTk2=
+    TensKind<RwCol,
+	     // RwSpin,
+	     CnSpin,
+	     Compl>;
+  
+  /// Tensor class to be used for first tensor
+  using MyTens1=
+    Tens<MyTk1,
+	 double>;
+  
+  /// Tensor class to be used for second tensor
+  using MyTens2=
+    Tens<MyTk2,
 	 double>;
   
   /// Tensors used to test the sum
-  MyTens a,b;
+  MyTens1 a;
+  MyTens2 bt;
+  auto b=bt;//rwSpin(bt,0);
   
   //c=
-  a+b;
+  auto c=
+    (a+b).getMaximallyMergedCompsView();
+  
+  
+  //cout<<"Col: "<<c.compSize<RwCol>()<<endl;
+  //cout<<"Spin: "<<c.compSize<CnSpin>()<<endl;
+  cout<<"Tensor Kind of addendum 1: "<<decltype(a)::Tk::name()<<endl;
+  using M1=
+    typename decltype(a)::MergeableComps;
+  cout<<"Mergeability of addendum 1: "<<printIntSeq(M1{})<<endl;
+  cout<<"Tensor Kind of addendum 2: "<<decltype(b)::Tk::name()<<endl;
+  using M2=
+    typename decltype(b)::MergeableComps;
+  cout<<"Mergeability of addendum 2: "<<printIntSeq(M2{})<<endl;
+  cout<<"Tensor Kind: "<<decltype(c)::Tk::name()<<endl;
+  // using P1=
+  //   decltype(c)::posOfAddend1TcInResTk;
+  // cout<<"PosOf types 1: "<<printIntSeq(P1{})<<endl;
+  // using P2=
+  //   decltype(c)::posOfAddend2TcInResTk;
+  // cout<<"PosOf types 2: "<<printIntSeq(P2{})<<endl;
+  
+  // using P3=
+  //   PairOfTensKindMergeability::template CompsMergeability<M1,M2,P1,P2>;
+  
+  // cout<<"Mergeability: "<<printIntSeq(P3{})<<endl;
+  
+  // using MDel=
+  //   IntSeq<0,1,3,4>;
+  
+  // cout<<"Trying to merge with: "<<printIntSeq(MDel{})<<endl;
+  
+  // using P4=
+  //   decltype(c)::template MergedDelims1<MDel>;
+  
+  // cout<<"The first needs to be merged like this: "<<printIntSeq(P4{})<<endl;
+  
 }
 
 
