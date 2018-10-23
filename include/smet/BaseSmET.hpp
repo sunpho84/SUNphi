@@ -86,7 +86,8 @@ namespace SUNphi
   ///
   /// \code
   /// // Maximal splitting
-  /// Using Tk=TensKind<Spin,Col>
+  /// Using Tk=
+  ///   TensKind<Spin,Col>
   /// PROVIDE_MERGEABLE_COMPS(IntSeq<0,2>);
   /// \endcode
   /// Provides a isAssignable attribute

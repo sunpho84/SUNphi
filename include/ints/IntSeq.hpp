@@ -41,10 +41,12 @@ namespace SUNphi
     public BaseIntSeq
   {
     /// Length of the sequence of integer
-    static constexpr int size=sizeof...(Ints);
+    static constexpr int size=
+      sizeof...(Ints);
     
     /// Sum of all elements
-    static constexpr int hSum=SUNphi::hSum<Ints...>;
+    static constexpr int hSum=
+      SUNphi::hSum<Ints...>;
     
     /// Sum of all elements
     template <int I>
@@ -57,7 +59,8 @@ namespace SUNphi
       SUNphi::firstNon<I,Ints...>;
     
     /// Product of all elements
-    static constexpr int hMul=SUNphi::hMul<Ints...>;
+    static constexpr int hMul=
+      SUNphi::hMul<Ints...>;
     
     /// Defines a new integer sequence incremented by a constant I
     template <int I>
@@ -80,7 +83,8 @@ namespace SUNphi
       TypeIf<I!=0,Mul<1/I>>;
     
     /// Returns the maximal element of the list
-    static constexpr int max=SUNphi::maxOfList<Ints...>;
+    static constexpr int max=
+      SUNphi::maxOfList<Ints...>;
     
     /// Get the I element of the sequence
     template <int I>
@@ -194,7 +198,8 @@ namespace SUNphi
   /// General case
   template <typename T>
   [[ maybe_unused ]]
-  constexpr bool isOrderedIntSeq=false;
+  constexpr bool isOrderedIntSeq=
+    false;
   
   /// Identifies whether a type is an ordered IntSeq
   ///

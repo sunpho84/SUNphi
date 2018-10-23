@@ -224,7 +224,7 @@ namespace SUNphi
     
     /// Report which components are needed to represent the Diagonal
     using IsDiagComp=
-      IntSeq<((not tupleHasType<T,typename Twinned::types>) or posOfTypeNotasserting<T,typename Twinned::types> >= posOfType<T,types>)...>;
+      IntSeq<((not tupleHasType<T,typename Twinned::types>) or posOfTypeNotAsserting<T,typename Twinned::types> >= posOfType<T,types>)...>;
     
     /// Position of Diagonal components
     using DiagCompsPos=

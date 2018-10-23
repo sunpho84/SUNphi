@@ -24,7 +24,7 @@ namespace SUNphi
 	    typename Fund> // Fundamental type
   class Tens :
     public BaseTens,                       // Inherit from BaseTens to detect in expression
-    public UnarySmET<Tens<TK,Fund>>,        // Inherit from UnarySmET
+    public UnarySmET<Tens<TK,Fund>>,       // Inherit from UnarySmET
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
     public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
   {
@@ -116,17 +116,19 @@ namespace SUNphi
     
   public:
     
-    /// Returns a component-merged reference
+    /// Returns a component-merged version
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Create a reference to the same storage with appropriate DynSizes */,
 				  /* Get a component-merged reference to the storage */
-				  auto vMerged=v->template mergedComps<Is>();
+				  auto vMerged=
+				    v->template mergedComps<Is>();
 				  /* Returned TensKind */
-				  using MergedTk=typename Unqualified<decltype(*vMerged)>::Tk;
+				  using MergedTk=
+				    typename Unqualified<decltype(*vMerged)>::Tk;
 				  /* Returned type */
-				  using TOut=Tens<MergedTk,Fund>;
+				  using TOut=
+				    Tens<MergedTk,Fund>;
 				  
 				  return TOut(vMerged));
-    
     
     /// Returns a constant reference to v
     const TensStor<Tk,Fund>& getStor() const

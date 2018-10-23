@@ -23,7 +23,8 @@ namespace SUNphi
     false;
   
   /// Mark the absence of an element
-  static constexpr int NOT_PRESENT=-1;
+  static constexpr int NOT_PRESENT=
+    -1;
   
   /// Gets the position of a type in a tuple
   ///

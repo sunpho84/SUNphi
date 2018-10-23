@@ -64,7 +64,8 @@ namespace SUNphi
   struct _IntSeqCat<IntSeq<Ints1...>,IntSeq<Ints2...>,T...>
   {
     /// Binary cat \c Ints1..., \c Ints2..., separated for clarity
-    using Nested=IntSeq<Ints1...,Ints2...>;
+    using Nested=
+      IntSeq<Ints1...,Ints2...>;
     
     /// Result of catting the whole list \c Ints1, \c Ints2,...
     typedef typename _IntSeqCat<Nested,T...>::type type;
@@ -74,7 +75,8 @@ namespace SUNphi
   ///
   /// Wraps the implementation to avoid writing "type"
   template <class...T>
-  using IntSeqCat=typename _IntSeqCat<T...>::type;
+  using IntSeqCat=
+    typename _IntSeqCat<T...>::type;
 }
 
 #endif

@@ -110,7 +110,8 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Set aliasing according to the isAliasing of reference
-  /// \todo enforce cehck only with TensClass
+  ///
+  /// \todo enforce cehck only with TensClass, or with storing classes
 #define FORWARD_IS_ALIASING_TO_REF			\
   /*! Forward aliasing check to the reference */	\
   template <typename Tref>				\
@@ -121,13 +122,17 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Set aliasing according to a passed pointer (provided class member)
+  ///
+  /// \todo This is mostly broken
 #define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
   /*! Check the aliasing with reference */				\
   template <typename Tref>						\
   bool isAliasing(const Tref& alias) const				\
   {									\
-    const void* pAlias=static_cast<const void*>(&alias);		\
-    const void* p=static_cast<const void*>(_p);				\
+    const void* pAlias=							\
+      static_cast<const void*>(&alias);					\
+    const void* p=							\
+      static_cast<const void*>(_p);					\
 									\
     return pAlias==p;							\
   }									\
