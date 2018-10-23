@@ -263,6 +263,48 @@ namespace SUNphi
 				  ref1.template getMergedCompsView<MergedDelims1<Is>>()+
 				  ref2.template getMergedCompsView<MergedDelims2<Is>>(););
     
+    /// Provides either the const or non-const evaluator
+#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
+    /*! QUALIFIER evaluator for Adder                                */	\
+    /*!                                                              */	\
+    /*! Internal Evaluator, splitting the id following the position  */ \
+    /*! of component in the two ref                                  */	\
+    template <typename...Args, /* Type of the arguments              */	\
+	      int...Comps1,    /* Position of the first set of args  */ \
+	      int...Comps2>    /* Position of the second set of args */ \
+    DECLAUTO adder_internal_eval(IntSeq<Comps1...>,            /*!< List of position of components for ref1 */ \
+				 IntSeq<Comps2...>,              /*!< List of position of components for ref2 */ \
+				 const Tuple<Args...>& targs)  /*!< Components to get                       */ \
+      QUALIFIER								\
+    {									\
+      return								\
+	ref1.eval(get<Comps1>(targs)...)+				\
+	ref2.eval(get<Comps2>(targs)...);				\
+    }									\
+									\
+    /*! Evaluator, external interface                                */	\
+    /*!                                                              */	\
+    /*! Pass to the internal implementation the integer sequence     */	\
+    /*! needed to split the components                               */	\
+    template <typename...Args>           /* Type of the arguments    */	\
+    DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
+      QUALIFIER								\
+    {									\
+      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
+      									\
+      return adder_internal_eval(posOfAddend1PresTcInResTk{},		\
+				 posOfAddend2PresTcInResTk{},		\
+				 std::forward_as_tuple(args...));	\
+    }									\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
+    
+#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
+    
+    
+    
     PROVIDE_BINARY_SMET_SIMPLE_CREATOR(Adder);
   };
   
