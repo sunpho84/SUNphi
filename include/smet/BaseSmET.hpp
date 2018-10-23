@@ -33,6 +33,9 @@ namespace SUNphi
   // Defines the check for a member "name"
   DEFINE_HAS_MEMBER(name);
   
+  // Defines the check for a member "eval"
+  DEFINE_HAS_MEMBER(eval);
+  
   /////////////////////////////////////////////////////////////////
   
   // Defines the check for a member "isStoring"
@@ -158,6 +161,7 @@ namespace SUNphi
   /// \todo add costEval
   /// \todo add isAliasing
 #define STATIC_ASSERT_IS_SMET(...)				\
+  STATIC_ASSERT_HAS_MEMBER(eval,__VA_ARGS__);			\
   STATIC_ASSERT_HAS_MEMBER(compSize,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAliasing,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(isAssignable,__VA_ARGS__);		\
