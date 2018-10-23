@@ -63,10 +63,10 @@ void test_binding()
   
   //reim(spin(cicc,0),0)=1.923424;
   auto d=spin(cicc,0);
-  auto &e=reim(d,0);
+  auto &e=reIm(d,0);
   e=1.9234424;
   
-  cout<<spin(reim(cicc,0),0)<<" "<<cicc.getStor()._v<<endl;
+  cout<<spin(reIm(cicc,0),0)<<" "<<cicc.getStor()._v<<endl;
   //cout<<reim(a,0)<<endl;
   
   //spin(wrap(reim(cicc,0)),1)=1.0;
@@ -115,7 +115,7 @@ void test_bind_complicated_expression()
   
   Tens<TensKind<Compl>,double> t;
   auto tr=transpose(wrap(wrap(t)));
-  reim(transpose(tr),0)=1.0;
+  reIm(transpose(tr),0)=1.0;
   //reim(transpose(transpose(Tens<TensKind<Compl>,double>{})),0)=1.0;
        //const double &e=reim(conj()),0);
   using MyTk=TensKind<Spacetime,Col,Spin,Compl>;
@@ -139,12 +139,12 @@ void test_bind_complicated_expression()
       for(int ri=0;ri<NCOMPL;ri++)
       {
   	//double &ref=eval(color(spin(cicc,id),ic));
-  	double &ref=site(reim(spin(col(transpose(transpose(cicc)),ic),id),ri),0);
+  	double &ref=site(reIm(spin(col(transpose(transpose(cicc)),ic),id),ri),0);
   	//printf("%lld %lld\n",(long long int)cicc.get_v()._v,(long long int)&ref);
   	ref=3.141592352352;
       }
   
-  auto binder1=site(reim(spin(col(cicc,2),3),1),0);
+  auto binder1=site(reIm(spin(col(cicc,2),3),1),0);
   // //auto binder2=color(spin(cicc,2),1);
   
   // // eval(binder1)=8.0;

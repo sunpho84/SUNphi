@@ -11,16 +11,17 @@
 namespace SUNphi
 {
   // Define complex number tens comp
-  DEFINE_TENS_COMP(reim,Compl,COMPL,2);
+  DEFINE_TENS_COMP(reIm,Compl,COMPL,2);
   
   /// Index of the real part of a \c Compl
-  constexpr int REAL_PART_ID=0;
+  constexpr int REAL_PART_ID=
+    0;
   
   /// Returns a reference to the real part
   template <typename T> // Type of variable to be bound
   DECLAUTO real(T&& ref)    // Variable to be bound
   {
-    return reim(forw<T>(ref),REAL_PART_ID);
+    return reIm(forw<T>(ref),REAL_PART_ID);
   }
   
   /// Index of the imag part of a \c Compl
@@ -30,7 +31,7 @@ namespace SUNphi
   template <typename T> // Type of variable to be bound
   DECLAUTO imag(T&& ref)    // Variable to be bound
   {
-    return reim(forw<T>(ref),IMAG_PART_ID);
+    return reIm(forw<T>(ref),IMAG_PART_ID);
   }
 }
 
