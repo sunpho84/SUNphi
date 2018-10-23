@@ -136,17 +136,17 @@ void checkSumOfTwoSmETs()
 	     RwCol,
 	     CnSpin>;
   
+  /// Tensor class to be used for first tensor
+  using MyTens1=
+    Tens<MyTk1,
+	 double>;
+  
   /// Tensor kind to be used for second SmET
   using MyTk2=
     TensKind<RwCol,
 	     // RwSpin,
 	     CnSpin,
 	     Compl>;
-  
-  /// Tensor class to be used for first tensor
-  using MyTens1=
-    Tens<MyTk1,
-	 double>;
   
   /// Tensor class to be used for second tensor
   using MyTens2=
@@ -155,13 +155,22 @@ void checkSumOfTwoSmETs()
   
   /// Tensors used to test the sum
   MyTens1 a;
-  MyTens2 bt;
-  auto b=bt;//rwSpin(bt,0);
+  for(int iCnCol=0;iCnCol<NCOL;iCnCol++)
+    for(int iRwCol=0;iRwCol<NCOL;iRwCol++)
+    for(int iCnSpin=0;iCnSpin<NSPIN;iCnSpin++)
+	cnCol(rwCol(cnSpin(a,iCnSpin),iRwCol),iCnCol)=3.0;
   
-  //c=
-  auto c=
-    (a+b).getMaximallyMergedCompsView();
   
+  MyTens2 b;
+  for(int iRwCol=0;iRwCol<NCOL;iRwCol++)
+    for(int iCnSpin=0;iCnSpin<NSPIN;iCnSpin++)
+      for(int iReIm=0;iReIm<NCOMPL;iReIm++)
+	rwCol(cnSpin(reIm(b,iReIm),iCnSpin),iRwCol)=5.0;
+  
+  Tens<decltype(a+b)::Tk,double> d;
+  d=a+b;
+  
+  cout<<"d: "<<d.eval(1,1,1,1)<<endl;
   
   //cout<<"Col: "<<c.compSize<RwCol>()<<endl;
   //cout<<"Spin: "<<c.compSize<CnSpin>()<<endl;
@@ -173,7 +182,10 @@ void checkSumOfTwoSmETs()
   using M2=
     typename decltype(b)::MergeableComps;
   cout<<"Mergeability of addendum 2: "<<printIntSeq(M2{})<<endl;
-  cout<<"Tensor Kind: "<<decltype(c)::Tk::name()<<endl;
+  cout<<"Tensor Kind: "<<decltype(a+b)::Tk::name()<<endl;
+  
+  cout<<"PosOf types 1 present: "<<printIntSeq(decltype(a+b)::posOfAddend1PresTcInResTk{})<<endl;
+  cout<<"PosOf types 2 present: "<<printIntSeq(decltype(a+b)::posOfAddend2PresTcInResTk{})<<endl;
   // using P1=
   //   decltype(c)::posOfAddend1TcInResTk;
   // cout<<"PosOf types 1: "<<printIntSeq(P1{})<<endl;
@@ -292,7 +304,7 @@ int main()
     for(int ispin=0;ispin<NSPIN;ispin++)
       for(int icn_col=0;icn_col<NCOL;icn_col++)
 	for(int ri=0;ri<NCOMPL;ri++)
-	  rwCol(reim(cnCol(spin(cicc,
+	  rwCol(reIm(cnCol(spin(cicc,
 				ispin),
 			   icn_col),
 		     ri),
@@ -312,7 +324,7 @@ int main()
 	for(int ri=0;ri<NCOMPL;ri++)
 	  {
 	    cout<<"------"<<endl;
-	    cout<<&rwCol(reim(cnCol(spin(cicc,
+	    cout<<&rwCol(reIm(cnCol(spin(cicc,
 					 ispin),
 				  icn_col),
 			      ri),
