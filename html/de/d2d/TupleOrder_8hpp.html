@@ -128,13 +128,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:afb26858077ef5cb824a82757fe6a92e5"><td class="memTemplParams" colspan="2"><a class="anchor" id="afb26858077ef5cb824a82757fe6a92e5"></a>
-template&lt;typename TpToSearch , typename TpToProbe &gt; </td></tr>
-<tr class="memitem:afb26858077ef5cb824a82757fe6a92e5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SUNphi::posOfTypes</b> = decltype(_posOfTypes&lt; ASSERT_IF_NOT_PRESENT &gt;(TpToSearch{}, TpToProbe{}))</td></tr>
+<tr class="memitem:afb26858077ef5cb824a82757fe6a92e5"><td class="memTemplParams" colspan="2">template&lt;typename TpToSearch , typename TpToProbe &gt; </td></tr>
+<tr class="memitem:afb26858077ef5cb824a82757fe6a92e5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb26858077ef5cb824a82757fe6a92e5">SUNphi::posOfTypes</a> = decltype(_posOfTypes&lt; ASSERT_IF_NOT_PRESENT &gt;(TpToSearch{}, TpToProbe{}))</td></tr>
 <tr class="separator:afb26858077ef5cb824a82757fe6a92e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a457ac72e22fdd993728882003df04956"><td class="memTemplParams" colspan="2"><a class="anchor" id="a457ac72e22fdd993728882003df04956"></a>
-template&lt;typename TpToSearch , typename TpToProbe &gt; </td></tr>
-<tr class="memitem:a457ac72e22fdd993728882003df04956"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SUNphi::posOfTypesNotAsserting</b> = decltype(_posOfTypes&lt; DO_NOT_ASSERT_IF_NOT_PRESENT &gt;(TpToSearch{}, TpToProbe{}))</td></tr>
+<tr class="memitem:a457ac72e22fdd993728882003df04956"><td class="memTemplParams" colspan="2">template&lt;typename TpToSearch , typename TpToProbe &gt; </td></tr>
+<tr class="memitem:a457ac72e22fdd993728882003df04956"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a457ac72e22fdd993728882003df04956">SUNphi::posOfTypesNotAsserting</a> = decltype(_posOfTypes&lt; DO_NOT_ASSERT_IF_NOT_PRESENT &gt;(TpToSearch{}, TpToProbe{}))</td></tr>
 <tr class="separator:a457ac72e22fdd993728882003df04956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -145,10 +143,10 @@ Functions</h2></td></tr>
 <tr class="memitem:acf81841aec54ab650800087a08062bba"><td class="memTemplParams" colspan="2">template&lt;bool assertIfNotPresent, typename T , typename Head , typename... Tail&gt; </td></tr>
 <tr class="memitem:acf81841aec54ab650800087a08062bba"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acf81841aec54ab650800087a08062bba">SUNphi::_posOfType</a> (T, Tuple&lt; Head, Tail...&gt;)</td></tr>
 <tr class="separator:acf81841aec54ab650800087a08062bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab34b250efd523d2236561514071c8ed"><td class="memTemplParams" colspan="2"><a class="anchor" id="aab34b250efd523d2236561514071c8ed"></a>
-template&lt;bool assertIfNotPresent, typename... T, typename TP &gt; </td></tr>
-<tr class="memitem:aab34b250efd523d2236561514071c8ed"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SUNphi::_posOfTypes</b> (Tuple&lt; T...&gt;, TP) -&gt; IntSeq&lt; _posOfType&lt; assertIfNotPresent &gt;(T</td></tr>
-<tr class="separator:aab34b250efd523d2236561514071c8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654d1d12c340e9ae05f470203c6a7a16"><td class="memTemplParams" colspan="2">template&lt;bool assertIfNotPresent, typename... T, typename TP &gt; </td></tr>
+<tr class="memitem:a654d1d12c340e9ae05f470203c6a7a16"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a654d1d12c340e9ae05f470203c6a7a16">SUNphi::_posOfTypes</a> (Tuple&lt; T...&gt; t, TP tp) -&gt; IntSeq&lt; _posOfType&lt; assertIfNotPresent &gt;(T</td></tr>
+<tr class="memdesc:a654d1d12c340e9ae05f470203c6a7a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the types <code>T</code> in the Tuple <code>Tp</code>, asserting or not.  <a href="#a654d1d12c340e9ae05f470203c6a7a16">More...</a><br/></td></tr>
+<tr class="separator:a654d1d12c340e9ae05f470203c6a7a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

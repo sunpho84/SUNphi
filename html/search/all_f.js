@@ -7,6 +7,8 @@ var searchData=
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#aafb4b03e762017371c5ef7b2244352c0',1,'SUNphi::Conjer']]],
   ['posoftype',['posOfType',['../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c',1,'SUNphi']]],
   ['posoftypenotasserting',['posOfTypeNotAsserting',['../d3/dd7/namespaceSUNphi.html#ae5c8d825e6c25b7bcba64a7820bd8dd7',1,'SUNphi']]],
+  ['posoftypes',['posOfTypes',['../d3/dd7/namespaceSUNphi.html#afb26858077ef5cb824a82757fe6a92e5',1,'SUNphi']]],
+  ['posoftypesnotasserting',['posOfTypesNotAsserting',['../d3/dd7/namespaceSUNphi.html#a457ac72e22fdd993728882003df04956',1,'SUNphi']]],
   ['presence_5ft',['Presence_t',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a70790b84db426cd6eb86d27ab7368de7',1,'SUNphi::PairOfTensKindMergeability']]],
   ['print',['print',['../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
   ['print_2ehpp',['Print.hpp',['../d7/d55/Print_8hpp.html',1,'']]],
