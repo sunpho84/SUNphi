@@ -103,9 +103,27 @@ namespace SUNphi
   template <typename T,
 	    typename Tp>
   [[ maybe_unused ]]
-  constexpr int posOfTypeNotasserting=
-    _posOfType<ASSERT_IF_NOT_PRESENT>(T{},Tp{});
-
+  constexpr int posOfTypeNotAsserting=
+    _posOfType<DO_NOT_ASSERT_IF_NOT_PRESENT>(T{},Tp{});
+  
+  /////////////////////////////////////////////////////////////////
+  
+  template <bool assertIfNotPresent,
+	    typename...T,
+	    typename TP>
+  auto _posOfTypes(Tuple<T...>,
+		   TP)
+    -> IntSeq<_posOfType<assertIfNotPresent>(T{},TP{})...>;
+  
+  template <typename TpToSearch,
+	    typename TpToProbe>
+  using posOfTypes=
+    decltype(_posOfTypes<ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
+  
+  template <typename TpToSearch,
+	    typename TpToProbe>
+  using posOfTypesNotAsserting=
+    decltype(_posOfTypes<DO_NOT_ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
 }
 
 #endif
