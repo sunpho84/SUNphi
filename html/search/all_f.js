@@ -1,10 +1,13 @@
 var searchData=
 [
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
-  ['pos',['pos',['../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f',1,'SUNphi::Binder::pos()'],['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()']]],
+  ['pos',['Pos',['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()'],['../d6/db9/classSUNphi_1_1Binder.html#aaf747f913dfd917def3660d8d82ae87f',1,'SUNphi::Binder::pos()']]],
+  ['posofaddend1tcinrestk',['posOfAddend1TcInResTk',['../de/d58/classSUNphi_1_1Adder.html#af3603bea42b03b4b77953a661a1351ee',1,'SUNphi::Adder']]],
+  ['posofaddend2tcinrestk',['posOfAddend2TcInResTk',['../de/d58/classSUNphi_1_1Adder.html#a3daf5f53dd37d15f5fe77c4c97491ff3',1,'SUNphi::Adder']]],
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#aafb4b03e762017371c5ef7b2244352c0',1,'SUNphi::Conjer']]],
   ['posoftype',['posOfType',['../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c',1,'SUNphi']]],
-  ['posoftypenotasserting',['posOfTypeNotasserting',['../d3/dd7/namespaceSUNphi.html#a2c671e5f57b29d843f45c2252580e47b',1,'SUNphi']]],
+  ['posoftypenotasserting',['posOfTypeNotAsserting',['../d3/dd7/namespaceSUNphi.html#ae5c8d825e6c25b7bcba64a7820bd8dd7',1,'SUNphi']]],
+  ['presence_5ft',['Presence_t',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a70790b84db426cd6eb86d27ab7368de7',1,'SUNphi::PairOfTensKindMergeability']]],
   ['print',['print',['../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
   ['print_2ehpp',['Print.hpp',['../d7/d55/Print_8hpp.html',1,'']]],
   ['printbacktracelist',['printBacktraceList',['../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
@@ -21,6 +24,7 @@ var searchData=
   ['provide_5fmergeable_5fcomps',['PROVIDE_MERGEABLE_COMPS',['../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd',1,'BaseSmET.hpp']]],
   ['provide_5fmergeable_5fcomps_5fmarking_5fone_5fas_5fnon_5fmergeable',['PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE',['../dc/d6b/BaseSmET_8hpp.html#a0967a494ce6416d595dbe85bc009df81',1,'BaseSmET.hpp']]],
   ['provide_5fname',['PROVIDE_NAME',['../d8/d32/String_8hpp.html#a9c53a2f9c0c7e8b6108db2619a4549ef',1,'String.hpp']]],
+  ['provide_5fpos_5fof_5faddend_5ftc_5fin_5fres_5ftk_5fand_5fmerged_5fdelims_5ffor_5fref',['PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF',['../da/d65/Add_8hpp.html#a3c5b1d7251a5632244a607fee6f19348',1,'Add.hpp']]],
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],
   ['provide_5funary_5fsmet_5fassignement_5foperator',['PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR',['../d4/dbe/UnarySmET_8hpp.html#a5fd7a607d078d7ee1e6c1fa063686a1a',1,'UnarySmET.hpp']]],
   ['provide_5funary_5fsmet_5fconst_5for_5fnot_5fdefault_5fevaluator',['PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR',['../d4/dbe/UnarySmET_8hpp.html#a7ad1a47a02a7014985140d6fd88c6c88',1,'UnarySmET.hpp']]],

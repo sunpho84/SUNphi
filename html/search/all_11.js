@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['pairoftenskindmergeability',['PairOfTensKindMergeability',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html',1,'SUNphi']]],
   ['same_5fcomp_5fsizes_5fof_5fref',['SAME_COMP_SIZES_OF_REF',['../d4/dbe/UnarySmET_8hpp.html#a7976df141233cff14c2fd64449ee8fe0',1,'UnarySmET.hpp']]],
   ['sfinae_2ehpp',['SFINAE.hpp',['../d4/d77/SFINAE_8hpp.html',1,'']]],
   ['sfinae_5fon_5ftemplate_5farg',['SFINAE_ON_TEMPLATE_ARG',['../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1',1,'SFINAE.hpp']]],
@@ -22,7 +23,7 @@ var searchData=
   ['smet_3c_20wrapper_3c_20_5fref_20_3e_20_3e',['SmET&lt; Wrapper&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
   ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],
-  ['spin',['Spin',['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()'],['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)']]],
+  ['spin',['spin',['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)'],['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()']]],
   ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
   ['static_5fassert_5fare_5fintegrals',['STATIC_ASSERT_ARE_INTEGRALS',['../d0/d81/TypeTraits_8hpp.html#a0147cab5da16a1c67f1f3ffb2d91889e',1,'TypeTraits.hpp']]],
   ['static_5fassert_5fare_5fn_5ftypes',['STATIC_ASSERT_ARE_N_TYPES',['../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0',1,'TypeTraits.hpp']]],

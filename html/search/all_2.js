@@ -3,6 +3,7 @@ var searchData=
   ['basebinarysmet',['BaseBinarySmET',['../d2/d98/structSUNphi_1_1BaseBinarySmET.html',1,'SUNphi']]],
   ['basesmet_2ehpp',['BaseSmET.hpp',['../dc/d6b/BaseSmET_8hpp.html',1,'']]],
   ['baseunarysmet',['BaseUnarySmET',['../df/d49/structSUNphi_1_1BaseUnarySmET.html',1,'SUNphi']]],
+  ['begin_5fof_5ftk',['BEGIN_OF_TK',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a70790b84db426cd6eb86d27ab7368de7ac741642b0de5867e236c3530985ed449',1,'SUNphi::PairOfTensKindMergeability']]],
   ['binarysmet',['BinarySmET',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['binarysmet_2ehpp',['BinarySmET.hpp',['../da/d5e/BinarySmET_8hpp.html',1,'']]],
   ['binarysmet_3c_20adder_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['BinarySmET&lt; Adder&lt; _Ref1, _Ref2 &gt; &gt;',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],

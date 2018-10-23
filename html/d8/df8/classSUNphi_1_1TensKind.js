@@ -15,7 +15,7 @@ var classSUNphi_1_1TensKind =
     [ "DiagCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#a5f54c860b4ac50f95ca650872aded78c", null ],
     [ "DynCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71", null ],
     [ "InsertTrueTwinnedPos", "d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68", null ],
-    [ "IsDiagComp", "d8/df8/classSUNphi_1_1TensKind.html#a656cb1dc0ac2f593ee4df6e4ed1f4c46", null ],
+    [ "IsDiagComp", "d8/df8/classSUNphi_1_1TensKind.html#aa5c31e72d1216d0eda848586c308e95d", null ],
     [ "IsMatrixComp", "d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1", null ],
     [ "Merged", "d8/df8/classSUNphi_1_1TensKind.html#a6d5400cb0230cd0bb4aaa773db9d134c", null ],
     [ "Twinned", "d8/df8/classSUNphi_1_1TensKind.html#af34e7a36a2ef8967ff5c4d2d65c21470", null ],

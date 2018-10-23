@@ -1,5 +1,6 @@
 var namespaceSUNphi =
 [
+    [ "PairOfTensKindMergeability", "df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html", null ],
     [ "IntSeq", "da/def/structSUNphi_1_1IntSeq.html", "da/def/structSUNphi_1_1IntSeq" ],
     [ "ConstrainIsOrderedIntSeq", "dd/dcd/structSUNphi_1_1ConstrainIsOrderedIntSeq.html", "dd/dcd/structSUNphi_1_1ConstrainIsOrderedIntSeq" ],
     [ "ConstrainIsOrderedUniqueIntSeq", "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html", "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq" ],
