@@ -8,6 +8,7 @@
 #include <smet/Reference.hpp>
 #include <smet/BinarySmET.hpp>
 #include <tens/TensKind.hpp>
+#include <tens/TensClass.hpp>
 
 namespace SUNphi
 {
@@ -261,8 +262,23 @@ namespace SUNphi
     PROVIDE_BINARY_SMET_SIMPLE_CREATOR(Adder);
   };
   
-  // Check that a test Adder is a UnarySmET
-  //STATIC_ASSERT_IS_UNARY_SMET(Adder<Tens<TensKind<TensComp<double,1>>,double>>);
+  // Check that a test Adder is a BinarySmET
+  namespace CheckAdderIsBinarySmet
+  {
+    /// Tensor comp for test
+    using MyTc=
+      TensComp<double,1>;
+    
+    /// Tensor kind to be tested
+    using MyTk=
+      TensKind<MyTc>;
+    
+    /// Tensor to be tested
+    using MyT=
+      Tens<MyTk,double>;
+    
+    STATIC_ASSERT_IS_BINARY_SMET(Adder<MyT,MyT>);
+  }
   
   // Build Adder from add
   SIMPLE_BINARY_SMET_BUILDER(add,Adder);
