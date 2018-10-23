@@ -33,7 +33,8 @@ namespace SUNphi
     T* v;
     
     /// Store whether this has been created or is a reference
-    bool created=false;
+    bool created=
+      false;
     
   public:
     
@@ -128,14 +129,21 @@ namespace SUNphi
     template <typename Is>  // Integer sequence containing the delimiters
     DECLAUTO mergedComps() const
     {
-      // Returned TensKind
-      using MergedTk=typename TK::template Merged<Is>;
-      // Returned type
-      using TOut=TensStor<MergedTk,T>;
-      // Position of the merged dynamical components
-      using MergedDynCompPos=typename MergedTk::DynCompsPos;
-      // Dynamic sizes after merge
-      const DynSizes<MergedTk::nDynamic> mergedDynSizes=compsRangeGroupsSize(Is{},MergedDynCompPos{});
+      /// Returned TensKind
+      using MergedTk=
+	typename TK::template Merged<Is>;
+      
+      /// Returned type
+      using TOut=
+	TensStor<MergedTk,T>;
+      
+      /// Position of the merged dynamical components
+      using MergedDynCompPos=
+	typename MergedTk::DynCompsPos;
+      
+      /// Dynamic sizes after merge
+      const DynSizes<MergedTk::nDynamic> mergedDynSizes=
+	compsRangeGroupsSize(Is{},MergedDynCompPos{});
       
       return new TOut(mergedDynSizes,v);
     }
