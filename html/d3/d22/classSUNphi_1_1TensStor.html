@@ -162,10 +162,9 @@ template&lt;int... Delims, int... DynComps&gt; </td></tr>
 <tr class="memitem:a933901919cafcc8bd5f66425fab561a8"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#a933901919cafcc8bd5f66425fab561a8">compsRangeGroupsSize</a> (const <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Delims...&gt; &amp;, const <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; DynComps...&gt; &amp;mergedDynCompPos) const </td></tr>
 <tr class="memdesc:a933901919cafcc8bd5f66425fab561a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creat the full list of dynamical sizes of the grouped comps. <br/></td></tr>
 <tr class="separator:a933901919cafcc8bd5f66425fab561a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="memTemplParams" colspan="2"><a class="anchor" id="a536cfdc4f0c4942f7abcb7dd2fa170a7"></a>
-template&lt;typename Is &gt; </td></tr>
+<tr class="memitem:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="memTemplParams" colspan="2">template&lt;typename Is &gt; </td></tr>
 <tr class="memitem:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#a536cfdc4f0c4942f7abcb7dd2fa170a7">mergedComps</a> () const </td></tr>
-<tr class="memdesc:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a components-merged version of the <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">TensStor</a>. <br/></td></tr>
+<tr class="memdesc:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a components-merged version of the <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">TensStor</a>.  <a href="#a536cfdc4f0c4942f7abcb7dd2fa170a7">More...</a><br/></td></tr>
 <tr class="separator:a536cfdc4f0c4942f7abcb7dd2fa170a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9686bd4cf4272ed2693a090980faca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b9686bd4cf4272ed2693a090980faca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca">alloc</a> ()</td></tr>
@@ -226,9 +225,8 @@ Private Attributes</h2></td></tr>
 T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#adac10655e44a07882813127a2e8ff467">v</a></td></tr>
 <tr class="memdesc:adac10655e44a07882813127a2e8ff467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal storage. <br/></td></tr>
 <tr class="separator:adac10655e44a07882813127a2e8ff467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7815fd4680b99c8ea6b949bf64979a8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7815fd4680b99c8ea6b949bf64979a8d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d">created</a> =false</td></tr>
-<tr class="memdesc:a7815fd4680b99c8ea6b949bf64979a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store whether this has been created or is a reference. <br/></td></tr>
+<tr class="memitem:a7815fd4680b99c8ea6b949bf64979a8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d">created</a></td></tr>
+<tr class="memdesc:a7815fd4680b99c8ea6b949bf64979a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store whether this has been created or is a reference.  <a href="#a7815fd4680b99c8ea6b949bf64979a8d">More...</a><br/></td></tr>
 <tr class="separator:a7815fd4680b99c8ea6b949bf64979a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -266,7 +264,7 @@ template&lt;class TK, class T&gt; </div>
 <p>Copy constructor (test)</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>improve memcpy, this could be parallelized in many ways, we have to implement memory manager soon </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00189">189</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
 
 </div>
 </div>
@@ -304,7 +302,7 @@ template&lt;class... Args, class  = ConstrainAreSame&lt;int,Args...&gt;&gt; </di
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00063">63</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +334,71 @@ template&lt;class... Args, class  = ConstrainAreSame&lt;int,Args...&gt;&gt; </di
 <p>Returns a const reference to a <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">TensStor</a> given a set of components</p>
 <p>&lt; Components to extract </p>
 
-<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a536cfdc4f0c4942f7abcb7dd2fa170a7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TK, class T&gt; </div>
+<div class="memtemplate">
+template&lt;typename Is &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">SUNphi::TensStor</a>&lt; TK, T &gt;::mergedComps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a components-merged version of the <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">TensStor</a>. </p>
+<p>Returned <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></p>
+<p>Returned type</p>
+<p>Position of the merged dynamical components</p>
+<p>Dynamic sizes after merge </p>
+
+<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a7815fd4680b99c8ea6b949bf64979a8d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TK, class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d3/d22/classSUNphi_1_1TensStor.html">SUNphi::TensStor</a>&lt; TK, T &gt;::created</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      <span class="keyword">false</span></div>
+</div><!-- fragment -->
+<p>Store whether this has been created or is a reference. </p>
+
+<p>Definition at line <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">TensStor.hpp</a>.</p>
 
 </div>
 </div>
