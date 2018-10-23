@@ -2,6 +2,7 @@ var searchData=
 [
   ['hasmember_5fassertmergeablewith',['HasMember_assertMergeableWith',['../d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html',1,'SUNphi']]],
   ['hasmember_5fcompsize',['HasMember_compSize',['../de/d50/structSUNphi_1_1HasMember__compSize.html',1,'SUNphi']]],
+  ['hasmember_5feval',['HasMember_eval',['../d8/dfe/structSUNphi_1_1HasMember__eval.html',1,'SUNphi']]],
   ['hasmember_5fgetmergedcompsview',['HasMember_getMergedCompsView',['../d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView.html',1,'SUNphi']]],
   ['hasmember_5fisaliasing',['HasMember_isAliasing',['../db/dc6/structSUNphi_1_1HasMember__isAliasing.html',1,'SUNphi']]],
   ['hasmember_5fisassignable',['HasMember_isAssignable',['../dd/d8a/structSUNphi_1_1HasMember__isAssignable.html',1,'SUNphi']]],

@@ -7,6 +7,7 @@ var searchData=
   ['add_2ehpp',['Add.hpp',['../da/d65/Add_8hpp.html',1,'']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html',1,'SUNphi']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html#a006536a8a7295c2e6bbc5d069edf3fee',1,'SUNphi::Adder']]],
+  ['adder_5finternal_5feval',['adder_internal_eval',['../de/d58/classSUNphi_1_1Adder.html#a2b2c144abf01feafd58d136141046593',1,'SUNphi::Adder::adder_internal_eval(IntSeq&lt; Comps1...&gt;, IntSeq&lt; Comps2...&gt;, const Tuple&lt; Args...&gt; &amp;targs)'],['../de/d58/classSUNphi_1_1Adder.html#a12dcbe09aa766af5011949d763e555ad',1,'SUNphi::Adder::adder_internal_eval(IntSeq&lt; Comps1...&gt;, IntSeq&lt; Comps2...&gt;, const Tuple&lt; Args...&gt; &amp;targs) const ']]],
   ['addpointer',['AddPointer',['../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c',1,'SUNphi']]],
   ['addpointeriffunction',['AddPointerIfFunction',['../d3/dd7/namespaceSUNphi.html#a716ef8de43987727a6f4d784b9b5d4b1',1,'SUNphi']]],
   ['adj',['adj',['../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],

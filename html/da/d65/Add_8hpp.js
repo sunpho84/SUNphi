@@ -1,9 +1,13 @@
 var Add_8hpp =
 [
     [ "Adder", "de/d58/classSUNphi_1_1Adder.html", "de/d58/classSUNphi_1_1Adder" ],
+    [ "PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR", "da/d65/Add_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad", null ],
     [ "PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF", "da/d65/Add_8hpp.html#a3c5b1d7251a5632244a607fee6f19348", null ],
     [ "CompsMergeability", "da/d65/Add_8hpp.html#af33438ef2877ca1a09e8023fda0de5b7", null ],
     [ "MergedDelimsInRef", "da/d65/Add_8hpp.html#aedb6dd214cdd80843c43bdf715d49c1b", null ],
+    [ "MyT", "da/d65/Add_8hpp.html#a26e721ee3a9d168294a646e878da207b", null ],
+    [ "MyTc", "da/d65/Add_8hpp.html#a8b77caf70daeb59bfd7d2ea3d6ce9fe5", null ],
+    [ "MyTk", "da/d65/Add_8hpp.html#ae1146eec69576663a37d6f5fe94ed828", null ],
     [ "Presence_t", "da/d65/Add_8hpp.html#a70790b84db426cd6eb86d27ab7368de7", [
       [ "BEGIN_OF_TK", "da/d65/Add_8hpp.html#a70790b84db426cd6eb86d27ab7368de7ac741642b0de5867e236c3530985ed449", null ],
       [ "ABSENT_IN_FIRST", "da/d65/Add_8hpp.html#a70790b84db426cd6eb86d27ab7368de7a22a8db7a040a4aaea6f86c413cc45e10", null ],
