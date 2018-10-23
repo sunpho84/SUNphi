@@ -120,10 +120,10 @@ namespace SUNphi
 #define PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE(LONG_DESCRIPTION,IN_MERGEABLE_COMPS,POS) \
   PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,				\
 			  InsertIntSeqInOrderedIntSeq<			\
-			  IntSeq<POS,POS+1>,   /* Position where to insert      */ \
-			  IN_MERGEABLE_COMPS,  /* Incoming mergeable components */ \
-			  IntSeq<0,0>,         /* Shift 0 after insertion       */ \
-			  true>)               /* Ignore if already present     */
+			  IntSeq<POS,POS+1>,   /*! Position where to insert      */ \
+			  IN_MERGEABLE_COMPS,  /*! Incoming mergeable components */ \
+			  IntSeq<0,0>,         /*! Shift 0 after insertion       */ \
+			  true>)               /*! Ignore if already present     */
   
   // Check that we know which components can be merged
   DEFINE_HAS_MEMBER(MergeableComps);

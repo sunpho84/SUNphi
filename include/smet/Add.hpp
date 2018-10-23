@@ -231,10 +231,14 @@ namespace SUNphi
     
     /// Provides the MergedDelim attribute for Refs 1 and 2
 #define PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(ID) \
-    /*! Position of the given \c TensComp of Addend ## ID in Res Tk */	\
+    /*! Position of the \c TensComp of Addend ## ID in Res Tk */	\
     using posOfAddend ## ID ## TcInResTk=				\
       posOfTypesNotAsserting<typename Tk::types,typename TK ## ID::types>; \
 									\
+    /*! Position of the \c TensComp of Addend ## ID present in Res Tk */ \
+    using posOfAddend ## ID ## PresTcInResTk=				\
+      FilterVariadicClassPos<IsNonNegative,posOfAddend ## ID ## TcInResTk>; \
+    									\
     /*! Merged delimiters of Ref ## ID according to MD */		\
     template <typename MD> /* Required merging delimiters */		\
     using MergedDelims ## ID=						\
@@ -242,10 +246,10 @@ namespace SUNphi
     
     PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
     PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);
-    
+
 #undef PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF
        
-    /// \todo fix it
+    // Provide component-mergeabilty
     PROVIDE_MERGEABLE_COMPS(/*! Defer the mergeability to the internal implementation*/,
 			    PairOfTensKindMergeability::template CompsMergeability<
 			    typename RemoveReference<Ref1>::MergeableComps,
@@ -253,7 +257,7 @@ namespace SUNphi
 			    posOfAddend1TcInResTk,
 			    posOfAddend2TcInResTk>);
     
-    /// Returns a component-merged version
+    // Returns a component-merged version
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their sum */,
     				  return
 				  ref1.template getMergedCompsView<MergedDelims1<Is>>()+
