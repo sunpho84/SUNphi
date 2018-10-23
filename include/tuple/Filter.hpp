@@ -100,6 +100,15 @@ namespace SUNphi
       (I!=0);
   };
   
+  /// Filterer which check non-negativity of its parameter
+  template <auto I>
+  struct IsNonNegative
+  {
+    /// Result of the check
+    static constexpr bool res=
+      (I>=0);
+  };
+  
   /// Filterer which check nothing
   template <auto I>
   struct IsAlwaysTrue
