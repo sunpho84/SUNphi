@@ -108,20 +108,27 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  template <bool assertIfNotPresent,
-	    typename...T,
-	    typename TP>
-  auto _posOfTypes(Tuple<T...>,
-		   TP)
+  /// Position of the types \c T in the Tuple \c Tp, asserting or not
+  template <bool assertIfNotPresent,  // Flag determining whether has to be assert or return NOT_PRESENT
+	    typename...T,             // Types to be searched
+	    typename TP>              // Type of the \c Tuple where to search
+  auto _posOfTypes(Tuple<T...> t,     ///< Holds the types to be searched
+		   TP tp)             ///< \c Tuple where to search
     -> IntSeq<_posOfType<assertIfNotPresent>(T{},TP{})...>;
   
-  template <typename TpToSearch,
-	    typename TpToProbe>
+  /// Position of the Tuple types \c TpToSearch in the Tuple \c TpToProbe, asserting
+  ///
+  /// An expection is issued if the type is not founs
+  template <typename TpToSearch, // Tuple containing the types to be searched
+	    typename TpToProbe>  // Tuple where to search
   using posOfTypes=
     decltype(_posOfTypes<ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
   
-  template <typename TpToSearch,
-	    typename TpToProbe>
+  /// Position of the Tuple types \c TpToSearch in the Tuple \c TpToProbe, not asserting
+  ///
+  /// NOT_PRESENT is returned if the type is not present
+  template <typename TpToSearch, // Tuple containing the types to be searched
+	    typename TpToProbe>  // Tuple where to search
   using posOfTypesNotAsserting=
     decltype(_posOfTypes<DO_NOT_ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
 }
