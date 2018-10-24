@@ -32,7 +32,8 @@ namespace SUNphi
   public:
     
     /// Tensor kind of the tensor
-    using Tk=TK;
+    using Tk=
+      TK;
     
     // Attributes
     ASSIGNABLE;
@@ -46,7 +47,7 @@ namespace SUNphi
       nullptr;
     
     /// Keep note of whether we need to free at destroy
-    const bool freeAtDestroy;
+    bool freeAtDestroy;
     
   public:
     
