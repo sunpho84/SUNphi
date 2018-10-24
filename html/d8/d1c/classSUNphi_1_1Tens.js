@@ -3,8 +3,6 @@ var classSUNphi_1_1Tens =
     [ "Tk", "d8/d1c/classSUNphi_1_1Tens.html#abba1d4aaac435f9f1923eeab54f05c59", null ],
     [ "Tens", "d8/d1c/classSUNphi_1_1Tens.html#a13895871365ead5fd2fbbdcbf77b1d10", null ],
     [ "Tens", "d8/d1c/classSUNphi_1_1Tens.html#a9c84d66c06796bf2cc3d5a1fda524809", null ],
-    [ "Tens", "d8/d1c/classSUNphi_1_1Tens.html#a7ed9df5323d0e9a666c8d754ffa4c21a", null ],
-    [ "Tens", "d8/d1c/classSUNphi_1_1Tens.html#a30cc7198dcf05ea7e91c4387f3d61603", null ],
     [ "~Tens", "d8/d1c/classSUNphi_1_1Tens.html#a2d7335f78ae1f8927dbd098a8a615d36", null ],
     [ "assertMergeableWith", "d8/d1c/classSUNphi_1_1Tens.html#ad005576397e3d52569a94fe54ad269a5", null ],
     [ "compSize", "d8/d1c/classSUNphi_1_1Tens.html#ab517abcdfb114def5e4f4b486ca934d4", null ],
@@ -19,7 +17,7 @@ var classSUNphi_1_1Tens =
     [ "operator=", "d8/d1c/classSUNphi_1_1Tens.html#ad55f7add51fe59fbfbf5b9737025f194", null ],
     [ "operator~", "d8/d1c/classSUNphi_1_1Tens.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "d8/d1c/classSUNphi_1_1Tens.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
-    [ "freeAtDestroy", "d8/d1c/classSUNphi_1_1Tens.html#a4379060cc47f225df812bc1e1fa343ba", null ],
+    [ "freeAtDestroy", "d8/d1c/classSUNphi_1_1Tens.html#aa9557a34f66df9bc86cd777c0bd21720", null ],
     [ "isAssignable", "d8/d1c/classSUNphi_1_1Tens.html#ac8a7b83b7d8092afa86e53c6f3bfe082", null ],
     [ "isStoring", "d8/d1c/classSUNphi_1_1Tens.html#a57aa9b0f47011df829f31e972eabed2f", null ],
     [ "v", "d8/d1c/classSUNphi_1_1Tens.html#a580ed866f19329da4488f6615349cf06", null ]

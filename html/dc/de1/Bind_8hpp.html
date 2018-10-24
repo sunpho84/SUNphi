@@ -142,8 +142,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a5c60188918795703bcda3222ddfdb332"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a5c60188918795703bcda3222ddfdb332">DEFINE_NAMED_BINDER</a>(TG, NAME)</td></tr>
 <tr class="memdesc:a5c60188918795703bcda3222ddfdb332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type TG.  <a href="#a5c60188918795703bcda3222ddfdb332">More...</a><br/></td></tr>
 <tr class="separator:a5c60188918795703bcda3222ddfdb332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae511eac51fb63109bb85127c6004e56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#aae511eac51fb63109bb85127c6004e56">DEFINE_NAMED_RW_OR_COL_BINDER</a>(TG, NAME)</td></tr>
-<tr class="memdesc:aae511eac51fb63109bb85127c6004e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type RwTG or CnTG.  <a href="#aae511eac51fb63109bb85127c6004e56">More...</a><br/></td></tr>
+<tr class="memitem:aae511eac51fb63109bb85127c6004e56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae511eac51fb63109bb85127c6004e56"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#aae511eac51fb63109bb85127c6004e56">DEFINE_NAMED_RW_OR_COL_BINDER</a>(TG, NAME)</td></tr>
+<tr class="memdesc:aae511eac51fb63109bb85127c6004e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type RwTG or CnTG. <br/></td></tr>
 <tr class="separator:aae511eac51fb63109bb85127c6004e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac676f53d30c2e27ebc3df2a25081e1ad"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(QUALIFIER)</td></tr>
@@ -199,67 +200,6 @@ Functions</h2></td></tr>
 <p>Defines a Binder named NAME for type TG. </p>
 
 <p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aae511eac51fb63109bb85127c6004e56"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DEFINE_NAMED_RW_OR_COL_BINDER</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">TG, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NAME&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    \</div>
-<div class="line">  template &lt;typename T&gt;       <span class="comment">/* Type of the bound expression */</span>    <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
-<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> NAME(T&amp;&amp; ref,        \</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)   \</div>
-<div class="line">  {                                 \</div>
-<div class="line">    <span class="comment">/* TensKind of binding expression */</span>                \</div>
-<div class="line">    using Tk=<span class="keyword">typename</span> RemoveReference&lt;T&gt;::Tk;               \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Tuple containing all Tk types */</span>                 \</div>
-<div class="line">    using Tp=<span class="keyword">typename</span> Tk::types;                    \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Check if row type is available */</span>                \</div>
-<div class="line">    constexpr <span class="keywordtype">bool</span> hasRw=tupleHasType&lt;Rw ## TG,Tp&gt;;         \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Check if column type is available */</span>             \</div>
-<div class="line">    constexpr <span class="keywordtype">bool</span> hasCn=tupleHasType&lt;Cn ## TG,Tp&gt;;         \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Check that not more than one type is available */</span>        \</div>
-<div class="line">    constexpr <span class="keywordtype">bool</span> hasOnlyOneType=(hasRw+hasCn&lt;2);          \</div>
-<div class="line">    static_assert(hasOnlyOneType,<span class="stringliteral">&quot;Both types Rw and Cn identfied!&quot;</span>);    \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Check that at least one type is available */</span>         \</div>
-<div class="line">    constexpr <span class="keywordtype">bool</span> hasAtLeastOneType=(hasRw+hasCn&gt;0);           \</div>
-<div class="line">    static_assert(hasAtLeastOneType,<span class="stringliteral">&quot;No types Rw and Cn identfied!&quot;</span>);   \</div>
-<div class="line">                                        \</div>
-<div class="line">    <span class="comment">/* Identifies the type to return, on the basis of the check above */</span> \</div>
-<div class="line">    using Ret=Conditional&lt;hasRw,Rw ## TG,Cn ## TG&gt;;         \</div>
-<div class="line">                                        \</div>
-<div class="line">    return bind&lt;Ret&gt;(forw&lt;T&gt;(ref),<span class="keywordtype">id</span>);                  \</div>
-<div class="line">  }</div>
-<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
-</div><!-- fragment -->
-<p>Defines a Binder named NAME for type RwTG or CnTG. </p>
-
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>

@@ -34,6 +34,6 @@ var searchData=
   ['forw',['forw',['../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c',1,'SUNphi']]],
   ['forward_5fis_5faliasing_5fto_5fref',['FORWARD_IS_ALIASING_TO_REF',['../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736',1,'UnarySmET.hpp']]],
   ['forward_5fis_5faliasing_5fto_5frefs',['FORWARD_IS_ALIASING_TO_REFS',['../da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0',1,'BinarySmET.hpp']]],
-  ['freeatdestroy',['freeAtDestroy',['../d8/d1c/classSUNphi_1_1Tens.html#a4379060cc47f225df812bc1e1fa343ba',1,'SUNphi::Tens']]],
+  ['freeatdestroy',['freeAtDestroy',['../d8/d1c/classSUNphi_1_1Tens.html#aa9557a34f66df9bc86cd777c0bd21720',1,'SUNphi::Tens']]],
   ['freemem',['freeMem',['../d3/dd7/namespaceSUNphi.html#a35a11a502f5f7157229fe91c36aaa5a3',1,'SUNphi']]]
 ];

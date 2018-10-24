@@ -1,7 +1,7 @@
 var searchData=
 [
   ['tens',['Tens',['../d8/d1c/classSUNphi_1_1Tens.html',1,'SUNphi']]],
-  ['tens',['Tens',['../d8/d1c/classSUNphi_1_1Tens.html#a13895871365ead5fd2fbbdcbf77b1d10',1,'SUNphi::Tens::Tens(DynSizes &amp;&amp;...extDynSizes)'],['../d8/d1c/classSUNphi_1_1Tens.html#a9c84d66c06796bf2cc3d5a1fda524809',1,'SUNphi::Tens::Tens(TensStor&lt; Tk, Fund &gt; *v)'],['../d8/d1c/classSUNphi_1_1Tens.html#a7ed9df5323d0e9a666c8d754ffa4c21a',1,'SUNphi::Tens::Tens(const Tens &amp;oth)'],['../d8/d1c/classSUNphi_1_1Tens.html#a30cc7198dcf05ea7e91c4387f3d61603',1,'SUNphi::Tens::Tens(Tens &amp;&amp;oth)']]],
+  ['tens',['Tens',['../d8/d1c/classSUNphi_1_1Tens.html#a13895871365ead5fd2fbbdcbf77b1d10',1,'SUNphi::Tens::Tens(DynSizes &amp;&amp;...extDynSizes)'],['../d8/d1c/classSUNphi_1_1Tens.html#a9c84d66c06796bf2cc3d5a1fda524809',1,'SUNphi::Tens::Tens(TensStor&lt; Tk, Fund &gt; *v)']]],
   ['tens_2ehpp',['Tens.hpp',['../dc/dd1/Tens_8hpp.html',1,'']]],
   ['tensclass_2ehpp',['TensClass.hpp',['../dc/d8f/TensClass_8hpp.html',1,'']]],
   ['tenscomp',['TensComp',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
