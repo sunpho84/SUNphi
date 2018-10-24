@@ -157,9 +157,8 @@ void checkSumOfTwoSmETs()
   MyTens1 a;
   for(int iCnCol=0;iCnCol<NCOL;iCnCol++)
     for(int iRwCol=0;iRwCol<NCOL;iRwCol++)
-    for(int iCnSpin=0;iCnSpin<NSPIN;iCnSpin++)
+      for(int iCnSpin=0;iCnSpin<NSPIN;iCnSpin++)
 	cnCol(rwCol(cnSpin(a,iCnSpin),iRwCol),iCnCol)=3.0;
-  
   
   MyTens2 b;
   for(int iRwCol=0;iRwCol<NCOL;iRwCol++)
@@ -167,10 +166,12 @@ void checkSumOfTwoSmETs()
       for(int iReIm=0;iReIm<NCOMPL;iReIm++)
 	rwCol(cnSpin(reIm(b,iReIm),iCnSpin),iRwCol)=5.0;
   
-  Tens<decltype(a+b)::Tk,double> d;
-  d=a+b;
+  Tens<decltype((a+b).getMaximallyMergedCompsView())::Tk,double> d;
+  cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  d=(a+b).getMaximallyMergedCompsView();
+  cout<<"/////////////////////////////////////////////////////////////////"<<endl;
   
-  cout<<"d: "<<d.eval(1,1,1,1)<<endl;
+  cout<<"d: "<<d.eval(1,1,1)<<endl;
   
   //cout<<"Col: "<<c.compSize<RwCol>()<<endl;
   //cout<<"Spin: "<<c.compSize<CnSpin>()<<endl;
