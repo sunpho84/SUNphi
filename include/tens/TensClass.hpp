@@ -68,8 +68,8 @@ namespace SUNphi
       freeAtDestroy(true)                                        //   We are allocating, so we need to free
     {
 #ifdef DEBUG_TENS
-	  using namespace std;
-	  cout<<"TensClass alloc: "<<this<<endl;
+      using namespace std;
+      cout<<"TensClass alloc: "<<this<<endl;
 #endif
       STATIC_ASSERT_ARE_N_TYPES(Tk::nDynamic,DynSizes);
     }
@@ -79,30 +79,39 @@ namespace SUNphi
       v(v),                       // The internal storage is built with the reference
       freeAtDestroy(false)        // We are not allocating, so we need not to free
     {
-    }
-    
-    /// Copy constructor
-    Tens(const Tens& oth) :
-      v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
-      freeAtDestroy(true)                 //   We are allocating, so we need
-    {
 #ifdef DEBUG_TENS
       using namespace std;
-      cout<<"Tens copy constructor!"<<endl;
+      cout<<"Creating a Tens of type "<<Tk::name()<<" NOT allocating"<<endl;
 #endif
     }
+    
+//     /// Copy constructor
+//     Tens(const Tens& oth) :
+//       v(new TensStor<Tk,Fund>(*oth.v)),   //   Copy the vector
+//       freeAtDestroy(true)                 //   We are allocating, so we need
+//     {
+//       printf("Copying a Tens of type %s NOT allocating\n",Tk::name());
+// #ifdef DEBUG_TENS
+//       using namespace std;
+//       cout<<"Tens copy constructor!"<<endl;
+// #endif
+//     }
     
     /// Move constructor
-    Tens(Tens&& oth) : freeAtDestroy(oth.freeAtDestroy) // Deallocate according to arg
-    {
-      v=oth.v;
-      oth.v=nullptr;
+//     Tens(Tens&& oth) : freeAtDestroy(oth.freeAtDestroy) // Deallocate according to arg
+//     {
+//       oth.freeAtDestroy=false;
       
-#ifdef DEBUG_TENS
-      using namespace std;
-      cout<<"Tens move constructor!"<<endl;
-#endif
-    }
+//       v=oth.v;
+//       oth.v=nullptr;
+      
+//       printf("Creating a Tens of type %s moving\n",Tk::name());
+      
+// #ifdef DEBUG_TENS
+//       using namespace std;
+//       cout<<"Tens move constructor!"<<endl;
+// #endif
+//     }
     
     /// Destructor
     ~Tens()
@@ -111,8 +120,20 @@ namespace SUNphi
       using namespace std;
       cout<<"TensClass destroy: "<<this<<endl;
 #endif
+      
       if(freeAtDestroy)
-	delete v;
+	{
+#ifdef DEBUG_TENS
+ 	  printf("Destroying a Tens of type %s deallocating\n",Tk::name());
+#endif
+	  delete v;
+	}
+#ifdef DEBUG_TENS
+      else
+	{
+	  printf("Destroying a Tens of type %s NOT deallocating\n",Tk::name());
+	}
+#endif
     }
     
   public:
@@ -158,7 +179,7 @@ namespace SUNphi
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
-      if(DEBUG_TENS_COMPONENTS) print(std::cout,"Components: ",&v,comps...,"\n");	\
+      if(DEBUG_TENS_COMPONENTS) print(std::cout,"Components: ",&v,comps...,"\n"); \
       return v->eval(forw<const Comps>(comps)...);			\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
