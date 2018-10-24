@@ -37,27 +37,34 @@ namespace SUNphi
 		const int id) /*!< Component to bind          */	\
   {									\
     /* TensKind of binding expression */				\
-    using Tk=typename RemoveReference<T>::Tk;				\
+    using Tk=								\
+      typename RemoveReference<T>::Tk;					\
     									\
     /* Tuple containing all Tk types */					\
-    using Tp=typename Tk::types;					\
+    using Tp=								\
+      typename Tk::types;						\
     									\
     /* Check if row type is available */				\
-    constexpr bool hasRw=tupleHasType<Rw ## TG,Tp>;			\
+    constexpr bool hasRw=						\
+      tupleHasType<Rw ## TG,Tp>;					\
     									\
     /* Check if column type is available */				\
-    constexpr bool hasCn=tupleHasType<Cn ## TG,Tp>;			\
+    constexpr bool hasCn=						\
+      tupleHasType<Cn ## TG,Tp>;					\
     									\
     /* Check that not more than one type is available */		\
-    constexpr bool hasOnlyOneType=(hasRw+hasCn<2);			\
+    constexpr bool hasOnlyOneType=					\
+      (hasRw+hasCn<2);							\
     static_assert(hasOnlyOneType,"Both types Rw and Cn identfied!");	\
     									\
     /* Check that at least one type is available */			\
-    constexpr bool hasAtLeastOneType=(hasRw+hasCn>0);			\
+    constexpr bool hasAtLeastOneType=					\
+      (hasRw+hasCn>0);							\
     static_assert(hasAtLeastOneType,"No types Rw and Cn identfied!");	\
     									\
     /* Identifies the type to return, on the basis of the check above */ \
-    using Ret=Conditional<hasRw,Rw ## TG,Cn ## TG>;			\
+    using Ret=								\
+      Conditional<hasRw,Rw ## TG,Cn ## TG>;				\
     									\
     return bind<Ret>(forw<T>(ref),id);					\
   }
