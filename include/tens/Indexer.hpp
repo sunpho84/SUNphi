@@ -63,17 +63,21 @@ namespace SUNphi
       static_assert(sizeof...(Oth)==sizeof...(Tail),"Number of TensComp does not match number of passed components");
       
       // Current component
-      const int thisComp=head;
+      const int thisComp=
+	head;
       
+      // Current size
+      const int size=
+	thisDynamic?
+	dynSizes[IDyn]:
+	headSize;
+      
+      // Compute the result
+      int out=thisComp+size*in;
+	  
       // Nested value
       if constexpr(sizeof...(Tail)>0)
 	{
-	  // Current size
-	  const int size=
-	    thisDynamic?
-	    dynSizes[IDyn]:
-	    headSize;
-      
 #ifdef DEBUG_INDEXER
 	  printf("Is Nested , thiscomp: %d , is Dyn: %d",thisComp,thisDynamic);
 	  printf(", HeadSize: %d",headSize);
@@ -83,17 +87,14 @@ namespace SUNphi
 	  printf("\n");
 #endif
 	  
-	  // Compute the result
-	  int out=thisComp+size*in;
-	  
 	  return Nested::index(forw<const DynSizes<NTotDyn>>(dynSizes),out,forw<const Tail>(tail)...);
 	}
       else
 	{
 #ifdef DEBUG_INDEXER
-	  std::cout<<"Non-Nested , value: "<<value<<std::endl;
+	  std::cout<<"Non-Nested , value: "<<out<<std::endl;
 #endif
-	  return head;
+	  return out;
 	}
     }
   };
