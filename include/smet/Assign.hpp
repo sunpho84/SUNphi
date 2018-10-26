@@ -4,7 +4,26 @@
 /// \file Assign.hpp
 ///
 /// \brief Defines a class which assigns rhs SmET to lhs one
-
+///
+/// These are the steps:
+///
+/// - The call to A=B, with A being a SmET, is intercepted. If A is not assignable
+///   an exception is issued. This is done in all SmET, because operator= must be a
+///   static member function. The function assign(A,B) is called.
+/// - All call to \c assign where B is not a \c SmET are intercepted.
+///   If B is of a type that can be cast to the fundamental
+///   type of A, then we return A=scalar(B). Otherwise an exception is issued.
+/// - If B is a SmET, and it contains all components of A, an Assigner
+///   is issued, calling \c assign(A,B).
+/// - Preliminary manipulation is performed, allowing to specific pattern recognition,
+///   obtained by overloading \c assign and using appropriate SFINAE mechanism.
+/// - The default \c assign function is called, which returns the rhs as expected
+///   allowing to perform chain assignement on the expected return.
+/// - The \c Assigner is created inside assign.
+/// - If the \c Assigner has mergeable components, they are merged.
+/// - If the innermost component is vectorizable, it is vectorized.
+/// - The execution of the assigner is dispatched to the thread pool.
+///
 #include <tens/TensKind.hpp>
 #include <tens/TensClass.hpp>
 #include <smet/Bind.hpp>
