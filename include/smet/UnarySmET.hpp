@@ -92,16 +92,16 @@ namespace SUNphi
   
   /// Defines the assignement operator, calling assign
 #define PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the UnarySmET */) \
-  /*! Assign from another smet */					\
+  /*! Assign from another object */ \
   template <typename Oth>             	/* Other type  */		\
-  UNARY_SMET& operator=(Oth&& smet)	/*!< Other SmET */		\
+  UNARY_SMET& operator=(Oth&& oth)	/*!< Other object */		\
   {									\
-  if(0)									\
-    {									\
-      using namespace std;						\
-      cout<<"Operator=, triggering assignement to "<<this<<" of "<<&smet<<endl; \
-    }									\
-    assign(*this,forw<Oth>(smet));					\
+    if(0)								\
+      {									\
+	using namespace std;						\
+	cout<<"Operator=, triggering assignement to "<<this<<" of "<<&oth<<endl; \
+      }									\
+    assign(*this,forw<Oth>(oth));					\
 									\
     return *this;							\
   }									\
@@ -109,34 +109,34 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Provides a \c isAliasing method, taking \c alias as argument
+#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)	\
+  LONG_DESCRIPTION					\
+  template <typename Tref>				\
+  bool isAliasing(const Tref& alias) const		\
+  {							\
+    __VA_ARGS__;					\
+  }							\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
   /// Set aliasing according to the isAliasing of reference
   ///
   /// \todo enforce cehck only with TensClass, or with storing classes
 #define FORWARD_IS_ALIASING_TO_REF			\
-  /*! Forward aliasing check to the reference */	\
-  template <typename Tref>				\
-  bool isAliasing(const Tref& alias) const		\
-  {							\
-    return ref.isAliasing(alias);			\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  PROVIDE_IS_ALIASING(/*! Forward aliasing check to the reference */,	\
+		      return ref.isAliasing(alias);)
   
   /// Set aliasing according to a passed pointer (provided class member)
   ///
   /// \todo This is mostly broken
 #define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
-  /*! Check the aliasing with reference */				\
-  template <typename Tref>						\
-  bool isAliasing(const Tref& alias) const				\
-  {									\
-    const void* pAlias=							\
-      static_cast<const void*>(&alias);					\
-    const void* p=							\
-      static_cast<const void*>(_p);					\
+  PROVIDE_IS_ALIASING( /*! Check the aliasing with reference */,	\
+		       const void* pAlias=				\
+		         static_cast<const void*>(&alias);		\
+		       const void* p=					\
+		         static_cast<const void*>(_p);			\
 									\
-    return pAlias==p;							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+		       return pAlias==p;)
   
   /// Create a simple builder with a name and a UNARY_SMET returned type
 #define SIMPLE_UNARY_SMET_BUILDER(BUILDER,    /*!< Name of builder fun            */ \
@@ -252,14 +252,14 @@ namespace SUNphi
   ///
   /// \todo we need to implement the same check done for
   /// CANCEL_DUPLICATED_UNARY_SMET_CALL
-#define UNARY_SMET_GOES_INSIDE(EXT_FUN,	 /*!< External builder */	\
-			      UNARY_SMET, /*!< Name of the SmET  */	\
-			      INT_FUN)	 /*!< Internal builder */	\
-  /*! Simplify EXT_FUN(UNARY_SMET u) expression     */			\
+#define UNARY_SMET_GOES_INSIDE(EXT_FUN,	   /*!< External builder */	\
+			       UNARY_SMET, /*!< Name of the SmET */	\
+			       INT_FUN)	   /*!< Internal builder */	\
+  /*! Simplify EXT_FUN(UNARY_SMET u) expression    */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
   template <typename D,                                   /* Type of the nested UNARY_SMET           */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>	  /* Enable only for the UNARY_SMET required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>  /* Enable only for the UNARY_SMET required */ \
   DECLAUTO EXT_FUN(D&& smet)     /*!< UnarySmET to nest           */	\
   {									\
     return INT_FUN(EXT_FUN(smet.ref));					\
@@ -270,13 +270,13 @@ namespace SUNphi
   ///
   /// \todo why can't we make only const & on rhs?
   /// \todo we need to enforce SmET
-#define UNARY_SMET_GOES_ON_LHS(LHS_FUN,	 /*!< External builder */	\
-			      UNARY_SMET) /*!< Name of the SmET  */	\
+#define UNARY_SMET_GOES_ON_LHS(LHS_FUN,	   /*!< External builder */	\
+			       UNARY_SMET) /*!< Name of the SmET  */	\
   /*! Simplify EXT_FUN(UNARY_SMET u) expression     */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
-  template <typename Lhs,                                   /* Type of the lhs SmET                    */ \
-	    typename Rhs,                                   /* Type of the rhs UNARY_SMET              */ \
+  template <typename Lhs,                                    /* Type of the lhs SmET                    */ \
+	    typename Rhs,                                    /* Type of the rhs UNARY_SMET              */ \
 	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<Rhs>)>   /* Enable only for the UNARY_SMET required */ \
   void assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
 	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_SMET */ \

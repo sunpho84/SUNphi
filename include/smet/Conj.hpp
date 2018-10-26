@@ -28,7 +28,8 @@ namespace SUNphi
   {
     
     /// Position of the Compl component
-    constexpr static int posOfCompl=posOfType<Compl,TK_TYPES>;
+    constexpr static int posOfCompl=
+      posOfType<Compl,TK_TYPES>;
     
   public:
     
@@ -40,7 +41,8 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
-    using Tk=TK;
+    using Tk=
+      TK;
     
     // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/* We have to split at the Compl components, and at the next one */,
