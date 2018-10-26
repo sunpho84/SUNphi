@@ -16,13 +16,12 @@ namespace SUNphi
   DEFINE_BASE_TYPE(ScalarWrapper);
   
   /// Class to hold a scalar promoting it into a SmET
-  template <typename _Ref,                                  // Type to be wrapped
-	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the bound type
+  ///
+  /// \todo Check what happens if called with a SmET
+  template <typename _Ref>                        // Type to be wrapped
   class ScalarWrapper :
-    public BaseScalarWrapper,                      // Inherit from BaseTransposer to detect in expression
-    public UnarySmET<ScalarWrapper<_Ref>>,         // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                  // Constrain Ref to be a SmET
-    public ConstrainIsTensKind<TK>                 // Constrain type TK to be a TensKind
+    public BaseScalarWrapper,                     // Inherit from BaseTransposer to detect in expression
+    public UnarySmET<ScalarWrapper<_Ref>>         // Inherit from UnarySmET
   {
     
   public:
@@ -35,7 +34,12 @@ namespace SUNphi
       return 1;
     }
     
-    PROVIDE_UNARY_SMET_REF;
+    /// Type of the reference
+    using Ref=
+      _Ref;
+    
+    /// Provides a reference or a value, depending on _Ref
+    RefIf<isLvalue<_Ref>,RemoveReference<_Ref>> ref;
     
     // Attributes
     STORING;

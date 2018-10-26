@@ -14,6 +14,7 @@
 #include <smet/Conj.hpp>
 #include <smet/Reference.hpp>
 #include <smet/RelBind.hpp>
+#include <smet/ScalarWrap.hpp>
 #include <smet/Transpose.hpp>
 #include <smet/UnaryMinus.hpp>
 #include <smet/UnaryPlus.hpp>
