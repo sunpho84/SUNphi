@@ -17,12 +17,14 @@ namespace SUNphi
   /// A bool constant type holding value "true"
   ///
   /// Useful to create SFINAE tests
-  using TrueType=std::true_type;
+  using TrueType=
+    std::true_type;
   
   /// A bool constant type holding value "false"
   ///
   /// Useful to create SFINAE tests
-  using FalseType=std::false_type;
+  using FalseType=
+    std::false_type;
   
   /////////////////////////////////////////////////////////////////
   
@@ -238,6 +240,10 @@ namespace SUNphi
 #define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\
   static_assert(isBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
   
+  /// Static assert if DERIVED does derive from BASE
+#define STATIC_ASSERT_IS_NOT_BASE_OF(BASE,DERIVED)				\
+  static_assert(not isBaseOf<BASE,DERIVED>,"Error, type derived from what not expected")
+  
   /// Forces type Derived to be derived from Base
   template <typename Base,
 	    typename Derived>
@@ -246,7 +252,20 @@ namespace SUNphi
     STATIC_ASSERT_IS_BASE_OF(Base,Derived);
     
     /// Type checked
-    using type=Derived;
+    using type=
+      Derived;
+  };
+  
+  /// Forces type Derived not to be derived from Base
+  template <typename Base,
+	    typename Derived>
+  struct ConstrainIsNotBaseOf
+  {
+    STATIC_ASSERT_IS_NOT_BASE_OF(Base,Derived);
+    
+    /// Type checked
+    using type=
+      Derived;
   };
   
   /////////////////////////////////////////////////////////////////
@@ -345,6 +364,11 @@ namespace SUNphi
   template<typename T>							\
   using ConstrainIs ## TYPE=						\
     ConstrainIsBaseOf<Base ## TYPE,T>;					\
+									\
+  /*! Class forcing T not to inherits from \c Base ## TYPE */		\
+  template<typename T>							\
+  using ConstrainIsNot ## TYPE=						\
+    ConstrainIsNotBaseOf<Base ## TYPE,T>;				\
 									\
   /*! Static assert if the types do not inherit from \c Base ## TYPE */	\
   template <typename...Args>						\
