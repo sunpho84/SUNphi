@@ -31,13 +31,13 @@
 
 namespace SUNphi
 {
-  /// Default assigner
+  /// Default assigner taking only SmET as left argument
   ///
-  /// \todo Include comp merger, vectorizer and threader
+  /// \c Rhs can be a SmEt or not, in which case it is wrapped into a Scalar
   template <typename T1, 	    // Type of the first SmET to get
 	    typename T2, 	    // Type of the rhs
-	    typename=EnableIf<isSmET<T1> and
-			      Unqualified<T1>::isAssignable>,
+	    SFINAE_ON_TEMPLATE_ARG(isSmET<T1> and
+				   Unqualified<T1>::isAssignable),
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   void assign(T1&& lhs,             ///< First SmET to act upon
 	      T2&& rhs,             ///< Right hand side
@@ -51,13 +51,16 @@ namespace SUNphi
     if constexpr(rhsIsSmET)
       {
 	// Tens Kind of the rhs expression
-	using TKR=typename RemoveReference<T2>::Tk;
+	using TKR=
+	  typename RemoveReference<T2>::Tk;
 	
 	// Outermost TensComp of rhs
-	using RhsFirstComp=Unqualified<TupleElementType<0,typename TKR::types>>;
+	using RhsFirstComp=
+	  Unqualified<TupleElementType<0,typename TKR::types>>;
 	
 	// Maximal value reachable from the component
-	const int maxEntry=rhs.template compSize<RhsFirstComp>();
+	const int maxEntry=
+	  rhs.template compSize<RhsFirstComp>();
 	
 #ifdef DEBUG_ASSIGN
 	using namespace std;
@@ -82,13 +85,16 @@ namespace SUNphi
     else
       {
 	// Tens Kind of the lhs expression
-	using TKL=typename RemoveReference<T1>::Tk;
+	using TKL=
+	  typename RemoveReference<T1>::Tk;
 	
 	// Outermost TensComp of lhs
-	using LhsFirstComp=Unqualified<TupleElementType<0,typename TKL::types>>;
+	using LhsFirstComp=
+	  Unqualified<TupleElementType<0,typename TKL::types>>;
 	
 	// Maximal value reachable from the component
-	const int maxEntry=lhs.template compSize<LhsFirstComp>();
+	const int maxEntry=
+	  lhs.template compSize<LhsFirstComp>();
 	
 	// Assigns all entries
 	for(int i=0;i<maxEntry;i++)

@@ -83,9 +83,9 @@ namespace SUNphi
   /// Defines a simple creator taking a reference
 #define PROVIDE_UNARY_SMET_SIMPLE_CREATOR(UNARY_SMET /*!< Name of the UnarySmET */) \
   /*! Constructor taking universal reference */				\
-  template <typename SMET,						\
-	    typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref>>>> \
-  explicit UNARY_SMET(SMET&& smet) : ref(forw<SMET>(smet))		\
+  template <typename Oth,						\
+	    typename=EnableIf<isSame<Unqualified<Oth>,Unqualified<Ref>>>> \
+  explicit UNARY_SMET(Oth&& oth) : ref(forw<Oth>(oth))			\
   {									\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
