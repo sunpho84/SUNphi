@@ -135,6 +135,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4c/structSUNphi_1_1ConstrainIsBaseOf.html">SUNphi::ConstrainIsBaseOf&lt; Base, Derived &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces type Derived to be derived from Base.  <a href="../../d1/d4c/structSUNphi_1_1ConstrainIsBaseOf.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html">SUNphi::ConstrainIsNotBaseOf&lt; Base, Derived &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces type Derived not to be derived from Base.  <a href="../../d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d4a/structSUNphi_1_1ConstrainNTypes.html">SUNphi::ConstrainNTypes&lt; N, Args &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces types to be in the given number.  <a href="../../d8/d4a/structSUNphi_1_1ConstrainNTypes.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +187,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(BASE, DERIVED)&#160;&#160;&#160;static_assert(isBaseOf&lt;BASE,DERIVED&gt;,&quot;Error, type not derived from what expected&quot;)</td></tr>
 <tr class="memdesc:a046e6058a8f86ab1b1925e2c2219c98f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static assert if DERIVED does not derive from BASE. <br/></td></tr>
 <tr class="separator:a046e6058a8f86ab1b1925e2c2219c98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa116a06bd7bfd7078f7e0b0a4847e76c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa116a06bd7bfd7078f7e0b0a4847e76c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#aa116a06bd7bfd7078f7e0b0a4847e76c">STATIC_ASSERT_IS_NOT_BASE_OF</a>(BASE, DERIVED)&#160;&#160;&#160;static_assert(not isBaseOf&lt;BASE,DERIVED&gt;,&quot;Error, type derived from what not expected&quot;)</td></tr>
+<tr class="memdesc:aa116a06bd7bfd7078f7e0b0a4847e76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static assert if DERIVED does derive from BASE. <br/></td></tr>
+<tr class="separator:aa116a06bd7bfd7078f7e0b0a4847e76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c71a0988a44332ace282fb6dc1327b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c71a0988a44332ace282fb6dc1327b0"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0">STATIC_ASSERT_ARE_N_TYPES</a>(N, UNEXP_PARPACK)&#160;&#160;&#160;static_assert(N==sizeof...(UNEXP_PARPACK),&quot;Error, expecting a different number of types&quot;)</td></tr>
 <tr class="memdesc:a6c71a0988a44332ace282fb6dc1327b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static assert if not passing exactly N types. <br/></td></tr>
@@ -346,6 +353,10 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  template&lt;typename T&gt;                          \</div>
 <div class="line">  using ConstrainIs ## TYPE=                        \</div>
 <div class="line">    ConstrainIsBaseOf&lt;Base ## TYPE,T&gt;;                  \</div>
+<div class="line">                                    \       \</div>
+<div class="line">  template&lt;typename T&gt;                          \</div>
+<div class="line">  using ConstrainIsNot ## TYPE=                     \</div>
+<div class="line">    ConstrainIsNotBaseOf&lt;Base ## TYPE,T&gt;;               \</div>
 <div class="line">                                    \   \</div>
 <div class="line">  template &lt;<span class="keyword">typename</span>...Args&gt;                        \</div>
 <div class="line">  struct ConstrainAre ## TYPE ## s                  \</div>
@@ -356,7 +367,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00335">335</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00354">354</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +399,7 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00383">383</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00407">407</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +429,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Assert type T to have member TAG</p>
 <p>Note that you need to have defined DEFINE_HAS_MEMBER before </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00362">362</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00386">386</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

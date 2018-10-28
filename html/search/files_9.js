@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['scalarwrap_2ehpp',['ScalarWrap.hpp',['../d9/d0c/ScalarWrap_8hpp.html',1,'']]],
   ['sfinae_2ehpp',['SFINAE.hpp',['../d4/d77/SFINAE_8hpp.html',1,'']]],
   ['simd_2ehpp',['SIMD.hpp',['../d0/d24/SIMD_8hpp.html',1,'']]],
   ['smet_2ehpp',['SmET.hpp',['../d9/d21/SmET_8hpp.html',1,'']]],

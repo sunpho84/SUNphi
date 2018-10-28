@@ -16,7 +16,7 @@ var classSUNphi_1_1Binder =
     [ "getMergedCompsView", "d6/db9/classSUNphi_1_1Binder.html#a766c91b0c538a538981e5f63a1625bce", null ],
     [ "getMergedCompsView", "d6/db9/classSUNphi_1_1Binder.html#aaad7515b3db0fb7820fa6cb44631a75c", null ],
     [ "isAliasing", "d6/db9/classSUNphi_1_1Binder.html#aca3fe214b2558fc87985ae44e0edd5fb", null ],
-    [ "operator=", "d6/db9/classSUNphi_1_1Binder.html#a7b88eeaf7a0d68c271620693788a5607", null ],
+    [ "operator=", "d6/db9/classSUNphi_1_1Binder.html#a11f7db8cb88d0c1097d66bd5d92de3d4", null ],
     [ "operator~", "d6/db9/classSUNphi_1_1Binder.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "d6/db9/classSUNphi_1_1Binder.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
     [ "id", "d6/db9/classSUNphi_1_1Binder.html#ae2d52c25e8ad2ffffcec553edfa69f9f", null ],

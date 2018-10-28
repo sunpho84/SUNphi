@@ -15,6 +15,7 @@ var UnarySmET_8hpp =
     [ "IS_ALIASING_ACCORDING_TO_POINTER", "d4/dbe/UnarySmET_8hpp.html#a85d4532c579305d4d76e00afe68f0318", null ],
     [ "MERGEABLE_ACCORDING_TO_REF", "d4/dbe/UnarySmET_8hpp.html#a4bc5cc056f559d7aff0ac2d21a09f3fd", null ],
     [ "PROVIDE_COMP_SIZES_FOR", "d4/dbe/UnarySmET_8hpp.html#aa416877caf88a27bf2a4428687ae5a29", null ],
+    [ "PROVIDE_IS_ALIASING", "d4/dbe/UnarySmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67", null ],
     [ "PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR", "d4/dbe/UnarySmET_8hpp.html#a5fd7a607d078d7ee1e6c1fa063686a1a", null ],
     [ "PROVIDE_UNARY_SMET_CONST_OR_NOT_DEFAULT_EVALUATOR", "d4/dbe/UnarySmET_8hpp.html#a7ad1a47a02a7014985140d6fd88c6c88", null ],
     [ "PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR", "d4/dbe/UnarySmET_8hpp.html#a197defc79bdd6100b749975adc4ed95d", null ],
@@ -26,6 +27,7 @@ var UnarySmET_8hpp =
     [ "STATIC_ASSERT_IS_UNARY_SMET", "d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b", null ],
     [ "UNARY_SMET_GOES_INSIDE", "d4/dbe/UnarySmET_8hpp.html#abaa859df3e273c5c021d99c530b94589", null ],
     [ "UNARY_SMET_GOES_ON_LHS", "d4/dbe/UnarySmET_8hpp.html#a1dfb49f19c736caadea33ed0c90fba14", null ],
+    [ "ConstrainIsNotUnarySmET", "d4/dbe/UnarySmET_8hpp.html#abb2362d929be70739c5e4163fa1b2797", null ],
     [ "ConstrainIsUnarySmET", "d4/dbe/UnarySmET_8hpp.html#a992f34d73bae9024a319514b856af282", null ],
     [ "hasMember_ref", "d4/dbe/UnarySmET_8hpp.html#afb51dbbfb9e9f6f6dbc00daf45c43cf1", null ],
     [ "isUnarySmET", "d4/dbe/UnarySmET_8hpp.html#a57b6e95cb6b6f2914eee584e637523e9", null ]

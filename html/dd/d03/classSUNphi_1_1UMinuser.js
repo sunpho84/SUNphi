@@ -3,7 +3,7 @@ var classSUNphi_1_1UMinuser =
     [ "MergeableComps", "dd/d03/classSUNphi_1_1UMinuser.html#a7b3d68512eb8a5de9db350f0a31c7fc9", null ],
     [ "Ref", "dd/d03/classSUNphi_1_1UMinuser.html#a5a4eba7bfeff0d4e031aadc9cde49017", null ],
     [ "Tk", "dd/d03/classSUNphi_1_1UMinuser.html#a9a629efac7ee2631258adc7f2e4b977e", null ],
-    [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html#a00ee36e1237b0a9d63748d57a21402c8", null ],
+    [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html#ad8ea612242604d4dc91c0302751a8cf6", null ],
     [ "assertMergeableWith", "dd/d03/classSUNphi_1_1UMinuser.html#a27143b7c6fb535904b40dcd3de7f70c6", null ],
     [ "compSize", "dd/d03/classSUNphi_1_1UMinuser.html#afd2e549f9c63f5d84f502836cb5f937c", null ],
     [ "eval", "dd/d03/classSUNphi_1_1UMinuser.html#ae78fe3e6e3cc6bd6392d4ef30c586950", null ],

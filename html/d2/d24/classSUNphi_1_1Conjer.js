@@ -2,7 +2,7 @@ var classSUNphi_1_1Conjer =
 [
     [ "Ref", "d2/d24/classSUNphi_1_1Conjer.html#a4474607456f30b8a8189fb0c41d249ec", null ],
     [ "Tk", "d2/d24/classSUNphi_1_1Conjer.html#a2cdfa10e457c8d25a11f46236b0ff3db", null ],
-    [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html#aabdda0a5fc03dfbc31d45d1120438c54", null ],
+    [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html#a6075fef6ec6b9811c07a46d5854d5e88", null ],
     [ "assertMergeableWith", "d2/d24/classSUNphi_1_1Conjer.html#a2c01214a783879af0e226fc93b0dcc46", null ],
     [ "compSize", "d2/d24/classSUNphi_1_1Conjer.html#a2fcf172a300144c4488871d0f2e3cfcd", null ],
     [ "eval", "d2/d24/classSUNphi_1_1Conjer.html#a9e9fc7456e6364fec1dd27a4a61f11dc", null ],

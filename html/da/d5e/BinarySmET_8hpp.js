@@ -19,6 +19,7 @@ var BinarySmET_8hpp =
     [ "SIMPLE_BINARY_SMET_BUILDER", "da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b", null ],
     [ "STATIC_ASSERT_IS_BINARY_SMET", "da/d5e/BinarySmET_8hpp.html#a12d2f620ba193656363a60374bdacfba", null ],
     [ "ConstrainIsBinarySmET", "da/d5e/BinarySmET_8hpp.html#a8f18e555330c9c49c8aead5591d4d66f", null ],
+    [ "ConstrainIsNotBinarySmET", "da/d5e/BinarySmET_8hpp.html#a41e611b7ea9220b485bb75813e26a734", null ],
     [ "hasMember_ref1", "da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c", null ],
     [ "hasMember_ref2", "da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b", null ],
     [ "isBinarySmET", "da/d5e/BinarySmET_8hpp.html#a51288383610f27f09988c10874db1abd", null ]

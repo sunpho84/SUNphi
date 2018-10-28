@@ -3,7 +3,7 @@ var classSUNphi_1_1Wrapper =
     [ "MergeableComps", "d1/d77/classSUNphi_1_1Wrapper.html#a1b32ca7d5e09b323c691645ef40a4a50", null ],
     [ "Ref", "d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee", null ],
     [ "Tk", "d1/d77/classSUNphi_1_1Wrapper.html#a0290c1272ed40753d92784a26bc0954b", null ],
-    [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html#a9242b50c006372d9f61102a704941ce2", null ],
+    [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html#a79cec3d9e8f7ca79cfb593d40c5eaf97", null ],
     [ "assertMergeableWith", "d1/d77/classSUNphi_1_1Wrapper.html#a110ce9190f901792e1364a9e79386d49", null ],
     [ "compSize", "d1/d77/classSUNphi_1_1Wrapper.html#aa3631e0f0b00288fec0a0835c6496b48", null ],
     [ "eval", "d1/d77/classSUNphi_1_1Wrapper.html#aa81ae260b024c4abad6e42a5d5140684", null ],
