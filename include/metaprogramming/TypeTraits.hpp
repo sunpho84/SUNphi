@@ -97,6 +97,14 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Checks if a type is a class
+  template <typename T> // Type to check
+  [[ maybe_unused ]]
+  static constexpr bool isClass=
+    std::is_class_v<T>;
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Checks if two types are the same
   ///
   /// Default (false) case
