@@ -193,7 +193,7 @@ namespace SUNphi
 	    class=ConstrainIsTuple<T>>
   [[ maybe_unused ]]
   static constexpr bool tupleTypesAreAllDifferent=
-    nDiffTypesInTuple<T> ==tupleSize<T>;
+    (nDiffTypesInTuple<T> ==tupleSize<T>);
   
   /// Assert if the \c Tuple contains multiple times a given type
 #define STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT(T)	\
@@ -209,13 +209,27 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Return true if \c Tuple Tp contains the type T
+  ///
+  /// Internal implementation
+  template <typename T,     // Type to be searched
+	    typename...Tp>  // Tuple in which to search
+  constexpr bool _tupleHasType(T,
+			       Tuple<Tp...>)
+  {
+    return (isSame<T,Tp> || ...);
+  }
+  
+  /// Return true if \c Tuple Tp contains the type T
   template <typename T,   // Type to be searched
-	    typename Tp>  // Tuple to search
+	    typename Tp,  // Tuple to search
+	    typename=ConstrainIsTuple<Tp>>
   [[ maybe_unused ]]
-  constexpr bool tupleHasType=(nOfTypeInTuple<T,Tp> >0);
+  constexpr bool tupleHasType=
+    _tupleHasType(T{},Tp{});
   
   /// Assert if the type \c T is not in the types of tuple \c TP
-#define STATIC_ASSERT_TUPLE_HAS_TYPE(T,TP)			\
+#define STATIC_ASSERT_TUPLE_HAS_TYPE(T,				\
+				     TP)			\
   static_assert(tupleHasType<T,TP>,"Searched type not found")
   
   /// Constrain a type T to be contained in a \c Tuple
@@ -239,6 +253,28 @@ namespace SUNphi
   {
     STATIC_ASSERT_TUPLE_HAS_NOT_TYPE(T,TP);
   };
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Checks that a tuple is contained into another one
+  ///
+  /// Internal implementation
+  template <typename...ToBeSearchedTypes,
+	    typename...ContainingTypes>
+  constexpr bool _tupleHasTypes(Tuple<ToBeSearchedTypes...>, ///< Types to be searched
+				Tuple<ContainingTypes...>)   ///< Types in which to search
+  {
+    return (tupleHasType<ToBeSearchedTypes,Tuple<ContainingTypes...>> && ...);
+  }
+  
+  /// Checks that a tuple is contained into another one
+  ///
+  /// Gives visibility to the internal implementation
+  template <typename TpToSearch,
+	    typename TpContaining>
+  [[ maybe_unused ]]
+  constexpr bool tupleHasTypes=
+    _tupleHasTypes(TpToSearch{},TpContaining{});
 }
 
 #endif

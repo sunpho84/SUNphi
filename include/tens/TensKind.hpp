@@ -138,6 +138,12 @@ namespace SUNphi
     static constexpr int nTypes=
       sizeof...(T);
     
+    /// Check that another \c TensKind is contained
+    template <typename Oth,
+	      typename=ConstrainIsTensKind<Oth>>
+    static constexpr bool contains=
+      tupleHasTypes<typename Oth::types,types>;
+    
     /// Returns the position of a dynamical size
     template <typename TC,
 	      typename=ConstrainIsTensComp<TC>,
@@ -268,20 +274,25 @@ namespace SUNphi
     struct TensCompsListMerged<IntSeq<IComps...>>
     {
       /// First component of the groups
-      static constexpr int firstComp=IntSeq<IComps...>::template element<0>();
+      static constexpr int firstComp=
+	IntSeq<IComps...>::template element<0>();
       
       /// Check if we are really merging something
-      static constexpr bool realMerge=(sizeof...(IComps)>1);
+      static constexpr bool realMerge=
+	(sizeof...(IComps)>1);
       
       /// Returns a tuple containing the merged components of group I
-      using MergedComps=decltype(getIndexed(intSeq<IComps...>,
-					    types{}));
+      using MergedComps=
+	decltype(getIndexed(intSeq<IComps...>,
+			    types{}));
       
       /// Product of all the max known submultiple
-      static constexpr int totMaxKnonwSubMultiple=tensCompsListTotMaxKnownSubMultiple<IComps...>;
+      static constexpr int totMaxKnonwSubMultiple=
+	tensCompsListTotMaxKnownSubMultiple<IComps...>;
       
       /// Returns the totals size of the group
-      static constexpr int totSize=tensCompsListTotSize<IComps...>;
+      static constexpr int totSize=
+	tensCompsListTotSize<IComps...>;
       
       /// Resulting type
       using type=Conditional<realMerge,

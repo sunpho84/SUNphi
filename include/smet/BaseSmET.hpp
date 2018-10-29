@@ -74,62 +74,74 @@ namespace SUNphi
 #define IS_STORING_ATTRIBUTE(LONG_DESCRIPTION,...)			\
   STATIC_CONSTEXPR(/*! Returns whether this SmET is storing */,LONG_DESCRIPTION,bool,isStoring,__VA_ARGS__)
   
-  /// Set the SmET to storing
+  /// Set the \c SmET to storing
 #define STORING						\
-  IS_STORING_ATTRIBUTE(/*! This SmET is storing */,true)
+  IS_STORING_ATTRIBUTE(/*! This \c SmET is storing */,true)
   
-  /// Set the SmET to not-storing
+  /// Set the \c SmET to not-storing
 #define NOT_STORING						\
-  IS_STORING_ATTRIBUTE(/*! This SmET is not storing */,false)
+  IS_STORING_ATTRIBUTE(/*! This \c SmET is not storing */,false)
   
   DEFINE_GETTER_WITH_DEFAULT(isStoring,false);
   
   /////////////////////////////////////////////////////////////////
   
-  // Provides the \c Tk member
+  /// Provides the \c Tk member
 #define PROVIDE_TK(...)					\
   using Tk=						\
     __VA_ARGS__
   
-  // Defines the check for a member type "Tk"
+  // Defines the check for a member type \c Tk
   DEFINE_HAS_MEMBER(Tk);
   
-  // Provides the \c Fund member
+  /// Returns the fundamental type of a class
+  template <typename T,
+	    typename=ConstrainIsSmET<T>>
+  using TkOf=
+    typename RemoveReference<T>::Tk;
+  
+  /// Provides the \c Fund member
 #define PROVIDE_FUND(...)					\
   using Fund=							\
     __VA_ARGS__
   
-  // Defines the check for a member type "Fund"
+  // Defines the check for a member type \c Fund
   DEFINE_HAS_MEMBER(Fund);
+  
+  /// Returns the fundamental type of a class
+  template <typename T,
+	    typename=ConstrainIsSmET<T>>
+  using FundTypeOf=
+    typename RemoveReference<T>::Fund;
   
   /////////////////////////////////////////////////////////////////
   
-  // Defines the check for a member variable "isAliasing"
+  // Defines the check for a member variable \c isAliasing
   DEFINE_HAS_MEMBER(isAliasing);
   
   /////////////////////////////////////////////////////////////////
   
-  // Defines the check for a member variable "isAssignable"
+  // Defines the check for a member variable \c isAssignable
   DEFINE_HAS_MEMBER(isAssignable);
   
-  /// Provides a isAssignable attribute
+  /// Provides a \c isAssignable attribute
 #define IS_ASSIGNABLE_ATTRIBUTE(LONG_DESCRIPTION,...)			\
-  STATIC_CONSTEXPR(/*! Returns whether this SmET can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
+  STATIC_CONSTEXPR(/*! Returns whether this \c SmET can be the left hand of an assignement */,LONG_DESCRIPTION,bool,isAssignable,__VA_ARGS__)
   
-  /// Set the SmET as assignable
+  /// Set the \c SmET as assignable
 #define ASSIGNABLE						\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned */,true)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This \c SmET can be assigned */,true)
   
-  /// Set the SmET as not-assignable
+  /// Set the \c SmET as not-assignable
 #define NOT_ASSIGNABLE						\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET cannot be assigned */,false)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This \c SmET cannot be assigned */,false)
   
   /////////////////////////////////////////////////////////////////
   
-  /// Provide the MergeableComps type, assertMergebaleWith amd getMaximallyMergedCompsView
+  /// Provide the MergeableComps type, \c assertMergebaleWith and \c getMaximallyMergedCompsView
   ///
-  /// The type must be an ordered IntSeq indicating the splitting
-  /// point of the TensKind, as in this example:
+  /// The type must be an ordered \c IntSeq indicating the splitting
+  /// point of the \c TensKind, as in this example:
   ///
   /// \code
   /// // Maximal splitting
