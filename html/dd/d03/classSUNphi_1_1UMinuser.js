@@ -1,5 +1,6 @@
 var classSUNphi_1_1UMinuser =
 [
+    [ "Fund", "dd/d03/classSUNphi_1_1UMinuser.html#a88177d7cc9991d609572453b2a9ee484", null ],
     [ "MergeableComps", "dd/d03/classSUNphi_1_1UMinuser.html#a7b3d68512eb8a5de9db350f0a31c7fc9", null ],
     [ "Ref", "dd/d03/classSUNphi_1_1UMinuser.html#a5a4eba7bfeff0d4e031aadc9cde49017", null ],
     [ "Tk", "dd/d03/classSUNphi_1_1UMinuser.html#a9a629efac7ee2631258adc7f2e4b977e", null ],

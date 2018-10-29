@@ -1,6 +1,7 @@
 var searchData=
 [
   ['same_5fcomp_5fsizes_5fof_5fref',['SAME_COMP_SIZES_OF_REF',['../d4/dbe/UnarySmET_8hpp.html#a7976df141233cff14c2fd64449ee8fe0',1,'UnarySmET.hpp']]],
+  ['same_5ffund_5ftype_5fof_5fref',['SAME_FUND_TYPE_OF_REF',['../d4/dbe/UnarySmET_8hpp.html#ae24952325792dcc10329ef22ba26a6c8',1,'UnarySmET.hpp']]],
   ['sfinae_5fon_5ftemplate_5farg',['SFINAE_ON_TEMPLATE_ARG',['../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS',['../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs_5fcheck',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK',['../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc',1,'SFINAE.hpp']]],

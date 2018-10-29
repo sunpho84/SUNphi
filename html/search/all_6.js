@@ -1,18 +1,19 @@
 var searchData=
 [
+  ['fallback',['Fallback',['../d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html',1,'SUNphi::HasMember_Fund']]],
+  ['fallback',['Fallback',['../d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html',1,'SUNphi::HasMember_Tk']]],
+  ['fallback',['Fallback',['../d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html',1,'SUNphi::HasMember_ref2']]],
+  ['fallback',['Fallback',['../da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html',1,'SUNphi::HasMember_eval']]],
   ['fallback',['Fallback',['../db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html',1,'SUNphi::HasMember_ref']]],
+  ['fallback',['Fallback',['../d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html',1,'SUNphi::HasMember_isAliasing']]],
+  ['fallback',['Fallback',['../d3/da2/structSUNphi_1_1HasMember__getMergedCompsView_1_1Fallback.html',1,'SUNphi::HasMember_getMergedCompsView']]],
   ['fallback',['Fallback',['../d7/dea/structSUNphi_1_1HasMember__isAssignable_1_1Fallback.html',1,'SUNphi::HasMember_isAssignable']]],
+  ['fallback',['Fallback',['../d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html',1,'SUNphi::HasMember_isStoring']]],
   ['fallback',['Fallback',['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html',1,'SUNphi::HasMember_name']]],
   ['fallback',['Fallback',['../d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html',1,'SUNphi::HasMember_MergeableComps']]],
   ['fallback',['Fallback',['../d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html',1,'SUNphi::HasMember_assertMergeableWith']]],
-  ['fallback',['Fallback',['../d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html',1,'SUNphi::HasMember_isStoring']]],
-  ['fallback',['Fallback',['../d3/da2/structSUNphi_1_1HasMember__getMergedCompsView_1_1Fallback.html',1,'SUNphi::HasMember_getMergedCompsView']]],
-  ['fallback',['Fallback',['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html',1,'SUNphi::HasMember_ref1']]],
   ['fallback',['Fallback',['../d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html',1,'SUNphi::HasMember_compSize']]],
-  ['fallback',['Fallback',['../d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html',1,'SUNphi::HasMember_isAliasing']]],
-  ['fallback',['Fallback',['../d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html',1,'SUNphi::HasMember_ref2']]],
-  ['fallback',['Fallback',['../d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html',1,'SUNphi::HasMember_Tk']]],
-  ['fallback',['Fallback',['../da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html',1,'SUNphi::HasMember_eval']]],
+  ['fallback',['Fallback',['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html',1,'SUNphi::HasMember_ref1']]],
   ['falsetype',['FalseType',['../d3/dd7/namespaceSUNphi.html#ae8759b2f2db3101a4b7cc0d14c751f28',1,'SUNphi']]],
   ['filter_2ehpp',['Filter.hpp',['../d9/d77/Filter_8hpp.html',1,'']]],
   ['filtervariadicclasspos',['FilterVariadicClassPos',['../d3/dd7/namespaceSUNphi.html#a732dd7fc5ab30528272c05ec74b03fa3',1,'SUNphi']]],
@@ -34,6 +35,7 @@ var searchData=
   ['forw',['forw',['../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c',1,'SUNphi']]],
   ['forward_5fis_5faliasing_5fto_5fref',['FORWARD_IS_ALIASING_TO_REF',['../d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736',1,'UnarySmET.hpp']]],
   ['forward_5fis_5faliasing_5fto_5frefs',['FORWARD_IS_ALIASING_TO_REFS',['../da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0',1,'BinarySmET.hpp']]],
-  ['freeatdestroy',['freeAtDestroy',['../d8/d1c/classSUNphi_1_1Tens.html#aa9557a34f66df9bc86cd777c0bd21720',1,'SUNphi::Tens']]],
-  ['freemem',['freeMem',['../d3/dd7/namespaceSUNphi.html#a35a11a502f5f7157229fe91c36aaa5a3',1,'SUNphi']]]
+  ['freeatdestroy',['freeAtDestroy',['../d8/d1c/classSUNphi_1_1Tens.html#aabd00464353ba18b8399dd70acb45a7b',1,'SUNphi::Tens']]],
+  ['freemem',['freeMem',['../d3/dd7/namespaceSUNphi.html#a35a11a502f5f7157229fe91c36aaa5a3',1,'SUNphi']]],
+  ['fund',['Fund',['../de/d58/classSUNphi_1_1Adder.html#a93a5f0a6269fd4a6e7c679f4236f1ce6',1,'SUNphi::Adder::Fund()'],['../d6/db9/classSUNphi_1_1Binder.html#a42365b4a0db913fa2f7d3b6f0b78fec1',1,'SUNphi::Binder::Fund()'],['../d2/d24/classSUNphi_1_1Conjer.html#a948a58f157dc58e82dbce08ece92bff5',1,'SUNphi::Conjer::Fund()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#a509e315435f8f96f7ce7407b445c30d9',1,'SUNphi::ScalarWrapper::Fund()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a5b08bfc5208dd832548d579067fae3ea',1,'SUNphi::Transposer::Fund()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a88177d7cc9991d609572453b2a9ee484',1,'SUNphi::UMinuser::Fund()'],['../d1/d77/classSUNphi_1_1Wrapper.html#ae5f5b187e7152885ff11c52027336c0d',1,'SUNphi::Wrapper::Fund()'],['../d8/d1c/classSUNphi_1_1Tens.html#ac3da8e5493150be956a0a72f7ff873ae',1,'SUNphi::Tens::Fund()'],['../d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html#a30fc60925f9eb04d0dfe5ba8fee64721',1,'SUNphi::HasMember_Fund::Fallback::Fund()']]]
 ];

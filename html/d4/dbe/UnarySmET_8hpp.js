@@ -23,6 +23,7 @@ var UnarySmET_8hpp =
     [ "PROVIDE_UNARY_SMET_SIMPLE_CREATOR", "d4/dbe/UnarySmET_8hpp.html#a6f10b7a96302efa1146b70080d6bcfb7", null ],
     [ "PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW", "d4/dbe/UnarySmET_8hpp.html#afc2820093362f7611ff80957ba44451d", null ],
     [ "SAME_COMP_SIZES_OF_REF", "d4/dbe/UnarySmET_8hpp.html#a7976df141233cff14c2fd64449ee8fe0", null ],
+    [ "SAME_FUND_TYPE_OF_REF", "d4/dbe/UnarySmET_8hpp.html#ae24952325792dcc10329ef22ba26a6c8", null ],
     [ "SIMPLE_UNARY_SMET_BUILDER", "d4/dbe/UnarySmET_8hpp.html#ada787a1b5a1562efe3e7aad0c00864e7", null ],
     [ "STATIC_ASSERT_IS_UNARY_SMET", "d4/dbe/UnarySmET_8hpp.html#a4694543d9e93eba33ce35ea6a7cf748b", null ],
     [ "UNARY_SMET_GOES_INSIDE", "d4/dbe/UnarySmET_8hpp.html#abaa859df3e273c5c021d99c530b94589", null ],

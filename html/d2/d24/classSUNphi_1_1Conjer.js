@@ -1,5 +1,6 @@
 var classSUNphi_1_1Conjer =
 [
+    [ "Fund", "d2/d24/classSUNphi_1_1Conjer.html#a948a58f157dc58e82dbce08ece92bff5", null ],
     [ "Ref", "d2/d24/classSUNphi_1_1Conjer.html#a4474607456f30b8a8189fb0c41d249ec", null ],
     [ "Tk", "d2/d24/classSUNphi_1_1Conjer.html#a2cdfa10e457c8d25a11f46236b0ff3db", null ],
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html#a6075fef6ec6b9811c07a46d5854d5e88", null ],

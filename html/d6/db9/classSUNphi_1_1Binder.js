@@ -1,5 +1,6 @@
 var classSUNphi_1_1Binder =
 [
+    [ "Fund", "d6/db9/classSUNphi_1_1Binder.html#a42365b4a0db913fa2f7d3b6f0b78fec1", null ],
     [ "MergeableComps", "d6/db9/classSUNphi_1_1Binder.html#af1a9313f9052d2be12ecd6d19d1e2f69", null ],
     [ "Ref", "d6/db9/classSUNphi_1_1Binder.html#ad1d3f8cc65a380d06eac32ec6fe5b122", null ],
     [ "Tg", "d6/db9/classSUNphi_1_1Binder.html#a094b9cd0bcec16332f75c475a4cd06e5", null ],

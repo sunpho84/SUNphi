@@ -1,5 +1,6 @@
 var classSUNphi_1_1Adder =
 [
+    [ "Fund", "de/d58/classSUNphi_1_1Adder.html#a93a5f0a6269fd4a6e7c679f4236f1ce6", null ],
     [ "MergeableComps", "de/d58/classSUNphi_1_1Adder.html#ae99840d65ce2210a75e022bea133cbc0", null ],
     [ "MergedDelims1", "de/d58/classSUNphi_1_1Adder.html#a0852eeb6e0c2060ec1deeecfd6b803d8", null ],
     [ "MergedDelims2", "de/d58/classSUNphi_1_1Adder.html#a48d4707b6db2444adb1cdecb3aa3a60d", null ],

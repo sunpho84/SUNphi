@@ -48,6 +48,8 @@ var namespaceSUNphi =
     [ "ConstrainHasMember_isStoring", "db/d30/structSUNphi_1_1ConstrainHasMember__isStoring.html", null ],
     [ "HasMember_Tk", "d7/d03/structSUNphi_1_1HasMember__Tk.html", "d7/d03/structSUNphi_1_1HasMember__Tk" ],
     [ "ConstrainHasMember_Tk", "d0/db5/structSUNphi_1_1ConstrainHasMember__Tk.html", null ],
+    [ "HasMember_Fund", "d2/d5d/structSUNphi_1_1HasMember__Fund.html", "d2/d5d/structSUNphi_1_1HasMember__Fund" ],
+    [ "ConstrainHasMember_Fund", "d8/d7d/structSUNphi_1_1ConstrainHasMember__Fund.html", null ],
     [ "HasMember_isAliasing", "db/dc6/structSUNphi_1_1HasMember__isAliasing.html", "db/dc6/structSUNphi_1_1HasMember__isAliasing" ],
     [ "ConstrainHasMember_isAliasing", "d9/d02/structSUNphi_1_1ConstrainHasMember__isAliasing.html", null ],
     [ "HasMember_isAssignable", "dd/d8a/structSUNphi_1_1HasMember__isAssignable.html", "dd/d8a/structSUNphi_1_1HasMember__isAssignable" ],
