@@ -16,14 +16,43 @@ namespace SUNphi
   DESCRIPTION								\
   /*!             */							\
   LONG_DESCRIPTION							\
-  static constexpr TYPE NAME=__VA_ARGS__
+  static constexpr TYPE NAME=						\
+    __VA_ARGS__
   
   /// Provides an attribute
 #define USING(DESCRIPTION,LONG_DESCRIPTION,NAME,...)		\
   DESCRIPTION							\
   /*!             */						\
   LONG_DESCRIPTION						\
-  using NAME=__VA_ARGS__
+  using NAME=							\
+    __VA_ARGS__
+  
+  /// Define a getter of an attibute, with a default
+#define DEFINE_GETTER_WITH_DEFAULT(NAME,  /*!< Name of the attribute */ \
+				   DEFVAL /*!< Default value         */) \
+  /*! Provides a function to get NAME, or a DEFVAL if not present    */	\
+  /*!  and no external \c Defval is provided                         */ \
+  /*!                                                                */ \
+  /*! Internal implentation                                          */ \
+  template <typename T,							\
+	    auto DefVal=DEFVAL>						\
+  constexpr bool _get ## NAME() /*!< Type to analyze                 */ \
+  {									\
+    if constexpr(isClass<T>)						\
+      if constexpr(hasMember_ ## NAME<T>)			        \
+	return RemoveReference<T>::NAME;			        \
+									\
+      return DefVal;							\
+  }									\
+									\
+  /*! Provides a function to get NAME, or a DEFVAL if not present */	\
+  /*!                                                             */	\
+  /*! Gives visibility to internal implementation                 */	\
+  template <typename T,							\
+	    auto DefVal=DEFVAL>						\
+  [[ maybe_unused ]]							\
+  constexpr bool NAME=							\
+    _get ## NAME<T,DEFVAL>()
   
   /////////////////////////////////////////////////////////////////
   
@@ -52,6 +81,8 @@ namespace SUNphi
   /// Set the SmET to not-storing
 #define NOT_STORING						\
   IS_STORING_ATTRIBUTE(/*! This SmET is not storing */,false)
+  
+  DEFINE_GETTER_WITH_DEFAULT(isStoring,false);
   
   /////////////////////////////////////////////////////////////////
   
