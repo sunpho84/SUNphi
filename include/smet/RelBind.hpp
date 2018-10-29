@@ -61,15 +61,6 @@ namespace SUNphi
     using BoundToType=
       _BoundToType;
     
-  public:
-    
-    /// TensorKind of the bound expression
-    using Tk=typename NestedTk::template AllButType<BoundType>;
-    
-    /// Position inside the external TensKind to which to bind
-    static constexpr int extBoundToPos=
-      posOfType<_BoundToType,typename Tk::types>;
-    
   private:
     
     /// Position inside the reference of the TensKind got by the bounder
@@ -94,6 +85,12 @@ namespace SUNphi
     
     PROVIDE_UNARY_SMET_REF;
     
+    /// TensorKind of the bound expression
+    PROVIDE_TK(typename NestedTk::template AllButType<BoundType>);
+    
+    /// Fundamental type
+    SAME_FUND_TYPE_OF_REF;
+    
     // Attributes
     NOT_STORING;
     ASSIGNABLE_ACCORDING_TO_REF;
@@ -106,6 +103,10 @@ namespace SUNphi
       static_assert(not areSame<BoundType,TC>,"Cannot ask for the size of the bound component");
       return ref.template compSize<TC>();
     }
+    
+    /// Position inside the external TensKind to which to bind
+    static constexpr int extBoundToPos=
+      posOfType<_BoundToType,typename Tk::types>;
     
     PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE(/*! We have to split at the component where we bind */,
 							 typename absBinder::MergeableComps, /* Component which would be mergeable if _BoundToType was absolutely fixed */

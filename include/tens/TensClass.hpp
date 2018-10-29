@@ -21,19 +21,21 @@ namespace SUNphi
   /// holding resources for the storage of the data and providing
   /// evaluator
   template <typename TK,   // List of tensor components
-	    typename Fund> // Fundamental type
+	    typename FUND> // Fundamental type
   class Tens :
     public BaseTens,                       // Inherit from BaseTens to detect in expression
-    public UnarySmET<Tens<TK,Fund>>,       // Inherit from UnarySmET
+    public UnarySmET<Tens<TK,FUND>>,       // Inherit from UnarySmET
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
-    public ConstrainIsFloatingPoint<Fund>  // Constrain the Fund type to be a floating point
+    public ConstrainIsFloatingPoint<FUND>  // Constrain the Fund type to be a floating point
   {
     
   public:
     
     /// Tensor kind of the tensor
-    using Tk=
-      TK;
+    PROVIDE_TK(TK);
+    
+    /// Tensor fundamental type of the tensor
+    PROVIDE_FUND(FUND);
     
     // Attributes
     ASSIGNABLE;

@@ -5,6 +5,8 @@
 
 #include <SUNphi.hpp>
 
+#include <iostream>
+
 using namespace std;
 using namespace SUNphi;
 
@@ -114,6 +116,15 @@ void checkFilterVariadicClassPos()
   STATIC_ASSERT_IS_BASE_OF(Res,Ref);
 }
 
+void checkScalarWrap()
+{
+  int a=10;
+  
+  auto b=scalarWrap(a);
+  
+  cout<<"ScalarWrapper<int>, TensKind: "<<decltype(b)::Tk::name()<<endl;
+} 
+
 #include <sstream>
 
 /// Prints an IntSeq
@@ -222,6 +233,8 @@ int main()
   checkFilterVariadicClassPos();
   
   checkSumOfTwoSmETs();
+  
+  checkScalarWrap();
   
   // Check on Diag
   {

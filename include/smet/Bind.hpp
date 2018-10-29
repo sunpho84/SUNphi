@@ -30,11 +30,12 @@ namespace SUNphi
   }
   
   /// Defines a Binder named NAME for type RwTG or CnTG
-#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,NAME)				\
-  /*! Returns a binder to the only Rw TG or Cn TG type available */	\
-  template <typename T>       /* Type of the bound expression */	\
-  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound       */	\
-		const int id) /*!< Component to bind          */	\
+#define DEFINE_NAMED_RW_OR_COL_BINDER(TG,   /*!< Type to get         */	\
+				      NAME) /*!< Name of the bindfun */ \
+  /*! Returns a binder to the only Rw TG or Cn TG type available     */	\
+  template <typename T>       /* Type of the bound expression        */	\
+  DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound              */	\
+		const int id) /*!< Component to bind                 */	\
   {									\
     /* TensKind of binding expression */				\
     using Tk=								\
@@ -112,7 +113,9 @@ namespace SUNphi
     }
     
     /// TensorKind of the bound expression
-    using Tk=typename NestedTk::template AllButType<TG>;
+    PROVIDE_TK(typename NestedTk::template AllButType<TG>);
+    
+    SAME_FUND_TYPE_OF_REF;
     
     // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/*! We have to split at the component where we bind */,

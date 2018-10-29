@@ -35,9 +35,11 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
-    using Tk=TK;
+    PROVIDE_TK(TK);
     
-    // As mergeable as its ref
+    /// Fundamental type
+    SAME_FUND_TYPE_OF_REF;
+    
     MERGEABLE_ACCORDING_TO_REF;
     
     PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(UMinuser);

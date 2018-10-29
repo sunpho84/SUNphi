@@ -18,10 +18,10 @@ namespace SUNphi
   /// Class to hold a scalar promoting it into a SmET
   ///
   /// \todo Check what happens if called with a SmET
-  template <typename _Ref>                        // Type to be wrapped
+  template <typename _Fund>                        // Type to be wrapped
   class ScalarWrapper :
-    public BaseScalarWrapper,                     // Inherit from BaseTransposer to detect in expression
-    public UnarySmET<ScalarWrapper<_Ref>>         // Inherit from UnarySmET
+    public BaseScalarWrapper,                      // Inherit from BaseTransposer to detect in expression
+    public UnarySmET<ScalarWrapper<_Fund>>         // Inherit from UnarySmET
   {
     
   public:
@@ -34,22 +34,24 @@ namespace SUNphi
       return 1;
     }
     
-    /// Type of the reference
-    using Ref=
-      _Ref;
+    /// Empty TensorKind
+    PROVIDE_TK(TensKind<>);
     
-    /// Provides a reference or a value, depending on _Ref
-    RefIf<isLvalue<_Ref>,RemoveReference<_Ref>> ref;
+    /// Fundamental type
+    PROVIDE_FUND(_Fund);
+    
+    /// The canonical \c Ref member is the same of \c Fund
+    using Ref=
+      Fund;
+    
+    /// Provides a reference or a value, depending on \c Fund
+    RefIf<isLvalue<Fund>,RemoveReference<Fund>> ref;
     
     // Attributes
     STORING;
     ASSIGNABLE_ACCORDING_TO_REF;
     PROVIDE_IS_ALIASING(/*! Check with storage */,
 			return alias==ref;);
-    
-    /// TensorKind of the bound expression
-    using Tk=
-      TensKind<>;
     
     PROVIDE_MERGEABLE_COMPS(/* There is no component  */,
 			    IntSeq<0>);   // Left and right borders
@@ -90,8 +92,8 @@ namespace SUNphi
   // Build ScalarWrapper from scalarWrap
   SIMPLE_UNARY_SMET_BUILDER(scalarWrap,ScalarWrapper);
   
-  // Simplifies scalarWrap(scalarWrap)
-  CANCEL_DUPLICATED_UNARY_SMET_CALL(scalarWrap,ScalarWrapper);
+  // Simplifies scalarWrap(smet)
+  CANCEL_DUPLICATED_UNARY_SMET_CALL(scalarWrap,SmET);
 }
 
 #endif

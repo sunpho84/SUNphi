@@ -55,8 +55,21 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  // Provides the \c Tk member
+#define PROVIDE_TK(...)					\
+  using Tk=						\
+    __VA_ARGS__
+  
   // Defines the check for a member type "Tk"
   DEFINE_HAS_MEMBER(Tk);
+  
+  // Provides the \c Fund member
+#define PROVIDE_FUND(...)					\
+  using Fund=							\
+    __VA_ARGS__
+  
+  // Defines the check for a member type "Fund"
+  DEFINE_HAS_MEMBER(Fund);
   
   /////////////////////////////////////////////////////////////////
   
@@ -169,7 +182,8 @@ namespace SUNphi
   STATIC_ASSERT_HAS_MEMBER(MergeableComps,__VA_ARGS__);		\
   STATIC_ASSERT_HAS_MEMBER(assertMergeableWith,__VA_ARGS__);	\
   STATIC_ASSERT_HAS_MEMBER(getMergedCompsView,__VA_ARGS__);	\
-  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__)
+  STATIC_ASSERT_HAS_MEMBER(Tk,__VA_ARGS__);			\
+  STATIC_ASSERT_HAS_MEMBER(Fund,__VA_ARGS__)
   
   /// Smart Expression Templates
   template <typename T>

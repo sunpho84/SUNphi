@@ -5,6 +5,8 @@
 ///
 /// \brief Header file defining basic properties of Unary SmET
 
+#include <iostream>
+
 #include <metaprogramming/SFINAE.hpp>
 #include <smet/BaseSmET.hpp>
 #include <smet/Reference.hpp>
@@ -34,6 +36,12 @@ namespace SUNphi
   /// Provide the reference to the object
 #define PROVIDE_UNARY_SMET_REF			\
   PROVIDE_SMET_REF()
+  
+  /// Declare that the fundamental type is the same of the reference
+#define SAME_FUND_TYPE_OF_REF						\
+  /*! Same fundamental type of the reference */				\
+  using Fund=								\
+    typename RemoveReference<decltype(ref)>::Fund
   
   /////////////////////////////////////////////////////////////////
   
@@ -151,7 +159,7 @@ namespace SUNphi
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
   									\
-    if(0)								\
+    if constexpr(0)							\
       {									\
 	using namespace std;						\
 	constexpr bool IsLvalue=isLvalue<T>;				\
@@ -207,7 +215,7 @@ namespace SUNphi
 	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<RrT>)>     /* Enable only for the UNARY_SMET required */ \
   Ret CALLER(T&& smet)	/*!< Quantity to un-nest   */			\
   {					\
-    if(0)								\
+    if constexpr(0)								\
       {									\
 	constexpr bool SmETIsConst=isConst<T>;				\
 	constexpr bool RefIsConst=isConst<Ref>;				\

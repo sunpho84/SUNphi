@@ -226,8 +226,11 @@ namespace SUNphi
     ///
     /// \todo Improve, the return type could be decided studying what
     /// suits best the computational
-    using Tk=
-      BlendTensKinds<TK1,TK2>;
+    PROVIDE_TK(BlendTensKinds<TK1,TK2>);
+    
+    /// Fundamental type
+    PROVIDE_FUND(decltype(typename RemoveReference<Ref1>::Fund{}+
+			  typename RemoveReference<Ref2>::Fund{}));
     
     /// Provides the MergedDelim attribute for Refs 1 and 2
 #define PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(ID) \

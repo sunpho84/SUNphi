@@ -41,8 +41,9 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
-    using Tk=
-      TK;
+    PROVIDE_TK(TK);
+    
+    SAME_FUND_TYPE_OF_REF;
     
     // We remove at Pos, shift and insert back
     PROVIDE_MERGEABLE_COMPS(/* We have to split at the Compl components, and at the next one */,

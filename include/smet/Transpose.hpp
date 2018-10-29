@@ -43,7 +43,9 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REF;
     
     /// TensorKind of the bound expression
-    using Tk=typename TK::Twinned;
+    PROVIDE_TK(typename TK::Twinned);
+    
+    SAME_FUND_TYPE_OF_REF;
     
     PROVIDE_MERGEABLE_COMPS(/* We have to split at all true twinned components */,
 			    InsertTrueTwinnedPosOfTuple<
