@@ -38,16 +38,19 @@ namespace SUNphi
 #define NON_REF
   
   /// Token to be used in macro indicating "l-value" reference
-#define LVALUE_REF &
+#define LVALUE_REF				\
+  &
   
   /// Token to be used in macro indicating "r-value" reference
-#define RVALUE_REF &&
+#define RVALUE_REF				\
+  &&
   
   /////////////////////////////////////////////////////////////////
   
   /// Delete the copy-constructor
 #define FORBID_CONSTRUCT_BY_COPY(CLASS)		\
-  CLASS(const CLASS&)=delete
+  CLASS(const CLASS&)=				\
+    delete
   
   /////////////////////////////////////////////////////////////////////
   
@@ -102,6 +105,13 @@ namespace SUNphi
   [[ maybe_unused ]]
   static constexpr bool isClass=
     std::is_class_v<T>;
+  
+  /// Checks if a type can be cast into another one
+  template <typename From, // Source type
+	    typename To>   // Destination type
+  [[ maybe_unused ]]
+  static constexpr bool canBeConverted=
+    std::is_convertible_v<From,To>;
   
   /////////////////////////////////////////////////////////////////
   
