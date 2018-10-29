@@ -229,236 +229,251 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="stringliteral">&quot;, type id: &quot;</span>&lt;&lt;typeid(decltype(d)).name()&lt;&lt;endl;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span>...Ints&gt;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;std::string printIntSeq(<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;Ints...&gt;</a>)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  std::ostringstream os;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> a : {Ints...})  os&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">return</span> os.str();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">void</span> checkSumOfTwoSmETs()</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">using</span> MyTk1=</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;CnCol,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;         RwCol,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;         <a class="code" href="../../dd/d61/structSUNphi_1_1CnSpin.html">CnSpin</a>&gt;;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">using</span> MyTens1=</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;MyTk1,</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;     <span class="keywordtype">double</span>&gt;;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">using</span> MyTk2=</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;RwCol,</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;         <span class="comment">// RwSpin,</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;         CnSpin,</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;         Compl&gt;;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">using</span> MyTens2=</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;MyTk2,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;     <span class="keywordtype">double</span>&gt;;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  MyTens1 a;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnCol=0;iCnCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iCnCol++)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iRwCol=0;iRwCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iRwCol++)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnSpin=0;iCnSpin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;iCnSpin++)</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b">cnSpin</a>(a,iCnSpin),iRwCol),iCnCol)=3.0;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  MyTens2 b;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iRwCol=0;iRwCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iRwCol++)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnSpin=0;iCnSpin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;iCnSpin++)</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iReIm=0;iReIm&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b">NCOMPL</a>;iReIm++)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b">cnSpin</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(b,iReIm),iCnSpin),iRwCol)=5.0;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">void</span> checkTensKindIscontained()</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">using</span> MyTk1=</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;RwCol,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;         <a class="code" href="../../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409">Spin</a>,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;         CnCol&gt;;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keyword">using</span> MyTk2=</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;RwCol,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;         CnCol&gt;;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  static_assert(MyTk1::contains&lt;MyTk2&gt;,<span class="stringliteral">&quot;First TensKind not contained&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  static_assert(not MyTk2::contains&lt;MyTk1&gt;,<span class="stringliteral">&quot;Second TensKind contained&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span>...Ints&gt;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;std::string printIntSeq(<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;Ints...&gt;</a>)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  std::ostringstream os;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> a : {Ints...})  os&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">return</span> os.str();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">void</span> checkSumOfTwoSmETs()</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">using</span> MyTk1=</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;CnCol,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;         RwCol,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;         <a class="code" href="../../dd/d61/structSUNphi_1_1CnSpin.html">CnSpin</a>&gt;;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keyword">using</span> MyTens1=</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;MyTk1,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;     <span class="keywordtype">double</span>&gt;;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keyword">using</span> MyTk2=</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>&lt;RwCol,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;         <span class="comment">// RwSpin,</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;         CnSpin,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;         Compl&gt;;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;decltype((a+b).getMaximallyMergedCompsView())::Tk,double&gt; d;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  d=(a+b).getMaximallyMergedCompsView();</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keyword">using</span> MyTens2=</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;MyTk2,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;     <span class="keywordtype">double</span>&gt;;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;d: &quot;</span>&lt;&lt;d.<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html#ad6844b8812c54065a825f4465a6d04b6">eval</a>(1,1,1)&lt;&lt;endl;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Col: &quot;&lt;&lt;c.compSize&lt;RwCol&gt;()&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Spin: &quot;&lt;&lt;c.compSize&lt;CnSpin&gt;()&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind of addendum 1: &quot;</span>&lt;&lt;decltype(a)::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keyword">using</span> M1=</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">typename</span> decltype(a)::MergeableComps;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Mergeability of addendum 1: &quot;</span>&lt;&lt;printIntSeq(M1{})&lt;&lt;endl;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind of addendum 2: &quot;</span>&lt;&lt;decltype(b)::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keyword">using</span> M2=</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keyword">typename</span> decltype(b)::MergeableComps;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Mergeability of addendum 2: &quot;</span>&lt;&lt;printIntSeq(M2{})&lt;&lt;endl;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind: &quot;</span>&lt;&lt;decltype(a+b)::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;PosOf types 1 present: &quot;</span>&lt;&lt;printIntSeq(decltype(a+b)::posOfAddend1PresTcInResTk{})&lt;&lt;endl;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;PosOf types 2 present: &quot;</span>&lt;&lt;printIntSeq(decltype(a+b)::posOfAddend2PresTcInResTk{})&lt;&lt;endl;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">// using P1=</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="comment">//   decltype(c)::posOfAddend1TcInResTk;</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;PosOf types 1: &quot;&lt;&lt;printIntSeq(P1{})&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">// using P2=</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">//   decltype(c)::posOfAddend2TcInResTk;</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;PosOf types 2: &quot;&lt;&lt;printIntSeq(P2{})&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">// using P3=</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="comment">//   PairOfTensKindMergeability::template CompsMergeability&lt;M1,M2,P1,P2&gt;;</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;Mergeability: &quot;&lt;&lt;printIntSeq(P3{})&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// using MDel=</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="comment">//   IntSeq&lt;0,1,3,4&gt;;</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;Trying to merge with: &quot;&lt;&lt;printIntSeq(MDel{})&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// using P4=</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">//   decltype(c)::template MergedDelims1&lt;MDel&gt;;</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;The first needs to be merged like this: &quot;&lt;&lt;printIntSeq(P4{})&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keywordtype">int</span> main()</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;{</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  checkNonComplConjCancelation();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  MyTens1 a;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnCol=0;iCnCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iCnCol++)</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iRwCol=0;iRwCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iRwCol++)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnSpin=0;iCnSpin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;iCnSpin++)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b">cnSpin</a>(a,iCnSpin),iRwCol),iCnCol)=3.0;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  MyTens2 b;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iRwCol=0;iRwCol&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;iRwCol++)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iCnSpin=0;iCnSpin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;iCnSpin++)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iReIm=0;iReIm&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b">NCOMPL</a>;iReIm++)</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b">cnSpin</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(b,iReIm),iCnSpin),iRwCol)=5.0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a>&lt;decltype((a+b).getMaximallyMergedCompsView())::Tk,double&gt; d;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  d=(a+b).getMaximallyMergedCompsView();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;d: &quot;</span>&lt;&lt;d.<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html#ad6844b8812c54065a825f4465a6d04b6">eval</a>(1,1,1)&lt;&lt;endl;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Col: &quot;&lt;&lt;c.compSize&lt;RwCol&gt;()&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">//cout&lt;&lt;&quot;Spin: &quot;&lt;&lt;c.compSize&lt;CnSpin&gt;()&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind of addendum 1: &quot;</span>&lt;&lt;decltype(a)::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">using</span> M1=</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">typename</span> decltype(a)::MergeableComps;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Mergeability of addendum 1: &quot;</span>&lt;&lt;printIntSeq(M1{})&lt;&lt;endl;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind of addendum 2: &quot;</span>&lt;&lt;decltype(b)::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keyword">using</span> M2=</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">typename</span> decltype(b)::MergeableComps;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Mergeability of addendum 2: &quot;</span>&lt;&lt;printIntSeq(M2{})&lt;&lt;endl;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;Tensor Kind: &quot;</span>&lt;&lt;decltype(a+b)::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;PosOf types 1 present: &quot;</span>&lt;&lt;printIntSeq(decltype(a+b)::posOfAddend1PresTcInResTk{})&lt;&lt;endl;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;PosOf types 2 present: &quot;</span>&lt;&lt;printIntSeq(decltype(a+b)::posOfAddend2PresTcInResTk{})&lt;&lt;endl;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">// using P1=</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="comment">//   decltype(c)::posOfAddend1TcInResTk;</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;PosOf types 1: &quot;&lt;&lt;printIntSeq(P1{})&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// using P2=</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="comment">//   decltype(c)::posOfAddend2TcInResTk;</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;PosOf types 2: &quot;&lt;&lt;printIntSeq(P2{})&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="comment">// using P3=</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">//   PairOfTensKindMergeability::template CompsMergeability&lt;M1,M2,P1,P2&gt;;</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;Mergeability: &quot;&lt;&lt;printIntSeq(P3{})&lt;&lt;endl;</span></div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  checkNestedConjCancelation();</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  checkFilterVariadicClassPos();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  checkSumOfTwoSmETs();</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  checkScalarWrap();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">// using MDel=</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="comment">//   IntSeq&lt;0,1,3,4&gt;;</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;Trying to merge with: &quot;&lt;&lt;printIntSeq(MDel{})&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">// using P4=</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="comment">//   decltype(c)::template MergedDelims1&lt;MDel&gt;;</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">// Check on Diag</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">using</span> A=<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;1,0,1&gt;</a>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">using</span> B=MyTk::IsMatrixComp;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(A,B);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">using</span> F=MyTk::Diag;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">using</span> G=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin&gt;</a>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(G,F);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">// cout&lt;&lt;&quot;The first needs to be merged like this: &quot;&lt;&lt;printIntSeq(P4{})&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keywordtype">int</span> main()</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  checkNonComplConjCancelation();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  checkNestedConjCancelation();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  checkFilterVariadicClassPos();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  checkSumOfTwoSmETs();</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">// Check relBind</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Spacetime,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    MyTens c(10);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    c.eval(1,2,0,1)=1.0594;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  checkScalarWrap();</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="comment">// Check on Diag</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">using</span> A=<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;1,0,1&gt;</a>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">using</span> B=MyTk::IsMatrixComp;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(A,B);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">auto</span> b1=relBind&lt;RwCol,CnCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keyword">auto</span> b2=relBind&lt;CnCol,RwCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(c)::Tk::name()&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(b1)::Tk::name()&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(b2)::Tk::name()&lt;&lt;endl;</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    cout&lt;&lt;c.eval(1,2,0,1)&lt;&lt; <span class="stringliteral">&quot; &quot;</span>&lt;&lt;b1.eval(2,0,1)&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;b2.eval(1,2,0)&lt;&lt;endl;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">using</span> F=MyTk::Diag;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">using</span> G=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin&gt;</a>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(G,F);</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keyword">auto</span> bb1=relBind&lt;Spin,Col&gt;(b1,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> <span class="keywordtype">id</span>+1;});</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keyword">auto</span> bb2=relBind&lt;Spin,Col&gt;(b2,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> <span class="keywordtype">id</span>+1;});</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    cout&lt;&lt;c.eval(1,2,0,1)&lt;&lt; <span class="stringliteral">&quot; &quot;</span>&lt;&lt;bb1.eval(0,1)&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;bb2.eval(1,0)&lt;&lt;endl;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    cout&lt;&lt;decltype(c.getMaximallyMergedCompsView())::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; c: &quot;</span>&lt;&lt;decltype(c)::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; bb2: &quot;</span>&lt;&lt;decltype(bb2)::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    cout&lt;&lt;decltype(b1.getMaximallyMergedCompsView())::Tk::name()&lt;&lt;endl;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="comment">//come trovare le componenti non twinnate? crea un IntSeq che dica</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="comment">//se le componenti devono essere prese o no, prendi di questo le</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="comment">//posizioni non nulle, e chiama getIndexed</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="comment">// Check relBind</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Spacetime,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    MyTens c(10);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    c.eval(1,2,0,1)=1.0594;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">auto</span> b1=relBind&lt;RwCol,CnCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keyword">auto</span> b2=relBind&lt;CnCol,RwCol&gt;(c,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> id;});</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(c)::Tk::name()&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(b1)::Tk::name()&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">// cout&lt;&lt;decltype(b2)::Tk::name()&lt;&lt;endl;</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    cout&lt;&lt;c.eval(1,2,0,1)&lt;&lt; <span class="stringliteral">&quot; &quot;</span>&lt;&lt;b1.eval(2,0,1)&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;b2.eval(1,2,0)&lt;&lt;endl;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    MyTens c;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;posOfType&lt;RwCol,MyTk::Twinned::types&gt;&lt;&lt;endl;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTens,decltype(+c));</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="comment">//check the blending of two TensKind</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keyword">using</span> MyTk1=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin&gt;</a>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keyword">using</span> MyTk2=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">using</span> MyTkBCompa=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">using</span> MyTkBRes1=<span class="keyword">typename</span> MyTk1::BlendWithTensKind&lt;MyTk2&gt;;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes1,MyTkBCompa);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keyword">using</span> MyTkBRes2=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">BlendTensKinds&lt;MyTk1,MyTk2&gt;</a>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes2,MyTkBCompa);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">using</span> MyTkBRes3=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">BlendTensKinds&lt;MyTk1,MyTk2,MyTk2&gt;</a>;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes3,MyTkBCompa);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  </div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Compl,CnCol&gt;</a>;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  MyTens cicc;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> irw_col=0;irw_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;irw_col++)</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ispin=0;ispin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;ispin++)</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> icn_col=0;icn_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;icn_col++)</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ri=0;ri&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b">NCOMPL</a>;ri++)</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                ispin),</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;               icn_col),</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;             ri),</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        irw_col)=</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      icn_col+NCOL*(0+NCOMPL*(ispin+NSPIN*irw_col));</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  cicc.getMaximallyMergedCompsView()=1.0;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">auto</span> bb1=relBind&lt;Spin,Col&gt;(b1,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> <span class="keywordtype">id</span>+1;});</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">auto</span> bb2=relBind&lt;Spin,Col&gt;(b2,[](<span class="keywordtype">int</span> id){<span class="keywordflow">return</span> <span class="keywordtype">id</span>+1;});</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    cout&lt;&lt;c.eval(1,2,0,1)&lt;&lt; <span class="stringliteral">&quot; &quot;</span>&lt;&lt;bb1.eval(0,1)&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;bb2.eval(1,0)&lt;&lt;endl;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    cout&lt;&lt;decltype(c.getMaximallyMergedCompsView())::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; c: &quot;</span>&lt;&lt;decltype(c)::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; bb2: &quot;</span>&lt;&lt;decltype(bb2)::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    cout&lt;&lt;decltype(b1.getMaximallyMergedCompsView())::Tk::name()&lt;&lt;endl;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="comment">//come trovare le componenti non twinnate? crea un IntSeq che dica</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="comment">//se le componenti devono essere prese o no, prendi di questo le</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="comment">//posizioni non nulle, e chiama getIndexed</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    </div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    MyTens c;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    cout&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;posOfType&lt;RwCol,MyTk::Twinned::types&gt;&lt;&lt;endl;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTens,decltype(+c));</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="comment">//check the blending of two TensKind</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keyword">using</span> MyTk1=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin&gt;</a>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">using</span> MyTk2=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">using</span> MyTkBCompa=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keyword">using</span> MyTkBRes1=<span class="keyword">typename</span> MyTk1::BlendWithTensKind&lt;MyTk2&gt;;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes1,MyTkBCompa);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keyword">using</span> MyTkBRes2=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">BlendTensKinds&lt;MyTk1,MyTk2&gt;</a>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes2,MyTkBCompa);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">using</span> MyTkBRes3=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">BlendTensKinds&lt;MyTk1,MyTk2,MyTk2&gt;</a>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(MyTkBRes3,MyTkBCompa);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  }</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keyword">auto</span> i=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aa1b5f3fd83e1fada66cd6a5da0b57f81">imag</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(-cicc,0),0),0)));</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  cout&lt;&lt;i&lt;&lt;endl;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">using</span> MyTk=<a class="code" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind&lt;RwCol,Spin,Compl,CnCol&gt;</a>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keyword">using</span> MyTens=<a class="code" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens&lt;MyTk,double&gt;</a>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  MyTens cicc;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> irw_col=0;irw_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;irw_col++)</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ispin=0;ispin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;ispin++)</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> icn_col=0;icn_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;icn_col++)</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ri=0;ri&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b">NCOMPL</a>;ri++)</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;------&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        cout&lt;&lt;&amp;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                     ispin),</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                  icn_col),</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                  ri),</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;             irw_col)&lt;&lt;endl;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                ispin),</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;               icn_col),</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;             ri),</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        irw_col)=</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      icn_col+NCOL*(0+NCOMPL*(ispin+NSPIN*irw_col));</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  cicc.getMaximallyMergedCompsView()=1.0;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keywordtype">double</span> a=0.0;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> irw_col=0;irw_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;irw_col++)</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ispin=0;ispin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;ispin++)</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> icn_col=0;icn_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;icn_col++)</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    a+=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aa1b5f3fd83e1fada66cd6a5da0b57f81">imag</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                 ispin),</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                icn_col),</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;               irw_col)));</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">// a+=real(conj(rwCol(cnCol(spin(cicc,</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="comment">//           ispin),</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="comment">//          icn_col),</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="comment">//         irw_col)));</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  cout&lt;&lt;a&lt;&lt;endl;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;}</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  <span class="keyword">auto</span> i=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aa1b5f3fd83e1fada66cd6a5da0b57f81">imag</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(-cicc,0),0),0)));</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  cout&lt;&lt;i&lt;&lt;endl;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> irw_col=0;irw_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;irw_col++)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ispin=0;ispin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;ispin++)</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> icn_col=0;icn_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;icn_col++)</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ri=0;ri&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b">NCOMPL</a>;ri++)</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      {</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;------&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        cout&lt;&lt;&amp;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">reIm</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                     ispin),</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                  icn_col),</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                  ri),</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;             irw_col)&lt;&lt;endl;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  cout&lt;&lt;<span class="stringliteral">&quot;/////////////////////////////////////////////////////////////////&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  </div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordtype">double</span> a=0.0;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> irw_col=0;irw_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;irw_col++)</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ispin=0;ispin&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6">NSPIN</a>;ispin++)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> icn_col=0;icn_col&lt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d">NCOL</a>;icn_col++)</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    a+=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#aa1b5f3fd83e1fada66cd6a5da0b57f81">imag</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8">rwCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238">cnCol</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972">spin</a>(cicc,</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                 ispin),</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                icn_col),</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;               irw_col)));</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="comment">// a+=real(conj(rwCol(cnCol(spin(cicc,</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="comment">//           ispin),</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="comment">//          icn_col),</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="comment">//         irw_col)));</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  cout&lt;&lt;a&lt;&lt;endl;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
 <div class="ttc" id="namespaceSUNphi_html_afa7b62a5bb9b78fe811605090a47c943"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943">SUNphi::reIm</a></div><div class="ttdeci">decltype(auto) reIm(T &amp;&amp;ref, const int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de8/Compl_8hpp_source.html#l00014">Compl.hpp:14</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a381b663616baca11ca1606eab5ecb637"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">SUNphi::conj</a></div><div class="ttdeci">auto conj(T &amp;&amp;smet, DummyTypes...)</div><div class="ttdoc">Build Conjer from conj, if TensKind is complex. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d8f/Conj_8hpp_source.html#l00097">Conj.hpp:97</a></div></div>
 <div class="ttc" id="structSUNphi_1_1Compl_html"><div class="ttname"><a href="../../de/dee/structSUNphi_1_1Compl.html">SUNphi::Compl</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/de8/Compl_8hpp_source.html#l00014">Compl.hpp:14</a></div></div>
