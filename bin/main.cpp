@@ -156,6 +156,24 @@ void checkScalarWrap()
     ", type id: "<<typeid(decltype(d)).name()<<endl;
 }
 
+/// Checks that a TensKind is contained into another one
+void checkTensKindIscontained()
+{
+  /// Fist Tensor Kind to be used
+  using MyTk1=
+    TensKind<RwCol,
+	     Spin,
+	     CnCol>;
+  
+  /// Second Tensor Kind to be used
+  using MyTk2=
+    TensKind<RwCol,
+	     CnCol>;
+  
+  static_assert(MyTk1::contains<MyTk2>,"First TensKind not contained");
+  static_assert(not MyTk2::contains<MyTk1>,"Second TensKind contained");
+}
+
 #include <sstream>
 
 /// Prints an IntSeq
