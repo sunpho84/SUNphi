@@ -168,7 +168,7 @@ namespace SUNphi
 	constexpr bool Is=std::is_reference<T>::value;			\
 	cout<<" IsLvalue: "<<IsLvalue<<", Is: "<<Is<<", IsConst: "<<IsConst<<endl; \
       }									\
-    return UNARY_SMET<T>(forw<T>(smet));					\
+    return UNARY_SMET<T>(forw<T>(smet));				\
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
@@ -208,7 +208,7 @@ namespace SUNphi
 	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes              */ \
 	    bool SmETIsLvalue=isLvalue<RrT>,		       /* Detect if SmET is an lvalue             */ \
 	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue              */ \
-	    bool RefIsStoring=RrRef::isStoring,		       /* Detect if Ref is storing                */ \
+	    bool RefIsStoring=isStoring<RrRef>,		       /* Detect if Ref is storing                */ \
 	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or    */ \
 	    RefIsLvalue or SmETIsLvalue,	               /*   lvalue is involved         	          */ \
 	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                           */ \

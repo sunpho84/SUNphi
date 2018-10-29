@@ -116,14 +116,45 @@ void checkFilterVariadicClassPos()
   STATIC_ASSERT_IS_BASE_OF(Res,Ref);
 }
 
+/// Check that a simple type can be wrapped into a ScalarWrapper
 void checkScalarWrap()
 {
-  int a=10;
+  /// Simple type
+  int a=
+    10;
   
-  auto b=scalarWrap(a);
+  /// Wrap into a SmeT
+  auto b=
+    scalarWrap(a);
   
-  cout<<"ScalarWrapper<int>, TensKind: "<<decltype(b)::Tk::name()<<endl;
-} 
+  cout<<"scalarWrap(int)"<<
+    ", TensKind: "<<decltype(b)::Tk::name()<<
+    ", val: "<<b.eval()<<
+    ", type id: "<<typeid(decltype(b)).name()<<endl;
+  
+  /// Rewrap into a SmeT
+  auto c=
+    scalarWrap(b);
+  
+  // Check that b and c are of the same type
+  STATIC_ASSERT_IS_BASE_OF(decltype(c),decltype(b));
+  
+  // Write some info
+  cout<<"scalarWrap(scalarWrap(int))"<<
+    ", TensKind: "<<decltype(c)::Tk::name()<<
+    ", val: "<<c.eval()<<
+    ", type id: "<<typeid(decltype(c)).name()<<endl;
+  
+  /// Rewrap into a SmeT an rvalue
+  auto d=
+    scalarWrap(10);
+  
+  // Write some info
+  cout<<"scalarWrap(10)"<<
+    ", TensKind: "<<decltype(d)::Tk::name()<<
+    ", val: "<<d.eval()<<
+    ", type id: "<<typeid(decltype(d)).name()<<endl;
+}
 
 #include <sstream>
 

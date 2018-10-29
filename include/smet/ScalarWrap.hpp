@@ -92,8 +92,8 @@ namespace SUNphi
   // Build ScalarWrapper from scalarWrap
   SIMPLE_UNARY_SMET_BUILDER(scalarWrap,ScalarWrapper);
   
-  // Simplifies scalarWrap(smet)
-  CANCEL_DUPLICATED_UNARY_SMET_CALL(scalarWrap,SmET);
+  // Simplifies scalarWrap(smet) -> smet
+  ABSORB_DUPLICATED_UNARY_SMET_CALL(scalarWrap,SmET);
 }
 
 #endif
