@@ -10,10 +10,12 @@ var TupleClass_8hpp =
     [ "DEFINE_VARIADIC_TYPE_FROM_TUPLE", "d1/d31/TupleClass_8hpp.html#ae18357ded3a54def80d5411704e94df0", null ],
     [ "STATIC_ASSERT_IS_TUPLE", "d1/d31/TupleClass_8hpp.html#a36f418c6135150843b4f6e02ae963662", null ],
     [ "STATIC_ASSERT_TUPLE_HAS_NOT_TYPE", "d1/d31/TupleClass_8hpp.html#ac29b403bf8ee95174a6ddcf78f414dd6", null ],
-    [ "STATIC_ASSERT_TUPLE_HAS_TYPE", "d1/d31/TupleClass_8hpp.html#a43129b5b1b4c73d25eff07540494bf6b", null ],
+    [ "STATIC_ASSERT_TUPLE_HAS_TYPE", "d1/d31/TupleClass_8hpp.html#ac2c57f81262ddc9dd20ea951d052edc9", null ],
     [ "STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT", "d1/d31/TupleClass_8hpp.html#a01a86dc8002964b63d8fe9f129e5817e", null ],
     [ "Tuple", "d1/d31/TupleClass_8hpp.html#ae8bd2374a8eb13af54ead4b5e2e8558c", null ],
     [ "TupleElementType", "d1/d31/TupleClass_8hpp.html#a3449e7eaa063d756b6467c2578077f61", null ],
+    [ "_tupleHasType", "d1/d31/TupleClass_8hpp.html#afc903664555a6ee3d136d0ba45398055", null ],
+    [ "_tupleHasTypes", "d1/d31/TupleClass_8hpp.html#a23114624468dc2079b5a9084e1c47a45", null ],
     [ "_nOfTypeInTuple", "d1/d31/TupleClass_8hpp.html#ab82b658a944eda342825aee5ba434c5a", null ],
     [ "_nOfTypeInTuple< T, Tuple< Tp...> >", "d1/d31/TupleClass_8hpp.html#af23636f4089b01e824793bae20d08692", null ],
     [ "areSame", "d1/d31/TupleClass_8hpp.html#a45ec64fb8b905444f599ad6d772ee67c", null ],
@@ -21,7 +23,8 @@ var TupleClass_8hpp =
     [ "nDiffTypesInTuple", "d1/d31/TupleClass_8hpp.html#a261153405d3a8d0cb5bd9186c96b709d", null ],
     [ "nDiffTypesInTuple< Tuple< Tp...> >", "d1/d31/TupleClass_8hpp.html#afaa875a24530ab6723505009e6575696", null ],
     [ "nOfTypeInTuple", "d1/d31/TupleClass_8hpp.html#af877fd927f6e7f68c60742d9fd6eee75", null ],
-    [ "tupleHasType", "d1/d31/TupleClass_8hpp.html#af57b31d043a9d8e2e78965d67c095dfc", null ],
+    [ "tupleHasType", "d1/d31/TupleClass_8hpp.html#af34a4a93e75671971bc0850c97ba251d", null ],
+    [ "tupleHasTypes", "d1/d31/TupleClass_8hpp.html#ab3330d99dcdc530c0a7be5eb1b2af9eb", null ],
     [ "tupleSize", "d1/d31/TupleClass_8hpp.html#afa5c6c95c7f31ae4ed56af9d54194e2b", null ],
     [ "tupleTypesAreAllDifferent", "d1/d31/TupleClass_8hpp.html#a784998b518eeed67895c65bc787aebcc", null ]
 ];

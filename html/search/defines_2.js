@@ -4,6 +4,7 @@ var searchData=
   ['declare_5ftens_5fcomps_5fare_5ftwin',['DECLARE_TENS_COMPS_ARE_TWIN',['../d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14',1,'TwinsComp.hpp']]],
   ['declauto',['DECLAUTO',['../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0',1,'UniversalReferences.hpp']]],
   ['define_5fbase_5ftype',['DEFINE_BASE_TYPE',['../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276',1,'TypeTraits.hpp']]],
+  ['define_5fgetter_5fwith_5fdefault',['DEFINE_GETTER_WITH_DEFAULT',['../dc/d6b/BaseSmET_8hpp.html#a4d007574a60ba5a69923d28beb0e6fa0',1,'BaseSmET.hpp']]],
   ['define_5fhas_5fmember',['DEFINE_HAS_MEMBER',['../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec',1,'TypeTraits.hpp']]],
   ['define_5fnamed_5fbinder',['DEFINE_NAMED_BINDER',['../dc/de1/Bind_8hpp.html#a5c60188918795703bcda3222ddfdb332',1,'Bind.hpp']]],
   ['define_5fnamed_5frw_5for_5fcol_5fbinder',['DEFINE_NAMED_RW_OR_COL_BINDER',['../dc/de1/Bind_8hpp.html#a039c2450684887ce0d2ba6ba7a08a562',1,'Bind.hpp']]],

@@ -179,9 +179,8 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a1ad2bab3a59f777bdd42b868c4f0e67f">RVALUE_REF</a>&#160;&#160;&#160;&amp;&amp;</td></tr>
 <tr class="memdesc:a1ad2bab3a59f777bdd42b868c4f0e67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Token to be used in macro indicating "r-value" reference. <br/></td></tr>
 <tr class="separator:a1ad2bab3a59f777bdd42b868c4f0e67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dfacd0e6094c8dc3eb28faff35c385b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dfacd0e6094c8dc3eb28faff35c385b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a3dfacd0e6094c8dc3eb28faff35c385b">FORBID_CONSTRUCT_BY_COPY</a>(CLASS)&#160;&#160;&#160;CLASS(const CLASS&amp;)=delete</td></tr>
-<tr class="memdesc:a3dfacd0e6094c8dc3eb28faff35c385b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the copy-constructor. <br/></td></tr>
+<tr class="memitem:a3dfacd0e6094c8dc3eb28faff35c385b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a3dfacd0e6094c8dc3eb28faff35c385b">FORBID_CONSTRUCT_BY_COPY</a>(CLASS)</td></tr>
+<tr class="memdesc:a3dfacd0e6094c8dc3eb28faff35c385b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the copy-constructor.  <a href="#a3dfacd0e6094c8dc3eb28faff35c385b">More...</a><br/></td></tr>
 <tr class="separator:a3dfacd0e6094c8dc3eb28faff35c385b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a046e6058a8f86ab1b1925e2c2219c98f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a046e6058a8f86ab1b1925e2c2219c98f"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f">STATIC_ASSERT_IS_BASE_OF</a>(BASE, DERIVED)&#160;&#160;&#160;static_assert(isBaseOf&lt;BASE,DERIVED&gt;,&quot;Error, type not derived from what expected&quot;)</td></tr>
@@ -270,6 +269,14 @@ template&lt;typename F &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aedb0247d8b243461ee814daf950b4b1e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aedb0247d8b243461ee814daf950b4b1e"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aedb0247d8b243461ee814daf950b4b1e">SUNphi::isClass</a></td></tr>
+<tr class="memdesc:aedb0247d8b243461ee814daf950b4b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a type is a class.  <a href="#aedb0247d8b243461ee814daf950b4b1e">More...</a><br/></td></tr>
+<tr class="separator:aedb0247d8b243461ee814daf950b4b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4b857c07c2d9392292181763ade3f4"><td class="memTemplParams" colspan="2">template&lt;typename From , typename To &gt; </td></tr>
+<tr class="memitem:ada4b857c07c2d9392292181763ade3f4"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ada4b857c07c2d9392292181763ade3f4">SUNphi::canBeConverted</a></td></tr>
+<tr class="memdesc:ada4b857c07c2d9392292181763ade3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a type can be cast into another one.  <a href="#ada4b857c07c2d9392292181763ade3f4">More...</a><br/></td></tr>
+<tr class="separator:ada4b857c07c2d9392292181763ade3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc7db564dd647bc10933eb0a67248b8c"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:afc7db564dd647bc10933eb0a67248b8c"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c">SUNphi::isSame</a></td></tr>
 <tr class="separator:afc7db564dd647bc10933eb0a67248b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,7 +374,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00354">354</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00372">372</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -399,7 +406,29 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00407">407</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00425">425</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3dfacd0e6094c8dc3eb28faff35c385b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FORBID_CONSTRUCT_BY_COPY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CLASS</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">CLASS(<span class="keyword">const</span> CLASS&amp;)=                \</div>
+<div class="line">    delete</div>
+</div><!-- fragment -->
+<p>Delete the copy-constructor. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +458,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Assert type T to have member TAG</p>
 <p>Note that you need to have defined DEFINE_HAS_MEMBER before </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00386">386</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00404">404</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

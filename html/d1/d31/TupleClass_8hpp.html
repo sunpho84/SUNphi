@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('d1/d31/TupleClass_8hpp.html','../../')
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">TupleClass.hpp File Reference</div>  </div>
@@ -162,10 +163,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#a01a86dc8002964b63d8fe9f129e5817e">STATIC_ASSERT_TUPLE_TYPES_ARE_ALL_DIFFERENT</a>(T)&#160;&#160;&#160;static_assert(tupleTypesAreAllDifferent&lt;T&gt;,&quot;Types in the tuple are not all different&quot;)</td></tr>
 <tr class="memdesc:a01a86dc8002964b63d8fe9f129e5817e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the <code>Tuple</code> contains multiple times a given type. <br/></td></tr>
 <tr class="separator:a01a86dc8002964b63d8fe9f129e5817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43129b5b1b4c73d25eff07540494bf6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43129b5b1b4c73d25eff07540494bf6b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#a43129b5b1b4c73d25eff07540494bf6b">STATIC_ASSERT_TUPLE_HAS_TYPE</a>(T, TP)&#160;&#160;&#160;static_assert(tupleHasType&lt;T,TP&gt;,&quot;Searched type not found&quot;)</td></tr>
-<tr class="memdesc:a43129b5b1b4c73d25eff07540494bf6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the type <code>T</code> is not in the types of tuple <code>TP</code>. <br/></td></tr>
-<tr class="separator:a43129b5b1b4c73d25eff07540494bf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c57f81262ddc9dd20ea951d052edc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2c57f81262ddc9dd20ea951d052edc9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#ac2c57f81262ddc9dd20ea951d052edc9">STATIC_ASSERT_TUPLE_HAS_TYPE</a>(T,TP)&#160;&#160;&#160;static_assert(tupleHasType&lt;T,TP&gt;,&quot;Searched type not found&quot;)</td></tr>
+<tr class="memdesc:ac2c57f81262ddc9dd20ea951d052edc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the type <code>T</code> is not in the types of tuple <code>TP</code>. <br/></td></tr>
+<tr class="separator:ac2c57f81262ddc9dd20ea951d052edc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac29b403bf8ee95174a6ddcf78f414dd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac29b403bf8ee95174a6ddcf78f414dd6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#ac29b403bf8ee95174a6ddcf78f414dd6">STATIC_ASSERT_TUPLE_HAS_NOT_TYPE</a>(T, TP)&#160;&#160;&#160;static_assert(not tupleHasType&lt;T,TP&gt;,&quot;Searched type found&quot;)</td></tr>
 <tr class="memdesc:ac29b403bf8ee95174a6ddcf78f414dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert if the type <code>T</code> is in the types of tuple <code>TP</code>. <br/></td></tr>
@@ -181,6 +182,15 @@ template&lt;int I, typename Tp , typename  = EnableIf&lt;isTuple&lt;Tp&gt;&gt;&g
 <tr class="memitem:a3449e7eaa063d756b6467c2578077f61"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3449e7eaa063d756b6467c2578077f61">SUNphi::TupleElementType</a> = typename std::tuple_element&lt; I, Tp &gt;::type</td></tr>
 <tr class="memdesc:a3449e7eaa063d756b6467c2578077f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of the element I of the Tuple Tp. <br/></td></tr>
 <tr class="separator:a3449e7eaa063d756b6467c2578077f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:afc903664555a6ee3d136d0ba45398055"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Tp&gt; </td></tr>
+<tr class="memitem:afc903664555a6ee3d136d0ba45398055"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055">SUNphi::_tupleHasType</a> (T, Tuple&lt; Tp...&gt;)</td></tr>
+<tr class="separator:afc903664555a6ee3d136d0ba45398055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23114624468dc2079b5a9084e1c47a45"><td class="memTemplParams" colspan="2">template&lt;typename... ToBeSearchedTypes, typename... ContainingTypes&gt; </td></tr>
+<tr class="memitem:a23114624468dc2079b5a9084e1c47a45"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a23114624468dc2079b5a9084e1c47a45">SUNphi::_tupleHasTypes</a> (Tuple&lt; ToBeSearchedTypes...&gt;, Tuple&lt; ContainingTypes...&gt;)</td></tr>
+<tr class="separator:a23114624468dc2079b5a9084e1c47a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -213,11 +223,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a784998b518eeed67895c65bc787aebcc"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a784998b518eeed67895c65bc787aebcc">SUNphi::tupleTypesAreAllDifferent</a></td></tr>
 <tr class="memdesc:a784998b518eeed67895c65bc787aebcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether all types of a <code>Tuple</code> are different.  <a href="#a784998b518eeed67895c65bc787aebcc">More...</a><br/></td></tr>
 <tr class="separator:a784998b518eeed67895c65bc787aebcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af57b31d043a9d8e2e78965d67c095dfc"><td class="memTemplParams" colspan="2"><a class="anchor" id="af57b31d043a9d8e2e78965d67c095dfc"></a>
-template&lt;typename T , typename Tp &gt; </td></tr>
-<tr class="memitem:af57b31d043a9d8e2e78965d67c095dfc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af57b31d043a9d8e2e78965d67c095dfc">SUNphi::tupleHasType</a> =(nOfTypeInTuple&lt;T,Tp&gt; &gt;0)</td></tr>
-<tr class="memdesc:af57b31d043a9d8e2e78965d67c095dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <code>Tuple</code> Tp contains the type T. <br/></td></tr>
-<tr class="separator:af57b31d043a9d8e2e78965d67c095dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34a4a93e75671971bc0850c97ba251d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Tp , typename  = ConstrainIsTuple&lt;Tp&gt;&gt; </td></tr>
+<tr class="memitem:af34a4a93e75671971bc0850c97ba251d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af34a4a93e75671971bc0850c97ba251d">SUNphi::tupleHasType</a></td></tr>
+<tr class="memdesc:af34a4a93e75671971bc0850c97ba251d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if <code>Tuple</code> Tp contains the type T.  <a href="#af34a4a93e75671971bc0850c97ba251d">More...</a><br/></td></tr>
+<tr class="separator:af34a4a93e75671971bc0850c97ba251d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplParams" colspan="2">template&lt;typename TpToSearch , typename TpContaining &gt; </td></tr>
+<tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3330d99dcdc530c0a7be5eb1b2af9eb">SUNphi::tupleHasTypes</a></td></tr>
+<tr class="separator:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Define Tuple. </p>

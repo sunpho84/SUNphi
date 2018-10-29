@@ -52,6 +52,7 @@ var BaseSmET_8hpp =
     [ "ConstrainHasMember_getMergedCompsView", "d5/d33/structSUNphi_1_1ConstrainHasMember__getMergedCompsView.html", null ],
     [ "SmET", "d1/d31/structSUNphi_1_1SmET.html", "d1/d31/structSUNphi_1_1SmET" ],
     [ "ASSIGNABLE", "dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d", null ],
+    [ "DEFINE_GETTER_WITH_DEFAULT", "dc/d6b/BaseSmET_8hpp.html#a4d007574a60ba5a69923d28beb0e6fa0", null ],
     [ "IS_ASSIGNABLE_ATTRIBUTE", "dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0", null ],
     [ "IS_STORING_ATTRIBUTE", "dc/d6b/BaseSmET_8hpp.html#abc520fc4cb71b5a83c691099e8aa7167", null ],
     [ "NOT_ASSIGNABLE", "dc/d6b/BaseSmET_8hpp.html#a1824639ee6544c0cdf5522fb36fb3efb", null ],
@@ -67,6 +68,9 @@ var BaseSmET_8hpp =
     [ "STATIC_CONSTEXPR", "dc/d6b/BaseSmET_8hpp.html#aa72cfd64aa2c619d86b562d623b3e0f3", null ],
     [ "STORING", "dc/d6b/BaseSmET_8hpp.html#abe48d33bc0251dbf6d73789f911e05ae", null ],
     [ "USING", "dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52", null ],
+    [ "FundTypeOf", "dc/d6b/BaseSmET_8hpp.html#a0395a3fbece5f78a0810a0cab21c944d", null ],
+    [ "TkOf", "dc/d6b/BaseSmET_8hpp.html#aa698bbbe299c5eacb8a3e9cb812b23db", null ],
+    [ "_getisStoring", "dc/d6b/BaseSmET_8hpp.html#a7f2ec40203b2082165a1f350aa6eb364", null ],
     [ "DEFINE_BASE_TYPE", "dc/d6b/BaseSmET_8hpp.html#a4c54d96fdc3a552da0df4876129dd2f4", null ],
     [ "hasMember_assertMergeableWith", "dc/d6b/BaseSmET_8hpp.html#aae9bc0ae600b50d77d6300e7b4905e82", null ],
     [ "hasMember_eval", "dc/d6b/BaseSmET_8hpp.html#a7c93af767a7562cdc424337875d65e0b", null ],
@@ -77,5 +81,6 @@ var BaseSmET_8hpp =
     [ "hasMember_isStoring", "dc/d6b/BaseSmET_8hpp.html#a0b67eec99595f3afd38b1a8fc8b740b5", null ],
     [ "hasMember_MergeableComps", "dc/d6b/BaseSmET_8hpp.html#a49a64ecc853b0499d52474ba566814f4", null ],
     [ "hasMember_name", "dc/d6b/BaseSmET_8hpp.html#a7b41c1d7e76416564e69cb6d86a76cf1", null ],
-    [ "hasMember_Tk", "dc/d6b/BaseSmET_8hpp.html#a31388ba85a984596f9d605934040682f", null ]
+    [ "hasMember_Tk", "dc/d6b/BaseSmET_8hpp.html#a31388ba85a984596f9d605934040682f", null ],
+    [ "isStoring", "dc/d6b/BaseSmET_8hpp.html#aca323ed86d861a56548b358e8d9be815", null ]
 ];

@@ -1,5 +1,16 @@
 var NAVTREEINDEX4 =
 {
+"dd/ded/structSUNphi_1_1RwSpin.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,29,7],
+"dd/df8/IntSeq_8hpp.html":[3,0,2,0,3],
+"dd/df8/IntSeq_8hpp.html#a1ee2a99d78b5ccbb4ed4d3e7b034d659":[3,0,2,0,3,7],
+"dd/df8/IntSeq_8hpp.html#a302d28a5e97d3f2dafd2064ed7d1ff02":[3,0,2,0,3,8],
+"dd/df8/IntSeq_8hpp.html#a698a432f8d260a470b7f3465cee03a31":[3,0,2,0,3,6],
+"dd/df8/IntSeq_8hpp.html#a91316c619e394246822e10932a0f77f5":[3,0,2,0,3,9],
+"dd/df8/IntSeq_8hpp_source.html":[3,0,2,0,3],
+"de/d10/Ios_8hpp.html":[3,0,2,10],
+"de/d10/Ios_8hpp_source.html":[3,0,2,10],
+"de/d12/structSUNphi_1_1__BlendTensKinds.html":[2,0,0,89],
+"de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html":[2,0,0,12],
 "de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html#aebcad7da3e10bc13b24c6cd84cd87520":[2,0,0,12,0],
 "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html":[2,0,0,106],
 "de/d2d/TupleOrder_8hpp.html":[3,0,2,7,3],

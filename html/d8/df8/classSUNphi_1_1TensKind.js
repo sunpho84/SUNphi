@@ -22,6 +22,7 @@ var classSUNphi_1_1TensKind =
     [ "types", "d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385", null ],
     [ "_DynCompsPos", "d8/df8/classSUNphi_1_1TensKind.html#a46e099c3edb1e5ef8d76c9028fa52964", null ],
     [ "name", "d8/df8/classSUNphi_1_1TensKind.html#accfdfabe79f4c2c1ef0844330f73b706", null ],
+    [ "contains", "d8/df8/classSUNphi_1_1TensKind.html#a437e8eac96fb02e9137c51a0df99573d", null ],
     [ "dynCompPos", "d8/df8/classSUNphi_1_1TensKind.html#aa6ded86ef2f6f7088dc33620e902cdec", null ],
     [ "firstVectorizingComp", "d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08", null ],
     [ "isFullyStatic", "d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837", null ],
