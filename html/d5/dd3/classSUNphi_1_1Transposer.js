@@ -13,6 +13,8 @@ var classSUNphi_1_1Transposer =
     [ "getMergedCompsView", "d5/dd3/classSUNphi_1_1Transposer.html#ad007f7ef0aa587e53f2bf41809ebda66", null ],
     [ "getMergedCompsView", "d5/dd3/classSUNphi_1_1Transposer.html#adb59b58ef36bf3f12c97ff5cc1577b83", null ],
     [ "isAliasing", "d5/dd3/classSUNphi_1_1Transposer.html#a430bd219d90a639820a308012d16d206", null ],
+    [ "operator()", "d5/dd3/classSUNphi_1_1Transposer.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
+    [ "operator()", "d5/dd3/classSUNphi_1_1Transposer.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
     [ "operator=", "d5/dd3/classSUNphi_1_1Transposer.html#af749b198237a3c2819d8b90129e72b3a", null ],
     [ "operator~", "d5/dd3/classSUNphi_1_1Transposer.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "d5/dd3/classSUNphi_1_1Transposer.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],

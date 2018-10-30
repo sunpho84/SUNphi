@@ -13,6 +13,8 @@ var classSUNphi_1_1UMinuser =
     [ "getMergedCompsView", "dd/d03/classSUNphi_1_1UMinuser.html#a4e0c85980b45c0e7551783773d10a6ec", null ],
     [ "getMergedCompsView", "dd/d03/classSUNphi_1_1UMinuser.html#a3ec4fd395c4765821e74154cddd60ca3", null ],
     [ "isAliasing", "dd/d03/classSUNphi_1_1UMinuser.html#a331d0d34e24ba777dcc7b0584a8ed671", null ],
+    [ "operator()", "dd/d03/classSUNphi_1_1UMinuser.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
+    [ "operator()", "dd/d03/classSUNphi_1_1UMinuser.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
     [ "operator~", "dd/d03/classSUNphi_1_1UMinuser.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "dd/d03/classSUNphi_1_1UMinuser.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
     [ "isAssignable", "dd/d03/classSUNphi_1_1UMinuser.html#a0da43d3f25ad1fc53c212c7ba921784f", null ],

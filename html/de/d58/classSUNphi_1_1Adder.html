@@ -199,6 +199,10 @@ template&lt;typename TC &gt; </td></tr>
 <tr class="separator:a24c7947f477a783b9d274bd6cbd12be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae428c0589b26060d587c69a498085fb4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt; _Ref1, _Ref2 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html#ae428c0589b26060d587c69a498085fb4">operator~</a> () const</td></tr>
 <tr class="separator:ae428c0589b26060d587c69a498085fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302bf10f8751e25cd44cf91bf0a0b988"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html#a302bf10f8751e25cd44cf91bf0a0b988">operator()</a> (Oth &amp;&amp;...oth)</td></tr>
+<tr class="separator:a302bf10f8751e25cd44cf91bf0a0b988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b46ea85ccd68848ca76d967b1f07222"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html#a4b46ea85ccd68848ca76d967b1f07222">operator()</a> (Oth &amp;&amp;...oth) const</td></tr>
+<tr class="separator:a4b46ea85ccd68848ca76d967b1f07222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -240,14 +244,22 @@ class {</td></tr>
 class {</td></tr>
 <tr class="memitem:aa6f13c3fcac7f7f06013e5ac680e915b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:aa6f13c3fcac7f7f06013e5ac680e915b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd1ffed36e4b70b807046d9e3aef4dd"><td class="memItemLeft" ><a class="anchor" id="a0fd1ffed36e4b70b807046d9e3aef4dd"></a>
+<tr class="memitem:ac84099fe46fc12a50a27c06a87344afc"><td class="memItemLeft" ><a class="anchor" id="ac84099fe46fc12a50a27c06a87344afc"></a>
 class {</td></tr>
-<tr class="memitem:a0fd1ffed36e4b70b807046d9e3aef4dd"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a0fd1ffed36e4b70b807046d9e3aef4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84099fe46fc12a50a27c06a87344afc"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ac84099fe46fc12a50a27c06a87344afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62a01150dc0c169f159927c3552f46e3"><td class="memItemLeft" ><a class="anchor" id="a62a01150dc0c169f159927c3552f46e3"></a>
 class {</td></tr>
 <tr class="memitem:a62a01150dc0c169f159927c3552f46e3"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a62a01150dc0c169f159927c3552f46e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efeced93cdaf65750d792512a574f15"><td class="memItemLeft" ><a class="anchor" id="a8efeced93cdaf65750d792512a574f15"></a>
+class {</td></tr>
+<tr class="memitem:a8efeced93cdaf65750d792512a574f15"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a8efeced93cdaf65750d792512a574f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89756a49d2acfc6d2a95c6b36876aa94"><td class="memItemLeft" ><a class="anchor" id="a89756a49d2acfc6d2a95c6b36876aa94"></a>
+class {</td></tr>
+<tr class="memitem:a89756a49d2acfc6d2a95c6b36876aa94"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a89756a49d2acfc6d2a95c6b36876aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -729,36 +741,6 @@ template&lt;typename _Ref1 , typename _Ref2 , typename TK1  = typename RemoveRef
 
 </div>
 </div>
-<a class="anchor" id="a74b6ffeee8bdd6b99eb2bea3e9d8e3b6"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Ref1 , typename _Ref2 , typename TK1  = typename RemoveReference&lt;_Ref1&gt;::Tk, typename TK2  = typename RemoveReference&lt;_Ref2&gt;::Tk&gt; </div>
-<div class="memtemplate">
-template&lt;typename Is &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">SUNphi::Adder</a>&lt; _Ref1, _Ref2, TK1, TK2 &gt;::getMergedCompsView </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Merge appropriately the two references and returns their sum </p>
-
-<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00267">267</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a097efc98bf66d3a452848e548ab72661"></a>
 <div class="memitem">
 <div class="memproto">
@@ -775,6 +757,36 @@ template&lt;typename Is &gt; </div>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Merge appropriately the two references and returns their sum </p>
+
+<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00267">267</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74b6ffeee8bdd6b99eb2bea3e9d8e3b6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _Ref1 , typename _Ref2 , typename TK1  = typename RemoveReference&lt;_Ref1&gt;::Tk, typename TK2  = typename RemoveReference&lt;_Ref2&gt;::Tk&gt; </div>
+<div class="memtemplate">
+template&lt;typename Is &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">SUNphi::Adder</a>&lt; _Ref1, _Ref2, TK1, TK2 &gt;::getMergedCompsView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -817,6 +829,67 @@ template&lt;typename Tref &gt; </div>
 <p>Forward aliasing check to the references </p>
 
 <p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00223">223</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a302bf10f8751e25cd44cf91bf0a0b988"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt; _Ref1, _Ref2 &gt;  &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Oth &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>oth</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implements the call operator via <code>CRTP</code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">oth</td><td>Other quantit </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00254">254</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b46ea85ccd68848ca76d967b1f07222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt; _Ref1, _Ref2 &gt;  &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Oth &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>oth</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Implements the const call operator via <code>CRTP</code> </p>
+<p>&lt; Other quantit </p>
+
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00255">255</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>

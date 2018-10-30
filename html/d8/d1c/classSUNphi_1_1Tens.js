@@ -15,6 +15,8 @@ var classSUNphi_1_1Tens =
     [ "getStor", "d8/d1c/classSUNphi_1_1Tens.html#adbdd48967cfd28ef9c73f149856875b4", null ],
     [ "getStor", "d8/d1c/classSUNphi_1_1Tens.html#a3576c6b972d3185a9e0555dcc703869b", null ],
     [ "isAliasing", "d8/d1c/classSUNphi_1_1Tens.html#a7e8a55e1422587c89d87dfdc780d85da", null ],
+    [ "operator()", "d8/d1c/classSUNphi_1_1Tens.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
+    [ "operator()", "d8/d1c/classSUNphi_1_1Tens.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
     [ "operator=", "d8/d1c/classSUNphi_1_1Tens.html#a3270ad712e0cd784cc23dcb3a1ec8489", null ],
     [ "operator~", "d8/d1c/classSUNphi_1_1Tens.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "d8/d1c/classSUNphi_1_1Tens.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],

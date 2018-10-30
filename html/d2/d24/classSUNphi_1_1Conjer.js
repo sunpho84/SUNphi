@@ -12,6 +12,8 @@ var classSUNphi_1_1Conjer =
     [ "getMergedCompsView", "d2/d24/classSUNphi_1_1Conjer.html#ab10031cca4aafe226708e3ee313168eb", null ],
     [ "getMergedCompsView", "d2/d24/classSUNphi_1_1Conjer.html#ace4abe7e10167363cb670c876e63c7be", null ],
     [ "isAliasing", "d2/d24/classSUNphi_1_1Conjer.html#a3d31ed8f09151138a2f7e10fd574b999", null ],
+    [ "operator()", "d2/d24/classSUNphi_1_1Conjer.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
+    [ "operator()", "d2/d24/classSUNphi_1_1Conjer.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
     [ "operator~", "d2/d24/classSUNphi_1_1Conjer.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "d2/d24/classSUNphi_1_1Conjer.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
     [ "isAssignable", "d2/d24/classSUNphi_1_1Conjer.html#ab68fef5f4587b019e5fb93d1ecba9495", null ],

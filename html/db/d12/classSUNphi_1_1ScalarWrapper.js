@@ -13,6 +13,8 @@ var classSUNphi_1_1ScalarWrapper =
     [ "getMergedCompsView", "db/d12/classSUNphi_1_1ScalarWrapper.html#a37c0001776aa22c4901b0b803b75546a", null ],
     [ "getMergedCompsView", "db/d12/classSUNphi_1_1ScalarWrapper.html#ab4869c064fc96148974789b1157b30e5", null ],
     [ "isAliasing", "db/d12/classSUNphi_1_1ScalarWrapper.html#a0ac2de082b183d8b04d36a94717115a0", null ],
+    [ "operator()", "db/d12/classSUNphi_1_1ScalarWrapper.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
+    [ "operator()", "db/d12/classSUNphi_1_1ScalarWrapper.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
     [ "operator=", "db/d12/classSUNphi_1_1ScalarWrapper.html#a8a03f7466362e147db81fa740ea17574", null ],
     [ "operator~", "db/d12/classSUNphi_1_1ScalarWrapper.html#a968fdedc3e4dffd1247a1890e168bae5", null ],
     [ "operator~", "db/d12/classSUNphi_1_1ScalarWrapper.html#ab9ed5275ecef9dfc025fb6587273ec5e", null ],
