@@ -7,25 +7,10 @@
 
 #include <ints/Ranges.hpp>
 #include <tuple/TupleClass.hpp>
+#include <utility/Position.hpp>
 
 namespace SUNphi
 {
-  /// Lament the absence of an element
-  [[ maybe_unused ]]
-  static constexpr bool
-  ASSERT_IF_NOT_PRESENT=
-    true;
-  
-  /// Do not lament the absence of an element
-  [[ maybe_unused ]]
-  static constexpr bool
-  DO_NOT_ASSERT_IF_NOT_PRESENT=
-    false;
-  
-  /// Mark the absence of an element
-  static constexpr int NOT_PRESENT=
-    -1;
-  
   /// Gets the position of a type in a tuple
   ///
   /// Internal implementation, empty case
