@@ -212,6 +212,23 @@ namespace SUNphi
   // Check that we know how to get a MergedCompsView
   DEFINE_HAS_MEMBER(getMergedCompsView);
   
+  /// Provides the \c MergedDelim attribute for Refs of a given \c ID
+  ///
+  /// \todo Add some more explenation...
+#define PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(ID)	\
+  /*! Position of all the \c TensComp of \c Ref ## ID in Res Tk */	\
+  using posOfRef ## ID ## TcsInResTk=					\
+    posOfTypesNotAsserting<typename Tk::types,typename TK ## ID::types>; \
+  									\
+  /*! Position of all the \c TensComp of \c Ref ## ID present in Res Tk */ \
+  using posOfRef ## ID ## PresTcsInResTk=				\
+    FilterVariadicClassPos<IsNonNegative,posOfRef ## ID ## TcsInResTk>; \
+  									\
+  /*! Merged delimiters of Ref ## ID according to MD */			\
+  template <typename MD> /* Required merging delimiters */		\
+  using MergedDelims ## ID=						\
+    PairOfTensKindMergeability::MergedDelimsInRef<TK ## ID::nTypes,MD,posOfRef ## ID ## TcsInResTk>
+    
   /////////////////////////////////////////////////////////////////
   
   /// Defines the check for a SmET

@@ -23,23 +23,104 @@
 /// - If the innermost component is vectorizable, it is vectorized.
 /// - The execution of the assigner is dispatched to the thread pool.
 ///
-#include <tens/TensKind.hpp>
-#include <tens/TensClass.hpp>
+
+#include <smet/BinarySmET.hpp>
 #include <smet/Bind.hpp>
-#include <smet/ScalarWrap.hpp>
 #include <smet/Reference.hpp>
+#include <smet/ScalarWrap.hpp>
+#include <tens/TensClass.hpp>
+#include <tens/TensKind.hpp>
 
 namespace SUNphi
 {
-  /// Default assigner taking only SmET as left argument
+  // Base type to qualify as an \c Assigner
+  DEFINE_BASE_TYPE(Assigner);
+  
+  /// Class to assign a \c SmET to another one
+  template <typename _Ref1,                                    // Type of l.h.s
+	    typename _Ref2,                                    // Type of r.h.s
+	    typename TK1=typename RemoveReference<_Ref1>::Tk,  // \c TensKind of the l.h.s
+	    typename TK2=typename RemoveReference<_Ref2>::Tk>  // \c TensKind of the r.h.s
+  class Assigner :
+    public BaseAssigner,                          // Inherit from \c BaseAssigner to detect in expression
+    public BinarySmET<Assigner<_Ref1,_Ref2>>      // Inherit from \c BinarySmET
+  {
+    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref1>);
+    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref2>);
+    
+    // Check that the r.h.s Fund type can be converted into l.h.s
+    static_assert(canBeConverted<
+		  FundTypeOf<_Ref2>,
+		  FundTypeOf<_Ref1>>,
+		  "Need to be able to convert the r.h.s into l.h.s fundamental types");
+    
+  public:
+    
+    /// Returns the size of a component
+    template <typename TC,
+	      typename=ConstrainIsTensComp<TC>>
+    int compSize() const
+    {
+      // Returns the size if it's in the l.h.s \c Tk or in the r.h.s one
+      if constexpr(tupleHasType<TC,TK1>)
+	 return ref1.template compSize<TC>();
+      else
+	CRASH("Cannot refer to a TensComp which is not in the l.h.s");
+    }
+    
+    PROVIDE_BINARY_SMET_REFS;
+    
+    // Attributes
+    NOT_STORING;
+    FORWARD_IS_ALIASING_TO_REFS;
+    
+    /// \c TensorKind of the result is the same of l.h.s
+    PROVIDE_TK(TkOf<_Ref1>);
+    
+    /// Fundamental type is of the same type of the l.h.s
+    PROVIDE_FUND(FundTypeOf<Ref1>);
+    
+    PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
+    PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);
+    
+    PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS;
+    
+    // Returns a component-merged version
+    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their assignement */,
+    				  return
+				  ref1.template getMergedCompsView<MergedDelims1<Is>>()=
+				  ref2.template getMergedCompsView<MergedDelims2<Is>>(););
+    
+    /// Provides either the const or non-const evaluator
+#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
+    /*! QUALIFIER evaluator for Assigner, evaluating r.h.s           */	\
+    template <typename...Args>           /* Type of the arguments    */	\
+    DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
+      QUALIFIER								\
+    {									\
+      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
+      									\
+      return ref2.eval(forw<Args>(args)...);				\
+    }									\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
+    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
+    
+#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
+    
+    PROVIDE_BINARY_SMET_SIMPLE_CREATOR(Assigner);
+  };
+  
+  /// Default assigner taking only \c SmET as left argument
   ///
-  /// \c Rhs can be a SmEt or not, in which case it is wrapped into a Scalar
-  template <typename Lhs, 	    // Type of the l.h.s SmET
+  /// \c Rhs can be a \c SmET or not, in which case it is wrapped into a Scalar
+  template <typename Lhs, 	    // Type of the l.h.s \c SmET
 	    typename Rhs, 	    // Type of the r.h.s
 	    SFINAE_ON_TEMPLATE_ARG(isSmET<Lhs> and
 				   Unqualified<Lhs>::isAssignable),
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  void assign(Lhs&& lhs,             ///< First SmET to act upon
+  void assign(Lhs&& lhs,             ///< Left hand side, \c SmET to act upon
 	      Rhs&& rhs,             ///< Right hand side
 	      SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
@@ -53,11 +134,6 @@ namespace SUNphi
       return assign(forw<Lhs>(lhs),scalarWrap(forw<Rhs>(rhs)));
 //     else
 //       {
-// 	// Check that the rhs can be converted into lhs
-// 	static_assert(canBeConverted<
-// 		      FundTypeOf<Rhs>,
-// 		      FundTypeOf<Lhs>>,
-// 		      "Need to be able to convert the rhs into lhs fundamental types");
 	
 // 	if constexpr(TkOf<Lhs>::template contains<TkOf<Rhs>>)
 // 	  {
