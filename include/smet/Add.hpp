@@ -12,192 +12,17 @@
 
 namespace SUNphi
 {
-  /// Determine mergeability of pair of \c TensKind according to a third one
-  namespace PairOfTensKindMergeability
-  {
-    /// Possible outcome of where a component is found in a \c TensKind
-    ///
-    /// The component can be at the beginning, or it can be present in
-    /// one or both \c TensKind
-    enum Presence_t
-      {
-	BEGIN_OF_TK,         ///< Begin of the resulting \c TensKind
-	ABSENT_IN_FIRST,     ///< The component is absent in the first \c TensKind
-	ABSENT_IN_SECOND,    ///< The component is absent in the second \c TensKind
-	PRESENT_IN_BOTH};    ///< The component is present in both \c TensKind
-    
-    /// Returns where the component is present in the two \c TensKind
-    ///
-    /// The two values \c A1 and \c A2 contains the position where the component is present
-    ///
-    /// If A1 is \c NOT_PRESENT, marks \c ABSENT_IN_FIRST
-    /// If A2 is \c NOT_PRESENT, marks \c ABSENT_IN_SECOND
-    /// Otherwise marks \c PRESENT_IN_BOTH
-    template <int A1, // First component position
-	      int A2> // Second component position
-    [[ maybe_unused ]]
-    constexpr Presence_t compPresenceInTKs=
-      (A1==NOT_PRESENT)?ABSENT_IN_FIRST:
-	       ((A2==NOT_PRESENT)?ABSENT_IN_SECOND:
-		PRESENT_IN_BOTH);
-    
-    /// Determine the mergeability of a given \c TensComp
-    ///
-    /// Terminator of the nested implementation, returning an \c
-    /// IntSeq holding just the current position, as final delimiter
-    template <Presence_t PrevPres=BEGIN_OF_TK,  // Previous position presence
-	      int ResPos=0,                     // Position probed
-	      int PrevPos1=0,                   // Previous position in the first \c TensKind
-	      int PrevPos2=0,                   // Previous position in the second \c TensKind
-	      int...MPos1,                      // Mergeability delimiters of first SmET
-	      int...MPos2>                      // Mergeability delimiters of second SmET
-    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1, ///< Holds the mergeability delimiters of first SmET
-				IntSeq<MPos2...> MP2, ///< Holds the mergeability delimiters of second SmET
-				IntSeq<> P1,          ///< Holds the position of first SmET where the result TensComp are found
-				IntSeq<> P2)          ///< Holds the position of second SmET where the result TensComp are found
-    {
-      return IntSeq<ResPos>{};
-    }
-    
-    /// Determine the mergeability of a given \c TensComp
-    ///
-    /// Nested internal implementation, catting the current component
-    /// with the tail mergeability.
-    template <Presence_t PrevPres=BEGIN_OF_TK,  // Previous position presence
-	      int ResPos=0,                     // Position probed
-	      int PrevPos1=0,                   // Previous position in the first \c TensKind
-	      int PrevPos2=0,                   // Previous position in the second \c TensKind
-	      int...MPos1,                      // Mergeability delimiters of first SmET
-	      int...MPos2,                      // Mergeability delimiters of second SmET
-	      int Head1,                        // Current component position in the first SmET
-	      int...Tail1,                      // Other components position in the first SmET
-	      int Head2,                        // Current component position in the second SmET
-	      int...Tail2>                      // Other components position in the second SmET
-    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1,         ///< Holds the mergeability delimiters of first SmET
-				IntSeq<MPos2...> MP2,         ///< Holds the mergeability delimiters of second SmET
-				IntSeq<Head1,Tail1...> P1,    ///< Holds the position of first SmET where the result TensComp are found
-				IntSeq<Head2,Tail2...> P2)    ///< Holds the position of second SmET where the result TensComp are found
-    {
-      /// Presence of current position
-      constexpr Presence_t curPres=
-	compPresenceInTKs<Head1,
-			  Head2>;
-      
-      /// Check consecutivity in first \c TensKind
-      constexpr int curNotConsecutive1=
-	(PrevPos1!=NOT_PRESENT)
-	and
-	(Head1!=PrevPos1+1);
-      
-      /// Check consecutivity in second \c TensKind
-      constexpr int curNotConsecutive2=
-	(PrevPos2!=NOT_PRESENT)
-	and
-	(Head2!=PrevPos2+1);
-      
-      /// Result of mergeability of nested components
-      using Nested=
-	decltype(_compsMergeability<curPres,ResPos+1,Head1,Head2>(IntSeq<MPos1...>{},IntSeq<MPos2...>{},IntSeq<Tail1...>{},IntSeq<Tail2...>{}));
-      
-      /// Check if the component was mergeable in the first \c TensKind
-      constexpr bool originallyNotMergeableIn1=
-	((MPos1==Head1) || ...);
-      
-      /// Check if the component was mergeable in the second \c TensKind
-      constexpr bool originallyNotMergeableIn2=
-	((MPos2==Head2) || ...);
-      
-      /// Determine if a break in mergeability is needed
-      constexpr bool insBreak=
-	originallyNotMergeableIn1
-      or
-	originallyNotMergeableIn2
-      or
-	PrevPres!=curPres
-      or
-	curNotConsecutive1
-      or
-	curNotConsecutive2;
-      
-      /// Insert a break or not
-      if constexpr(insBreak)
-        return IntSeqCat<IntSeq<ResPos>,Nested>{};
-      else
-	return Nested{};
-    }
-    
-    /// Determine the mergeability of a given \c TensComp
-    ///
-    /// A component is declared mergeable if its presence in the two
-    /// \c TensKind is of the same nature of the previous one, if its
-    /// position inside the two \c TensKind is consecutive with
-    /// previous \c TensComp, and if the component was mergeable
-    template <typename MP1,
-	      typename MP2,
-	      typename I1,
-	      typename I2>
-    using CompsMergeability=
-      decltype(_compsMergeability(MP1{},MP2{},I1{},I2{}));
-    
-    /////////////////////////////////////////////////////////////////
-    
-    /// Returns the position, if any, that the merge delimiter must assume in the reference
-    template <int NRefComps,       // Number of components in the reference \c TensKind
-	      int MDel,            // Res delimiter to be added
-	      int...PosInRef>      // Position of the ResComp in the reference \c TensKind
-    DECLAUTO mergedDelimInRef(IntSeq<PosInRef...>)
-    {
-      /// Positions assumed in the reference
-      ///
-      /// The number of component in Ref is added, for convenience, so
-      /// to make it possible to search for the end delimiter
-      using Is=
-	IntSeq<PosInRef...,NRefComps>;
-      
-      /// Position of the component MDel
-      constexpr int P=
-	Is::template element<MDel>();
-      
-      // If the component is not present return empty
-      if constexpr(P!=NOT_PRESENT)
-	return IntSeq<P>{};
-      else
-	return IntSeq<>{};
-    }
-    
-    /// Returns the positions, that the merge delimiter must assume in the reference
-    ///
-    /// Internal implementation, catting the result of the single delimiter search
-    template <int NRefComps,       // Number of components in the reference \c TensKind
-	      int...MDel,          // Res delimiters to be added
-	      int...PosInRef>      // Position of the ResComp in the reference \c TensKind
-    DECLAUTO mergedDelimsInRef(IntSeq<MDel...>,
-			       IntSeq<PosInRef...>)
-    {
-      return IntSeqCat<decltype(mergedDelimInRef<NRefComps,MDel>(IntSeq<PosInRef...>{}))...>{};
-    }
-    
-    /// Returns the positions, that the merge delimiter must assume in the reference
-    ///
-    /// Gives visibility to internalimplementation
-    template <int NRefComps,
-	      typename MDel,
-	      typename PosInRef>
-    using MergedDelimsInRef=
-      decltype(mergedDelimsInRef<NRefComps>(MDel{},PosInRef{}));
-  }
-  
   // Base type to qualify as Adder
   DEFINE_BASE_TYPE(Adder);
   
-  /// Class to take the added of a SmET
+  /// Class to add two \c SmET
   template <typename _Ref1,                                    // First addendum type
 	    typename _Ref2,                                    // Second addendum type
-	    typename TK1=typename RemoveReference<_Ref1>::Tk,  // Tens Kind of the first addendum type
-	    typename TK2=typename RemoveReference<_Ref2>::Tk>  // Tens Kind of the second addendum type
+	    typename TK1=typename RemoveReference<_Ref1>::Tk,  // \c TensKind of the first addendum type
+	    typename TK2=typename RemoveReference<_Ref2>::Tk>  // \c TensKind of the second addendum type
   class Adder :
-    public BaseAdder,                         // Inherit from BaseAdder to detect in expression
-    public BinarySmET<Adder<_Ref1,_Ref2>>,    // Inherit from BinarySmET
+    public BaseAdder,                         // Inherit from \c BaseAdder to detect in expression
+    public BinarySmET<Adder<_Ref1,_Ref2>>,    // Inherit from \c BinarySmET
     public ConstrainAreTensKinds<TK1,TK2>     // Constrain type TK1 and TK2 to be a TensKind
   {
     STATIC_ASSERT_IS_SMET(RemoveReference<_Ref1>);
@@ -232,33 +57,10 @@ namespace SUNphi
     PROVIDE_FUND(decltype(typename RemoveReference<Ref1>::Fund{}+
 			  typename RemoveReference<Ref2>::Fund{}));
     
-    /// Provides the MergedDelim attribute for Refs 1 and 2
-#define PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(ID) \
-    /*! Position of the \c TensComp of Addend ## ID in Res Tk */	\
-    using posOfAddend ## ID ## TcInResTk=				\
-      posOfTypesNotAsserting<typename Tk::types,typename TK ## ID::types>; \
-									\
-    /*! Position of the \c TensComp of Addend ## ID present in Res Tk */ \
-    using posOfAddend ## ID ## PresTcInResTk=				\
-      FilterVariadicClassPos<IsNonNegative,posOfAddend ## ID ## TcInResTk>; \
-    									\
-    /*! Merged delimiters of Ref ## ID according to MD */		\
-    template <typename MD> /* Required merging delimiters */		\
-    using MergedDelims ## ID=						\
-      PairOfTensKindMergeability::MergedDelimsInRef<TK ## ID::nTypes,MD,posOfAddend ## ID ## TcInResTk>
+    PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
+    PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);
     
-    PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
-    PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);
-    
-#undef PROVIDE_POS_OF_ADDEND_TC_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF
-       
-    // Provide component-mergeabilty
-    PROVIDE_MERGEABLE_COMPS(/*! Defer the mergeability to the internal implementation*/,
-			    PairOfTensKindMergeability::template CompsMergeability<
-			    typename RemoveReference<Ref1>::MergeableComps,
-			    typename RemoveReference<Ref2>::MergeableComps,
-			    posOfAddend1TcInResTk,
-			    posOfAddend2TcInResTk>);
+    PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS;
     
     // Returns a component-merged version
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their sum */,
@@ -295,8 +97,8 @@ namespace SUNphi
     {									\
       STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
       									\
-      return adder_internal_eval(posOfAddend1PresTcInResTk{},		\
-				 posOfAddend2PresTcInResTk{},		\
+      return adder_internal_eval(posOfRef1PresTcsInResTk{},		\
+				 posOfRef2PresTcsInResTk{},		\
 				 std::forward_as_tuple(args...));	\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
@@ -305,8 +107,6 @@ namespace SUNphi
     PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
     
 #undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
-    
-    
     
     PROVIDE_BINARY_SMET_SIMPLE_CREATOR(Adder);
   };
