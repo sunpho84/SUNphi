@@ -38,10 +38,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca",
-"d6/d3f/TensKind_8hpp_source.html",
-"da/d5e/BinarySmET_8hpp.html#a51288383610f27f09988c10874db1abd",
-"dd/d8a/structSUNphi_1_1HasMember__isAssignable.html#a614670933b73c5cec0520ca08abfabe5"
+"d3/d22/classSUNphi_1_1TensStor.html",
+"d5/dd3/classSUNphi_1_1Transposer.html#a968fdedc3e4dffd1247a1890e168bae5",
+"d9/dfb/Spin_8hpp.html#a23adbb8c4841cf214d7b7d5d47979972",
+"dd/d03/classSUNphi_1_1UMinuser.html#a4e0c85980b45c0e7551783773d10a6ec"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

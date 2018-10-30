@@ -40,6 +40,7 @@ var namespaceSUNphi =
     [ "_TwinCompOf< CnCol >", "d3/da1/structSUNphi_1_1__TwinCompOf_3_01CnCol_01_4.html", "d3/da1/structSUNphi_1_1__TwinCompOf_3_01CnCol_01_4" ],
     [ "TwinTensCompOf< Col >", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4" ],
     [ "Adder", "de/d58/classSUNphi_1_1Adder.html", "de/d58/classSUNphi_1_1Adder" ],
+    [ "Assigner", "d4/d4b/classSUNphi_1_1Assigner.html", "d4/d4b/classSUNphi_1_1Assigner" ],
     [ "HasMember_name", "d3/d59/structSUNphi_1_1HasMember__name.html", "d3/d59/structSUNphi_1_1HasMember__name" ],
     [ "ConstrainHasMember_name", "d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html", null ],
     [ "HasMember_eval", "d8/dfe/structSUNphi_1_1HasMember__eval.html", "d8/dfe/structSUNphi_1_1HasMember__eval" ],

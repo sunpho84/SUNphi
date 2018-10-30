@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('d3/dd7/namespaceSUNphi.html','../../')
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html">PairOfTensKindMergeability</a></td></tr>
-<tr class="memdesc:df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine mergeability of pair of <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> according to a third one. <br/></td></tr>
+<tr class="memdesc:df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine mergeability of pair of <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code>. <br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -210,7 +210,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html">TwinTensCompOf&lt; Col &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the added of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../de/d58/classSUNphi_1_1Adder.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to add two <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code>.  <a href="../../de/d58/classSUNphi_1_1Adder.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4b/classSUNphi_1_1Assigner.html">Assigner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to assign a <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> to another one.  <a href="../../d4/d4b/classSUNphi_1_1Assigner.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d59/structSUNphi_1_1HasMember__name.html">HasMember_name</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -699,6 +702,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3">adj</a> (T &amp;&amp;ref)</td></tr>
 <tr class="memdesc:a855b8db955c1f92e1f04c22c0ec834e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjoint expression <code>ref</code>.  <a href="#a855b8db955c1f92e1f04c22c0ec834e3">More...</a><br/></td></tr>
 <tr class="separator:a855b8db955c1f92e1f04c22c0ec834e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c86af5f33c184e0f224ae0d8350e64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83c86af5f33c184e0f224ae0d8350e64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BASE_TYPE</b> (<a class="el" href="../../d4/d4b/classSUNphi_1_1Assigner.html">Assigner</a>)</td></tr>
+<tr class="separator:a83c86af5f33c184e0f224ae0d8350e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3235642bedbaf4675b54936e87e2318"><td class="memTemplParams" colspan="2">template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqualified&lt; Lhs &gt;::isAssignable), void * &gt;  = nullptr, typename... DummyTypes&gt; </td></tr>
 <tr class="memitem:aa3235642bedbaf4675b54936e87e2318"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa3235642bedbaf4675b54936e87e2318">assign</a> (Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)</td></tr>
 <tr class="separator:aa3235642bedbaf4675b54936e87e2318"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1151,15 +1157,6 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplParams" colspan="2">template&lt;typename TpToSearch , typename TpContaining &gt; </td></tr>
 <tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3330d99dcdc530c0a7be5eb1b2af9eb">tupleHasTypes</a></td></tr>
 <tr class="separator:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa00fa242ec59da2fc52f750c44b45c16"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">ASSERT_IF_NOT_PRESENT</a></td></tr>
-<tr class="memdesc:aa00fa242ec59da2fc52f750c44b45c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lament the absence of an element.  <a href="#aa00fa242ec59da2fc52f750c44b45c16">More...</a><br/></td></tr>
-<tr class="separator:aa00fa242ec59da2fc52f750c44b45c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">DO_NOT_ASSERT_IF_NOT_PRESENT</a></td></tr>
-<tr class="memdesc:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not lament the absence of an element.  <a href="#aeb97b1097d4d1f1a5729af1c115fabe7">More...</a><br/></td></tr>
-<tr class="separator:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a></td></tr>
-<tr class="memdesc:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the absence of an element.  <a href="#a1704de9acff8e8441dbcf1abc9b5cc01">More...</a><br/></td></tr>
-<tr class="separator:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab5207e39daa5c0744e1daedb9a4058c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Tp &gt; </td></tr>
 <tr class="memitem:aab5207e39daa5c0744e1daedb9a4058c"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c">posOfType</a></td></tr>
 <tr class="separator:aab5207e39daa5c0744e1daedb9a4058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1169,6 +1166,15 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a6d75beaf6774318d2a6e3f2a1436dbd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d75beaf6774318d2a6e3f2a1436dbd2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TP</b> {})...&gt;</td></tr>
 <tr class="separator:a6d75beaf6774318d2a6e3f2a1436dbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00fa242ec59da2fc52f750c44b45c16"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">ASSERT_IF_NOT_PRESENT</a></td></tr>
+<tr class="memdesc:aa00fa242ec59da2fc52f750c44b45c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lament the absence of an element.  <a href="#aa00fa242ec59da2fc52f750c44b45c16">More...</a><br/></td></tr>
+<tr class="separator:aa00fa242ec59da2fc52f750c44b45c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aeb97b1097d4d1f1a5729af1c115fabe7">DO_NOT_ASSERT_IF_NOT_PRESENT</a></td></tr>
+<tr class="memdesc:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not lament the absence of an element.  <a href="#aeb97b1097d4d1f1a5729af1c115fabe7">More...</a><br/></td></tr>
+<tr class="separator:aeb97b1097d4d1f1a5729af1c115fabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a></td></tr>
+<tr class="memdesc:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the absence of an element.  <a href="#a1704de9acff8e8441dbcf1abc9b5cc01">More...</a><br/></td></tr>
+<tr class="separator:a1704de9acff8e8441dbcf1abc9b5cc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. </p>
@@ -1237,7 +1243,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T to inherits from <code><a class="el" href="../../d2/d98/structSUNphi_1_1BaseBinarySmET.html" title="Defines the BinarySmET type traits. ">BaseBinarySmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1260,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T not to inherits from <code><a class="el" href="../../d2/d98/structSUNphi_1_1BaseBinarySmET.html" title="Defines the BinarySmET type traits. ">BaseBinarySmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1304,9 +1310,9 @@ template&lt;int N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000019">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000022">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
@@ -1493,7 +1499,7 @@ template&lt;typename TpToSearch , typename TpToProbe &gt; </div>
 <p>Position of the Tuple types <code>TpToSearch</code> in the Tuple <code>TpToProbe</code>, asserting</p>
 <p>An expection is issued if the type is not founs </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1517,7 @@ template&lt;typename TpToSearch , typename TpToProbe &gt; </div>
 <p>Position of the Tuple types <code>TpToSearch</code> in the Tuple <code>TpToProbe</code>, not asserting</p>
 <p>NOT_PRESENT is returned if the type is not present </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1553,7 @@ template&lt;typename T , typename  = ConstrainIsSmET&lt;T&gt;, bool IsStoring = 
 </div><div class="memdoc">
 <p>Reference to T or new type, depending on wheter the class isStoring</p>
 <p>Const qualifier is passed throughout </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>add functionality as in Eigen </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>add functionality as in Eigen </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d3/d78/Reference_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d3/d78/Reference_8hpp_source.html">Reference.hpp</a>.</p>
 
@@ -2257,7 +2263,7 @@ template&lt;bool assertIfNotPresent, typename T &gt; </div>
 <p>Gets the position of a type in a tuple</p>
 <p>Internal implementation, empty case </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -2292,7 +2298,7 @@ template&lt;bool assertIfNotPresent, typename T , typename Head , typename... Ta
 <p>Position in the nested list</p>
 <p>Mark if present in the Tail </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -2331,7 +2337,7 @@ template&lt;bool assertIfNotPresent, typename... T, typename TP &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -2463,8 +2469,8 @@ template&lt;typename T1 , typename T2 , typename... DummyTypes&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>&lt; Name of the <a class="el" href="../../d4/d8b/structSUNphi_1_1BinarySmET.html" title="Binary SmET. ">BinarySmET</a> to build</p>
-<p>Simple <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to take the added of a SmET. ">Adder</a> builder called add</p>
-<p>Plain <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to take the added of a SmET. ">Adder</a> getting a pair of plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
+<p>Simple <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to add two SmET. ">Adder</a> builder called add</p>
+<p>Plain <a class="el" href="../../de/d58/classSUNphi_1_1Adder.html" title="Class to add two SmET. ">Adder</a> getting a pair of plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">smet1</td><td>First <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
@@ -2473,7 +2479,7 @@ template&lt;typename T1 , typename T2 , typename... DummyTypes&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00333">333</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
 
 </div>
 </div>
@@ -2502,51 +2508,6 @@ template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&g
 </dl>
 
 <p>Definition at line <a class="el" href="../../d8/d3a/Adj_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d8/d3a/Adj_8hpp_source.html">Adj.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa3235642bedbaf4675b54936e87e2318"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqualified&lt; Lhs &gt;::isAssignable), void * &gt;  = nullptr, typename... DummyTypes&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void SUNphi::assign </td>
-          <td>(</td>
-          <td class="paramtype">Lhs &amp;&amp;&#160;</td>
-          <td class="paramname"><em>lhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Rhs &amp;&amp;&#160;</td>
-          <td class="paramname"><em>rhs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DummyTypes...&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Default assigner taking only <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> as left argument</p>
-<p><code>Rhs</code> can be a SmEt or not, in which case it is wrapped into a Scalar </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lhs</td><td>First <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> to act upon </td></tr>
-    <tr><td class="paramname">rhs</td><td>Right hand side </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -2587,6 +2548,51 @@ template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isTransposer&lt; Rhs &gt;),
 </dl>
 
 <p>Definition at line <a class="el" href="../../d0/d6d/Transpose_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d0/d6d/Transpose_8hpp_source.html">Transpose.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3235642bedbaf4675b54936e87e2318"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqualified&lt; Lhs &gt;::isAssignable), void * &gt;  = nullptr, typename... DummyTypes&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::assign </td>
+          <td>(</td>
+          <td class="paramtype">Lhs &amp;&amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rhs &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DummyTypes...&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Default assigner taking only <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> as left argument</p>
+<p><code>Rhs</code> can be a <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> or not, in which case it is wrapped into a Scalar </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Left hand side, <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> to act upon </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right hand side </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00123">123</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -3527,7 +3533,7 @@ template&lt;typename T1 , typename T2 , TypeIf&lt;(isSmET&lt; T1 &gt; and isSmET
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00339">339</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d65/Add_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../da/d65/Add_8hpp_source.html">Add.hpp</a>.</p>
 
 </div>
 </div>
@@ -4234,7 +4240,7 @@ template&lt;class Head , class... Tail&gt; </div>
 <div class="ttc" id="namespaceSUNphi_html_ad672c67c71c13820a0dcd0b12b88b438"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">SUNphi::hMul</a></div><div class="ttdeci">constexpr int hMul</div><div class="ttdoc">Product of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00062">IntListOperations.hpp:62</a></div></div>
 </div><!-- fragment --><p>Checks if a set of types are the same</p>
 <p>Perform an "and" of all single-type check </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000027">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
@@ -4262,7 +4268,7 @@ template&lt;class Head , class... Tail&gt; </div>
 </div><!-- fragment -->
 <p>Lament the absence of an element. </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d58/Position_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../dc/d58/Position_8hpp_source.html">Position.hpp</a>.</p>
 
 </div>
 </div>
@@ -4316,7 +4322,7 @@ template&lt;typename From , typename To &gt; </div>
 </div><!-- fragment -->
 <p>Do not lament the absence of an element. </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d58/Position_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../dc/d58/Position_8hpp_source.html">Position.hpp</a>.</p>
 
 </div>
 </div>
@@ -4697,7 +4703,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) ref1</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -4715,7 +4721,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) ref2</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -4960,7 +4966,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Expression which is true if T inherits from <code><a class="el" href="../../d2/d98/structSUNphi_1_1BaseBinarySmET.html" title="Defines the BinarySmET type traits. ">BaseBinarySmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -5629,7 +5635,7 @@ template&lt;class T , class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 </div><!-- fragment -->
 <p>Mark the absence of an element. </p>
 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d58/Position_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../dc/d58/Position_8hpp_source.html">Position.hpp</a>.</p>
 
 </div>
 </div>
@@ -5719,7 +5725,7 @@ template&lt;typename T , typename Tp &gt; </div>
 <div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//static_assert (not found)</span></div>
 <div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
@@ -5743,7 +5749,7 @@ template&lt;typename T , typename Tp &gt; </div>
 <div class="line"><span class="keywordtype">int</span> c=posOfType&lt;int,char,double,char&gt;;       <span class="comment">//NOT_PRESENT</span></div>
 <div class="line"><span class="keywordtype">int</span> d=posOfType&lt;int,int,int,char&gt;;           <span class="comment">//static_assert (multiple occurency)</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">TupleOrder.hpp</a>.</p>
 
 </div>
 </div>
