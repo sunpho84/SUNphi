@@ -137,10 +137,10 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Defines a class which assigns rhs SmET to lhs one. </p>
 <p>These are the steps:</p>
 <ul>
-<li>The call to A=B, with A being a SmET, is intercepted. If A is not assignable an exception is issued. This is done in all SmET, because operator= must be a static member function. The function assign(A,B) is called.</li>
-<li>All call to <code>assign</code> where B is not a <code>SmET</code> are intercepted. If B fundamental type is of a type that can be cast to the fundamental type of A, then we return A=scalar(B). Otherwise an exception is issued.</li>
-<li>If B does not contain all components of A, an exception is issued.</li>
-<li>Preliminary manipulation is performed, allowing to specific pattern recognition, obtained by overloading <code>assign</code> and using appropriate SFINAE mechanism.</li>
+<li>The call to <code>A=B</code>, with <code>A</code> being a 1c SmET, is intercepted. If <code>A</code> is not assignable an exception is issued. This step is performed in each individual <code>SmET</code>, because <code>operator=</code> must be a static member function. The function <code>assign(A,B)</code> is called.</li>
+<li>All call to <code>assign</code> where <code>B</code> is not a <code>SmET</code> are intercepted. If <code>B</code> fundamental type is of a type that can be cast to the fundamental type of A, then we return <code>A=scalar(B)</code>. Otherwise an exception is issued.</li>
+<li>If B does not contain all components of <code>A</code>, an exception is issued.</li>
+<li>Preliminary manipulation is performed, allowing to specific pattern recognition, obtained by overloading <code>assign</code> and using appropriate <code>SFINAE</code> mechanism.</li>
 <li>The default <code>assign</code> function is called, which returns the rhs as expected allowing to perform chain assignement on the expected return.</li>
 <li>The <code>Assigner</code> is created inside assign.</li>
 <li>If the <code>Assigner</code> has mergeable components, they are merged.</li>
