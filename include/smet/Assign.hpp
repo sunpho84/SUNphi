@@ -7,7 +7,7 @@
 ///
 /// These are the steps:
 ///
-/// - The call to \c A=B, with \c A being a 1c SmET, is intercepted. If \c A is
+/// - The call to \c A=B, with \c A being a \c SmET, is intercepted. If \c A is
 ///   not assignable an exception is issued. This step is performed in each individual \c SmET,
 ///   because \c operator= must be a static member function. The function \c assign(A,B) is called.
 /// - All call to \c assign where \c B is not a \c SmET are intercepted.

@@ -174,6 +174,45 @@ void checkTensKindIscontained()
   static_assert(not MyTk2::contains<MyTk1>,"Second TensKind contained");
 }
 
+/// Check the implementation of the call operator
+void checkCallOperator()
+{
+  /// Tensor Kind to be used
+  using MyTk=
+    TensKind<RwCol,
+	     Spin,
+	     CnCol>;
+  
+  /// Tensor class to be used
+  using MyTens=
+    Tens<MyTk,
+	 double>;
+  
+  /// Tensor to be used
+  MyTens tens;
+  
+  /// Value to be assigned
+  const double val=
+    10.0;
+  
+  // Try to assign and check it
+  tens=val;
+  
+  /// Result of the check
+  auto res=
+    tens(0,0,0);
+  
+  /// Type of the result, to be checked
+  using D=
+    decltype(res);
+  
+  cout
+    <<"Call result: "<<res<<", "
+    <<"is_lvalue_reference: "<<std::is_lvalue_reference_v<D><<", "
+    <<"is_const: "<<std::is_const_v<decltype(tens(0,0,0))>
+    <<endl;
+}
+
 #include <sstream>
 
 /// Prints an IntSeq
@@ -284,6 +323,8 @@ int main()
   checkSumOfTwoSmETs();
   
   checkScalarWrap();
+  
+  checkCallOperator();
   
   // Check on Diag
   {

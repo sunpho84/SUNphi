@@ -6,8 +6,11 @@
 /// \brief Header file defining basic properties of Smart Expression Templates
 
 #include <metaprogramming/CRTP.hpp>
-#include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
+#include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/UniversalReferences.hpp>
+
+#include <iostream>
 
 namespace SUNphi
 {
@@ -234,6 +237,24 @@ namespace SUNphi
     public BaseSmET
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
+    
+    /// Provide the call operator with a given qualifier
+#define PROVIDE_CALL_OPERATOR(QUALIFIER)				\
+    /*! Implements the QUALIFIER call operator via \c CRTP          */	\
+    template <typename...Oth>     /* Type of the other quantity     */	\
+    DECLAUTO operator()(Oth&&...oth) QUALIFIER /*!< Other quantit   */	\
+    {									\
+      if constexpr(0)							\
+	std::cout<<"Using CRTP to cast call operator"<<std::endl;       \
+									\
+      return (~(*this)).eval(forw<Oth>(oth)...);			\
+    }									\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    PROVIDE_CALL_OPERATOR();
+    PROVIDE_CALL_OPERATOR(const);
+    
+#undef PROVIDE_CALL_OPERATOR
   };
 }
 
