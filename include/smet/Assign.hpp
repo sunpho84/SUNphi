@@ -7,15 +7,15 @@
 ///
 /// These are the steps:
 ///
-/// - The call to A=B, with A being a SmET, is intercepted. If A is not assignable
-///   an exception is issued. This is done in all SmET, because operator= must be a
-///   static member function. The function assign(A,B) is called.
-/// - All call to \c assign where B is not a \c SmET are intercepted.
-///   If B fundamental type is of a type that can be cast to the fundamental
-///   type of A, then we return A=scalar(B). Otherwise an exception is issued.
-/// - If B does not contain all components of A, an exception is issued.
+/// - The call to \c A=B, with \c A being a 1c SmET, is intercepted. If \c A is
+///   not assignable an exception is issued. This step is performed in each individual \c SmET,
+///   because \c operator= must be a static member function. The function \c assign(A,B) is called.
+/// - All call to \c assign where \c B is not a \c SmET are intercepted.
+///   If \c B fundamental type is of a type that can be cast to the fundamental
+///   type of A, then we return \c A=scalar(B). Otherwise an exception is issued.
+/// - If B does not contain all components of \c A, an exception is issued.
 /// - Preliminary manipulation is performed, allowing to specific pattern recognition,
-///   obtained by overloading \c assign and using appropriate SFINAE mechanism.
+///   obtained by overloading \c assign and using appropriate \c SFINAE mechanism.
 /// - The default \c assign function is called, which returns the rhs as expected
 ///   allowing to perform chain assignement on the expected return.
 /// - The \c Assigner is created inside assign.
