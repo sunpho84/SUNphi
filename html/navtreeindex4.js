@@ -1,10 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"dd/d03/classSUNphi_1_1UMinuser.html#a331d0d34e24ba777dcc7b0584a8ed671":[2,0,0,73,12],
-"dd/d03/classSUNphi_1_1UMinuser.html#a3ec4fd395c4765821e74154cddd60ca3":[2,0,0,73,11],
-"dd/d03/classSUNphi_1_1UMinuser.html#a4b46ea85ccd68848ca76d967b1f07222":[2,0,0,73,14],
-"dd/d03/classSUNphi_1_1UMinuser.html#a4e0c85980b45c0e7551783773d10a6ec":[2,0,0,73,10],
-"dd/d03/classSUNphi_1_1UMinuser.html#a5a4eba7bfeff0d4e031aadc9cde49017":[2,0,0,73,2],
 "dd/d03/classSUNphi_1_1UMinuser.html#a63196e3f6664f7d095ad2c9e84b4de2c":[2,0,0,73,9],
 "dd/d03/classSUNphi_1_1UMinuser.html#a7b3d68512eb8a5de9db350f0a31c7fc9":[2,0,0,73,1],
 "dd/d03/classSUNphi_1_1UMinuser.html#a88177d7cc9991d609572453b2a9ee484":[2,0,0,73,0],
@@ -225,8 +220,6 @@ var NAVTREEINDEX4 =
 "namespacemembers_c.html":[1,1,0,3],
 "namespacemembers_d.html":[1,1,0,4],
 "namespacemembers_e.html":[1,1,0,5],
-"namespacemembers_enum.html":[1,1,4],
-"namespacemembers_eval.html":[1,1,5],
 "namespacemembers_f.html":[1,1,0,6],
 "namespacemembers_func.html":[1,1,1],
 "namespacemembers_g.html":[1,1,0,7],

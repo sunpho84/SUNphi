@@ -14,10 +14,8 @@ var indexSectionsWithContent =
   4: "_abcdefgimnoprstuw~",
   5: "_acdefghilmnoprstv",
   6: "abcdefikmnprstuvy",
-  7: "p",
-  8: "ab",
-  9: "acdfilmnprsu",
-  10: "t"
+  7: "acdfilmnprsu",
+  8: "t"
 };
 
 var indexSectionNames =
@@ -29,10 +27,8 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "enums",
-  8: "enumvalues",
-  9: "defines",
-  10: "pages"
+  7: "defines",
+  8: "pages"
 };
 
 function convertToId(search)

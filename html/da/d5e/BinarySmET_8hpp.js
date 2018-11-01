@@ -19,18 +19,12 @@ var BinarySmET_8hpp =
     [ "PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS", "da/d5e/BinarySmET_8hpp.html#a1db658f6375a4641dc6c774600a510da", null ],
     [ "SIMPLE_BINARY_SMET_BUILDER", "da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b", null ],
     [ "STATIC_ASSERT_IS_BINARY_SMET", "da/d5e/BinarySmET_8hpp.html#a12d2f620ba193656363a60374bdacfba", null ],
+    [ "AbsentInBoth", "da/d5e/BinarySmET_8hpp.html#aadb5e744cef035c023494f1688af5131", null ],
     [ "CompsMergeability", "da/d5e/BinarySmET_8hpp.html#af33438ef2877ca1a09e8023fda0de5b7", null ],
     [ "ConstrainIsBinarySmET", "da/d5e/BinarySmET_8hpp.html#a8f18e555330c9c49c8aead5591d4d66f", null ],
     [ "ConstrainIsNotBinarySmET", "da/d5e/BinarySmET_8hpp.html#a41e611b7ea9220b485bb75813e26a734", null ],
-    [ "Presence_t", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7", [
-      [ "BEGIN_OF_TK", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7ac741642b0de5867e236c3530985ed449", null ],
-      [ "ABSENT_IN_FIRST", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7a22a8db7a040a4aaea6f86c413cc45e10", null ],
-      [ "ABSENT_IN_SECOND", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7a5ffb9edcd4384d528b0855ef6cc95a70", null ],
-      [ "PRESENT_IN_BOTH", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7aac9214f3b6dee1dae2ee5726dddac85a", null ]
-    ] ],
     [ "_compsMergeability", "da/d5e/BinarySmET_8hpp.html#a5d1a485240ddadbf6cc5fe0d49ee0f1c", null ],
     [ "_compsMergeability", "da/d5e/BinarySmET_8hpp.html#a44bf40af94ef6285260b89bb38e47275", null ],
-    [ "compPresenceInTKs", "da/d5e/BinarySmET_8hpp.html#a8a592b048266a7d4c98e4c74a5b4baf7", null ],
     [ "hasMember_ref1", "da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c", null ],
     [ "hasMember_ref2", "da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b", null ],
     [ "isBinarySmET", "da/d5e/BinarySmET_8hpp.html#a51288383610f27f09988c10874db1abd", null ]
