@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d5/dd3/classSUNphi_1_1Transposer.html#a8750d0f6c467da5b2b48af8e2caf299c":[2,0,0,72,7],
 "d5/dd3/classSUNphi_1_1Transposer.html#a968fdedc3e4dffd1247a1890e168bae5":[2,0,0,72,16],
 "d5/dd3/classSUNphi_1_1Transposer.html#a990b120ce9e45b889924aec50b15dd81":[2,0,0,72,2],
 "d5/dd3/classSUNphi_1_1Transposer.html#ab8917c4dbc75835886ef828a6a65ac55":[2,0,0,72,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d9/d77/Filter_8hpp.html#a732dd7fc5ab30528272c05ec74b03fa3":[3,0,2,7,0,7],
 "d9/d77/Filter_8hpp.html#ac3f6250bba03a221a43a990bfb8d5e09":[3,0,2,7,0,8],
 "d9/d77/Filter_8hpp_source.html":[3,0,2,7,0],
-"d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html":[2,0,0,25],
-"d9/dfb/Spin_8hpp.html":[3,0,2,3,3]
+"d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html":[2,0,0,25]
 };

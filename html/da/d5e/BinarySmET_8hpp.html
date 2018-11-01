@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
+      <li><a href="../../examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -196,9 +197,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af33438ef2877ca1a09e8023fda0de5b7"><td class="memTemplParams" colspan="2">template&lt;typename MP1 , typename MP2 , typename I1 , typename I2 &gt; </td></tr>
 <tr class="memitem:af33438ef2877ca1a09e8023fda0de5b7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#af33438ef2877ca1a09e8023fda0de5b7">SUNphi::PairOfTensKindMergeability::CompsMergeability</a> = decltype(_compsMergeability(MP1{}, MP2{}, I1{}, I2{}))</td></tr>
 <tr class="separator:af33438ef2877ca1a09e8023fda0de5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, typename MDel , typename PosInRef &gt; </td></tr>
-<tr class="memitem:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#aedb6dd214cdd80843c43bdf715d49c1b">SUNphi::PairOfTensKindMergeability::MergedDelimsInRef</a> = decltype(mergedDelimsInRef&lt; NRefComps &gt;(MDel{}, PosInRef{}))</td></tr>
-<tr class="separator:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -217,13 +215,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a44bf40af94ef6285260b89bb38e47275"><td class="memTemplParams" colspan="2">template&lt;Presence_t PrevPres = BEGIN_OF_TK, int ResPos = 0, int PrevPos1 = 0, int PrevPos2 = 0, int... MPos1, int... MPos2, int Head1, int... Tail1, int Head2, int... Tail2&gt; </td></tr>
 <tr class="memitem:a44bf40af94ef6285260b89bb38e47275"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a44bf40af94ef6285260b89bb38e47275">SUNphi::PairOfTensKindMergeability::_compsMergeability</a> (IntSeq&lt; MPos1...&gt; MP1, IntSeq&lt; MPos2...&gt; MP2, IntSeq&lt; Head1, Tail1...&gt; P1, IntSeq&lt; Head2, Tail2...&gt; P2)</td></tr>
 <tr class="separator:a44bf40af94ef6285260b89bb38e47275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01401603f6af56fd070ea83d5e1db573"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, int MDel, int... PosInRef&gt; </td></tr>
-<tr class="memitem:a01401603f6af56fd070ea83d5e1db573"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a01401603f6af56fd070ea83d5e1db573">SUNphi::PairOfTensKindMergeability::mergedDelimInRef</a> (IntSeq&lt; PosInRef...&gt;)</td></tr>
-<tr class="memdesc:a01401603f6af56fd070ea83d5e1db573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position, if any, that the merge delimiter must assume in the reference.  <a href="#a01401603f6af56fd070ea83d5e1db573">More...</a><br/></td></tr>
-<tr class="separator:a01401603f6af56fd070ea83d5e1db573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, int... MDel, int... PosInRef&gt; </td></tr>
-<tr class="memitem:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a4a998f42fbf78ba72fb4662f68152fe4">SUNphi::PairOfTensKindMergeability::mergedDelimsInRef</a> (IntSeq&lt; MDel...&gt;, IntSeq&lt; PosInRef...&gt;)</td></tr>
-<tr class="separator:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -337,12 +328,12 @@ Variables</h2></td></tr>
 <div class="line">              <span class="keyword">typename</span> RemoveReference&lt;Ref2&gt;::MergeableComps, \</div>
 <div class="line">              posOfRef1TcsInResTk,              \</div>
 <div class="line">              posOfRef2TcsInResTk&gt;)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00156">BaseSmET.hpp:156</a></div></div>
-<div class="ttc" id="namespaceSUNphi_1_1PairOfTensKindMergeability_html_af33438ef2877ca1a09e8023fda0de5b7"><div class="ttname"><a href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#af33438ef2877ca1a09e8023fda0de5b7">SUNphi::PairOfTensKindMergeability::CompsMergeability</a></div><div class="ttdeci">decltype(_compsMergeability(MP1{}, MP2{}, I1{}, I2{})) CompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5e/BinarySmET_8hpp_source.html#l00218">BinarySmET.hpp:218</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00157">BaseSmET.hpp:157</a></div></div>
+<div class="ttc" id="namespaceSUNphi_1_1PairOfTensKindMergeability_html_af33438ef2877ca1a09e8023fda0de5b7"><div class="ttname"><a href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#af33438ef2877ca1a09e8023fda0de5b7">SUNphi::PairOfTensKindMergeability::CompsMergeability</a></div><div class="ttdeci">decltype(_compsMergeability(MP1{}, MP2{}, I1{}, I2{})) CompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5e/BinarySmET_8hpp_source.html#l00220">BinarySmET.hpp:220</a></div></div>
 </div><!-- fragment --><p>Provide component-mergeabilty according to the two refs, and the visible <code>Tk</code> </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>check that this is general enough... probably not </dd></dl>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00271">271</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -410,7 +401,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(ref1,__VA_ARGS__);       <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(ref2,__VA_ARGS__)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">BaseSmET.hpp:239</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00240">BaseSmET.hpp:240</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00404">TypeTraits.hpp:404</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Binary SmET. </p>

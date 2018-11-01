@@ -7,6 +7,7 @@ var searchData=
   ['intseqcat',['IntSeqCat',['../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39',1,'SUNphi']]],
   ['intseqfilter',['IntSeqFilter',['../d3/dd7/namespaceSUNphi.html#ae60031ca05f637ebafadef8570b5d931',1,'SUNphi']]],
   ['intseqfirstn',['IntSeqFirstN',['../d3/dd7/namespaceSUNphi.html#a0a9b8c90e309f5bde54d2b81863a5177',1,'SUNphi']]],
+  ['intseqgetelsafterappending',['IntSeqGetElsAfterAppending',['../d3/dd7/namespaceSUNphi.html#abc5ba55d61678f873b6edeadcd8fe27d',1,'SUNphi']]],
   ['intseqofsamenumb',['IntSeqOfSameNumb',['../d3/dd7/namespaceSUNphi.html#ae68028b37126a321ff9f863825618e79',1,'SUNphi']]],
   ['intsupto',['IntsUpTo',['../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b',1,'SUNphi']]],
   ['isdiagcomp',['IsDiagComp',['../d8/df8/classSUNphi_1_1TensKind.html#aa5c31e72d1216d0eda848586c308e95d',1,'SUNphi::TensKind']]],

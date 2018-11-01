@@ -22,7 +22,6 @@ var BinarySmET_8hpp =
     [ "CompsMergeability", "da/d5e/BinarySmET_8hpp.html#af33438ef2877ca1a09e8023fda0de5b7", null ],
     [ "ConstrainIsBinarySmET", "da/d5e/BinarySmET_8hpp.html#a8f18e555330c9c49c8aead5591d4d66f", null ],
     [ "ConstrainIsNotBinarySmET", "da/d5e/BinarySmET_8hpp.html#a41e611b7ea9220b485bb75813e26a734", null ],
-    [ "MergedDelimsInRef", "da/d5e/BinarySmET_8hpp.html#aedb6dd214cdd80843c43bdf715d49c1b", null ],
     [ "Presence_t", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7", [
       [ "BEGIN_OF_TK", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7ac741642b0de5867e236c3530985ed449", null ],
       [ "ABSENT_IN_FIRST", "da/d5e/BinarySmET_8hpp.html#a70790b84db426cd6eb86d27ab7368de7a22a8db7a040a4aaea6f86c413cc45e10", null ],
@@ -31,8 +30,6 @@ var BinarySmET_8hpp =
     ] ],
     [ "_compsMergeability", "da/d5e/BinarySmET_8hpp.html#a5d1a485240ddadbf6cc5fe0d49ee0f1c", null ],
     [ "_compsMergeability", "da/d5e/BinarySmET_8hpp.html#a44bf40af94ef6285260b89bb38e47275", null ],
-    [ "mergedDelimInRef", "da/d5e/BinarySmET_8hpp.html#a01401603f6af56fd070ea83d5e1db573", null ],
-    [ "mergedDelimsInRef", "da/d5e/BinarySmET_8hpp.html#a4a998f42fbf78ba72fb4662f68152fe4", null ],
     [ "compPresenceInTKs", "da/d5e/BinarySmET_8hpp.html#a8a592b048266a7d4c98e4c74a5b4baf7", null ],
     [ "hasMember_ref1", "da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c", null ],
     [ "hasMember_ref2", "da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b", null ],

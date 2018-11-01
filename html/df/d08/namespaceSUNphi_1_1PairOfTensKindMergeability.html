@@ -49,6 +49,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li class="current"><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
+      <li><a href="../../examples.html"><span>Examples</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -121,9 +122,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af33438ef2877ca1a09e8023fda0de5b7"><td class="memTemplParams" colspan="2">template&lt;typename MP1 , typename MP2 , typename I1 , typename I2 &gt; </td></tr>
 <tr class="memitem:af33438ef2877ca1a09e8023fda0de5b7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#af33438ef2877ca1a09e8023fda0de5b7">CompsMergeability</a> = decltype(<a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a5d1a485240ddadbf6cc5fe0d49ee0f1c">_compsMergeability</a>(MP1{}, MP2{}, I1{}, I2{}))</td></tr>
 <tr class="separator:af33438ef2877ca1a09e8023fda0de5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, typename MDel , typename PosInRef &gt; </td></tr>
-<tr class="memitem:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#aedb6dd214cdd80843c43bdf715d49c1b">MergedDelimsInRef</a> = decltype(<a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a4a998f42fbf78ba72fb4662f68152fe4">mergedDelimsInRef</a>&lt; NRefComps &gt;(MDel{}, PosInRef{}))</td></tr>
-<tr class="separator:aedb6dd214cdd80843c43bdf715d49c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -142,13 +140,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a44bf40af94ef6285260b89bb38e47275"><td class="memTemplParams" colspan="2">template&lt;Presence_t PrevPres = BEGIN_OF_TK, int ResPos = 0, int PrevPos1 = 0, int PrevPos2 = 0, int... MPos1, int... MPos2, int Head1, int... Tail1, int Head2, int... Tail2&gt; </td></tr>
 <tr class="memitem:a44bf40af94ef6285260b89bb38e47275"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a44bf40af94ef6285260b89bb38e47275">_compsMergeability</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; MPos1...&gt; MP1, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; MPos2...&gt; MP2, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Head1, Tail1...&gt; P1, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Head2, Tail2...&gt; P2)</td></tr>
 <tr class="separator:a44bf40af94ef6285260b89bb38e47275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01401603f6af56fd070ea83d5e1db573"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, int MDel, int... PosInRef&gt; </td></tr>
-<tr class="memitem:a01401603f6af56fd070ea83d5e1db573"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a01401603f6af56fd070ea83d5e1db573">mergedDelimInRef</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; PosInRef...&gt;)</td></tr>
-<tr class="memdesc:a01401603f6af56fd070ea83d5e1db573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position, if any, that the merge delimiter must assume in the reference.  <a href="#a01401603f6af56fd070ea83d5e1db573">More...</a><br/></td></tr>
-<tr class="separator:a01401603f6af56fd070ea83d5e1db573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memTemplParams" colspan="2">template&lt;int NRefComps, int... MDel, int... PosInRef&gt; </td></tr>
-<tr class="memitem:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a4a998f42fbf78ba72fb4662f68152fe4">mergedDelimsInRef</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; MDel...&gt;, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; PosInRef...&gt;)</td></tr>
-<tr class="separator:a4a998f42fbf78ba72fb4662f68152fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -171,27 +162,9 @@ template&lt;typename MP1 , typename MP2 , typename I1 , typename I2 &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Determine the mergeability of a given <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> </p>
-<p>A component is declared mergeable if its presence in the two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is of the same nature of the previous one, if its position inside the two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is consecutive with previous <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code>, and if the component was mergeable </p>
+<p>A component is declared mergeable if its presence in the two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is of the same nature of the previous one (e.g. present only in one of the two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code>, if its position inside the two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is consecutive with previous <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code>, and if the component was mergeable in both <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00218">218</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aedb6dd214cdd80843c43bdf715d49c1b"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int NRefComps, typename MDel , typename PosInRef &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#aedb6dd214cdd80843c43bdf715d49c1b">SUNphi::PairOfTensKindMergeability::MergedDelimsInRef</a> = typedef decltype(<a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a4a998f42fbf78ba72fb4662f68152fe4">mergedDelimsInRef</a>&lt;NRefComps&gt;(MDel{},PosInRef{}))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the positions, that the merge delimiter must assume in the reference</p>
-<p>Gives visibility to internal implementation </p>
-
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00265">265</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -262,13 +235,13 @@ template&lt;Presence_t PrevPres = BEGIN_OF_TK, int ResPos = 0, int PrevPos1 = 0,
       </table>
 </div><div class="memdoc">
 <p>Determine the mergeability of a given <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> </p>
-<p>Terminator of the nested implementation, returning an <code><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></code> holding just the current position, as final delimiter </p>
+<p>Terminator of the nested implementation, returning an <code><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></code> holding just the current searched position, as final delimiter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">MP1</td><td>Holds the mergeability delimiters of first <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </td></tr>
-    <tr><td class="paramname">MP2</td><td>Holds the mergeability delimiters of second <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </td></tr>
-    <tr><td class="paramname">P1</td><td>Holds the position of first <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> where the result <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> are found </td></tr>
-    <tr><td class="paramname">P2</td><td>Holds the position of second <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> where the result <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> are found </td></tr>
+    <tr><td class="paramname">MP1</td><td>Holds the mergeability delimiters of first <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </td></tr>
+    <tr><td class="paramname">MP2</td><td>Holds the mergeability delimiters of second <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </td></tr>
+    <tr><td class="paramname">P1</td><td>Holds the position of first <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> where the <code>Res</code> <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> are found </td></tr>
+    <tr><td class="paramname">P2</td><td>Holds the position of second <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> where the <code>Res</code> <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> are found </td></tr>
   </table>
   </dd>
 </dl>
@@ -314,7 +287,7 @@ template&lt;Presence_t PrevPres = BEGIN_OF_TK, int ResPos = 0, int PrevPos1 = 0,
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Determine the mergeability of a given <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> </p>
+<p>Determine the mergeability of a given <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code>, provided two <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
 <p>Nested internal implementation, catting the current component with the tail mergeability. </p>
 <p>Presence of current position</p>
 <p>Check consecutivity in first <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
@@ -326,72 +299,15 @@ template&lt;Presence_t PrevPres = BEGIN_OF_TK, int ResPos = 0, int PrevPos1 = 0,
 <p>Insert a break or not </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">MP1</td><td>Holds the mergeability delimiters of first <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </td></tr>
-    <tr><td class="paramname">MP2</td><td>Holds the mergeability delimiters of second <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </td></tr>
-    <tr><td class="paramname">P1</td><td>Holds the position of first <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> where the result <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> are found </td></tr>
-    <tr><td class="paramname">P2</td><td>Holds the position of second <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> where the result <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> are found </td></tr>
+    <tr><td class="paramname">MP1</td><td>Holds the mergeability delimiters of first <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </td></tr>
+    <tr><td class="paramname">MP2</td><td>Holds the mergeability delimiters of second <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </td></tr>
+    <tr><td class="paramname">P1</td><td>Holds the position of first <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> where the <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> is found </td></tr>
+    <tr><td class="paramname">P2</td><td>Holds the position of second <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> where the <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> is found </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a01401603f6af56fd070ea83d5e1db573"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int NRefComps, int MDel, int... PosInRef&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) SUNphi::PairOfTensKindMergeability::mergedDelimInRef </td>
-          <td>(</td>
-          <td class="paramtype">IntSeq&lt; PosInRef...&gt;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the position, if any, that the merge delimiter must assume in the reference. </p>
-<p>Positions assumed in the reference</p>
-<p>The number of component in Ref is added, for convenience, so to make it possible to search for the end delimiter</p>
-<p>Position of the component MDel </p>
-
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00226">226</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4a998f42fbf78ba72fb4662f68152fe4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int NRefComps, int... MDel, int... PosInRef&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) SUNphi::PairOfTensKindMergeability::mergedDelimsInRef </td>
-          <td>(</td>
-          <td class="paramtype">IntSeq&lt; MDel...&gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IntSeq&lt; PosInRef...&gt;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the positions, that the merge delimiter must assume in the reference</p>
-<p>Internal implementation, catting the result of the single delimiter search </p>
-
-<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00252">252</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
 
 </div>
 </div>

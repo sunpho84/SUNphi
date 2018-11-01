@@ -42,6 +42,8 @@ var searchData=
   ['_5fintseqfilter',['_IntSeqFilter',['../dd/d69/structSUNphi_1_1__IntSeqFilter.html',1,'SUNphi']]],
   ['_5fintseqfilter_3c_20intseq_3c_20ints_2e_2e_2e_3e_2c_20intseq_3c_20ids_2e_2e_2e_3e_20_3e',['_IntSeqFilter&lt; IntSeq&lt; Ints...&gt;, IntSeq&lt; Ids...&gt; &gt;',['../d7/dd9/structSUNphi_1_1__IntSeqFilter_3_01IntSeq_3_01Ints_8_8_8_4_00_01IntSeq_3_01Ids_8_8_8_4_01_4.html',1,'SUNphi']]],
   ['_5fintseqfirstn',['_IntSeqFirstN',['../dc/dbf/structSUNphi_1_1__IntSeqFirstN.html',1,'SUNphi']]],
+  ['_5fintseqgetelafterappending',['_IntSeqGetElAfterAppending',['../d3/dd7/namespaceSUNphi.html#ae9e0002e1a1c90bc053eb13e4fd74171',1,'SUNphi']]],
+  ['_5fintseqgetelsafterappending',['_IntSeqGetElsAfterAppending',['../d3/dd7/namespaceSUNphi.html#a36d73f008eecd29cee3fcfa76d91b317',1,'SUNphi']]],
   ['_5fintsupto',['_IntsUpTo',['../dc/d02/structSUNphi_1_1__IntsUpTo.html',1,'SUNphi']]],
   ['_5fintsupto_3c_200_20_3e',['_IntsUpTo&lt; 0 &gt;',['../de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html',1,'SUNphi']]],
   ['_5fintsupto_3c_201_20_3e',['_IntsUpTo&lt; 1 &gt;',['../d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html',1,'SUNphi']]],

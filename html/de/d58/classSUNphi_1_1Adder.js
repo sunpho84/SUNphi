@@ -2,8 +2,8 @@ var classSUNphi_1_1Adder =
 [
     [ "Fund", "de/d58/classSUNphi_1_1Adder.html#a93a5f0a6269fd4a6e7c679f4236f1ce6", null ],
     [ "MergeableComps", "de/d58/classSUNphi_1_1Adder.html#a258d982feb3ea5482f5ad5296a34e8cd", null ],
-    [ "MergedDelims1", "de/d58/classSUNphi_1_1Adder.html#adab112388b1b4d2f113910e0b37c9215", null ],
-    [ "MergedDelims2", "de/d58/classSUNphi_1_1Adder.html#a4e6a2f66b7f68f1e2ede6336b9ef7528", null ],
+    [ "MergedDelims1", "de/d58/classSUNphi_1_1Adder.html#af0963b8b90186ed1aa8da0e36bd4676d", null ],
+    [ "MergedDelims2", "de/d58/classSUNphi_1_1Adder.html#a76f6249816069120e953b1cc230016cf", null ],
     [ "posOfRef1PresTcsInResTk", "de/d58/classSUNphi_1_1Adder.html#ad19fce5e83d0eccfbd87e7099520c6dd", null ],
     [ "posOfRef1TcsInResTk", "de/d58/classSUNphi_1_1Adder.html#a8113b56d54ddf8802983955babd7a095", null ],
     [ "posOfRef2PresTcsInResTk", "de/d58/classSUNphi_1_1Adder.html#aa6e8d4a8ecb7549855dbc5bcb20eafce", null ],

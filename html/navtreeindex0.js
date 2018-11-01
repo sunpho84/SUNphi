@@ -151,6 +151,7 @@ var NAVTREEINDEX0 =
 "d1/d7a/TensStor_8hpp.html":[3,0,2,6,4],
 "d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b":[3,0,2,6,4,1],
 "d1/d7a/TensStor_8hpp_source.html":[3,0,2,6,4],
+"d1/d7e/_2home_2travis_2build_2sunpho84_2SUNphi_2include_2ints_2IntSeqGetEl_8hpp-example.html":[4,0],
 "d1/d8b/SUNphi_8hpp.html":[3,0,2,14],
 "d1/d8b/SUNphi_8hpp_source.html":[3,0,2,14],
 "d1/d96/structSUNphi_1_1TensComp.html":[2,0,0,83],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d3/d14/structSUNphi_1_1HasMember__ref2.html#a66c544bc84b8f47e42839cc79f622a65":[2,0,0,66,4],
 "d3/d14/structSUNphi_1_1HasMember__ref2.html#a752c08e70145e90196994e7c9f1d980e":[2,0,0,66,5],
 "d3/d14/structSUNphi_1_1HasMember__ref2.html#a920ff732fd6cc73868d83aa30b858b6e":[2,0,0,66,7],
-"d3/d14/structSUNphi_1_1HasMember__ref2.html#a9f5d95ccc3d8045555ade7a33218a484":[2,0,0,66,3],
-"d3/d14/structSUNphi_1_1HasMember__ref2.html#af3730fccee32fbdb92dc3acd697c7746":[2,0,0,66,6]
+"d3/d14/structSUNphi_1_1HasMember__ref2.html#a9f5d95ccc3d8045555ade7a33218a484":[2,0,0,66,3]
 };

@@ -15,6 +15,8 @@ var searchData=
   ['_5finsertinorderedintseq',['_insertInOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a720db653d34dae854d4f4d157cd33c59',1,'SUNphi::_insertInOrderedIntSeq(const IntSeq&lt; Bef...&gt; &amp;, const IntSeq&lt; HeadAft, TailAft...&gt; &amp;)'],['../d3/dd7/namespaceSUNphi.html#abd0526140c9fd847f8e96b6671fb990d',1,'SUNphi::_insertInOrderedIntSeq(const IntSeq&lt;&gt; &amp;, const IntSeq&lt;&gt; &amp;)']]],
   ['_5finsertintseqinorderedintseq',['_InsertIntSeqInOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a8c2770692539de53c80887bcfe651d60',1,'SUNphi::_InsertIntSeqInOrderedIntSeq(const IntSeq&lt; HeadToIns, TailToIns...&gt; &amp;toIns, const IntSeq&lt; HeadIncrAft, TailIncrAft...&gt; &amp;incrAft, const Is &amp;)'],['../d3/dd7/namespaceSUNphi.html#ac912bc599806238e7837122ca90341ae',1,'SUNphi::_InsertIntSeqInOrderedIntSeq(const IntSeq&lt;&gt; &amp;noIns, const IntSeq&lt;&gt; &amp;noIncrAft, const Is &amp;)']]],
   ['_5finserttruetwinnedposoftuple',['_InsertTrueTwinnedPosOfTuple',['../d3/dd7/namespaceSUNphi.html#af5a65f01dc5439c86a23082a0295054b',1,'SUNphi']]],
+  ['_5fintseqgetelafterappending',['_IntSeqGetElAfterAppending',['../d3/dd7/namespaceSUNphi.html#ae9e0002e1a1c90bc053eb13e4fd74171',1,'SUNphi']]],
+  ['_5fintseqgetelsafterappending',['_IntSeqGetElsAfterAppending',['../d3/dd7/namespaceSUNphi.html#a36d73f008eecd29cee3fcfa76d91b317',1,'SUNphi']]],
   ['_5flasteq',['_lastEq',['../d3/dd7/namespaceSUNphi.html#a5b8fd92c9b36ddc12851f4fd1c09fcfc',1,'SUNphi']]],
   ['_5flastlarger',['_lastLarger',['../d3/dd7/namespaceSUNphi.html#ac64cb60c4cd5f2b0106dbf9534ec781f',1,'SUNphi']]],
   ['_5flastnon',['_lastNon',['../d3/dd7/namespaceSUNphi.html#a7d7e4c41371a685730eba04429d8512a',1,'SUNphi']]],
