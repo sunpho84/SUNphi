@@ -8,7 +8,6 @@
 #include <ints/IntListOperations.hpp>
 #include <ints/IntListOrder.hpp>
 #include <ints/IntListGetEl.hpp>
-
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
