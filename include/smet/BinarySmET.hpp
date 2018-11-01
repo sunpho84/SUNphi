@@ -93,37 +93,14 @@ namespace SUNphi
   /// Determine mergeability of pair of \c TensKind
   namespace PairOfTensKindMergeability
   {
-    /// Possible outcome of where a component is found in a \c TensKind
-    ///
-    /// The component can be at the beginning, or it can be present in
-    /// one or both \c TensKind
-    enum Presence_t
-      {
-	BEGIN_OF_TK,         ///< Begin of the resulting \c TensKind
-	ABSENT_IN_FIRST,     ///< The component is absent in the first \c TensKind
-	ABSENT_IN_SECOND,    ///< The component is absent in the second \c TensKind
-	PRESENT_IN_BOTH};    ///< The component is present in both \c TensKind
-    
-    /// Returns where the component is present in the two \c TensKind
-    ///
-    /// The two values \c A1 and \c A2 contains the position where the component is present
-    ///
-    /// If A1 is \c NOT_PRESENT, marks \c ABSENT_IN_FIRST
-    /// If A2 is \c NOT_PRESENT, marks \c ABSENT_IN_SECOND
-    /// Otherwise marks \c PRESENT_IN_BOTH
-    template <int A1, // First component position
-	      int A2> // Second component position
-    [[ maybe_unused ]]
-    constexpr Presence_t compPresenceInTKs=
-      (A1==NOT_PRESENT)?ABSENT_IN_FIRST:
-	       ((A2==NOT_PRESENT)?ABSENT_IN_SECOND:
-		PRESENT_IN_BOTH);
+    using AbsentInBoth=
+      IntSeq<false,false>;
     
     /// Determine the mergeability of a given \c TensComp
     ///
     /// Terminator of the nested implementation, returning an \c
     /// IntSeq holding just the current searched position, as final delimiter
-    template <Presence_t PrevPres=BEGIN_OF_TK,  // Previous position presence
+    template <typename PrevPres=AbsentInBoth,   // Previous position presence
 	      int ResPos=0,                     // Position in the result probed
 	      int PrevPos1=0,                   // Previous position in the first \c TensKind
 	      int PrevPos2=0,                   // Previous position in the second \c TensKind
@@ -141,7 +118,7 @@ namespace SUNphi
     ///
     /// Nested internal implementation, catting the current component
     /// with the tail mergeability.
-    template <Presence_t PrevPres=BEGIN_OF_TK,  // Previous position presence
+    template <typename PrevPres=AbsentInBoth,   // Previous position presence
 	      int ResPos=0,                     // Position probed
 	      int PrevPos1=0,                   // Previous position in the first \c TensKind
 	      int PrevPos2=0,                   // Previous position in the second \c TensKind
@@ -157,9 +134,9 @@ namespace SUNphi
 				IntSeq<Head2,Tail2...> P2)    ///< Holds the position of second \c SmET where the \c TensComp is found
     {
       /// Presence of current position
-      constexpr Presence_t curPres=
-	compPresenceInTKs<Head1,
-			  Head2>;
+      using CurPres=
+	IntSeq<Head1!=NOT_PRESENT,Head2!=NOT_PRESENT>;
+      static_assert(not isSame<CurPres,AbsentInBoth>,"Cannot be AbsentInBoth");
       
       /// Check consecutivity in first \c TensKind
       constexpr int curNotConsecutive1=
@@ -175,7 +152,7 @@ namespace SUNphi
       
       /// Result of mergeability of nested components
       using Nested=
-	decltype(_compsMergeability<curPres,ResPos+1,Head1,Head2>(IntSeq<MPos1...>{},IntSeq<MPos2...>{},IntSeq<Tail1...>{},IntSeq<Tail2...>{}));
+	decltype(_compsMergeability<CurPres,ResPos+1,Head1,Head2>(IntSeq<MPos1...>{},IntSeq<MPos2...>{},IntSeq<Tail1...>{},IntSeq<Tail2...>{}));
       
       /// Check if the component was mergeable in the first \c TensKind
       constexpr bool originallyNotMergeableIn1=
@@ -191,7 +168,7 @@ namespace SUNphi
       or
 	originallyNotMergeableIn2
       or
-	PrevPres!=curPres
+	(not isSame<PrevPres,CurPres>)
       or
 	curNotConsecutive1
       or
