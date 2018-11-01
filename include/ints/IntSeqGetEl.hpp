@@ -2,6 +2,7 @@
 #define _INTSEQGETEL_HPP
 
 #include <ints/IntSeqCat.hpp>
+#include <utility/Position.hpp>
 
 /// \file IntSeqGetEl.hpp
 ///
@@ -20,11 +21,11 @@ namespace SUNphi
   /// int a=
   ///     posInIntSeqAfterAppending<2,4>(IntSeq<0,1,2,3){}>; // 2
   /// \endexample
-  template <int Pos,                      // Integer to be searched
-	    int Tail,                     // Tail to be added
-	    bool returnNotPresent=true,   // Return NOT PRESENT, or void if not found
-	    int...Head>                   // Integers already in the \c IntSeq
-  constexpr DECLAUTO posInIntSeqAfterAppending(IntSeq<Head...>)
+  template <int Tail,                     // Tail to be added before extracting
+	    bool ReturnNotPresent,        // Switch either returning \c NOT PRESENT or \c void, if not found
+	    int Pos,                      // Position to extract
+	    int...Head>                   // Integers from which to extract
+  constexpr DECLAUTO _IntSeqGetElAfterAppending(IntSeq<Head...>)
   {
     /// Full \c IntSeq to be searched
     using Is=
@@ -35,7 +36,7 @@ namespace SUNphi
       Is::template element<Pos>();
     
     // If the position is not present return empty, or \c NOT_PRESENT
-    if constexpr(P==NOT_PRESENT and not returnNotPresent)
+    if constexpr(P==NOT_PRESENT and not ReturnNotPresent)
       return IntSeq<>{};
     else
       return IntSeq<P>{};
@@ -43,18 +44,28 @@ namespace SUNphi
   
   /// Modified extraction of an element in an \c IntSeq after appending a value
   ///
+  /// Internal implementation
+  template <int Tail,                     // Tail to be added before extracting
+	    bool ReturnNotPresent,        // Switch either returning \c NOT PRESENT or \c void, if not found
+	    int...Pos,                    // Positions to extract
+	    int...Head>                   // Integers from which to extract
+  DECLAUTO _IntSeqGetElsAfterAppending(IntSeq<Pos...>,
+				      IntSeq<Head...>)
+  {
+    return IntSeqCat<decltype(_IntSeqGetElAfterAppending<Tail,ReturnNotPresent,Pos>(IntSeq<Head...>{}))...>{};
+  }
+  
+  /// Modified extraction of an element in an \c IntSeq after appending a value
+  ///
   /// Returns an \c IntSeq containing the element of all positions \c
   /// Pos in the passed \c IntSeq, after appending a given value to
   /// it. If asked, all the \c NOT_PRESENT are replaced with empty value.
-  template <int...Pos,                    // Integers to be searched
-	    int Tail,                     // Tail to be added
-	    bool returnNotPresent=true,   // Return NOT PRESENT, or void if not found
-	    int...Head>                   // Integers already in the \c IntSeq
-  DECLAUTO mergedDelimsInRef(IntSeq<Pos...>,
-			     IntSeq<Head...>)
-  {
-    return IntSeqCat<decltype(posInIntSeqAfterAppending<Pos,Tail>(IntSeq<Head...>{}))...>{};
-  }
+  template <int Tail,                     // Tail to be added before extracting
+	    bool ReturnNotPresent,        // Switch either returning \c NOT PRESENT or \c void, if not found
+	    typename Pos,                 // \c IntSeq containing the positions to extract
+	    typename Head>                // \c IntSeq containing the integers to extract
+  using IntSeqGetElsAfterAppending=
+    decltype(_IntSeqGetElsAfterAppending<Tail,ReturnNotPresent>(Pos{},Head{}));
 }
 
 #endif

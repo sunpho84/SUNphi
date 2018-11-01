@@ -122,22 +122,22 @@ namespace SUNphi
     /// Determine the mergeability of a given \c TensComp
     ///
     /// Terminator of the nested implementation, returning an \c
-    /// IntSeq holding just the current position, as final delimiter
+    /// IntSeq holding just the current searched position, as final delimiter
     template <Presence_t PrevPres=BEGIN_OF_TK,  // Previous position presence
-	      int ResPos=0,                     // Position probed
+	      int ResPos=0,                     // Position in the result probed
 	      int PrevPos1=0,                   // Previous position in the first \c TensKind
 	      int PrevPos2=0,                   // Previous position in the second \c TensKind
-	      int...MPos1,                      // Mergeability delimiters of first SmET
-	      int...MPos2>                      // Mergeability delimiters of second SmET
-    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1, ///< Holds the mergeability delimiters of first SmET
-				IntSeq<MPos2...> MP2, ///< Holds the mergeability delimiters of second SmET
-				IntSeq<> P1,          ///< Holds the position of first SmET where the result TensComp are found
-				IntSeq<> P2)          ///< Holds the position of second SmET where the result TensComp are found
+	      int...MPos1,                      // Mergeability delimiters of first \c SmET
+	      int...MPos2>                      // Mergeability delimiters of second \c SmET
+    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1, ///< Holds the mergeability delimiters of first \c SmET
+				IntSeq<MPos2...> MP2, ///< Holds the mergeability delimiters of second \c SmET
+				IntSeq<> P1,          ///< Holds the position of first \c SmET where the \c Res \c TensComp are found
+				IntSeq<> P2)          ///< Holds the position of second \c SmET where the \c Res \c TensComp are found
     {
       return IntSeq<ResPos>{};
     }
     
-    /// Determine the mergeability of a given \c TensComp
+    /// Determine the mergeability of a given \c TensComp, provided two \c TensKind
     ///
     /// Nested internal implementation, catting the current component
     /// with the tail mergeability.
@@ -145,16 +145,16 @@ namespace SUNphi
 	      int ResPos=0,                     // Position probed
 	      int PrevPos1=0,                   // Previous position in the first \c TensKind
 	      int PrevPos2=0,                   // Previous position in the second \c TensKind
-	      int...MPos1,                      // Mergeability delimiters of first SmET
-	      int...MPos2,                      // Mergeability delimiters of second SmET
-	      int Head1,                        // Current component position in the first SmET
-	      int...Tail1,                      // Other components position in the first SmET
-	      int Head2,                        // Current component position in the second SmET
-	      int...Tail2>                      // Other components position in the second SmET
-    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1,         ///< Holds the mergeability delimiters of first SmET
-				IntSeq<MPos2...> MP2,         ///< Holds the mergeability delimiters of second SmET
-				IntSeq<Head1,Tail1...> P1,    ///< Holds the position of first SmET where the result TensComp are found
-				IntSeq<Head2,Tail2...> P2)    ///< Holds the position of second SmET where the result TensComp are found
+	      int...MPos1,                      // Mergeability delimiters of first \c SmET
+	      int...MPos2,                      // Mergeability delimiters of second \c SmET
+	      int Head1,                        // Current component position in the first \c SmET
+	      int...Tail1,                      // Other components position in the first \c SmET
+	      int Head2,                        // Current component position in the second \c SmET
+	      int...Tail2>                      // Other components position in the second \c SmET
+    DECLAUTO _compsMergeability(IntSeq<MPos1...> MP1,         ///< Holds the mergeability delimiters of first \c SmET
+				IntSeq<MPos2...> MP2,         ///< Holds the mergeability delimiters of second \c SmET
+				IntSeq<Head1,Tail1...> P1,    ///< Holds the position of first \c SmET where the \c TensComp is found
+				IntSeq<Head2,Tail2...> P2)    ///< Holds the position of second \c SmET where the \c TensComp is found
     {
       /// Presence of current position
       constexpr Presence_t curPres=
@@ -207,63 +207,17 @@ namespace SUNphi
     /// Determine the mergeability of a given \c TensComp
     ///
     /// A component is declared mergeable if its presence in the two
-    /// \c TensKind is of the same nature of the previous one, if its
+    /// \c TensKind is of the same nature of the previous one
+    /// (e.g. present only in one of the two \c TensKind, if its
     /// position inside the two \c TensKind is consecutive with
-    /// previous \c TensComp, and if the component was mergeable
+    /// previous \c TensComp, and if the component was mergeable in
+    /// both \c TensKind
     template <typename MP1,
 	      typename MP2,
 	      typename I1,
 	      typename I2>
     using CompsMergeability=
       decltype(_compsMergeability(MP1{},MP2{},I1{},I2{}));
-    
-    /////////////////////////////////////////////////////////////////
-    
-    /// Returns the position, if any, that the merge delimiter must assume in the reference
-    template <int NRefComps,       // Number of components in the reference \c TensKind
-	      int MDel,            // Res delimiter to be added
-	      int...PosInRef>      // Position of the ResComp in the reference \c TensKind
-    DECLAUTO mergedDelimInRef(IntSeq<PosInRef...>)
-    {
-      /// Positions assumed in the reference
-      ///
-      /// The number of component in Ref is added, for convenience, so
-      /// to make it possible to search for the end delimiter
-      using Is=
-	IntSeq<PosInRef...,NRefComps>;
-      
-      /// Position of the component MDel
-      constexpr int P=
-	Is::template element<MDel>();
-      
-      // If the component is not present return empty
-      if constexpr(P!=NOT_PRESENT)
-	return IntSeq<P>{};
-      else
-	return IntSeq<>{};
-    }
-    
-    /// Returns the positions, that the merge delimiter must assume in the reference
-    ///
-    /// Internal implementation, catting the result of the single delimiter search
-    template <int NRefComps,       // Number of components in the reference \c TensKind
-	      int...MDel,          // Res delimiters to be added
-	      int...PosInRef>      // Position of the ResComp in the reference \c TensKind
-    DECLAUTO mergedDelimsInRef(IntSeq<MDel...>,
-			       IntSeq<PosInRef...>)
-    {
-      return IntSeqCat<decltype(mergedDelimInRef<NRefComps,MDel>(IntSeq<PosInRef...>{}))...>{};
-    }
-    
-    /// Returns the positions, that the merge delimiter must assume in the reference
-    ///
-    /// Gives visibility to internal implementation
-    template <int NRefComps,
-	      typename MDel,
-	      typename PosInRef>
-    using MergedDelimsInRef=
-      decltype(mergedDelimsInRef<NRefComps>(MDel{},PosInRef{}));
-  }
   
   /// Provide component-mergeabilty according to the two refs, and the visible \c Tk
   ///
@@ -275,6 +229,7 @@ namespace SUNphi
 			  typename RemoveReference<Ref2>::MergeableComps, \
 			  posOfRef1TcsInResTk,				\
 			  posOfRef2TcsInResTk>)
+  }
 }
 
 #endif

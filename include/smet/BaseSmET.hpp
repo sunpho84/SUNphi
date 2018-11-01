@@ -5,6 +5,7 @@
 ///
 /// \brief Header file defining basic properties of Smart Expression Templates
 
+#include <ints/IntSeqGetEl.hpp>
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/TypeTraits.hpp>
@@ -227,8 +228,8 @@ namespace SUNphi
   /*! Merged delimiters of Ref ## ID according to MD */			\
   template <typename MD> /* Required merging delimiters */		\
   using MergedDelims ## ID=						\
-    PairOfTensKindMergeability::MergedDelimsInRef<TK ## ID::nTypes,MD,posOfRef ## ID ## TcsInResTk>
-    
+    IntSeqGetElsAfterAppending<TK ## ID::nTypes,false,MD,posOfRef ## ID ## TcsInResTk>
+  
   /////////////////////////////////////////////////////////////////
   
   /// Defines the check for a SmET
