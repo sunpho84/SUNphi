@@ -153,7 +153,6 @@ namespace SUNphi
   ///   TensKind<Spin,Col>
   /// PROVIDE_MERGEABLE_COMPS(IntSeq<0,2>);
   /// \endcode
-  /// Provides a isAssignable attribute
 #define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)			\
   USING(/*! List of points where the TensKind can be split */,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \
 									\
