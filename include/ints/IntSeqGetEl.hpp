@@ -16,11 +16,11 @@ namespace SUNphi
   /// in the passed \c IntSeq, after appending a given value to it. If
   /// asked, the returned \c NOT_PRESENT is replaced with empty value.
   ///
-  /// \example
+  /// \code
   ///
   /// int a=
   ///     posInIntSeqAfterAppending<2,4>(IntSeq<0,1,2,3){}>; // 2
-  /// \endexample
+  /// \endcode
   template <int Tail,                     // Tail to be added before extracting
 	    bool ReturnNotPresent,        // Switch either returning \c NOT PRESENT or \c void, if not found
 	    int Pos,                      // Position to extract
