@@ -1,7 +1,7 @@
 var classSUNphi_1_1Wrapper =
 [
-    [ "Fund", "d1/d77/classSUNphi_1_1Wrapper.html#ae5f5b187e7152885ff11c52027336c0d", null ],
-    [ "MergeableComps", "d1/d77/classSUNphi_1_1Wrapper.html#a1b32ca7d5e09b323c691645ef40a4a50", null ],
+    [ "Fund", "d1/d77/classSUNphi_1_1Wrapper.html#a32a1a4e5b5685469cb33e896f9181280", null ],
+    [ "MergeableComps", "d1/d77/classSUNphi_1_1Wrapper.html#a57a7f5b2eb89f6dc2330026dda7c039a", null ],
     [ "Ref", "d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee", null ],
     [ "Tk", "d1/d77/classSUNphi_1_1Wrapper.html#a0290c1272ed40753d92784a26bc0954b", null ],
     [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html#a79cec3d9e8f7ca79cfb593d40c5eaf97", null ],

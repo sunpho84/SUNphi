@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['tens_2ehpp',['Tens.hpp',['../dc/dd1/Tens_8hpp.html',1,'']]],
-  ['tensclass_2ehpp',['TensClass.hpp',['../dc/d8f/TensClass_8hpp.html',1,'']]],
-  ['tenscomp_2ehpp',['TensComp.hpp',['../d7/d7a/TensComp_8hpp.html',1,'']]],
-  ['tenskind_2ehpp',['TensKind.hpp',['../d6/d3f/TensKind_8hpp.html',1,'']]],
-  ['tensstor_2ehpp',['TensStor.hpp',['../d1/d7a/TensStor_8hpp.html',1,'']]],
-  ['transpose_2ehpp',['Transpose.hpp',['../d0/d6d/Transpose_8hpp.html',1,'']]],
-  ['tuple_2ehpp',['Tuple.hpp',['../dc/d88/Tuple_8hpp.html',1,'']]],
-  ['tupleclass_2ehpp',['TupleClass.hpp',['../d1/d31/TupleClass_8hpp.html',1,'']]],
-  ['tupleelements_2ehpp',['TupleElements.hpp',['../dc/d21/TupleElements_8hpp.html',1,'']]],
-  ['tupleorder_2ehpp',['TupleOrder.hpp',['../de/d2d/TupleOrder_8hpp.html',1,'']]],
-  ['tupletypecat_2ehpp',['TupleTypeCat.hpp',['../d2/d33/TupleTypeCat_8hpp.html',1,'']]],
-  ['tuplewrap_2ehpp',['TupleWrap.hpp',['../d4/df2/TupleWrap_8hpp.html',1,'']]],
-  ['twinscomp_2ehpp',['TwinsComp.hpp',['../d3/d89/TwinsComp_8hpp.html',1,'']]],
-  ['typetraits_2ehpp',['TypeTraits.hpp',['../d0/d81/TypeTraits_8hpp.html',1,'']]]
+  ['scalarwrap_2ehpp',['ScalarWrap.hpp',['../d9/d0c/ScalarWrap_8hpp.html',1,'']]],
+  ['sfinae_2ehpp',['SFINAE.hpp',['../d4/d77/SFINAE_8hpp.html',1,'']]],
+  ['simd_2ehpp',['SIMD.hpp',['../d0/d24/SIMD_8hpp.html',1,'']]],
+  ['smet_2ehpp',['SmET.hpp',['../d9/d21/SmET_8hpp.html',1,'']]],
+  ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],
+  ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
+  ['string_2ehpp',['String.hpp',['../d8/d32/String_8hpp.html',1,'']]],
+  ['sun_2ehpp',['SUN.hpp',['../d4/df5/SUN_8hpp.html',1,'']]],
+  ['sunphi_2ehpp',['SUNphi.hpp',['../d1/d8b/SUNphi_8hpp.html',1,'']]],
+  ['swallowsemicolon_2ehpp',['SwallowSemicolon.hpp',['../d5/d8c/SwallowSemicolon_8hpp.html',1,'']]],
+  ['system_2ehpp',['System.hpp',['../d4/d25/System_8hpp.html',1,'']]]
 ];

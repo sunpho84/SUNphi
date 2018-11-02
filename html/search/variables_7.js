@@ -14,6 +14,7 @@ var searchData=
   ['hasmember_5fref',['hasMember_ref',['../d3/dd7/namespaceSUNphi.html#afb51dbbfb9e9f6f6dbc00daf45c43cf1',1,'SUNphi']]],
   ['hasmember_5fref1',['hasMember_ref1',['../d3/dd7/namespaceSUNphi.html#aa3153be40f8067d7c916dcf0b637911c',1,'SUNphi']]],
   ['hasmember_5fref2',['hasMember_ref2',['../d3/dd7/namespaceSUNphi.html#a16755d1eb4f22997ed1507bbb940238b',1,'SUNphi']]],
+  ['hasmember_5frefs',['hasMember_refs',['../d3/dd7/namespaceSUNphi.html#af213f39c8a5860f573b8ca502803c884',1,'SUNphi']]],
   ['hasmember_5ftk',['hasMember_Tk',['../d3/dd7/namespaceSUNphi.html#a31388ba85a984596f9d605934040682f',1,'SUNphi']]],
   ['hastwin',['hasTwin',['../d3/dd7/namespaceSUNphi.html#a4692578508fbbf9aff7ed592deef12cf',1,'SUNphi']]],
   ['hastwin_3c_20cncol_20_3e',['hasTwin&lt; CnCol &gt;',['../d3/dd7/namespaceSUNphi.html#a703c93385079c219886575613ad71fcc',1,'SUNphi']]],

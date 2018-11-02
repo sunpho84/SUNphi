@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -211,11 +211,14 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>FORBID_CONSTRUCT_BY_COPY
 : <a class="el" href="d0/d81/TypeTraits_8hpp.html#a3dfacd0e6094c8dc3eb28faff35c385b">TypeTraits.hpp</a>
 </li>
+<li>FORWARD_IS_ALIASING_TO_PAIR_OF_REFS
+: <a class="el" href="da/d5e/BinarySmET_8hpp.html#a901cedf22de931ee777841a6a1d0547c">BinarySmET.hpp</a>
+</li>
 <li>FORWARD_IS_ALIASING_TO_REF
 : <a class="el" href="d4/dbe/UnarySmET_8hpp.html#acf9265234e08857af90935005797f736">UnarySmET.hpp</a>
 </li>
 <li>FORWARD_IS_ALIASING_TO_REFS
-: <a class="el" href="da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">BinarySmET.hpp</a>
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">NnarySmET.hpp</a>
 </li>
 </ul>
 
@@ -331,8 +334,17 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>PROVIDE_NAME
 : <a class="el" href="d8/d32/String_8hpp.html#a9c53a2f9c0c7e8b6108db2619a4549ef">String.hpp</a>
 </li>
+<li>PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062">NnarySmET.hpp</a>
+</li>
+<li>PROVIDE_NNARY_SMET_SIMPLE_CREATOR
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">NnarySmET.hpp</a>
+</li>
 <li>PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF
 : <a class="el" href="dc/d6b/BaseSmET_8hpp.html#affb9e8f2147ceaa44da52542b01c7683">BaseSmET.hpp</a>
+</li>
+<li>PROVIDE_SIMPLE_NNARY_COMP_SIZE
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#a63fb035fcf22a1d3b2a18969f070eeaf">NnarySmET.hpp</a>
 </li>
 <li>PROVIDE_SMET_REF
 : <a class="el" href="d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df">Reference.hpp</a>
@@ -390,6 +402,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>SIMPLE_BINARY_SMET_BUILDER
 : <a class="el" href="da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b">BinarySmET.hpp</a>
 </li>
+<li>SIMPLE_NNARY_SMET_BUILDER
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1">NnarySmET.hpp</a>
+</li>
 <li>SIMPLE_UNARY_SMET_BUILDER
 : <a class="el" href="d4/dbe/UnarySmET_8hpp.html#ada787a1b5a1562efe3e7aad0c00864e7">UnarySmET.hpp</a>
 </li>
@@ -416,6 +431,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>STATIC_ASSERT_IS_INTEGRAL
 : <a class="el" href="d0/d81/TypeTraits_8hpp.html#a8ad05592282316c0790a6bfb845e9a82">TypeTraits.hpp</a>
+</li>
+<li>STATIC_ASSERT_IS_NNARY_SMET
+: <a class="el" href="d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">NnarySmET.hpp</a>
 </li>
 <li>STATIC_ASSERT_IS_NOT_BASE_OF
 : <a class="el" href="d0/d81/TypeTraits_8hpp.html#aa116a06bd7bfd7078f7e0b0a4847e76c">TypeTraits.hpp</a>

@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('d4/dbe/UnarySmET_8hpp.html','../../');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -165,11 +165,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:ae24952325792dcc10329ef22ba26a6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare that the fundamental type is the same of the reference.  <a href="#ae24952325792dcc10329ef22ba26a6c8">More...</a><br/></td></tr>
 <tr class="separator:ae24952325792dcc10329ef22ba26a6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf456643d7fa52906ed6901cec0a9a39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf456643d7fa52906ed6901cec0a9a39"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/UnarySmET_8hpp.html#acf456643d7fa52906ed6901cec0a9a39">ASSIGNABLE_ACCORDING_TO_REF</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a>(/*! This SmET can be assigned if the reference can */,RemoveReference&lt;decltype(ref)&gt;::isAssignable)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/UnarySmET_8hpp.html#acf456643d7fa52906ed6901cec0a9a39">ASSIGNABLE_ACCORDING_TO_REF</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a>(/*! This SmET can be assigned if the reference can */,RemRef&lt;decltype(ref)&gt;::isAssignable)</td></tr>
 <tr class="memdesc:acf456643d7fa52906ed6901cec0a9a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the assignability according to the reference. <br/></td></tr>
 <tr class="separator:acf456643d7fa52906ed6901cec0a9a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc5cc056f559d7aff0ac2d21a09f3fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bc5cc056f559d7aff0ac2d21a09f3fd"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/UnarySmET_8hpp.html#a4bc5cc056f559d7aff0ac2d21a09f3fd">MERGEABLE_ACCORDING_TO_REF</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(/*! The components of this SmET can be merged as the reference one */,typename RemoveReference&lt;decltype(ref)&gt;::MergeableComps)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/UnarySmET_8hpp.html#a4bc5cc056f559d7aff0ac2d21a09f3fd">MERGEABLE_ACCORDING_TO_REF</a>&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(/*! The components of this SmET can be merged as the reference one */,typename RemRef&lt;decltype(ref)&gt;::MergeableComps)</td></tr>
 <tr class="memdesc:a4bc5cc056f559d7aff0ac2d21a09f3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the mergeable components equal to the reference. <br/></td></tr>
 <tr class="separator:a4bc5cc056f559d7aff0ac2d21a09f3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc2820093362f7611ff80957ba44451d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dbe/UnarySmET_8hpp.html#afc2820093362f7611ff80957ba44451d">PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW</a>(UNARY_SMET)</td></tr>
@@ -260,7 +260,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"> \              \               \               \</div>
 <div class="line">  template &lt;<span class="keyword">typename</span> D,                                   <span class="comment">/* Type of the nested UNARY_SMET           */</span> <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">\</a></div>
-<div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">	    SFINAE_ON_TEMPLATE_ARG</a>(is ## UNARY_SMET&lt;D&gt;)&gt;     <span class="comment">/* Enable only for the UNARY_SMET required */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
+<div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">	    SFINAE_ON_TEMPLATE_ARG</a>(is ## UNARY_SMET&lt;D&gt;)&gt;  <span class="comment">/* Enable only for the UNARY_SMET required */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
 <div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> CALLER(D&amp;&amp; smet)         \</div>
 <div class="line">  {                                 \</div>
 <div class="line">    return forw&lt;D&gt;(smet);                       \</div>
@@ -325,7 +325,7 @@ Variables</h2></td></tr>
 <div class="line">              <span class="keywordflow">return</span> ref.isAliasing(alias);)</div>
 <div class="ttc" id="UnarySmET_8hpp_html_ab53ff7ac4dd5a730fcb46ee59f011d67"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a></div><div class="ttdeci">#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)</div><div class="ttdoc">Provides a isAliasing method, taking alias as argument. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00121">UnarySmET.hpp:121</a></div></div>
 </div><!-- fragment --><p>Set aliasing according to the isAliasing of reference</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>enforce cehck only with TensClass, or with storing classes </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000015">Todo:</a></b></dt><dd>enforce cehck only with TensClass, or with storing classes </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html#l00133">133</a> of file <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">UnarySmET.hpp</a>.</p>
 
@@ -353,7 +353,7 @@ Variables</h2></td></tr>
 <div class="line">               return pAlias==p;)</div>
 <div class="ttc" id="UnarySmET_8hpp_html_ab53ff7ac4dd5a730fcb46ee59f011d67"><div class="ttname"><a href="../../d4/dbe/UnarySmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a></div><div class="ttdeci">#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)</div><div class="ttdoc">Provides a isAliasing method, taking alias as argument. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dbe/UnarySmET_8hpp_source.html#l00121">UnarySmET.hpp:121</a></div></div>
 </div><!-- fragment --><p>Set aliasing according to a passed pointer (provided class member)</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">Todo:</a></b></dt><dd>This is mostly broken </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd>This is mostly broken </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">UnarySmET.hpp</a>.</p>
 
@@ -622,7 +622,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                \</div>
 <div class="line">  using Fund=                               \</div>
-<div class="line">    typename RemoveReference&lt;decltype(ref)&gt;::Fund</div>
+<div class="line">    typename RemRef&lt;decltype(ref)&gt;::Fund</div>
 </div><!-- fragment -->
 <p>Declare that the fundamental type is the same of the reference. </p>
 
@@ -750,7 +750,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="SFINAE_8hpp_html_a2a92e61beb69be134a70c3ecbc4cd3e1"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">SFINAE_ON_TEMPLATE_ARG</a></div><div class="ttdeci">#define SFINAE_ON_TEMPLATE_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00022">SFINAE.hpp:22</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment --><p>Defines a simple way to swap nested UnarySmET</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000015">Todo:</a></b></dt><dd>we need to implement the same check done for CANCEL_DUPLICATED_UNARY_SMET_CALL </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000017">Todo:</a></b></dt><dd>we need to implement the same check done for CANCEL_DUPLICATED_UNARY_SMET_CALL </dd></dl>
 <p>&lt; External builder</p>
 <p>&lt; Name of the SmET </p>
 
@@ -800,7 +800,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_a3fef1fcd49e2b4bdbc23f0c35109e24d"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00049">SwallowSemicolon.hpp:49</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html_a2a92e61beb69be134a70c3ecbc4cd3e1"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">SFINAE_ON_TEMPLATE_ARG</a></div><div class="ttdeci">#define SFINAE_ON_TEMPLATE_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00022">SFINAE.hpp:22</a></div></div>
 </div><!-- fragment --><p>Defines a simple way to swap an UnarySmET from rhs to lhs</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000016">Todo:</a></b></dt><dd><p class="startdd">why can't we make only const &amp; on rhs? </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000018">Todo:</a></b></dt><dd><p class="startdd">why can't we make only const &amp; on rhs? </p>
 <p class="enddd">we need to enforce SmET </p>
 </dd></dl>
 <p>&lt; External builder </p>

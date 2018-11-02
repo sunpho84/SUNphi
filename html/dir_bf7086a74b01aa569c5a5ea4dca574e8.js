@@ -7,6 +7,8 @@ var dir_bf7086a74b01aa569c5a5ea4dca574e8 =
     [ "BinarySmET.hpp", "da/d5e/BinarySmET_8hpp.html", "da/d5e/BinarySmET_8hpp" ],
     [ "Bind.hpp", "dc/de1/Bind_8hpp.html", "dc/de1/Bind_8hpp" ],
     [ "Conj.hpp", "d2/d8f/Conj_8hpp.html", "d2/d8f/Conj_8hpp" ],
+    [ "MulAdd.hpp", "da/d06/MulAdd_8hpp.html", "da/d06/MulAdd_8hpp" ],
+    [ "NnarySmET.hpp", "d2/d69/NnarySmET_8hpp.html", "d2/d69/NnarySmET_8hpp" ],
     [ "Reference.hpp", "d3/d78/Reference_8hpp.html", "d3/d78/Reference_8hpp" ],
     [ "RelBind.hpp", "d3/da4/RelBind_8hpp.html", "d3/da4/RelBind_8hpp" ],
     [ "ScalarWrap.hpp", "d9/d0c/ScalarWrap_8hpp.html", "d9/d0c/ScalarWrap_8hpp" ],

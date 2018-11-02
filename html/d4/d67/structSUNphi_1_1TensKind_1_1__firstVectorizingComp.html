@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d4/d67/structSUNphi_1_1TensKind_1_1__f
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,12 +124,12 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class... T&gt;<br/>
-template&lt;typename F, int Pos = nTypes-1, int InVectorizingSize = 1, bool IsLastCheckable = (Pos==0), int NextPos = (IsLastCheckable?Pos:(Pos-1)), typename G = RemoveReference&lt;decltype(get&lt;Pos&gt;(types{}))&gt;, int Size = G::size, int OutVectorizingSize = InVectorizingSize*Size, bool EnoughToVectorize = canBeSizeOfSIMDVector&lt;F&gt;(OutVectorizingSize), bool CompIsVectorizing = G::template isVectorizable&lt;F&gt;, bool FallBack = (not CompIsVectorizing) or IsLastCheckable&gt;<br/>
+template&lt;typename F, int Pos = nTypes-1, int InVectorizingSize = 1, bool IsLastCheckable = (Pos==0), int NextPos = (IsLastCheckable?Pos:(Pos-1)), typename G = RemRef&lt;decltype(get&lt;Pos&gt;(types{}))&gt;, int Size = G::size, int OutVectorizingSize = InVectorizingSize*Size, bool EnoughToVectorize = canBeSizeOfSIMDVector&lt;F&gt;(OutVectorizingSize), bool CompIsVectorizing = G::template isVectorizable&lt;F&gt;, bool FallBack = (not CompIsVectorizing) or IsLastCheckable&gt;<br/>
 struct SUNphi::TensKind&lt; T &gt;::_firstVectorizingComp&lt; F, Pos, InVectorizingSize, IsLastCheckable, NextPos, G, Size, OutVectorizingSize, EnoughToVectorize, CompIsVectorizing, FallBack &gt;</h3>
 
 <p>Return the position of the first component needed to vectorize</p>
 <p>Internal implementation, escaping when last checkable component is reached</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>Add a lenghty description, this is a complicated piece of code! The scope is not immediate to get </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>Add a lenghty description, this is a complicated piece of code! The scope is not immediate to get </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00186">186</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
@@ -139,7 +139,7 @@ struct SUNphi::TensKind&lt; T &gt;::_firstVectorizingComp&lt; F, Pos, InVectoriz
 <div class="memtemplate">
 template&lt;class... T&gt; </div>
 <div class="memtemplate">
-template&lt;typename F , int Pos = nTypes-1, int InVectorizingSize = 1, bool IsLastCheckable = (Pos==0), int NextPos = (IsLastCheckable?Pos:(Pos-1)), typename G  = RemoveReference&lt;decltype(get&lt;Pos&gt;(types{}))&gt;, int Size = G::size, int OutVectorizingSize = InVectorizingSize*Size, bool EnoughToVectorize = canBeSizeOfSIMDVector&lt;F&gt;(OutVectorizingSize), bool CompIsVectorizing = G::template isVectorizable&lt;F&gt;, bool FallBack = (not CompIsVectorizing) or IsLastCheckable&gt; </div>
+template&lt;typename F , int Pos = nTypes-1, int InVectorizingSize = 1, bool IsLastCheckable = (Pos==0), int NextPos = (IsLastCheckable?Pos:(Pos-1)), typename G  = RemRef&lt;decltype(get&lt;Pos&gt;(types{}))&gt;, int Size = G::size, int OutVectorizingSize = InVectorizingSize*Size, bool EnoughToVectorize = canBeSizeOfSIMDVector&lt;F&gt;(OutVectorizingSize), bool CompIsVectorizing = G::template isVectorizable&lt;F&gt;, bool FallBack = (not CompIsVectorizing) or IsLastCheckable&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

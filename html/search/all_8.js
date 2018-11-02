@@ -1,8 +1,8 @@
 var searchData=
 [
   ['half',['half',['../dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0',1,'SUNphi::_IntsUpTo']]],
-  ['hasmember_5fassertmergeablewith',['hasMember_assertMergeableWith',['../d3/dd7/namespaceSUNphi.html#aae9bc0ae600b50d77d6300e7b4905e82',1,'SUNphi']]],
   ['hasmember_5fassertmergeablewith',['HasMember_assertMergeableWith',['../d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html',1,'SUNphi']]],
+  ['hasmember_5fassertmergeablewith',['hasMember_assertMergeableWith',['../d3/dd7/namespaceSUNphi.html#aae9bc0ae600b50d77d6300e7b4905e82',1,'SUNphi']]],
   ['hasmember_5fcompsize',['HasMember_compSize',['../de/d50/structSUNphi_1_1HasMember__compSize.html',1,'SUNphi']]],
   ['hasmember_5fcompsize',['hasMember_compSize',['../d3/dd7/namespaceSUNphi.html#a286e1e8ac0e01b9ddd5f33cefceceec1',1,'SUNphi']]],
   ['hasmember_5feval',['hasMember_eval',['../d3/dd7/namespaceSUNphi.html#a7c93af767a7562cdc424337875d65e0b',1,'SUNphi']]],
@@ -27,6 +27,8 @@ var searchData=
   ['hasmember_5fref1',['HasMember_ref1',['../da/db5/structSUNphi_1_1HasMember__ref1.html',1,'SUNphi']]],
   ['hasmember_5fref2',['hasMember_ref2',['../d3/dd7/namespaceSUNphi.html#a16755d1eb4f22997ed1507bbb940238b',1,'SUNphi']]],
   ['hasmember_5fref2',['HasMember_ref2',['../d3/d14/structSUNphi_1_1HasMember__ref2.html',1,'SUNphi']]],
+  ['hasmember_5frefs',['hasMember_refs',['../d3/dd7/namespaceSUNphi.html#af213f39c8a5860f573b8ca502803c884',1,'SUNphi']]],
+  ['hasmember_5frefs',['HasMember_refs',['../dd/dce/structSUNphi_1_1HasMember__refs.html',1,'SUNphi']]],
   ['hasmember_5ftk',['hasMember_Tk',['../d3/dd7/namespaceSUNphi.html#a31388ba85a984596f9d605934040682f',1,'SUNphi']]],
   ['hasmember_5ftk',['HasMember_Tk',['../d7/d03/structSUNphi_1_1HasMember__Tk.html',1,'SUNphi']]],
   ['hastwin',['hasTwin',['../d3/dd7/namespaceSUNphi.html#a4692578508fbbf9aff7ed592deef12cf',1,'SUNphi']]],

@@ -13,7 +13,7 @@ var BinarySmET_8hpp =
     [ "Check", "dc/d17/structSUNphi_1_1HasMember__ref2_1_1Check.html", null ],
     [ "ConstrainHasMember_ref2", "d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html", null ],
     [ "BinarySmET", "d4/d8b/structSUNphi_1_1BinarySmET.html", "d4/d8b/structSUNphi_1_1BinarySmET" ],
-    [ "FORWARD_IS_ALIASING_TO_REFS", "da/d5e/BinarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0", null ],
+    [ "FORWARD_IS_ALIASING_TO_PAIR_OF_REFS", "da/d5e/BinarySmET_8hpp.html#a901cedf22de931ee777841a6a1d0547c", null ],
     [ "PROVIDE_BINARY_SMET_REFS", "da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79", null ],
     [ "PROVIDE_BINARY_SMET_SIMPLE_CREATOR", "da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606", null ],
     [ "PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS", "da/d5e/BinarySmET_8hpp.html#a1db658f6375a4641dc6c774600a510da", null ],

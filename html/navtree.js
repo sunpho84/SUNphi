@@ -19,7 +19,8 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -37,10 +38,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d14/structSUNphi_1_1HasMember__ref2.html#af3730fccee32fbdb92dc3acd697c7746",
-"d5/dd3/classSUNphi_1_1Transposer.html#a8750d0f6c467da5b2b48af8e2caf299c",
-"d9/ddd/IntSeqGetEl_8hpp.html",
-"dd/d03/classSUNphi_1_1UMinuser.html#a63196e3f6664f7d095ad2c9e84b4de2c"
+"d2/dad/UnaryMinus_8hpp.html#ab29dbe2468515d50fc89f70faa25dae8",
+"d5/d8c/SwallowSemicolon_8hpp.html",
+"d9/d27/structSUNphi_1_1__TupleWrap.html",
+"dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d",
+"functions_i.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

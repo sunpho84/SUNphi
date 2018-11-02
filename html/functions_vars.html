@@ -82,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -126,7 +127,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -242,6 +243,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="d6/db9/classSUNphi_1_1Binder.html#a5bd336096268c55c9bb4e6ea72020e84">SUNphi::Binder&lt; TG, _Ref, NestedTk, NestedTypes &gt;</a>
 , <a class="el" href="d2/d24/classSUNphi_1_1Conjer.html#ab68fef5f4587b019e5fb93d1ecba9495">SUNphi::Conjer&lt; _Ref, TK, TK_TYPES &gt;</a>
 , <a class="el" href="d7/dea/structSUNphi_1_1HasMember__isAssignable_1_1Fallback.html#a841bfa5d64510c6341a5d7f25073fb06">SUNphi::HasMember_isAssignable&lt; Type &gt;::Fallback</a>
+, <a class="el" href="dc/d2f/structSUNphi_1_1NnarySmET.html#a094477d325d23dae12af9ff25e7de6b0">SUNphi::NnarySmET&lt; T &gt;</a>
 , <a class="el" href="db/d12/classSUNphi_1_1ScalarWrapper.html#ae2deee6aa2f4599cc9262193bb705820">SUNphi::ScalarWrapper&lt; _Fund &gt;</a>
 , <a class="el" href="d8/d1c/classSUNphi_1_1Tens.html#ac62bd94732ceaabfb9837d9deb5efffa">SUNphi::Tens&lt; TK, FUND &gt;</a>
 , <a class="el" href="d5/dd3/classSUNphi_1_1Transposer.html#ab8917c4dbc75835886ef828a6a65ac55">SUNphi::Transposer&lt; _Ref, TK &gt;</a>
@@ -266,6 +268,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="d6/db9/classSUNphi_1_1Binder.html#a7d38f7639bbc7b89da53337e27e4ecf5">SUNphi::Binder&lt; TG, _Ref, NestedTk, NestedTypes &gt;</a>
 , <a class="el" href="d2/d24/classSUNphi_1_1Conjer.html#ac6d279b797d1a476686ccc90fc6a0771">SUNphi::Conjer&lt; _Ref, TK, TK_TYPES &gt;</a>
 , <a class="el" href="d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html#ab3a9bde0e088b2cd295436f481257d0c">SUNphi::HasMember_isStoring&lt; Type &gt;::Fallback</a>
+, <a class="el" href="dc/d5d/classSUNphi_1_1MulAdder.html#a4cc49be1e4d0e03320a55e5821d1bd08">SUNphi::MulAdder&lt; _Refs &gt;</a>
 , <a class="el" href="db/d12/classSUNphi_1_1ScalarWrapper.html#ab04b0b534cfc909a525218779290bb9b">SUNphi::ScalarWrapper&lt; _Fund &gt;</a>
 , <a class="el" href="d8/d1c/classSUNphi_1_1Tens.html#ae1e0c03f3af2fd628b2559ff1bf86317">SUNphi::Tens&lt; TK, FUND &gt;</a>
 , <a class="el" href="d5/dd3/classSUNphi_1_1Transposer.html#adf63e30456e907b1d373255a17cd4ee8">SUNphi::Transposer&lt; _Ref, TK &gt;</a>
@@ -323,6 +326,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>normalizedMax
 : <a class="el" href="d0/dde/structSUNphi_1_1__RangeSeq.html#a66df314974e5a4c34bf2ae8683f13b3d">SUNphi::_RangeSeq&lt; Min, Shift, Max &gt;</a>
 </li>
+<li>NSmET
+: <a class="el" href="dc/d5d/classSUNphi_1_1MulAdder.html#a3037ebf406a818a94e6f99083ea1e1a8">SUNphi::MulAdder&lt; _Refs &gt;</a>
+</li>
 <li>nTypes
 : <a class="el" href="d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a">SUNphi::TensKind&lt; T &gt;</a>
 </li>
@@ -354,7 +360,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="d6/db9/classSUNphi_1_1Binder.html#a09637a3ef6f9e450adcc57ef2e310998">SUNphi::Binder&lt; TG, _Ref, NestedTk, NestedTypes &gt;</a>
 , <a class="el" href="d2/d24/classSUNphi_1_1Conjer.html#a9848fc90cf6f9d0a774c494322f247b1">SUNphi::Conjer&lt; _Ref, TK, TK_TYPES &gt;</a>
 , <a class="el" href="db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html#a7328f3425699a6fac2812f7ee886935c">SUNphi::HasMember_ref&lt; Type &gt;::Fallback</a>
-, <a class="el" href="db/d12/classSUNphi_1_1ScalarWrapper.html#a8877efaf81f0be1ab0311c73cf3443e9">SUNphi::ScalarWrapper&lt; _Fund &gt;</a>
+, <a class="el" href="db/d12/classSUNphi_1_1ScalarWrapper.html#a386c95973e443e9c3771628ba6f1ab94">SUNphi::ScalarWrapper&lt; _Fund &gt;</a>
 , <a class="el" href="d5/dd3/classSUNphi_1_1Transposer.html#a1117d33e32666716f1e72a9a57fb13d3">SUNphi::Transposer&lt; _Ref, TK &gt;</a>
 , <a class="el" href="dd/d03/classSUNphi_1_1UMinuser.html#a2714c241a5d8b9457c9ce84c665f4890">SUNphi::UMinuser&lt; _Ref, TK, TK_TYPES &gt;</a>
 , <a class="el" href="d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">SUNphi::Wrapper&lt; _Ref, TK &gt;</a>
@@ -368,6 +374,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="de/d58/classSUNphi_1_1Adder.html#a1a6a86a5a99a1daa682d58742c062b41">SUNphi::Adder&lt; _Ref1, _Ref2, TK1, TK2 &gt;</a>
 , <a class="el" href="d4/d4b/classSUNphi_1_1Assigner.html#a3bffcb80f0065eff53ef4a7e9e06923b">SUNphi::Assigner&lt; _Ref1, _Ref2, TK1, TK2 &gt;</a>
 , <a class="el" href="d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html#a7284d6654072657b06c06e1895af70aa">SUNphi::HasMember_ref2&lt; Type &gt;::Fallback</a>
+</li>
+<li>refs
+: <a class="el" href="dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html#a4aae4936252607fd0d3e8ece3e15e3b8">SUNphi::HasMember_refs&lt; Type &gt;::Fallback</a>
+, <a class="el" href="dc/d5d/classSUNphi_1_1MulAdder.html#ac8308bc9af695307bc1899f060d0a25d">SUNphi::MulAdder&lt; _Refs &gt;</a>
 </li>
 <li>res
 : <a class="el" href="d4/d4b/structSUNphi_1_1IsAlwaysTrue.html#ae85228442cc21116609c264b3f4667c4">SUNphi::IsAlwaysTrue&lt; I &gt;</a>
@@ -389,6 +399,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 , <a class="el" href="da/db5/structSUNphi_1_1HasMember__ref1.html#abd5d9ff07e4a0f7ab8e9f32115c67537">SUNphi::HasMember_ref1&lt; Type &gt;</a>
 , <a class="el" href="d3/d14/structSUNphi_1_1HasMember__ref2.html#a920ff732fd6cc73868d83aa30b858b6e">SUNphi::HasMember_ref2&lt; Type &gt;</a>
 , <a class="el" href="d4/d83/structSUNphi_1_1HasMember__ref.html#abc6f756715b08f92862b98ad21224d71">SUNphi::HasMember_ref&lt; Type &gt;</a>
+, <a class="el" href="dd/dce/structSUNphi_1_1HasMember__refs.html#a9c84d6d06f013959f48334a609533062">SUNphi::HasMember_refs&lt; Type &gt;</a>
 , <a class="el" href="d7/d03/structSUNphi_1_1HasMember__Tk.html#ab32332d8dda8234804c02966fb34ca58">SUNphi::HasMember_Tk&lt; Type &gt;</a>
 </li>
 </ul>
