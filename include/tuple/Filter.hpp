@@ -4,6 +4,9 @@
 /// \file Filter.hpp
 ///
 /// \brief Filter elements of a list according to a rule
+///
+/// \todo Expand as here
+/// https://stackoverflow.com/questions/41723704/how-to-filter-a-stdinteger-sequence
 
 #include <ints/IntSeqCat.hpp>
 #include <ints/Ranges.hpp>
