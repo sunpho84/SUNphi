@@ -463,6 +463,20 @@ namespace SUNphi
   template <typename...Args>
   using BlendTensKinds=
     typename _BlendTensKinds<Args...>::type;
+  
+  /// Position of all the \c TensComp of \c TkToSearch in the list of Tks
+  ///
+  /// NOT_PRESENT is inserted in the absent positions
+  template <typename TkToSearch, // \c TensKind whose components have to be searched
+	    typename...Tks>      // List of \c TensKind where to search the components
+  using PosOfTcsOfTkInListOfTks=
+    Tuple<PosOfTypesNotAsserting<typename TkToSearch::types,typename Tks::types>...>;
+  
+  /// Position of all the present \c TensComp of \c TkToSearch in the list of Tks
+  template <typename TkToSearch, // \c TensKind whose components have to be searched
+	    typename...Tks>      // List of \c TensKind where to search the components
+  using PosOfTcsOfTkPresInListOfTks=
+    Tuple<FilterVariadicClassPos<IsPresent,PosOfTypesNotAsserting<typename TkToSearch::types,typename Tks::types>>...>;
 }
 
 #endif

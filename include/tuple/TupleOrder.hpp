@@ -106,7 +106,7 @@ namespace SUNphi
   /// An expection is issued if the type is not founs
   template <typename TpToSearch, // Tuple containing the types to be searched
 	    typename TpToProbe>  // Tuple where to search
-  using posOfTypes=
+  using PosOfTypes=
     decltype(_posOfTypes<ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
   
   /// Position of the Tuple types \c TpToSearch in the Tuple \c TpToProbe, not asserting
@@ -114,7 +114,7 @@ namespace SUNphi
   /// NOT_PRESENT is returned if the type is not present
   template <typename TpToSearch, // Tuple containing the types to be searched
 	    typename TpToProbe>  // Tuple where to search
-  using posOfTypesNotAsserting=
+  using PosOfTypesNotAsserting=
     decltype(_posOfTypes<DO_NOT_ASSERT_IF_NOT_PRESENT>(TpToSearch{},TpToProbe{}));
 }
 

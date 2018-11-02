@@ -219,10 +219,10 @@ namespace SUNphi
 #define PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(ID)	\
   /*! Position of all the \c TensComp of \c Ref ## ID in Res Tk */	\
   using posOfRef ## ID ## TcsInResTk=					\
-    posOfTypesNotAsserting<typename Tk::types,typename TK ## ID::types>; \
+    PosOfTypesNotAsserting<typename Tk::types,typename TK ## ID::types>; \
   									\
   /*! Position of all the \c TensComp of \c Ref ## ID present in Res Tk */ \
-  using posOfRef ## ID ## PresTcsInResTk=				\
+  using PosOfRef ## ID ## PresTcsInResTk=				\
     FilterVariadicClassPos<IsPresent,posOfRef ## ID ## TcsInResTk>; \
   									\
   /*! Merged delimiters of Ref ## ID according to MD */			\

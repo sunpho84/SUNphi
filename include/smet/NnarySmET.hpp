@@ -7,7 +7,8 @@
 
 #include <ints/IntSeqCat.hpp>
 #include <smet/BaseSmET.hpp>
-#include <tuple/TupleClass.hpp>
+#include <tens/TensKind.hpp>
+#include <tuple/TupleOrder.hpp>
 #include <utility/Position.hpp>
 
 namespace SUNphi
@@ -86,6 +87,12 @@ namespace SUNphi
       return compSize<TC,I+1>();					\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Proivde the position of result Tk \c TensComp in each input
+#define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
+  /*! Position of all the Result \c TensComp in each \c Refs Tk */	\
+  using posOfResTcsInRefsTk=						\
+    posOfTcsOfTkInListOfTks<typename Tk::types,RemRef<_Refs>::Tk::types...>
   
   /////////////////////////////////////////////////////////////////
   

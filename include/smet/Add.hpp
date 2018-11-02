@@ -97,8 +97,8 @@ namespace SUNphi
     {									\
       STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
       									\
-      return adder_internal_eval(posOfRef1PresTcsInResTk{},		\
-				 posOfRef2PresTcsInResTk{},		\
+      return adder_internal_eval(PosOfRef1PresTcsInResTk{},		\
+				 PosOfRef2PresTcsInResTk{},		\
 				 std::forward_as_tuple(args...));	\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE

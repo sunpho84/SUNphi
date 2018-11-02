@@ -5,7 +5,7 @@
 ///
 /// \brief Defines a class which take the sum of a \c SmET with the product of two others
 ///
-/// For the moment this is just used to provide a testcase to write the generic Nnary 
+/// For the moment this is just used to provide a testcase to write the generic Nnary
 
 #include <smet/Reference.hpp>
 #include <smet/NnarySmET.hpp>
@@ -42,9 +42,8 @@ namespace SUNphi
     
     /// TensorKind of the result
     ///
-    /// \todo Improve, the return type could be decided studying what
-    /// suits best the computational
-    //PROVIDE_TK(BlendTensKinds<TK1,TK2>);
+    /// \todo fixit
+    PROVIDE_TK(TensKind<>);
     
     /// Fundamental type
     PROVIDE_FUND(decltype(typename RemRef<Ref<FACT1>>::Fund{}*
