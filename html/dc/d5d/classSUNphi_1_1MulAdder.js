@@ -3,6 +3,7 @@ var classSUNphi_1_1MulAdder =
     [ "Fund", "dc/d5d/classSUNphi_1_1MulAdder.html#aa65fe96ce335b63ddac44a64df6d668b", null ],
     [ "Ref", "dc/d5d/classSUNphi_1_1MulAdder.html#a7ba6a0131dd32cfac9555eb0499cba81", null ],
     [ "Refs", "dc/d5d/classSUNphi_1_1MulAdder.html#aa4ace581676696869522f224f011a362", null ],
+    [ "Tk", "dc/d5d/classSUNphi_1_1MulAdder.html#abea28f371c93725cb7b77c8cf57d6d4e", null ],
     [ "Pos_t", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641", [
       [ "FACT1", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641a404d2838c7bca02feca06123637ce361", null ],
       [ "FACT2", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641a6b85baeb109a2d56af5d72fa5791e638", null ],

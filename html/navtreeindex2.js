@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d5/d4a/structSUNphi_1_1IsNotNull.html#a68dec46e430900f15c4e5fbf25f58dc5":[2,0,0,106,0],
 "d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,2,2],
 "d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d":[3,0,2,2,2,1],
 "d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0":[3,0,2,2,2,0],
@@ -40,12 +41,14 @@ var NAVTREEINDEX2 =
 "d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html":[2,0,0,49,2],
 "d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html#a30fc60925f9eb04d0dfe5ba8fee64721":[2,0,0,49,2,0],
 "d6/d3f/TensKind_8hpp.html":[3,0,2,6,3],
+"d6/d3f/TensKind_8hpp.html#a20a22ae0ab9777758b1cc9dc50e85e33":[3,0,2,6,3,23],
 "d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3":[3,0,2,6,3,22],
-"d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1":[3,0,2,6,3,25],
-"d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8":[3,0,2,6,3,26],
-"d6/d3f/TensKind_8hpp.html#a8a0b6cbdc1ef52620e32461fe5841979":[3,0,2,6,3,24],
+"d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1":[3,0,2,6,3,27],
+"d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8":[3,0,2,6,3,28],
+"d6/d3f/TensKind_8hpp.html#a4fc6fe9266c126fdf3bfaa91cd394907":[3,0,2,6,3,24],
+"d6/d3f/TensKind_8hpp.html#a8a0b6cbdc1ef52620e32461fe5841979":[3,0,2,6,3,26],
 "d6/d3f/TensKind_8hpp.html#ab367cb8e85a4a5c88c22f4be1ac037d8":[3,0,2,6,3,21],
-"d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4":[3,0,2,6,3,23],
+"d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4":[3,0,2,6,3,25],
 "d6/d3f/TensKind_8hpp.html#af8f0a6094d2399b278968074a80869bd":[3,0,2,6,3,20],
 "d6/d3f/TensKind_8hpp_source.html":[3,0,2,6,3],
 "d6/d4d/structSUNphi_1_1__Conditional_3_01false_00_01T_00_01F_01_4.html":[2,0,0,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "d9/d0c/ScalarWrap_8hpp.html#aba3b615897c6d44ea2d390c598a46d66":[3,0,2,4,11,5],
 "d9/d0c/ScalarWrap_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad":[3,0,2,4,11,1],
 "d9/d0c/ScalarWrap_8hpp.html#af026fc04183838282f2c49edb3516f87":[3,0,2,4,11,4],
-"d9/d0c/ScalarWrap_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,11,3],
-"d9/d0c/ScalarWrap_8hpp_source.html":[3,0,2,4,11],
-"d9/d21/SmET_8hpp.html":[3,0,2,13],
-"d9/d21/SmET_8hpp_source.html":[3,0,2,13]
+"d9/d0c/ScalarWrap_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,11,3]
 };

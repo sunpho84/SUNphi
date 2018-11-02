@@ -200,6 +200,14 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">SUNphi::BlendTensKinds</a> = typename _BlendTensKinds&lt; Args...&gt;::type</td></tr>
 <tr class="separator:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memTemplParams" colspan="2">template&lt;typename TkToSearch , typename... Tks&gt; </td></tr>
+<tr class="memitem:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a20a22ae0ab9777758b1cc9dc50e85e33">SUNphi::PosOfTcsOfTkInListOfTks</a> = Tuple&lt; PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;...&gt;</td></tr>
+<tr class="separator:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4fc6fe9266c126fdf3bfaa91cd394907"></a>
+template&lt;typename TkToSearch , typename... Tks&gt; </td></tr>
+<tr class="memitem:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4fc6fe9266c126fdf3bfaa91cd394907">SUNphi::PosOfTcsOfTkPresInListOfTks</a> = Tuple&lt; FilterVariadicClassPos&lt; IsPresent, PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;&gt;...&gt;</td></tr>
+<tr class="memdesc:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of all the present <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> of <code>TkToSearch</code> in the list of Tks. <br/></td></tr>
+<tr class="separator:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

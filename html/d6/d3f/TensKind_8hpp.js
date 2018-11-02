@@ -23,6 +23,8 @@ var TensKind_8hpp =
     [ "STATIC_ASSERT_IS_DYNAMIC", "d6/d3f/TensKind_8hpp.html#af8f0a6094d2399b278968074a80869bd", null ],
     [ "BlendTensKinds", "d6/d3f/TensKind_8hpp.html#ab367cb8e85a4a5c88c22f4be1ac037d8", null ],
     [ "DynSizes", "d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3", null ],
+    [ "PosOfTcsOfTkInListOfTks", "d6/d3f/TensKind_8hpp.html#a20a22ae0ab9777758b1cc9dc50e85e33", null ],
+    [ "PosOfTcsOfTkPresInListOfTks", "d6/d3f/TensKind_8hpp.html#a4fc6fe9266c126fdf3bfaa91cd394907", null ],
     [ "TensKindFromTuple", "d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4", null ],
     [ "DEFINE_BASE_TYPE", "d6/d3f/TensKind_8hpp.html#a8a0b6cbdc1ef52620e32461fe5841979", null ],
     [ "hasMember_compSize", "d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1", null ],

@@ -119,7 +119,8 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp.html','../../');
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d7/dea/IntSeqCat_8hpp_source.html">ints/IntSeqCat.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">smet/BaseSmET.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">tuple/TupleClass.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">tens/TensKind.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">tuple/TupleOrder.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d58/Position_8hpp_source.html">utility/Position.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../d2/d69/NnarySmET_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -161,6 +162,9 @@ Macros</h2></td></tr>
 <tr class="separator:ae9afd2594bd82b20b0a55b28cc2ae062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63fb035fcf22a1d3b2a18969f070eeaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a63fb035fcf22a1d3b2a18969f070eeaf">PROVIDE_SIMPLE_NNARY_COMP_SIZE</a></td></tr>
 <tr class="separator:a63fb035fcf22a1d3b2a18969f070eeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">PROVIDE_POS_OF_RES_TCS_IN_REFS</a></td></tr>
+<tr class="memdesc:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proivde the position of result Tk <code>TensComp</code> in each input.  <a href="#abb8e3bccf2caed5b8914e60e6bbc8ec6">More...</a><br/></td></tr>
+<tr class="separator:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4b34eaa063fc0209e2574a8fffe2c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">PROVIDE_NNARY_SMET_SIMPLE_CREATOR</a>(NNARY_SMET)</td></tr>
 <tr class="memdesc:a5c4b34eaa063fc0209e2574a8fffe2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a simple creator taking n references.  <a href="#a5c4b34eaa063fc0209e2574a8fffe2c8">More...</a><br/></td></tr>
 <tr class="separator:a5c4b34eaa063fc0209e2574a8fffe2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +218,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Set aliasing according to the isAliasing of references </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>enforce cehck only with TensClass </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +256,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Provide the references to the objects</p>
 <p>The reference types are contained in a <code>Tuple</code> with types obtained from template pars </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +286,26 @@ Variables</h2></td></tr>
 <p>Defines a simple creator taking n references. </p>
 <p>&lt; Name of the NnarySmET </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb8e3bccf2caed5b8914e60e6bbc8ec6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROVIDE_POS_OF_RES_TCS_IN_REFS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    \</div>
+<div class="line">  using posOfResTcsInRefsTk=                        \</div>
+<div class="line">    posOfTcsOfTkInListOfTks&lt;typename Tk::types,RemRef&lt;_Refs&gt;::Tk::types...&gt;</div>
+</div><!-- fragment -->
+<p>Proivde the position of result Tk <code>TensComp</code> in each input. </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00092">92</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +342,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Returns the size of a <code>TensComp</code>, with a simple approach</p>
 <p>Search the asked <code>TensComp</code> in each ref <code>TensKind</code> iteratively and returns the size in the first found ref </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +381,7 @@ Variables</h2></td></tr>
 <p><code>NnarySmET</code> cannot use SFINAE to worsen default constructors (unless packing args in <code>Tuple</code>) so the simple builder cannot be overloaded. If required, use a custom builder and use if constexpr construct inside it to route the manipulations.</p>
 <p>&lt; Name of builder function </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +405,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Defines the check for a Nnary SmET. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
