@@ -223,7 +223,7 @@ namespace SUNphi
   									\
   /*! Position of all the \c TensComp of \c Ref ## ID present in Res Tk */ \
   using posOfRef ## ID ## PresTcsInResTk=				\
-    FilterVariadicClassPos<IsNonNegative,posOfRef ## ID ## TcsInResTk>; \
+    FilterVariadicClassPos<IsPresent,posOfRef ## ID ## TcsInResTk>; \
   									\
   /*! Merged delimiters of Ref ## ID according to MD */			\
   template <typename MD> /* Required merging delimiters */		\

@@ -20,8 +20,21 @@ namespace SUNphi
     false;
   
   /// Mark the absence of an element
-  static constexpr int NOT_PRESENT=
+  [[ maybe_unused ]]
+  static constexpr int
+  NOT_PRESENT=
     -1;
+  
+  /// Filterer which check presence of its parameter
+  template <auto I>
+  struct IsPresent
+  {
+    /// Result of the check
+    static constexpr bool res=
+      (I!=NOT_PRESENT);
+  };
+  
+
 }
 
 #endif
