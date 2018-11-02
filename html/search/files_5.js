@@ -10,5 +10,6 @@ var searchData=
   ['intseqcat_2ehpp',['IntSeqCat.hpp',['../d7/dea/IntSeqCat_8hpp.html',1,'']]],
   ['intseqgetel_2ehpp',['IntSeqGetEl.hpp',['../d9/ddd/IntSeqGetEl_8hpp.html',1,'']]],
   ['intseqsplit_2ehpp',['IntSeqSplit.hpp',['../d4/d96/IntSeqSplit_8hpp.html',1,'']]],
+  ['intseqtranspose_2ehpp',['IntSeqTranspose.hpp',['../da/db7/IntSeqTranspose_8hpp.html',1,'']]],
   ['ios_2ehpp',['Ios.hpp',['../de/d10/Ios_8hpp.html',1,'']]]
 ];

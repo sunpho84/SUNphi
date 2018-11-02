@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SUNphi: include/Ints.hpp File Reference</title>
+<title>SUNphi: include/ints/IntSeqTranspose.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('db/d04/Ints_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('da/db7/IntSeqTranspose_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -104,36 +104,60 @@ $(document).ready(function(){initNavTree('db/d04/Ints_8hpp.html','../../');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Ints.hpp File Reference</div>  </div>
+<div class="title">IntSeqTranspose.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Topical header to include all template integer lists.  
+<p>Transpose a <code>Tuple</code> of <code>IntSeq</code>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../da/d00/IntListGetEl_8hpp_source.html">ints/IntListGetEl.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d5/d3e/IntListOperations_8hpp_source.html">ints/IntListOperations.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d3/dbe/IntListOrder_8hpp_source.html">ints/IntListOrder.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">ints/IntSeq.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d7/dea/IntSeqCat_8hpp_source.html">ints/IntSeqCat.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d9/ddd/IntSeqGetEl_8hpp_source.html">ints/IntSeqGetEl.hpp</a>&gt;</code><br/>
-<code>#include &lt;ints/IntSeqInsert.hpp&gt;</code><br/>
-<code>#include &lt;ints/IntSeqRemove.hpp&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d4/d96/IntSeqSplit_8hpp_source.html">ints/IntSeqSplit.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../da/db7/IntSeqTranspose_8hpp_source.html">ints/IntSeqTranspose.hpp</a>&gt;</code><br/>
+<div class="textblock"><code>#include &lt;<a class="el" href="../../dd/df8/IntSeq_8hpp_source.html">ints/IntSeq.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dd/d15/Ranges_8hpp_source.html">ints/Ranges.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">tuple/TupleClass.hpp</a>&gt;</code><br/>
 </div>
-<p><a href="../../db/d04/Ints_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="../../da/db7/IntSeqTranspose_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
+<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. <br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a5c8d31581b88a5500335b37355232f17"><td class="memTemplParams" colspan="2">template&lt;int Sl, typename Tp &gt; </td></tr>
+<tr class="memitem:a5c8d31581b88a5500335b37355232f17"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5c8d31581b88a5500335b37355232f17">SUNphi::IntSeqsSlice</a> = decltype(_IntSeqsSlice&lt; Sl &gt;(Tp{}))</td></tr>
+<tr class="separator:a5c8d31581b88a5500335b37355232f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b81bfefcfb8bb4225a35537c4f8c23"><td class="memTemplParams" colspan="2">template&lt;typename Tp &gt; </td></tr>
+<tr class="memitem:a66b81bfefcfb8bb4225a35537c4f8c23"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a66b81bfefcfb8bb4225a35537c4f8c23">SUNphi::IntSeqsTranspose</a> = decltype(_IntSeqsTranspose(Tp{}))</td></tr>
+<tr class="separator:a66b81bfefcfb8bb4225a35537c4f8c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acd0abdee5551052827fc13ad092d7c75"><td class="memTemplParams" colspan="2">template&lt;int Sl, typename... Is&gt; </td></tr>
+<tr class="memitem:acd0abdee5551052827fc13ad092d7c75"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acd0abdee5551052827fc13ad092d7c75">SUNphi::_IntSeqsSlice</a> (Tuple&lt; Is...&gt; tupleOfIntSeqs)</td></tr>
+<tr class="separator:acd0abdee5551052827fc13ad092d7c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac3c2f428dcad7c11d808af08b04dd1"><td class="memTemplParams" colspan="2">template&lt;int... Sl, typename... Is&gt; </td></tr>
+<tr class="memitem:a5ac3c2f428dcad7c11d808af08b04dd1"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5ac3c2f428dcad7c11d808af08b04dd1">SUNphi::_IntSeqsSlices</a> (IntSeq&lt; Sl...&gt; listOfSlices, Tuple&lt; Is...&gt; tupleOfIntSeqs)</td></tr>
+<tr class="separator:a5ac3c2f428dcad7c11d808af08b04dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c62108eceac3ee280800efe002e1f3"><td class="memTemplParams" colspan="2">template&lt;typename... Is&gt; </td></tr>
+<tr class="memitem:a31c62108eceac3ee280800efe002e1f3"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a31c62108eceac3ee280800efe002e1f3">SUNphi::_IntSeqsTranspose</a> (Tuple&lt; Is...&gt; tupleOfIntSeqs)</td></tr>
+<tr class="separator:a31c62108eceac3ee280800efe002e1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Topical header to include all template integer lists. </p>
+<div class="textblock"><p>Transpose a <code>Tuple</code> of <code>IntSeq</code>. </p>
 
-<p>Definition in file <a class="el" href="../../db/d04/Ints_8hpp_source.html">Ints.hpp</a>.</p>
+<p>Definition in file <a class="el" href="../../da/db7/IntSeqTranspose_8hpp_source.html">IntSeqTranspose.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../db/d04/Ints_8hpp.html">Ints.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_2cc15010050477bfdc996c66dbc57fa0.html">ints</a></li><li class="navelem"><a class="el" href="../../da/db7/IntSeqTranspose_8hpp.html">IntSeqTranspose.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
