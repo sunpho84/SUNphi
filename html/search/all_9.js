@@ -53,6 +53,7 @@ var searchData=
   ['isorderedintseq',['isOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a302d28a5e97d3f2dafd2064ed7d1ff02',1,'SUNphi']]],
   ['isorderedintseq_3c_20intseq_3c_20ints_2e_2e_2e_3e_20_3e',['isOrderedIntSeq&lt; IntSeq&lt; Ints...&gt; &gt;',['../d3/dd7/namespaceSUNphi.html#a91316c619e394246822e10932a0f77f5',1,'SUNphi']]],
   ['isorderedunique',['isOrderedUnique',['../da/def/structSUNphi_1_1IntSeq.html#a9d8e5fa6a7e4eda04f5af8183296fcb4',1,'SUNphi::IntSeq']]],
+  ['ispresent',['IsPresent',['../dd/de6/structSUNphi_1_1IsPresent.html',1,'SUNphi']]],
   ['isrvalue',['isRvalue',['../d3/dd7/namespaceSUNphi.html#a1eb85031c83b699bc6b54c6a864b1af2',1,'SUNphi']]],
   ['issame',['isSame',['../d3/dd7/namespaceSUNphi.html#afc7db564dd647bc10933eb0a67248b8c',1,'SUNphi']]],
   ['issame_3c_20t_2c_20t_20_3e',['isSame&lt; T, T &gt;',['../d3/dd7/namespaceSUNphi.html#a4e2ebf308cda3504417f00d9ce87c057',1,'SUNphi']]],
