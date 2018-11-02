@@ -16,12 +16,12 @@ namespace SUNphi
   
   /// Class to wrap a SmET
   template <typename _Ref,                                  // Type of the expression to wrap
-	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the wrapped expression
+	    typename TK=typename RemRef<_Ref>::Tk>          // Tens Kind of the wrapped expression
   class Wrapper :
-    public BaseWrapper,                                // Inherit from BaseWrapper to detect in expression
-    public UnarySmET<Wrapper<_Ref>>,                    // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                       // Constrain _Ref to be a SmET
-    public ConstrainIsTensKind<TK>                     // Constrain type TK to be a TensKind
+    public BaseWrapper,                                     // Inherit from BaseWrapper to detect in expression
+    public UnarySmET<Wrapper<_Ref>>,                        // Inherit from UnarySmET
+    public ConstrainIsSmET<_Ref>,                           // Constrain _Ref to be a SmET
+    public ConstrainIsTensKind<TK>                          // Constrain type TK to be a TensKind
   {
   public:
     

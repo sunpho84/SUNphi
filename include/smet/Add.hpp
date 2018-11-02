@@ -16,17 +16,17 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Adder);
   
   /// Class to add two \c SmET
-  template <typename _Ref1,                                    // First addendum type
-	    typename _Ref2,                                    // Second addendum type
-	    typename TK1=typename RemoveReference<_Ref1>::Tk,  // \c TensKind of the first addendum type
-	    typename TK2=typename RemoveReference<_Ref2>::Tk>  // \c TensKind of the second addendum type
+  template <typename _Ref1,                           // First addendum type
+	    typename _Ref2,                           // Second addendum type
+	    typename TK1=typename RemRef<_Ref1>::Tk,  // \c TensKind of the first addendum type
+	    typename TK2=typename RemRef<_Ref2>::Tk>  // \c TensKind of the second addendum type
   class Adder :
     public BaseAdder,                         // Inherit from \c BaseAdder to detect in expression
     public BinarySmET<Adder<_Ref1,_Ref2>>,    // Inherit from \c BinarySmET
     public ConstrainAreTensKinds<TK1,TK2>     // Constrain type TK1 and TK2 to be a TensKind
   {
-    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref1>);
-    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref2>);
+    STATIC_ASSERT_IS_SMET(RemRef<_Ref1>);
+    STATIC_ASSERT_IS_SMET(RemRef<_Ref2>);
     
   public:
     
@@ -45,7 +45,7 @@ namespace SUNphi
     
     // Attributes
     NOT_STORING;
-    FORWARD_IS_ALIASING_TO_REFS;
+    FORWARD_IS_ALIASING_TO_PAIR_OF_REFS;
     
     /// TensorKind of the result
     ///
@@ -54,8 +54,8 @@ namespace SUNphi
     PROVIDE_TK(BlendTensKinds<TK1,TK2>);
     
     /// Fundamental type
-    PROVIDE_FUND(decltype(typename RemoveReference<Ref1>::Fund{}+
-			  typename RemoveReference<Ref2>::Fund{}));
+    PROVIDE_FUND(decltype(typename RemRef<Ref1>::Fund{}+
+			  typename RemRef<Ref2>::Fund{}));
     
     PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
     PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);

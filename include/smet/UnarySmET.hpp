@@ -41,19 +41,19 @@ namespace SUNphi
 #define SAME_FUND_TYPE_OF_REF						\
   /*! Same fundamental type of the reference */				\
   using Fund=								\
-    typename RemoveReference<decltype(ref)>::Fund
+    typename RemRef<decltype(ref)>::Fund
   
   /////////////////////////////////////////////////////////////////
   
   /// Set the assignability according to the reference
 #define ASSIGNABLE_ACCORDING_TO_REF					\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned if the reference can */,RemoveReference<decltype(ref)>::isAssignable)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can be assigned if the reference can */,RemRef<decltype(ref)>::isAssignable)
   
   /////////////////////////////////////////////////////////////////
   
   /// Set the mergeable components equal to the reference
 #define MERGEABLE_ACCORDING_TO_REF					\
-  PROVIDE_MERGEABLE_COMPS(/*! The components of this SmET can be merged as the reference one */,typename RemoveReference<decltype(ref)>::MergeableComps)
+  PROVIDE_MERGEABLE_COMPS(/*! The components of this SmET can be merged as the reference one */,typename RemRef<decltype(ref)>::MergeableComps)
   
   /// Returns a version of the SmET with simple merging structure
 #define PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(UNARY_SMET)	/* Name of the SmET type */ \
@@ -203,9 +203,9 @@ namespace SUNphi
   /*!                                        */				\
   /*! Returns the nested reference           */				\
   template <typename T,                                        /* Type of the expression                  */ \
-	    typename RrT=RemoveReference<T>,                   /* T without ref attributes                */ \
+	    typename RrT=RemRef<T>,                            /* T without ref attributes                */ \
 	    typename Ref=typename RrT::Ref,                    /* Type of the reference                   */ \
-	    typename RrRef=RemoveReference<Ref>,               /* Ref without ref attributes              */ \
+	    typename RrRef=RemRef<Ref>,                        /* Ref without ref attributes              */ \
 	    bool SmETIsLvalue=isLvalue<RrT>,		       /* Detect if SmET is an lvalue             */ \
 	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue              */ \
 	    bool RefIsStoring=isStoring<RrRef>,		       /* Detect if Ref is storing                */ \
@@ -214,8 +214,8 @@ namespace SUNphi
 	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                           */ \
 	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<RrT>)>     /* Enable only for the UNARY_SMET required */ \
   Ret CALLER(T&& smet)	/*!< Quantity to un-nest   */			\
-  {					\
-    if constexpr(0)								\
+  {									\
+    if constexpr(0)							\
       {									\
 	constexpr bool SmETIsConst=isConst<T>;				\
 	constexpr bool RefIsConst=isConst<Ref>;				\
@@ -225,7 +225,7 @@ namespace SUNphi
 	constexpr bool SmETIs=std::is_reference<T>::value;		\
 	constexpr bool RefIs=std::is_reference<Ref>::value;		\
 	cout<<" SmETIsLvalue: "<<SmETIsLvalue<<endl;			\
-	cout<<" SmETIs: "<<SmETIs<<endl;					\
+	cout<<" SmETIs: "<<SmETIs<<endl;				\
 	cout<<" SmETIsConst: "<<SmETIsConst<<endl;			\
 	cout<<" RefIsLvalue: "<<RefIsLvalue<<endl;			\
 	cout<<" RefIs: "<<RefIs<<endl;					\
@@ -246,10 +246,10 @@ namespace SUNphi
 #define ABSORB_DUPLICATED_UNARY_SMET_CALL(CALLER,     /*!< Name of builder                */ \
 					 UNARY_SMET)  /*!< Type to absorb                 */ \
   /*! Simplify CALLER(UNARY_SMET) expression */				\
-  /*!                                       */				\
-  /*! Returns the reference                 */				\
+  /*!                                        */				\
+  /*! Returns the reference                  */				\
   template <typename D,                                   /* Type of the nested UNARY_SMET           */ \
-	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>	  /* Enable only for the UNARY_SMET required */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<D>)>  /* Enable only for the UNARY_SMET required */ \
   DECLAUTO CALLER(D&& smet)      /*!< UnarySmET to absorb         */	\
   {									\
     return forw<D>(smet);						\
@@ -280,13 +280,13 @@ namespace SUNphi
   /// \todo we need to enforce SmET
 #define UNARY_SMET_GOES_ON_LHS(LHS_FUN,	   /*!< External builder */	\
 			       UNARY_SMET) /*!< Name of the SmET  */	\
-  /*! Simplify EXT_FUN(UNARY_SMET u) expression     */			\
+  /*! Simplify EXT_FUN(UNARY_SMET u) expression    */			\
   /*!                                              */			\
   /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
   template <typename Lhs,                                    /* Type of the lhs SmET                    */ \
 	    typename Rhs,                                    /* Type of the rhs UNARY_SMET              */ \
 	    SFINAE_ON_TEMPLATE_ARG(is ## UNARY_SMET<Rhs>)>   /* Enable only for the UNARY_SMET required */ \
-  void assign(Lhs&& lhs,   /*!< Lhs of the assignement                         */ \
+  void assign(Lhs&& lhs,   /*!< Lhs of the assignement                          */ \
 	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from UNARY_SMET */ \
   {									\
     if(1)								\

@@ -16,7 +16,7 @@ namespace SUNphi
   
   /// Class to take the conjugate of a SmET
   template <typename _Ref,                                  // Type of the expression to conjugate
-	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the conjugated type
+	    typename TK=typename RemRef<_Ref>::Tk,          // Tens Kind of the conjugated type
 	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
   class UMinuser :
     public BaseUMinuser,                                // Inherit from BaseUMinuser to detect in expression

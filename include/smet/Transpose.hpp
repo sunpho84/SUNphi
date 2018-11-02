@@ -16,7 +16,7 @@ namespace SUNphi
   
   /// Class to take the transposed of a SmET
   template <typename _Ref,                                  // Type to be transposed
-	    typename TK=typename RemoveReference<_Ref>::Tk> // Tens Kind of the bound type
+	    typename TK=typename RemRef<_Ref>::Tk> // Tens Kind of the bound type
   class Transposer :
     public BaseTransposer,                         // Inherit from BaseTransposer to detect in expression
     public UnarySmET<Transposer<_Ref>>,            // Inherit from UnarySmET

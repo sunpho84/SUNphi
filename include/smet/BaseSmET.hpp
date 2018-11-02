@@ -44,7 +44,7 @@ namespace SUNphi
   {									\
     if constexpr(isClass<T>)						\
       if constexpr(hasMember_ ## NAME<T>)			        \
-	return RemoveReference<T>::NAME;			        \
+	return RemRef<T>::NAME;			                        \
 									\
       return DefVal;							\
   }									\
@@ -102,11 +102,11 @@ namespace SUNphi
   template <typename T,
 	    typename=ConstrainIsSmET<T>>
   using TkOf=
-    typename RemoveReference<T>::Tk;
+    typename RemRef<T>::Tk;
   
   /// Provides the \c Fund member
-#define PROVIDE_FUND(...)					\
-  using Fund=							\
+#define PROVIDE_FUND(...)			\
+  using Fund=					\
     __VA_ARGS__
   
   // Defines the check for a member type \c Fund
@@ -116,7 +116,7 @@ namespace SUNphi
   template <typename T,
 	    typename=ConstrainIsSmET<T>>
   using FundTypeOf=
-    typename RemoveReference<T>::Fund;
+    typename RemRef<T>::Fund;
   
   /////////////////////////////////////////////////////////////////
   

@@ -36,13 +36,13 @@ void test_transpose()
 #define STATIC_ASSERT_DUPLICATED_CALL_REMOVER(FUN,...)			\
   static_assert(isSame<							\
 		__VA_ARGS__,						\
-		RemoveReference<decltype(FUN(FUN(__VA_ARGS__{})))>	\
+		RemRef<decltype(FUN(FUN(__VA_ARGS__{})))>		\
 		>,"Not same")
 
 #define STATIC_ASSERT_DUPLICATED_CALL_ABSORBER(FUN,...)			\
   static_assert(isSame<							\
-		RemoveReference<decltype(FUN(__VA_ARGS__{}))>,		\
-		RemoveReference<decltype(FUN(FUN(__VA_ARGS__{})))>	\
+		RemRef<decltype(FUN(__VA_ARGS__{}))>,			\
+		RemRef<decltype(FUN(FUN(__VA_ARGS__{})))>		\
 		>,"Not same")
 
 void test_duplicated_call_remover()
@@ -84,7 +84,7 @@ void test_isAliasing()
   auto a=wrap(Tens<TensKind<Compl>,double>{});
   auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
   
-  cout<< isSame<RemoveReference<decltype(a)>,RemoveReference<decltype(b)>> <<endl;
+  cout<< isSame<RemRef<decltype(a)>,RemRef<decltype(b)>> <<endl;
   cout<<isSame<decltype(a),decltype(b)><<endl;
   cout<<"t.isAliasing(t): "<<t.isAliasing(t.getStor())<<endl;
   cout<<"t.isAliasing(u): "<<t.isAliasing(u.getStor())<<endl;

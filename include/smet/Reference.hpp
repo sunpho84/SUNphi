@@ -21,7 +21,7 @@ namespace SUNphi
 	    bool IsStoring=Unqualified<T>::isStoring,  // Check if it is storing
 	    bool IsLvalue=isLvalue<T>>                 // Check if lvalue
   using Reference=
-    RefIf<IsStoring and IsLvalue,RemoveReference<T>>;
+    RefIf<IsStoring and IsLvalue,RemRef<T>>;
   
   /////////////////////////////////////////////////////////////////
   

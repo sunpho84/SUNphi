@@ -79,7 +79,7 @@ namespace SUNphi
   
   /// Set aliasing according to the isAliasing of references 1 and 2
   /// \todo enforce cehck only with TensClass
-#define FORWARD_IS_ALIASING_TO_REFS			\
+#define FORWARD_IS_ALIASING_TO_PAIR_OF_REFS			\
   /*! Forward aliasing check to the references */	\
   template <typename Tref>				\
   bool isAliasing(const Tref& alias) const		\
@@ -201,10 +201,10 @@ namespace SUNphi
   ///
   /// \todo check that this is general enough... probably not
 #define PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS			\
-  PROVIDE_MERGEABLE_COMPS(/*! Defer the mergeability to the internal implementation*/, \
+  PROVIDE_MERGEABLE_COMPS(/*! Defer the mergeability to the internal implementation */, \
 			  PairOfTensKindMergeability::template CompsMergeability< \
-			  typename RemoveReference<Ref1>::MergeableComps, \
-			  typename RemoveReference<Ref2>::MergeableComps, \
+			  typename RemRef<Ref1>::MergeableComps,	\
+			  typename RemRef<Ref2>::MergeableComps,	\
 			  posOfRef1TcsInResTk,				\
 			  posOfRef2TcsInResTk>)
   }

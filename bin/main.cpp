@@ -213,6 +213,52 @@ void checkCallOperator()
     <<endl;
 }
 
+void checkNnaryBuilder()
+{
+  /// Fist Tensor Kind to be used
+  using MyTk1=
+    TensKind<RwCol,
+	     Spin,
+	     CnCol>;
+  
+  /// Second Tensor Kind to be used
+  using MyTk2=
+    TensKind<RwCol,
+	     CnCol>;
+  
+  /// Third Tensor Kind to be used
+  using MyTk3=
+    TensKind<Spin,
+	     CnCol>;
+  
+  /// First Tensor class to be used
+  using MyTens1=
+    Tens<MyTk1,
+	 double>;
+  
+  /// Second Tensor class to be used
+  using MyTens2=
+    Tens<MyTk2,
+	 float>;
+  
+  /// Second Tensor class to be used
+  using MyTens3=
+    Tens<MyTk3,
+	 float>;
+  
+  /// First Tensor to be used
+  MyTens1 tens1;
+  
+  /// Second Tensor to be used
+  MyTens2 tens2;
+  
+  /// Third Tensor to be used
+  MyTens3 tens3;
+  
+  auto mulAdder=
+    mulAdd(tens1,tens2,tens3);
+}
+
 #include <sstream>
 
 /// Prints an IntSeq

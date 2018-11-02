@@ -39,7 +39,7 @@ namespace SUNphi
   {									\
     /* TensKind of binding expression */				\
     using Tk=								\
-      typename RemoveReference<T>::Tk;					\
+      typename RemRef<T>::Tk;					\
     									\
     /* Tuple containing all Tk types */					\
     using Tp=								\
@@ -74,15 +74,15 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Binder);
   
   /// Class to bind a component of a SmET
-  template <typename TG,                                              // Type to get
-	    typename _Ref,                                            // Type to bind
-	    typename NestedTk=typename RemoveReference<_Ref>::Tk,     // Tens Kind of the bound type
-	    typename NestedTypes=typename NestedTk::types>            // Types of the tensor kind
+  template <typename TG,                                         // Type to get
+	    typename _Ref,                                       // Type to bind
+	    typename NestedTk=typename RemRef<_Ref>::Tk,         // \c TensKind of the bound type
+	    typename NestedTypes=typename NestedTk::types>       // Types of the tensor kind
   class Binder :
-    public BaseBinder,                              // Inherit from BaseBinder to detect in expression
-    public UnarySmET<Binder<TG,_Ref>>,              // Inherit from UnarySmET
+    public BaseBinder,                              // Inherit from \c BaseBinder to detect in expression
+    public UnarySmET<Binder<TG,_Ref>>,              // Inherit from \c UnarySmET
     public ConstrainIsSmET<_Ref>,                   // Constrain _Ref to be a SmET
-    public ConstrainTupleHasType<TG,NestedTypes>    // Constrain TG to be in the Types of the TensKind
+    public ConstrainTupleHasType<TG,NestedTypes>    // Constrain \c TG to be in the Types of the \c TensKind
   {
     /// Position inside the reference of the type got by the bounder
     static constexpr int pos=
@@ -283,7 +283,7 @@ namespace SUNphi
   //   // True component searched
   //   using Tg=CompOrTwinned<_Tg,Binder<InNestedTg,InNestedRef>>;
   //   // Tensor Kind of input nested binder
-  //   using InNestedRefTk=typename RemoveReference<InNestedRef>::Tk;
+  //   using InNestedRefTk=typename RemRef<InNestedRef>::Tk;
   //   // Types of the Tensor Kind of nested bounder
   //   using NestedTypes=typename InNestedRefTk::types;
   //   // Position inside the nested reference of the type got by the nested bounder

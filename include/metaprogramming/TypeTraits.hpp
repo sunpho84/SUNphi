@@ -176,7 +176,7 @@ namespace SUNphi
   
   /// Returns the type T without any reference
   template <typename T>
-  using RemoveReference=
+  using RemRef=
     typename std::remove_reference<T>::type;
   
   /// Check if the type is lvalue reference
@@ -194,7 +194,7 @@ namespace SUNphi
   /// Returns reference of plain type depending on condition
   template <bool B,                          // Condition
 	    typename _T,                     // Type
-	    typename T=RemoveReference<_T>>  // Remove reference from type
+	    typename T=RemRef<_T>>  // Remove reference from type
   using RefIf=
     Conditional<B,T&,T>;
   
@@ -221,7 +221,7 @@ namespace SUNphi
   /// Returns the type T without any reference or qualifier
   template <typename T>
   using Unqualified=
-    RemoveCV<RemoveReference<T>>;
+    RemoveCV<RemRef<T>>;
   
   /////////////////////////////////////////////////////////////////////
   
@@ -230,7 +230,7 @@ namespace SUNphi
 	    typename Derived>  // The type where Base is searched
   [[ maybe_unused]]
   constexpr bool isBaseOf=
-    std::is_base_of<Base,RemoveReference<Derived>>::value;
+    std::is_base_of<Base,RemRef<Derived>>::value;
   
   /////////////////////////////////////////////////////////////////
   

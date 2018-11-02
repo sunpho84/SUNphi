@@ -54,11 +54,11 @@ namespace SUNphi
   /// }
   ///\endcode
 #define SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS			\
-  typename...DummyTypes                      /* Fake list of types                  */ \
+  typename...DummyTypes       /* Fake list of types                  */
   
   /// Provide empty list of args, used to unprioritize default version
 #define SFINAE_WORSEN_DEFAULT_VERSION_ARGS				\
-  DummyTypes...     /*< Fake list of args */				\
+  DummyTypes...     /*< Fake list of args */
   
   /// Check that no extra arg is passed
 #define SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK	\

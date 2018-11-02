@@ -177,7 +177,7 @@ namespace SUNphi
 	      int InVectorizingSize=1,                                                 // Size of the currently scanned vectorizable components
 	      bool IsLastCheckable=(Pos==0),                                           // Determine if this is the last checkable
 	      int NextPos=(IsLastCheckable?Pos:(Pos-1)),                               // Determine the position of next component
-	      typename G=RemoveReference<decltype(get<Pos>(types{}))>,                 // Get the type of the component under exam
+	      typename G=RemRef<decltype(get<Pos>(types{}))>,                 // Get the type of the component under exam
 	      int Size=G::size,                                                        // Size of current component
 	      int OutVectorizingSize=InVectorizingSize*Size,                           // Returned vectorized size, including current component
 	      bool EnoughToVectorize=canBeSizeOfSIMDVector<F>(OutVectorizingSize),     // Check if the accumulated size is enough to vectorize

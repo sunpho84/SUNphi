@@ -44,7 +44,7 @@ namespace SUNphi
 	    typename _BoundToType,                                  // TensKind to which bind
 	    typename _Ref,                                          // Type of nested SMeT
 	    typename _Ad,                                           // Adapter of the bound component
-	    typename NestedTk=typename RemoveReference<_Ref>::Tk,   // Tens Kind of the bound type
+	    typename NestedTk=typename RemRef<_Ref>::Tk,            // Tens Kind of the bound type
 	    typename NestedTypes=typename NestedTk::types>          // Types of the tensor kind
   class RelBinder :
     public BaseRelBinder,                                           // Inherit from BaseRelBinder to detect in expression

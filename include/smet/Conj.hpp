@@ -16,15 +16,15 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Conjer);
   
   /// Class to take the conjugate of a SmET
-  template <typename _Ref,                                  // Type of the expression to conjugate
-	    typename TK=typename RemoveReference<_Ref>::Tk, // Tens Kind of the conjugated type
-	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
+  template <typename _Ref,                            // Type of the expression to conjugate
+	    typename TK=typename RemRef<_Ref>::Tk,    // Tens Kind of the conjugated type
+	    typename TK_TYPES=typename TK::types>     // Types of the \c TensKind
   class Conjer :
-    public BaseConjer,                                // Inherit from BaseConjer to detect in expression
-    public UnarySmET<Conjer<_Ref>>,                   // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                     // Constrain _Ref to be a SmET
-    public ConstrainIsTensKind<TK>,                   // Constrain type TK to be a TensKind
-    public ConstrainTupleHasType<Compl,TK_TYPES>      // Constrain TG to be in the Types of the TensKind
+    public BaseConjer,                                // Inherit from \c BaseConjer to detect in expression
+    public UnarySmET<Conjer<_Ref>>,                   // Inherit from \c UnarySmET
+    public ConstrainIsSmET<_Ref>,                     // Constrain \c _Ref to be a \c SmET
+    public ConstrainIsTensKind<TK>,                   // Constrain type \c TK to be a \c TensKind
+    public ConstrainTupleHasType<Compl,TK_TYPES>      // Constrain \c TG to be in the Types of the \c TensKind
   {
     
     /// Position of the Compl component
@@ -99,8 +99,13 @@ namespace SUNphi
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
-    using TK=typename RemoveReference<T>::Tk; //< Tens Kind of the conjugated type
-    using TK_TYPES=typename TK::types;        //< Types of the tensor kind
+    /// Tens Kind of the conjugated type
+    using TK=
+      typename RemRef<T>::Tk;
+    
+    /// Types of the tensor kind
+    using TK_TYPES=
+      typename TK::types;
     
     // If Compl is a type of the TensKind, return the Conjer
     if constexpr(tupleHasType<Compl,TK_TYPES>)

@@ -45,7 +45,7 @@ namespace SUNphi
       Fund;
     
     /// Provides a reference or a value, depending on \c Fund
-    RefIf<isLvalue<Fund>,RemoveReference<Fund>> ref;
+    RefIf<isLvalue<Fund>,RemRef<Fund>> ref;
     
     // Attributes
     STORING;

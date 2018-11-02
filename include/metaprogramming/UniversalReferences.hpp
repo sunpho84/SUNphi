@@ -23,8 +23,8 @@ namespace SUNphi
 	    class=EnableIf<(isLvalue<T> ?
 			    isLvalue<U> :
 			    true) and
-			   std::is_convertible <RemoveReference<U>*,
-						RemoveReference<T>*>::value>>
+			   std::is_convertible<RemRef<U>*,
+					       RemRef<T>*>::value>>
   constexpr T&& forw(U&& u)
   {
     return static_cast<T&&>(u);

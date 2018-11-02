@@ -37,16 +37,16 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Assigner);
   
   /// Class to assign a \c SmET to another one
-  template <typename _Ref1,                                    // Type of l.h.s
-	    typename _Ref2,                                    // Type of r.h.s
-	    typename TK1=typename RemoveReference<_Ref1>::Tk,  // \c TensKind of the l.h.s
-	    typename TK2=typename RemoveReference<_Ref2>::Tk>  // \c TensKind of the r.h.s
+  template <typename _Ref1,                           // Type of l.h.s
+	    typename _Ref2,                           // Type of r.h.s
+	    typename TK1=typename RemRef<_Ref1>::Tk,  // \c TensKind of the l.h.s
+	    typename TK2=typename RemRef<_Ref2>::Tk>  // \c TensKind of the r.h.s
   class Assigner :
     public BaseAssigner,                          // Inherit from \c BaseAssigner to detect in expression
     public BinarySmET<Assigner<_Ref1,_Ref2>>      // Inherit from \c BinarySmET
   {
-    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref1>);
-    STATIC_ASSERT_IS_SMET(RemoveReference<_Ref2>);
+    STATIC_ASSERT_IS_SMET(RemRef<_Ref1>);
+    STATIC_ASSERT_IS_SMET(RemRef<_Ref2>);
     
     // Check that the r.h.s Fund type can be converted into l.h.s
     static_assert(canBeConverted<
@@ -72,7 +72,7 @@ namespace SUNphi
     
     // Attributes
     NOT_STORING;
-    FORWARD_IS_ALIASING_TO_REFS;
+    FORWARD_IS_ALIASING_TO_PAIR_OF_REFS;
     
     /// \c TensorKind of the result is the same of l.h.s
     PROVIDE_TK(TkOf<_Ref1>);
@@ -169,7 +169,7 @@ namespace SUNphi
 //       {
 // 	/// Tens Kind of the lhs expression
 // 	using TKL=
-// 	  typename RemoveReference<Lhs>::Tk;
+// 	  typename RemRef<Lhs>::Tk;
 	
 // 	/// Outermost TensComp of lhs
 // 	using LhsFirstComp=
