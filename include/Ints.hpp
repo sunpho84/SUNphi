@@ -14,6 +14,7 @@
 #include <ints/IntSeqInsert.hpp>
 #include <ints/IntSeqRemove.hpp>
 #include <ints/IntSeqSplit.hpp>
+#include <ints/IntSeqTranspose.hpp>
 #include <ints/Ranges.hpp>
 
 #endif
