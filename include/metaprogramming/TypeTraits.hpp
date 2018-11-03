@@ -392,7 +392,7 @@ namespace SUNphi
   template <typename...Args>						\
   struct ConstrainAre ## TYPE ## s					\
   {									\
-    static_assert((is ## TYPE<Args> * ...),				\
+    static_assert((is ## TYPE<Args> && ...),				\
 		  "Error, types are not all TYPE");			\
   }
   
