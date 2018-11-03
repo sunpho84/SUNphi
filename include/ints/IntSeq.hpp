@@ -5,6 +5,8 @@
 ///
 /// \brief Implements a struct holding a sequence of integers
 
+#include <array>
+
 #include <ints/IntListOperations.hpp>
 #include <ints/IntListOrder.hpp>
 #include <ints/IntListGetEl.hpp>
@@ -42,6 +44,9 @@ namespace SUNphi
     /// Length of the sequence of integer
     static constexpr int size=
       sizeof...(Ints);
+    
+    /// Returns a constexpr array containing the \c Ints
+    static constexpr std::array<int,size> array{Ints...};
     
     /// Sum of all elements
     static constexpr int hSum=
@@ -93,16 +98,20 @@ namespace SUNphi
     }
     
     /// Get the first element of the sequence
-    static constexpr int first=element<0>;
+    static constexpr int first=
+      element<0>;
     
     /// Get the last element of the sequence
-    static constexpr int last=element<size-1>();
+    static constexpr int last=
+      element<size-1>();
     
     /// Determine whether the IntSeq elements are ordered or not
-    static constexpr int isOrdered=areOrdered<Ints...>;
+    static constexpr int isOrdered=
+      areOrdered<Ints...>;
     
     /// Determine whether the IntSeq elements are ordered and different or not
-    static constexpr int isOrderedUnique=areOrderedAndDifferent<Ints...>;
+    static constexpr int isOrderedUnique=
+      areOrderedAndDifferent<Ints...>;
     
     /// Determine whether the elements are contained
     ///
