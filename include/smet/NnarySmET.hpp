@@ -102,11 +102,17 @@ namespace SUNphi
   /*! Merging delimiters for all Refs according to given MD */		\
   template <typename MD>     /* Required merging delimiters */		\
   using MergingDelimsForRefs=						\
-    Tuple<IntSeqGetElsAfterAppending					\
-	  <RemRef<_Refs>::Tk::nTypes,					\
-	   false,MD,							\
-	   PosOfTypesNotAsserting<typename Tk::types,			\
-				  typename RemRef<_Refs>::Tk::types>>...>
+    Tuple<InsertInOrderedIntSeq /* Insert the begin */			\
+	  <0,        /* Insert 0 as begin */				\
+	   IntSeqGetElsAfterAppending					\
+	   <RemRef<_Refs>::Tk::nTypes,					\
+	    false,   /* Omit NOT_PRESENT */				\
+	    MD,	  							\
+	    PosOfTypesNotAsserting<typename Tk::types,			\
+				   typename RemRef<_Refs>::Tk::types>>, \
+	   0,        /* Shift after inserting */			\
+	   true>...> /* Ignore 0 if present   */
+  
   
   /////////////////////////////////////////////////////////////////
   
