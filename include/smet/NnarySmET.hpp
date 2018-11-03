@@ -91,8 +91,22 @@ namespace SUNphi
   /// Proivde the position of result Tk \c TensComp in each input
 #define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
   /*! Position of all the Result \c TensComp in each \c Refs Tk */	\
-  using posOfResTcsInRefsTk=						\
-    posOfTcsOfTkInListOfTks<typename Tk::types,RemRef<_Refs>::Tk::types...>
+  using PosOfResTcsInRefsTk=						\
+    PosOfTcsOfTkInListOfTks<Tk,typename RemRef<_Refs>::Tk...>
+  
+  /// Provide the merging delimiters for each Ref, according to a request of merge
+  ///
+  /// Takes the position of the resulting types into each Ref, then it
+  /// takes the delimiters position in such elelent list.
+#define PROVIDE_MERGING_DELIMS_FOR_REFS					\
+  /*! Merging delimiters for all Refs according to given MD */		\
+  template <typename MD>     /* Required merging delimiters */		\
+  using MergingDelimsForRefs=						\
+    Tuple<IntSeqGetElsAfterAppending					\
+	  <RemRef<_Refs>::Tk::nTypes,					\
+	   false,MD,							\
+	   PosOfTypesNotAsserting<typename Tk::types,			\
+				  typename RemRef<_Refs>::Tk::types>>...>
   
   /////////////////////////////////////////////////////////////////
   
