@@ -269,6 +269,17 @@ void checkNnaryBuilder()
   [[ maybe_unused ]]
   auto mulAdder=
     mulAdd(tens3,tens2,tens1);
+  
+  using Mu=
+    decltype(mulAdder);
+  
+  using Pos=
+    Mu::PosOfResTcsInRefsTk;
+  
+  using Md=
+    Mu::MergingDelimsForRefs<IntSeq<0,3>>;
+  
+  //int y=CompsMergeability<Md,Pos>{};
 }
 
 /// Check the sum of two \c SmET
@@ -318,6 +329,13 @@ void checkSumOfTwoSmETs()
   cout<<"/////////////////////////////////////////////////////////////////"<<endl;
   
   cout<<"d: "<<d.eval(1,1,1)<<endl;
+  
+  auto sum=a+b;
+  // this was added here to show the maximally mergeable delims
+  //int e=decltype(sum)::MergeableComps{};
+  //int e=decltype(sum)::PosOfRef1TcsInResTk{};
+  //int e=decltype(sum)::MergedDelims1<IntSeq<0,1,3,4>>{};
+  
   
   //cout<<"Col: "<<c.compSize<RwCol>()<<endl;
   //cout<<"Spin: "<<c.compSize<CnSpin>()<<endl;
@@ -373,6 +391,9 @@ int main()
   
   //checkCallOperator();
 
+  using U=IntSeqsTranspose<Tuple<IntSeq<0,2>,IntSeq<1,3>>>;
+  
+  cout<<printIntSeq(TupleElementType<1,U>{})<<endl;
   
   return 0;
   
