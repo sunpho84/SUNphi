@@ -669,15 +669,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    \</div>
-<div class="line">  using posOfRef ## ID ## TcsInResTk=                   \</div>
+<div class="line">  using PosOfRef ## ID ## TcsInResTk=                   \</div>
 <div class="line">    PosOfTypesNotAsserting&lt;typename Tk::types,typename TK ## ID::types&gt;; \</div>
 <div class="line">                                    \ \</div>
 <div class="line">  using PosOfRef ## ID ## PresTcsInResTk=               \</div>
-<div class="line">    FilterVariadicClassPos&lt;IsPresent,posOfRef ## ID ## TcsInResTk&gt;; \</div>
+<div class="line">    FilterVariadicClassPos&lt;IsPresent,PosOfRef ## ID ## TcsInResTk&gt;; \</div>
 <div class="line">                                    \           \</div>
 <div class="line">  template &lt;typename MD&gt; <span class="comment">/* Required merging delimiters */</span>      \</div>
 <div class="line">  using MergedDelims ## ID=                     \</div>
-<div class="line">    IntSeqGetElsAfterAppending&lt;TK ## ID::nTypes,false,MD,posOfRef ## ID ## TcsInResTk&gt;</div>
+<div class="line">    IntSeqGetElsAfterAppending&lt;TK ## ID::nTypes,false,MD,PosOfRef ## ID ## TcsInResTk&gt;</div>
 </div><!-- fragment --><p>Provides the <code>MergedDelim</code> attribute for Refs of a given <code>ID</code> </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>Add some more explenation... </dd></dl>
 

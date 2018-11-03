@@ -9,6 +9,7 @@ var NnarySmET_8hpp =
     [ "ConstrainHasMember_refs", "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html", null ],
     [ "NnarySmET", "dc/d2f/structSUNphi_1_1NnarySmET.html", "dc/d2f/structSUNphi_1_1NnarySmET" ],
     [ "FORWARD_IS_ALIASING_TO_REFS", "d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0", null ],
+    [ "PROVIDE_MERGING_DELIMS_FOR_REFS", "d2/d69/NnarySmET_8hpp.html#a327a68f580d197d2033c2f3d07d79f3c", null ],
     [ "PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N", "d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062", null ],
     [ "PROVIDE_NNARY_SMET_SIMPLE_CREATOR", "d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8", null ],
     [ "PROVIDE_POS_OF_RES_TCS_IN_REFS", "d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6", null ],

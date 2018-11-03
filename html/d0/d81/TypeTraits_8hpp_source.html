@@ -393,7 +393,7 @@ $(document).ready(function(){initNavTree('d0/d81/TypeTraits_8hpp_source.html','.
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">  template &lt;typename...Args&gt;                        \</span></div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">  struct ConstrainAre ## TYPE ## s                  \</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">    static_assert((is ## TYPE&lt;Args&gt; * ...),             \</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">    static_assert((is ## TYPE&lt;Args&gt; &amp;&amp; ...),                \</span></div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">          &quot;Error, types are not all TYPE&quot;);         \</span></div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor">  }</span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="preprocessor"></span>  </div>

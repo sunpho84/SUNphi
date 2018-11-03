@@ -1,9 +1,11 @@
 var classSUNphi_1_1MulAdder =
 [
     [ "Fund", "dc/d5d/classSUNphi_1_1MulAdder.html#aa65fe96ce335b63ddac44a64df6d668b", null ],
+    [ "MergingDelimsForRefs", "dc/d5d/classSUNphi_1_1MulAdder.html#ac6e334d2cc7709c32edd8c515e99f8e7", null ],
+    [ "PosOfResTcsInRefsTk", "dc/d5d/classSUNphi_1_1MulAdder.html#aa545dc15ca80a30515150a5ee1112313", null ],
     [ "Ref", "dc/d5d/classSUNphi_1_1MulAdder.html#a7ba6a0131dd32cfac9555eb0499cba81", null ],
     [ "Refs", "dc/d5d/classSUNphi_1_1MulAdder.html#aa4ace581676696869522f224f011a362", null ],
-    [ "Tk", "dc/d5d/classSUNphi_1_1MulAdder.html#abea28f371c93725cb7b77c8cf57d6d4e", null ],
+    [ "Tk", "dc/d5d/classSUNphi_1_1MulAdder.html#a16d9590eada95b1bab61edc17f1d5b50", null ],
     [ "Pos_t", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641", [
       [ "FACT1", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641a404d2838c7bca02feca06123637ce361", null ],
       [ "FACT2", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641a6b85baeb109a2d56af5d72fa5791e638", null ],
