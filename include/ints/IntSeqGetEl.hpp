@@ -10,6 +10,38 @@
 
 namespace SUNphi
 {
+  /// Returns all the \c IntSeq but the first N elements
+  ///
+  /// Recursive internal implementation
+  template <int N,      // Number of elements to disregard
+	    int Head,   // First element
+	    int...Tail> // All the other elements
+  DECLAUTO _IntSeqGetAllButFirstN(IntSeq<Head,Tail...>)
+  {
+    static_assert(N>=0 and N<sizeof...(Tail)+1,"N must be in the range [0,size)");
+    
+    if constexpr(N==0)
+      return IntSeq<Head,Tail...>{};
+    else
+      if constexpr(N==1)
+	return IntSeq<Tail...>{};
+      else
+	return _IntSeqGetAllButFirstN<N-1>(IntSeq<Tail...>{});
+  }
+  
+  /// Returns all the \c IntSeq but the first N elements
+  ///
+  /// Gives visibility to the internal implementation
+  template <int N,       // Number of elements to disregard
+	    typename Is> // \c IntSeq to filter
+  using IntSeqGetAllButFirstN=
+    decltype(_IntSeqGetAllButFirstN<N>(Is{}));
+  
+  /// Returns all the \c IntSeq but the first element
+  template <typename Is> // \c IntSeq to filter
+  using IntSeqGetaAllButFirst=
+    IntSeqGetAllButFirstN<1,Is>;
+  
   /// Modified extraction of an element in an \c IntSeq after appending a value
   ///
   /// Returns an \c IntSeq containing the element of position \c Pos
