@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"d5/d4a/structSUNphi_1_1IsNotNull.html#a68dec46e430900f15c4e5fbf25f58dc5":[2,0,0,106,0],
 "d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,2,2],
 "d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d":[3,0,2,2,2,1],
 "d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0":[3,0,2,2,2,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "d9/d0c/ScalarWrap_8hpp.html#aba3b615897c6d44ea2d390c598a46d66":[3,0,2,4,11,5],
 "d9/d0c/ScalarWrap_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad":[3,0,2,4,11,1],
 "d9/d0c/ScalarWrap_8hpp.html#af026fc04183838282f2c49edb3516f87":[3,0,2,4,11,4],
-"d9/d0c/ScalarWrap_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,11,3]
+"d9/d0c/ScalarWrap_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,11,3],
+"d9/d0c/ScalarWrap_8hpp_source.html":[3,0,2,4,11]
 };

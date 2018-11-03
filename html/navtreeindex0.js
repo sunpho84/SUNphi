@@ -151,7 +151,6 @@ var NAVTREEINDEX0 =
 "d1/d7a/TensStor_8hpp.html":[3,0,2,6,4],
 "d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b":[3,0,2,6,4,1],
 "d1/d7a/TensStor_8hpp_source.html":[3,0,2,6,4],
-"d1/d7e/_2home_2travis_2build_2sunpho84_2SUNphi_2include_2ints_2IntSeqGetEl_8hpp-example.html":[4,0],
 "d1/d8b/SUNphi_8hpp.html":[3,0,2,14],
 "d1/d8b/SUNphi_8hpp_source.html":[3,0,2,14],
 "d1/d96/structSUNphi_1_1TensComp.html":[2,0,0,89],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "d2/dad/UnaryMinus_8hpp.html":[3,0,2,4,13],
 "d2/dad/UnaryMinus_8hpp.html#a37a2096917632ba993563e2dda83b39d":[3,0,2,4,13,2],
 "d2/dad/UnaryMinus_8hpp.html#a91736494583c431f999e3fa04caf0274":[3,0,2,4,13,4],
-"d2/dad/UnaryMinus_8hpp.html#a93b876eb47322943cd687070d7d9d88f":[3,0,2,4,13,1]
+"d2/dad/UnaryMinus_8hpp.html#a93b876eb47322943cd687070d7d9d88f":[3,0,2,4,13,1],
+"d2/dad/UnaryMinus_8hpp.html#aac1168c9468bb07a3f41508a9ba13222":[3,0,2,4,13,6]
 };

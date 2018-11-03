@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"d9/d0c/ScalarWrap_8hpp_source.html":[3,0,2,4,11],
 "d9/d21/SmET_8hpp.html":[3,0,2,13],
 "d9/d21/SmET_8hpp_source.html":[3,0,2,13],
 "d9/d27/structSUNphi_1_1__TupleWrap.html":[2,0,0,116],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d":[3,0,2,4,3,57],
 "dc/d6b/BaseSmET_8hpp.html#a1824639ee6544c0cdf5522fb36fb3efb":[3,0,2,4,3,55],
 "dc/d6b/BaseSmET_8hpp.html#a1fed8297fba675c11b81b1f642589db5":[3,0,2,4,3,78],
-"dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879":[3,0,2,4,3,58]
+"dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879":[3,0,2,4,3,58],
+"dc/d6b/BaseSmET_8hpp.html#a31388ba85a984596f9d605934040682f":[3,0,2,4,3,83]
 };

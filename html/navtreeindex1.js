@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d2/dad/UnaryMinus_8hpp.html#aac1168c9468bb07a3f41508a9ba13222":[3,0,2,4,13,6],
 "d2/dad/UnaryMinus_8hpp.html#ab29dbe2468515d50fc89f70faa25dae8":[3,0,2,4,13,5],
 "d2/dad/UnaryMinus_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,13,3],
 "d2/dad/UnaryMinus_8hpp_source.html":[3,0,2,4,13],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,0,1,5],
 "d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9],
 "d5/d3e/IntListOperations_8hpp_source.html":[3,0,2,0,1],
-"d5/d4a/structSUNphi_1_1IsNotNull.html":[2,0,0,106]
+"d5/d4a/structSUNphi_1_1IsNotNull.html":[2,0,0,106],
+"d5/d4a/structSUNphi_1_1IsNotNull.html#a68dec46e430900f15c4e5fbf25f58dc5":[2,0,0,106,0]
 };
