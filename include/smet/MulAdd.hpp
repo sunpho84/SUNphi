@@ -43,15 +43,16 @@ namespace SUNphi
     /// TensorKind of the result
     ///
     /// \todo fixit
-    PROVIDE_TK(TensKind<>);
+    PROVIDE_TK(typename RemRef<Ref<ADDEND>>::Tk);
     
     /// Fundamental type
     PROVIDE_FUND(decltype(typename RemRef<Ref<FACT1>>::Fund{}*
 			  typename RemRef<Ref<FACT2>>::Fund{}+
 			  typename RemRef<Ref<ADDEND>>::Fund{}));
     
-    // PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(1);
-    // PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF(2);
+    PROVIDE_POS_OF_RES_TCS_IN_REFS;
+    
+    PROVIDE_MERGING_DELIMS_FOR_REFS;
     
     // PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS;
     
