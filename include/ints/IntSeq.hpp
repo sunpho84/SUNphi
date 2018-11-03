@@ -99,7 +99,7 @@ namespace SUNphi
     
     /// Get the first element of the sequence
     static constexpr int first=
-      element<0>;
+      element<0>();
     
     /// Get the last element of the sequence
     static constexpr int last=

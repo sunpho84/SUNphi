@@ -18,7 +18,7 @@ namespace SUNphi
 	    int...Tail> // All the other elements
   DECLAUTO _IntSeqGetAllButFirstN(IntSeq<Head,Tail...>)
   {
-    static_assert(N>=0 and N<sizeof...(Tail)+1,"N must be in the range [0,size)");
+    static_assert(N>=0 and N<=sizeof...(Tail)+1,"N must be in the range [0,size)");
     
     if constexpr(N==0)
       return IntSeq<Head,Tail...>{};
@@ -39,7 +39,7 @@ namespace SUNphi
   
   /// Returns all the \c IntSeq but the first element
   template <typename Is> // \c IntSeq to filter
-  using IntSeqGetaAllButFirst=
+  using IntSeqGetAllButFirst=
     IntSeqGetAllButFirstN<1,Is>;
   
   /// Modified extraction of an element in an \c IntSeq after appending a value
