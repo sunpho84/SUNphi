@@ -20,6 +20,7 @@ namespace SUNphi
   ///
   /// int a=
   ///     posInIntSeqAfterAppending<2,4>(IntSeq<0,1,2,3){}>; // 2
+  ///
   /// \endcode
   template <int Tail,                     // Tail to be added before extracting
 	    bool ReturnNotPresent,        // Switch either returning \c NOT PRESENT or \c void, if not found

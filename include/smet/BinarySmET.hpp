@@ -205,8 +205,8 @@ namespace SUNphi
 			  PairOfTensKindMergeability::template CompsMergeability< \
 			  typename RemRef<Ref1>::MergeableComps,	\
 			  typename RemRef<Ref2>::MergeableComps,	\
-			  posOfRef1TcsInResTk,				\
-			  posOfRef2TcsInResTk>)
+			  PosOfRef1TcsInResTk,				\
+			  PosOfRef2TcsInResTk>)
   }
 }
 
