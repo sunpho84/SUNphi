@@ -213,6 +213,17 @@ void checkCallOperator()
     <<endl;
 }
 
+#include <sstream>
+
+/// Prints an IntSeq
+template <int...Ints>
+std::string printIntSeq(IntSeq<Ints...>)
+{
+  std::ostringstream os;
+  for(int a : {Ints...})  os<<a<<" ";
+  return os.str();
+}
+
 void checkNnaryBuilder()
 {
   /// Fist Tensor Kind to be used
@@ -255,19 +266,9 @@ void checkNnaryBuilder()
   /// Third Tensor to be used
   MyTens3 tens3;
   
+  [[ maybe_unused ]]
   auto mulAdder=
-    mulAdd(tens1,tens2,tens3);
-}
-
-#include <sstream>
-
-/// Prints an IntSeq
-template <int...Ints>
-std::string printIntSeq(IntSeq<Ints...>)
-{
-  std::ostringstream os;
-  for(int a : {Ints...})  os<<a<<" ";
-  return os.str();
+    mulAdd(tens3,tens2,tens1);
 }
 
 /// Check the sum of two \c SmET
@@ -366,11 +367,14 @@ int main()
   
   checkFilterVariadicClassPos();
   
-  checkSumOfTwoSmETs();
+  //checkSumOfTwoSmETs();
   
   checkScalarWrap();
   
-  checkCallOperator();
+  //checkCallOperator();
+
+  
+  return 0;
   
   // Check on Diag
   {
