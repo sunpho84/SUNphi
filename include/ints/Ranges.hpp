@@ -22,8 +22,9 @@ namespace SUNphi
     static constexpr int half=Max/2;
     
     /// Internal type holding the two halves
-    using type=IntSeqCat<typename _IntsUpTo<half>::type,
-			 typename _IntsUpTo<Max-half>::type::template Add<half>>;
+    using type=
+      IntSeqCat<typename _IntsUpTo<half>::type,
+		typename _IntsUpTo<Max-half>::type::template Add<half>>;
   };
   
   /// Defines a sequence of integer up to Max (excluded)
@@ -33,7 +34,8 @@ namespace SUNphi
   struct _IntsUpTo<0>
   {
     /// Empty list
-    using type=IntSeq<>;
+    using type=
+      IntSeq<>;
   };
   
   /// Defines a sequence of integer up to Max (excluded)
@@ -43,7 +45,8 @@ namespace SUNphi
   struct _IntsUpTo<1>
   {
     /// Trivial list
-    using type=IntSeq<0>;
+    using type=
+      IntSeq<0>;
   };
   
   /// Defines a sequence of integer up to Max (excluded)
@@ -66,19 +69,23 @@ namespace SUNphi
     static_assert(Shift,"Shift must be non-zero");
     
     /// Mask used to set to zero the Range parameters
-    static constexpr bool nonNull=(Max>Min);
+    static constexpr bool nonNull=
+      (Max>Min);
     
     /// Maximal value of the normalized range
-    static constexpr int normalizedMax=nonNull*((Max-Min)/Shift);
+    static constexpr int normalizedMax=
+      nonNull*((Max-Min)/Shift);
     
     /// Stride among entries
-    static constexpr int stride=nonNull*Shift;
+    static constexpr int stride=
+      nonNull*Shift;
     
     /// Offset of the sequence
     static constexpr int offset=nonNull*Min;
     
     /// Shifted-strided interval
-    using type=typename SUNphi::IntsUpTo<normalizedMax>
+    using type=
+      typename SUNphi::IntsUpTo<normalizedMax>
       ::template Mul<stride>
       ::template Add<offset>;
   };
@@ -105,11 +112,11 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Defines a IntSeq of size Num, all containing Entry as entry
-  template <int Num,   // Number of components
-	    int Val>   // Value to be used
+  /// Defines a \c IntSeq of given \c Length, all containing \c Val as entry
+  template <int Length,   // Number of components
+	    int Val>      // Value to be used
   using IntSeqOfSameNumb=
-    typename IntsUpTo<Num>::
+    typename IntsUpTo<Length>::
     template Mul<0>::
     template Add<Val>;
 }
