@@ -9,6 +9,7 @@ var structSUNphi_1_1IntSeq =
     [ "Mul", "da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df", null ],
     [ "Sub", "da/def/structSUNphi_1_1IntSeq.html#a7495becadb913e86710fe02e2125a073", null ],
     [ "element", "da/def/structSUNphi_1_1IntSeq.html#a92a9fa6ac6fb87d2da6d604037cc7843", null ],
+    [ "array", "da/def/structSUNphi_1_1IntSeq.html#a7c9712c3f155c106b78851f3ff383585", null ],
     [ "first", "da/def/structSUNphi_1_1IntSeq.html#a26d1e940559ef4c780ff39c6cd7045d0", null ],
     [ "firstNon", "da/def/structSUNphi_1_1IntSeq.html#a66e2599bba7e4a7755e8d5f93cc2dfe7", null ],
     [ "hMul", "da/def/structSUNphi_1_1IntSeq.html#a9437d6230b77132e7010156c283a3396", null ],

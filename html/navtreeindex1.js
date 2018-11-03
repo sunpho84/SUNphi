@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"d2/dad/UnaryMinus_8hpp.html#a91736494583c431f999e3fa04caf0274":[3,0,2,4,13,4],
+"d2/dad/UnaryMinus_8hpp.html#a93b876eb47322943cd687070d7d9d88f":[3,0,2,4,13,1],
 "d2/dad/UnaryMinus_8hpp.html#aac1168c9468bb07a3f41508a9ba13222":[3,0,2,4,13,6],
 "d2/dad/UnaryMinus_8hpp.html#ab29dbe2468515d50fc89f70faa25dae8":[3,0,2,4,13,5],
 "d2/dad/UnaryMinus_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,4,13,3],
@@ -111,8 +113,8 @@ var NAVTREEINDEX1 =
 "d3/dbe/IntListOrder_8hpp_source.html":[3,0,2,0,2],
 "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html":[2,0,0,74,1],
 "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html#a4aae4936252607fd0d3e8ece3e15e3b8":[2,0,0,74,1,0],
-"d3/dd7/namespaceSUNphi.html":[2,0,0],
 "d3/dd7/namespaceSUNphi.html":[1,0,0],
+"d3/dd7/namespaceSUNphi.html":[2,0,0],
 "d3/de8/structSUNphi_1_1__Conditional.html":[2,0,0,17],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html":[2,0,0,3],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html#a3a382b9c828b202b2863778c3ecc7f56":[2,0,0,3,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d5/d3e/IntListOperations_8hpp.html#abcdfe80aefc0be41af4d9f99539fa7bc":[3,0,2,0,1,3],
 "d5/d3e/IntListOperations_8hpp.html#ad3de581d6d86339683d44a88c0ddeba9":[3,0,2,0,1,7],
 "d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,0,1,5],
-"d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9],
-"d5/d3e/IntListOperations_8hpp_source.html":[3,0,2,0,1],
-"d5/d4a/structSUNphi_1_1IsNotNull.html":[2,0,0,106]
+"d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9]
 };
