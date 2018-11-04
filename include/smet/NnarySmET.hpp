@@ -116,20 +116,24 @@ namespace SUNphi
   /// Determine the mergeability of the \c ResPos component of the result
   ///
   /// Nested internal implemention
-  /// \todo still not accepting external additional constraints
   template <int ResPos=0,                    // Current \c TensComp to be checked
 	    typename...MergeDelim,           // \c IntSeq containing the allowed mergeability delimiters
 	    typename...PosOfResTcsInRefTk,   // Route to give the position of each \c TensComp of the Res in each Ref
-	    int...PrevPosInts>               // Position of previous component
+	    int...PrevPosInts,               // Position of previous component
+	    typename ExtraDelim>             // Extra delimiters to be added
   constexpr DECLAUTO _compsMergeability(Tuple<MergeDelim...>,
 					Tuple<PosOfResTcsInRefTk...>,
-					IntSeq<PrevPosInts...>)
+					IntSeq<PrevPosInts...>,
+					ExtraDelim)
   {
+    static_assert(isIntSeq<ExtraDelim>,"ExtraDelim needs to be IntSeq");
+    static_assert((isIntSeq<MergeDelim> && ...),"MergeDelim need to be IntSeq");
+    static_assert((isIntSeq<PosOfResTcsInRefTk> && ...),"PosOfResTcsInRefTk need to be IntSeq");
+    
     /// Number of remaining \c TensComp to be checked
     constexpr int nC=
       TupleElementType<0,Tuple<PosOfResTcsInRefTk...>>::size;
     
-    /// Check that all Pos contains the same number of \c TensComp
     static_assert(((nC==PosOfResTcsInRefTk::size) && ...),"All PosOfResTcsInRefTk must have the same size");
     
     // If we are terminating, return the final position
@@ -145,7 +149,7 @@ namespace SUNphi
 	using Nested=
 	  decltype(_compsMergeability<ResPos+1>(Tuple<MergeDelim...>{},
 				      Tuple<IntSeqGetAllButFirst<PosOfResTcsInRefTk>...>{},
-				      CurPos{}));
+						CurPos{},ExtraDelim{}));
 	
 	/// Check whether the current component is not consecutive in all Refs
 	constexpr bool curNotConsecutive=
@@ -164,11 +168,17 @@ namespace SUNphi
 	using PrevPres=
 	  IntSeq<(PrevPosInts!=NOT_PRESENT)...>;
 	
+	/// Check it the position was extra-delimited
+	constexpr bool isInExtraDelim=
+	  ExtraDelim::template has<ResPos>;
+	
 	/// Determine if a break in mergeability is needed
 	constexpr bool insBreak=
 	  originallyNotMergeable
 	 or
 	  (not isSame<PrevPres,CurPres>)
+	 or
+	  isInExtraDelim
 	 or
 	  curNotConsecutive;
 	
@@ -188,9 +198,10 @@ namespace SUNphi
   /// TensKind is consecutive with previous \c TensComp, and if the
   /// component was mergeable in all \c TensKind
   template <typename ReqMD,                   // \c Tuple of \c IntSeq containing the required Merge Delim
-	    typename PosOfResTcsInRefTks>     // Position of the result comps in the refs (\c Tuple of \c IntSeq)
+	    typename PosOfResTcsInRefTks,     // Position of the result comps in the refs (\c Tuple of \c IntSeq)
+	    typename ExtraDelims>             // Additional delmiters coming from the \c SmET
   using CompsMergeability=
-    decltype(_compsMergeability(ReqMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<ReqMD>,0>{}));
+    decltype(_compsMergeability(ReqMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<ReqMD>,0>{},ExtraDelims{}));
   
   /////////////////////////////////////////////////////////////////
   

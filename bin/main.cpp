@@ -279,7 +279,7 @@ void checkNnaryBuilder()
   using Pos=
     Mu::PosOfResTcsInRefsTk;
   
-  //int y=CompsMergeability<Md,Pos>{};
+  //int y=CompsMergeability<Md,Pos,IntSeq<>>{};
 }
 
 /// Check the sum of two \c SmET
