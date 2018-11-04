@@ -273,11 +273,11 @@ void checkNnaryBuilder()
   using Mu=
     decltype(mulAdder);
   
-  using Pos=
-    Mu::PosOfResTcsInRefsTk;
-  
   using Md=
     Mu::MergingDelimsForRefs<IntSeq<0,3>>;
+  
+  using Pos=
+    Mu::PosOfResTcsInRefsTk;
   
   //int y=CompsMergeability<Md,Pos>{};
 }
