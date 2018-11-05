@@ -273,13 +273,15 @@ void checkNnaryBuilder()
   using Mu=
     decltype(mulAdder);
   
-  using Md=
-    Mu::MergingDelimsForRefs<IntSeq<0,3>>;
+  // using Md=
+  //   Mu::MergingDelimsOfRefs<IntSeq<0,3>>;
   
-  using Pos=
-    Mu::PosOfResTcsInRefsTk;
+  // using Pos=
+  //   Mu::PosOfResTcsInRefsTk;
   
-  //int y=CompsMergeability<Md,Pos,IntSeq<>>{};
+  //int y=Mu::MergeableComps{};
+  
+  //mulAdder.getMergedCompsView<IntSeq<0,1,2,3>>();
 }
 
 /// Check the sum of two \c SmET

@@ -45,16 +45,21 @@ namespace SUNphi
     /// \todo fixit
     PROVIDE_TK(typename RemRef<Ref<ADDEND>>::Tk);
     
+    PROVIDE_POS_OF_RES_TCS_IN_REFS;
     /// Fundamental type
     PROVIDE_FUND(decltype(typename RemRef<Ref<FACT1>>::Fund{}*
 			  typename RemRef<Ref<FACT2>>::Fund{}+
 			  typename RemRef<Ref<ADDEND>>::Fund{}));
     
-    PROVIDE_POS_OF_RES_TCS_IN_REFS;
+    NO_EXTRA_MERGE_DELIMS;
     
-    PROVIDE_MERGING_DELIMS_FOR_REFS;
+    PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;
     
-    // PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS;
+    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the three references and returns their combination */,
+					return
+					  MERGED_COMPS_VIEW_OF_REF(FACT1)*
+					  MERGED_COMPS_VIEW_OF_REF(FACT2)+
+					  MERGED_COMPS_VIEW_OF_REF(ADDEND));
     
     // // Returns a component-merged version
     // PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their sum */,

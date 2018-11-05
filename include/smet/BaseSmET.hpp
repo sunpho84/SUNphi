@@ -151,10 +151,10 @@ namespace SUNphi
   /// // Maximal splitting
   /// Using Tk=
   ///   TensKind<Spin,Col>
-  /// PROVIDE_MERGEABLE_COMPS(IntSeq<0,2>);
+  /// PROVIDE_MERGEABLE_COMPS(/*! Description */,IntSeq<0,2>);
   /// \endcode
 #define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)			\
-  USING(/*! List of points where the TensKind can be split */,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \
+  USING(/*! List of points where the \c TensKind can be split */,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \
 									\
   /*! Assert that a given merging condition is valid */			\
   template <typename Is,						\

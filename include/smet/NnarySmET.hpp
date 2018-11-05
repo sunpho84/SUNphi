@@ -94,37 +94,18 @@ namespace SUNphi
   using PosOfResTcsInRefsTk=						\
     PosOfTcsOfTkInListOfTks<Tk,typename RemRef<_Refs>::Tk...>
   
-  /// Provide the merging delimiters for each Ref, according to a request of merge
-  ///
-  /// Takes the position of the resulting types into each Ref, then it
-  /// takes the delimiters position in such elelent list.
-#define PROVIDE_MERGING_DELIMS_FOR_REFS					\
-  /*! Merging delimiters for all Refs according to given MD */		\
-  template <typename MD>     /* Required merging delimiters */		\
-  using MergingDelimsForRefs=						\
-    Tuple<InsertInOrderedIntSeq /* Insert the begin */			\
-	  <0,        /* Insert 0 as begin */				\
-	   IntSeqGetElsAfterAppending					\
-	   <RemRef<_Refs>::Tk::nTypes,					\
-	    false,   /* Omit NOT_PRESENT */				\
-	    MD,	  							\
-	    PosOfTypesNotAsserting<typename Tk::types,			\
-				   typename RemRef<_Refs>::Tk::types>>, \
-	   0,        /* Shift after inserting */			\
-	   true>...> /* Ignore 0 if present   */
-  
   /// Determine the mergeability of the \c ResPos component of the result
   ///
   /// Nested internal implemention
   template <int ResPos=0,                    // Current \c TensComp to be checked
-	    typename...MergeDelim,           // \c IntSeq containing the allowed mergeability delimiters
+	    typename...MergeDelim,           // \c IntSeq containing the allowed mergeability delimiters for each Ref
 	    typename...PosOfResTcsInRefTk,   // Route to give the position of each \c TensComp of the Res in each Ref
 	    int...PrevPosInts,               // Position of previous component
 	    typename ExtraDelim>             // Extra delimiters to be added
-  constexpr DECLAUTO _compsMergeability(Tuple<MergeDelim...>,
-					Tuple<PosOfResTcsInRefTk...>,
-					IntSeq<PrevPosInts...>,
-					ExtraDelim)
+  constexpr DECLAUTO _nnarySmETCompsMergeability(Tuple<MergeDelim...>,
+						 Tuple<PosOfResTcsInRefTk...>,
+					         IntSeq<PrevPosInts...>,
+                                                 ExtraDelim)
   {
     static_assert(isIntSeq<ExtraDelim>,"ExtraDelim needs to be IntSeq");
     static_assert((isIntSeq<MergeDelim> && ...),"MergeDelim need to be IntSeq");
@@ -147,7 +128,7 @@ namespace SUNphi
 	
 	/// Nested delimiters
 	using Nested=
-	  decltype(_compsMergeability<ResPos+1>(Tuple<MergeDelim...>{},
+	  decltype(_nnarySmETCompsMergeability<ResPos+1>(Tuple<MergeDelim...>{},
 				      Tuple<IntSeqGetAllButFirst<PosOfResTcsInRefTk>...>{},
 						CurPos{},ExtraDelim{}));
 	
@@ -197,11 +178,67 @@ namespace SUNphi
   /// only in one of the \c TensKind), if its position inside the \c
   /// TensKind is consecutive with previous \c TensComp, and if the
   /// component was mergeable in all \c TensKind
-  template <typename ReqMD,                   // \c Tuple of \c IntSeq containing the required Merge Delim
+  template <typename RefsMD,                  // \c Tuple of \c IntSeq containing the MergeDelims for each Ref
 	    typename PosOfResTcsInRefTks,     // Position of the result comps in the refs (\c Tuple of \c IntSeq)
 	    typename ExtraDelims>             // Additional delmiters coming from the \c SmET
-  using CompsMergeability=
-    decltype(_compsMergeability(ReqMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<ReqMD>,0>{},ExtraDelims{}));
+  using NnarySmETCompsMergeability=
+    decltype(_nnarySmETCompsMergeability(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<RefsMD>,0>{},ExtraDelims{}));
+  
+  /// Add an \c ExtraDelims \c IntSeq called \c ExtraDelims
+#define PROVIDE_EXTRA_MERGE_DELIMS(EXTRA_DELIMS)	\
+  /*! Additional delimiters */				\
+  using ExtraDelims=					\
+    EXTRA_DELIMS
+  
+  /// Add an empty \c ExtraDelims
+#define NO_EXTRA_MERGE_DELIMS			\
+  /*! No Additional MergeDelims is included */	\
+  PROVIDE_EXTRA_MERGE_DELIMS(IntSeq<>)
+  
+  /// Provide \c MergeableComps delimiter according to references and extra
+#define PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA		\
+  PROVIDE_MERGEABLE_COMPS(/*! Using \c MergingDelimsForRefs and \c ExtraDelims to determine the mergability */, \
+			  NnarySmETCompsMergeability<			\
+			   Tuple<typename RemRef<_Refs>::MergeableComps...>,\
+			   PosOfResTcsInRefsTk,				\
+			   ExtraDelims>)
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the merged comps view of the \c I-th \c Ref
+#define MERGED_COMPS_VIEW_OF_REF(I)					\
+  get<I>(refs).template getMergedCompsView<TupleElementType<I,MDs>>()
+  
+  /// Provides a \c getMergedCompsView method, taking Is as template parameter
+#define PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER,DESCRIPTION,...) \
+  DESCRIPTION								\
+  template <typename Is>       /* IntSeq delimiting the comps groups */ \
+  DECLAUTO getMergedCompsView()						\
+    QUALIFIER								\
+  {									\
+    /* Check that we can merge as asked */				\
+    assertMergeableWith<Is>();						\
+									\
+    using MDs=								\
+      Tuple<InsertInOrderedIntSeq /* Insert the begin */		\
+	    <0,        /* Insert 0 as begin */				\
+	     IntSeqGetElsAfterAppending					\
+	     <RemRef<_Refs>::Tk::nTypes,				\
+	      false,   /* Omit NOT_PRESENT */				\
+	      Is,							\
+	      PosOfTypesNotAsserting<typename Tk::types,		\
+				     typename RemRef<_Refs>::Tk::types>>, \
+	     0,         /* Shift after inserting */			\
+	     true>...>; /* Ignore 0 if present   */			\
+    									\
+    __VA_ARGS__;							\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Provides a const and not const \c getMergedCompsView metod
+#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
+  PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(,DESCRIPTION,__VA_ARGS__);	\
+  PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(const,DESCRIPTION,__VA_ARGS__)
   
   /////////////////////////////////////////////////////////////////
   

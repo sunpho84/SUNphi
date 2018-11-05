@@ -65,8 +65,8 @@ namespace SUNphi
     // Returns a component-merged version
     PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their sum */,
     				  return
-				  ref1.template getMergedCompsView<MergedDelims1<Is>>()+
-				  ref2.template getMergedCompsView<MergedDelims2<Is>>(););
+				   ref1.template getMergedCompsView<MergedDelims1<Is>>()+
+				   ref2.template getMergedCompsView<MergedDelims2<Is>>(););
     
     /// Provides either the const or non-const evaluator
 #define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
