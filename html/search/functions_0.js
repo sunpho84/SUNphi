@@ -2,7 +2,7 @@ var searchData=
 [
   ['_5fareordered',['_areOrdered',['../d3/dd7/namespaceSUNphi.html#ac6f6a412c3eec8f1ad0c29c57eb0bd9e',1,'SUNphi']]],
   ['_5fareorderedmin2ints',['_areOrderedMin2Ints',['../d3/dd7/namespaceSUNphi.html#a31453e65b0bfae779cb3ee139b8caace',1,'SUNphi']]],
-  ['_5fcompsmergeability',['_compsMergeability',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a842644f1790c8e6abdd3185503632199',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt;&gt; P1, IntSeq&lt;&gt; P2)'],['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a99fe7d8a45952d2bf24c2525d734a84d',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt; Head1, Tail1...&gt; P1, IntSeq&lt; Head2, Tail2...&gt; P2)'],['../d3/dd7/namespaceSUNphi.html#a6ecce0efd5b2431981b3e4b67b0d4959',1,'SUNphi::_compsMergeability()']]],
+  ['_5fcompsmergeability',['_compsMergeability',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a842644f1790c8e6abdd3185503632199',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt;&gt; P1, IntSeq&lt;&gt; P2)'],['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a99fe7d8a45952d2bf24c2525d734a84d',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt; Head1, Tail1...&gt; P1, IntSeq&lt; Head2, Tail2...&gt; P2)']]],
   ['_5fdyncompspos',['_DynCompsPos',['../d8/df8/classSUNphi_1_1TensKind.html#a46e099c3edb1e5ef8d76c9028fa52964',1,'SUNphi::TensKind']]],
   ['_5ffirslarger',['_firsLarger',['../d3/dd7/namespaceSUNphi.html#a87e7e8f527168edc2e495a8104f3945f',1,'SUNphi']]],
   ['_5ffirsteq',['_firstEq',['../d3/dd7/namespaceSUNphi.html#af043ff525cec37e98a03411447d5d836',1,'SUNphi']]],
@@ -27,6 +27,7 @@ var searchData=
   ['_5flastsmaller',['_lastSmaller',['../d3/dd7/namespaceSUNphi.html#a261279a15ea845358fafe918dc159313',1,'SUNphi']]],
   ['_5fmaxoflist',['_maxOfList',['../d3/dd7/namespaceSUNphi.html#abcdfe80aefc0be41af4d9f99539fa7bc',1,'SUNphi']]],
   ['_5fminoflist',['_minOfList',['../d3/dd7/namespaceSUNphi.html#a987e6d39930ca776c8a8c378b9534284',1,'SUNphi']]],
+  ['_5fnnarysmetcompsmergeability',['_nnarySmETCompsMergeability',['../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2',1,'SUNphi']]],
   ['_5fposoftype',['_posOfType',['../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a',1,'SUNphi::_posOfType(T, Tuple&lt;&gt;)'],['../d3/dd7/namespaceSUNphi.html#acf81841aec54ab650800087a08062bba',1,'SUNphi::_posOfType(T, Tuple&lt; Head, Tail...&gt;)']]],
   ['_5fposoftypes',['_posOfTypes',['../d3/dd7/namespaceSUNphi.html#a654d1d12c340e9ae05f470203c6a7a16',1,'SUNphi']]],
   ['_5fremovefromorderedintseq',['_removeFromOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#af1c48c15bdb3967be82cccb56cf88d58',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt; Bef...&gt; &amp;, const IntSeq&lt; HeadAft, TailAft...&gt; &amp;)'],['../d3/dd7/namespaceSUNphi.html#ae686be2b40809c1af7a11802b57d6222',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt;&gt; &amp;, const IntSeq&lt;&gt; &amp;)']]],

@@ -1,7 +1,8 @@
 var classSUNphi_1_1MulAdder =
 [
+    [ "ExtraDelims", "dc/d5d/classSUNphi_1_1MulAdder.html#a3ea95252d10b3d9a4000d68584fd315b", null ],
     [ "Fund", "dc/d5d/classSUNphi_1_1MulAdder.html#aa65fe96ce335b63ddac44a64df6d668b", null ],
-    [ "MergingDelimsForRefs", "dc/d5d/classSUNphi_1_1MulAdder.html#ac6e334d2cc7709c32edd8c515e99f8e7", null ],
+    [ "MergeableComps", "dc/d5d/classSUNphi_1_1MulAdder.html#a4514b006a3091fe49b33b40b95f65f7d", null ],
     [ "PosOfResTcsInRefsTk", "dc/d5d/classSUNphi_1_1MulAdder.html#aa545dc15ca80a30515150a5ee1112313", null ],
     [ "Ref", "dc/d5d/classSUNphi_1_1MulAdder.html#a7ba6a0131dd32cfac9555eb0499cba81", null ],
     [ "Refs", "dc/d5d/classSUNphi_1_1MulAdder.html#aa4ace581676696869522f224f011a362", null ],
@@ -12,7 +13,11 @@ var classSUNphi_1_1MulAdder =
       [ "ADDEND", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641ab76fe585bf06f781d5fe123d55a509a1", null ]
     ] ],
     [ "MulAdder", "dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd", null ],
+    [ "assertMergeableWith", "dc/d5d/classSUNphi_1_1MulAdder.html#ac2841f162e091c1ce1adb17aad8aed81", null ],
     [ "compSize", "dc/d5d/classSUNphi_1_1MulAdder.html#af534f9a021ee75bbf8bb5d09c90e26e4", null ],
+    [ "getMaximallyMergedCompsView", "dc/d5d/classSUNphi_1_1MulAdder.html#a0b660796aeb4f07aec3c352a5754c42b", null ],
+    [ "getMergedCompsView", "dc/d5d/classSUNphi_1_1MulAdder.html#ad943894869b664bfd6fb393e1c3c7c15", null ],
+    [ "getMergedCompsView", "dc/d5d/classSUNphi_1_1MulAdder.html#a36e1e84956a321ffa890d0690c3cad78", null ],
     [ "isAliasing", "dc/d5d/classSUNphi_1_1MulAdder.html#aba9166e3f1b553d6364afaac9ef61d32", null ],
     [ "operator()", "dc/d5d/classSUNphi_1_1MulAdder.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
     [ "operator()", "dc/d5d/classSUNphi_1_1MulAdder.html#a4b46ea85ccd68848ca76d967b1f07222", null ],

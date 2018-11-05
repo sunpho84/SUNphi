@@ -1,5 +1,10 @@
 var NAVTREEINDEX1 =
 {
+"d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html":[2,0,0,95,3],
+"d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html":[2,0,0,13],
+"d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html#ac736e481c8022345ba167c6611c153b1":[2,0,0,13,0],
+"d2/dad/UnaryMinus_8hpp.html":[3,0,2,4,13],
+"d2/dad/UnaryMinus_8hpp.html#a37a2096917632ba993563e2dda83b39d":[3,0,2,4,13,2],
 "d2/dad/UnaryMinus_8hpp.html#a91736494583c431f999e3fa04caf0274":[3,0,2,4,13,4],
 "d2/dad/UnaryMinus_8hpp.html#a93b876eb47322943cd687070d7d9d88f":[3,0,2,4,13,1],
 "d2/dad/UnaryMinus_8hpp.html#aac1168c9468bb07a3f41508a9ba13222":[3,0,2,4,13,6],
@@ -113,8 +118,8 @@ var NAVTREEINDEX1 =
 "d3/dbe/IntListOrder_8hpp_source.html":[3,0,2,0,2],
 "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html":[2,0,0,74,1],
 "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html#a4aae4936252607fd0d3e8ece3e15e3b8":[2,0,0,74,1,0],
-"d3/dd7/namespaceSUNphi.html":[1,0,0],
 "d3/dd7/namespaceSUNphi.html":[2,0,0],
+"d3/dd7/namespaceSUNphi.html":[1,0,0],
 "d3/de8/structSUNphi_1_1__Conditional.html":[2,0,0,17],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html":[2,0,0,3],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html#a3a382b9c828b202b2863778c3ecc7f56":[2,0,0,3,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX1 =
 "d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6":[3,0,2,0,1,0],
 "d5/d3e/IntListOperations_8hpp.html#a2b3b303cf89d070aa497b7f282da375e":[3,0,2,0,1,8],
 "d5/d3e/IntListOperations_8hpp.html#a8773624a8f4b3b92bc9bb1ef7df27761":[3,0,2,0,1,1],
-"d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284":[3,0,2,0,1,4],
-"d5/d3e/IntListOperations_8hpp.html#a9bcedb4b0596b7e77f6f0620b3e944c4":[3,0,2,0,1,10],
-"d5/d3e/IntListOperations_8hpp.html#abcdfe80aefc0be41af4d9f99539fa7bc":[3,0,2,0,1,3],
-"d5/d3e/IntListOperations_8hpp.html#ad3de581d6d86339683d44a88c0ddeba9":[3,0,2,0,1,7],
-"d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,0,1,5],
-"d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9]
+"d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284":[3,0,2,0,1,4]
 };
