@@ -135,61 +135,61 @@ namespace SUNphi
 				  auto refMerged=ref.template getMergedCompsView<NestedIs>();
 				  return Binder<TG,decltype(refMerged)>(std::move(refMerged),id));
     
-    /// Provides either the const or non-const evaluator
-#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
-    /*! QUALIFIER evaluator for Binder                               */	\
-    /*!                                                              */	\
-    /*! Internal Evaluator, inserting the id at the correct          */	\
-    /*! position in the list of args. Check on type B is omitted, as */	\
-    /*! the function is called only from an already checked smet     */ \
-    template <typename...Args, /* Type of the arguments */		\
-	      int...Head,      /* Position of the first set of args, before insertion */ \
-	      int...Tail>      /* Position of the second set of args, after insertion */ \
-    DECLAUTO binder_internal_eval(IntSeq<Head...>,              /*!< List of position of components before id */ \
-				  IntSeq<Tail...>,              /*!< List of position of components after id  */ \
-				  const Tuple<Args...>& targs)  /*!< Components to get                        */ \
-      QUALIFIER								\
-    {									\
-      return ref.eval(get<Head>(targs)...,				\
-		      id,						\
-		      get<Tail>(targs)...);				\
-    }									\
-									\
-    /*! Evaluator, external interface                                */	\
-    /*!                                                              */	\
-    /*! Pass to the internal implementation the integer sequence     */	\
-    /*! needed to deal properly with the insertion of the arg in the */	\
-    /*! correct position */						\
-    template <typename...Args>           /* Type of the arguments    */	\
-    DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
-      QUALIFIER								\
-    {									\
-      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
-									\
-      using Head=IntsUpTo<pos>;						\
-									\
-      if(0)								\
-	{								\
-	  using namespace std;						\
-	  cout<<" evaluating binder of component "<<Tg::name();		\
-	  cout<<" position in NestedTk: "<<pos;				\
-	  cout<<" of "<<NestedTk::nTypes<<" types,";			\
-	  cout<<" id: "<<id;						\
-	  cout<<endl;							\
-	}								\
-      									\
-      using Tail=typename IntsUpTo<Tk::nTypes-pos>::template Add<pos>; \
-									\
-      return binder_internal_eval(Head{},				\
-      				  Tail{},				\
-      				  std::forward_as_tuple(args...));	\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    /// Evaluator for Binder
+    ///
+    /// Internal Evaluator, inserting the id at the correct
+    /// position in the list of args. Check on type B is omitted, as
+    /// the function is called only from an already checked smet
+    template <typename...Args, // Type of the arguments */
+	      int...Head,      // Position of the first set of args, before insertion
+	      int...Tail>      // Position of the second set of args, after insertion
+    DECLAUTO binder_internal_eval(IntSeq<Head...>,              ///< List of position of components before id
+				  IntSeq<Tail...>,              ///< List of position of components after id
+				  const Tuple<Args...>& targs)  ///< Components to get
+      const
+    {
+      return ref.eval(get<Head>(targs)...,
+		      id,
+		      get<Tail>(targs)...);
+    }
     
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);
+    PROVIDE_ALSO_NON_CONST_METHOD(binder_internal_eval);
     
-#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
+    /// Evaluator, external interface
+    ///
+    /// Pass to the internal implementation the integer sequence
+    /// needed to deal properly with the insertion of the arg in the
+    /// correct position
+    template <typename...Args>           ///Type of the arguments
+    DECLAUTO eval(const Args&...args)    ///< Components to get
+      const
+    {
+      STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);
+      
+      /// Position of the args to forward before insertion
+      using Head=
+	IntsUpTo<pos>;
+      
+      if(0)
+	{
+	  using namespace std;
+	  cout<<" evaluating binder of component "<<Tg::name();
+	  cout<<" position in NestedTk: "<<pos;
+	  cout<<" of "<<NestedTk::nTypes<<" types,";
+	  cout<<" id: "<<id;
+	  cout<<endl;
+	}
+      
+      /// Position of the args to forward after insertion
+      using Tail=
+	typename IntsUpTo<Tk::nTypes-pos>::template Add<pos>;
+      
+      return binder_internal_eval(Head{},
+      				  Tail{},
+      				  std::forward_as_tuple(args...));
+    }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(eval);
     
     PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Binder);
     

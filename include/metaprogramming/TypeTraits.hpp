@@ -254,6 +254,50 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Remove \c const qualifier from anything
+  ///
+  /// \todo  Check that  the  "dangling  reference forbidding"  below,
+  /// currently not working, is not actually necessary
+  template <typename T>
+  constexpr T& asMutable(const T& v) noexcept
+  {
+    return const_cast<T&>(v);
+  }
+  
+  // /// Forbids a dangling reference
+  // template <typename T>
+  // void asMutable(const T&&)=delete;
+  
+  /// Provides also a non-const version of the method \c NAME
+  ///
+  /// See
+  /// https://stackoverflow.com/questions/123758/how-do-i-remove-code-duplication-between-similar-const-and-non-const-member-func
+  /// A const method NAME must be already present Example
+  ///
+  /// \code
+  // class ciccio
+  /// {
+  ///   double e{0};
+  ///
+  /// public:
+  ///
+  ///   const double& get() const
+  ///   {
+  ///     return e;
+  ///   }
+  ///
+  ///   PROVIDE_ALSO_NON_CONST_METHOD(get);
+  /// };
+  /// \endcode
+#define PROVIDE_ALSO_NON_CONST_METHOD(NAME)				\
+  template <typename...Ts>						\
+  DECLAUTO NAME(Ts&&...ts)						\
+  {									\
+    return asMutable(std::as_const(*this).NAME(forw<Ts>(ts)...));	\
+  }
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Static assert if DERIVED does not derive from BASE
 #define STATIC_ASSERT_IS_BASE_OF(BASE,DERIVED)				\
   static_assert(isBaseOf<BASE,DERIVED>,"Error, type not derived from what expected")
