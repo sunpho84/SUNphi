@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"d5/d3e/IntListOperations_8hpp.html#a8773624a8f4b3b92bc9bb1ef7df27761":[3,0,2,0,1,1],
 "d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284":[3,0,2,0,1,4],
 "d5/d3e/IntListOperations_8hpp.html#a9bcedb4b0596b7e77f6f0620b3e944c4":[3,0,2,0,1,10],
 "d5/d3e/IntListOperations_8hpp.html#abcdfe80aefc0be41af4d9f99539fa7bc":[3,0,2,0,1,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "d8/dfe/structSUNphi_1_1HasMember__eval.html":[2,0,0,43],
 "d8/dfe/structSUNphi_1_1HasMember__eval.html#a12de5e0b51410a3920c586cd1bbb39a9":[2,0,0,43,7],
 "d8/dfe/structSUNphi_1_1HasMember__eval.html#a27ca989cf45db49a89175498308de763":[2,0,0,43,3],
-"d8/dfe/structSUNphi_1_1HasMember__eval.html#a27f4860a1bb37d047fa12c81e5b48bd1":[2,0,0,43,4]
+"d8/dfe/structSUNphi_1_1HasMember__eval.html#a27f4860a1bb37d047fa12c81e5b48bd1":[2,0,0,43,4],
+"d8/dfe/structSUNphi_1_1HasMember__eval.html#a423efc6d1ee0cd26575803a37d4c2189":[2,0,0,43,6]
 };

@@ -383,7 +383,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00417">417</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -415,7 +415,7 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00469">469</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00470">470</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -458,8 +458,10 @@ template&lt;typename T &gt; </td></tr>
 <div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> NAME(Ts&amp;&amp;...ts)                      \</div>
 <div class="line">  {                                 \</div>
 <div class="line">    return <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ac958ebeb40834e959e0f6847a91d0ffe">asMutable</a>(std::as_const(*this).NAME(forw&lt;Ts&gt;(ts)...));   \</div>
-<div class="line">  }</div>
+<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div>
+<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div>
 <div class="ttc" id="namespaceSUNphi_html_ac958ebeb40834e959e0f6847a91d0ffe"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ac958ebeb40834e959e0f6847a91d0ffe">SUNphi::asMutable</a></div><div class="ttdeci">constexpr T &amp; asMutable(const T &amp;v) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00262">TypeTraits.hpp:262</a></div></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment --><p>Provides also a non-const version of the method <code>NAME</code> </p>
 <p>See <a href="https://stackoverflow.com/questions/123758/how-do-i-remove-code-duplication-between-similar-const-and-non-const-member-func">https://stackoverflow.com/questions/123758/how-do-i-remove-code-duplication-between-similar-const-and-non-const-member-func</a> A const method NAME must be already present Example</p>
@@ -507,7 +509,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Assert type T to have member TAG</p>
 <p>Note that you need to have defined DEFINE_HAS_MEMBER before </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00448">448</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00449">449</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

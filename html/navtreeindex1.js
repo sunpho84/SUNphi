@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"d2/d8f/Conj_8hpp_source.html":[3,0,2,4,6],
 "d2/d98/structSUNphi_1_1BaseBinarySmET.html":[2,0,0,62],
 "d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html":[2,0,0,95,3],
 "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html":[2,0,0,13],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "d5/d3e/IntListOperations_8hpp.html#a03669b5d05778a442a0ba261ccdc9b10":[3,0,2,0,1,2],
 "d5/d3e/IntListOperations_8hpp.html#a08e4ecccf0f9751e631c2660e41e088d":[3,0,2,0,1,6],
 "d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6":[3,0,2,0,1,0],
-"d5/d3e/IntListOperations_8hpp.html#a2b3b303cf89d070aa497b7f282da375e":[3,0,2,0,1,8]
+"d5/d3e/IntListOperations_8hpp.html#a2b3b303cf89d070aa497b7f282da375e":[3,0,2,0,1,8],
+"d5/d3e/IntListOperations_8hpp.html#a8773624a8f4b3b92bc9bb1ef7df27761":[3,0,2,0,1,1]
 };

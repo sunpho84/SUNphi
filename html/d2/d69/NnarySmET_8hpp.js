@@ -13,7 +13,6 @@ var NnarySmET_8hpp =
     [ "NO_EXTRA_MERGE_DELIMS", "d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93", null ],
     [ "PROVIDE_EXTRA_MERGE_DELIMS", "d2/d69/NnarySmET_8hpp.html#ae2e902160d9331e5e2067cfc8ba1e708", null ],
     [ "PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA", "d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89", null ],
-    [ "PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW", "d2/d69/NnarySmET_8hpp.html#aef3536f5f6556e4bbf4c8866633f4216", null ],
     [ "PROVIDE_NNARY_GET_MERGED_COMPS_VIEW", "d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039", null ],
     [ "PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N", "d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062", null ],
     [ "PROVIDE_NNARY_SMET_SIMPLE_CREATOR", "d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8", null ],
