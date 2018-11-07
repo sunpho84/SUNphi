@@ -712,6 +712,9 @@ template&lt;class S , class Head , class... Tail&gt; </td></tr>
 <tr class="memitem:a6616fc919f745190c3d26f6062f45f4e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e">print</a> (S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)</td></tr>
 <tr class="memdesc:a6616fc919f745190c3d26f6062f45f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic print to a stream. <br/></td></tr>
 <tr class="separator:a6616fc919f745190c3d26f6062f45f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac958ebeb40834e959e0f6847a91d0ffe">asMutable</a> (const T &amp;v) noexcept</td></tr>
+<tr class="separator:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9251c65c4d182426d0be38507c64b84c"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9251c65c4d182426d0be38507c64b84c"></a>
 template&lt;class T , class U , class  = EnableIf&lt;(isLvalue&lt;T&gt; ?			    isLvalue&lt;U&gt; :			    true) and			   std::is_convertible&lt;RemRef&lt;U&gt;*,					       RemRef&lt;T&gt;*&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:a9251c65c4d182426d0be38507c64b84c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c">forw</a> (U &amp;&amp;u)</td></tr>
@@ -1430,9 +1433,9 @@ template&lt;int N&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000023">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
-<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000024">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000025">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
@@ -1781,7 +1784,7 @@ template&lt;typename T , typename  = ConstrainIsSmET&lt;T&gt;, bool IsStoring = 
 </div><div class="memdoc">
 <p>Reference to T or new type, depending on wheter the class isStoring</p>
 <p>Const qualifier is passed throughout </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>add functionality as in Eigen </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>add functionality as in Eigen </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d3/d78/Reference_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d3/d78/Reference_8hpp_source.html">Reference.hpp</a>.</p>
 
@@ -2950,6 +2953,36 @@ template&lt;typename T , TypeIf&lt;(isSmET&lt; T &gt;), void * &gt;  = nullptr&g
 </dl>
 
 <p>Definition at line <a class="el" href="../../d8/d3a/Adj_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d8/d3a/Adj_8hpp_source.html">Adj.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac958ebeb40834e959e0f6847a91d0ffe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr T&amp; SUNphi::asMutable </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Remove <code>const</code> qualifier from anything</p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>Check that the "dangling  reference forbidding" below, currently not working, is not actually necessary </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00262">262</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4619,11 +4652,11 @@ template&lt;typename Head  = int, typename... Tail&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    areIntegrals&lt;Head&gt; and <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">areIntegrals</a>&lt;Tail...&gt;</div>
-<div class="ttc" id="namespaceSUNphi_html_ad583dd449e2a359a9429060db23e5d4e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">SUNphi::areIntegrals</a></div><div class="ttdeci">constexpr bool areIntegrals</div><div class="ttdoc">Identifies whether a set of types are a integer-like. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00345">TypeTraits.hpp:345</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_ad583dd449e2a359a9429060db23e5d4e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">SUNphi::areIntegrals</a></div><div class="ttdeci">constexpr bool areIntegrals</div><div class="ttdoc">Identifies whether a set of types are a integer-like. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00389">TypeTraits.hpp:389</a></div></div>
 </div><!-- fragment -->
 <p>Identifies whether a set of types are a integer-like. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00345">345</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00389">389</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4643,7 +4676,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 <p>Identifies whether a single types is integer-like. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00350">350</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4713,7 +4746,7 @@ template&lt;class Head , class... Tail&gt; </div>
 <div class="ttc" id="namespaceSUNphi_html_ad672c67c71c13820a0dcd0b12b88b438"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">SUNphi::hMul</a></div><div class="ttdeci">constexpr int hMul</div><div class="ttdoc">Product of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00062">IntListOperations.hpp:62</a></div></div>
 </div><!-- fragment --><p>Checks if a set of types are the same</p>
 <p>Perform an "and" of all single-type check </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000030">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000031">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
 
 <p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
