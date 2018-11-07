@@ -294,7 +294,8 @@ namespace SUNphi
   DECLAUTO NAME(Ts&&...ts)						\
   {									\
     return asMutable(std::as_const(*this).NAME(forw<Ts>(ts)...));	\
-  }
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /////////////////////////////////////////////////////////////////
   

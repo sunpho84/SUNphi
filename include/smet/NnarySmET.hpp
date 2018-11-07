@@ -210,11 +210,11 @@ namespace SUNphi
   get<I>(refs).template getMergedCompsView<TupleElementType<I,MDs>>()
   
   /// Provides a \c getMergedCompsView method, taking Is as template parameter
-#define PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER,DESCRIPTION,...) \
+#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)		\
   DESCRIPTION								\
   template <typename Is>       /* IntSeq delimiting the comps groups */ \
   DECLAUTO getMergedCompsView()						\
-    QUALIFIER								\
+    const								\
   {									\
     /* Check that we can merge as asked */				\
     assertMergeableWith<Is>();						\
@@ -233,12 +233,8 @@ namespace SUNphi
     									\
     __VA_ARGS__;							\
   }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-  
-  /// Provides a const and not const \c getMergedCompsView metod
-#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
-  PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(,DESCRIPTION,__VA_ARGS__);	\
-  PROVIDE_NNARY_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(const,DESCRIPTION,__VA_ARGS__)
+									\
+  PROVIDE_ALSO_NON_CONST_METHOD(getMergedCompsView)
   
   /////////////////////////////////////////////////////////////////
   
