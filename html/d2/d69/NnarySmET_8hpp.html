@@ -282,7 +282,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Set aliasing according to the isAliasing of references </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>enforce cehck only with TensClass </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00388">388</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00390">390</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -452,15 +452,18 @@ Variables</h2></td></tr>
 <div class="line">  template &lt;<span class="keywordtype">int</span>...Is,     <span class="comment">/* Ints used to call the representativeFunction  */</span> \</div>
 <div class="line">        typename MDs&gt; <span class="comment">/* MergeDelims to be used                        */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
 <div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> mergedCompsViewAccordingToRepresentativeFunction(IntSeq&lt;Is...&gt;, \</div>
-<div class="line">                                MDs)    \</div>
+<div class="line">                                MDs) const  \</div>
 <div class="line">  {                                 \</div>
 <div class="line">    return representativeFunction(<a class="code" href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">MERGED_COMPS_VIEW_OF_REF</a>(Is)...); \</div>
-<div class="line">  }                                 <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">\</a></div>
+<div class="line">  }                                 <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">\</a></div>
+<div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  									\</a></div>
+<div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  PROVIDE_ALSO_NON_CONST_METHOD</a>(mergedCompsViewAccordingToRepresentativeFunction); <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">\</a></div>
 <div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">									\</a></div>
 <div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW</a>(, \</div>
-<div class="line">                      <span class="keywordflow">return</span> rgedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</div>
+<div class="line">                      <span class="keywordflow">return</span> mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</div>
 <div class="ttc" id="NnarySmET_8hpp_html_ae52f53997fe1f814a668b58f11caebfe"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">MERGED_COMPS_VIEW_OF_REF</a></div><div class="ttdeci">#define MERGED_COMPS_VIEW_OF_REF(I)</div><div class="ttdoc">Returns the merged comps view of the I-th Ref. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00303">NnarySmET.hpp:303</a></div></div>
 <div class="ttc" id="NnarySmET_8hpp_html_a2e7743fd0a21880f018c5a11f2fb6039"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">PROVIDE_NNARY_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00307">NnarySmET.hpp:307</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a504c20383cbaeb6ae41596d0cda0c3be"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a></div><div class="ttdeci">#define PROVIDE_ALSO_NON_CONST_METHOD(NAME)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00296">TypeTraits.hpp:296</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p>Uses the <code>representativeFunction</code> to provide a merged view. </p>
@@ -533,7 +536,7 @@ Variables</h2></td></tr>
 <p>Defines a simple creator taking n references. </p>
 <p>&lt; Name of the NnarySmET </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00350">350</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00352">352</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +634,7 @@ Variables</h2></td></tr>
 <p><code>NnarySmET</code> cannot use SFINAE to worsen default constructors (unless packing args in <code>Tuple</code>) so the simple builder cannot be overloaded. If required, use a custom builder and use if constexpr construct inside it to route the manipulations.</p>
 <p>&lt; Name of builder function </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00374">374</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00376">376</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -651,12 +654,12 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(refs,__VA_ARGS__)</div>
 <div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">BaseSmET.hpp:239</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00453">TypeTraits.hpp:453</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00454">TypeTraits.hpp:454</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Nnary SmET. </p>
 <p>Defines the check for a NnarySmET. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00362">362</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,12 +679,12 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(refs,__VA_ARGS__)</div>
 <div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">BaseSmET.hpp:239</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00453">TypeTraits.hpp:453</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00454">TypeTraits.hpp:454</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Nnary SmET. </p>
 <p>Defines the check for a NnarySmET. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00362">362</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>

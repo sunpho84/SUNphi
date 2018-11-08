@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">return</span> get&lt;I&gt;((~*<span class="keyword">this</span>).refs).eval(get&lt;Pos&gt;(targs)...);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a>(<a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98">_refEvalByCompsName</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c">   50</a></span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a>(<a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98">_refEvalByCompsName</a>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> I,       <span class="comment">// Reference to evaluate</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> Tp&gt; <span class="comment">// Type of the \c Tuple containing the components to call, i</span></div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">return</span> (~*<span class="keyword">this</span>).representativeFunction(this-&gt;refEvalByCompsName&lt;I&gt;(std::forward_as_tuple(args...))...);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a>(<a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">evalThroughRepresentativeFunctionPassingCompsByName</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a8a9c2568012d35075077fb60465f129f">   90</a></span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a>(<a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">evalThroughRepresentativeFunctionPassingCompsByName</a>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  };</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  </div>
 <div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4">   94</a></span>&#160;<span class="preprocessor">#define EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME  \</span></div>
@@ -387,60 +387,62 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">  template &lt;int...Is,     </span><span class="comment">/* Ints used to call the representativeFunction  */</span><span class="preprocessor"> \</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">        typename MDs&gt; </span><span class="comment">/* MergeDelims to be used                        */</span><span class="preprocessor"> \</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">  DECLAUTO mergedCompsViewAccordingToRepresentativeFunction(IntSeq&lt;Is...&gt;, \</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">                                MDs)    \</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">                                MDs) const  \</span></div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">  {                                 \</span></div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">    return representativeFunction(MERGED_COMPS_VIEW_OF_REF(Is)...); \</span></div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">  }                                 \</span></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(, \</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">                      return rgedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  </div>
-<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">  350</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_SMET_SIMPLE_CREATOR(NNARY_SMET ) \</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">  template &lt;typename...SMETS,                       \</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;((isSame&lt;Unqualified&lt;SMETS&gt;,Unqualified&lt;_Refs&gt;&gt;) &amp;&amp; ...)&gt;&gt; \</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">  explicit NNARY_SMET(SMETS&amp;&amp;...smets) : refs(forw&lt;SMETS&gt;(smets)...)    \</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  </div>
-<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">  362</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_NNARY_SMET(...)        \</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">  STATIC_ASSERT_IS_SMET(__VA_ARGS__);           \</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  </div>
-<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1">  374</a></span>&#160;<span class="preprocessor">#define SIMPLE_NNARY_SMET_BUILDER(BUILDER,      \</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">                  NNARY_SMET)   \</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">  PROVIDE_ALSO_NON_CONST_METHOD(mergedCompsViewAccordingToRepresentativeFunction); \</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(, \</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">                      return mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  </div>
+<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">  352</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_SMET_SIMPLE_CREATOR(NNARY_SMET ) \</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">  template &lt;typename...SMETS,                       \</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;((isSame&lt;Unqualified&lt;SMETS&gt;,Unqualified&lt;_Refs&gt;&gt;) &amp;&amp; ...)&gt;&gt; \</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">  explicit NNARY_SMET(SMETS&amp;&amp;...smets) : refs(forw&lt;SMETS&gt;(smets)...)    \</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  </div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">  364</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_NNARY_SMET(...)        \</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">  STATIC_ASSERT_IS_SMET(__VA_ARGS__);           \</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  </div>
+<div class="line"><a name="l00376"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1">  376</a></span>&#160;<span class="preprocessor">#define SIMPLE_NNARY_SMET_BUILDER(BUILDER,      \</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">                  NNARY_SMET)   \</span></div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">  template &lt;typename...Ts&gt;     </span><span class="comment">/* Types of the SmET to get       */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">  NNARY_SMET&lt;Ts...&gt; BUILDER(Ts&amp;&amp;...smets)     \</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">    return NNARY_SMET&lt;Ts...&gt;(forw&lt;Ts&gt;(smets)...);           \</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">  388</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">  {                         \</span></div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">    CRASH(&quot;Fixme&quot;);                 \</span></div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">    return true;                    \</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">  }                         \</span></div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">  template &lt;typename...Ts&gt;     </span><span class="comment">/* Types of the SmET to get       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">  NNARY_SMET&lt;Ts...&gt; BUILDER(Ts&amp;&amp;...smets)     \</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">    return NNARY_SMET&lt;Ts...&gt;(forw&lt;Ts&gt;(smets)...);           \</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00390"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">  390</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">  {                         \</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">    CRASH(&quot;Fixme&quot;);                 \</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">    return true;                    \</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor">  }                         \</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSUNphi_html_a2a3d9e7824ba5301eb5056c852c29ed2"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">SUNphi::_nnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(auto) constexpr _nnarySmETCompsMergeability(Tuple&lt; MergeDelim...&gt;, Tuple&lt; PosOfResTcsInRefTk...&gt;, IntSeq&lt; PrevPosInts...&gt;, ExtraDelim)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00199">NnarySmET.hpp:199</a></div></div>
 <div class="ttc" id="TupleOrder_8hpp_html"><div class="ttname"><a href="../../de/d2d/TupleOrder_8hpp.html">TupleOrder.hpp</a></div><div class="ttdoc">Defines filtering and reordering of Tuple. </div></div>
 <div class="ttc" id="namespaceSUNphi_html_a8f2d962267db9817082a1738769b7e39"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39">SUNphi::IntSeqCat</a></div><div class="ttdeci">typename _IntSeqCat&lt; T...&gt;::type IntSeqCat</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dea/IntSeqCat_8hpp_source.html#l00079">IntSeqCat.hpp:79</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a1704de9acff8e8441dbcf1abc9b5cc01"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">SUNphi::NOT_PRESENT</a></div><div class="ttdeci">static constexpr int NOT_PRESENT</div><div class="ttdoc">Mark the absence of an element. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d58/Position_8hpp_source.html#l00025">Position.hpp:25</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_af0ef22f5cfb3da749d24d242c1801cec"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a></div><div class="ttdeci">#define DEFINE_HAS_MEMBER(TAG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00474">TypeTraits.hpp:474</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a6c71a0988a44332ace282fb6dc1327b0"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0">STATIC_ASSERT_ARE_N_TYPES</a></div><div class="ttdeci">#define STATIC_ASSERT_ARE_N_TYPES(N, UNEXP_PARPACK)</div><div class="ttdoc">Static assert if not passing exactly N types. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00341">TypeTraits.hpp:341</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_af0ef22f5cfb3da749d24d242c1801cec"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a></div><div class="ttdeci">#define DEFINE_HAS_MEMBER(TAG)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00475">TypeTraits.hpp:475</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a6c71a0988a44332ace282fb6dc1327b0"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0">STATIC_ASSERT_ARE_N_TYPES</a></div><div class="ttdeci">#define STATIC_ASSERT_ARE_N_TYPES(N, UNEXP_PARPACK)</div><div class="ttdoc">Static assert if not passing exactly N types. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00342">TypeTraits.hpp:342</a></div></div>
 <div class="ttc" id="structSUNphi_1_1NnarySmET_html_a407c4ff3980b4fc83632b00eaeac06e2"><div class="ttname"><a href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">SUNphi::NnarySmET::evalThroughRepresentativeFunctionPassingCompsByName</a></div><div class="ttdeci">decltype(auto) evalThroughRepresentativeFunctionPassingCompsByName(IntSeq&lt; I...&gt;, const Args &amp;...args) const </div><div class="ttdoc">&lt; Components to get </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00082">NnarySmET.hpp:82</a></div></div>
 <div class="ttc" id="BaseSmET_8hpp_html"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html">BaseSmET.hpp</a></div><div class="ttdoc">Header file defining basic properties of Smart Expression Templates. </div></div>
 <div class="ttc" id="TensKind_8hpp_html"><div class="ttname"><a href="../../d6/d3f/TensKind_8hpp.html">TensKind.hpp</a></div><div class="ttdoc">Defines the Tensor Kind. </div></div>
@@ -461,7 +463,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="ttc" id="namespaceSUNphi_html_a6f607b600f39a07f6bfb8561d2aa4166"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">SUNphi::NnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, 0 &gt;{}, ExtraDelims{})) NnarySmETCompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00279">NnarySmET.hpp:279</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8bd2374a8eb13af54ead4b5e2e8558c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">SUNphi::Tuple</a></div><div class="ttdeci">std::tuple&lt; Tp...&gt; Tuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00020">TupleClass.hpp:20</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00421">TypeTraits.hpp:421</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00422">TypeTraits.hpp:422</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

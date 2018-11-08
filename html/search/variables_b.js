@@ -18,7 +18,7 @@ var searchData=
   ['nrw_5fcol',['NRW_Col',['../d3/dd7/namespaceSUNphi.html#a8194485c27988603bf011890e00fcb15',1,'SUNphi']]],
   ['nrw_5fspin',['NRW_Spin',['../d3/dd7/namespaceSUNphi.html#a8532480c6ab7f3851c3f18eefc919400',1,'SUNphi']]],
   ['nsimd_5fcomponents',['NSIMD_COMPONENTS',['../d3/dd7/namespaceSUNphi.html#a838913a9890df3a5ac205bd64f2eda73',1,'SUNphi']]],
-  ['nsmet',['NSmET',['../dc/d5d/classSUNphi_1_1MulAdder.html#a3037ebf406a818a94e6f99083ea1e1a8',1,'SUNphi::MulAdder']]],
+  ['nsmet',['NSmET',['../de/d58/classSUNphi_1_1Adder.html#a7bff2e987af7b2aaa0462ca901f0b40a',1,'SUNphi::Adder::NSmET()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a3037ebf406a818a94e6f99083ea1e1a8',1,'SUNphi::MulAdder::NSmET()']]],
   ['nspin',['NSPIN',['../d3/dd7/namespaceSUNphi.html#a5f332d2a92f2dd6aca45e1e4d538b5f6',1,'SUNphi']]],
   ['ntypes',['nTypes',['../d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a',1,'SUNphi::TensKind']]]
 ];

@@ -8,7 +8,7 @@ var searchData=
   ['_5ffirsteq',['_firstEq',['../d3/dd7/namespaceSUNphi.html#af043ff525cec37e98a03411447d5d836',1,'SUNphi']]],
   ['_5ffirstnon',['_firstNon',['../d3/dd7/namespaceSUNphi.html#abc07f93602c084555ed93c210d7b742e',1,'SUNphi']]],
   ['_5ffirstsmaller',['_firstSmaller',['../d3/dd7/namespaceSUNphi.html#a3ee7a13b408d65e77e7fffc5163f1234',1,'SUNphi']]],
-  ['_5ffundthroughrepresentativefunction',['_fundThroughRepresentativeFunction',['../dc/d5d/classSUNphi_1_1MulAdder.html#a6a60ee7e089337564c9de96043bc47e2',1,'SUNphi::MulAdder']]],
+  ['_5ffundthroughrepresentativefunction',['_fundThroughRepresentativeFunction',['../de/d58/classSUNphi_1_1Adder.html#aa5ab95897ede3091ec264fdb19b284e9',1,'SUNphi::Adder::_fundThroughRepresentativeFunction()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a6a60ee7e089337564c9de96043bc47e2',1,'SUNphi::MulAdder::_fundThroughRepresentativeFunction()']]],
   ['_5fgetintoflist',['_getIntOfList',['../d3/dd7/namespaceSUNphi.html#ad3ad0ad4b8c4ec01f0212c9780c93edb',1,'SUNphi']]],
   ['_5fgetisstoring',['_getisStoring',['../d3/dd7/namespaceSUNphi.html#a7f2ec40203b2082165a1f350aa6eb364',1,'SUNphi']]],
   ['_5fhmul',['_hMul',['../d3/dd7/namespaceSUNphi.html#a8773624a8f4b3b92bc9bb1ef7df27761',1,'SUNphi']]],
@@ -31,7 +31,7 @@ var searchData=
   ['_5fnnarysmetcompsmergeability',['_nnarySmETCompsMergeability',['../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2',1,'SUNphi']]],
   ['_5fposoftype',['_posOfType',['../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a',1,'SUNphi::_posOfType(T, Tuple&lt;&gt;)'],['../d3/dd7/namespaceSUNphi.html#acf81841aec54ab650800087a08062bba',1,'SUNphi::_posOfType(T, Tuple&lt; Head, Tail...&gt;)']]],
   ['_5fposoftypes',['_posOfTypes',['../d3/dd7/namespaceSUNphi.html#a654d1d12c340e9ae05f470203c6a7a16',1,'SUNphi']]],
-  ['_5frefevalbycompsname',['_refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98',1,'SUNphi::NnarySmET']]],
+  ['_5frefevalbycompsname',['_refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98',1,'SUNphi::NnarySmET::_refEvalByCompsName(IntSeq&lt; I &gt;, IntSeq&lt; Pos...&gt;, Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c',1,'SUNphi::NnarySmET::_refEvalByCompsName(Ts &amp;&amp;...ts)']]],
   ['_5fremovefromorderedintseq',['_removeFromOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#af1c48c15bdb3967be82cccb56cf88d58',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt; Bef...&gt; &amp;, const IntSeq&lt; HeadAft, TailAft...&gt; &amp;)'],['../d3/dd7/namespaceSUNphi.html#ae686be2b40809c1af7a11802b57d6222',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt;&gt; &amp;, const IntSeq&lt;&gt; &amp;)']]],
   ['_5ftuplehastype',['_tupleHasType',['../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055',1,'SUNphi']]],
   ['_5ftuplehastypes',['_tupleHasTypes',['../d3/dd7/namespaceSUNphi.html#a23114624468dc2079b5a9084e1c47a45',1,'SUNphi']]]
