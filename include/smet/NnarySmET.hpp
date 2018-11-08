@@ -336,13 +336,15 @@ namespace SUNphi
   template <int...Is,     /* Ints used to call the representativeFunction  */ \
 	    typename MDs> /* MergeDelims to be used                        */ \
   DECLAUTO mergedCompsViewAccordingToRepresentativeFunction(IntSeq<Is...>, \
-							    MDs)	\
+							    MDs) const	\
   {									\
     return representativeFunction(MERGED_COMPS_VIEW_OF_REF(Is)...);	\
   }									\
+  									\
+  PROVIDE_ALSO_NON_CONST_METHOD(mergedCompsViewAccordingToRepresentativeFunction); \
 									\
   PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Uses the \c representativeFunction to provide a merged view */, \
-				      return rgedCompsViewAccordingToRepresentativeFunction(IntsUpTo<NSmET>{},MDs{}))
+				      return mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo<NSmET>{},MDs{}))
   
   /////////////////////////////////////////////////////////////////
   

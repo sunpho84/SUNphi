@@ -72,7 +72,7 @@ namespace SUNphi
   };
   
   // Check that a test MulAdder is a NnarySmET
-  namespace CheckMulAdderIsBinarySmet
+  namespace CheckMulAdderIsNnarySmet
   {
     /// Tensor comp for test
     using MyTc=

@@ -351,8 +351,9 @@ void checkSumOfTwoSmETs()
   cout<<"Mergeability of addendum 2: "<<printIntSeq(M2{})<<endl;
   cout<<"Tensor Kind: "<<decltype(a+b)::Tk::name()<<endl;
   
-  cout<<"PosOf types 1 present: "<<printIntSeq(decltype(a+b)::PosOfRef1PresTcsInResTk{})<<endl;
-  cout<<"PosOf types 2 present: "<<printIntSeq(decltype(a+b)::PosOfRef2PresTcsInResTk{})<<endl;
+  cout<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
+  cout<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
+
   // using P1=
   //   decltype(c)::posOfAddend1TcInResTk;
   // cout<<"PosOf types 1: "<<printIntSeq(P1{})<<endl;

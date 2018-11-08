@@ -294,8 +294,9 @@ namespace SUNphi
   /// };
   /// \endcode
 #define PROVIDE_ALSO_NON_CONST_METHOD(NAME)				\
-  template <typename...Ts>						\
-  DECLAUTO NAME(Ts&&...ts)						\
+  /*! Overload the \c NAME const method passing all args             */ \
+  template <typename...Ts> /* Type of all arguments                  */	\
+  DECLAUTO NAME(Ts&&...ts) /*!< Arguments                            */	\
   {									\
     return CALL_CLASS_CONST_METHOD_REMOVING_CONST(NAME(forw<Ts>(ts)...)); \
   }									\
