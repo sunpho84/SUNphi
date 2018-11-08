@@ -268,6 +268,10 @@ namespace SUNphi
   // template <typename T>
   // void asMutable(const T&&)=delete;
   
+  /// Call a const method removing any const qualifier
+#define CALL_CLASS_CONST_METHOD_REMOVING_CONST(...)	\
+  asMutable(std::as_const(*this).__VA_ARGS__)
+  
   /// Provides also a non-const version of the method \c NAME
   ///
   /// See
@@ -293,7 +297,7 @@ namespace SUNphi
   template <typename...Ts>						\
   DECLAUTO NAME(Ts&&...ts)						\
   {									\
-    return asMutable(std::as_const(*this).NAME(forw<Ts>(ts)...));	\
+    return CALL_CLASS_CONST_METHOD_REMOVING_CONST(NAME(forw<Ts>(ts)...)); \
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
