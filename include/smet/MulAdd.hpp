@@ -27,12 +27,23 @@ namespace SUNphi
     
   public:
     
+    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(3);
+    
     /// Position of the elements
     enum Pos_t{FACT1,
 	       FACT2,
 	       ADDEND};
     
-    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(3);
+    /// Representative function of the multiply-sum operation
+    template <typename Fact1,  // Type of the first factor
+	      typename Fact2,  // Type of the second factor
+	      typename Addend> // Type of the third factor
+    static DECLAUTO representativeFunction(Fact1&& fact1,   ///< First factor
+					   Fact2&& fact2,   ///< Second factor
+					   Addend&& addend) ///< Third factor
+    {
+      return fact1*fact2+addend;
+    }
     
     PROVIDE_SIMPLE_NNARY_COMP_SIZE;
     
@@ -47,32 +58,15 @@ namespace SUNphi
     
     PROVIDE_POS_OF_RES_TCS_IN_REFS;
     
-    /// Fundamental type
-    PROVIDE_FUND(decltype(typename RemRef<Ref<FACT1>>::Fund{}*
-			  typename RemRef<Ref<FACT2>>::Fund{}+
-			  typename RemRef<Ref<ADDEND>>::Fund{}));
+    PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
     
     NO_EXTRA_MERGE_DELIMS;
     
     PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;
     
-    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the three references and returns their combination */,
-					return
-					  MERGED_COMPS_VIEW_OF_REF(FACT1)*
-					  MERGED_COMPS_VIEW_OF_REF(FACT2)+
-					  MERGED_COMPS_VIEW_OF_REF(ADDEND));
+    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
     
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(MulAdder);
-   
-    template <typename Fact1,
-	      typename Fact2,
-	      typename Addend>
-    static DECLAUTO representativeFunction(Fact1&& fact1,
-					   Fact2&& fact2,
-					   Addend&& addend)
-    {
-      return fact1*fact2+addend;
-    }
     
     EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME;
   };

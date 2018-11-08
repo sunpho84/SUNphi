@@ -161,6 +161,23 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
+  /// Defines the \c Fund type using the call to \c representativeFunction
+#define PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION		\
+  /*! Fundamental type according to the \c representativeFunction */	\
+  /*!                                                             */	\
+  /*! Internal implementation, getting the type through a call to */	\
+  /*! the \c representativeFunction passing by value the \c Fund  */	\
+  /*! type of each ref, using an \c IntSeq to call them           */	\
+  template <int...Is>							\
+  static DECLAUTO _fundThroughRepresentativeFunction(IntSeq<Is...>)	\
+  {									\
+    return representativeFunction(typename RemRef<Ref<Is>>::Fund{}...); \
+  }									\
+  									\
+  /*! Obtains the \c Fund type by calling the \c representativeFunction */ \
+  using Fund=								\
+    decltype(_fundThroughRepresentativeFunction(IntsUpTo<NSmET>{}))
+  
   /// Provide the position of result Tk \c TensComp in each input
 #define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
   /*! Position of all the Result \c TensComp in each \c Refs Tk */	\
@@ -312,6 +329,20 @@ namespace SUNphi
   }									\
 									\
   PROVIDE_ALSO_NON_CONST_METHOD(getMergedCompsView)
+  
+  /// Uses the \c representativeFunction to provide a merged view
+#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION \
+  /*! Calls the \c representativeFunction with the merged view of each ref */ \
+  template <int...Is,     /* Ints used to call the representativeFunction  */ \
+	    typename MDs> /* MergeDelims to be used                        */ \
+  DECLAUTO mergedCompsViewAccordingToRepresentativeFunction(IntSeq<Is...>, \
+							    MDs)	\
+  {									\
+    return representativeFunction(MERGED_COMPS_VIEW_OF_REF(Is)...);	\
+  }									\
+									\
+  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Uses the \c representativeFunction to provide a merged view */, \
+				      return rgedCompsViewAccordingToRepresentativeFunction(IntsUpTo<NSmET>{},MDs{}))
   
   /////////////////////////////////////////////////////////////////
   
