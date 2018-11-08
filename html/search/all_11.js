@@ -32,7 +32,7 @@ var searchData=
   ['smet_3c_20wrapper_3c_20_5fref_20_3e_20_3e',['SmET&lt; Wrapper&lt; _Ref &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
   ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],
-  ['spin',['Spin',['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()'],['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)']]],
+  ['spin',['spin',['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)'],['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()']]],
   ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
   ['static_5fassert_5fare_5fintegrals',['STATIC_ASSERT_ARE_INTEGRALS',['../d0/d81/TypeTraits_8hpp.html#a0147cab5da16a1c67f1f3ffb2d91889e',1,'TypeTraits.hpp']]],
   ['static_5fassert_5fare_5fn_5ftypes',['STATIC_ASSERT_ARE_N_TYPES',['../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0',1,'TypeTraits.hpp']]],

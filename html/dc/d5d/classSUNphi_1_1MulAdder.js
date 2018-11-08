@@ -1,7 +1,7 @@
 var classSUNphi_1_1MulAdder =
 [
     [ "ExtraDelims", "dc/d5d/classSUNphi_1_1MulAdder.html#a3ea95252d10b3d9a4000d68584fd315b", null ],
-    [ "Fund", "dc/d5d/classSUNphi_1_1MulAdder.html#aa65fe96ce335b63ddac44a64df6d668b", null ],
+    [ "Fund", "dc/d5d/classSUNphi_1_1MulAdder.html#aaa90c9aff2d53eaec94114d77b622b94", null ],
     [ "MergeableComps", "dc/d5d/classSUNphi_1_1MulAdder.html#a4514b006a3091fe49b33b40b95f65f7d", null ],
     [ "PosOfResTcsInRefsTk", "dc/d5d/classSUNphi_1_1MulAdder.html#aa545dc15ca80a30515150a5ee1112313", null ],
     [ "PosOfResTcsPresInRefsTk", "dc/d5d/classSUNphi_1_1MulAdder.html#abebb6b47a6657f0b56340cc4c5db131c", null ],
@@ -14,6 +14,7 @@ var classSUNphi_1_1MulAdder =
       [ "ADDEND", "dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641ab76fe585bf06f781d5fe123d55a509a1", null ]
     ] ],
     [ "MulAdder", "dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd", null ],
+    [ "_fundThroughRepresentativeFunction", "dc/d5d/classSUNphi_1_1MulAdder.html#a6a60ee7e089337564c9de96043bc47e2", null ],
     [ "_refEvalByCompsName", "dc/d5d/classSUNphi_1_1MulAdder.html#abc972718a2bd9e542d4efa11446c6b98", null ],
     [ "_refEvalByCompsName", "dc/d5d/classSUNphi_1_1MulAdder.html#a6751965c1c2a68bbad6aae8f1856903c", null ],
     [ "assertMergeableWith", "dc/d5d/classSUNphi_1_1MulAdder.html#ac2841f162e091c1ce1adb17aad8aed81", null ],
@@ -26,10 +27,11 @@ var classSUNphi_1_1MulAdder =
     [ "getMergedCompsView", "dc/d5d/classSUNphi_1_1MulAdder.html#a36e1e84956a321ffa890d0690c3cad78", null ],
     [ "getMergedCompsView", "dc/d5d/classSUNphi_1_1MulAdder.html#acb1f426e01f440a2b05a53d8ce84b6f0", null ],
     [ "isAliasing", "dc/d5d/classSUNphi_1_1MulAdder.html#aba9166e3f1b553d6364afaac9ef61d32", null ],
+    [ "mergedCompsViewAccordingToRepresentativeFunction", "dc/d5d/classSUNphi_1_1MulAdder.html#aa57c90471de1bce84953062157e5212c", null ],
     [ "operator()", "dc/d5d/classSUNphi_1_1MulAdder.html#a302bf10f8751e25cd44cf91bf0a0b988", null ],
     [ "operator()", "dc/d5d/classSUNphi_1_1MulAdder.html#a4b46ea85ccd68848ca76d967b1f07222", null ],
-    [ "operator~", "dc/d5d/classSUNphi_1_1MulAdder.html#a8236bf435ac2125d31cadc98a79fff10", null ],
     [ "operator~", "dc/d5d/classSUNphi_1_1MulAdder.html#a1d6ded1dcd22920fde3d904c29f61374", null ],
+    [ "operator~", "dc/d5d/classSUNphi_1_1MulAdder.html#a8236bf435ac2125d31cadc98a79fff10", null ],
     [ "refEvalByCompsName", "dc/d5d/classSUNphi_1_1MulAdder.html#a15da6f3c9613c0d5475c90e7a48c3c72", null ],
     [ "refEvalByCompsName", "dc/d5d/classSUNphi_1_1MulAdder.html#afa3fc6cfc6c8bfa110266c728c2d6d54", null ],
     [ "representativeFunction", "dc/d5d/classSUNphi_1_1MulAdder.html#a343ed0cc50be2b6fa576f42973ecbfd8", null ],
