@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['no_5fextra_5fmerge_5fdelims',['NO_EXTRA_MERGE_DELIMS',['../d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93',1,'NnarySmET.hpp']]],
-  ['non_5fconst_5fqualif',['NON_CONST_QUALIF',['../d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971',1,'TypeTraits.hpp']]],
-  ['non_5fref',['NON_REF',['../d0/d81/TypeTraits_8hpp.html#ac65c1874e9a350e39d2bc81b1496bdbf',1,'TypeTraits.hpp']]],
-  ['not_5fassignable',['NOT_ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#a1824639ee6544c0cdf5522fb36fb3efb',1,'BaseSmET.hpp']]],
-  ['not_5fmergeable',['NOT_MERGEABLE',['../dc/d6b/BaseSmET_8hpp.html#a0203b7e5ee238f67359df47cdcb16b86',1,'BaseSmET.hpp']]],
-  ['not_5fstoring',['NOT_STORING',['../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d',1,'BaseSmET.hpp']]]
+  ['maybe_5funused',['MAYBE_UNUSED',['../db/dde/Unused_8hpp.html#aec797c5e33c3c2b48b8bc89e51da83bb',1,'Unused.hpp']]],
+  ['mergeable_5faccording_5fto_5fref',['MERGEABLE_ACCORDING_TO_REF',['../d4/dbe/UnarySmET_8hpp.html#a4bc5cc056f559d7aff0ac2d21a09f3fd',1,'UnarySmET.hpp']]],
+  ['merged_5fcomps_5fview_5fof_5fref',['MERGED_COMPS_VIEW_OF_REF',['../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe',1,'NnarySmET.hpp']]]
 ];

@@ -37,11 +37,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d98/structSUNphi_1_1BaseBinarySmET.html",
-"d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284",
-"d8/dfe/structSUNphi_1_1HasMember__eval.html#a64f2103496081bb9a72947fac3634253",
-"dc/d5d/classSUNphi_1_1MulAdder.html#aa4ace581676696869522f224f011a362",
-"df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418"
+"d2/d8f/Conj_8hpp.html#ada6ecc39a6cfeea827baf29795d34967",
+"d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6",
+"d8/dfe/structSUNphi_1_1HasMember__eval.html#a27ca989cf45db49a89175498308de763",
+"dc/d5d/classSUNphi_1_1MulAdder.html#a302bf10f8751e25cd44cf91bf0a0b988",
+"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

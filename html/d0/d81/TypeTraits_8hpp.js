@@ -11,6 +11,7 @@ var TypeTraits_8hpp =
     [ "ConstrainIsFloatingPoint", "d1/d72/structSUNphi_1_1ConstrainIsFloatingPoint.html", null ],
     [ "ConstrainIsIntegral", "d8/d7e/structSUNphi_1_1ConstrainIsIntegral.html", null ],
     [ "ConstrainAreIntegrals", "d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html", null ],
+    [ "CALL_CLASS_CONST_METHOD_REMOVING_CONST", "d0/d81/TypeTraits_8hpp.html#acd73e2a7dc3420d056e70a97c9ae5da2", null ],
     [ "CONST_QUALIF", "d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240", null ],
     [ "DEFINE_BASE_TYPE", "d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276", null ],
     [ "DEFINE_HAS_MEMBER", "d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec", null ],

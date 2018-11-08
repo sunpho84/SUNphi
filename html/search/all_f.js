@@ -10,6 +10,7 @@ var searchData=
   ['posofref2prestcsinrestk',['PosOfRef2PresTcsInResTk',['../de/d58/classSUNphi_1_1Adder.html#abd275c4de073bb69f0010c3811886ac5',1,'SUNphi::Adder::PosOfRef2PresTcsInResTk()'],['../d4/d4b/classSUNphi_1_1Assigner.html#a489a3c87e547432d140b27f9ff369073',1,'SUNphi::Assigner::PosOfRef2PresTcsInResTk()']]],
   ['posofref2tcsinrestk',['PosOfRef2TcsInResTk',['../de/d58/classSUNphi_1_1Adder.html#a5b7fe86cb9c2d9cc36d402ce968221f8',1,'SUNphi::Adder::PosOfRef2TcsInResTk()'],['../d4/d4b/classSUNphi_1_1Assigner.html#a5dfab938b18893d08f359d2a0259fbff',1,'SUNphi::Assigner::PosOfRef2TcsInResTk()']]],
   ['posofrestcsinrefstk',['PosOfResTcsInRefsTk',['../dc/d5d/classSUNphi_1_1MulAdder.html#aa545dc15ca80a30515150a5ee1112313',1,'SUNphi::MulAdder']]],
+  ['posofrestcspresinrefstk',['PosOfResTcsPresInRefsTk',['../dc/d5d/classSUNphi_1_1MulAdder.html#abebb6b47a6657f0b56340cc4c5db131c',1,'SUNphi::MulAdder']]],
   ['posoftcsoftkinlistoftks',['PosOfTcsOfTkInListOfTks',['../d3/dd7/namespaceSUNphi.html#a20a22ae0ab9777758b1cc9dc50e85e33',1,'SUNphi']]],
   ['posoftcsoftkpresinlistoftks',['PosOfTcsOfTkPresInListOfTks',['../d3/dd7/namespaceSUNphi.html#a4fc6fe9266c126fdf3bfaa91cd394907',1,'SUNphi']]],
   ['posoftype',['posOfType',['../d3/dd7/namespaceSUNphi.html#aab5207e39daa5c0744e1daedb9a4058c',1,'SUNphi']]],
