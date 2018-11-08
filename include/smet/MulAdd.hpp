@@ -46,6 +46,7 @@ namespace SUNphi
     PROVIDE_TK(typename RemRef<Ref<ADDEND>>::Tk);
     
     PROVIDE_POS_OF_RES_TCS_IN_REFS;
+    
     /// Fundamental type
     PROVIDE_FUND(decltype(typename RemRef<Ref<FACT1>>::Fund{}*
 			  typename RemRef<Ref<FACT2>>::Fund{}+
@@ -61,32 +62,38 @@ namespace SUNphi
 					  MERGED_COMPS_VIEW_OF_REF(FACT2)+
 					  MERGED_COMPS_VIEW_OF_REF(ADDEND));
     
-    // // Returns a component-merged version
-    // PROVIDE_GET_MERGED_COMPS_VIEW(/*! Merge appropriately the two references and returns their sum */,
-    // 				  return
-    // 				  ref1.template getMergedCompsView<MergedDelims1<Is>>()+
-    // 				  ref2.template getMergedCompsView<MergedDelims2<Is>>(););
-    
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(MulAdder);
+   
+    template <typename Fact1,
+	      typename Fact2,
+	      typename Addend>
+    static DECLAUTO representativeFunction(Fact1&& fact1,
+					   Fact2&& fact2,
+					   Addend&& addend)
+    {
+      return fact1*fact2+addend;
+    }
+    
+    EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME;
   };
   
-  // // Check that a test MulAdder is a BinarySmET
-  // namespace CheckMulAdderIsBinarySmet
-  // {
-  //   /// Tensor comp for test
-  //   using MyTc=
-  //     TensComp<double,1>;
+  // Check that a test MulAdder is a NnarySmET
+  namespace CheckMulAdderIsBinarySmet
+  {
+    /// Tensor comp for test
+    using MyTc=
+      TensComp<double,1>;
     
-  //   /// Tensor kind to be tested
-  //   using MyTk=
-  //     TensKind<MyTc>;
+    /// Tensor kind to be tested
+    using MyTk=
+      TensKind<MyTc>;
     
-  //   /// Tensor to be tested
-  //   using MyT=
-  //     Tens<MyTk,double>;
+    /// Tensor to be tested
+    using MyT=
+      Tens<MyTk,double>;
     
-  //   STATIC_ASSERT_IS_BINARY_SMET(MulAdder<MyT,MyT>);
-  // }
+    STATIC_ASSERT_IS_NNARY_SMET(MulAdder<MyT,MyT,MyT>);
+  }
   
   // Build MulAdder from mulAdd
   SIMPLE_NNARY_SMET_BUILDER(mulAdd,MulAdder);

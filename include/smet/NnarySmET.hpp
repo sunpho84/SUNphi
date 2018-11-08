@@ -33,7 +33,80 @@ namespace SUNphi
     IS_ASSIGNABLE_ATTRIBUTE(/*! This SmET can never be lhs */,false);
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
+    
+    /// Evaluate the I-th reference, getting from the \c Tuple targs the element \c Pos
+    ///
+    /// Internal implementation
+    template <int I,       // Reference to evaluate
+	      typename Tp, // Type of the \c Tuple containing the components to call, i
+	      int...Pos>   // Position of the args
+    DECLAUTO _refEvalByCompsName(IntSeq<I>,
+				 IntSeq<Pos...>,    ///< List of position of components for ref
+				 Tp&& targs) const  ///< Components to get
+    {
+      return get<I>((~*this).refs).eval(get<Pos>(targs)...);
+    }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(_refEvalByCompsName);
+    
+    /// Evaluate the I-th reference, getting from the \c Tuple targs the element \c Pos
+    ///
+    /// External implementation, using \c PosOfResTcsPresInRefsTk to dispatch components
+    template <int I,       // Reference to evaluate
+	      typename Tp> // Type of the \c Tuple containing the components to call, i
+    DECLAUTO refEvalByCompsName(Tp&& targs) const  ///< Components to get
+    {
+      /// Position of \c TensComp of the reference Tk present in thr result
+      using Pos=
+	TupleElementType<I,typename T::PosOfResTcsPresInRefsTk>;
+      
+      return _refEvalByCompsName(IntSeq<I>{},Pos{},forw<Tp>(targs));
+    }
+    
+    /// Evaluate the I-th reference, getting from the \c Tuple targs the element \c Pos
+    ///
+    /// Non const version
+    template <int I,       // Reference to evaluate
+	      typename Tp> // Type of the \c Tuple containing the components to call, i
+    DECLAUTO refEvalByCompsName(Tp&& targs)
+    {
+      return CALL_CLASS_CONST_METHOD_REMOVING_CONST(refEvalByCompsName<I>(forw<Tp>(targs)));
+    }
+    
+    /// Evaluate the result by calling a representative function
+    ///
+    /// The result is obtained after splitting the components,
+    /// identifying them trough the name of each \c TensComp
+    template <int...I,
+	      typename...Args>    // Type of the arguments
+    DECLAUTO evalThroughRepresentativeFunctionPassingCompsByName(IntSeq<I...>,               ///< Dummy \c IntSeq to infer I
+								const Args&...args) const   ///< Components to get
+    {
+      STATIC_ASSERT_ARE_N_TYPES(T::Tk::nTypes,args);
+      
+      return (~*this).representativeFunction(this->refEvalByCompsName<I>(std::forward_as_tuple(args...))...);
+    }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(evalThroughRepresentativeFunctionPassingCompsByName);
   };
+  
+  /// Provides an evaluator through a representative function
+#define EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME	\
+  /*! Evaluator, external interface                              */	\
+  /*!                                                            */	\
+  /*! Evaluate the function by usign a method called \c          */	\
+  /*! RepresentativeFunction, to be provided in the class        */	\
+  /*! passing to it the evaluation of each individual reference, */	\
+  /*! dispatching the components id by the name they have in the */	\
+  /*! reference                                                  */	\
+  template <typename...Args>          /* Type of the arguments   */	\
+  DECLAUTO eval(Args&&...args)  const /* Components to get       */	\
+  {									\
+    return this->evalThroughRepresentativeFunctionPassingCompsByName(IntsUpTo<NSmET>{},			\
+								     forw<Args>(args)...); \
+  }									\
+									\
+  PROVIDE_ALSO_NON_CONST_METHOD(eval)
   
   /// Provide the references to the objects
   ///
@@ -88,11 +161,15 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
-  /// Proivde the position of result Tk \c TensComp in each input
+  /// Provide the position of result Tk \c TensComp in each input
 #define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
   /*! Position of all the Result \c TensComp in each \c Refs Tk */	\
   using PosOfResTcsInRefsTk=						\
-    PosOfTcsOfTkInListOfTks<Tk,typename RemRef<_Refs>::Tk...>
+    PosOfTcsOfTkInListOfTks<Tk,typename RemRef<_Refs>::Tk...>;		\
+									\
+  /*! Position of all the Result \c TensComp present in each \c Refs Tk */	\
+  using PosOfResTcsPresInRefsTk=						\
+    PosOfTcsOfTkPresInListOfTks<Tk,typename RemRef<_Refs>::Tk...>
   
   /// Determine the mergeability of the \c ResPos component of the result
   ///
@@ -247,6 +324,13 @@ namespace SUNphi
   {									\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Defines the check for a NnarySmET
+#define STATIC_ASSERT_IS_NNARY_SMET(...)		\
+  STATIC_ASSERT_IS_SMET(__VA_ARGS__);			\
+  STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)
   
   /////////////////////////////////////////////////////////////////
   
