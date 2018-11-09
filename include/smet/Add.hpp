@@ -67,7 +67,7 @@ namespace SUNphi
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Adder);
   };
   
-  // Check that a test Adder is a NnarySmET
+  // Check that a test Adder is a \c NnarySmET
   namespace CheckAdderIsNnarySmet
   {
     /// Tensor comp for test
