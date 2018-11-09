@@ -279,10 +279,10 @@ namespace SUNphi
     decltype(_nnarySmETCompsMergeability(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<RefsMD>,0>{},ExtraDelims{}));
   
   /// Add an \c ExtraDelims \c IntSeq called \c ExtraDelims
-#define PROVIDE_EXTRA_MERGE_DELIMS(EXTRA_DELIMS)	\
+#define PROVIDE_EXTRA_MERGE_DELIMS(...)			\
   /*! Additional delimiters */				\
   using ExtraDelims=					\
-    EXTRA_DELIMS
+    __VA_ARGS__
   
   /// Add an empty \c ExtraDelims
 #define NO_EXTRA_MERGE_DELIMS			\
