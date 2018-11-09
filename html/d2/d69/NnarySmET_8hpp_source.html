@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c">   50</a></span>&#160;    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a>(<a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98">_refEvalByCompsName</a>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> I,       <span class="comment">// Reference to evaluate</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> Tp&gt; <span class="comment">// Type of the \c Tuple containing the components to call, i</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> Tp&gt; <span class="comment">// Type of the \c Tuple containing the components to call</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a15da6f3c9613c0d5475c90e7a48c3c72">   57</a></span>&#160;    <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a15da6f3c9613c0d5475c90e7a48c3c72">refEvalByCompsName</a>(Tp&amp;&amp; targs) const  </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">using</span> Pos=</div>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">template</span> &lt;<span class="keywordtype">int</span>...I,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keyword">typename</span>...Args&gt;    <span class="comment">// Type of the arguments</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">   82</a></span>&#160;    <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">evalThroughRepresentativeFunctionPassingCompsByName</a>(<a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;I...&gt;</a>,               </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                <span class="keyword">const</span> Args&amp;...args) <span class="keyword">const</span>   </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                 <span class="keyword">const</span> Args&amp;...args) <span class="keyword">const</span>   </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a6c71a0988a44332ace282fb6dc1327b0">STATIC_ASSERT_ARE_N_TYPES</a>(T::Tk::nTypes,args);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      </div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">  template &lt;typename...Args&gt;          </span><span class="comment">/* Type of the arguments   */</span><span class="preprocessor"> \</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">  DECLAUTO eval(Args&amp;&amp;...args)  const </span><span class="comment">/* Components to get       */</span><span class="preprocessor"> \</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    return this-&gt;evalThroughRepresentativeFunctionPassingCompsByName(IntsUpTo&lt;NSmET&gt;{},         \</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    return this-&gt;evalThroughRepresentativeFunctionPassingCompsByName(IntsUpTo&lt;NSmET&gt;{}, \</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">                                     forw&lt;Args&gt;(args)...); \</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">  }                                 \</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">                                    \</span></div>
@@ -299,8 +299,8 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        CurPos{},ExtraDelim{}));</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    constexpr <span class="keywordtype">bool</span> curNotConsecutive=</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      ((PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a> and</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        PosOfResTcsInRefTk::first!=PrevPosInts+1) || ...);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      (((PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>) and</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        (PosOfResTcsInRefTk::first!=PrevPosInts+1)) || ...);</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    constexpr <span class="keywordtype">bool</span> originallyNotMergeable=</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      (MergeDelim::template has&lt;PosOfResTcsInRefTk::first&gt; || ...);</div>
