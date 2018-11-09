@@ -585,7 +585,7 @@ template&lt;typename Tc , typename SMET , typename  = ConstrainIsTensComp&lt;Tc&
 <tr class="memdesc:a381d1ffbd57db6af9be204d499582fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> TC is not present in the <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a> of SMET, returns the twin. <br/></td></tr>
 <tr class="separator:a381d1ffbd57db6af9be204d499582fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplParams" colspan="2">template&lt;typename Is , typename Tp &gt; </td></tr>
-<tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">InsertTrueTwinnedPosOfTuple</a> = decltype(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#af5a65f01dc5439c86a23082a0295054b">_InsertTrueTwinnedPosOfTuple</a>&lt; 0 &gt;(Is{}, Tp{}))</td></tr>
+<tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">InsertTrueTwinnedPosOfTuple</a> = decltype(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a09eb7b52f619603e5ae9356cd77720f2">_InsertTrueTwinnedPosOfTuple</a>&lt; 0 &gt;(Is{}, Tp{}))</td></tr>
 <tr class="separator:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3f6250bba03a221a43a990bfb8d5e09"><td class="memTemplParams" colspan="2">template&lt;template&lt; auto &gt; typename F, auto... T&gt; </td></tr>
 <tr class="memitem:ac3f6250bba03a221a43a990bfb8d5e09"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac3f6250bba03a221a43a990bfb8d5e09">FilterVariadicList</a> = typename <a class="el" href="../../d0/d16/classSUNphi_1_1__FilterVariadicList.html">_FilterVariadicList</a>&lt; F, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac6a4b17d20c20aa9fa3428f1233d6190">RangeSeq</a>&lt; 0, 1, sizeof...(T)&gt;, T...&gt;::Res</td></tr>
@@ -903,9 +903,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a8a0b6cbdc1ef52620e32461fe5841979">DEFINE_BASE_TYPE</a> (<a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a>)</td></tr>
 <tr class="memdesc:a8a0b6cbdc1ef52620e32461fe5841979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the BaseTensKind type traits. <br/></td></tr>
 <tr class="separator:a8a0b6cbdc1ef52620e32461fe5841979"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a65f01dc5439c86a23082a0295054b"><td class="memTemplParams" colspan="2">template&lt;int Pos, int... Ints, typename... T&gt; </td></tr>
-<tr class="memitem:af5a65f01dc5439c86a23082a0295054b"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af5a65f01dc5439c86a23082a0295054b">_InsertTrueTwinnedPosOfTuple</a> (const <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Ints...&gt; &amp;in, const <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; T...&gt; &amp;types)</td></tr>
-<tr class="separator:af5a65f01dc5439c86a23082a0295054b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09eb7b52f619603e5ae9356cd77720f2"><td class="memTemplParams" colspan="2">template&lt;int Pos, int... Ints, typename... T&gt; </td></tr>
+<tr class="memitem:a09eb7b52f619603e5ae9356cd77720f2"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a09eb7b52f619603e5ae9356cd77720f2">_InsertTrueTwinnedPosOfTuple</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Ints...&gt; in, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; T...&gt; types)</td></tr>
+<tr class="separator:a09eb7b52f619603e5ae9356cd77720f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc903664555a6ee3d136d0ba45398055"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Tp&gt; </td></tr>
 <tr class="memitem:afc903664555a6ee3d136d0ba45398055"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055">_tupleHasType</a> (T, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; Tp...&gt;)</td></tr>
 <tr class="separator:afc903664555a6ee3d136d0ba45398055"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1543,7 +1543,7 @@ template&lt;int Ins, typename IS , int IncrAft = 0, bool IgnoreIfPresent = false
 template&lt;typename Is , typename Tp &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">SUNphi::InsertTrueTwinnedPosOfTuple</a> = typedef decltype(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#af5a65f01dc5439c86a23082a0295054b">_InsertTrueTwinnedPosOfTuple</a>&lt;0&gt;(Is{},Tp{}))</td>
+          <td class="memname">using <a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">SUNphi::InsertTrueTwinnedPosOfTuple</a> = typedef decltype(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a09eb7b52f619603e5ae9356cd77720f2">_InsertTrueTwinnedPosOfTuple</a>&lt;0&gt;(Is{},Tp{}))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2301,7 +2301,7 @@ template&lt;bool IgnoreIfPresent, typename Is &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af5a65f01dc5439c86a23082a0295054b"></a>
+<a class="anchor" id="a09eb7b52f619603e5ae9356cd77720f2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -2310,13 +2310,13 @@ template&lt;int Pos, int... Ints, typename... T&gt; </div>
         <tr>
           <td class="memname">decltype(auto) SUNphi::_InsertTrueTwinnedPosOfTuple </td>
           <td>(</td>
-          <td class="paramtype">const IntSeq&lt; Ints...&gt; &amp;&#160;</td>
+          <td class="paramtype">IntSeq&lt; Ints...&gt;&#160;</td>
           <td class="paramname"><em>in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Tuple&lt; T...&gt; &amp;&#160;</td>
+          <td class="paramtype">Tuple&lt; T...&gt;&#160;</td>
           <td class="paramname"><em>types</em>&#160;</td>
         </tr>
         <tr>

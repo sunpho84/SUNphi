@@ -336,10 +336,10 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keyword">using</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">NnarySmETCompsMergeability</a>=</div>
 <div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">  279</a></span>&#160;    decltype(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">_nnarySmETCompsMergeability</a>(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb&lt;tupleSize&lt;RefsMD&gt;,0&gt;{},ExtraDelims{}));</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  </div>
-<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae2e902160d9331e5e2067cfc8ba1e708">  282</a></span>&#160;<span class="preprocessor">#define PROVIDE_EXTRA_MERGE_DELIMS(EXTRA_DELIMS)    \</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">  282</a></span>&#160;<span class="preprocessor">#define PROVIDE_EXTRA_MERGE_DELIMS(...)         \</span></div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">                \</span></div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">  using ExtraDelims=                    \</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">    EXTRA_DELIMS</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">    __VA_ARGS__</span></div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor"></span>  </div>
 <div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93">  288</a></span>&#160;<span class="preprocessor">#define NO_EXTRA_MERGE_DELIMS           \</span></div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="preprocessor">    \</span></div>
