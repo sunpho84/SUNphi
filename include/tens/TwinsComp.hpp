@@ -93,8 +93,8 @@ namespace SUNphi
   template <int Pos,        // Searched position
 	    int...Ints,     // IntSeq parameters
 	    typename...T>   // TensComp
-  DECLAUTO _InsertTrueTwinnedPosOfTuple(const IntSeq<Ints...>& in, ///< Input IntSeq
-					const Tuple<T...>& types)  ///< Input types
+  DECLAUTO _InsertTrueTwinnedPosOfTuple(IntSeq<Ints...> in, ///< Input IntSeq
+					Tuple<T...> types)  ///< Input types
   {
       static_assert((isTensComp<T> & ...),"Supported only for tensComp");
       
