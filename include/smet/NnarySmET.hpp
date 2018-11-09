@@ -53,7 +53,7 @@ namespace SUNphi
     ///
     /// External implementation, using \c PosOfResTcsPresInRefsTk to dispatch components
     template <int I,       // Reference to evaluate
-	      typename Tp> // Type of the \c Tuple containing the components to call, i
+	      typename Tp> // Type of the \c Tuple containing the components to call
     DECLAUTO refEvalByCompsName(Tp&& targs) const  ///< Components to get
     {
       /// Position of \c TensComp of the reference Tk present in thr result
@@ -80,7 +80,7 @@ namespace SUNphi
     template <int...I,
 	      typename...Args>    // Type of the arguments
     DECLAUTO evalThroughRepresentativeFunctionPassingCompsByName(IntSeq<I...>,               ///< Dummy \c IntSeq to infer I
-								const Args&...args) const   ///< Components to get
+								 const Args&...args) const   ///< Components to get
     {
       STATIC_ASSERT_ARE_N_TYPES(T::Tk::nTypes,args);
       
@@ -94,15 +94,15 @@ namespace SUNphi
 #define EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME	\
   /*! Evaluator, external interface                              */	\
   /*!                                                            */	\
-  /*! Evaluate the function by usign a method called \c          */	\
-  /*! RepresentativeFunction, to be provided in the class        */	\
+  /*! Evaluate the function by usign a method called             */	\
+  /*! \c representativeFunction, to be provided in the clas      */	\
   /*! passing to it the evaluation of each individual reference, */	\
   /*! dispatching the components id by the name they have in the */	\
   /*! reference                                                  */	\
   template <typename...Args>          /* Type of the arguments   */	\
   DECLAUTO eval(Args&&...args)  const /* Components to get       */	\
   {									\
-    return this->evalThroughRepresentativeFunctionPassingCompsByName(IntsUpTo<NSmET>{},			\
+    return this->evalThroughRepresentativeFunctionPassingCompsByName(IntsUpTo<NSmET>{},	\
 								     forw<Args>(args)...); \
   }									\
 									\
@@ -228,8 +228,8 @@ namespace SUNphi
 	
 	/// Check whether the current component is not consecutive in all Refs
 	constexpr bool curNotConsecutive=
-	  ((PrevPosInts!=NOT_PRESENT and
-	    PosOfResTcsInRefTk::first!=PrevPosInts+1) || ...);
+	  (((PrevPosInts!=NOT_PRESENT) and
+	    (PosOfResTcsInRefTk::first!=PrevPosInts+1)) || ...);
 	
 	/// Check whether the current component was not originally mergeable
 	constexpr bool originallyNotMergeable=
@@ -267,10 +267,10 @@ namespace SUNphi
   
   /// Determine the mergeability of a given \c TensComp
   ///
-  /// A component is declared mergeable if its presence in all \c
-  /// TensKind is of the same nature of the previous one (e.g. present
-  /// only in one of the \c TensKind), if its position inside the \c
-  /// TensKind is consecutive with previous \c TensComp, and if the
+  /// A component is declared mergeable if its presence in all
+  /// \c TensKind is of the same nature of the previous one (e.g. present
+  /// only in one of the \c TensKind), if its position inside the
+  /// \c TensKind is consecutive with previous \c TensComp, and if the
   /// component was mergeable in all \c TensKind
   template <typename RefsMD,                  // \c Tuple of \c IntSeq containing the MergeDelims for each Ref
 	    typename PosOfResTcsInRefTks,     // Position of the result comps in the refs (\c Tuple of \c IntSeq)
