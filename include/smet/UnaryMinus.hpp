@@ -7,7 +7,7 @@
 
 #include <tens/TensKind.hpp>
 #include <physics/Spin.hpp>
-#include <smet/UnarySmET.hpp>
+#include <smet/NnarySmET.hpp>
 
 namespace SUNphi
 {
@@ -15,71 +15,46 @@ namespace SUNphi
   DEFINE_BASE_TYPE(UMinuser);
   
   /// Class to take the conjugate of a SmET
-  template <typename _Ref,                                  // Type of the expression to conjugate
-	    typename TK=typename RemRef<_Ref>::Tk,          // Tens Kind of the conjugated type
-	    typename TK_TYPES=typename TK::types>           // Types of the tensor kind
+  template <typename..._Refs>                               // Type of the expression to conjugate
   class UMinuser :
     public BaseUMinuser,                                // Inherit from BaseUMinuser to detect in expression
-    public UnarySmET<UMinuser<_Ref>>,                   // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                       // Constrain _Ref to be a SmET
-    public ConstrainIsTensKind<TK>                      // Constrain type TK to be a TensKind
+    public NnarySmET<UMinuser<_Refs...>>,               // Inherit from NnarySmET
+    public ConstrainAreSmETs<_Refs...>                  // Constrain all \c _Refs to be \c SmETs
   {
-    
   public:
     
-    PROVIDE_UNARY_SMET_REF;
+    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(1);
+    
+    /// Returns the opposite of the argument
+    template <typename T>                         // Type of the argument to negate
+    static DECLAUTO representativeFunction(T&& t) ///< Argument to negate
+    {
+      return -t;
+    }
+    
+    PROVIDE_SIMPLE_NNARY_COMP_SIZE;
     
     // Attributes
     NOT_STORING;
-    NOT_ASSIGNABLE;
-    FORWARD_IS_ALIASING_TO_REF;
+    FORWARD_IS_ALIASING_TO_REFS;
     
-    /// TensorKind of the bound expression
-    PROVIDE_TK(TK);
+    SAME_TK_AS_REF(0);
     
-    /// Fundamental type
-    SAME_FUND_TYPE_OF_REF;
+    NO_EXTRA_MERGE_DELIMS;
     
-    MERGEABLE_ACCORDING_TO_REF;
+    REPRESENTATIVE_FUNCTION_WINS_ALL;
     
-    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(UMinuser);
-    
-    SAME_COMP_SIZES_OF_REF;
-    
-    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(UMinuser);
-    
-    /// Provides either the const or non-const evaluator
-#define PROVIDE_CONST_OR_NOT_EVALUATOR(QUALIFIER)			\
-    /*! QUALIFIER evaluator for UMinuser                             */ \
-    /*!                                                              */	\
-    template <typename...Args>           /* Type of the arguments    */	\
-    DECLAUTO eval(const Args&...args)    /*!< Components to get      */	\
-      QUALIFIER								\
-    {									\
-      STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);			\
-									\
-      /*  Temporary result */						\
-      const auto val=ref.eval(forw<const Args>(args)...);		\
-									\
-      return -val;							\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-    
-    PROVIDE_CONST_OR_NOT_EVALUATOR(NON_CONST_QUALIF);
-    PROVIDE_CONST_OR_NOT_EVALUATOR(CONST_QUALIF);
-    
-#undef PROVIDE_CONST_OR_NOT_EVALUATOR
-    
+    PROVIDE_NNARY_SMET_SIMPLE_CREATOR(UMinuser);
   };
   
-  // Check that a test UMinuser is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(UMinuser<Tens<TensKind<Spin>,double>>);
+  // Check that a test UMinuser is a NnarySmET
+  STATIC_ASSERT_IS_NNARY_SMET(UMinuser<Tens<TensKind<Spin>,double>>);
   
   // Build UMinuser from uminus
-  SIMPLE_UNARY_SMET_BUILDER(uMinus,UMinuser);
+  SIMPLE_NNARY_SMET_BUILDER(uMinus,UMinuser);
   
   // Simplifies uMinus(uMinus)
-  CANCEL_DUPLICATED_UNARY_SMET_CALL(uMinus,UMinuser);
+  CANCEL_DUPLICATED_NNARY_SMET_CALL(uMinus,UMinuser);
   
   /// Implement -smet: return uminus
   template <typename T,              // Type of the expression
