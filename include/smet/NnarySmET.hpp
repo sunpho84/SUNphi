@@ -192,6 +192,10 @@ namespace SUNphi
 #define SAME_FUND_AS_REF(ID)			\
   PROVIDE_FUND(typename RemRef<Ref<ID>>::Fund)
   
+  /// Get the same \c TensKind of a given ref
+#define SAME_TK_AS_REF(ID)			\
+  PROVIDE_TK(typename RemRef<Ref<ID>>::Tk)
+  
   /// Provide the position of result Tk \c TensComp in each input
 #define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
   /*! Position of all the Result \c TensComp in each \c Refs Tk */	\

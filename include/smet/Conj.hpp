@@ -38,7 +38,7 @@ namespace SUNphi
     FORWARD_IS_ALIASING_TO_REFS;
     
     /// TensorKind of the bound expression
-    PROVIDE_TK(TkOf<Ref<0>>);
+    SAME_TK_AS_REF(0);
     
     SAME_FUND_AS_REF(0);
     
