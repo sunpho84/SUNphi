@@ -7,24 +7,26 @@
 
 #include <tens/TensClass.hpp>
 #include <smet/Reference.hpp>
-#include <smet/UnarySmET.hpp>
+#include <smet/NnarySmET.hpp>
 
 namespace SUNphi
 {
-  // Base type to qualify as Transposer
+  // Base type to qualify as \c Transposer
   DEFINE_BASE_TYPE(Transposer);
   
-  /// Class to take the transposed of a SmET
-  template <typename _Ref,                                  // Type to be transposed
-	    typename TK=typename RemRef<_Ref>::Tk> // Tens Kind of the bound type
+  /// Class to take the transposed of a \c SmET
+  template <typename..._Refs>                      // Type to be transposed
   class Transposer :
-    public BaseTransposer,                         // Inherit from BaseTransposer to detect in expression
-    public UnarySmET<Transposer<_Ref>>,            // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                  // Constrain Ref to be a SmET
-    public ConstrainIsTensKind<TK>                 // Constrain type TK to be a TensKind
+    public BaseTransposer,                         // Inherit from \c BaseTransposer to detect in expression
+    public NnarySmET<Transposer<_Refs...>>,        // Inherit from \c NnarySmET
+    public ConstrainAreSmETs<_Refs...>             // Constrain all \c Refs to be \c SmET
   {
     
   public:
+    
+    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(1);
+    
+    IDENTITY_REPRESENTATIVE_FUNCTION;
     
     /// Returns the size of a component
     ///
@@ -32,42 +34,35 @@ namespace SUNphi
     template <typename TC>
     int compSize() const
     {
-      return ref.template compSize<TwinCompOf<TC>>();
+      return get<0>(refs).template compSize<TwinCompOf<TC>>();
     }
-    
-    PROVIDE_UNARY_SMET_REF;
     
     // Attributes
     NOT_STORING;
-    ASSIGNABLE_ACCORDING_TO_REF;
-    FORWARD_IS_ALIASING_TO_REF;
+    FORWARD_IS_ALIASING_TO_REFS;
     
     /// TensorKind of the bound expression
-    PROVIDE_TK(typename TK::Twinned);
+    PROVIDE_TK(typename TkOf<Ref<0>>::Twinned);
     
-    SAME_FUND_TYPE_OF_REF;
+    NO_EXTRA_MERGE_DELIMS;
     
-    PROVIDE_MERGEABLE_COMPS(/* We have to split at all true twinned components */,
-			    InsertTrueTwinnedPosOfTuple<
-			       typename Unqualified<Ref>::MergeableComps, // Nested split points
-			       typename Tk::types>);                      // Tuple with components
+    REPRESENTATIVE_FUNCTION_WINS_ALL;
     
-    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(Transposer);
     PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Transposer);
-    PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR;
-    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(Transposer);
+    
+    PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Transposer);
   };
   
-  // Check that a test Transposer is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(Transposer<Tens<TensKind<TensComp<double,1>>,double>>);
+  // Check that a test \c Transposer is a \c NnarySmET
+  STATIC_ASSERT_IS_NNARY_SMET(Transposer<Tens<TensKind<TensComp<double,1>>,double>>);
   
-  // Build Transposer from transpose
-  SIMPLE_UNARY_SMET_BUILDER(transpose,Transposer);
+  // Build Transposer from \c transpose
+  SIMPLE_NNARY_SMET_BUILDER(transpose,Transposer);
   
   // Simplifies transpose(transpose)
-  CANCEL_DUPLICATED_UNARY_SMET_CALL(transpose,Transposer);
+  CANCEL_DUPLICATED_NNARY_SMET_CALL(transpose,Transposer);
   
-  // Move Transposer to the lhs
+  // Move \c Transposer to the lhs
   UNARY_SMET_GOES_ON_LHS(transpose,Transposer);
 }
 

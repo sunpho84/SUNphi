@@ -12,7 +12,7 @@
 
 namespace SUNphi
 {
-  // Base type to qualify as Adder
+  // Base type to qualify as \c Adder
   DEFINE_BASE_TYPE(Adder);
   
   /// Class to add two \c SmET
@@ -52,17 +52,9 @@ namespace SUNphi
     /// suits best the computational
     PROVIDE_TK(BlendTensKinds<TkOf<Ref<ADDEND1>>,TkOf<Ref<ADDEND2>>>);
     
-    PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
-    
-    PROVIDE_POS_OF_RES_TCS_IN_REFS;
-    
     NO_EXTRA_MERGE_DELIMS;
     
-    PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;
-    
-    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
-    
-    EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME;
+    REPRESENTATIVE_FUNCTION_WINS_ALL;
     
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Adder);
   };

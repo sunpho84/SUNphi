@@ -24,6 +24,16 @@ namespace SUNphi
   STATIC_ASSERT_IS_SMET(__VA_ARGS__);			\
   STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)
   
+  /// Provide an identity representative function
+#define IDENTITY_REPRESENTATIVE_FUNCTION				\
+  /*! Returns the argument */						\
+  template <typename T>	                        /* Argument type */	\
+  static DECLAUTO representativeFunction(T&& t) /*!< Argument    */	\
+  {									\
+    return (t);								\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
   /// Nnary SmET
   template <typename T>  /// Inheriting type
   struct NnarySmET :
@@ -177,6 +187,10 @@ namespace SUNphi
   /*! Obtains the \c Fund type by calling the \c representativeFunction */ \
   using Fund=								\
     decltype(_fundThroughRepresentativeFunction(IntsUpTo<NSmET>{}))
+  
+  /// Get the same \c Fund type of a given ref
+#define SAME_FUND_AS_REF(ID)			\
+  PROVIDE_FUND(typename RemRef<Ref<ID>>::Fund)
   
   /// Provide the position of result Tk \c TensComp in each input
 #define PROVIDE_POS_OF_RES_TCS_IN_REFS					\
@@ -396,6 +410,84 @@ namespace SUNphi
     return true;					\
   }							\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Provides \c Fund, \c eval and \c mergedComps according to \c representativeFunction
+#define REPRESENTATIVE_FUNCTION_WINS_ALL				\
+  PROVIDE_POS_OF_RES_TCS_IN_REFS;					\
+									\
+  PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;			\
+									\
+  PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;			\
+									\
+  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION; \
+  									\
+  EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME
+  
+  
+  /// Implements a duplicated-call canceller
+  ///
+  /// Example
+  /// \code
+  /// Tens<TensKind<Compl>,double> cicc;
+  /// conj(conj(cicc)); // returns cicc
+  /// \endcode
+#define CANCEL_DUPLICATED_NNARY_SMET_CALL(CALLER,     /*!< Name of builder */ \
+					  NNARY_SMET) /*!< Type to un-nest */ \
+  /*! Simplify CALLER(NNARY_SMET) expression */				\
+  /*!                                        */				\
+  /*! Returns the nested reference           */				\
+  template <typename T,                                        /* Type of the expression                  */ \
+	    typename RrT=RemRef<T>,                            /* T without ref attributes                */ \
+	    typename Ref=typename RrT::template Ref<0>,        /* Type of the reference                   */ \
+	    typename RrRef=RemRef<Ref>,                        /* Ref without ref attributes              */ \
+	    bool SmETIsLvalue=isLvalue<RrT>,		       /* Detect if SmET is an lvalue             */ \
+	    bool RefIsLvalue=isLvalue<RrRef>,		       /* Detect if Ref is an lvalue              */ \
+	    bool RefIsStoring=isStoring<RrRef>,		       /* Detect if Ref is storing                */ \
+	    bool RetByRef=RefIsStoring or	               /* Returns by val if Ref is storing, or    */ \
+	    RefIsLvalue or SmETIsLvalue,	               /*   lvalue is involved         	          */ \
+	    typename Ret=Conditional<RetByRef,RrRef&,RrRef>,   /* Returned type                           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET<RrT>)>     /* Enable only for the NNARY_SMET required */ \
+  Ret CALLER(T&& smet)	/*!< Quantity to un-nest   */			\
+  {									\
+    if constexpr(0)							\
+      {									\
+	constexpr bool SmETIsConst=isConst<T>;				\
+	constexpr bool RefIsConst=isConst<Ref>;				\
+									\
+	using namespace std;						\
+	cout<<"Removing duplicated call " # CALLER<<" "<<__PRETTY_FUNCTION__<<endl; \
+	constexpr bool SmETIs=std::is_reference<T>::value;		\
+	constexpr bool RefIs=std::is_reference<Ref>::value;		\
+	cout<<" SmETIsLvalue: "<<SmETIsLvalue<<endl;			\
+	cout<<" SmETIs: "<<SmETIs<<endl;				\
+	cout<<" SmETIsConst: "<<SmETIsConst<<endl;			\
+	cout<<" RefIsLvalue: "<<RefIsLvalue<<endl;			\
+	cout<<" RefIs: "<<RefIs<<endl;					\
+	cout<<" RefIsConst: "<<RefIsConst<<endl;			\
+      }									\
+									\
+    return static_cast<Ret>(get<0>(smet.refs));				\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
+  /// Defines a simple way to swap nested \c NnarySmET
+  ///
+  /// \todo we need to implement the same check done for
+  /// \c CANCEL_DUPLICATED_NNARY_SMET_CALL
+#define NNARY_SMET_GOES_INSIDE(EXT_FUN,	   /*!< External builder */	\
+			       NNARY_SMET, /*!< Name of the SmET */	\
+			       INT_FUN)	   /*!< Internal builder */	\
+  /*! Simplify EXT_FUN(NNARY_SMET u) expression    */			\
+  /*!                                              */			\
+  /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
+  template <typename D,                                   /* Type of the nested NNARY_SMET           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET<D>)>  /* Enable only for the NNARY_SMET required */ \
+  DECLAUTO EXT_FUN(D&& smet)     /*!< NnarySmET to nest           */	\
+  {									\
+    return INT_FUN(EXT_FUN(get<0>(smet.refs)));				\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
 }
 
 #endif
