@@ -21,10 +21,9 @@ namespace SUNphi
   template <typename..._Refs>                    // Reference types
   class MulAdder :
     public BaseMulAdder,                         // Inherit from \c BaseMulAdder to detect in expression
-    public NnarySmET<MulAdder<_Refs...>>         // Inherit from \c NnarySmET
+    public NnarySmET<MulAdder<_Refs...>>,        // Inherit from \c NnarySmET
+    public ConstrainAreSmETs<_Refs...>           // Constrain all \c Refs to be \c SmET
   {
-    static_assert((isSmET<RemRef<_Refs>> && ...),"All types must be SmET");
-    
   public:
     
     PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(3);
@@ -56,9 +55,9 @@ namespace SUNphi
     /// \todo fixit
     PROVIDE_TK(typename RemRef<Ref<ADDEND>>::Tk);
     
-    PROVIDE_POS_OF_RES_TCS_IN_REFS;
-    
     PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
+    
+    PROVIDE_POS_OF_RES_TCS_IN_REFS;
     
     NO_EXTRA_MERGE_DELIMS;
     
@@ -66,10 +65,10 @@ namespace SUNphi
     
     PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION;
     
-    PROVIDE_NNARY_SMET_SIMPLE_CREATOR(MulAdder);
-    
     EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME;
-  };
+    
+    PROVIDE_NNARY_SMET_SIMPLE_CREATOR(MulAdder);
+};
   
   // Check that a test MulAdder is a NnarySmET
   namespace CheckMulAdderIsNnarySmet

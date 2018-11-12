@@ -16,18 +16,17 @@ namespace SUNphi
   DEFINE_BASE_TYPE(Adder);
   
   /// Class to add two \c SmET
-  template <typename..._Refs>                         // Addendum types
+  template <typename..._Refs>                // Addendum types
   class Adder :
-    public BaseAdder,                         // Inherit from \c BaseAdder to detect in expression
-    public NnarySmET<Adder<_Refs...>>        // Inherit from \c BinarySmET
+    public BaseAdder,                        // Inherit from \c BaseAdder to detect in expression
+    public NnarySmET<Adder<_Refs...>>,       // Inherit from \c BinarySmET
+    public ConstrainAreSmETs<_Refs...>       // Constrain all \c Refs to be \c SmET
   {
-    static_assert((isSmET<RemRef<_Refs>> && ...),"All types must be SmET");
-    
   public:
     
     PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(2);
     
-    /// Position of the elements
+    /// Position of the references
     enum Pos_t{ADDEND1,
 	       ADDEND2};
     
