@@ -443,7 +443,7 @@ namespace SUNphi
   struct ConstrainAre ## TYPE ## s					\
   {									\
     static_assert((is ## TYPE<Args> && ...),				\
-		  "Error, types are not all TYPE");			\
+		  "Error, types are not all " #TYPE);			\
   }
   
   /////////////////////////////////////////////////////////////////
