@@ -492,6 +492,26 @@ namespace SUNphi
   }									\
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
+  /// Implements a duplicated-call absorber
+  ///
+  /// Example
+  /// \code
+  /// Tens<TensKind<Compl>,double> cicc;
+  /// wrap(wrap(cicc)); // returns wrap(cicc)
+  /// \endcode
+#define ABSORB_DUPLICATED_NNARY_SMET_CALL(CALLER,      /*!< Name of builder                */ \
+					  NNARY_SMET)  /*!< Type to absorb                 */ \
+  /*! Simplify CALLER(NNARY_SMET) expression */				\
+  /*!                                        */				\
+  /*! Returns the reference                  */				\
+  template <typename D,                                   /* Type of the nested NNARY_SMET           */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET<D>)>  /* Enable only for the NNARY_SMET required */ \
+  DECLAUTO CALLER(D&& smet)      /*!< NnarySmET to absorb         */	\
+  {									\
+    return forw<D>(smet);						\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
 }
 
 #endif
