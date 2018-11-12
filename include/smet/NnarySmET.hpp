@@ -30,7 +30,7 @@ namespace SUNphi
   template <typename T>	                        /* Argument type */	\
   static DECLAUTO representativeFunction(T&& t) /*!< Argument    */	\
   {									\
-    return (t);								\
+    return forw<T>(t);							\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
