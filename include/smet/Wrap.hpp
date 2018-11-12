@@ -3,56 +3,57 @@
 
 /// \file Wrap.hpp
 ///
-/// \brief Header file for the definition of wrapper
+/// \brief Header file for the definition of \c Wrapper
+///
+/// Blocks any kind of simplification of the bound \c SmET: a wrapped
+/// smet is not mergeable, vectorizable, and no pattern recognition
+/// works on nested smet
 
-#include <tens/TensKind.hpp>
+#include <smet/NnarySmET.hpp>
 #include <smet/Transpose.hpp>
-#include <smet/UnarySmET.hpp>
+#include <tens/TensKind.hpp>
 
 namespace SUNphi
 {
-  // Base type to qualify as Wrapper
+  // Base type to qualify as \c Wrapper
   DEFINE_BASE_TYPE(Wrapper);
   
-  /// Class to wrap a SmET
-  template <typename _Ref,                                  // Type of the expression to wrap
-	    typename TK=typename RemRef<_Ref>::Tk>          // Tens Kind of the wrapped expression
+  /// Class to wrap a \cSmET
+  template <typename..._Refs>                               // Type of the expression to wrap
   class Wrapper :
-    public BaseWrapper,                                     // Inherit from BaseWrapper to detect in expression
-    public UnarySmET<Wrapper<_Ref>>,                        // Inherit from UnarySmET
-    public ConstrainIsSmET<_Ref>,                           // Constrain _Ref to be a SmET
-    public ConstrainIsTensKind<TK>                          // Constrain type TK to be a TensKind
+    public BaseWrapper,                                     // Inherit from \c BaseWrapper to detect in expression
+    public NnarySmET<Wrapper<_Refs...>>,                    // Inherit from \c NnarySmET
+    public ConstrainAreSmETs<_Refs...>                      // Constrain all \c _Refs to be \ SmET
   {
   public:
     
-    PROVIDE_UNARY_SMET_REF;
+    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(1);
+    
+    IDENTITY_REPRESENTATIVE_FUNCTION;
+    
+    PROVIDE_SIMPLE_NNARY_COMP_SIZE;
     
     // Attributes
     NOT_STORING;
-    NOT_ASSIGNABLE;
-    FORWARD_IS_ALIASING_TO_REF;
+    FORWARD_IS_ALIASING_TO_REFS;
     
-    /// TensorKind of the bound expression
-    PROVIDE_TK(TK);
+    SAME_TK_AS_REF(0);
     
-    SAME_FUND_TYPE_OF_REF;
-    SAME_COMP_SIZES_OF_REF;
+    PROVIDE_EXTRA_MERGE_DELIMS(IntsUpTo<Tk::nTypes+1>);
     
-    MERGEABLE_ACCORDING_TO_REF;
-    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(Wrapper);
+    REPRESENTATIVE_FUNCTION_WINS_ALL;
     
-    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(Wrapper);
-    PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR;
+    PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Wrapper);
   };
   
-  // Check that a test Wrapper is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(Wrapper<Tens<TensKind<TensComp<double,3>>,double>>);
+  // Check that a test \c Wrapper is a \c NnarySmET
+  STATIC_ASSERT_IS_NNARY_SMET(Wrapper<Tens<TensKind<TensComp<double,3>>,double>>);
   
-  // Build Wrapper from wrap
-  SIMPLE_UNARY_SMET_BUILDER(wrap,Wrapper);
+  // Build \c Wrapper from \c wrap
+  SIMPLE_NNARY_SMET_BUILDER(wrap,Wrapper);
   
   // Simplifies wrap(wrap)
-  ABSORB_DUPLICATED_UNARY_SMET_CALL(wrap,Wrapper);
+  ABSORB_DUPLICATED_NNARY_SMET_CALL(wrap,Wrapper);
 }
 
 #endif
