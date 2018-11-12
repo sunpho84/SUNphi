@@ -19,12 +19,13 @@ namespace SUNphi
   template <typename..._Refs>                // Addendum types
   class Adder :
     public BaseAdder,                        // Inherit from \c BaseAdder to detect in expression
-    public NnarySmET<Adder<_Refs...>>,       // Inherit from \c BinarySmET
+    public NnarySmET<Adder<_Refs...>>,       // Inherit from \c NnarySmET
     public ConstrainAreSmETs<_Refs...>       // Constrain all \c Refs to be \c SmET
   {
-  public:
     
     PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(2);
+    
+  public:
     
     /// Position of the references
     enum Pos_t{ADDEND1,
@@ -45,7 +46,7 @@ namespace SUNphi
     NOT_STORING;
     FORWARD_IS_ALIASING_TO_REFS;
     
-    /// TensorKind of the result
+    /// \c TensKind of the result
     ///
     /// \todo Improve, the return type could be decided studying what
     /// suits best the computational
