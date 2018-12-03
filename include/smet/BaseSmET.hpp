@@ -10,6 +10,7 @@
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
+#include <system/Debug.hpp>
 
 #include <iostream>
 
@@ -123,6 +124,30 @@ namespace SUNphi
   // Defines the check for a member variable \c isAliasing
   DEFINE_HAS_MEMBER(isAliasing);
   
+  /// Provides a \c isAliasing method, taking \c alias as argument
+#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)	\
+  LONG_DESCRIPTION					\
+  template <typename Tref>				\
+  bool isAliasing(const Tref& alias) const		\
+  {							\
+    __VA_ARGS__;					\
+  }							\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Set aliasing according to a passed pointer (provided class member)
+  ///
+  /// \todo This is mostly broken
+#define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
+  PROVIDE_IS_ALIASING( /*! Check the aliasing with reference */,	\
+		       CRASH("Broken");					\
+									\
+		       const void* pAlias=				\
+		         static_cast<const void*>(&alias);		\
+		       const void* p=					\
+		         static_cast<const void*>(_p);			\
+									\
+		       return pAlias==p;)
+  
   /////////////////////////////////////////////////////////////////
   
   // Defines the check for a member variable \c isAssignable
@@ -191,23 +216,19 @@ namespace SUNphi
   DEFINE_HAS_MEMBER(assertMergeableWith);
   
   /// Provides a \c getMergedCompsView method, taking Is as template parameter
-#define PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(QUALIFIER,DESCRIPTION,...) \
+#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...) \
   DESCRIPTION								\
   template <typename Is>       /* IntSeq delimiting the comps groups */ \
   DECLAUTO getMergedCompsView()						\
-    QUALIFIER								\
+    const								\
   {									\
     /* Check that we can merge as asked */				\
     assertMergeableWith<Is>();						\
 									\
     __VA_ARGS__;							\
   }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-  
-  /// Provides a const and not const \c getMergedCompsView metod
-#define PROVIDE_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)			\
-  PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(,DESCRIPTION,__VA_ARGS__);	\
-  PROVIDE_CONST_OR_NOT_GET_MERGED_COMPS_VIEW(const,DESCRIPTION,__VA_ARGS__)
+									\
+  PROVIDE_ALSO_NON_CONST_METHOD(getMergedCompsView)
   
   // Check that we know how to get a MergedCompsView
   DEFINE_HAS_MEMBER(getMergedCompsView);
