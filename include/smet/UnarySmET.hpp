@@ -11,6 +11,7 @@
 #include <smet/BaseSmET.hpp>
 #include <smet/Reference.hpp>
 
+#if 0
 namespace SUNphi
 {
   /// Defines the UnarySmET type traits
@@ -117,34 +118,12 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Provides a \c isAliasing method, taking \c alias as argument
-#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)	\
-  LONG_DESCRIPTION					\
-  template <typename Tref>				\
-  bool isAliasing(const Tref& alias) const		\
-  {							\
-    __VA_ARGS__;					\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-  
   /// Set aliasing according to the isAliasing of reference
   ///
   /// \todo enforce cehck only with TensClass, or with storing classes
 #define FORWARD_IS_ALIASING_TO_REF			\
   PROVIDE_IS_ALIASING(/*! Forward aliasing check to the reference */,	\
 		      return ref.isAliasing(alias);)
-  
-  /// Set aliasing according to a passed pointer (provided class member)
-  ///
-  /// \todo This is mostly broken
-#define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
-  PROVIDE_IS_ALIASING( /*! Check the aliasing with reference */,	\
-		       const void* pAlias=				\
-		         static_cast<const void*>(&alias);		\
-		       const void* p=					\
-		         static_cast<const void*>(_p);			\
-									\
-		       return pAlias==p;)
   
   /// Create a simple builder with a name and a UNARY_SMET returned type
 #define SIMPLE_UNARY_SMET_BUILDER(BUILDER,    /*!< Name of builder fun            */ \
@@ -299,5 +278,6 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
   
 }
+#endif
 
 #endif

@@ -8,7 +8,7 @@
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
-#include <smet/UnarySmET.hpp>
+#include <smet/NnarySmET.hpp>
 
 namespace SUNphi
 {
@@ -24,11 +24,10 @@ namespace SUNphi
 	    typename FUND> // Fundamental type
   class Tens :
     public BaseTens,                       // Inherit from BaseTens to detect in expression
-    public UnarySmET<Tens<TK,FUND>>,       // Inherit from UnarySmET
+    public NnarySmET<Tens<TK,FUND>>,       // Inherit from NnarySmET
     public ConstrainIsTensKind<TK>,        // Constrain the TK type to be a TensKind
     public ConstrainIsFloatingPoint<FUND>  // Constrain the Fund type to be a floating point
   {
-    
   public:
     
     /// Tensor kind of the tensor
@@ -191,40 +190,40 @@ namespace SUNphi
     
 #undef PROVIDE_EVALUATOR
     
-    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Tens);
+    PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Tens);
     
   };
   
-  // Check that a test Tens is a UnarySmET
+  // Check that a test \c Tens is a \c NnarySmET
   STATIC_ASSERT_IS_SMET(Tens<TensKind<TensComp<double,1>>,double>);
   
-  /// Get the storage of a SmET
+  /// Get the storage of a \c SmET
   ///
-  /// default case, asserting if smet is not a UnarySmET as needed
-  template <typename SMET,      // Type of the SmET
+  /// default case, asserting if smet is not a \c NnarySmET as needed
+  template <typename SMET,      // Type of the \c SmET
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
-  void getStor(SMET&& smet,      ///< SmET to be searched
+  void getStor(SMET&& smet,      ///< \c SmET to be searched
 	       SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
-    STATIC_ASSERT_IS_UNARY_SMET(SMET);
+    STATIC_ASSERT_IS_NNARY_SMET(SMET);
   }
   
-  /// Get the storage of a SmET
+  /// Get the storage of a \c SmET
   ///
-  /// In this case we are treating a UnarySmET which is not a Tens
+  /// In this case we are treating a \c NnarySmET which is not a Tens
   template <typename SMET,     // Type of the SmET
-	    SFINAE_ON_TEMPLATE_ARG(isUnarySmET<SMET> and not isTens<SMET>)>
-  auto& getStor(SMET&& smet)    ///< SmET to be searched
+	    SFINAE_ON_TEMPLATE_ARG(isNnarySmET<SMET> and not isTens<SMET>)>
+  DECLAUTO getStor(SMET&& smet)    ///< \c SmET to be searched
   {
-    return getStor(smet.ref);
+    return getStor(get<0>(smet.refs));
   }
   
   /// Get the storage of a SmET
   ///
   /// In this case we are treating a UnarySmET which is a Tens
   template <typename SMET,     // Type of the SmET
-	    SFINAE_ON_TEMPLATE_ARG(isUnarySmET<SMET> and isTens<SMET>)>
+	    SFINAE_ON_TEMPLATE_ARG(isNnarySmET<SMET> and isTens<SMET>)>
   auto& getStor(SMET&& smet)    ///< SmET to be searched
   {
     return smet.getStor();

@@ -48,7 +48,7 @@ namespace SUNphi
     
     REPRESENTATIVE_FUNCTION_WINS_ALL;
     
-    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Transposer);
+    PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Transposer);
     
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Transposer);
   };
@@ -63,7 +63,7 @@ namespace SUNphi
   CANCEL_DUPLICATED_NNARY_SMET_CALL(transpose,Transposer);
   
   // Move \c Transposer to the lhs
-  UNARY_SMET_GOES_ON_LHS(transpose,Transposer);
+  SMET_GOES_ON_LHS(transpose,Transposer);
 }
 
 #endif

@@ -294,6 +294,48 @@ namespace SUNphi
     
 #undef PROVIDE_CALL_OPERATOR
   };
+  
+  /// Defines the assignement operator, calling assign
+#define PROVIDE_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the NnarySmET */) \
+  /*! Assign from another object */					\
+  template <typename Oth>             	/* Other type  */		\
+  DECLAUTO operator=(Oth&& oth)	        /*!< Other object */		\
+  {									\
+    if(0)								\
+      {									\
+	using namespace std;						\
+	cout<<"Operator=, triggering assignement to "<<this<<" of "<<&oth<<endl; \
+      }									\
+    assign(*this,forw<Oth>(oth));					\
+									\
+    return *this;							\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
+  /// Defines a simple way to swap an SmET from rhs to lhs
+  ///
+  /// \todo why can't we make only const & on rhs?
+  /// \todo we need to enforce SmET
+#define SMET_GOES_ON_LHS(LHS_FUN,	   /*!< External builder     */	\
+			 SMET)             /*!< Name of the \c SmET  */	\
+  /*! Simplify EXT_FUN(      SMET u) expression    */			\
+  /*!                                              */			\
+  /*! Returns INT_FUN(EXT_FUN(u.ref))              */			\
+  template <typename Lhs,                              /* Type of the lhs \c SmET              */ \
+	    typename Rhs,                              /* Type of the rhs \c SMET              */ \
+	    SFINAE_ON_TEMPLATE_ARG(is ## SMET<Rhs>)>   /* Enable only for the \c SMET required */ \
+  void assign(Lhs&& lhs,   /*!< Lhs of the assignement                       */ \
+	      Rhs&& rhs)   /*!< Rhs of the assignement, to free from \c SMET */ \
+  {									\
+    if(1)								\
+      {									\
+	using namespace std;						\
+	cout<<"Moving " #SMET "to lhs"<<endl;				\
+      }									\
+    assign(LHS_FUN(forw<Lhs>(lhs)),rhs.ref);				\
+  }									\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
 }
 
 #endif

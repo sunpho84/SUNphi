@@ -7,7 +7,7 @@
 /// be used in expressions
 ///
 
-#include <smet/UnarySmET.hpp>
+#include <smet/NnarySmET.hpp>
 #include <tens/TensKind.hpp>
 
 namespace SUNphi
@@ -18,17 +18,18 @@ namespace SUNphi
   /// Class to hold a scalar promoting it into a SmET
   ///
   /// \todo Check what happens if called with a SmET
-  template <typename _Fund>                        // Type to be wrapped
+  template <typename _Fund,                          // Type to be wrapped
+	    typename..._Refs>                        // Extra types, need to be empty
   class ScalarWrapper :
-    public BaseScalarWrapper,                      // Inherit from BaseTransposer to detect in expression
-    public UnarySmET<ScalarWrapper<_Fund>>         // Inherit from UnarySmET
+    public BaseScalarWrapper,                        // Inherit from BaseTransposer to detect in expression
+    public NnarySmET<ScalarWrapper<_Fund,_Refs...>>  // Inherit from NnarySmET
   {
     
   public:
     
+    IDENTITY_REPRESENTATIVE_FUNCTION;
+    
     /// Returns the size of a component, which is always 1
-    ///
-    /// The result is the size of the twinned component
     int compSize() const
     {
       return 1;
@@ -40,23 +41,30 @@ namespace SUNphi
     /// Fundamental type
     PROVIDE_FUND(_Fund);
     
-    /// The canonical \c Ref member is the same of \c Fund
-    using Ref=
-      Fund;
+    PROVIDE_NNARY_SMET_REFS_AND_CHECK_ARE_N(0);
     
-    /// Provides a reference or a value, depending on \c Fund
-    RefIf<isLvalue<Fund>,RemRef<Fund>> ref;
+    /// Type of the scalar ref, reference or not depending on _Fund
+    ///
+    /// \todo explain
+    using ScRef=
+      RefIf<isLvalue<_Fund>,RemRef<Fund>>;
+    
+    /// Provides a reference or a value, depending on \c _Fund
+    ScRef scRef;
     
     // Attributes
     STORING;
-    ASSIGNABLE_ACCORDING_TO_REF;
+    IS_ASSIGNABLE_ATTRIBUTE(/*! The SmET is assignable if ref is */,
+			    isLvalue<_Fund> and (not isConst<_Fund>));
     PROVIDE_IS_ALIASING(/*! Check with storage */,
-			return alias==ref;);
+			return alias==scRef;);
+    
+    /// Returns a component-merged version
+    PROVIDE_GET_MERGED_COMPS_VIEW(/*! Returns the ScalarWrap itself */,
+				  return *this);
     
     PROVIDE_MERGEABLE_COMPS(/* There is no component  */,
 			    IntSeq<0>);   // Left and right borders
-    
-    PROVIDE_UNARY_SMET_SIMPLE_GET_MERGED_COMPS_VIEW(ScalarWrapper);
     
     /// Assignement operator
     template <typename Oth>           	// Other type
@@ -66,34 +74,34 @@ namespace SUNphi
     }
     
     /// Provides either the const or non-const evaluator
-#define PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(QUALIFIER)		\
-    /*! QUALIFIER evaluator for ScalarWrapper                        */	\
-    template <typename...Args> /*! Arguments (need to be empty)      */ \
-    DECLAUTO eval(Args&&...args)					\
-      QUALIFIER								\
-    {									\
-      STATIC_ASSERT_ARE_N_TYPES(0,args);				\
-									\
-      return ref;							\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    template <typename...Args> /// Arguments (need to be empty)
+    auto& eval(Args&&...args)
+      const
+    {
+      std::cout<<" is: "<<isLvalue<_Fund><<", "<<isLvalue<decltype(scRef)><<" "<<scRef<<std::endl;
+      STATIC_ASSERT_ARE_N_TYPES(0,args);
+      
+      return scRef;
+    }
     
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(/* Non const*/);
-    PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(const);
+    PROVIDE_ALSO_NON_CONST_METHOD(eval);
     
-#undef PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR
-    
-    PROVIDE_UNARY_SMET_SIMPLE_CREATOR(ScalarWrapper);
+    /// Constructor taking universal reference
+    template <typename T,
+	      typename=EnableIf<isSame<Unqualified<T>,Unqualified<_Fund>>>>
+    explicit ScalarWrapper(T&& val) : scRef(forw<T>(val))
+    {
+    }
   };
   
-  // Check that a test ScalarWrapper is a UnarySmET
-  STATIC_ASSERT_IS_UNARY_SMET(ScalarWrapper<double>);
+  // Check that a test ScalarWrapper is a NnarySmET
+  STATIC_ASSERT_IS_NNARY_SMET(ScalarWrapper<double>);
   
   // Build ScalarWrapper from scalarWrap
-  SIMPLE_UNARY_SMET_BUILDER(scalarWrap,ScalarWrapper);
+  SIMPLE_NNARY_SMET_BUILDER(scalarWrap,ScalarWrapper);
   
   // Simplifies scalarWrap(smet) -> smet
-  ABSORB_DUPLICATED_UNARY_SMET_CALL(scalarWrap,SmET);
+  ABSORB_DUPLICATED_NNARY_SMET_CALL(scalarWrap,SmET);
 }
 
 #endif

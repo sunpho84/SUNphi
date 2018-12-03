@@ -7,6 +7,7 @@
 
 #include <ints/IntSeqCat.hpp>
 #include <smet/BaseSmET.hpp>
+#include <smet/Reference.hpp>
 #include <tens/TensKind.hpp>
 #include <tuple/TupleOrder.hpp>
 #include <utility/Position.hpp>
@@ -192,6 +193,10 @@ namespace SUNphi
 #define SAME_FUND_AS_REF(ID)			\
   PROVIDE_FUND(typename RemRef<Ref<ID>>::Fund)
   
+  /// Get the same assignability of a given ref
+#define AS_ASSIGNABLE_AS_REF(ID)					\
+  IS_ASSIGNABLE_ATTRIBUTE(/* As assignable as ref ID */,Ref<ID>::isAssignable)
+  
   /// Get the same \c TensKind of a given ref
 #define SAME_TK_AS_REF(ID)			\
   PROVIDE_TK(typename RemRef<Ref<ID>>::Tk)
@@ -212,7 +217,7 @@ namespace SUNphi
   template <int ResPos=0,                    // Current \c TensComp to be checked
 	    typename...MergeDelim,           // \c IntSeq containing the allowed mergeability delimiters for each Ref
 	    typename...PosOfResTcsInRefTk,   // Route to give the position of each \c TensComp of the Res in each Ref
-	    int...PrevPosInts,               // Position of previous component
+	    int...PrevPosInts,               // Position of previous components
 	    typename ExtraDelim>             // Extra delimiters to be added
   constexpr DECLAUTO _nnarySmETCompsMergeability(Tuple<MergeDelim...>,
 						 Tuple<PosOfResTcsInRefTk...>,
@@ -294,7 +299,7 @@ namespace SUNphi
 	    typename PosOfResTcsInRefTks,     // Position of the result comps in the refs (\c Tuple of \c IntSeq)
 	    typename ExtraDelims>             // Additional delmiters coming from the \c SmET
   using NnarySmETCompsMergeability=
-    decltype(_nnarySmETCompsMergeability(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<RefsMD>,0>{},ExtraDelims{}));
+    decltype(_nnarySmETCompsMergeability(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb<tupleSize<RefsMD>,NOT_PRESENT>{},ExtraDelims{}));
   
   /// Add an \c ExtraDelims \c IntSeq called \c ExtraDelims
 #define PROVIDE_EXTRA_MERGE_DELIMS(...)			\

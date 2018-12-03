@@ -116,7 +116,7 @@ namespace SUNphi
     /// \c TensKind of the bound expression
     PROVIDE_TK(typename NestedTk::template AllButType<TG>);
     
-    PROVIDE_FUND(FundTypeOf<Ref<0>>);
+    SAME_FUND_AS_REF(0);
     
     PROVIDE_POS_OF_RES_TCS_IN_REFS;
     
@@ -124,7 +124,7 @@ namespace SUNphi
     
     PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;
     
-    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Merge the components and create a new \c Binder taking the same component */,Binder<TG,decltype(MERGED_COMPS_VIEW_OF_REF(0))>(MERGED_COMPS_VIEW_OF_REF(0),id));
+    PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(/*! Merge the components and create a new \c Binder taking the same component */,return Binder<TG,decltype(MERGED_COMPS_VIEW_OF_REF(0))>(MERGED_COMPS_VIEW_OF_REF(0),id));
     
     /// Evaluator for Binder
     ///
@@ -182,7 +182,7 @@ namespace SUNphi
     
     PROVIDE_ALSO_NON_CONST_METHOD(eval);
     
-    PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(Binder);
+    PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Binder);
     
     /// Constructor taking a universal reference and the id
     ///
