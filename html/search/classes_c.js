@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['tc1',['Tc1',['../d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html',1,'SUNphi::_RelBindInternalChecks']]],
+  ['tc2',['Tc2',['../dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html',1,'SUNphi::_RelBindInternalChecks']]],
   ['tens',['Tens',['../d8/d1c/classSUNphi_1_1Tens.html',1,'SUNphi']]],
   ['tenscomp',['TensComp',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
   ['tenscomp_3c_20cncol_2c_20ncol_20_3e',['TensComp&lt; CnCol, NCOL &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
@@ -9,6 +11,8 @@ var searchData=
   ['tenscomp_3c_20rwcol_2c_20ncol_20_3e',['TensComp&lt; RwCol, NCOL &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
   ['tenscomp_3c_20rwspin_2c_20nspin_20_3e',['TensComp&lt; RwSpin, NSPIN &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
   ['tenscomp_3c_20spacetime_2c_20dynamic_20_3e',['TensComp&lt; Spacetime, DYNAMIC &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
+  ['tenscomp_3c_20tc1_2c_201_20_3e',['TensComp&lt; Tc1, 1 &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
+  ['tenscomp_3c_20tc2_2c_202_20_3e',['TensComp&lt; Tc2, 2 &gt;',['../d1/d96/structSUNphi_1_1TensComp.html',1,'SUNphi']]],
   ['tenscompslistmerged',['TensCompsListMerged',['../d6/da8/structSUNphi_1_1TensKind_1_1TensCompsListMerged.html',1,'SUNphi::TensKind']]],
   ['tenscompslistmerged_3c_20intseq_3c_20icomps_2e_2e_2e_3e_20_3e',['TensCompsListMerged&lt; IntSeq&lt; IComps...&gt; &gt;',['../de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4.html',1,'SUNphi::TensKind']]],
   ['tenskind',['TensKind',['../d8/df8/classSUNphi_1_1TensKind.html',1,'SUNphi']]],

@@ -382,7 +382,7 @@ template&lt;typename T &gt; </td></tr>
 <div class="line">  struct ConstrainAre ## TYPE ## s                  \</div>
 <div class="line">  {                                 \</div>
 <div class="line">    static_assert((is ## TYPE&lt;Args&gt; &amp;&amp; ...),                \</div>
-<div class="line">          <span class="stringliteral">&quot;Error, types are not all TYPE&quot;</span>);         \</div>
+<div class="line">          <span class="stringliteral">&quot;Error, types are not all &quot;</span> #TYPE);           \</div>
 <div class="line">  }</div>
 </div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>

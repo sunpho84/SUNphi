@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>SUNphi: SUNphi::Wrapper&lt; _Ref, TK &gt; Class Template Reference</title>
+<title>SUNphi: SUNphi::Wrapper&lt; _Refs &gt; Class Template Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -113,68 +113,97 @@ $(document).ready(function(){initNavTree('d1/d77/classSUNphi_1_1Wrapper.html','.
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../d5/d92/classSUNphi_1_1Wrapper-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SUNphi::Wrapper&lt; _Ref, TK &gt; Class Template Reference</div>  </div>
+<div class="title">SUNphi::Wrapper&lt; _Refs &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class to wrap a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  
+<p>Class to wrap a .  
  <a href="../../d1/d77/classSUNphi_1_1Wrapper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for SUNphi::Wrapper&lt; _Ref, TK &gt;:</div>
+Inheritance diagram for SUNphi::Wrapper&lt; _Refs &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="../../d1/d77/classSUNphi_1_1Wrapper.png" usemap="#SUNphi::Wrapper&lt; _Ref, TK &gt;_map" alt=""/>
-  <map id="SUNphi::Wrapper&lt; _Ref, TK &gt;_map" name="SUNphi::Wrapper&lt; _Ref, TK &gt;_map">
-<area href="../../d2/dc5/structSUNphi_1_1UnarySmET.html" alt="SUNphi::UnarySmET&lt; Wrapper&lt; _Ref &gt; &gt;" shape="rect" coords="259,112,508,136"/>
-<area href="../../d1/d31/structSUNphi_1_1SmET.html" alt="SUNphi::SmET&lt; Wrapper&lt; _Ref &gt; &gt;" shape="rect" coords="129,56,378,80"/>
-<area href="../../df/d49/structSUNphi_1_1BaseUnarySmET.html" title="Defines the UnarySmET type traits. " alt="SUNphi::BaseUnarySmET" shape="rect" coords="388,56,637,80"/>
+  <img src="../../d1/d77/classSUNphi_1_1Wrapper.png" usemap="#SUNphi::Wrapper&lt; _Refs &gt;_map" alt=""/>
+  <map id="SUNphi::Wrapper&lt; _Refs &gt;_map" name="SUNphi::Wrapper&lt; _Refs &gt;_map">
+<area href="../../dc/d2f/structSUNphi_1_1NnarySmET.html" alt="SUNphi::NnarySmET&lt; Wrapper&lt; _Refs...&gt; &gt;" shape="rect" coords="273,112,536,136"/>
+<area href="../../d1/d31/structSUNphi_1_1SmET.html" alt="SUNphi::SmET&lt; Wrapper&lt; _Refs...&gt; &gt;" shape="rect" coords="136,56,399,80"/>
+<area href="../../d9/d67/structSUNphi_1_1BaseNnarySmET.html" title="Defines the NnarySmET type traits. " alt="SUNphi::BaseNnarySmET" shape="rect" coords="409,56,672,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9b75f785dbd0a69de7ed05e4a7bc34ee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee">Ref</a> = _Ref</td></tr>
-<tr class="separator:a9b75f785dbd0a69de7ed05e4a7bc34ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0290c1272ed40753d92784a26bc0954b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0290c1272ed40753d92784a26bc0954b"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a0290c1272ed40753d92784a26bc0954b">Tk</a> = TK</td></tr>
-<tr class="memdesc:a0290c1272ed40753d92784a26bc0954b"><td class="mdescLeft">&#160;</td><td class="mdescRight">TensorKind of the bound expression. <br/></td></tr>
-<tr class="separator:a0290c1272ed40753d92784a26bc0954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a1a4e5b5685469cb33e896f9181280"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a32a1a4e5b5685469cb33e896f9181280">Fund</a> = typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">ref</a>)&gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a32a1a4e5b5685469cb33e896f9181280">Fund</a></td></tr>
-<tr class="separator:a32a1a4e5b5685469cb33e896f9181280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a7f5b2eb89f6dc2330026dda7c039a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a57a7f5b2eb89f6dc2330026dda7c039a">MergeableComps</a> = typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">ref</a>)&gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a57a7f5b2eb89f6dc2330026dda7c039a">MergeableComps</a></td></tr>
-<tr class="separator:a57a7f5b2eb89f6dc2330026dda7c039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59a48f20c9adb1f2a687bc7546e7d70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ab59a48f20c9adb1f2a687bc7546e7d70">Refs</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; _Refs...&gt;</td></tr>
+<tr class="separator:ab59a48f20c9adb1f2a687bc7546e7d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5fd27b098caaa30840743c103f9222"><td class="memTemplParams" colspan="2">template&lt;int I&gt; </td></tr>
+<tr class="memitem:a4c5fd27b098caaa30840743c103f9222"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a4c5fd27b098caaa30840743c103f9222">Ref</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3449e7eaa063d756b6467c2578077f61">TupleElementType</a>&lt; I, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; _Refs...&gt;&gt;</td></tr>
+<tr class="separator:a4c5fd27b098caaa30840743c103f9222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa6cef9dd7774757b7015738b2bf037"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fa6cef9dd7774757b7015738b2bf037"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Tk</b> = typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a4c5fd27b098caaa30840743c103f9222">Ref</a>&lt; 0 &gt;&gt;::Tk</td></tr>
+<tr class="separator:a8fa6cef9dd7774757b7015738b2bf037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c20f4b339b5533cd70b2c1b0ede74f4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a1c20f4b339b5533cd70b2c1b0ede74f4">ExtraDelims</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt; Tk::nTypes+1 &gt;</td></tr>
+<tr class="separator:a1c20f4b339b5533cd70b2c1b0ede74f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7581bee7e0cf352753330fd15d6904c1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a7581bee7e0cf352753330fd15d6904c1">PosOfResTcsInRefsTk</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a20a22ae0ab9777758b1cc9dc50e85e33">PosOfTcsOfTkInListOfTks</a>&lt; Tk, typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; _Refs &gt;::Tk...&gt;</td></tr>
+<tr class="separator:a7581bee7e0cf352753330fd15d6904c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa87c12a657f1d46320f0b52a2955ce2f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa87c12a657f1d46320f0b52a2955ce2f">PosOfResTcsPresInRefsTk</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4fc6fe9266c126fdf3bfaa91cd394907">PosOfTcsOfTkPresInListOfTks</a>&lt; Tk, typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; _Refs &gt;::Tk...&gt;</td></tr>
+<tr class="separator:aa87c12a657f1d46320f0b52a2955ce2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175e03de611b81589a06d7368d167eba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a175e03de611b81589a06d7368d167eba">Fund</a> = decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ad97308e6d2e8d229c4e80d2d9ac92fb1">_fundThroughRepresentativeFunction</a>(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a447ad04ae7e4874ba6bcf4b63b660aba">NSmET</a> &gt;{}))</td></tr>
+<tr class="separator:a175e03de611b81589a06d7368d167eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affacae0a862d5c93609a0305831aefa0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#affacae0a862d5c93609a0305831aefa0">MergeableComps</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">NnarySmETCompsMergeability</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt; _Refs &gt;::MergeableComps...&gt;, <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a7581bee7e0cf352753330fd15d6904c1">PosOfResTcsInRefsTk</a>, <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a1c20f4b339b5533cd70b2c1b0ede74f4">ExtraDelims</a> &gt;</td></tr>
+<tr class="separator:affacae0a862d5c93609a0305831aefa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99253abc2ff224e344c6c23a532f10cb"><td class="memTemplParams" colspan="2">template&lt;typename Tref &gt; </td></tr>
-<tr class="memitem:a99253abc2ff224e344c6c23a532f10cb"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a99253abc2ff224e344c6c23a532f10cb">isAliasing</a> (const Tref &amp;alias) const </td></tr>
-<tr class="separator:a99253abc2ff224e344c6c23a532f10cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3631e0f0b00288fec0a0835c6496b48"><td class="memTemplParams" colspan="2">template&lt;typename TC , typename... DummyTypes&gt; </td></tr>
-<tr class="memitem:aa3631e0f0b00288fec0a0835c6496b48"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa3631e0f0b00288fec0a0835c6496b48">compSize</a> (DummyTypes...) const </td></tr>
-<tr class="separator:aa3631e0f0b00288fec0a0835c6496b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a554e749bfd90b53d36ab9f0c7b6e352d"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a554e749bfd90b53d36ab9f0c7b6e352d">getMaximallyMergedCompsView</a> ()</td></tr>
-<tr class="separator:a554e749bfd90b53d36ab9f0c7b6e352d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e7133dc1978f1e4de43a6d17d456657"><td class="memTemplParams" colspan="2">template&lt;typename Is &gt; </td></tr>
-<tr class="memitem:a1e7133dc1978f1e4de43a6d17d456657"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a1e7133dc1978f1e4de43a6d17d456657">getMergedCompsView</a> ()</td></tr>
-<tr class="separator:a1e7133dc1978f1e4de43a6d17d456657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bcf9f7877afbede7a4d189e5715c045"><td class="memTemplParams" colspan="2">template&lt;typename Is &gt; </td></tr>
-<tr class="memitem:a0bcf9f7877afbede7a4d189e5715c045"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a0bcf9f7877afbede7a4d189e5715c045">getMergedCompsView</a> () const </td></tr>
-<tr class="separator:a0bcf9f7877afbede7a4d189e5715c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79cec3d9e8f7ca79cfb593d40c5eaf97"><td class="memTemplParams" colspan="2">template&lt;typename Oth , typename  = EnableIf&lt;isSame&lt;Unqualified&lt;Oth&gt;,Unqualified&lt;Ref&gt;&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a79cec3d9e8f7ca79cfb593d40c5eaf97"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a79cec3d9e8f7ca79cfb593d40c5eaf97">Wrapper</a> (Oth &amp;&amp;oth)</td></tr>
-<tr class="separator:a79cec3d9e8f7ca79cfb593d40c5eaf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c53e172d11f8ae8192e7db4cedd4acb"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a0c53e172d11f8ae8192e7db4cedd4acb"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a0c53e172d11f8ae8192e7db4cedd4acb">eval</a> (const Args &amp;...args)</td></tr>
-<tr class="separator:a0c53e172d11f8ae8192e7db4cedd4acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa81ae260b024c4abad6e42a5d5140684"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:aa81ae260b024c4abad6e42a5d5140684"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa81ae260b024c4abad6e42a5d5140684">eval</a> (const Args &amp;...args) const </td></tr>
-<tr class="separator:aa81ae260b024c4abad6e42a5d5140684"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9ed5275ecef9dfc025fb6587273ec5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html#ab9ed5275ecef9dfc025fb6587273ec5e">operator~</a> ()</td></tr>
-<tr class="separator:ab9ed5275ecef9dfc025fb6587273ec5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a968fdedc3e4dffd1247a1890e168bae5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html#a968fdedc3e4dffd1247a1890e168bae5">operator~</a> () const</td></tr>
-<tr class="separator:a968fdedc3e4dffd1247a1890e168bae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72eab6d21134957955f412ffad9ac5fe"><td class="memTemplParams" colspan="2">template&lt;typename TC , int I = 0&gt; </td></tr>
+<tr class="memitem:a72eab6d21134957955f412ffad9ac5fe"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a72eab6d21134957955f412ffad9ac5fe">compSize</a> () const </td></tr>
+<tr class="separator:a72eab6d21134957955f412ffad9ac5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fa3a1574bc49b11437f0af11e5ff28"><td class="memTemplParams" colspan="2">template&lt;typename Tref &gt; </td></tr>
+<tr class="memitem:a06fa3a1574bc49b11437f0af11e5ff28"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a06fa3a1574bc49b11437f0af11e5ff28">isAliasing</a> (const Tref &amp;alias) const </td></tr>
+<tr class="separator:a06fa3a1574bc49b11437f0af11e5ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49ea54b164d52c1a7726d3056ee5e3c"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa49ea54b164d52c1a7726d3056ee5e3c">getMaximallyMergedCompsView</a> ()</td></tr>
+<tr class="separator:aa49ea54b164d52c1a7726d3056ee5e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc4e829188ee1562ad0cef42309335e"><td class="memTemplParams" colspan="2">template&lt;int... Is, typename MDs &gt; </td></tr>
+<tr class="memitem:a8bc4e829188ee1562ad0cef42309335e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a8bc4e829188ee1562ad0cef42309335e">mergedCompsViewAccordingToRepresentativeFunction</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Is...&gt;, MDs) const </td></tr>
+<tr class="separator:a8bc4e829188ee1562ad0cef42309335e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a309734a0678bb44bd5fe02581a6f4ba3"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a309734a0678bb44bd5fe02581a6f4ba3"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a309734a0678bb44bd5fe02581a6f4ba3">mergedCompsViewAccordingToRepresentativeFunction</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:a309734a0678bb44bd5fe02581a6f4ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60490fad93d657a04191807d661d9392"><td class="memTemplParams" colspan="2">template&lt;typename Is &gt; </td></tr>
+<tr class="memitem:a60490fad93d657a04191807d661d9392"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a60490fad93d657a04191807d661d9392">getMergedCompsView</a> () const </td></tr>
+<tr class="separator:a60490fad93d657a04191807d661d9392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa067932dc2dedc2c676b78b8e4e3fcf4"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:aa067932dc2dedc2c676b78b8e4e3fcf4"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa067932dc2dedc2c676b78b8e4e3fcf4">getMergedCompsView</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:aa067932dc2dedc2c676b78b8e4e3fcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd4bce56aa259f30f57a8aa1f657b53"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a6cd4bce56aa259f30f57a8aa1f657b53"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a6cd4bce56aa259f30f57a8aa1f657b53">eval</a> (Args &amp;&amp;...args) const </td></tr>
+<tr class="separator:a6cd4bce56aa259f30f57a8aa1f657b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18905fd7368f3937c91cea39f908ca55"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a18905fd7368f3937c91cea39f908ca55"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a18905fd7368f3937c91cea39f908ca55">eval</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:a18905fd7368f3937c91cea39f908ca55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110df408346830c916cf2d35410e05f8"><td class="memTemplParams" colspan="2">template&lt;typename... SMETS&gt; </td></tr>
+<tr class="memitem:a110df408346830c916cf2d35410e05f8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a110df408346830c916cf2d35410e05f8">Wrapper</a> (SMETS &amp;&amp;...smets)</td></tr>
+<tr class="separator:a110df408346830c916cf2d35410e05f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6ded1dcd22920fde3d904c29f61374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a1d6ded1dcd22920fde3d904c29f61374">operator~</a> ()</td></tr>
+<tr class="separator:a1d6ded1dcd22920fde3d904c29f61374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8236bf435ac2125d31cadc98a79fff10"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a8236bf435ac2125d31cadc98a79fff10">operator~</a> () const</td></tr>
+<tr class="separator:a8236bf435ac2125d31cadc98a79fff10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc972718a2bd9e542d4efa11446c6b98"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98">_refEvalByCompsName</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; I &gt;, <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Pos...&gt;, Tp &amp;&amp;targs) const</td></tr>
+<tr class="memdesc:abc972718a2bd9e542d4efa11446c6b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Components to get  <a href="#abc972718a2bd9e542d4efa11446c6b98">More...</a><br/></td></tr>
+<tr class="separator:abc972718a2bd9e542d4efa11446c6b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6751965c1c2a68bbad6aae8f1856903c"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c">_refEvalByCompsName</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:a6751965c1c2a68bbad6aae8f1856903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15da6f3c9613c0d5475c90e7a48c3c72"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a15da6f3c9613c0d5475c90e7a48c3c72">refEvalByCompsName</a> (Tp &amp;&amp;targs) const</td></tr>
+<tr class="memdesc:a15da6f3c9613c0d5475c90e7a48c3c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Components to get  <a href="#a15da6f3c9613c0d5475c90e7a48c3c72">More...</a><br/></td></tr>
+<tr class="separator:a15da6f3c9613c0d5475c90e7a48c3c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa3fc6cfc6c8bfa110266c728c2d6d54"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54">refEvalByCompsName</a> (Tp &amp;&amp;targs)</td></tr>
+<tr class="separator:afa3fc6cfc6c8bfa110266c728c2d6d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407c4ff3980b4fc83632b00eaeac06e2"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a407c4ff3980b4fc83632b00eaeac06e2">evalThroughRepresentativeFunctionPassingCompsByName</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; I...&gt;, const Args &amp;...args) const</td></tr>
+<tr class="memdesc:a407c4ff3980b4fc83632b00eaeac06e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Components to get  <a href="#a407c4ff3980b4fc83632b00eaeac06e2">More...</a><br/></td></tr>
+<tr class="separator:a407c4ff3980b4fc83632b00eaeac06e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9c2568012d35075077fb60465f129f"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a8a9c2568012d35075077fb60465f129f">evalThroughRepresentativeFunctionPassingCompsByName</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:a8a9c2568012d35075077fb60465f129f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302bf10f8751e25cd44cf91bf0a0b988"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html#a302bf10f8751e25cd44cf91bf0a0b988">operator()</a> (Oth &amp;&amp;...oth)</td></tr>
 <tr class="separator:a302bf10f8751e25cd44cf91bf0a0b988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b46ea85ccd68848ca76d967b1f07222"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html#a4b46ea85ccd68848ca76d967b1f07222">operator()</a> (Oth &amp;&amp;...oth) const</td></tr>
@@ -182,48 +211,68 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a110ce9190f901792e1364a9e79386d49"><td class="memTemplParams" colspan="2">template&lt;typename Is , typename  = EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a110ce9190f901792e1364a9e79386d49"><td class="memTemplItemLeft" align="right" valign="top">static constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a110ce9190f901792e1364a9e79386d49">assertMergeableWith</a> ()</td></tr>
-<tr class="separator:a110ce9190f901792e1364a9e79386d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4039e8fe96cc7473d1c7520717351f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5d4039e8fe96cc7473d1c7520717351f"><td class="memTemplItemLeft" align="right" valign="top">static decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a5d4039e8fe96cc7473d1c7520717351f">representativeFunction</a> (T &amp;&amp;t)</td></tr>
+<tr class="separator:a5d4039e8fe96cc7473d1c7520717351f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97308e6d2e8d229c4e80d2d9ac92fb1"><td class="memTemplParams" colspan="2">template&lt;int... Is&gt; </td></tr>
+<tr class="memitem:ad97308e6d2e8d229c4e80d2d9ac92fb1"><td class="memTemplItemLeft" align="right" valign="top">static decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ad97308e6d2e8d229c4e80d2d9ac92fb1">_fundThroughRepresentativeFunction</a> (<a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Is...&gt;)</td></tr>
+<tr class="separator:ad97308e6d2e8d229c4e80d2d9ac92fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44fe8fe1268a952c17cb538398d634e"><td class="memTemplParams" colspan="2">template&lt;typename Is , typename  = EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ae44fe8fe1268a952c17cb538398d634e"><td class="memTemplItemLeft" align="right" valign="top">static constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ae44fe8fe1268a952c17cb538398d634e">assertMergeableWith</a> ()</td></tr>
+<tr class="separator:ae44fe8fe1268a952c17cb538398d634e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9a0ed3774cbf59350b1f8b3c4a28e46a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad8f92a75222b2a9d6b46120c17ac4e57">Reference</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee">Ref</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">ref</a></td></tr>
-<tr class="separator:a9a0ed3774cbf59350b1f8b3c4a28e46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cef0be0620f61d6e6214dd26d86a78b"><td class="memItemLeft" ><a class="anchor" id="a6cef0be0620f61d6e6214dd26d86a78b"></a>
+<tr class="memitem:ae34ef0fd7683b8b94707f5be2c90bb69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad8f92a75222b2a9d6b46120c17ac4e57">Reference</a>&lt; _Refs &gt;...&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ae34ef0fd7683b8b94707f5be2c90bb69">refs</a></td></tr>
+<tr class="separator:ae34ef0fd7683b8b94707f5be2c90bb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf15bf136cc91c22e5b3c73a16b10f0a"><td class="memItemLeft" ><a class="anchor" id="aaf15bf136cc91c22e5b3c73a16b10f0a"></a>
 class {</td></tr>
-<tr class="memitem:a6cef0be0620f61d6e6214dd26d86a78b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a6cef0be0620f61d6e6214dd26d86a78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943d409a184d27e20159bc3c28f424e5"><td class="memItemLeft" ><a class="anchor" id="a943d409a184d27e20159bc3c28f424e5"></a>
+<tr class="memitem:aaf15bf136cc91c22e5b3c73a16b10f0a"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aaf15bf136cc91c22e5b3c73a16b10f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160f6c42c3061220bea5d59704a191a1"><td class="memItemLeft" ><a class="anchor" id="a160f6c42c3061220bea5d59704a191a1"></a>
 class {</td></tr>
-<tr class="memitem:a943d409a184d27e20159bc3c28f424e5"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a943d409a184d27e20159bc3c28f424e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1fed7e7cce75f0c825090c74d60902b"><td class="memItemLeft" ><a class="anchor" id="ab1fed7e7cce75f0c825090c74d60902b"></a>
+<tr class="memitem:a160f6c42c3061220bea5d59704a191a1"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a160f6c42c3061220bea5d59704a191a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d7a8adb877558e10fe665d13c60b9b5"><td class="memItemLeft" ><a class="anchor" id="a2d7a8adb877558e10fe665d13c60b9b5"></a>
 class {</td></tr>
-<tr class="memitem:ab1fed7e7cce75f0c825090c74d60902b"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ab1fed7e7cce75f0c825090c74d60902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acecea36e8706dfcce3583b65834e9092"><td class="memItemLeft" ><a class="anchor" id="acecea36e8706dfcce3583b65834e9092"></a>
+<tr class="memitem:a2d7a8adb877558e10fe665d13c60b9b5"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a2d7a8adb877558e10fe665d13c60b9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b02612d50a45ce8a8cbfe2ecc7fb807"><td class="memItemLeft" ><a class="anchor" id="a1b02612d50a45ce8a8cbfe2ecc7fb807"></a>
 class {</td></tr>
-<tr class="memitem:acecea36e8706dfcce3583b65834e9092"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:acecea36e8706dfcce3583b65834e9092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cca27b05a596590e3910466d653307c"><td class="memItemLeft" ><a class="anchor" id="a7cca27b05a596590e3910466d653307c"></a>
+<tr class="memitem:a1b02612d50a45ce8a8cbfe2ecc7fb807"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a1b02612d50a45ce8a8cbfe2ecc7fb807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092e856beeef9412c13e89e1453a0da3"><td class="memItemLeft" ><a class="anchor" id="a092e856beeef9412c13e89e1453a0da3"></a>
 class {</td></tr>
-<tr class="memitem:a7cca27b05a596590e3910466d653307c"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a7cca27b05a596590e3910466d653307c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54ad755d80e64f6dc1aee39c6a03c10a"><td class="memItemLeft" >class {</td></tr>
-<tr class="memitem:a54ad755d80e64f6dc1aee39c6a03c10a"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a54ad755d80e64f6dc1aee39c6a03c10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f9214a1ae3d4109b302de232469f2c"><td class="memItemLeft" >class {</td></tr>
-<tr class="memitem:a28f9214a1ae3d4109b302de232469f2c"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a28f9214a1ae3d4109b302de232469f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf737cc1b2a9e2bd93f282a17962b3c"><td class="memItemLeft" ><a class="anchor" id="aabf737cc1b2a9e2bd93f282a17962b3c"></a>
+<tr class="memitem:a092e856beeef9412c13e89e1453a0da3"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a092e856beeef9412c13e89e1453a0da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02be9cd36c8f3df0c6c387464084e765"><td class="memItemLeft" ><a class="anchor" id="a02be9cd36c8f3df0c6c387464084e765"></a>
 class {</td></tr>
-<tr class="memitem:aabf737cc1b2a9e2bd93f282a17962b3c"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aabf737cc1b2a9e2bd93f282a17962b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a611420280f63b5c3876f4f65f9905183"><td class="memItemLeft" ><a class="anchor" id="a611420280f63b5c3876f4f65f9905183"></a>
+<tr class="memitem:a02be9cd36c8f3df0c6c387464084e765"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a02be9cd36c8f3df0c6c387464084e765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63e78defb8a2d1af654cddba96cc79f"><td class="memItemLeft" ><a class="anchor" id="ac63e78defb8a2d1af654cddba96cc79f"></a>
 class {</td></tr>
-<tr class="memitem:a611420280f63b5c3876f4f65f9905183"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a611420280f63b5c3876f4f65f9905183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63e78defb8a2d1af654cddba96cc79f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ac63e78defb8a2d1af654cddba96cc79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf45197fc5e132ac6a5b72ed59bf0110"><td class="memItemLeft" ><a class="anchor" id="abf45197fc5e132ac6a5b72ed59bf0110"></a>
+class {</td></tr>
+<tr class="memitem:abf45197fc5e132ac6a5b72ed59bf0110"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:abf45197fc5e132ac6a5b72ed59bf0110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64be9c4b6bfb9e7576d55284f23e2f6"><td class="memItemLeft" ><a class="anchor" id="ad64be9c4b6bfb9e7576d55284f23e2f6"></a>
+class {</td></tr>
+<tr class="memitem:ad64be9c4b6bfb9e7576d55284f23e2f6"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ad64be9c4b6bfb9e7576d55284f23e2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13c97a7b3d623d1966ddfb53cde7c13"><td class="memItemLeft" ><a class="anchor" id="aa13c97a7b3d623d1966ddfb53cde7c13"></a>
+class {</td></tr>
+<tr class="memitem:aa13c97a7b3d623d1966ddfb53cde7c13"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aa13c97a7b3d623d1966ddfb53cde7c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54f126c12eb7207cb9abdeedc9e6c01"><td class="memItemLeft" ><a class="anchor" id="af54f126c12eb7207cb9abdeedc9e6c01"></a>
+class {</td></tr>
+<tr class="memitem:af54f126c12eb7207cb9abdeedc9e6c01"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:af54f126c12eb7207cb9abdeedc9e6c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6260d3675efd2ac5d70dceeeb3833272"><td class="memItemLeft" ><a class="anchor" id="a6260d3675efd2ac5d70dceeeb3833272"></a>
+class {</td></tr>
+<tr class="memitem:a6260d3675efd2ac5d70dceeeb3833272"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6260d3675efd2ac5d70dceeeb3833272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a291a918f481256d03a65f7f9b507afa8"><td class="memItemLeft" ><a class="anchor" id="a291a918f481256d03a65f7f9b507afa8"></a>
 class {</td></tr>
 <tr class="memitem:a291a918f481256d03a65f7f9b507afa8"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
@@ -232,95 +281,163 @@ class {</td></tr>
 class {</td></tr>
 <tr class="memitem:aa013edbfa6d7d92a7b63bedafa3bbc25"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:aa013edbfa6d7d92a7b63bedafa3bbc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f596bfc1d97f0cded2a60b3ca86a41f"><td class="memItemLeft" ><a class="anchor" id="a6f596bfc1d97f0cded2a60b3ca86a41f"></a>
-class {</td></tr>
-<tr class="memitem:a6f596bfc1d97f0cded2a60b3ca86a41f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a6f596bfc1d97f0cded2a60b3ca86a41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a93e2c5149987aa3d92cd9a572f29ca98"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a93e2c5149987aa3d92cd9a572f29ca98">isStoring</a> = false</td></tr>
-<tr class="separator:a93e2c5149987aa3d92cd9a572f29ca98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acabc7dfd195c7a13fe722ec14093907c"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#acabc7dfd195c7a13fe722ec14093907c">isAssignable</a> = false</td></tr>
-<tr class="separator:acabc7dfd195c7a13fe722ec14093907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447ad04ae7e4874ba6bcf4b63b660aba"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a447ad04ae7e4874ba6bcf4b63b660aba">NSmET</a> = 1</td></tr>
+<tr class="separator:a447ad04ae7e4874ba6bcf4b63b660aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e3a2648c1c1f3cc4478ba828bc7c7e"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a12e3a2648c1c1f3cc4478ba828bc7c7e">isStoring</a> = false</td></tr>
+<tr class="separator:a12e3a2648c1c1f3cc4478ba828bc7c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094477d325d23dae12af9ff25e7de6b0"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a094477d325d23dae12af9ff25e7de6b0">isAssignable</a></td></tr>
+<tr class="separator:a094477d325d23dae12af9ff25e7de6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename _Ref, typename TK = typename RemRef&lt;_Ref&gt;::Tk&gt;<br/>
-class SUNphi::Wrapper&lt; _Ref, TK &gt;</h3>
+<div class="textblock"><h3>template&lt;typename... _Refs&gt;<br/>
+class SUNphi::Wrapper&lt; _Refs &gt;</h3>
 
-<p>Class to wrap a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>. </p>
+<p>Class to wrap a . </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a32a1a4e5b5685469cb33e896f9181280"></a>
+<a class="anchor" id="a1c20f4b339b5533cd70b2c1b0ede74f4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a32a1a4e5b5685469cb33e896f9181280">Fund</a> =  typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt;decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">ref</a>)&gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a32a1a4e5b5685469cb33e896f9181280">Fund</a></td>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a1c20f4b339b5533cd70b2c1b0ede74f4">ExtraDelims</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt;Tk::nTypes+1&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Same fundamental type of the reference </p>
+<p>Additional delimiters </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a57a7f5b2eb89f6dc2330026dda7c039a"></a>
+<a class="anchor" id="a175e03de611b81589a06d7368d167eba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a57a7f5b2eb89f6dc2330026dda7c039a">MergeableComps</a> =  typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt;decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9a0ed3774cbf59350b1f8b3c4a28e46a">ref</a>)&gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a57a7f5b2eb89f6dc2330026dda7c039a">MergeableComps</a></td>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a175e03de611b81589a06d7368d167eba">Fund</a> =  decltype(<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ad97308e6d2e8d229c4e80d2d9ac92fb1">_fundThroughRepresentativeFunction</a>(<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9174c8aa920707dd274742f3c6d9aa1b">IntsUpTo</a>&lt;<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a447ad04ae7e4874ba6bcf4b63b660aba">NSmET</a>&gt;{}))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Obtains the <code>Fund</code> type by calling the <code>representativeFunction</code> </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="affacae0a862d5c93609a0305831aefa0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#affacae0a862d5c93609a0305831aefa0">MergeableComps</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">NnarySmETCompsMergeability</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt;_Refs&gt;::MergeableComps...&gt;, <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a7581bee7e0cf352753330fd15d6904c1">PosOfResTcsInRefsTk</a>, <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a1c20f4b339b5533cd70b2c1b0ede74f4">ExtraDelims</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>List of points where the <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> can be split</p>
-<p>The components of this <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> can be merged as the reference one </p>
+<p>Using <code>MergingDelimsForRefs</code> and <code>ExtraDelims</code> to determine the mergability </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9b75f785dbd0a69de7ed05e4a7bc34ee"></a>
+<a class="anchor" id="a7581bee7e0cf352753330fd15d6904c1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee">Ref</a> =  _Ref</td>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a7581bee7e0cf352753330fd15d6904c1">PosOfResTcsInRefsTk</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a20a22ae0ab9777758b1cc9dc50e85e33">PosOfTcsOfTkInListOfTks</a>&lt;Tk,typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt;_Refs&gt;::Tk...&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Type of the binding reference </p>
+<p>Position of all the Result <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> in each <code>Refs</code> Tk </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa87c12a657f1d46320f0b52a2955ce2f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#aa87c12a657f1d46320f0b52a2955ce2f">PosOfResTcsPresInRefsTk</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4fc6fe9266c126fdf3bfaa91cd394907">PosOfTcsOfTkPresInListOfTks</a>&lt;Tk,typename <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab290633402c10ad172b0fc891efec90a">RemRef</a>&lt;_Refs&gt;::Tk...&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Position of all the Result <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> present in each <code>Refs</code> Tk </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4c5fd27b098caaa30840743c103f9222"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;int I&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a4c5fd27b098caaa30840743c103f9222">Ref</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3449e7eaa063d756b6467c2578077f61">TupleElementType</a>&lt;I,<a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;_Refs...&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of I-th <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab59a48f20c9adb1f2a687bc7546e7d70"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#ab59a48f20c9adb1f2a687bc7546e7d70">Refs</a> =  <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;_Refs...&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type of the binding references </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a79cec3d9e8f7ca79cfb593d40c5eaf97"></a>
+<a class="anchor" id="a110df408346830c916cf2d35410e05f8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
-template&lt;typename Oth , typename  = EnableIf&lt;isSame&lt;Unqualified&lt;Oth&gt;,Unqualified&lt;Ref&gt;&gt;&gt;&gt; </div>
+template&lt;typename... SMETS&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a> </td>
+          <td class="memname"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a> </td>
           <td>(</td>
-          <td class="paramtype">Oth &amp;&amp;&#160;</td>
-          <td class="paramname"><em>oth</em></td><td>)</td>
+          <td class="paramtype">SMETS &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>smets</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -332,16 +449,129 @@ template&lt;typename Oth , typename  = EnableIf&lt;isSame&lt;Unqualified&lt;Oth&
 </div><div class="memdoc">
 <p>Constructor taking universal reference </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a110ce9190f901792e1364a9e79386d49"></a>
+<a class="anchor" id="ad97308e6d2e8d229c4e80d2d9ac92fb1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;int... Is&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::_fundThroughRepresentativeFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Is...&gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Fundamental type according to the <code>representativeFunction</code> </p>
+<p>Internal implementation, getting the type through a call to</p>
+<p>the <code>representativeFunction</code> passing by value the <code>Fund</code> </p>
+<p>type of each ref, using an <code><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></code> to call them </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc972718a2bd9e542d4efa11446c6b98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::_refEvalByCompsName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; I &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Pos...&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
+          <td class="paramname"><em>targs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; Components to get </p>
+<p>Evaluate the I-th reference, getting from the <code>Tuple</code> targs the element <code>Pos</code> </p>
+<p>Internal implementation </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6751965c1c2a68bbad6aae8f1856903c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::_refEvalByCompsName </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overload the <code>_refEvalByCompsName</code> const method passing all args </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae44fe8fe1268a952c17cb538398d634e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
 template&lt;typename Is , typename  = EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt; </div>
 <table class="mlabels">
@@ -349,7 +579,7 @@ template&lt;typename Is , typename  = EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt; </d
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr void <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::assertMergeableWith </td>
+          <td class="memname">static constexpr void <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::assertMergeableWith </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -363,25 +593,24 @@ template&lt;typename Is , typename  = EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt; </d
 </div><div class="memdoc">
 <p>Assert that a given merging condition is valid </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa3631e0f0b00288fec0a0835c6496b48"></a>
+<a class="anchor" id="a72eab6d21134957955f412ffad9ac5fe"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
-template&lt;typename TC , typename... DummyTypes&gt; </div>
+template&lt;typename TC , int I = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::compSize </td>
+          <td class="memname">int <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::compSize </td>
           <td>(</td>
-          <td class="paramtype">DummyTypes...&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
@@ -392,17 +621,19 @@ template&lt;typename TC , typename... DummyTypes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the size of a component, matching the reference </p>
+<p>Returns the size in the first found ref </p>
+<p><code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> of the I-th <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> </p>
+<p>Check if the <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> contains the <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> asked </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aa81ae260b024c4abad6e42a5d5140684"></a>
+<a class="anchor" id="a6cd4bce56aa259f30f57a8aa1f657b53"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
 template&lt;typename... Args&gt; </div>
 <table class="mlabels">
@@ -410,9 +641,9 @@ template&lt;typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::eval </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::eval </td>
           <td>(</td>
-          <td class="paramtype">const Args &amp;...&#160;</td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -423,35 +654,33 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>const Evaluator</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000021">Todo:</a></b></dt><dd>add/check that const qualifier is properly added to output </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">args</td><td>Parameters to pass </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Evaluator, external interface</p>
+<p>Evaluate the function by usign a method called</p>
+<p><code>representativeFunction</code>, to be provided in the clas</p>
+<p>passing to it the evaluation of each individual reference,</p>
+<p>dispatching the components id by the name they have in the</p>
+<p>reference </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0c53e172d11f8ae8192e7db4cedd4acb"></a>
+<a class="anchor" id="a18905fd7368f3937c91cea39f908ca55"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
-template&lt;typename... Args&gt; </div>
+template&lt;typename... Ts&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::eval </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::eval </td>
           <td>(</td>
-          <td class="paramtype">const Args &amp;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -461,30 +690,102 @@ template&lt;typename... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Evaluator</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000020">Todo:</a></b></dt><dd>add/check that const qualifier is properly added to output </dd></dl>
+<p>Overload the <code>eval</code> const method passing all args </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">args</td><td>Parameters to pass </td></tr>
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a554e749bfd90b53d36ab9f0c7b6e352d"></a>
+<a class="anchor" id="a407c4ff3980b4fc83632b00eaeac06e2"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::getMaximallyMergedCompsView </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::evalThroughRepresentativeFunctionPassingCompsByName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; I...&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Args &amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; Components to get </p>
+<p>Evaluate the result by calling a representative function</p>
+<p>The result is obtained after splitting the components, identifying them trough the name of each <code>TensComp</code> </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00093">93</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a9c2568012d35075077fb60465f129f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::evalThroughRepresentativeFunctionPassingCompsByName </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overload the <code>evalThroughRepresentativeFunctionPassingCompsByName</code> const method passing all args </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00101">101</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa49ea54b164d52c1a7726d3056ee5e3c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::getMaximallyMergedCompsView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -498,15 +799,15 @@ template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; <
 </div><div class="memdoc">
 <p>Returns the maximal possible merged comps view </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1e7133dc1978f1e4de43a6d17d456657"></a>
+<a class="anchor" id="a60490fad93d657a04191807d661d9392"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
 template&lt;typename Is &gt; </div>
 <table class="mlabels">
@@ -514,37 +815,7 @@ template&lt;typename Is &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::getMergedCompsView </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns a component-merged version </p>
-
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a0bcf9f7877afbede7a4d189e5715c045"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
-<div class="memtemplate">
-template&lt;typename Is &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::getMergedCompsView </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::getMergedCompsView </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -556,17 +827,54 @@ template&lt;typename Is &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a component-merged version </p>
+<p>Uses the <code>representativeFunction</code> to provide a merged view </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a99253abc2ff224e344c6c23a532f10cb"></a>
+<a class="anchor" id="aa067932dc2dedc2c676b78b8e4e3fcf4"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::getMergedCompsView </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overload the <code>getMergedCompsView</code> const method passing all args </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06fa3a1574bc49b11437f0af11e5ff28"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
 <div class="memtemplate">
 template&lt;typename Tref &gt; </div>
 <table class="mlabels">
@@ -574,7 +882,7 @@ template&lt;typename Tref &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::isAliasing </td>
+          <td class="memname">bool <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::isAliasing </td>
           <td>(</td>
           <td class="paramtype">const Tref &amp;&#160;</td>
           <td class="paramname"><em>alias</em></td><td>)</td>
@@ -587,9 +895,87 @@ template&lt;typename Tref &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Forward aliasing check to the reference </p>
+<p>Forward aliasing check to the references </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a309734a0678bb44bd5fe02581a6f4ba3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::mergedCompsViewAccordingToRepresentativeFunction </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overload the <code>mergedCompsViewAccordingToRepresentativeFunction</code> const method passing all args </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bc4e829188ee1562ad0cef42309335e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;int... Is, typename MDs &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::mergedCompsViewAccordingToRepresentativeFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Is...&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MDs&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calls the <code>representativeFunction</code> with the merged view of each ref </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
@@ -601,7 +987,7 @@ template&lt;typename Tref &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt;  &gt;::operator() </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">Oth &amp;&amp;...&#160;</td>
           <td class="paramname"><em>oth</em></td><td>)</td>
@@ -622,7 +1008,7 @@ template&lt;typename Tref &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00271">271</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00292">292</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,7 +1020,7 @@ template&lt;typename Tref &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt;  &gt;::operator() </td>
+          <td class="memname">decltype(auto) <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html">SUNphi::SmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">Oth &amp;&amp;...&#160;</td>
           <td class="paramname"><em>oth</em></td><td>)</td>
@@ -650,11 +1036,11 @@ template&lt;typename Tref &gt; </div>
 <p>Implements the const call operator via <code>CRTP</code> </p>
 <p>&lt; Other quantit </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00272">272</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00293">293</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a968fdedc3e4dffd1247a1890e168bae5"></a>
+<a class="anchor" id="a1d6ded1dcd22920fde3d904c29f61374"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -662,33 +1048,7 @@ template&lt;typename Tref &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt; &amp; <a class="el" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">SUNphi::UnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt;  &gt;::operator~ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Constant cast operator to class <code>T</code> </p>
-
-<p>Definition at line <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">UnarySmET.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab9ed5275ecef9dfc025fb6587273ec5e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt; &amp; <a class="el" href="../../d2/dc5/structSUNphi_1_1UnarySmET.html">SUNphi::UnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Ref &gt;  &gt;::operator~ </td>
+          <td class="memname"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt; &amp; <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::operator~ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -702,74 +1062,168 @@ template&lt;typename Tref &gt; </div>
 </div><div class="memdoc">
 <p>Cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">UnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a54ad755d80e64f6dc1aee39c6a03c10a"></a>
+<a class="anchor" id="a8236bf435ac2125d31cadc98a79fff10"></a>
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class { ... } </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Const or not </p>
-
-</div>
-</div>
-<a class="anchor" id="a28f9214a1ae3d4109b302de232469f2c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class { ... } </td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Const or not </p>
-
-</div>
-</div>
-<a class="anchor" id="acabc7dfd195c7a13fe722ec14093907c"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::isAssignable = false</td>
+          <td class="memname">const <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt; &amp; <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether this <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> can be the left hand of an assignement</p>
-<p>This <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> cannot be assigned </p>
+<p>Constant cast operator to class <code>T</code> </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15da6f3c9613c0d5475c90e7a48c3c72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::refEvalByCompsName </td>
+          <td>(</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
+          <td class="paramname"><em>targs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; Components to get </p>
+<p>Evaluate the I-th reference, getting from the <code>Tuple</code> targs the element <code>Pos</code> </p>
+<p>External implementation, using <code>PosOfResTcsPresInRefsTk</code> to dispatch components </p>
+<p>Position of <code>TensComp</code> of the reference Tk present in thr result </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa3fc6cfc6c8bfa110266c728c2d6d54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::refEvalByCompsName </td>
+          <td>(</td>
+          <td class="paramtype">Tp &amp;&amp;&#160;</td>
+          <td class="paramname"><em>targs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Evaluate the I-th reference, getting from the <code>Tuple</code> targs the element <code>Pos</code> </p>
+<p>Non const version </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5d4039e8fe96cc7473d1c7520717351f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static decltype(auto) <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::representativeFunction </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the argument </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Argument </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a93e2c5149987aa3d92cd9a572f29ca98"></a>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a094477d325d23dae12af9ff25e7de6b0"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::isStoring = false</td>
+          <td class="memname">constexpr bool <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a>&lt; _Refs...&gt;  &gt;::isAssignable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns whether this <code>SmET</code> can be the left hand of an assignement</p>
+<p>This SmET can never be lhs </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12e3a2648c1c1f3cc4478ba828bc7c7e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::isStoring = false</td>
         </tr>
       </table>
   </td>
@@ -781,24 +1235,49 @@ template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; <
 <p>Returns whether this <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> is storing</p>
 <p>This <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> is not storing </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00031">31</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9a0ed3774cbf59350b1f8b3c4a28e46a"></a>
+<a class="anchor" id="a447ad04ae7e4874ba6bcf4b63b660aba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename _Ref , typename TK  = typename RemRef&lt;_Ref&gt;::Tk&gt; </div>
+template&lt;typename... _Refs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad8f92a75222b2a9d6b46120c17ac4e57">Reference</a>&lt;<a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html#a9b75f785dbd0a69de7ed05e4a7bc34ee">Ref</a>&gt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Ref, TK &gt;::ref</td>
+          <td class="memname">constexpr int <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::NSmET = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Number or <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> to act upon </p>
+
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae34ef0fd7683b8b94707f5be2c90bb69"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... _Refs&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;<a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad8f92a75222b2a9d6b46120c17ac4e57">Reference</a>&lt;_Refs&gt;...&gt; <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">SUNphi::Wrapper</a>&lt; _Refs &gt;::refs</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reference to the object </p>
+<p>Reference to the 1 object </p>
 
-<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/df3/Wrap_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../da/df3/Wrap_8hpp_source.html">Wrap.hpp</a>.</p>
 
 </div>
 </div>

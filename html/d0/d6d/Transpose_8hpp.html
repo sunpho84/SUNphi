@@ -116,14 +116,14 @@ $(document).ready(function(){initNavTree('d0/d6d/Transpose_8hpp.html','../../');
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">tens/TensClass.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">smet/UnarySmET.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">smet/NnarySmET.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../d0/d6d/Transpose_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd3/classSUNphi_1_1Transposer.html">SUNphi::Transposer&lt; _Ref, TK &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the transposed of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../d5/dd3/classSUNphi_1_1Transposer.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd3/classSUNphi_1_1Transposer.html">SUNphi::Transposer&lt; _Refs &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the transposed of a <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code>.  <a href="../../d5/dd3/classSUNphi_1_1Transposer.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -137,12 +137,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae7204e7e9af503ae6742627523c92c57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7204e7e9af503ae6742627523c92c57"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SUNphi::DEFINE_BASE_TYPE</b> (Transposer)</td></tr>
 <tr class="separator:ae7204e7e9af503ae6742627523c92c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658f7ea0c39b598dee4ed0a6cdf33a97"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... DummyTypes&gt; </td></tr>
-<tr class="memitem:a658f7ea0c39b598dee4ed0a6cdf33a97"><td class="memTemplItemLeft" align="right" valign="top">Transposer&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a658f7ea0c39b598dee4ed0a6cdf33a97">SUNphi::transpose</a> (T &amp;&amp;smet, DummyTypes...)</td></tr>
-<tr class="separator:a658f7ea0c39b598dee4ed0a6cdf33a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdf51c53b55fee45e4d552444fddcfd"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a5fdf51c53b55fee45e4d552444fddcfd"><td class="memTemplItemLeft" align="right" valign="top">Transposer&lt; Ts...&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5fdf51c53b55fee45e4d552444fddcfd">SUNphi::transpose</a> (Ts &amp;&amp;...smets)</td></tr>
+<tr class="separator:a5fdf51c53b55fee45e4d552444fddcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">SUNphi::neverInstantiatedFunction</a> ()</td></tr>
 <tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5515ad96eeeebf29f86dc7d60e566028"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RrT  = RemRef&lt;T&gt;, typename Ref  = typename RrT::Ref, typename RrRef  = RemRef&lt;Ref&gt;, bool SmETIsLvalue = isLvalue&lt;RrT&gt;, bool RefIsLvalue = isLvalue&lt;RrRef&gt;, bool RefIsStoring = isStoring&lt;RrRef&gt;, bool RetByRef = RefIsStoring or  RefIsLvalue or SmETIsLvalue, typename Ret  = Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;, TypeIf&lt;(isTransposer&lt; RrT &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a5515ad96eeeebf29f86dc7d60e566028"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RrT  = RemRef&lt;T&gt;, typename Ref  = typename RrT::template Ref&lt;0&gt;, typename RrRef  = RemRef&lt;Ref&gt;, bool SmETIsLvalue = isLvalue&lt;RrT&gt;, bool RefIsLvalue = isLvalue&lt;RrRef&gt;, bool RefIsStoring = isStoring&lt;RrRef&gt;, bool RetByRef = RefIsStoring or  RefIsLvalue or SmETIsLvalue, typename Ret  = Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;, TypeIf&lt;(isTransposer&lt; RrT &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a5515ad96eeeebf29f86dc7d60e566028"><td class="memTemplItemLeft" align="right" valign="top">Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5515ad96eeeebf29f86dc7d60e566028">SUNphi::transpose</a> (T &amp;&amp;smet)</td></tr>
 <tr class="separator:a5515ad96eeeebf29f86dc7d60e566028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde6f5de64de3abb2035ab4b14d70b19"><td class="memTemplParams" colspan="2">template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isTransposer&lt; Rhs &gt;), void * &gt;  = nullptr&gt; </td></tr>

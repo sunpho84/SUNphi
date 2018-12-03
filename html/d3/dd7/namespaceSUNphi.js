@@ -1,5 +1,6 @@
 var namespaceSUNphi =
 [
+    [ "_RelBindInternalChecks", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks" ],
     [ "PairOfTensKindMergeability", "df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html", null ],
     [ "IntSeq", "da/def/structSUNphi_1_1IntSeq.html", "da/def/structSUNphi_1_1IntSeq" ],
     [ "ConstrainIsOrderedIntSeq", "dd/dcd/structSUNphi_1_1ConstrainIsOrderedIntSeq.html", "dd/dcd/structSUNphi_1_1ConstrainIsOrderedIntSeq" ],
@@ -77,14 +78,10 @@ var namespaceSUNphi =
     [ "HasMember_refs", "dd/dce/structSUNphi_1_1HasMember__refs.html", "dd/dce/structSUNphi_1_1HasMember__refs" ],
     [ "ConstrainHasMember_refs", "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html", null ],
     [ "NnarySmET", "dc/d2f/structSUNphi_1_1NnarySmET.html", "dc/d2f/structSUNphi_1_1NnarySmET" ],
+    [ "RelBinder", "d5/d1c/classSUNphi_1_1RelBinder.html", "d5/d1c/classSUNphi_1_1RelBinder" ],
     [ "ScalarWrapper", "db/d12/classSUNphi_1_1ScalarWrapper.html", "db/d12/classSUNphi_1_1ScalarWrapper" ],
     [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
     [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
-    [ "BaseUnarySmET", "df/d49/structSUNphi_1_1BaseUnarySmET.html", null ],
-    [ "ConstrainAreUnarySmETs", "dd/d99/structSUNphi_1_1ConstrainAreUnarySmETs.html", null ],
-    [ "HasMember_ref", "d4/d83/structSUNphi_1_1HasMember__ref.html", "d4/d83/structSUNphi_1_1HasMember__ref" ],
-    [ "ConstrainHasMember_ref", "d6/d0c/structSUNphi_1_1ConstrainHasMember__ref.html", null ],
-    [ "UnarySmET", "d2/dc5/structSUNphi_1_1UnarySmET.html", "d2/dc5/structSUNphi_1_1UnarySmET" ],
     [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ],
     [ "_Indexer", "d7/da6/structSUNphi_1_1__Indexer.html", null ],
     [ "_Indexer< IDyn, TensKind< H, Oth...> >", "d9/d40/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_4_01_4.html", "d9/d40/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_4_01_4" ],

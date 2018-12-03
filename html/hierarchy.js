@@ -47,10 +47,10 @@ var hierarchy =
       [ "SUNphi::Assigner< _Ref1, _Ref2, TK1, TK2 >", "d4/d4b/classSUNphi_1_1Assigner.html", null ]
     ] ],
     [ "BaseBinder", null, [
-      [ "SUNphi::Binder< TG, _Ref, NestedTk, NestedTypes >", "d6/db9/classSUNphi_1_1Binder.html", null ]
+      [ "SUNphi::Binder< TG, _Refs >", "d6/db9/classSUNphi_1_1Binder.html", null ]
     ] ],
     [ "BaseConjer", null, [
-      [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
+      [ "SUNphi::Conjer< _Refs >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
     ] ],
     [ "BaseIntSeq", null, [
       [ "SUNphi::IntSeq< Ints >", "da/def/structSUNphi_1_1IntSeq.html", null ]
@@ -58,8 +58,11 @@ var hierarchy =
     [ "BaseMulAdder", null, [
       [ "SUNphi::MulAdder< _Refs >", "dc/d5d/classSUNphi_1_1MulAdder.html", null ]
     ] ],
+    [ "BaseRelBinder", null, [
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ad, _Refs >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+    ] ],
     [ "BaseScalarWrapper", null, [
-      [ "SUNphi::ScalarWrapper< _Fund >", "db/d12/classSUNphi_1_1ScalarWrapper.html", null ]
+      [ "SUNphi::ScalarWrapper< _Fund, _Refs >", "db/d12/classSUNphi_1_1ScalarWrapper.html", null ]
     ] ],
     [ "BaseSmET", null, [
       [ "SUNphi::SmET< Adder< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
@@ -72,14 +75,14 @@ var hierarchy =
           [ "SUNphi::Assigner< _Ref1, _Ref2, TK1, TK2 >", "d4/d4b/classSUNphi_1_1Assigner.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< Binder< TG, _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< Binder< TG, _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::Binder< TG, _Ref, NestedTk, NestedTypes >", "d6/db9/classSUNphi_1_1Binder.html", null ]
+      [ "SUNphi::SmET< Binder< TG, _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< Binder< TG, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::Binder< TG, _Refs >", "d6/db9/classSUNphi_1_1Binder.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< Conjer< _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< Conjer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
+      [ "SUNphi::SmET< Conjer< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< Conjer< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::Conjer< _Refs >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
         ] ]
       ] ],
       [ "SUNphi::SmET< MulAdder< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
@@ -87,29 +90,34 @@ var hierarchy =
           [ "SUNphi::MulAdder< _Refs >", "dc/d5d/classSUNphi_1_1MulAdder.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< ScalarWrapper< _Fund > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< ScalarWrapper< _Fund > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::ScalarWrapper< _Fund >", "db/d12/classSUNphi_1_1ScalarWrapper.html", null ]
+      [ "SUNphi::SmET< RelBinder< _BoundType, _BoundToType, _Ad, _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< RelBinder< _BoundType, _BoundToType, _Ad, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ad, _Refs >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ]
+        ] ]
+      ] ],
+      [ "SUNphi::SmET< ScalarWrapper< _Fund, _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< ScalarWrapper< _Fund, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::ScalarWrapper< _Fund, _Refs >", "db/d12/classSUNphi_1_1ScalarWrapper.html", null ]
         ] ]
       ] ],
       [ "SUNphi::SmET< Tens< TK, FUND > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< Tens< TK, FUND > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
+        [ "SUNphi::NnarySmET< Tens< TK, FUND > >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
           [ "SUNphi::Tens< TK, FUND >", "d8/d1c/classSUNphi_1_1Tens.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< Transposer< _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< Transposer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::Transposer< _Ref, TK >", "d5/dd3/classSUNphi_1_1Transposer.html", null ]
+      [ "SUNphi::SmET< Transposer< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< Transposer< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::Transposer< _Refs >", "d5/dd3/classSUNphi_1_1Transposer.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< UMinuser< _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< UMinuser< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::UMinuser< _Ref, TK, TK_TYPES >", "dd/d03/classSUNphi_1_1UMinuser.html", null ]
+      [ "SUNphi::SmET< UMinuser< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< UMinuser< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::UMinuser< _Refs >", "dd/d03/classSUNphi_1_1UMinuser.html", null ]
         ] ]
       ] ],
-      [ "SUNphi::SmET< Wrapper< _Ref > >", "d1/d31/structSUNphi_1_1SmET.html", [
-        [ "SUNphi::UnarySmET< Wrapper< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", [
-          [ "SUNphi::Wrapper< _Ref, TK >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
+      [ "SUNphi::SmET< Wrapper< _Refs...> >", "d1/d31/structSUNphi_1_1SmET.html", [
+        [ "SUNphi::NnarySmET< Wrapper< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", [
+          [ "SUNphi::Wrapper< _Refs >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
         ] ]
       ] ],
       [ "SUNphi::BaseBinarySmET", "d2/d98/structSUNphi_1_1BaseBinarySmET.html", [
@@ -118,23 +126,20 @@ var hierarchy =
       ] ],
       [ "SUNphi::BaseNnarySmET", "d9/d67/structSUNphi_1_1BaseNnarySmET.html", [
         [ "SUNphi::NnarySmET< Adder< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< Binder< TG, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< Conjer< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
         [ "SUNphi::NnarySmET< MulAdder< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< RelBinder< _BoundType, _BoundToType, _Ad, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< ScalarWrapper< _Fund, _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< Tens< TK, FUND > >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< Transposer< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< UMinuser< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
+        [ "SUNphi::NnarySmET< Wrapper< _Refs...> >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
         [ "SUNphi::NnarySmET< T >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ]
-      ] ],
-      [ "SUNphi::BaseUnarySmET", "df/d49/structSUNphi_1_1BaseUnarySmET.html", [
-        [ "SUNphi::UnarySmET< T >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< Binder< TG, _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< Conjer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< ScalarWrapper< _Fund > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< Tens< TK, FUND > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< Transposer< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< UMinuser< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< Wrapper< _Ref > >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ]
       ] ],
       [ "SUNphi::SmET< T >", "d1/d31/structSUNphi_1_1SmET.html", [
         [ "SUNphi::BinarySmET< T >", "d4/d8b/structSUNphi_1_1BinarySmET.html", null ],
-        [ "SUNphi::NnarySmET< T >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ],
-        [ "SUNphi::UnarySmET< T >", "d2/dc5/structSUNphi_1_1UnarySmET.html", null ]
+        [ "SUNphi::NnarySmET< T >", "dc/d2f/structSUNphi_1_1NnarySmET.html", null ]
       ] ]
     ] ],
     [ "BaseTens", null, [
@@ -162,40 +167,54 @@ var hierarchy =
       ] ],
       [ "SUNphi::TensComp< Spacetime, DYNAMIC >", "d1/d96/structSUNphi_1_1TensComp.html", [
         [ "SUNphi::Spacetime", "da/d14/structSUNphi_1_1Spacetime.html", null ]
+      ] ],
+      [ "SUNphi::TensComp< Tc1, 1 >", "d1/d96/structSUNphi_1_1TensComp.html", [
+        [ "SUNphi::_RelBindInternalChecks::Tc1", "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html", null ]
+      ] ],
+      [ "SUNphi::TensComp< Tc2, 2 >", "d1/d96/structSUNphi_1_1TensComp.html", [
+        [ "SUNphi::_RelBindInternalChecks::Tc2", "dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html", null ]
       ] ]
     ] ],
     [ "BaseTensKind", null, [
       [ "SUNphi::TensKind< T >", "d8/df8/classSUNphi_1_1TensKind.html", null ]
     ] ],
     [ "BaseTransposer", null, [
-      [ "SUNphi::Transposer< _Ref, TK >", "d5/dd3/classSUNphi_1_1Transposer.html", null ]
+      [ "SUNphi::Transposer< _Refs >", "d5/dd3/classSUNphi_1_1Transposer.html", null ]
     ] ],
     [ "BaseUMinuser", null, [
-      [ "SUNphi::UMinuser< _Ref, TK, TK_TYPES >", "dd/d03/classSUNphi_1_1UMinuser.html", null ]
+      [ "SUNphi::UMinuser< _Refs >", "dd/d03/classSUNphi_1_1UMinuser.html", null ]
     ] ],
     [ "BaseWrapper", null, [
-      [ "SUNphi::Wrapper< _Ref, TK >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
+      [ "SUNphi::Wrapper< _Refs >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
     ] ],
     [ "SUNphi::HasMember_ref2< Type >::Check< U, U >", "dc/d17/structSUNphi_1_1HasMember__ref2_1_1Check.html", null ],
     [ "SUNphi::HasMember_refs< Type >::Check< U, U >", "d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html", null ],
-    [ "SUNphi::HasMember_ref< Type >::Check< U, U >", "da/d98/structSUNphi_1_1HasMember__ref_1_1Check.html", null ],
-    [ "SUNphi::HasMember_compSize< Type >::Check< U, U >", "d8/d57/structSUNphi_1_1HasMember__compSize_1_1Check.html", null ],
     [ "SUNphi::HasMember_Tk< Type >::Check< U, U >", "df/d96/structSUNphi_1_1HasMember__Tk_1_1Check.html", null ],
+    [ "SUNphi::HasMember_MergeableComps< Type >::Check< U, U >", "d1/d4f/structSUNphi_1_1HasMember__MergeableComps_1_1Check.html", null ],
+    [ "SUNphi::HasMember_assertMergeableWith< Type >::Check< U, U >", "d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html", null ],
+    [ "SUNphi::HasMember_compSize< Type >::Check< U, U >", "d8/d57/structSUNphi_1_1HasMember__compSize_1_1Check.html", null ],
     [ "SUNphi::HasMember_name< Type >::Check< U, U >", "d9/d2d/structSUNphi_1_1HasMember__name_1_1Check.html", null ],
     [ "SUNphi::HasMember_eval< Type >::Check< U, U >", "d1/dce/structSUNphi_1_1HasMember__eval_1_1Check.html", null ],
     [ "SUNphi::HasMember_isStoring< Type >::Check< U, U >", "df/dd6/structSUNphi_1_1HasMember__isStoring_1_1Check.html", null ],
     [ "SUNphi::HasMember_Fund< Type >::Check< U, U >", "dc/d79/structSUNphi_1_1HasMember__Fund_1_1Check.html", null ],
     [ "SUNphi::HasMember_isAliasing< Type >::Check< U, U >", "dd/dcb/structSUNphi_1_1HasMember__isAliasing_1_1Check.html", null ],
     [ "SUNphi::HasMember_isAssignable< Type >::Check< U, U >", "d4/d8f/structSUNphi_1_1HasMember__isAssignable_1_1Check.html", null ],
-    [ "SUNphi::HasMember_MergeableComps< Type >::Check< U, U >", "d1/d4f/structSUNphi_1_1HasMember__MergeableComps_1_1Check.html", null ],
-    [ "SUNphi::HasMember_assertMergeableWith< Type >::Check< U, U >", "d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html", null ],
     [ "SUNphi::HasMember_getMergedCompsView< Type >::Check< U, U >", "dc/d50/structSUNphi_1_1HasMember__getMergedCompsView_1_1Check.html", null ],
     [ "SUNphi::HasMember_ref1< Type >::Check< U, U >", "d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html", null ],
     [ "SUNphi::ConstrainAreBinarySmETs< Args >", "da/dce/structSUNphi_1_1ConstrainAreBinarySmETs.html", null ],
     [ "SUNphi::ConstrainAreIntegrals< Args >", "d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html", null ],
     [ "SUNphi::ConstrainAreNnarySmETs< Args >", "d2/d10/structSUNphi_1_1ConstrainAreNnarySmETs.html", null ],
     [ "SUNphi::ConstrainAreSame< Args >", "d2/d0b/classSUNphi_1_1ConstrainAreSame.html", null ],
-    [ "SUNphi::ConstrainAreUnarySmETs< Args >", "dd/d99/structSUNphi_1_1ConstrainAreUnarySmETs.html", null ],
+    [ "ConstrainAreSmETs", null, [
+      [ "SUNphi::Adder< _Refs >", "de/d58/classSUNphi_1_1Adder.html", null ],
+      [ "SUNphi::Binder< TG, _Refs >", "d6/db9/classSUNphi_1_1Binder.html", null ],
+      [ "SUNphi::Conjer< _Refs >", "d2/d24/classSUNphi_1_1Conjer.html", null ],
+      [ "SUNphi::MulAdder< _Refs >", "dc/d5d/classSUNphi_1_1MulAdder.html", null ],
+      [ "SUNphi::RelBinder< _BoundType, _BoundToType, _Ad, _Refs >", "d5/d1c/classSUNphi_1_1RelBinder.html", null ],
+      [ "SUNphi::Transposer< _Refs >", "d5/dd3/classSUNphi_1_1Transposer.html", null ],
+      [ "SUNphi::UMinuser< _Refs >", "dd/d03/classSUNphi_1_1UMinuser.html", null ],
+      [ "SUNphi::Wrapper< _Refs >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
+    ] ],
     [ "SUNphi::ConstrainHasMember_assertMergeableWith< T >", "d5/df6/structSUNphi_1_1ConstrainHasMember__assertMergeableWith.html", null ],
     [ "SUNphi::ConstrainHasMember_compSize< T >", "df/de8/structSUNphi_1_1ConstrainHasMember__compSize.html", null ],
     [ "SUNphi::ConstrainHasMember_eval< T >", "dc/d20/structSUNphi_1_1ConstrainHasMember__eval.html", null ],
@@ -206,7 +225,6 @@ var hierarchy =
     [ "SUNphi::ConstrainHasMember_isStoring< T >", "db/d30/structSUNphi_1_1ConstrainHasMember__isStoring.html", null ],
     [ "SUNphi::ConstrainHasMember_MergeableComps< T >", "d8/d32/structSUNphi_1_1ConstrainHasMember__MergeableComps.html", null ],
     [ "SUNphi::ConstrainHasMember_name< T >", "d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html", null ],
-    [ "SUNphi::ConstrainHasMember_ref< T >", "d6/d0c/structSUNphi_1_1ConstrainHasMember__ref.html", null ],
     [ "SUNphi::ConstrainHasMember_ref1< T >", "d0/dd1/structSUNphi_1_1ConstrainHasMember__ref1.html", null ],
     [ "SUNphi::ConstrainHasMember_ref2< T >", "d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html", null ],
     [ "SUNphi::ConstrainHasMember_refs< T >", "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html", null ],
@@ -221,21 +239,10 @@ var hierarchy =
     [ "SUNphi::ConstrainIsNotBaseOf< Base, Derived >", "d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html", null ],
     [ "SUNphi::ConstrainIsOrderedIntSeq< T, typename >", "dd/dcd/structSUNphi_1_1ConstrainIsOrderedIntSeq.html", null ],
     [ "SUNphi::ConstrainIsOrderedUniqueIntSeq< T, typename >", "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html", null ],
-    [ "ConstrainIsSmET", null, [
-      [ "SUNphi::Binder< TG, _Ref, NestedTk, NestedTypes >", "d6/db9/classSUNphi_1_1Binder.html", null ],
-      [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ],
-      [ "SUNphi::Transposer< _Ref, TK >", "d5/dd3/classSUNphi_1_1Transposer.html", null ],
-      [ "SUNphi::UMinuser< _Ref, TK, TK_TYPES >", "dd/d03/classSUNphi_1_1UMinuser.html", null ],
-      [ "SUNphi::Wrapper< _Ref, TK >", "d1/d77/classSUNphi_1_1Wrapper.html", null ]
-    ] ],
     [ "ConstrainIsTensKind", null, [
       [ "SUNphi::_Indexer< IDyn, T, class >", "d7/da6/structSUNphi_1_1__Indexer.html", null ],
-      [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ],
       [ "SUNphi::Tens< TK, FUND >", "d8/d1c/classSUNphi_1_1Tens.html", null ],
       [ "SUNphi::TensStor< TK, T >", "d3/d22/classSUNphi_1_1TensStor.html", null ],
-      [ "SUNphi::Transposer< _Ref, TK >", "d5/dd3/classSUNphi_1_1Transposer.html", null ],
-      [ "SUNphi::UMinuser< _Ref, TK, TK_TYPES >", "dd/d03/classSUNphi_1_1UMinuser.html", null ],
-      [ "SUNphi::Wrapper< _Ref, TK >", "d1/d77/classSUNphi_1_1Wrapper.html", null ],
       [ "SUNphi::TensStor< Tk, Fund >", "d3/d22/classSUNphi_1_1TensStor.html", null ]
     ] ],
     [ "SUNphi::ConstrainIsTuple< T >", "df/de0/structSUNphi_1_1ConstrainIsTuple.html", null ],
@@ -246,27 +253,12 @@ var hierarchy =
     [ "SUNphi::ConstrainNTypes< N, Args >", "d8/d4a/structSUNphi_1_1ConstrainNTypes.html", null ],
     [ "SUNphi::ConstrainTupleHasNotType< T, TP, class >", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
     [ "SUNphi::ConstrainTupleHasType< T, TP, class >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
-    [ "SUNphi::ConstrainTupleHasType< Compl, TK_TYPES >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", [
-      [ "SUNphi::Conjer< _Ref, TK, TK_TYPES >", "d2/d24/classSUNphi_1_1Conjer.html", null ]
-    ] ],
-    [ "SUNphi::ConstrainTupleHasType< TG, NestedTypes >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", [
-      [ "SUNphi::Binder< TG, _Ref, NestedTk, NestedTypes >", "d6/db9/classSUNphi_1_1Binder.html", null ]
-    ] ],
     [ "SUNphi::ConstrainTupleTypesAreAllDifferent< T, class >", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
-    [ "SUNphi::HasMember_ref2< Type >::Fallback", "d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html", [
-      [ "SUNphi::HasMember_ref2< Type >::Derived", "df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html", null ]
+    [ "SUNphi::HasMember_refs< Type >::Fallback", "dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html", [
+      [ "SUNphi::HasMember_refs< Type >::Derived", "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_eval< Type >::Fallback", "da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html", [
       [ "SUNphi::HasMember_eval< Type >::Derived", "de/dc2/structSUNphi_1_1HasMember__eval_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_name< Type >::Fallback", "d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html", [
-      [ "SUNphi::HasMember_name< Type >::Derived", "da/df2/structSUNphi_1_1HasMember__name_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_assertMergeableWith< Type >::Fallback", "d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html", [
-      [ "SUNphi::HasMember_assertMergeableWith< Type >::Derived", "d7/dcc/structSUNphi_1_1HasMember__assertMergeableWith_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_MergeableComps< Type >::Fallback", "d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html", [
-      [ "SUNphi::HasMember_MergeableComps< Type >::Derived", "d3/d99/structSUNphi_1_1HasMember__MergeableComps_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_isAssignable< Type >::Fallback", "d7/dea/structSUNphi_1_1HasMember__isAssignable_1_1Fallback.html", [
       [ "SUNphi::HasMember_isAssignable< Type >::Derived", "d0/d06/structSUNphi_1_1HasMember__isAssignable_1_1Derived.html", null ]
@@ -277,26 +269,32 @@ var hierarchy =
     [ "SUNphi::HasMember_isAliasing< Type >::Fallback", "d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html", [
       [ "SUNphi::HasMember_isAliasing< Type >::Derived", "dd/dc6/structSUNphi_1_1HasMember__isAliasing_1_1Derived.html", null ]
     ] ],
+    [ "SUNphi::HasMember_Fund< Type >::Fallback", "d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html", [
+      [ "SUNphi::HasMember_Fund< Type >::Derived", "dc/da9/structSUNphi_1_1HasMember__Fund_1_1Derived.html", null ]
+    ] ],
+    [ "SUNphi::HasMember_assertMergeableWith< Type >::Fallback", "d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html", [
+      [ "SUNphi::HasMember_assertMergeableWith< Type >::Derived", "d7/dcc/structSUNphi_1_1HasMember__assertMergeableWith_1_1Derived.html", null ]
+    ] ],
+    [ "SUNphi::HasMember_name< Type >::Fallback", "d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html", [
+      [ "SUNphi::HasMember_name< Type >::Derived", "da/df2/structSUNphi_1_1HasMember__name_1_1Derived.html", null ]
+    ] ],
     [ "SUNphi::HasMember_isStoring< Type >::Fallback", "d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html", [
       [ "SUNphi::HasMember_isStoring< Type >::Derived", "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_Tk< Type >::Fallback", "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html", [
       [ "SUNphi::HasMember_Tk< Type >::Derived", "d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html", null ]
     ] ],
-    [ "SUNphi::HasMember_Fund< Type >::Fallback", "d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html", [
-      [ "SUNphi::HasMember_Fund< Type >::Derived", "dc/da9/structSUNphi_1_1HasMember__Fund_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_refs< Type >::Fallback", "dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html", [
-      [ "SUNphi::HasMember_refs< Type >::Derived", "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html", null ]
-    ] ],
-    [ "SUNphi::HasMember_ref< Type >::Fallback", "db/dd9/structSUNphi_1_1HasMember__ref_1_1Fallback.html", [
-      [ "SUNphi::HasMember_ref< Type >::Derived", "df/da5/structSUNphi_1_1HasMember__ref_1_1Derived.html", null ]
+    [ "SUNphi::HasMember_MergeableComps< Type >::Fallback", "d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html", [
+      [ "SUNphi::HasMember_MergeableComps< Type >::Derived", "d3/d99/structSUNphi_1_1HasMember__MergeableComps_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_getMergedCompsView< Type >::Fallback", "d3/da2/structSUNphi_1_1HasMember__getMergedCompsView_1_1Fallback.html", [
       [ "SUNphi::HasMember_getMergedCompsView< Type >::Derived", "da/df9/structSUNphi_1_1HasMember__getMergedCompsView_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_ref1< Type >::Fallback", "d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html", [
       [ "SUNphi::HasMember_ref1< Type >::Derived", "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html", null ]
+    ] ],
+    [ "SUNphi::HasMember_ref2< Type >::Fallback", "d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html", [
+      [ "SUNphi::HasMember_ref2< Type >::Derived", "df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html", null ]
     ] ],
     [ "FalseType", null, [
       [ "SUNphi::_isTuple< T >", "d3/d6f/structSUNphi_1_1__isTuple.html", null ]
@@ -311,7 +309,6 @@ var hierarchy =
     [ "SUNphi::HasMember_isStoring< Type >", "d6/d8a/structSUNphi_1_1HasMember__isStoring.html", null ],
     [ "SUNphi::HasMember_MergeableComps< Type >", "d0/db2/structSUNphi_1_1HasMember__MergeableComps.html", null ],
     [ "SUNphi::HasMember_name< Type >", "d3/d59/structSUNphi_1_1HasMember__name.html", null ],
-    [ "SUNphi::HasMember_ref< Type >", "d4/d83/structSUNphi_1_1HasMember__ref.html", null ],
     [ "SUNphi::HasMember_ref1< Type >", "da/db5/structSUNphi_1_1HasMember__ref1.html", null ],
     [ "SUNphi::HasMember_ref2< Type >", "d3/d14/structSUNphi_1_1HasMember__ref2.html", null ],
     [ "SUNphi::HasMember_refs< Type >", "dd/dce/structSUNphi_1_1HasMember__refs.html", null ],
@@ -342,7 +339,6 @@ var hierarchy =
       [ "SUNphi::HasMember_name< Type >::Derived", "da/df2/structSUNphi_1_1HasMember__name_1_1Derived.html", null ],
       [ "SUNphi::HasMember_ref1< Type >::Derived", "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html", null ],
       [ "SUNphi::HasMember_ref2< Type >::Derived", "df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html", null ],
-      [ "SUNphi::HasMember_ref< Type >::Derived", "df/da5/structSUNphi_1_1HasMember__ref_1_1Derived.html", null ],
       [ "SUNphi::HasMember_refs< Type >::Derived", "d3/dd6/structSUNphi_1_1HasMember__refs_1_1Derived.html", null ],
       [ "SUNphi::HasMember_Tk< Type >::Derived", "d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html", null ]
     ] ]

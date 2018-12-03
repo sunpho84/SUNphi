@@ -10,7 +10,5 @@ var searchData=
   ['constrainisbinarysmet',['ConstrainIsBinarySmET',['../d3/dd7/namespaceSUNphi.html#a8f18e555330c9c49c8aead5591d4d66f',1,'SUNphi']]],
   ['constrainisnnarysmet',['ConstrainIsNnarySmET',['../d3/dd7/namespaceSUNphi.html#a2041f6c6d6c50223b68b2445cf1fc818',1,'SUNphi']]],
   ['constrainisnotbinarysmet',['ConstrainIsNotBinarySmET',['../d3/dd7/namespaceSUNphi.html#a41e611b7ea9220b485bb75813e26a734',1,'SUNphi']]],
-  ['constrainisnotnnarysmet',['ConstrainIsNotNnarySmET',['../d3/dd7/namespaceSUNphi.html#af335d82662853907ce03eb8996fafb8a',1,'SUNphi']]],
-  ['constrainisnotunarysmet',['ConstrainIsNotUnarySmET',['../d3/dd7/namespaceSUNphi.html#abb2362d929be70739c5e4163fa1b2797',1,'SUNphi']]],
-  ['constrainisunarysmet',['ConstrainIsUnarySmET',['../d3/dd7/namespaceSUNphi.html#a992f34d73bae9024a319514b856af282',1,'SUNphi']]]
+  ['constrainisnotnnarysmet',['ConstrainIsNotNnarySmET',['../d3/dd7/namespaceSUNphi.html#af335d82662853907ce03eb8996fafb8a',1,'SUNphi']]]
 ];

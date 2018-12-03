@@ -119,6 +119,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp.html','../../');
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d7/dea/IntSeqCat_8hpp_source.html">ints/IntSeqCat.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">smet/BaseSmET.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">tens/TensKind.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../de/d2d/TupleOrder_8hpp_source.html">tuple/TupleOrder.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d58/Position_8hpp_source.html">utility/Position.hpp</a>&gt;</code><br/>
@@ -158,6 +159,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ae820446f40d55de97c9fccae82551383"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">STATIC_ASSERT_IS_NNARY_SMET</a>(...)</td></tr>
 <tr class="memdesc:ae820446f40d55de97c9fccae82551383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the check for a Nnary SmET.  <a href="#ae820446f40d55de97c9fccae82551383">More...</a><br/></td></tr>
 <tr class="separator:ae820446f40d55de97c9fccae82551383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad378640872660b64ac332626a34f7e28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#ad378640872660b64ac332626a34f7e28">IDENTITY_REPRESENTATIVE_FUNCTION</a></td></tr>
+<tr class="memdesc:ad378640872660b64ac332626a34f7e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an identity representative function.  <a href="#ad378640872660b64ac332626a34f7e28">More...</a><br/></td></tr>
+<tr class="separator:ad378640872660b64ac332626a34f7e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02f66cab4b67fdce75d0608337dcd9f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4">EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</a></td></tr>
 <tr class="memdesc:a02f66cab4b67fdce75d0608337dcd9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an evaluator through a representative function.  <a href="#a02f66cab4b67fdce75d0608337dcd9f4">More...</a><br/></td></tr>
 <tr class="separator:a02f66cab4b67fdce75d0608337dcd9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +172,18 @@ Macros</h2></td></tr>
 <tr class="memitem:aea54762dc3c5e7ab672f598af517e24a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a">PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION</a></td></tr>
 <tr class="memdesc:aea54762dc3c5e7ab672f598af517e24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the <code>Fund</code> type using the call to <code>representativeFunction</code>.  <a href="#aea54762dc3c5e7ab672f598af517e24a">More...</a><br/></td></tr>
 <tr class="separator:aea54762dc3c5e7ab672f598af517e24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a293e0950fb7d86bc561238c395038"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02a293e0950fb7d86bc561238c395038"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a02a293e0950fb7d86bc561238c395038">SAME_FUND_AS_REF</a>(ID)&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#aa8ee5dbc00e6291483f410bf5f312b5a">PROVIDE_FUND</a>(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Fund)</td></tr>
+<tr class="memdesc:a02a293e0950fb7d86bc561238c395038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the same <code>Fund</code> type of a given ref. <br/></td></tr>
+<tr class="separator:a02a293e0950fb7d86bc561238c395038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a546b4279e9829994b22933ebbf3b7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a546b4279e9829994b22933ebbf3b7e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a8a546b4279e9829994b22933ebbf3b7e">AS_ASSIGNABLE_AS_REF</a>(ID)&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a0884c6dc519009fe84cd9832979c88c0">IS_ASSIGNABLE_ATTRIBUTE</a>(/* As assignable as ref ID */,Ref&lt;ID&gt;::isAssignable)</td></tr>
+<tr class="memdesc:a8a546b4279e9829994b22933ebbf3b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the same assignability of a given ref. <br/></td></tr>
+<tr class="separator:a8a546b4279e9829994b22933ebbf3b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de97755944e8a8cba5ba57bc37feff3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5de97755944e8a8cba5ba57bc37feff3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a5de97755944e8a8cba5ba57bc37feff3">SAME_TK_AS_REF</a>(ID)&#160;&#160;&#160;<a class="el" href="../../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76">PROVIDE_TK</a>(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Tk)</td></tr>
+<tr class="memdesc:a5de97755944e8a8cba5ba57bc37feff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the same <code>TensKind</code> of a given ref. <br/></td></tr>
+<tr class="separator:a5de97755944e8a8cba5ba57bc37feff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">PROVIDE_POS_OF_RES_TCS_IN_REFS</a></td></tr>
 <tr class="memdesc:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the position of result Tk <code>TensComp</code> in each input.  <a href="#abb8e3bccf2caed5b8914e60e6bbc8ec6">More...</a><br/></td></tr>
 <tr class="separator:abb8e3bccf2caed5b8914e60e6bbc8ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +216,15 @@ Macros</h2></td></tr>
 <tr class="separator:af025591265a6f05e1c577f57cd92bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab93394caca20d1c569f26ed75292b5a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">FORWARD_IS_ALIASING_TO_REFS</a></td></tr>
 <tr class="separator:ab93394caca20d1c569f26ed75292b5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a99e07bb1edd80c440760e9fb1c23ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a9a99e07bb1edd80c440760e9fb1c23ae">REPRESENTATIVE_FUNCTION_WINS_ALL</a></td></tr>
+<tr class="memdesc:a9a99e07bb1edd80c440760e9fb1c23ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <code>Fund</code>, <code>eval</code> and <code>mergedComps</code> according to <code>representativeFunction</code>.  <a href="#a9a99e07bb1edd80c440760e9fb1c23ae">More...</a><br/></td></tr>
+<tr class="separator:a9a99e07bb1edd80c440760e9fb1c23ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8d243321db030df161ae411325dcee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#abc8d243321db030df161ae411325dcee">CANCEL_DUPLICATED_NNARY_SMET_CALL</a>(CALLER,NNARY_SMET)</td></tr>
+<tr class="separator:abc8d243321db030df161ae411325dcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fb5b1abc053ab5b703f4f726d6056c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a80fb5b1abc053ab5b703f4f726d6056c">NNARY_SMET_GOES_INSIDE</a>(EXT_FUN,NNARY_SMET, INT_FUN)</td></tr>
+<tr class="separator:a80fb5b1abc053ab5b703f4f726d6056c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0b528bb650b720627db375e940b5d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a9d0b528bb650b720627db375e940b5d5">ABSORB_DUPLICATED_NNARY_SMET_CALL</a>(CALLER,NNARY_SMET)</td></tr>
+<tr class="separator:a9d0b528bb650b720627db375e940b5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -209,9 +234,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af335d82662853907ce03eb8996fafb8a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af335d82662853907ce03eb8996fafb8a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af335d82662853907ce03eb8996fafb8a">SUNphi::ConstrainIsNotNnarySmET</a> = ConstrainIsNotBaseOf&lt; BaseNnarySmET,T &gt;</td></tr>
 <tr class="separator:af335d82662853907ce03eb8996fafb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f607b600f39a07f6bfb8561d2aa4166"><td class="memTemplParams" colspan="2">template&lt;typename RefsMD , typename PosOfResTcsInRefTks , typename ExtraDelims &gt; </td></tr>
-<tr class="memitem:a6f607b600f39a07f6bfb8561d2aa4166"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">SUNphi::NnarySmETCompsMergeability</a> = decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, 0 &gt;{}, ExtraDelims{}))</td></tr>
-<tr class="separator:a6f607b600f39a07f6bfb8561d2aa4166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81f92c45d6b5c8ceeafeb5fae6a139f"><td class="memTemplParams" colspan="2">template&lt;typename RefsMD , typename PosOfResTcsInRefTks , typename ExtraDelims &gt; </td></tr>
+<tr class="memitem:af81f92c45d6b5c8ceeafeb5fae6a139f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">SUNphi::NnarySmETCompsMergeability</a> = decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, NOT_PRESENT &gt;{}, ExtraDelims{}))</td></tr>
+<tr class="separator:af81f92c45d6b5c8ceeafeb5fae6a139f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -233,6 +258,83 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a9d0b528bb650b720627db375e940b5d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ABSORB_DUPLICATED_NNARY_SMET_CALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CALLER, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NNARY_SMET&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"> \              \               \               \</div>
+<div class="line">  template &lt;<span class="keyword">typename</span> D,                                   <span class="comment">/* Type of the nested NNARY_SMET           */</span> <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">\</a></div>
+<div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">	    SFINAE_ON_TEMPLATE_ARG</a>(is ## NNARY_SMET&lt;D&gt;)&gt;  <span class="comment">/* Enable only for the NNARY_SMET required */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
+<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> CALLER(D&amp;&amp; smet)         \</div>
+<div class="line">  {                                 \</div>
+<div class="line">    return forw&lt;D&gt;(smet);                       \</div>
+<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">\</a></div>
+<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_a3fef1fcd49e2b4bdbc23f0c35109e24d"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00049">SwallowSemicolon.hpp:49</a></div></div>
+<div class="ttc" id="SFINAE_8hpp_html_a2a92e61beb69be134a70c3ecbc4cd3e1"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">SFINAE_ON_TEMPLATE_ARG</a></div><div class="ttdeci">#define SFINAE_ON_TEMPLATE_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00022">SFINAE.hpp:22</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment --><p>Implements a duplicated-call absorber</p>
+<p>Example </p>
+<div class="fragment"><div class="line">Tens&lt;TensKind&lt;Compl&gt;,<span class="keywordtype">double</span>&gt; cicc;</div>
+<div class="line"><a class="code" href="../../d3/dd7/namespaceSUNphi.html#a91661d571c9dd91aec833a7576ed5138">wrap</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a91661d571c9dd91aec833a7576ed5138">wrap</a>(cicc)); <span class="comment">// returns wrap(cicc)</span></div>
+</div><!-- fragment --><p>&lt; Name of builder </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00507">507</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc8d243321db030df161ae411325dcee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CANCEL_DUPLICATED_NNARY_SMET_CALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CALLER, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NNARY_SMET&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Implements a duplicated-call canceller</p>
+<p>Example </p>
+<div class="fragment"><div class="line">Tens&lt;TensKind&lt;Compl&gt;,<span class="keywordtype">double</span>&gt; cicc;</div>
+<div class="line"><a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637">conj</a>(cicc)); <span class="comment">// returns cicc</span></div>
+</div><!-- fragment --><p>&lt; Name of builder </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00443">443</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a02f66cab4b67fdce75d0608337dcd9f4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +358,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides an evaluator through a representative function. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,9 +382,84 @@ Variables</h2></td></tr>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
 <div class="ttc" id="Debug_8hpp_html_a7c4906fd9a25964e49819c6c97d3387d"><div class="ttname"><a href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a></div><div class="ttdeci">#define CRASH(...)</div><div class="ttdoc">Macro to make the crash being more explicit. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dee/Debug_8hpp_source.html#l00014">Debug.hpp:14</a></div></div>
 </div><!-- fragment --><p>Set aliasing according to the isAliasing of references </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>enforce cehck only with TensClass </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>enforce cehck only with TensClass </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00390">390</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00413">413</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad378640872660b64ac332626a34f7e28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDENTITY_REPRESENTATIVE_FUNCTION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                        \</div>
+<div class="line">  template &lt;typename T&gt;                         <span class="comment">/* Argument type */</span> \</div>
+<div class="line">  static <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> representativeFunction(<a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>&amp;&amp; t)     \</div>
+<div class="line">  {                                 \</div>
+<div class="line">    return forw&lt;T&gt;(t);                          \</div>
+<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div>
+<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div>
+<div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment -->
+<p>Provide an identity representative function. </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00029">29</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80fb5b1abc053ab5b703f4f726d6056c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NNARY_SMET_GOES_INSIDE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">EXT_FUN, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NNARY_SMET, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">INT_FUN&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    \           \           \           \</div>
+<div class="line">  template &lt;<span class="keyword">typename</span> D,                                   <span class="comment">/* Type of the nested NNARY_SMET           */</span> <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">\</a></div>
+<div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">	    SFINAE_ON_TEMPLATE_ARG</a>(is ## NNARY_SMET&lt;D&gt;)&gt;  <span class="comment">/* Enable only for the NNARY_SMET required */</span> <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
+<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> EXT_FUN(D&amp;&amp; smet)        \</div>
+<div class="line">  {                                 \</div>
+<div class="line">    return INT_FUN(EXT_FUN(get&lt;0&gt;(smet.refs)));             \</div>
+<div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">\</a></div>
+<div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_a3fef1fcd49e2b4bdbc23f0c35109e24d"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00049">SwallowSemicolon.hpp:49</a></div></div>
+<div class="ttc" id="SFINAE_8hpp_html_a2a92e61beb69be134a70c3ecbc4cd3e1"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">SFINAE_ON_TEMPLATE_ARG</a></div><div class="ttdeci">#define SFINAE_ON_TEMPLATE_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00022">SFINAE.hpp:22</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment --><p>Defines a simple way to swap nested <code>NnarySmET</code> </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>we need to implement the same check done for <code>CANCEL_DUPLICATED_NNARY_SMET_CALL</code> </dd></dl>
+<p>&lt; External builder</p>
+<p>&lt; Name of the SmET </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00486">486</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,11 +474,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">\</a></div>
 <div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">  PROVIDE_EXTRA_MERGE_DELIMS</a>(IntSeq&lt;&gt;)</div>
-<div class="ttc" id="NnarySmET_8hpp_html_a1e105ab7d52f75825d38c1d3f9e82fbb"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">PROVIDE_EXTRA_MERGE_DELIMS</a></div><div class="ttdeci">#define PROVIDE_EXTRA_MERGE_DELIMS(...)</div><div class="ttdoc">Add an ExtraDelims IntSeq called ExtraDelims. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00282">NnarySmET.hpp:282</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_a1e105ab7d52f75825d38c1d3f9e82fbb"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">PROVIDE_EXTRA_MERGE_DELIMS</a></div><div class="ttdeci">#define PROVIDE_EXTRA_MERGE_DELIMS(...)</div><div class="ttdoc">Add an ExtraDelims IntSeq called ExtraDelims. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00305">NnarySmET.hpp:305</a></div></div>
 </div><!-- fragment -->
 <p>Add an empty <code>ExtraDelims</code>. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00288">288</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00311">311</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +501,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Add an <code>ExtraDelims</code> <code>IntSeq</code> called <code>ExtraDelims</code>. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00282">282</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00305">305</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +528,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Defines the <code>Fund</code> type using the call to <code>representativeFunction</code>. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00165">165</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00176">176</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,17 +542,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(, \</div>
-<div class="line">              <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">NnarySmETCompsMergeability</a>&lt;           \</div>
+<div class="line">              <a class="code" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">NnarySmETCompsMergeability</a>&lt;           \</div>
 <div class="line">               <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;<span class="keyword">typename</span> RemRef&lt;_Refs&gt;::MergeableComps...&gt;,\</div>
 <div class="line">               PosOfResTcsInRefsTk,             \</div>
 <div class="line">               ExtraDelims&gt;)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00156">BaseSmET.hpp:156</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_a6f607b600f39a07f6bfb8561d2aa4166"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a6f607b600f39a07f6bfb8561d2aa4166">SUNphi::NnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, 0 &gt;{}, ExtraDelims{})) NnarySmETCompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00279">NnarySmET.hpp:279</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00181">BaseSmET.hpp:181</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8bd2374a8eb13af54ead4b5e2e8558c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">SUNphi::Tuple</a></div><div class="ttdeci">std::tuple&lt; Tp...&gt; Tuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00020">TupleClass.hpp:20</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_af81f92c45d6b5c8ceeafeb5fae6a139f"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">SUNphi::NnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, NOT_PRESENT &gt;{}, ExtraDelims{})) NnarySmETCompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00302">NnarySmET.hpp:302</a></div></div>
 </div><!-- fragment -->
 <p>Provide <code>MergeableComps</code> delimiter according to references and extra. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00293">293</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00316">316</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,7 +612,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides a <code>getMergedCompsView</code> method, taking Is as template parameter. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00307">307</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00330">330</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,14 +638,14 @@ Variables</h2></td></tr>
 <div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">									\</a></div>
 <div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW</a>(, \</div>
 <div class="line">                      <span class="keywordflow">return</span> mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</div>
-<div class="ttc" id="NnarySmET_8hpp_html_ae52f53997fe1f814a668b58f11caebfe"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">MERGED_COMPS_VIEW_OF_REF</a></div><div class="ttdeci">#define MERGED_COMPS_VIEW_OF_REF(I)</div><div class="ttdoc">Returns the merged comps view of the I-th Ref. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00303">NnarySmET.hpp:303</a></div></div>
-<div class="ttc" id="NnarySmET_8hpp_html_a2e7743fd0a21880f018c5a11f2fb6039"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">PROVIDE_NNARY_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00307">NnarySmET.hpp:307</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_ae52f53997fe1f814a668b58f11caebfe"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">MERGED_COMPS_VIEW_OF_REF</a></div><div class="ttdeci">#define MERGED_COMPS_VIEW_OF_REF(I)</div><div class="ttdoc">Returns the merged comps view of the I-th Ref. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00326">NnarySmET.hpp:326</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_a2e7743fd0a21880f018c5a11f2fb6039"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">PROVIDE_NNARY_GET_MERGED_COMPS_VIEW</a></div><div class="ttdeci">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)</div><div class="ttdoc">Provides a getMergedCompsView method, taking Is as template parameter. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00330">NnarySmET.hpp:330</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a504c20383cbaeb6ae41596d0cda0c3be"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a></div><div class="ttdeci">#define PROVIDE_ALSO_NON_CONST_METHOD(NAME)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00296">TypeTraits.hpp:296</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p>Uses the <code>representativeFunction</code> to provide a merged view. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00334">334</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00357">357</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -506,7 +683,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Provide the references to the objects</p>
 <p>The reference types are contained in a <code>Tuple</code> with types obtained from template pars </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +713,7 @@ Variables</h2></td></tr>
 <p>Defines a simple creator taking n references. </p>
 <p>&lt; Name of the NnarySmET </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00352">352</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00375">375</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,15 +727,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    \</div>
-<div class="line">  using PosOfResTcsInRefsTk=                        \</div>
-<div class="line">    PosOfTcsOfTkInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;;      \</div>
+<div class="line">  using PosOfResTcsInRefsTk=                        <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">\</a></div>
+<div class="line"><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">    PosOfTcsOfTkInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk</a>...&gt;;      \</div>
 <div class="line">                                    \   \</div>
-<div class="line">  using PosOfResTcsPresInRefsTk=                        \</div>
-<div class="line">    PosOfTcsOfTkPresInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;</div>
+<div class="line">  using PosOfResTcsPresInRefsTk=                        <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">\</a></div>
+<div class="line"><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">    PosOfTcsOfTkPresInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk</a>...&gt;</div>
+<div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_abfc881e409b80ef0f9da6860c9ee22a4"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">SUNphi::_RelBindInternalChecks::Tk</a></div><div class="ttdeci">TensKind&lt; Tc1, Tc2 &gt; Tk</div><div class="ttdoc">TensorKind of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00258">RelBind.hpp:258</a></div></div>
 </div><!-- fragment -->
 <p>Provide the position of result Tk <code>TensComp</code> in each input. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00182">182</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00205">205</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -579,7 +757,7 @@ Variables</h2></td></tr>
 <div class="line">    static_assert(I&gt;=0 and I&lt;NSmET,<span class="stringliteral">&quot;Cannot search in negative or larger-than-N ref&quot;</span>); \</div>
 <div class="line">                                    \               \</div>
 <div class="line">    using RefTk=                            \</div>
-<div class="line">      typename Ref&lt;I&gt;::Tk;                      \</div>
+<div class="line">      typename <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">Ref&lt;I&gt;::Tk</a>;                      \</div>
 <div class="line">                                    \   \</div>
 <div class="line">    constexpr <span class="keywordtype">bool</span> found=                       \</div>
 <div class="line">      RefTk::template contains&lt;TC&gt;;                 \</div>
@@ -592,10 +770,41 @@ Variables</h2></td></tr>
 <div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div>
 <div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_abfc881e409b80ef0f9da6860c9ee22a4"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">SUNphi::_RelBindInternalChecks::Tk</a></div><div class="ttdeci">TensKind&lt; Tc1, Tc2 &gt; Tk</div><div class="ttdoc">TensorKind of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00258">RelBind.hpp:258</a></div></div>
 </div><!-- fragment --><p>Returns the size of a <code>TensComp</code>, with a simple approach</p>
 <p>Search the asked <code>TensComp</code> in each ref <code>TensKind</code> iteratively and returns the size in the first found ref </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a99e07bb1edd80c440760e9fb1c23ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REPRESENTATIVE_FUNCTION_WINS_ALL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">PROVIDE_POS_OF_RES_TCS_IN_REFS</a>;                 \</div>
+<div class="line">                                    <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a">\</a></div>
+<div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a">  PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION</a>;            \</div>
+<div class="line">                                    <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89">\</a></div>
+<div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89">  PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA</a>;          \</div>
+<div class="line">                                    <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434">\</a></div>
+<div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION</a>; \</div>
+<div class="line">                                    <a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4">\</a></div>
+<div class="line"><a class="code" href="../../d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4">  EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</a></div>
+<div class="ttc" id="NnarySmET_8hpp_html_a64f06187d70938817e161b9145f8f434"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434">PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION</a></div><div class="ttdeci">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION</div><div class="ttdoc">Uses the representativeFunction to provide a merged view. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00357">NnarySmET.hpp:357</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_a02f66cab4b67fdce75d0608337dcd9f4"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4">EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</a></div><div class="ttdeci">#define EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</div><div class="ttdoc">Provides an evaluator through a representative function. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00105">NnarySmET.hpp:105</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_abb8e3bccf2caed5b8914e60e6bbc8ec6"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">PROVIDE_POS_OF_RES_TCS_IN_REFS</a></div><div class="ttdeci">#define PROVIDE_POS_OF_RES_TCS_IN_REFS</div><div class="ttdoc">Provide the position of result Tk TensComp in each input. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00205">NnarySmET.hpp:205</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_add895140544e5c3ce25a9994a81dcf89"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89">PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA</div><div class="ttdoc">Provide MergeableComps delimiter according to references and extra. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00316">NnarySmET.hpp:316</a></div></div>
+<div class="ttc" id="NnarySmET_8hpp_html_aea54762dc3c5e7ab672f598af517e24a"><div class="ttname"><a href="../../d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a">PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION</a></div><div class="ttdeci">#define PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION</div><div class="ttdoc">Defines the Fund type using the call to representativeFunction. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00176">NnarySmET.hpp:176</a></div></div>
+</div><!-- fragment -->
+<p>Provides <code>Fund</code>, <code>eval</code> and <code>mergedComps</code> according to <code>representativeFunction</code>. </p>
+
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00424">424</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,7 +843,7 @@ Variables</h2></td></tr>
 <p><code>NnarySmET</code> cannot use SFINAE to worsen default constructors (unless packing args in <code>Tuple</code>) so the simple builder cannot be overloaded. If required, use a custom builder and use if constexpr construct inside it to route the manipulations.</p>
 <p>&lt; Name of builder function </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00376">376</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00399">399</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -653,13 +862,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(refs,__VA_ARGS__)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">BaseSmET.hpp:239</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00260">BaseSmET.hpp:260</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00454">TypeTraits.hpp:454</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Nnary SmET. </p>
 <p>Defines the check for a NnarySmET. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00387">387</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -678,13 +887,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div>
 <div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(refs,__VA_ARGS__)</div>
-<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">BaseSmET.hpp:239</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00260">BaseSmET.hpp:260</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00454">TypeTraits.hpp:454</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Nnary SmET. </p>
 <p>Defines the check for a NnarySmET. </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00364">364</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00387">387</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>

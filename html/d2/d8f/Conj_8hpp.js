@@ -1,7 +1,6 @@
 var Conj_8hpp =
 [
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html", "d2/d24/classSUNphi_1_1Conjer" ],
-    [ "PROVIDE_CONST_OR_NOT_EVALUATOR", "d2/d8f/Conj_8hpp.html#a93b876eb47322943cd687070d7d9d88f", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#a381b663616baca11ca1606eab5ecb637", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#a3e19f4ffa189059c167b60fd22d8342d", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#aa8e94881e2711b5cb720d5839d7ecb34", null ],

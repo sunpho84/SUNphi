@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('dc/d8f/TensClass_8hpp.html','../../');
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">tens/TensKind.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">tens/TensStor.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">smet/UnarySmET.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">smet/NnarySmET.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../dc/d8f/TensClass_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -151,9 +151,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a1d354395c6ec69f519a1908b3d1e1bed"><td class="memTemplParams" colspan="2">template&lt;typename SMET , typename... DummyTypes&gt; </td></tr>
 <tr class="memitem:a1d354395c6ec69f519a1908b3d1e1bed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed">SUNphi::getStor</a> (SMET &amp;&amp;smet, DummyTypes...)</td></tr>
 <tr class="separator:a1d354395c6ec69f519a1908b3d1e1bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01f294aadee7833e15b33fa4113946d"><td class="memTemplParams" colspan="2">template&lt;typename SMET , TypeIf&lt;(isUnarySmET&lt; SMET &gt; and not isTens&lt; SMET &gt;), void * &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:af01f294aadee7833e15b33fa4113946d"><td class="memTemplItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af01f294aadee7833e15b33fa4113946d">SUNphi::getStor</a> (SMET &amp;&amp;smet)</td></tr>
-<tr class="separator:af01f294aadee7833e15b33fa4113946d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa92285dd832c749cd0f3d0adf3e634c5"><td class="memTemplParams" colspan="2">template&lt;typename SMET , TypeIf&lt;(isNnarySmET&lt; SMET &gt; and not isTens&lt; SMET &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa92285dd832c749cd0f3d0adf3e634c5"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa92285dd832c749cd0f3d0adf3e634c5">SUNphi::getStor</a> (SMET &amp;&amp;smet)</td></tr>
+<tr class="separator:aa92285dd832c749cd0f3d0adf3e634c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c14cafe315cb0ed6d3820f2b5bbaa34"><td class="memTemplParams" colspan="2">template&lt;typename SMET , TypeIf&lt;(isNnarySmET&lt; SMET &gt; and isTens&lt; SMET &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9c14cafe315cb0ed6d3820f2b5bbaa34"><td class="memTemplItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9c14cafe315cb0ed6d3820f2b5bbaa34">SUNphi::getStor</a> (SMET &amp;&amp;smet)</td></tr>
+<tr class="separator:a9c14cafe315cb0ed6d3820f2b5bbaa34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the Tens class. </p>
@@ -186,11 +189,11 @@ Functions</h2></td></tr>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a23c2e0e40d874796ce7240566fbcb7ae"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae">SUNphi::print</a></div><div class="ttdeci">S &amp; print(S &amp;out)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d55/Print_8hpp_source.html#l00016">Print.hpp:16</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a9251c65c4d182426d0be38507c64b84c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a9251c65c4d182426d0be38507c64b84c">SUNphi::forw</a></div><div class="ttdeci">constexpr T &amp;&amp; forw(U &amp;&amp;u)</div><div class="ttdoc">Forward according to http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2009/n2951.html. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00028">UniversalReferences.hpp:28</a></div></div>
-<div class="ttc" id="TensClass_8hpp_html_a22dc080000bca54b7cc61def5e2ae9ce"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a></div><div class="ttdeci">#define DEBUG_TENS_COMPONENTS</div><div class="ttdoc">Enable or not printing the components. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00173">TensClass.hpp:173</a></div></div>
+<div class="ttc" id="TensClass_8hpp_html_a22dc080000bca54b7cc61def5e2ae9ce"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a></div><div class="ttdeci">#define DEBUG_TENS_COMPONENTS</div><div class="ttdoc">Enable or not printing the components. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00172">TensClass.hpp:172</a></div></div>
 </div><!-- fragment -->
 <p>Provides either the const or non-const evaluator. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00177">177</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00176">176</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>

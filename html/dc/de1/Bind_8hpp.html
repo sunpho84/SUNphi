@@ -118,16 +118,16 @@ $(document).ready(function(){initNavTree('dc/de1/Bind_8hpp.html','../../');});
 <div class="textblock"><code>#include &lt;ints/IntSeqInsert.hpp&gt;</code><br/>
 <code>#include &lt;ints/IntSeqRemove.hpp&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">smet/NnarySmET.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">tens/TensClass.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d7/d7a/TensComp_8hpp_source.html">tens/TensComp.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="../../d4/dbe/UnarySmET_8hpp_source.html">smet/UnarySmET.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../dc/de1/Bind_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html">SUNphi::Binder&lt; TG, _Ref, NestedTk, NestedTypes &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html">SUNphi::Binder&lt; TG, _Refs &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to bind a component of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../d6/db9/classSUNphi_1_1Binder.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -139,9 +139,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5c60188918795703bcda3222ddfdb332"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a5c60188918795703bcda3222ddfdb332">DEFINE_NAMED_BINDER</a>(TG, NAME)</td></tr>
-<tr class="memdesc:a5c60188918795703bcda3222ddfdb332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type TG.  <a href="#a5c60188918795703bcda3222ddfdb332">More...</a><br/></td></tr>
-<tr class="separator:a5c60188918795703bcda3222ddfdb332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a84960eea00cd7668bc7ee060548c58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a5a84960eea00cd7668bc7ee060548c58">DEFINE_NAMED_BINDER</a>(TG,NAME)</td></tr>
+<tr class="memdesc:a5a84960eea00cd7668bc7ee060548c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type TG.  <a href="#a5a84960eea00cd7668bc7ee060548c58">More...</a><br/></td></tr>
+<tr class="separator:a5a84960eea00cd7668bc7ee060548c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a039c2450684887ce0d2ba6ba7a08a562"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a039c2450684887ce0d2ba6ba7a08a562">DEFINE_NAMED_RW_OR_COL_BINDER</a>(TG,NAME)</td></tr>
 <tr class="memdesc:a039c2450684887ce0d2ba6ba7a08a562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a Binder named NAME for type RwTG or CnTG.  <a href="#a039c2450684887ce0d2ba6ba7a08a562">More...</a><br/></td></tr>
 <tr class="separator:a039c2450684887ce0d2ba6ba7a08a562"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +160,7 @@ Functions</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a5c60188918795703bcda3222ddfdb332"></a>
+<a class="anchor" id="a5a84960eea00cd7668bc7ee060548c58"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -185,11 +185,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">        \</div>
 <div class="line">  template &lt;typename T&gt;       <span class="comment">/* Type of the bound expression */</span>    <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div>
-<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> NAME(T&amp;&amp; ref,            \</div>
+<div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> NAME(<a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>&amp;&amp; ref,            \</div>
 <div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)       \</div>
 <div class="line">  {                                 \</div>
 <div class="line">    return bind&lt;TG&gt;(forw&lt;T&gt;(ref),<span class="keywordtype">id</span>);                   \</div>
 <div class="line">  }</div>
+<div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p>Defines a Binder named NAME for type TG. </p>
@@ -225,7 +226,7 @@ Functions</h2></td></tr>
 <p>Defines a Binder named NAME for type RwTG or CnTG. </p>
 <p>&lt; Type to get </p>
 
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00033">33</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>

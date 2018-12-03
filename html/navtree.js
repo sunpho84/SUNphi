@@ -17,7 +17,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ]
@@ -37,11 +37,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d8f/Conj_8hpp.html#a93b876eb47322943cd687070d7d9d88f",
-"d5/d3e/IntListOperations_8hpp.html#a03669b5d05778a442a0ba261ccdc9b10",
-"d8/dfe/structSUNphi_1_1HasMember__eval.html",
-"dc/d5d/classSUNphi_1_1MulAdder.html#a1d6ded1dcd22920fde3d904c29f61374",
-"de/de5/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_4_01_4.html#a944e3a3fab6326a6a10cbf5fb1513bb2"
+"d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039",
+"d4/df5/SUN_8hpp.html#acdce53faa1c2c790355655aa46c7175c",
+"d8/d1c/classSUNphi_1_1Tens.html#a281d611f06af5fd58641bdb3bb8b9ee9",
+"da/dff/structSUNphi_1_1Dir.html#a62036115814b61e36c3699da76b23f8f",
+"dd/d61/structSUNphi_1_1CnSpin.html",
+"namespacemembers_u.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

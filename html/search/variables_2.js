@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['canbeconverted',['canBeConverted',['../d3/dd7/namespaceSUNphi.html#ada4b857c07c2d9392292181763ade3f4',1,'SUNphi']]],
-  ['compsize',['compSize',['../d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html#a15452fead4122d911e6b55bca6de4a1d',1,'SUNphi::HasMember_compSize::Fallback']]],
-  ['contains',['contains',['../d8/df8/classSUNphi_1_1TensKind.html#a437e8eac96fb02e9137c51a0df99573d',1,'SUNphi::TensKind']]],
-  ['created',['created',['../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d',1,'SUNphi::TensStor']]]
+  ['boundpos',['boundPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#aa985444936a58e8f13cf08e7174406e4',1,'SUNphi::RelBinder']]],
+  ['boundtopos',['boundToPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a4d485b2bd2abb5dc52a45c4b2bfc30d8',1,'SUNphi::RelBinder']]]
 ];

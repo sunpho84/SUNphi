@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['adapter',['adapter',['../d5/d1c/classSUNphi_1_1RelBinder.html#a829319995809aa5456718e40579d0271',1,'SUNphi::RelBinder']]],
   ['alignment',['ALIGNMENT',['../d3/dd7/namespaceSUNphi.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],
   ['areintegrals',['areIntegrals',['../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e',1,'SUNphi']]],
   ['areintegrals_3c_20t_20_3e',['areIntegrals&lt; T &gt;',['../d3/dd7/namespaceSUNphi.html#a2f56717fe042f165d2ac201640f3898c',1,'SUNphi']]],
