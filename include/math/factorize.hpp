@@ -15,51 +15,50 @@ namespace SUNphi
   template <typename T>
   std::vector<T> factorize(T n)
   {
+    // Simple case with 0: must crash
+    if(n<=0)
+      {
+	CRASH("Unable to factorize %lld",(int64_t)n);
+	return {};
+      }
+    
+    // Simple case with 1 or 2: returns the number itself
+    if(n<=2)
+      {
+	return {n};
+      }
+    
     /// Result of the factorization
     std::vector<T> out;
     
-    /// Initial vlaue of the divisor
-    T d=3;
+    /// Initial value of the divisor
+    T d=2;
     
-    switch(n)
+    // Loops until n is 1
+    while(n!=1)
       {
-	// Simple case with 0: must crash
-      case 0:
-	CRASH("Unable to factorize 0");
-	return {};
-	break;
+	/// Dividend
+	const int t=n/d;
+	/// Remainder
+	const int r=n-t*d;
 	
-	// Simple case with 1 or 2: returns the number itself
-      case 1:
-      case 2:
-	return {n};
-	break;
-	
-	// All other cases
-      default:
-	// Loops until n is 1
-	while(n!=1)
+	// If no remainder
+	if(r==0)
 	  {
-	    /// Dividend
-	    const int t=n/d;
-	    /// Remainder
-	    const int r=n-t*d;
-	    
-	    // If no remainder
-	    if(r==0)
-	      {
-		// Store
-		out.push_back(d);
-		// Replace n with the dividend
-		n=t;
-	      }
-	    else
-	      // Increment the divisor
-	      d++=2;
-	    
-	    return out;
+	    // Store
+	    out.push_back(d);
+	    // Replace n with the dividend
+	    n=t;
 	  }
+	else
+	  // Increment the divisor
+	  if(d==2)
+	    d=3;
+	  else
+	    d+=2;
       }
+    
+    return out;
   }
 }
 

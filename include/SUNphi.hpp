@@ -2,6 +2,7 @@
 #define _SUNPHI_HPP
 
 /// \file SUNphi.hpp
+///
 /// \brief Main include file for the SUNphi library
 
 /*!
@@ -19,6 +20,7 @@
 
 #include <Ints.hpp>
 #include <Ios.hpp>
+#include <Math.hpp>
 #include <Metaprogramming.hpp>
 #include <Physics.hpp>
 #include <SmET.hpp>
