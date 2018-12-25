@@ -5,9 +5,9 @@
 ///
 /// \brief Header file for the definition of -smet
 
-#include <tens/TensKind.hpp>
 #include <physics/Spin.hpp>
 #include <smet/NnarySmET.hpp>
+#include <tens/TensKind.hpp>
 
 namespace SUNphi
 {
