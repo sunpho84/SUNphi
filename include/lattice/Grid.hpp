@@ -166,18 +166,6 @@ namespace SUNphi
 	    typename Coord>
   Grid(const Coord(&sides)[NDim])
     -> Grid<NDim,int>;
-  
-  /////////////////////////////////////////////////////////////////
-  
-  template <int NDim=4,              // Number of dimensions
-	    typename Coord=int32_t,  // Type of coordinate values
-	    typename Idx=int64_t>    // Type of index of points
-  using NotHashingGrid=
-    Grid<NDim,
-	 Coord,
-	 Idx,
-	 NOT_HASHING>;
-  
 }
 
 #endif
