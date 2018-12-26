@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"functions_r.html":[2,3,0,16],
 "functions_s.html":[2,3,0,17],
 "functions_t.html":[2,3,0,18],
 "functions_type.html":[2,3,3],
@@ -15,8 +14,8 @@ var NAVTREEINDEX6 =
 "globals_func.html":[3,1,1],
 "hierarchy.html":[2,2],
 "index.html":[],
-"namespacemembers.html":[1,1,0,0],
 "namespacemembers.html":[1,1,0],
+"namespacemembers.html":[1,1,0,0],
 "namespacemembers_a.html":[1,1,0,1],
 "namespacemembers_b.html":[1,1,0,2],
 "namespacemembers_c.html":[1,1,0,3],

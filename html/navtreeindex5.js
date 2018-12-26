@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"dd/d03/classSUNphi_1_1UMinuser.html#abc972718a2bd9e542d4efa11446c6b98":[2,0,0,85,10],
 "dd/d03/classSUNphi_1_1UMinuser.html#ad6c991030fa013a192d957f2e6b8bc88":[2,0,0,85,20],
 "dd/d03/classSUNphi_1_1UMinuser.html#ada5d3ad0522b2678651e77587bef1ad3":[2,0,0,85,5],
 "dd/d03/classSUNphi_1_1UMinuser.html#ae05ad03fafa91f2ae9a6d16d650910b5":[2,0,0,85,3],
@@ -180,8 +179,8 @@ var NAVTREEINDEX5 =
 "df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[2,0,0,1],
 "df/d0a/main_8cpp_source.html":[3,0,0,0],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,116],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d96/structSUNphi_1_1HasMember__Tk_1_1Check.html":[2,0,0,52,0],
 "df/dac/test_8cpp_source.html":[3,0,0,1],
 "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4.html":[2,0,0,98],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "functions_m.html":[2,3,0,12],
 "functions_n.html":[2,3,0,13],
 "functions_o.html":[2,3,0,14],
-"functions_p.html":[2,3,0,15]
+"functions_p.html":[2,3,0,15],
+"functions_r.html":[2,3,0,16]
 };
