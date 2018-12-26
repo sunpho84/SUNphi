@@ -50,9 +50,10 @@ var NAVTREEINDEX4 =
 "db/d12/classSUNphi_1_1ScalarWrapper.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,83,25],
 "db/d30/structSUNphi_1_1ConstrainHasMember__isStoring.html":[2,0,0,51],
 "db/d33/Grid_8hpp.html":[3,0,2,2,0],
-"db/d33/Grid_8hpp.html#a30db2a0dbc86ba898e732d2739f21b2f":[3,0,2,2,0,5],
-"db/d33/Grid_8hpp.html#a4a3118407efbe9bd1ecd03eb46e34982":[3,0,2,2,0,4],
-"db/d33/Grid_8hpp.html#a658bd5f263c33bda3f31ebf42d7dd68e":[3,0,2,2,0,6],
+"db/d33/Grid_8hpp.html#a30db2a0dbc86ba898e732d2739f21b2f":[3,0,2,2,0,6],
+"db/d33/Grid_8hpp.html#a4a3118407efbe9bd1ecd03eb46e34982":[3,0,2,2,0,5],
+"db/d33/Grid_8hpp.html#a658bd5f263c33bda3f31ebf42d7dd68e":[3,0,2,2,0,7],
+"db/d33/Grid_8hpp.html#ac471a66ecd3fd585dccfbdbc1b0c8fb2":[3,0,2,2,0,4],
 "db/d33/Grid_8hpp_source.html":[3,0,2,2,0],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html":[2,0,0,96,4],
 "db/d67/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_4_00_01IntSeq_3_01IGroups_8_8_8_4_01_4.html#a2340c2a9c35649bcd16588b2cdd87319":[2,0,0,96,4,0],
@@ -205,7 +206,8 @@ var NAVTREEINDEX4 =
 "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html":[2,0,0,17],
 "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a0b8ab319f72745947feaabfe3c8804d8":[2,0,0,17,0],
 "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a56caa2d68fd6c80472d120ded68a7ce4":[2,0,0,17,2],
-"dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a596a287025806b03e16aac0de82647d7":[2,0,0,17,4],
+"dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a596a287025806b03e16aac0de82647d7":[2,0,0,17,5],
+"dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a6a7398f9841f36b8d93561a9c3312d9a":[2,0,0,17,4],
 "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#a8ec83434b5b5e7fd31f8fe55f164647a":[2,0,0,17,3],
 "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#ad085a20b9c9854ba8a0eb0ded1167069":[2,0,0,17,1],
 "dc/dbf/structSUNphi_1_1__IntSeqFirstN.html":[2,0,0,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "dd/d03/classSUNphi_1_1UMinuser.html#a89d5c37bb92dfd3969eb191b9bca1e6e":[2,0,0,85,23],
 "dd/d03/classSUNphi_1_1UMinuser.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,85,17],
 "dd/d03/classSUNphi_1_1UMinuser.html#a8c309d1995166ecd2318b36445fde18d":[2,0,0,85,32],
-"dd/d03/classSUNphi_1_1UMinuser.html#aa2287cce4e9a36248fcd846cec76b0dd":[2,0,0,85,2],
-"dd/d03/classSUNphi_1_1UMinuser.html#abc972718a2bd9e542d4efa11446c6b98":[2,0,0,85,10],
-"dd/d03/classSUNphi_1_1UMinuser.html#ad6c991030fa013a192d957f2e6b8bc88":[2,0,0,85,20]
+"dd/d03/classSUNphi_1_1UMinuser.html#aa2287cce4e9a36248fcd846cec76b0dd":[2,0,0,85,2]
 };
