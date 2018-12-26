@@ -36,15 +36,24 @@ namespace SUNphi
   struct _Indexer<IDyn,TensKind<H,Oth...>>
   {
     /// Size of the top-level class
-    static constexpr int headSize=H::size;
+    static constexpr int headSize=
+      H::size;
+    
     /// Check if this component is dynamic
-    static constexpr bool thisDynamic=(headSize==DYNAMIC);
+    static constexpr bool thisDynamic=
+      (headSize==DYNAMIC);
+    
     /// Nested TensKind
-    using NestedTk=TensKind<Oth...>;
+    using NestedTk=
+      TensKind<Oth...>;
+    
     /// Nested Dynamic index
-    static constexpr int nestedIDyn=(thisDynamic ? IDyn+1 : IDyn);
+    static constexpr int nestedIDyn=
+      (thisDynamic ? IDyn+1 : IDyn);
+    
     /// Nested indexer
-    using Nested=_Indexer<nestedIDyn,NestedTk>;
+    using Nested=
+      _Indexer<nestedIDyn,NestedTk>;
     
     /// Compute the index, given a set of components
     ///

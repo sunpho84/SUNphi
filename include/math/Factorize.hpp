@@ -13,7 +13,7 @@ namespace SUNphi
 {
   /// Factorizes a number with a simple algorithm
   template <typename T>
-  std::vector<T> factorize(T n)
+  std::vector<T> factorize(T n) ///< Number to factorize
   {
     // Simple case with 0: must crash
     if(n<=0)
