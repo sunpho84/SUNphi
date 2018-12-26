@@ -47,10 +47,10 @@ namespace SUNphi
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
-  public:
-    
     /// Hashed volume
     Idx volume;
+    
+  public:
     
     /// Set the volume, computing it with external routine
     void setVolume()
@@ -63,6 +63,11 @@ namespace SUNphi
     {
       return volume;
     }
+    
+    /// Flag asserting that hashing
+    static constexpr char isHashing[]=
+      "Hashing";
+    
   };
   
   /// Hashable properties of a \c Grid
@@ -79,6 +84,8 @@ namespace SUNphi
 		     NOT_HASHING>
   {
     
+    PROVIDE_CRTP_CAST_OPERATOR(T);
+    
   public:
     
     /// Set the volume, doing nothing
@@ -89,8 +96,12 @@ namespace SUNphi
     /// Get the volume
     Idx getVolume() const
     {
-      return this->computeVolume();
+      return (~*this).computeVolume();
     }
+    
+    /// Flag asserting not hashing
+    static constexpr char isHashing[]=
+      "Not Hashing";
     
   };
   
@@ -155,6 +166,18 @@ namespace SUNphi
 	    typename Coord>
   Grid(const Coord(&sides)[NDim])
     -> Grid<NDim,int>;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  template <int NDim=4,              // Number of dimensions
+	    typename Coord=int32_t,  // Type of coordinate values
+	    typename Idx=int64_t>    // Type of index of points
+  using NotHashingGrid=
+    Grid<NDim,
+	 Coord,
+	 Idx,
+	 NOT_HASHING>;
+  
 }
 
 #endif
