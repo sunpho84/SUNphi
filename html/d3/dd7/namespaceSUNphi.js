@@ -16,6 +16,7 @@ var namespaceSUNphi =
     [ "_IntsUpTo< 0 >", "de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html", "de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4" ],
     [ "_IntsUpTo< 1 >", "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html", "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4" ],
     [ "_RangeSeq", "d0/dde/structSUNphi_1_1__RangeSeq.html", "d0/dde/structSUNphi_1_1__RangeSeq" ],
+    [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],
     [ "_EnableIf", "d5/d3d/structSUNphi_1_1__EnableIf.html", null ],
     [ "_EnableIf< true, T >", "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html", "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4" ],
     [ "_Conditional", "d3/de8/structSUNphi_1_1__Conditional.html", null ],

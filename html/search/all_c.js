@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['math_2ehpp',['Math.hpp',['../d8/df1/Math_8hpp.html',1,'']]],
   ['max',['max',['../da/def/structSUNphi_1_1IntSeq.html#af9b370eb2608e777cce94847981ba5a3',1,'SUNphi::IntSeq']]],
   ['maxknownsubmultiple',['maxKnownSubMultiple',['../d1/d96/structSUNphi_1_1TensComp.html#ae29a38b5b9a7ff35e0798d43279090c3',1,'SUNphi::TensComp']]],
   ['maxoflist',['maxOfList',['../d3/dd7/namespaceSUNphi.html#afd3edf213b2838b37e655757c305d047',1,'SUNphi']]],
@@ -20,6 +21,6 @@ var searchData=
   ['mul',['Mul',['../da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df',1,'SUNphi::IntSeq']]],
   ['muladd',['mulAdd',['../d3/dd7/namespaceSUNphi.html#a9b7f7efa55b39f3d73c768476ed122f1',1,'SUNphi']]],
   ['muladd_2ehpp',['MulAdd.hpp',['../da/d06/MulAdd_8hpp.html',1,'']]],
-  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
-  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]]
+  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]],
+  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]]
 ];

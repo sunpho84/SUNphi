@@ -7,6 +7,7 @@ var searchData=
   ['ncompl',['NCOMPL',['../d3/dd7/namespaceSUNphi.html#aca1531a871af69416133e5bda572281b',1,'SUNphi']]],
   ['ndifftypesintuple',['nDiffTypesInTuple',['../d3/dd7/namespaceSUNphi.html#a261153405d3a8d0cb5bd9186c96b709d',1,'SUNphi']]],
   ['ndifftypesintuple_3c_20tuple_3c_20tp_2e_2e_2e_3e_20_3e',['nDiffTypesInTuple&lt; Tuple&lt; Tp...&gt; &gt;',['../d3/dd7/namespaceSUNphi.html#afaa875a24530ab6723505009e6575696',1,'SUNphi']]],
+  ['ndim',['nDim',['../dd/dca/classSUNphi_1_1Grid.html#a4d4b45b73d6a780ce34ed7ffaa4e3f51',1,'SUNphi::Grid']]],
   ['ndir',['NDIR',['../d3/dd7/namespaceSUNphi.html#aeb4c5150cd2e4b2080ebfc1b4dfb60ee',1,'SUNphi']]],
   ['ndummy_5fvolume',['NDUMMY_VOLUME',['../d3/dd7/namespaceSUNphi.html#aa84901504c2f92deee364906be8fd6de',1,'SUNphi']]],
   ['ndynamic',['nDynamic',['../d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8',1,'SUNphi::TensKind']]],

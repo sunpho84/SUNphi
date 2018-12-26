@@ -10,5 +10,6 @@ var searchData=
   ['lastnon_3c_20i_20_3e',['lastNon&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#ad61bf24e73e37e537e80c6aa3a213f40',1,'SUNphi']]],
   ['lastsmaller',['lastSmaller',['../d3/dd7/namespaceSUNphi.html#aa6bd149fbf4d55bc75e1a74a49e1fcac',1,'SUNphi']]],
   ['lastsmaller_3c_20i_20_3e',['lastSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#aa76f9c2411e695f843df2cc84a662289',1,'SUNphi']]],
+  ['lattice_2ehpp',['Lattice.hpp',['../da/d34/Lattice_8hpp.html',1,'']]],
   ['lvalue_5fref',['LVALUE_REF',['../d0/d81/TypeTraits_8hpp.html#ab2dcee42767f6bf5f377dd887ff75cf6',1,'TypeTraits.hpp']]]
 ];

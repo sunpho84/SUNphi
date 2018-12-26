@@ -2,6 +2,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
 [
     [ "ints", "dir_2cc15010050477bfdc996c66dbc57fa0.html", "dir_2cc15010050477bfdc996c66dbc57fa0" ],
     [ "ios", "dir_c34bc3bbd9d9cc4e9f6dcfcd5b425f2b.html", "dir_c34bc3bbd9d9cc4e9f6dcfcd5b425f2b" ],
+    [ "lattice", "dir_bc4a5d0e77575dc129d2b0c404afabc5.html", "dir_bc4a5d0e77575dc129d2b0c404afabc5" ],
+    [ "math", "dir_fba38f648377aa56ae5d69782adf9e53.html", "dir_fba38f648377aa56ae5d69782adf9e53" ],
     [ "metaprogramming", "dir_2b5be2f018c651c9a6a97d677fdb10f6.html", "dir_2b5be2f018c651c9a6a97d677fdb10f6" ],
     [ "physics", "dir_f7c9792946d4ae97dc97b9de2773b6b2.html", "dir_f7c9792946d4ae97dc97b9de2773b6b2" ],
     [ "smet", "dir_bf7086a74b01aa569c5a5ea4dca574e8.html", "dir_bf7086a74b01aa569c5a5ea4dca574e8" ],
@@ -11,6 +13,8 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "utility", "dir_3a4d35156996fb70540e167b84a39bd1.html", "dir_3a4d35156996fb70540e167b84a39bd1" ],
     [ "Ints.hpp", "db/d04/Ints_8hpp.html", null ],
     [ "Ios.hpp", "de/d10/Ios_8hpp.html", null ],
+    [ "Lattice.hpp", "da/d34/Lattice_8hpp.html", null ],
+    [ "Math.hpp", "d8/df1/Math_8hpp.html", null ],
     [ "Metaprogramming.hpp", "da/d8e/Metaprogramming_8hpp.html", null ],
     [ "Physics.hpp", "d0/d5e/Physics_8hpp.html", null ],
     [ "SmET.hpp", "d9/d21/SmET_8hpp.html", null ],
