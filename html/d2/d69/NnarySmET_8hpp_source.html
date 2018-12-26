@@ -268,274 +268,276 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">    decltype(_fundThroughRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{}))</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor"></span>  </div>
 <div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a02a293e0950fb7d86bc561238c395038">  193</a></span>&#160;<span class="preprocessor">#define SAME_FUND_AS_REF(ID)            \</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">  PROVIDE_FUND(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Fund)</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a8a546b4279e9829994b22933ebbf3b7e">  197</a></span>&#160;<span class="preprocessor">#define AS_ASSIGNABLE_AS_REF(ID)                    \</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">  IS_ASSIGNABLE_ATTRIBUTE(</span><span class="comment">/* As assignable as ref ID */</span><span class="preprocessor">,Ref&lt;ID&gt;::isAssignable)</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5de97755944e8a8cba5ba57bc37feff3">  201</a></span>&#160;<span class="preprocessor">#define SAME_TK_AS_REF(ID)          \</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">  PROVIDE_TK(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Tk)</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">  205</a></span>&#160;<span class="preprocessor">#define PROVIDE_POS_OF_RES_TCS_IN_REFS                  \</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">  using PosOfResTcsInRefsTk=                        \</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">    PosOfTcsOfTkInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;;      \</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">  using PosOfResTcsPresInRefsTk=                        \</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">    PosOfTcsOfTkPresInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> ResPos=0,                    <span class="comment">// Current \c TensComp to be checked</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">typename</span>...MergeDelim,           <span class="comment">// \c IntSeq containing the allowed mergeability delimiters for each Ref</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">typename</span>...PosOfResTcsInRefTk,   <span class="comment">// Route to give the position of each \c TensComp of the Res in each Ref</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordtype">int</span>...PrevPosInts,               <span class="comment">// Position of previous components</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">typename</span> ExtraDelim&gt;             <span class="comment">// Extra delimiters to be added</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">  222</a></span>&#160;  constexpr <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">_nnarySmETCompsMergeability</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;MergeDelim...&gt;</a>,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                         <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;PosOfResTcsInRefTk...&gt;</a>,</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                             <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;PrevPosInts...&gt;</a>,</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                                 ExtraDelim)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    static_assert(isIntSeq&lt;ExtraDelim&gt;,<span class="stringliteral">&quot;ExtraDelim needs to be IntSeq&quot;</span>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    static_assert((isIntSeq&lt;MergeDelim&gt; &amp;&amp; ...),<span class="stringliteral">&quot;MergeDelim need to be IntSeq&quot;</span>);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    static_assert((isIntSeq&lt;PosOfResTcsInRefTk&gt; &amp;&amp; ...),<span class="stringliteral">&quot;PosOfResTcsInRefTk need to be IntSeq&quot;</span>);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    constexpr <span class="keywordtype">int</span> nC=</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a3449e7eaa063d756b6467c2578077f61">TupleElementType</a>&lt;0,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;PosOfResTcsInRefTk...&gt;&gt;::size;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    static_assert(((nC==PosOfResTcsInRefTk::size) &amp;&amp; ...),<span class="stringliteral">&quot;All PosOfResTcsInRefTk must have the same size&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">  PROVIDE_FUND(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Fund)</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a8a546b4279e9829994b22933ebbf3b7e">  198</a></span>&#160;<span class="preprocessor">#define AS_ASSIGNABLE_AS_REF(ID)                    \</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">  IS_ASSIGNABLE_ATTRIBUTE(,Ref&lt;ID&gt;::isAssignable)</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5de97755944e8a8cba5ba57bc37feff3">  202</a></span>&#160;<span class="preprocessor">#define SAME_TK_AS_REF(ID)          \</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">  PROVIDE_TK(typename RemRef&lt;Ref&lt;ID&gt;&gt;::Tk)</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6">  207</a></span>&#160;<span class="preprocessor">#define PROVIDE_POS_OF_RES_TCS_IN_REFS                  \</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">  using PosOfResTcsInRefsTk=                        \</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">    PosOfTcsOfTkInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;;      \</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">  using PosOfResTcsPresInRefsTk=                        \</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">    PosOfTcsOfTkPresInListOfTks&lt;Tk,typename RemRef&lt;_Refs&gt;::Tk...&gt;</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> ResPos=0,                    <span class="comment">// Current \c TensComp to be checked</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">typename</span>...MergeDelim,           <span class="comment">// \c IntSeq containing the allowed mergeability delimiters for each Ref</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">typename</span>...PosOfResTcsInRefTk,   <span class="comment">// Route to give the position of each \c TensComp of the Res in each Ref</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordtype">int</span>...PrevPosInts,               <span class="comment">// Position of previous components</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keyword">typename</span> ExtraDelim&gt;             <span class="comment">// Extra delimiters to be added</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">  224</a></span>&#160;  constexpr <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">_nnarySmETCompsMergeability</a>(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;MergeDelim...&gt;</a>,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                         <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;PosOfResTcsInRefTk...&gt;</a>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                             <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;PrevPosInts...&gt;</a>,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                 ExtraDelim)</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    static_assert(isIntSeq&lt;ExtraDelim&gt;,<span class="stringliteral">&quot;ExtraDelim needs to be IntSeq&quot;</span>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    static_assert((isIntSeq&lt;MergeDelim&gt; &amp;&amp; ...),<span class="stringliteral">&quot;MergeDelim need to be IntSeq&quot;</span>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    static_assert((isIntSeq&lt;PosOfResTcsInRefTk&gt; &amp;&amp; ...),<span class="stringliteral">&quot;PosOfResTcsInRefTk need to be IntSeq&quot;</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    constexpr <span class="keywordtype">int</span> nC=</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a3449e7eaa063d756b6467c2578077f61">TupleElementType</a>&lt;0,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;PosOfResTcsInRefTk...&gt;&gt;::size;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="comment">// If we are terminating, return the final position</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> constexpr(nC==0)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;ResPos&gt;</a>{};</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">using</span> CurPos=</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;PosOfResTcsInRefTk::first...&gt;;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">using</span> Nested=</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      decltype(_nnarySmETCompsMergeability&lt;ResPos+1&gt;(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;MergeDelim...&gt;</a>{},</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;IntSeqGetAllButFirst&lt;PosOfResTcsInRefTk&gt;</a>...&gt;{},</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        CurPos{},ExtraDelim{}));</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    constexpr <span class="keywordtype">bool</span> curNotConsecutive=</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      (((PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>) and</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        (PosOfResTcsInRefTk::first!=PrevPosInts+1)) || ...);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    constexpr <span class="keywordtype">bool</span> originallyNotMergeable=</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      (MergeDelim::template has&lt;PosOfResTcsInRefTk::first&gt; || ...);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keyword">using</span> CurPres=</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;(PosOfResTcsInRefTk::first!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>)...&gt;;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">using</span> PrevPres=</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;(PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>)...&gt;;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    constexpr <span class="keywordtype">bool</span> isInExtraDelim=</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      ExtraDelim::template has&lt;ResPos&gt;;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    constexpr <span class="keywordtype">bool</span> insBreak=</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      originallyNotMergeable</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;     or</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      (not isSame&lt;PrevPres,CurPres&gt;)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    static_assert(((nC==PosOfResTcsInRefTk::size) &amp;&amp; ...),<span class="stringliteral">&quot;All PosOfResTcsInRefTk must have the same size&quot;</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">// If we are terminating, return the final position</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span> constexpr(nC==0)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq&lt;ResPos&gt;</a>{};</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">using</span> CurPos=</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;PosOfResTcsInRefTk::first...&gt;;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">using</span> Nested=</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      decltype(_nnarySmETCompsMergeability&lt;ResPos+1&gt;(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;MergeDelim...&gt;</a>{},</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                      <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple&lt;IntSeqGetAllButFirst&lt;PosOfResTcsInRefTk&gt;</a>...&gt;{},</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                        CurPos{},ExtraDelim{}));</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    constexpr <span class="keywordtype">bool</span> curNotConsecutive=</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      (((PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>) and</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        (PosOfResTcsInRefTk::first!=PrevPosInts+1)) || ...);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    constexpr <span class="keywordtype">bool</span> originallyNotMergeable=</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      (MergeDelim::template has&lt;PosOfResTcsInRefTk::first&gt; || ...);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">using</span> CurPres=</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;(PosOfResTcsInRefTk::first!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>)...&gt;;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">using</span> PrevPres=</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <a class="code" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt;(PrevPosInts!=<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>)...&gt;;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    constexpr <span class="keywordtype">bool</span> isInExtraDelim=</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      ExtraDelim::template has&lt;ResPos&gt;;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    constexpr <span class="keywordtype">bool</span> insBreak=</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      originallyNotMergeable</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;     or</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      isInExtraDelim</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      (not isSame&lt;PrevPres,CurPres&gt;)</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;     or</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      curNotConsecutive;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span> constexpr(insBreak)</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;          <span class="keywordflow">return</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39">IntSeqCat&lt;IntSeq&lt;ResPos&gt;</a>,Nested&gt;{};</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">return</span> Nested{};</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> RefsMD,                  <span class="comment">// \c Tuple of \c IntSeq containing the MergeDelims for each Ref</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">typename</span> PosOfResTcsInRefTks,     <span class="comment">// Position of the result comps in the refs (\c Tuple of \c IntSeq)</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">typename</span> ExtraDelims&gt;             <span class="comment">// Additional delmiters coming from the \c SmET</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keyword">using</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">NnarySmETCompsMergeability</a>=</div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">  302</a></span>&#160;    decltype(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">_nnarySmETCompsMergeability</a>(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb&lt;tupleSize&lt;RefsMD&gt;,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>&gt;{},ExtraDelims{}));</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  </div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">  305</a></span>&#160;<span class="preprocessor">#define PROVIDE_EXTRA_MERGE_DELIMS(...)         \</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">  using ExtraDelims=                    \</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">    __VA_ARGS__</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93">  311</a></span>&#160;<span class="preprocessor">#define NO_EXTRA_MERGE_DELIMS           \</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">  PROVIDE_EXTRA_MERGE_DELIMS(IntSeq&lt;&gt;)</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89">  316</a></span>&#160;<span class="preprocessor">#define PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA     \</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">  PROVIDE_MERGEABLE_COMPS(, \</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">              NnarySmETCompsMergeability&lt;           \</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">               Tuple&lt;typename RemRef&lt;_Refs&gt;::MergeableComps...&gt;,\</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">               PosOfResTcsInRefsTk,             \</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">               ExtraDelims&gt;)</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  </div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">  326</a></span>&#160;<span class="preprocessor">#define MERGED_COMPS_VIEW_OF_REF(I)                 \</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">  get&lt;I&gt;(refs).template getMergedCompsView&lt;TupleElementType&lt;I,MDs&gt;&gt;()</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">  330</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)        \</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="preprocessor">  DESCRIPTION                               \</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="preprocessor">  template &lt;typename Is&gt;       </span><span class="comment">/* IntSeq delimiting the comps groups */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">  DECLAUTO getMergedCompsView()                     \</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">    const                               \</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that we can merge as asked */</span><span class="preprocessor">              \</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">    assertMergeableWith&lt;Is&gt;();                      \</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">    using MDs=                              \</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">      Tuple&lt;InsertInOrderedIntSeq </span><span class="comment">/* Insert the begin */</span><span class="preprocessor">        \</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">        &lt;0,        </span><span class="comment">/* Insert 0 as begin */</span><span class="preprocessor">              \</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">         IntSeqGetElsAfterAppending                 \</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">         &lt;RemRef&lt;_Refs&gt;::Tk::nTypes,                \</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">          false,   </span><span class="comment">/* Omit NOT_PRESENT */</span><span class="preprocessor">               \</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">          Is,                           \</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">          PosOfTypesNotAsserting&lt;typename Tk::types,        \</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">                     typename RemRef&lt;_Refs&gt;::Tk::types&gt;&gt;, \</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">         0,         </span><span class="comment">/* Shift after inserting */</span><span class="preprocessor">         \</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">         true&gt;...&gt;; </span><span class="comment">/* Ignore 0 if present   */</span><span class="preprocessor">         \</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">                                        \</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">    __VA_ARGS__;                            \</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">  PROVIDE_ALSO_NON_CONST_METHOD(getMergedCompsView)</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434">  357</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION \</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="preprocessor">  template &lt;int...Is,     </span><span class="comment">/* Ints used to call the representativeFunction  */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">        typename MDs&gt; </span><span class="comment">/* MergeDelims to be used                        */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">  DECLAUTO mergedCompsViewAccordingToRepresentativeFunction(IntSeq&lt;Is...&gt;, \</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">                                MDs) const  \</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">    return representativeFunction(MERGED_COMPS_VIEW_OF_REF(Is)...); \</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">  PROVIDE_ALSO_NON_CONST_METHOD(mergedCompsViewAccordingToRepresentativeFunction); \</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      isInExtraDelim</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;     or</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      curNotConsecutive;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> constexpr(insBreak)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keywordflow">return</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39">IntSeqCat&lt;IntSeq&lt;ResPos&gt;</a>,Nested&gt;{};</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <span class="keywordflow">return</span> Nested{};</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> RefsMD,                  <span class="comment">// \c Tuple of \c IntSeq containing the MergeDelims for each Ref</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keyword">typename</span> PosOfResTcsInRefTks,     <span class="comment">// Position of the result comps in the refs (\c Tuple of \c IntSeq)</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keyword">typename</span> ExtraDelims&gt;             <span class="comment">// Additional delmiters coming from the \c SmET</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keyword">using</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">NnarySmETCompsMergeability</a>=</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">  304</a></span>&#160;    decltype(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">_nnarySmETCompsMergeability</a>(RefsMD{},PosOfResTcsInRefTks{},IntSeqOfSameNumb&lt;tupleSize&lt;RefsMD&gt;,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">NOT_PRESENT</a>&gt;{},ExtraDelims{}));</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  </div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb">  307</a></span>&#160;<span class="preprocessor">#define PROVIDE_EXTRA_MERGE_DELIMS(...)         \</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">  using ExtraDelims=                    \</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">    __VA_ARGS__</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93">  313</a></span>&#160;<span class="preprocessor">#define NO_EXTRA_MERGE_DELIMS           \</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">  PROVIDE_EXTRA_MERGE_DELIMS(IntSeq&lt;&gt;)</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89">  318</a></span>&#160;<span class="preprocessor">#define PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA     \</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">  PROVIDE_MERGEABLE_COMPS(, \</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">              NnarySmETCompsMergeability&lt;           \</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">               Tuple&lt;typename RemRef&lt;_Refs&gt;::MergeableComps...&gt;,\</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="preprocessor">               PosOfResTcsInRefsTk,             \</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">               ExtraDelims&gt;)</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  </div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe">  328</a></span>&#160;<span class="preprocessor">#define MERGED_COMPS_VIEW_OF_REF(I)                 \</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">  get&lt;I&gt;(refs).template getMergedCompsView&lt;TupleElementType&lt;I,MDs&gt;&gt;()</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039">  332</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(DESCRIPTION,...)        \</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">  DESCRIPTION                               \</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="preprocessor">  template &lt;typename Is&gt;       </span><span class="comment">/* IntSeq delimiting the comps groups */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">  DECLAUTO getMergedCompsView()                     \</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="preprocessor">    const                               \</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">    </span><span class="comment">/* Check that we can merge as asked */</span><span class="preprocessor">              \</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="preprocessor">    assertMergeableWith&lt;Is&gt;();                      \</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="preprocessor">    using MDs=                              \</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">      Tuple&lt;InsertInOrderedIntSeq </span><span class="comment">/* Insert the begin */</span><span class="preprocessor">        \</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="preprocessor">        &lt;0,        </span><span class="comment">/* Insert 0 as begin */</span><span class="preprocessor">              \</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">         IntSeqGetElsAfterAppending                 \</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="preprocessor">         &lt;RemRef&lt;_Refs&gt;::Tk::nTypes,                \</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">          false,   </span><span class="comment">/* Omit NOT_PRESENT */</span><span class="preprocessor">               \</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="preprocessor">          Is,                           \</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">          PosOfTypesNotAsserting&lt;typename Tk::types,        \</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">                     typename RemRef&lt;_Refs&gt;::Tk::types&gt;&gt;, \</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">         0,         </span><span class="comment">/* Shift after inserting */</span><span class="preprocessor">         \</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">         true&gt;...&gt;; </span><span class="comment">/* Ignore 0 if present   */</span><span class="preprocessor">         \</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="preprocessor">                                        \</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">    __VA_ARGS__;                            \</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">  PROVIDE_ALSO_NON_CONST_METHOD(getMergedCompsView)</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434">  359</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION \</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="preprocessor">  template &lt;int...Is,     </span><span class="comment">/* Ints used to call the representativeFunction  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">        typename MDs&gt; </span><span class="comment">/* MergeDelims to be used                        */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">  DECLAUTO mergedCompsViewAccordingToRepresentativeFunction(IntSeq&lt;Is...&gt;, \</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">                                MDs) const  \</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">    return representativeFunction(MERGED_COMPS_VIEW_OF_REF(Is)...); \</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">  }                                 \</span></div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(, \</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">                      return mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  </div>
-<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">  375</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_SMET_SIMPLE_CREATOR(NNARY_SMET ) \</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">  template &lt;typename...SMETS,                       \</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;((isSame&lt;Unqualified&lt;SMETS&gt;,Unqualified&lt;_Refs&gt;&gt;) &amp;&amp; ...)&gt;&gt; \</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">  explicit NNARY_SMET(SMETS&amp;&amp;...smets) : refs(forw&lt;SMETS&gt;(smets)...)    \</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  </div>
-<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">  387</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_NNARY_SMET(...)        \</span></div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">  STATIC_ASSERT_IS_SMET(__VA_ARGS__);           \</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  </div>
-<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1">  399</a></span>&#160;<span class="preprocessor">#define SIMPLE_NNARY_SMET_BUILDER(BUILDER,      \</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="preprocessor">                  NNARY_SMET)   \</span></div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">  PROVIDE_ALSO_NON_CONST_METHOD(mergedCompsViewAccordingToRepresentativeFunction); \</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW(, \</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">                      return mergedCompsViewAccordingToRepresentativeFunction(IntsUpTo&lt;NSmET&gt;{},MDs{}))</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  </div>
+<div class="line"><a name="l00377"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a5c4b34eaa063fc0209e2574a8fffe2c8">  377</a></span>&#160;<span class="preprocessor">#define PROVIDE_NNARY_SMET_SIMPLE_CREATOR(NNARY_SMET ) \</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">  template &lt;typename...SMETS,                       \</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">        typename=EnableIf&lt;((isSame&lt;Unqualified&lt;SMETS&gt;,Unqualified&lt;_Refs&gt;&gt;) &amp;&amp; ...)&gt;&gt; \</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">  explicit NNARY_SMET(SMETS&amp;&amp;...smets) : refs(forw&lt;SMETS&gt;(smets)...)    \</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  </div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383">  389</a></span>&#160;<span class="preprocessor">#define STATIC_ASSERT_IS_NNARY_SMET(...)        \</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">  STATIC_ASSERT_IS_SMET(__VA_ARGS__);           \</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">  STATIC_ASSERT_HAS_MEMBER(refs,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  </div>
+<div class="line"><a name="l00401"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1">  401</a></span>&#160;<span class="preprocessor">#define SIMPLE_NNARY_SMET_BUILDER(BUILDER,      \</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="preprocessor">                  NNARY_SMET)   \</span></div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">  template &lt;typename...Ts&gt;     </span><span class="comment">/* Types of the SmET to get       */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">  NNARY_SMET&lt;Ts...&gt; BUILDER(Ts&amp;&amp;...smets)     \</span></div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">    return NNARY_SMET&lt;Ts...&gt;(forw&lt;Ts&gt;(smets)...);           \</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">  413</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">    \</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">  {                         \</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor">    CRASH(&quot;Fixme&quot;);                 \</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">    return true;                    \</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="preprocessor">  }                         \</span></div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a9a99e07bb1edd80c440760e9fb1c23ae">  424</a></span>&#160;<span class="preprocessor">#define REPRESENTATIVE_FUNCTION_WINS_ALL                \</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">  PROVIDE_POS_OF_RES_TCS_IN_REFS;                   \</span></div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">  PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;            \</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">  template &lt;typename...Ts&gt;     </span><span class="comment">/* Types of the SmET to get       */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">  NNARY_SMET&lt;Ts...&gt; BUILDER(Ts&amp;&amp;...smets)     \</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">    return NNARY_SMET&lt;Ts...&gt;(forw&lt;Ts&gt;(smets)...);           \</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#ab93394caca20d1c569f26ed75292b5a0">  415</a></span>&#160;<span class="preprocessor">#define FORWARD_IS_ALIASING_TO_REFS         \</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">    \</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">  template &lt;typename Tref&gt;              \</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="preprocessor">  bool isAliasing(const Tref&amp; alias) const      \</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">  {                         \</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="preprocessor">    CRASH(&quot;Fixme&quot;);                 \</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;<span class="preprocessor">    return true;                    \</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">  }                         \</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a9a99e07bb1edd80c440760e9fb1c23ae">  426</a></span>&#160;<span class="preprocessor">#define REPRESENTATIVE_FUNCTION_WINS_ALL                \</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">  PROVIDE_POS_OF_RES_TCS_IN_REFS;                   \</span></div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="preprocessor">  PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;          \</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="preprocessor">  PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION;            \</span></div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION; \</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="preprocessor">  PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA;          \</span></div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="preprocessor">  EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</span></div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  </div>
-<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#abc8d243321db030df161ae411325dcee">  443</a></span>&#160;<span class="preprocessor">#define CANCEL_DUPLICATED_NNARY_SMET_CALL(CALLER,      \</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">                      NNARY_SMET)  \</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="preprocessor">  PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION; \</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;<span class="preprocessor">  EVAL_THROUGH_REPRESENTATIVE_FUNCTION_PASSING_COMPS_BY_NAME</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  </div>
+<div class="line"><a name="l00445"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#abc8d243321db030df161ae411325dcee">  445</a></span>&#160;<span class="preprocessor">#define CANCEL_DUPLICATED_NNARY_SMET_CALL(CALLER,      \</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">                      NNARY_SMET)  \</span></div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">  template &lt;typename T,                                        </span><span class="comment">/* Type of the expression                  */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">        typename RrT=RemRef&lt;T&gt;,                            </span><span class="comment">/* T without ref attributes                */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">        typename Ref=typename RrT::template Ref&lt;0&gt;,        </span><span class="comment">/* Type of the reference                   */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">        typename RrRef=RemRef&lt;Ref&gt;,                        </span><span class="comment">/* Ref without ref attributes              */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor">        bool SmETIsLvalue=isLvalue&lt;RrT&gt;,               </span><span class="comment">/* Detect if SmET is an lvalue             */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="preprocessor">        bool RefIsLvalue=isLvalue&lt;RrRef&gt;,              </span><span class="comment">/* Detect if Ref is an lvalue              */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="preprocessor">        bool RefIsStoring=isStoring&lt;RrRef&gt;,            </span><span class="comment">/* Detect if Ref is storing                */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="preprocessor">        bool RetByRef=RefIsStoring or                  </span><span class="comment">/* Returns by val if Ref is storing, or    */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">        RefIsLvalue or SmETIsLvalue,                   </span><span class="comment">/*   lvalue is involved                    */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="preprocessor">        typename Ret=Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;,   </span><span class="comment">/* Returned type                           */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;RrT&gt;)&gt;     </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="preprocessor">  Ret CALLER(T&amp;&amp; smet)              \</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">    if constexpr(0)                         \</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="preprocessor">      {                                 \</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">    constexpr bool SmETIsConst=isConst&lt;T&gt;;              \</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="preprocessor">    constexpr bool RefIsConst=isConst&lt;Ref&gt;;             \</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">    using namespace std;                        \</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot;Removing duplicated call &quot; # CALLER&lt;&lt;&quot; &quot;&lt;&lt;__PRETTY_FUNCTION__&lt;&lt;endl; \</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">    constexpr bool SmETIs=std::is_reference&lt;T&gt;::value;      \</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">    constexpr bool RefIs=std::is_reference&lt;Ref&gt;::value;     \</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIsLvalue: &quot;&lt;&lt;SmETIsLvalue&lt;&lt;endl;            \</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIs: &quot;&lt;&lt;SmETIs&lt;&lt;endl;                \</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIsConst: &quot;&lt;&lt;SmETIsConst&lt;&lt;endl;          \</span></div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIsLvalue: &quot;&lt;&lt;RefIsLvalue&lt;&lt;endl;          \</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIs: &quot;&lt;&lt;RefIs&lt;&lt;endl;                  \</span></div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIsConst: &quot;&lt;&lt;RefIsConst&lt;&lt;endl;            \</span></div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="preprocessor">      }                                 \</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">                                    \</span></div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="preprocessor">    return static_cast&lt;Ret&gt;(get&lt;0&gt;(smet.refs));             \</span></div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a80fb5b1abc053ab5b703f4f726d6056c">  486</a></span>&#160;<span class="preprocessor">#define NNARY_SMET_GOES_INSIDE(EXT_FUN,     \</span></div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;<span class="preprocessor">                   NNARY_SMET,  \</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="preprocessor">                   INT_FUN)     \</span></div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;<span class="preprocessor">  template &lt;typename T,                                        </span><span class="comment">/* Type of the expression                  */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="preprocessor">        typename RrT=RemRef&lt;T&gt;,                            </span><span class="comment">/* T without ref attributes                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="preprocessor">        typename Ref=typename RrT::template Ref&lt;0&gt;,        </span><span class="comment">/* Type of the reference                   */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="preprocessor">        typename RrRef=RemRef&lt;Ref&gt;,                        </span><span class="comment">/* Ref without ref attributes              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="preprocessor">        bool SmETIsLvalue=isLvalue&lt;RrT&gt;,               </span><span class="comment">/* Detect if SmET is an lvalue             */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="preprocessor">        bool RefIsLvalue=isLvalue&lt;RrRef&gt;,              </span><span class="comment">/* Detect if Ref is an lvalue              */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="preprocessor">        bool RefIsStoring=isStoring&lt;RrRef&gt;,            </span><span class="comment">/* Detect if Ref is storing                */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="preprocessor">        bool RetByRef=RefIsStoring or                  </span><span class="comment">/* Returns by val if Ref is storing, or    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="preprocessor">        RefIsLvalue or SmETIsLvalue,                   </span><span class="comment">/*   lvalue is involved                    */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="preprocessor">        typename Ret=Conditional&lt;RetByRef,RrRef&amp;,RrRef&gt;,   </span><span class="comment">/* Returned type                           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;RrT&gt;)&gt;     </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">  Ret CALLER(T&amp;&amp; smet)              \</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">    if constexpr(0)                         \</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="preprocessor">      {                                 \</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">    constexpr bool SmETIsConst=isConst&lt;T&gt;;              \</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">    constexpr bool RefIsConst=isConst&lt;Ref&gt;;             \</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">    using namespace std;                        \</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot;Removing duplicated call &quot; # CALLER&lt;&lt;&quot; &quot;&lt;&lt;__PRETTY_FUNCTION__&lt;&lt;endl; \</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">    constexpr bool SmETIs=std::is_reference&lt;T&gt;::value;      \</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor">    constexpr bool RefIs=std::is_reference&lt;Ref&gt;::value;     \</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIsLvalue: &quot;&lt;&lt;SmETIsLvalue&lt;&lt;endl;            \</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIs: &quot;&lt;&lt;SmETIs&lt;&lt;endl;                \</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; SmETIsConst: &quot;&lt;&lt;SmETIsConst&lt;&lt;endl;          \</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIsLvalue: &quot;&lt;&lt;RefIsLvalue&lt;&lt;endl;          \</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIs: &quot;&lt;&lt;RefIs&lt;&lt;endl;                  \</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">    cout&lt;&lt;&quot; RefIsConst: &quot;&lt;&lt;RefIsConst&lt;&lt;endl;            \</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="preprocessor">      }                                 \</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="preprocessor">                                    \</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="preprocessor">    return static_cast&lt;Ret&gt;(get&lt;0&gt;(smet.refs));             \</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a80fb5b1abc053ab5b703f4f726d6056c">  488</a></span>&#160;<span class="preprocessor">#define NNARY_SMET_GOES_INSIDE(EXT_FUN,     \</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="preprocessor">                   NNARY_SMET,  \</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="preprocessor">                   INT_FUN)     \</span></div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor">            \</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="preprocessor">  template &lt;typename D,                                   </span><span class="comment">/* Type of the nested NNARY_SMET           */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;D&gt;)&gt;  </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="preprocessor">  DECLAUTO EXT_FUN(D&amp;&amp; smet)        \</span></div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">    return INT_FUN(EXT_FUN(get&lt;0&gt;(smet.refs)));             \</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a9d0b528bb650b720627db375e940b5d5">  507</a></span>&#160;<span class="preprocessor">#define ABSORB_DUPLICATED_NNARY_SMET_CALL(CALLER,       \</span></div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<span class="preprocessor">                      NNARY_SMET)   \</span></div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="preprocessor">            \</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="preprocessor">  template &lt;typename D,                                   </span><span class="comment">/* Type of the nested NNARY_SMET           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;D&gt;)&gt;  </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="preprocessor">  DECLAUTO EXT_FUN(D&amp;&amp; smet)        \</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">    return INT_FUN(EXT_FUN(get&lt;0&gt;(smet.refs)));             \</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="../../d2/d69/NnarySmET_8hpp.html#a9d0b528bb650b720627db375e940b5d5">  509</a></span>&#160;<span class="preprocessor">#define ABSORB_DUPLICATED_NNARY_SMET_CALL(CALLER,       \</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;<span class="preprocessor">                      NNARY_SMET)   \</span></div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;<span class="preprocessor">                \</span></div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="preprocessor">  template &lt;typename D,                                   </span><span class="comment">/* Type of the nested NNARY_SMET           */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;D&gt;)&gt;  </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;<span class="preprocessor">  DECLAUTO CALLER(D&amp;&amp; smet)         \</span></div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;<span class="preprocessor">  {                                 \</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="preprocessor">    return forw&lt;D&gt;(smet);                       \</span></div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;<span class="preprocessor">  }                                 \</span></div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="preprocessor"></span>  </div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;}</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespaceSUNphi_html_a2a3d9e7824ba5301eb5056c852c29ed2"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">SUNphi::_nnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(auto) constexpr _nnarySmETCompsMergeability(Tuple&lt; MergeDelim...&gt;, Tuple&lt; PosOfResTcsInRefTk...&gt;, IntSeq&lt; PrevPosInts...&gt;, ExtraDelim)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00222">NnarySmET.hpp:222</a></div></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">                \</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;<span class="preprocessor">  template &lt;typename D,                                   </span><span class="comment">/* Type of the nested NNARY_SMET           */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;<span class="preprocessor">        SFINAE_ON_TEMPLATE_ARG(is ## NNARY_SMET&lt;D&gt;)&gt;  </span><span class="comment">/* Enable only for the NNARY_SMET required */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="preprocessor">  DECLAUTO CALLER(D&amp;&amp; smet)         \</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;<span class="preprocessor">  {                                 \</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="preprocessor">    return forw&lt;D&gt;(smet);                       \</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="preprocessor">  }                                 \</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;<span class="preprocessor">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="preprocessor"></span>  </div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;}</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceSUNphi_html_a2a3d9e7824ba5301eb5056c852c29ed2"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a2a3d9e7824ba5301eb5056c852c29ed2">SUNphi::_nnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(auto) constexpr _nnarySmETCompsMergeability(Tuple&lt; MergeDelim...&gt;, Tuple&lt; PosOfResTcsInRefTk...&gt;, IntSeq&lt; PrevPosInts...&gt;, ExtraDelim)</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00224">NnarySmET.hpp:224</a></div></div>
 <div class="ttc" id="TupleOrder_8hpp_html"><div class="ttname"><a href="../../de/d2d/TupleOrder_8hpp.html">TupleOrder.hpp</a></div><div class="ttdoc">Defines filtering and reordering of Tuple. </div></div>
 <div class="ttc" id="namespaceSUNphi_html_a8f2d962267db9817082a1738769b7e39"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39">SUNphi::IntSeqCat</a></div><div class="ttdeci">typename _IntSeqCat&lt; T...&gt;::type IntSeqCat</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dea/IntSeqCat_8hpp_source.html#l00079">IntSeqCat.hpp:79</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_a1704de9acff8e8441dbcf1abc9b5cc01"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01">SUNphi::NOT_PRESENT</a></div><div class="ttdeci">static constexpr int NOT_PRESENT</div><div class="ttdoc">Mark the absence of an element. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d58/Position_8hpp_source.html#l00025">Position.hpp:25</a></div></div>
@@ -563,7 +565,7 @@ $(document).ready(function(){initNavTree('d2/d69/NnarySmET_8hpp_source.html','..
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8bd2374a8eb13af54ead4b5e2e8558c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">SUNphi::Tuple</a></div><div class="ttdeci">std::tuple&lt; Tp...&gt; Tuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00020">TupleClass.hpp:20</a></div></div>
 <div class="ttc" id="TypeTraits_8hpp_html_a299b799ebc40964ec602bf3e6bcca276"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a></div><div class="ttdeci">#define DEFINE_BASE_TYPE(TYPE,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00422">TypeTraits.hpp:422</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_af81f92c45d6b5c8ceeafeb5fae6a139f"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">SUNphi::NnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, NOT_PRESENT &gt;{}, ExtraDelims{})) NnarySmETCompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00302">NnarySmET.hpp:302</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_af81f92c45d6b5c8ceeafeb5fae6a139f"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af81f92c45d6b5c8ceeafeb5fae6a139f">SUNphi::NnarySmETCompsMergeability</a></div><div class="ttdeci">decltype(_nnarySmETCompsMergeability(RefsMD{}, PosOfResTcsInRefTks{}, IntSeqOfSameNumb&lt; tupleSize&lt; RefsMD &gt;, NOT_PRESENT &gt;{}, ExtraDelims{})) NnarySmETCompsMergeability</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d69/NnarySmET_8hpp_source.html#l00304">NnarySmET.hpp:304</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

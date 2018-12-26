@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"d4/df5/SUN_8hpp.html#a703c93385079c219886575613ad71fcc":[3,0,2,5,4,10],
+"d4/df5/SUN_8hpp.html#a8194485c27988603bf011890e00fcb15":[3,0,2,5,4,14],
 "d4/df5/SUN_8hpp.html#aa864de3c70d82f301d1aba5955b4be9f":[3,0,2,5,4,8],
 "d4/df5/SUN_8hpp.html#acdce53faa1c2c790355655aa46c7175c":[3,0,2,5,4,5],
 "d4/df5/SUN_8hpp.html#aeea08fdb768379f4f657584f4f0ab64d":[3,0,2,5,4,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "d8/d0c/structSUNphi_1_1IsNonNegative.html":[2,0,0,105],
 "d8/d0c/structSUNphi_1_1IsNonNegative.html#a740a6436bcceb94af02489aaf5ce082a":[2,0,0,105,0],
 "d8/d1c/classSUNphi_1_1Tens.html":[2,0,0,86],
-"d8/d1c/classSUNphi_1_1Tens.html#a07790d13a53a1f4c739dfa15710f7651":[2,0,0,86,29],
-"d8/d1c/classSUNphi_1_1Tens.html#a15da6f3c9613c0d5475c90e7a48c3c72":[2,0,0,86,24],
-"d8/d1c/classSUNphi_1_1Tens.html#a1d6ded1dcd22920fde3d904c29f61374":[2,0,0,86,22]
+"d8/d1c/classSUNphi_1_1Tens.html#a07790d13a53a1f4c739dfa15710f7651":[2,0,0,86,29]
 };

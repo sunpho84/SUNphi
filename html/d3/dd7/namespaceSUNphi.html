@@ -325,7 +325,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to take the conjugate of a <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a>.  <a href="../../dd/d03/classSUNphi_1_1UMinuser.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html">Wrapper</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to wrap a .  <a href="../../d1/d77/classSUNphi_1_1Wrapper.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to wrap a <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code>.  <a href="../../d1/d77/classSUNphi_1_1Wrapper.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/structSUNphi_1_1__Indexer.html">_Indexer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1661,7 +1661,7 @@ template&lt;typename RefsMD , typename PosOfResTcsInRefTks , typename ExtraDelim
 <p>Determine the mergeability of a given <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> </p>
 <p>A component is declared mergeable if its presence in all <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is of the same nature of the previous one (e.g. present only in one of the <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code>), if its position inside the <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> is consecutive with previous <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code>, and if the component was mergeable in all <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00302">302</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00304">304</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -2643,7 +2643,7 @@ template&lt;int ResPos = 0, typename... MergeDelim, typename... PosOfResTcsInRef
 <p>Determine if a break in mergeability is needed</p>
 <p>Insert a break or not </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00222">222</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00224">224</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -3225,6 +3225,12 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>&lt; Name of the bindfun</p>
 <p>Returns a binder to the only Rw Col or Cn Col type available </p>
+<p><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a> of binding expression</p>
+<p>Tuple containing all Tk types</p>
+<p>Check if row type is available</p>
+<p>Check if column type is available</p>
+<p>Check that not more than one type is available</p>
+<p>Check that at least one type is available </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ref</td><td>Quantity to be bound </td></tr>
@@ -3413,7 +3419,7 @@ template&lt;typename T &gt; </div>
 <p>Dividend</p>
 <p>Remainder </p>
 
-<p>Definition at line <a class="el" href="../../d2/d52/factorize_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d2/d52/factorize_8hpp_source.html">factorize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
 
 </div>
 </div>
@@ -4371,6 +4377,12 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>&lt; Name of the bindfun</p>
 <p>Returns a binder to the only Rw Spin or Cn Spin type available </p>
+<p><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a> of binding expression</p>
+<p>Tuple containing all Tk types</p>
+<p>Check if row type is available</p>
+<p>Check if column type is available</p>
+<p>Check that not more than one type is available</p>
+<p>Check that at least one type is available </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ref</td><td>Quantity to be bound </td></tr>
@@ -4515,8 +4527,8 @@ template&lt;typename... Ts&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>&lt; Name of the <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html" title="Nnary SmET. ">NnarySmET</a> to build</p>
-<p>Simple <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a . ">Wrapper</a> builder called wrap</p>
-<p>Plain <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a . ">Wrapper</a> getting n plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
+<p>Simple <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> builder called wrap</p>
+<p>Plain <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> getting n plain <a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">smets</td><td>SmETs to act upon </td></tr>
@@ -4544,7 +4556,7 @@ template&lt;typename D , TypeIf&lt;(isWrapper&lt; D &gt;), void * &gt;  = nullpt
       </table>
 </div><div class="memdoc">
 <p>&lt; Type to absorb</p>
-<p>Simplify wrap ( <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a . ">Wrapper</a> ) expression</p>
+<p>Simplify wrap ( <a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> ) expression</p>
 <p>Returns the reference </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

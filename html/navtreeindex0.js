@@ -180,6 +180,9 @@ var NAVTREEINDEX0 =
 "d1/d96/structSUNphi_1_1TensComp.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,87,3],
 "d1/d96/structSUNphi_1_1TensComp.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,87,6],
 "d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,87,7],
+"d1/d97/Factorize_8hpp.html":[3,0,2,3,0],
+"d1/d97/Factorize_8hpp.html#ac728c27faf9b21f9472930644b10f103":[3,0,2,3,0,0],
+"d1/d97/Factorize_8hpp_source.html":[3,0,2,3,0],
 "d1/d9b/Assign_8hpp.html":[3,0,2,6,2],
 "d1/d9b/Assign_8hpp.html#a83c86af5f33c184e0f224ae0d8350e64":[3,0,2,6,2,3],
 "d1/d9b/Assign_8hpp.html#aa3235642bedbaf4675b54936e87e2318":[3,0,2,6,2,2],
@@ -238,7 +241,6 @@ var NAVTREEINDEX0 =
 "d2/d33/TupleTypeCat_8hpp.html":[3,0,2,9,4],
 "d2/d33/TupleTypeCat_8hpp.html#aaa2eb9b96050ad18ba1bf5d84cd0080d":[3,0,2,9,4,0],
 "d2/d33/TupleTypeCat_8hpp_source.html":[3,0,2,9,4],
-"d2/d52/factorize_8hpp_source.html":[3,0,2,3,0],
 "d2/d5d/structSUNphi_1_1HasMember__Fund.html":[2,0,0,51],
 "d2/d5d/structSUNphi_1_1HasMember__Fund.html#a08caf826cb432704b6c2d9da0ccdd15c":[2,0,0,51,6],
 "d2/d5d/structSUNphi_1_1HasMember__Fund.html#a36529f656462ddfe190bcae75b4ff642":[2,0,0,51,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "d2/d5d/structSUNphi_1_1HasMember__Fund.html#ab934525e3bd12734d393718aae27e74c":[2,0,0,51,3],
 "d2/d69/NnarySmET_8hpp.html":[3,0,2,6,8],
 "d2/d69/NnarySmET_8hpp.html#a02a293e0950fb7d86bc561238c395038":[3,0,2,6,8,27],
-"d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4":[3,0,2,6,8,11],
-"d2/d69/NnarySmET_8hpp.html#a1e105ab7d52f75825d38c1d3f9e82fbb":[3,0,2,6,8,17],
-"d2/d69/NnarySmET_8hpp.html#a2041f6c6d6c50223b68b2445cf1fc818":[3,0,2,6,8,32]
+"d2/d69/NnarySmET_8hpp.html#a02f66cab4b67fdce75d0608337dcd9f4":[3,0,2,6,8,11]
 };
