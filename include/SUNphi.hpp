@@ -20,6 +20,7 @@
 
 #include <Ints.hpp>
 #include <Ios.hpp>
+#include <Lattice.hpp>
 #include <Math.hpp>
 #include <Metaprogramming.hpp>
 #include <Physics.hpp>
