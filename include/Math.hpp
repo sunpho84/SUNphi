@@ -5,6 +5,6 @@
 ///
 /// \brief Header file for the inclusion of all mathematical stuff
 
-#include <math/factorize.hpp>
+#include <math/Factorize.hpp>
 
 #endif

@@ -191,14 +191,16 @@ namespace SUNphi
   
   /// Get the same \c Fund type of a given ref
 #define SAME_FUND_AS_REF(ID)			\
+  /*! Same \c Fund as Ref ID */		\
   PROVIDE_FUND(typename RemRef<Ref<ID>>::Fund)
   
   /// Get the same assignability of a given ref
 #define AS_ASSIGNABLE_AS_REF(ID)					\
-  IS_ASSIGNABLE_ATTRIBUTE(/* As assignable as ref ID */,Ref<ID>::isAssignable)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! As assignable as ref ID */,Ref<ID>::isAssignable)
   
   /// Get the same \c TensKind of a given ref
 #define SAME_TK_AS_REF(ID)			\
+  /*! Same \c TensKind as Ref ID */		\
   PROVIDE_TK(typename RemRef<Ref<ID>>::Tk)
   
   /// Provide the position of result Tk \c TensComp in each input

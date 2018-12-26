@@ -18,7 +18,7 @@ namespace SUNphi
   // Base type to qualify as \c Wrapper
   DEFINE_BASE_TYPE(Wrapper);
   
-  /// Class to wrap a \cSmET
+  /// Class to wrap a \c SmET
   template <typename..._Refs>                               // Type of the expression to wrap
   class Wrapper :
     public BaseWrapper,                                     // Inherit from \c BaseWrapper to detect in expression

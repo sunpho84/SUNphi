@@ -93,6 +93,7 @@ namespace SUNphi
   /// Determine mergeability of pair of \c TensKind
   namespace PairOfTensKindMergeability
   {
+    /// Type returned when is absent in both
     using AbsentInBoth=
       IntSeq<false,false>;
     

@@ -38,28 +38,28 @@ namespace SUNphi
   DECLAUTO NAME(T&& ref,      /*!< Quantity to be bound              */	\
 		const int id) /*!< Component to bind                 */	\
   {									\
-    /* TensKind of binding expression */				\
+    /*! TensKind of binding expression */				\
     using Tk=								\
-      typename RemRef<T>::Tk;					\
+      typename RemRef<T>::Tk;						\
     									\
-    /* Tuple containing all Tk types */					\
+    /*! Tuple containing all Tk types */				\
     using Tp=								\
       typename Tk::types;						\
     									\
-    /* Check if row type is available */				\
+    /*! Check if row type is available */				\
     constexpr bool hasRw=						\
       tupleHasType<Rw ## TG,Tp>;					\
     									\
-    /* Check if column type is available */				\
+    /*! Check if column type is available */				\
     constexpr bool hasCn=						\
       tupleHasType<Cn ## TG,Tp>;					\
     									\
-    /* Check that not more than one type is available */		\
+    /*! Check that not more than one type is available */		\
     constexpr bool hasOnlyOneType=					\
       (hasRw+hasCn<2);							\
     static_assert(hasOnlyOneType,"Both types Rw and Cn identfied!");	\
     									\
-    /* Check that at least one type is available */			\
+    /*! Check that at least one type is available */			\
     constexpr bool hasAtLeastOneType=					\
       (hasRw+hasCn>0);							\
     static_assert(hasAtLeastOneType,"No types Rw and Cn identfied!");	\
@@ -91,11 +91,11 @@ namespace SUNphi
     /// Index to get
     const int id;
     
-    // \c TensKind of the bound type
+    /// \c TensKind of the bound type
     using NestedTk=
       typename RemRef<Ref<0>>::Tk;
     
-    // Types of the \c TensKind
+    /// Types of the \c TensKind
     using NestedTypes=
       typename NestedTk::types;
     
