@@ -158,6 +158,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dde/structSUNphi_1_1__RangeSeq.html">_RangeSeq</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">GridHashable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html">GridHashable&lt; T, NDim, Coord, Idx, HASHING &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db8/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html">GridHashable&lt; T, NDim, Coord, Idx, NOT_HASHING &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">Grid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A grid of points spanning an hypercubic grid.  <a href="../../dd/dca/classSUNphi_1_1Grid.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1053,6 +1059,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a326249163f03337f7d6cbda5441e407e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto) constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a326249163f03337f7d6cbda5441e407e">rangeSeq</a></td></tr>
 <tr class="memdesc:a326249163f03337f7d6cbda5441e407e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a RangeSeq with given types.  <a href="#a326249163f03337f7d6cbda5441e407e">More...</a><br/></td></tr>
 <tr class="separator:a326249163f03337f7d6cbda5441e407e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30db2a0dbc86ba898e732d2739f21b2f"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a30db2a0dbc86ba898e732d2739f21b2f">HASHING</a></td></tr>
+<tr class="memdesc:a30db2a0dbc86ba898e732d2739f21b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant asserting to hash.  <a href="#a30db2a0dbc86ba898e732d2739f21b2f">More...</a><br/></td></tr>
+<tr class="separator:a30db2a0dbc86ba898e732d2739f21b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658bd5f263c33bda3f31ebf42d7dd68e"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a658bd5f263c33bda3f31ebf42d7dd68e">NOT_HASHING</a></td></tr>
+<tr class="memdesc:a658bd5f263c33bda3f31ebf42d7dd68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant asserting not to hash.  <a href="#a658bd5f263c33bda3f31ebf42d7dd68e">More...</a><br/></td></tr>
+<tr class="separator:a658bd5f263c33bda3f31ebf42d7dd68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedb0247d8b243461ee814daf950b4b1e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aedb0247d8b243461ee814daf950b4b1e"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aedb0247d8b243461ee814daf950b4b1e">isClass</a></td></tr>
 <tr class="memdesc:aedb0247d8b243461ee814daf950b4b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a type is a class.  <a href="#aedb0247d8b243461ee814daf950b4b1e">More...</a><br/></td></tr>
@@ -3418,6 +3430,12 @@ template&lt;typename T &gt; </div>
 <p>Initial value of the divisor</p>
 <p>Dividend</p>
 <p>Remainder </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Number to factorize </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
 
@@ -3848,7 +3866,7 @@ template&lt;class TK , size_t NDynamic, class... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/d74/Indexer_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../d2/d74/Indexer_8hpp_source.html">Indexer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/d74/Indexer_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d2/d74/Indexer_8hpp_source.html">Indexer.hpp</a>.</p>
 
 </div>
 </div>
@@ -5010,6 +5028,32 @@ template&lt;int I, int... Ints&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a30db2a0dbc86ba898e732d2739f21b2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::HASHING</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">true</span></div>
+</div><!-- fragment -->
+<p>Constant asserting to hash. </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aae9bc0ae600b50d77d6300e7b4905e82"></a>
 <div class="memitem">
 <div class="memproto">
@@ -6129,6 +6173,32 @@ template&lt;class T , class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 <p>Gives external visibility to the implementation </p>
 
 <p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00168">168</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a658bd5f263c33bda3f31ebf42d7dd68e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::NOT_HASHING</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    <span class="keyword">false</span></div>
+</div><!-- fragment -->
+<p>Constant asserting not to hash. </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

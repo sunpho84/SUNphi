@@ -11,5 +11,5 @@ var searchData=
   ['constrainisnnarysmet',['ConstrainIsNnarySmET',['../d3/dd7/namespaceSUNphi.html#a2041f6c6d6c50223b68b2445cf1fc818',1,'SUNphi']]],
   ['constrainisnotbinarysmet',['ConstrainIsNotBinarySmET',['../d3/dd7/namespaceSUNphi.html#a41e611b7ea9220b485bb75813e26a734',1,'SUNphi']]],
   ['constrainisnotnnarysmet',['ConstrainIsNotNnarySmET',['../d3/dd7/namespaceSUNphi.html#af335d82662853907ce03eb8996fafb8a',1,'SUNphi']]],
-  ['coords',['Coords',['../dd/dca/classSUNphi_1_1Grid.html#a3710fdca3b303f1eec7871e58011614a',1,'SUNphi::Grid']]]
+  ['coords',['Coords',['../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d',1,'SUNphi::Grid']]]
 ];
