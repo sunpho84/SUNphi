@@ -299,12 +299,12 @@ var hierarchy =
     [ "FalseType", null, [
       [ "SUNphi::_isTuple< T >", "d3/d6f/structSUNphi_1_1__isTuple.html", null ]
     ] ],
-    [ "SUNphi::GridHashable< T, NDim, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", null ],
-    [ "SUNphi::GridHashable< Grid< NDim, Coord, Idx, Hashing >, NDim, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", [
-      [ "SUNphi::Grid< NDim, Coord, Idx, Hashing >", "dd/dca/classSUNphi_1_1Grid.html", null ]
+    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", null ],
+    [ "SUNphi::GridHashable< Grid< NDims, Coord, Idx, Hashing >, NDims, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", [
+      [ "SUNphi::Grid< NDims, Coord, Idx, Hashing >", "dd/dca/classSUNphi_1_1Grid.html", null ]
     ] ],
-    [ "SUNphi::GridHashable< T, NDim, Coord, Idx, HASHING >", "dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html", null ],
-    [ "SUNphi::GridHashable< T, NDim, Coord, Idx, NOT_HASHING >", "de/db8/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html", null ],
+    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, HASHING >", "d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html", null ],
+    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, NOT_HASHING >", "df/da9/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html", null ],
     [ "SUNphi::HasMember_assertMergeableWith< Type >", "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html", null ],
     [ "SUNphi::HasMember_compSize< Type >", "de/d50/structSUNphi_1_1HasMember__compSize.html", null ],
     [ "SUNphi::HasMember_eval< Type >", "d8/dfe/structSUNphi_1_1HasMember__eval.html", null ],

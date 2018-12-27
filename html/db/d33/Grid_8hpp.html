@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('db/d33/Grid_8hpp.html','../../');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -114,7 +115,7 @@ $(document).ready(function(){initNavTree('db/d33/Grid_8hpp.html','../../');});
 </div><!--header-->
 <div class="contents">
 
-<p>Defines hypercubic grids.  
+<p>Defines hypercubic cartesian grids.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;array&gt;</code><br/>
 <code>#include &lt;vector&gt;</code><br/>
@@ -125,13 +126,13 @@ $(document).ready(function(){initNavTree('db/d33/Grid_8hpp.html','../../');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">SUNphi::GridHashable&lt; T, NDim, Coord, Idx, Hashing &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, Hashing &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html">SUNphi::GridHashable&lt; T, NDim, Coord, Idx, HASHING &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db8/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html">SUNphi::GridHashable&lt; T, NDim, Coord, Idx, NOT_HASHING &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHING &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid&lt; NDim, Coord, Idx, Hashing &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid&lt; NDims, Coord, Idx, Hashing &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A grid of points spanning an hypercubic grid.  <a href="../../dd/dca/classSUNphi_1_1Grid.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -151,13 +152,21 @@ Macros</h2></td></tr>
 <tr class="memdesc:a562b8131f1b0d66fdf0f3a1b36100517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to enable Grid debug. <br/></td></tr>
 <tr class="separator:a562b8131f1b0d66fdf0f3a1b36100517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac682f0879a1c598390150ca77ce82479"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac682f0879a1c598390150ca77ce82479">SUNphi::Orientation</a> { <b>BW</b> =0, 
+<b>FW</b> =1
+ }</td></tr>
+<tr class="memdesc:ac682f0879a1c598390150ca77ce82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to identifiy orientations. <br/></td></tr>
+<tr class="separator:ac682f0879a1c598390150ca77ce82479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4a3118407efbe9bd1ecd03eb46e34982"></a>
-template&lt;int NDim, typename Coord &gt; </td></tr>
-<tr class="memitem:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4a3118407efbe9bd1ecd03eb46e34982">SUNphi::Grid</a> (const Coord(&amp;sides)[NDim]) -&gt; Grid&lt; NDim, int &gt;</td></tr>
-<tr class="memdesc:a4a3118407efbe9bd1ecd03eb46e34982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br/></td></tr>
-<tr class="separator:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b1be5741231d25243006d58dec4eecb"></a>
+template&lt;int NDims, typename Coord &gt; </td></tr>
+<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0b1be5741231d25243006d58dec4eecb">SUNphi::Grid</a> (const Coord(&amp;sides)[NDims]) -&gt; Grid&lt; NDims, int &gt;</td></tr>
+<tr class="memdesc:a0b1be5741231d25243006d58dec4eecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br/></td></tr>
+<tr class="separator:a0b1be5741231d25243006d58dec4eecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -169,7 +178,9 @@ Variables</h2></td></tr>
 <tr class="separator:a658bd5f263c33bda3f31ebf42d7dd68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines hypercubic grids. </p>
+<div class="textblock"><p>Defines hypercubic cartesian grids. </p>
+<p>An hypercubic grid with number of dimensions fixed at compile time. Periodic boundary conditions are imposed at all faces and lexicographic indexing with first-neighbours connectivity is embedded. The coordinates od points and neighbors can be hashed, deciding at compile time.</p>
+<p>Given the number of dimensions, the two orientations are provided, such that the 2*nDims neighbors are stored alternating backward and forward directions. </p>
 
 <p>Definition in file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -183,11 +194,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    \</div>
-<div class="line">    typedef std::array&lt;Coord,NDim&gt; Coords</div>
+<div class="line">    typedef std::array&lt;Coord,NDims&gt; Coords</div>
 </div><!-- fragment -->
 <p>Provide the type Coords. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

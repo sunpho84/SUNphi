@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('d3/dd7/namespaceSUNphi.html','../../')
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -160,9 +161,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">GridHashable</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html">GridHashable&lt; T, NDim, Coord, Idx, HASHING &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html">GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/db8/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html">GridHashable&lt; T, NDim, Coord, Idx, NOT_HASHING &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html">GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHING &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">Grid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A grid of points spanning an hypercubic grid.  <a href="../../dd/dca/classSUNphi_1_1Grid.html#details">More...</a><br/></td></tr>
@@ -609,6 +610,14 @@ template&lt;int I, typename Tp , typename  = EnableIf&lt;isTuple&lt;Tp&gt;&gt;&g
 <tr class="memitem:a85d1ab1bfca5f3bd9418a65976bbe4f5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a85d1ab1bfca5f3bd9418a65976bbe4f5">TupleWrap</a> = typename <a class="el" href="../../d9/d27/structSUNphi_1_1__TupleWrap.html">_TupleWrap</a>&lt; T &gt;::type</td></tr>
 <tr class="separator:a85d1ab1bfca5f3bd9418a65976bbe4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac682f0879a1c598390150ca77ce82479"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac682f0879a1c598390150ca77ce82479">Orientation</a> { <b>BW</b> =0, 
+<b>FW</b> =1
+ }</td></tr>
+<tr class="memdesc:ac682f0879a1c598390150ca77ce82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to identifiy orientations. <br/></td></tr>
+<tr class="separator:ac682f0879a1c598390150ca77ce82479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad3ad0ad4b8c4ec01f0212c9780c93edb"><td class="memTemplParams" colspan="2">template&lt;int I, int Head, int... Tail&gt; </td></tr>
@@ -707,11 +716,11 @@ template&lt;class S , class Head , class... Tail&gt; </td></tr>
 <tr class="memitem:a6616fc919f745190c3d26f6062f45f4e"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e">print</a> (S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)</td></tr>
 <tr class="memdesc:a6616fc919f745190c3d26f6062f45f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic print to a stream. <br/></td></tr>
 <tr class="separator:a6616fc919f745190c3d26f6062f45f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4a3118407efbe9bd1ecd03eb46e34982"></a>
-template&lt;int NDim, typename Coord &gt; </td></tr>
-<tr class="memitem:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4a3118407efbe9bd1ecd03eb46e34982">Grid</a> (const Coord(&amp;sides)[NDim]) -&gt; <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">Grid</a>&lt; NDim, int &gt;</td></tr>
-<tr class="memdesc:a4a3118407efbe9bd1ecd03eb46e34982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br/></td></tr>
-<tr class="separator:a4a3118407efbe9bd1ecd03eb46e34982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b1be5741231d25243006d58dec4eecb"></a>
+template&lt;int NDims, typename Coord &gt; </td></tr>
+<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0b1be5741231d25243006d58dec4eecb">Grid</a> (const Coord(&amp;sides)[NDims]) -&gt; <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">Grid</a>&lt; NDims, int &gt;</td></tr>
+<tr class="memdesc:a0b1be5741231d25243006d58dec4eecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br/></td></tr>
+<tr class="separator:a0b1be5741231d25243006d58dec4eecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac728c27faf9b21f9472930644b10f103">factorize</a> (T n)</td></tr>
 <tr class="memdesc:ac728c27faf9b21f9472930644b10f103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="#ac728c27faf9b21f9472930644b10f103">More...</a><br/></td></tr>
@@ -5050,7 +5059,7 @@ template&lt;int I, int... Ints&gt; </div>
 </div><!-- fragment -->
 <p>Constant asserting to hash. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -6198,7 +6207,7 @@ template&lt;class T , class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 </div><!-- fragment -->
 <p>Constant asserting not to hash. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
