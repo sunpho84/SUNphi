@@ -6,8 +6,19 @@
 /// \brief Defines hypercubic grids
 
 #include <array>
+#include <vector>
 
 #include <metaprogramming/CRTP.hpp>
+#include <system/Debug.hpp>
+
+/// Provide the type Coords
+#define PROVIDE_COORDS				\
+  /*! Type to hold sizes, coordinate, etc */	\
+    typedef std::array<Coord,NDim> Coords
+
+/// Flag to enable Grid debug
+#define GRID_DEBUG \
+  true
 
 namespace SUNphi
 {
@@ -47,21 +58,47 @@ namespace SUNphi
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
-    /// Hashed volume
-    Idx volume;
+    PROVIDE_COORDS;
+    
+    /// Hashed coords of all points
+    std::vector<Coords> coordsOfPointsHashTable;
+    
+    /// Set the hash table of coordinates of all points
+    void fillCoordsOfPointsHashTables()
+    {
+      /// &Proxy volume
+      const Idx volume=
+	CRTP_CAST.volume();
+      
+      // Check hashability
+      if(volume>coordsOfPointsHashTable.max_size())
+	CRASH("Cannot hash a volume of",volume);
+      
+      // Resize the hash table of coordsOfPoints
+      coordsOfPointsHashTable.resize(volume);
+      
+      // Fill the table
+      for(Idx i=0;i<volume;i++)
+	coordsOfPointsHashTable[i]=
+	  CRTP_CAST.computeCoordsOfPoint(i);
+    }
     
   public:
     
-    /// Set the volume, computing it with external routine
-    void setVolume()
+    /// Fill all the HashTables
+    void fillHashTables()
     {
-      volume=(~*this).computeVolume();
+      fillCoordsOfPointsHashTables();
     }
     
-    /// Get the volume
-    Idx getVolume() const
+    /////////////////////////////////////////////////////////////////
+    
+    /// Get the coords of given point, computing it
+    Coords coordsOfPoint(Idx i) const
     {
-      return volume;
+      CRTP_CAST.assertPointIsInRange(i);
+      
+      return coordsOfPointsHashTable[i];
     }
     
     /// Flag asserting that hashing
@@ -69,6 +106,8 @@ namespace SUNphi
       "Hashing";
     
   };
+  
+  /////////////////////////////////////////////////////////////////
   
   /// Hashable properties of a \c Grid
   ///
@@ -86,17 +125,14 @@ namespace SUNphi
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
+    PROVIDE_COORDS;
+    
   public:
     
-    /// Set the volume, doing nothing
-    void setVolume()
+    /// Get the coords of given point, computing it
+    Coords getCoordsOfPoint(Idx i) const
     {
-    }
-    
-    /// Get the volume
-    Idx getVolume() const
-    {
-      return (~*this).computeVolume();
+      return CRTP_CAST.computeCoordsOfPoint(i);
     }
     
     /// Flag asserting not hashing
@@ -119,15 +155,26 @@ namespace SUNphi
 			Idx,
 			Hashing>
   {
-  public:
-    
-    /// Type to hold sizes, coordinate, etc
-    typedef std::array<Coord,NDim> Coords;
+    PROVIDE_COORDS;
     
   private:
     
     /// Side of the grid
     Coords sides;
+    
+    /// Volume of the grid
+    Idx _volume;
+    
+    /// Set the volume, calling computing routine
+    void setVolume()
+    {
+      /// Output volume, initially 1
+      _volume=1;
+      
+      // Loop on all dimension, taking product
+      for(auto &c : sides)
+	_volume*=c;
+    }
     
   public:
     
@@ -135,14 +182,37 @@ namespace SUNphi
     static constexpr int nDim=
       NDim;
     
-    /// Compute the volume
-    Idx computeVolume() const
+    /// Get the volume
+    const Idx& volume() const
     {
-      Idx volume=1;
-      for(auto &c : sides)
-	volume*=c;
-      
-      return volume;
+      return _volume;
+    }
+    
+    /// Check that a given point is in range
+    void assertPointIsInRange(const Idx& i) const
+    {
+      if constexpr(GRID_DEBUG)
+	if(i<0 or i>=volume())
+	  CRASH("Cannot access to element",i);
+    }
+    
+    /// Check that a given set of coords are in range
+    void assertCoordsAreInRange(const Coords& cs) const
+    {
+      if constexpr(GRID_DEBUG)
+	for(int mu=0;mu<nDim;mu++)
+	  {
+	    /// Maximal value
+	    const Coord& m=
+	      CRTP_CAST.sides[mu];
+	    
+	    /// Coord mu value
+	    const Coord& c=
+	      cs[mu];
+	    
+	    if(c<0 or c>=m)
+	      CRASH("Cannot have dimension",mu,"equal to",c,", negative or larger than",m);
+	  }
     }
     
     /// Set the sides and trigger the volume change
@@ -150,7 +220,62 @@ namespace SUNphi
     {
       sides=extSides;
       
-      this->setVolume();
+      setVolume();
+      
+      if constexpr(Hashing)
+	this->fillHashTables();
+    }
+    
+    /// Compte the coordinate of point i
+    Coords computeCoordsOfPoint(Idx i) const
+    {
+      assertPointIsInRange(i);
+      
+      /// Result
+      Coords c;
+      
+      for(int mu=nDim-1;mu>=0;mu--)
+	{
+	  /// Dividend, corresponding to the \c mu side length
+	  const Coord& d=sides[mu];
+	  
+	  /// Quozient, corresponding to the index of the remaining NDIM-1 components
+	  const Idx q=i/d;
+	  
+	  /// Remainder, corresponding to the coordinate
+	  const Coord r=i-d*q;
+	  
+	  // Store the component
+	  c[mu]=r;
+	  
+	  // Iterate on the remaining NDIM-1 components
+	  i=q;
+	}
+      
+      return c;
+    }
+    
+    /// Compute the point of given coords
+    Idx pointOfCoords(const Coords& cs)
+    {
+      assertCoordsAreInRange(cs);
+      
+      /// Returned point
+      Idx out=
+	0;
+      
+      for(int mu=0;mu<nDim;mu++)
+	{
+	  /// Grid side
+	  const Coord& s=
+	    CRTP_CAST.sides[mu];
+	  
+	  // Increment the coordinate
+	  out=
+	    out*s[mu]+cs[mu];
+	}
+      
+      return out;
     }
     
     /// Construct from sides
@@ -167,5 +292,7 @@ namespace SUNphi
   Grid(const Coord(&sides)[NDim])
     -> Grid<NDim,int>;
 }
+
+#undef PROVIDE_COORDS
 
 #endif
