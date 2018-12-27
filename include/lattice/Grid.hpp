@@ -3,7 +3,17 @@
 
 /// \file Grid.hpp
 ///
-/// \brief Defines hypercubic grids
+/// \brief Defines hypercubic cartesian grids
+///
+/// An hypercubic grid with number of dimensions fixed at compile
+/// time. Periodic boundary conditions are imposed at all faces and
+/// lexicographic indexing with first-neighbours connectivity is
+/// embedded. The coordinates od points and neighbors can be hashed,
+/// deciding at compile time.
+///
+/// Given the number of dimensions, the two orientations are provided,
+/// such that the 2*nDims neighbors are stored alternating backward
+/// and forward directions.
 
 #include <array>
 #include <vector>
@@ -14,7 +24,7 @@
 /// Provide the type Coords
 #define PROVIDE_COORDS				\
   /*! Type to hold sizes, coordinate, etc */	\
-    typedef std::array<Coord,NDim> Coords
+    typedef std::array<Coord,NDims> Coords
 
 /// Flag to enable Grid debug
 #define GRID_DEBUG \
@@ -22,6 +32,9 @@
 
 namespace SUNphi
 {
+  /// Value to identifiy orientations
+  enum Orientation{BW=0,FW=1};
+  
   /// Constant asserting to hash
   static constexpr bool HASHING=
     true;
@@ -36,7 +49,7 @@ namespace SUNphi
   ///
   /// Forward implementation
   template <typename T,      // External type inheriting from
-	    int NDim,        // Number of dimensions
+	    int NDims,       // Number of dimensions
 	    typename Coord,  // Type of coordinate values
 	    typename Idx,    // Type of index of points
 	    bool Hashing>    // Store or not tables
@@ -46,11 +59,11 @@ namespace SUNphi
   ///
   /// Hashing version
   template <typename T,      // External type inheriting from
-	    int NDim,        // Number of dimensions
+	    int NDims,       // Number of dimensions
 	    typename Coord,  // Type of coordinate values
 	    typename Idx>    // Type of index of points
   class GridHashable<T,
-		     NDim,
+		     NDims,
 		     Coord,
 		     Idx,
 		     HASHING>
@@ -115,11 +128,11 @@ namespace SUNphi
   ///
   /// Not hashing version
   template <typename T,      // External type inheriting from
-	    int NDim,        // Number of dimensions
+	    int NDims,       // Number of dimensions
 	    typename Coord,  // Type of coordinate values
 	    typename Idx>    // Type of index of points
   class GridHashable<T,
-		     NDim,
+		     NDims,
 		     Coord,
 		     Idx,
 		     NOT_HASHING>
@@ -146,13 +159,13 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// A grid of points spanning an hypercubic grid
-  template <int NDim=4,              // Number of dimensions
+  template <int NDims=4,             // Number of dimensions
 	    typename Coord=int32_t,  // Type of coordinate values
 	    typename Idx=int64_t,    // Type of index of points
 	    bool Hashing=true>       // Store or not tables
   class Grid :
-    public GridHashable<Grid<NDim,Coord,Idx,Hashing>,
-			NDim,
+    public GridHashable<Grid<NDims,Coord,Idx,Hashing>,
+			NDims,
 			Coord,
 			Idx,
 			Hashing>
@@ -183,8 +196,12 @@ namespace SUNphi
   public:
     
     /// Number of dimensions
-    static constexpr int nDim=
-      NDim;
+    static constexpr int nDims=
+      NDims;
+    
+    /// Number of oriented directions
+    static constexpr int nOriDirs=
+      2*NDims;
     
     /// Get the volume
     const Idx& volume() const
@@ -223,7 +240,7 @@ namespace SUNphi
     template <typename F>            // Type of the function
     void forAllDims(F&& f) const   ///< Function to be called
     {
-      for(int mu=0;mu<nDim;mu++)
+      for(int mu=0;mu<nDims;mu++)
 	f(mu);
     }
     
@@ -235,10 +252,34 @@ namespace SUNphi
 	f(i);
     }
     
+    /// Loop on all oriented directions calling the passed function
+    template <typename F>               // Type of the function
+    void forAllOriDirs(F&& f) const   ///< Function to be called
+    {
+      for(int oriDir=0;oriDir<nOriDirs;oriDir++)
+	f(oriDir);
+    }
+    
+    /// Orientation of an oriented directions
+    Orientation oriOfOriDir(int oriDir) const
+    {
+      if(oriDir&0x1)
+	return FW;
+      else
+	return BW;
+    }
+    
+    /// Dimension of an oriented directions
+    int dimOfOriDir(int oriDir) const
+    {
+      return oriDir>>1;
+    }
+    
     /// Set the sides and trigger the volume change
     void setSides(const Coords& extSides)
     {
-      sides=extSides;
+      sides=
+	extSides;
       
       setVolume();
       
@@ -254,12 +295,12 @@ namespace SUNphi
       /// Result
       Coords c;
       
-      for(int mu=nDim-1;mu>=0;mu--)
+      for(int mu=nDims-1;mu>=0;mu--)
 	{
 	  /// Dividend, corresponding to the \c mu side length
 	  const Coord& d=sides[mu];
 	  
-	  /// Quozient, corresponding to the index of the remaining NDIM-1 components
+	  /// Quozient, corresponding to the index of the remaining \cnDims-1 components
 	  const Idx q=i/d;
 	  
 	  /// Remainder, corresponding to the coordinate
@@ -268,7 +309,7 @@ namespace SUNphi
 	  // Store the component
 	  c[mu]=r;
 	  
-	  // Iterate on the remaining NDIM-1 components
+	  // Iterate on the remaining nDims-1 components
 	  i=q;
 	}
       
@@ -307,10 +348,10 @@ namespace SUNphi
   };
   
   /// Deduction guide for bracket list
-  template <int NDim,
+  template <int NDims,
 	    typename Coord>
-  Grid(const Coord(&sides)[NDim])
-    -> Grid<NDim,int>;
+  Grid(const Coord(&sides)[NDims])
+    -> Grid<NDims,int>;
 }
 
 #undef PROVIDE_COORDS
