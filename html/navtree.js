@@ -42,7 +42,7 @@ var NAVTREEINDEX =
 "d8/d1c/classSUNphi_1_1Tens.html#a07790d13a53a1f4c739dfa15710f7651",
 "da/df3/Wrap_8hpp.html#aa1491c895b9023d418376db2728889c1",
 "dd/d03/classSUNphi_1_1UMinuser.html#a89d5c37bb92dfd3969eb191b9bca1e6e",
-"functions_func_u.html"
+"functions_func_s.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -5,6 +5,8 @@ var classSUNphi_1_1Grid =
     [ "assertCoordsAreInRange", "dd/dca/classSUNphi_1_1Grid.html#a38819e618aaebc7b8f67d7699efbb281", null ],
     [ "assertPointIsInRange", "dd/dca/classSUNphi_1_1Grid.html#a84fce8a7a7e2ef54d53966c8c443d6c5", null ],
     [ "computeCoordsOfPoint", "dd/dca/classSUNphi_1_1Grid.html#a53581e4229c82c9021a2bf4818af8031", null ],
+    [ "forAllDims", "dd/dca/classSUNphi_1_1Grid.html#a0346bef7ea0a11d9ecc6e0c0d34dd51f", null ],
+    [ "forAllPoints", "dd/dca/classSUNphi_1_1Grid.html#a350170537adcc4f2681a4afe9d759f48", null ],
     [ "pointOfCoords", "dd/dca/classSUNphi_1_1Grid.html#a5f6589af745ea737f3728f299e4d6528", null ],
     [ "setSides", "dd/dca/classSUNphi_1_1Grid.html#a465dc3f447a984eb5e152794cc089b7f", null ],
     [ "setVolume", "dd/dca/classSUNphi_1_1Grid.html#a7657e7f9a9c249d0928d9c7b92b486d3", null ],
