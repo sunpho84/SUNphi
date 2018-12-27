@@ -1,7 +1,8 @@
 var searchData=
 [
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
-  ['pos',['pos',['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder::pos()'],['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()']]],
+  ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a5f6589af745ea737f3728f299e4d6528',1,'SUNphi::Grid']]],
+  ['pos',['Pos',['../dc/d16/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_4_01_4.html#a86234f2a9d74249c2fdcc23c568d6927',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List...&gt; &gt;::Pos()'],['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder::pos()']]],
   ['pos_5ft',['Pos_t',['../de/d58/classSUNphi_1_1Adder.html#a4dde56f09aa7f3a174b89cc532adbdd6',1,'SUNphi::Adder::Pos_t()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641',1,'SUNphi::MulAdder::Pos_t()']]],
   ['position_2ehpp',['Position.hpp',['../dc/d58/Position_8hpp.html',1,'']]],
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#a5a744623c20b396fe872611e64eafb1d',1,'SUNphi::Conjer']]],
@@ -25,6 +26,7 @@ var searchData=
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],
   ['provide_5fcall_5foperator',['PROVIDE_CALL_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879',1,'BaseSmET.hpp']]],
   ['provide_5fconst_5for_5fnot_5fdefault_5fevaluator',['PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR',['../d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad',1,'Assign.hpp']]],
+  ['provide_5fcoords',['PROVIDE_COORDS',['../db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5',1,'Grid.hpp']]],
   ['provide_5fcrtp_5fcast_5foperator',['PROVIDE_CRTP_CAST_OPERATOR',['../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882',1,'CRTP.hpp']]],
   ['provide_5feval',['PROVIDE_EVAL',['../d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b',1,'TensStor.hpp']]],
   ['provide_5fevaluator',['PROVIDE_EVALUATOR',['../dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789',1,'TensClass.hpp']]],

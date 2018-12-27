@@ -106,9 +106,10 @@ $(document).ready(function(){initNavTree('dd/dca/classSUNphi_1_1Grid.html','../.
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d2/d8a/classSUNphi_1_1Grid-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -130,23 +131,29 @@ Inheritance diagram for SUNphi::Grid&lt; NDim, Coord, Idx, Hashing &gt;:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a5688021ddd2bc93d43fe1d5d2aa1674d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5688021ddd2bc93d43fe1d5d2aa1674d"></a>
-typedef std::array&lt; Coord, NDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a></td></tr>
-<tr class="memdesc:a5688021ddd2bc93d43fe1d5d2aa1674d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type to hold sizes, coordinate, etc. <br/></td></tr>
-<tr class="separator:a5688021ddd2bc93d43fe1d5d2aa1674d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3f677a14b856c49322b5f1740d36c9a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f677a14b856c49322b5f1740d36c9a0"></a>
-Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a3f677a14b856c49322b5f1740d36c9a0">computeVolume</a> () const </td></tr>
-<tr class="memdesc:a3f677a14b856c49322b5f1740d36c9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the volume. <br/></td></tr>
-<tr class="separator:a3f677a14b856c49322b5f1740d36c9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c58294685abdd1be622e3936885ccb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5c58294685abdd1be622e3936885ccb"></a>
+const Idx &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ac5c58294685abdd1be622e3936885ccb">volume</a> () const </td></tr>
+<tr class="memdesc:ac5c58294685abdd1be622e3936885ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume. <br/></td></tr>
+<tr class="separator:ac5c58294685abdd1be622e3936885ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fce8a7a7e2ef54d53966c8c443d6c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84fce8a7a7e2ef54d53966c8c443d6c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a84fce8a7a7e2ef54d53966c8c443d6c5">assertPointIsInRange</a> (const Idx &amp;i) const </td></tr>
+<tr class="memdesc:a84fce8a7a7e2ef54d53966c8c443d6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a given point is in range. <br/></td></tr>
+<tr class="separator:a84fce8a7a7e2ef54d53966c8c443d6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38819e618aaebc7b8f67d7699efbb281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a38819e618aaebc7b8f67d7699efbb281">assertCoordsAreInRange</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;cs) const </td></tr>
+<tr class="memdesc:a38819e618aaebc7b8f67d7699efbb281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a given set of coords are in range.  <a href="#a38819e618aaebc7b8f67d7699efbb281">More...</a><br/></td></tr>
+<tr class="separator:a38819e618aaebc7b8f67d7699efbb281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a465dc3f447a984eb5e152794cc089b7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a465dc3f447a984eb5e152794cc089b7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a465dc3f447a984eb5e152794cc089b7f">setSides</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;extSides)</td></tr>
 <tr class="memdesc:a465dc3f447a984eb5e152794cc089b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sides and trigger the volume change. <br/></td></tr>
 <tr class="separator:a465dc3f447a984eb5e152794cc089b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53581e4229c82c9021a2bf4818af8031"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a53581e4229c82c9021a2bf4818af8031">computeCoordsOfPoint</a> (Idx i) const </td></tr>
+<tr class="memdesc:a53581e4229c82c9021a2bf4818af8031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte the coordinate of point i.  <a href="#a53581e4229c82c9021a2bf4818af8031">More...</a><br/></td></tr>
+<tr class="separator:a53581e4229c82c9021a2bf4818af8031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6589af745ea737f3728f299e4d6528"><td class="memItemLeft" align="right" valign="top">Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5f6589af745ea737f3728f299e4d6528">pointOfCoords</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;cs)</td></tr>
+<tr class="memdesc:a5f6589af745ea737f3728f299e4d6528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the point of given coords.  <a href="#a5f6589af745ea737f3728f299e4d6528">More...</a><br/></td></tr>
+<tr class="separator:a5f6589af745ea737f3728f299e4d6528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f4bed5c86248cc47c6243bfb61bfed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7f4bed5c86248cc47c6243bfb61bfed"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ab7f4bed5c86248cc47c6243bfb61bfed">Grid</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a2dfda8ff4e022bc5ee70a0b9734a5341">sides</a>)</td></tr>
 <tr class="memdesc:ab7f4bed5c86248cc47c6243bfb61bfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from sides. <br/></td></tr>
@@ -158,12 +165,27 @@ Static Public Attributes</h2></td></tr>
 <tr class="memdesc:ab8718690bfefe0c5def65d9372782110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dimensions.  <a href="#ab8718690bfefe0c5def65d9372782110">More...</a><br/></td></tr>
 <tr class="separator:ab8718690bfefe0c5def65d9372782110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a5688021ddd2bc93d43fe1d5d2aa1674d"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; Coord, NDim &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a></td></tr>
+<tr class="separator:a5688021ddd2bc93d43fe1d5d2aa1674d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7657e7f9a9c249d0928d9c7b92b486d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a7657e7f9a9c249d0928d9c7b92b486d3">setVolume</a> ()</td></tr>
+<tr class="memdesc:a7657e7f9a9c249d0928d9c7b92b486d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the volume, calling computing routine.  <a href="#a7657e7f9a9c249d0928d9c7b92b486d3">More...</a><br/></td></tr>
+<tr class="separator:a7657e7f9a9c249d0928d9c7b92b486d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a2dfda8ff4e022bc5ee70a0b9734a5341"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dfda8ff4e022bc5ee70a0b9734a5341"></a>
 <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a2dfda8ff4e022bc5ee70a0b9734a5341">sides</a></td></tr>
 <tr class="memdesc:a2dfda8ff4e022bc5ee70a0b9734a5341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side of the grid. <br/></td></tr>
 <tr class="separator:a2dfda8ff4e022bc5ee70a0b9734a5341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04eb36cc599a7f384a843de8e58e717d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04eb36cc599a7f384a843de8e58e717d"></a>
+Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a04eb36cc599a7f384a843de8e58e717d">_volume</a></td></tr>
+<tr class="memdesc:a04eb36cc599a7f384a843de8e58e717d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume of the grid. <br/></td></tr>
+<tr class="separator:a04eb36cc599a7f384a843de8e58e717d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;int NDim = 4, typename Coord = int32_t, typename Idx = int64_t, bool Hashing = true&gt;<br/>
@@ -171,8 +193,163 @@ class SUNphi::Grid&lt; NDim, Coord, Idx, Hashing &gt;</h3>
 
 <p>A grid of points spanning an hypercubic grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a5688021ddd2bc93d43fe1d5d2aa1674d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bool Hashing = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;Coord,NDim&gt; <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDim, Coord, Idx, Hashing &gt;::<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Type to hold sizes, coordinate, etc </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a38819e618aaebc7b8f67d7699efbb281"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bool Hashing = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDim, Coord, Idx, Hashing &gt;::assertCoordsAreInRange </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check that a given set of coords are in range. </p>
+<p>Maximal value</p>
+<p>Coord mu value </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00200">200</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53581e4229c82c9021a2bf4818af8031"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bool Hashing = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDim, Coord, Idx, Hashing &gt;::computeCoordsOfPoint </td>
+          <td>(</td>
+          <td class="paramtype">Idx&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compte the coordinate of point i. </p>
+<p>Result</p>
+<p>Dividend, corresponding to the <code>mu</code> side length</p>
+<p>Quozient, corresponding to the index of the remaining NDIM-1 components</p>
+<p>Remainder, corresponding to the coordinate </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00230">230</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f6589af745ea737f3728f299e4d6528"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bool Hashing = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Idx <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDim, Coord, Idx, Hashing &gt;::pointOfCoords </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d">Coords</a> &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the point of given coords. </p>
+<p>Returned point</p>
+<p><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html" title="A grid of points spanning an hypercubic grid. ">Grid</a> side </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00259">259</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7657e7f9a9c249d0928d9c7b92b486d3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bool Hashing = true&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDim, Coord, Idx, Hashing &gt;::setVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the volume, calling computing routine. </p>
+<p>Output volume, initially 1 </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="ab8718690bfefe0c5def65d9372782110"></a>
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +374,7 @@ template&lt;int NDim = 4, typename Coord  = int32_t, typename Idx  = int64_t, bo
 </div><!-- fragment -->
 <p>Number of dimensions. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00182">182</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

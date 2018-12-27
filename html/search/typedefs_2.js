@@ -11,5 +11,5 @@ var searchData=
   ['constrainisnnarysmet',['ConstrainIsNnarySmET',['../d3/dd7/namespaceSUNphi.html#a2041f6c6d6c50223b68b2445cf1fc818',1,'SUNphi']]],
   ['constrainisnotbinarysmet',['ConstrainIsNotBinarySmET',['../d3/dd7/namespaceSUNphi.html#a41e611b7ea9220b485bb75813e26a734',1,'SUNphi']]],
   ['constrainisnotnnarysmet',['ConstrainIsNotNnarySmET',['../d3/dd7/namespaceSUNphi.html#af335d82662853907ce03eb8996fafb8a',1,'SUNphi']]],
-  ['coords',['Coords',['../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d',1,'SUNphi::Grid']]]
+  ['coords',['Coords',['../dc/dba/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01HASHING_01_4.html#ae9d21c91c00ff16652d6548ed92956ec',1,'SUNphi::GridHashable&lt; T, NDim, Coord, Idx, HASHING &gt;::Coords()'],['../de/db8/classSUNphi_1_1GridHashable_3_01T_00_01NDim_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html#a22f7fe16dc09f9c33d08fe3506af0903',1,'SUNphi::GridHashable&lt; T, NDim, Coord, Idx, NOT_HASHING &gt;::Coords()'],['../dd/dca/classSUNphi_1_1Grid.html#a5688021ddd2bc93d43fe1d5d2aa1674d',1,'SUNphi::Grid::Coords()']]]
 ];
