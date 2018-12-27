@@ -66,7 +66,7 @@ namespace SUNphi
     /// Set the hash table of coordinates of all points
     void fillCoordsOfPointsHashTables()
     {
-      /// &Proxy volume
+      /// Proxy volume
       const Idx volume=
 	CRTP_CAST.volume();
       
@@ -78,9 +78,11 @@ namespace SUNphi
       coordsOfPointsHashTable.resize(volume);
       
       // Fill the table
-      for(Idx i=0;i<volume;i++)
-	coordsOfPointsHashTable[i]=
-	  CRTP_CAST.computeCoordsOfPoint(i);
+      CRTP_CAST.forAllPoints([&](Idx i)
+			     {
+			       coordsOfPointsHashTable[i]=
+				 CRTP_CAST.computeCoordsOfPoint(i);
+			     });
     }
     
   public:
@@ -172,8 +174,10 @@ namespace SUNphi
       _volume=1;
       
       // Loop on all dimension, taking product
-      for(auto &c : sides)
-	_volume*=c;
+      forAllDims([&](int mu)
+		{
+		  _volume*=sides[mu];
+		});
     }
     
   public:
@@ -200,19 +204,35 @@ namespace SUNphi
     void assertCoordsAreInRange(const Coords& cs) const
     {
       if constexpr(GRID_DEBUG)
-	for(int mu=0;mu<nDim;mu++)
-	  {
-	    /// Maximal value
-	    const Coord& m=
-	      CRTP_CAST.sides[mu];
-	    
-	    /// Coord mu value
-	    const Coord& c=
-	      cs[mu];
-	    
-	    if(c<0 or c>=m)
-	      CRASH("Cannot have dimension",mu,"equal to",c,", negative or larger than",m);
-	  }
+        forAllDims([&](int mu)
+		  {
+		    /// Maximal value
+		    const Coord& m=
+		      CRTP_CAST.sides[mu];
+		    
+		    /// Coord mu value
+		    const Coord& c=
+		      cs[mu];
+		    
+		    if(c<0 or c>=m)
+		      CRASH("Cannot have dimension",mu,"equal to",c,", negative or larger than",m);
+		  });
+    }
+    
+    /// Loop on all dimension calling the passed function
+    template <typename F>            // Type of the function
+    void forAllDims(F&& f) const   ///< Function to be called
+    {
+      for(int mu=0;mu<nDim;mu++)
+	f(mu);
+    }
+    
+    /// Loop on all points calling the passed function
+    template <typename F>              // Type of the function
+    void forAllPoints(F&& f) const   ///< Function to be called
+    {
+      for(Idx i=0;i<volume();i++)
+	f(i);
     }
     
     /// Set the sides and trigger the volume change
@@ -264,16 +284,16 @@ namespace SUNphi
       Idx out=
 	0;
       
-      for(int mu=0;mu<nDim;mu++)
-	{
-	  /// Grid side
-	  const Coord& s=
-	    CRTP_CAST.sides[mu];
-	  
-	  // Increment the coordinate
-	  out=
-	    out*s[mu]+cs[mu];
-	}
+      forAllDims([&](int mu)
+		{
+		  /// Grid side
+		  const Coord& s=
+		    CRTP_CAST.sides[mu];
+		  
+		  // Increment the coordinate
+		  out=
+		    out*s[mu]+cs[mu];
+		});
       
       return out;
     }
