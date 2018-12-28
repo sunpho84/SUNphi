@@ -14,13 +14,18 @@ namespace SUNphi
 {
   /// Access to a given bit of a variable
   template <typename W>
-  DECLAUTO getBit(W&& w,const int pos)
+  bool bitOf(const W& w,const int pos=0)
   {
+    /// Size of the bitset
+    constexpr int bitsetSize=
+      sizeof(W);
+    
     /// Bitset view of the variable
     using B=
-      std::bitset<sizeof(W)>;
+      std::bitset<bitsetSize>;
     
-    return static_cast<B>(w)[pos];
+    return
+      static_cast<const B>(w)[pos];
   }
 }
 
