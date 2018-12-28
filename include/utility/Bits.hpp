@@ -13,19 +13,27 @@
 namespace SUNphi
 {
   /// Access to a given bit of a variable
-  template <typename W>
-  bool bitOf(const W& w,const int pos=0)
+  template <typename T>      // Type of the variable
+  bool bitOf(const T& in,   ///< Input variable
+	     const int pos) ///< Bit to take
   {
     /// Size of the bitset
     constexpr int bitsetSize=
-      sizeof(W);
+      sizeof(T);
     
     /// Bitset view of the variable
     using B=
       std::bitset<bitsetSize>;
     
     return
-      static_cast<const B>(w)[pos];
+      static_cast<const B>(in)[pos];
+  }
+  
+  /// Access to the lowest bit of a variable
+  template <typename T>             // Type of the variable
+  bool lowestBitOf(const T& in)   ///< Input variable
+  {
+    return bitOf(in,0);
   }
 }
 
