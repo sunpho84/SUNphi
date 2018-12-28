@@ -5,6 +5,7 @@
 ///
 /// \brief Header file to include all utilities
 
+#include <utility/Bits.hpp>
 #include <utility/Inline.hpp>
 #include <utility/Position.hpp>
 #include <utility/String.hpp>
