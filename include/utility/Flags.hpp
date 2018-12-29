@@ -37,7 +37,7 @@ namespace SUNphi
 	    auto...Flags>   // Flags to be removed
   [[ maybe_unused ]]
   constexpr int remFlags=
-       InMask ^ combineFlags<Flags...>;
+       InMask & ~combineFlags<Flags...>;
   
   /// Get a given flag from a mask
   template <int Mask,

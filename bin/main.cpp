@@ -421,9 +421,28 @@ void checkGrid()
     }
 }
 
+void checkFlagMasks()
+{
+  enum{A,B,C};
+  
+  constexpr int maskAC=
+    combineFlags<A,C>;
+  static_assert(maskAC==5,"Expecting 5");
+  
+  constexpr int maskABC=
+    addFlags<maskAC,B>;
+  static_assert(maskABC==7,"Expecting 7");
+  
+  constexpr int maskB=
+    remFlags<maskABC,A,C>;
+  static_assert(maskB==2,"Expecting 2");
+}
+
 //
 int main()
 {
+  checkFlagMasks();
+  
   checkGrid();
   
   checkNonComplConjCancelation();
