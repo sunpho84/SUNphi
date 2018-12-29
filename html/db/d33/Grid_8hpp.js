@@ -12,5 +12,6 @@ var Grid_8hpp =
     ] ],
     [ "Grid", "db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb", null ],
     [ "HASHING", "db/d33/Grid_8hpp.html#a30db2a0dbc86ba898e732d2739f21b2f", null ],
+    [ "moveOffset", "db/d33/Grid_8hpp.html#ae80082b2e607318ad8e682431f6c7a45", null ],
     [ "NOT_HASHING", "db/d33/Grid_8hpp.html#a658bd5f263c33bda3f31ebf42d7dd68e", null ]
 ];

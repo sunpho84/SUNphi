@@ -32,7 +32,7 @@ var searchData=
   ['derived',['Derived',['../da/df9/structSUNphi_1_1HasMember__getMergedCompsView_1_1Derived.html',1,'SUNphi::HasMember_getMergedCompsView']]],
   ['diag',['Diag',['../d8/df8/classSUNphi_1_1TensKind.html#a746264a990ada66a174d8f8d6778aa72',1,'SUNphi::TensKind']]],
   ['diagcompspos',['DiagCompsPos',['../d8/df8/classSUNphi_1_1TensKind.html#a5f54c860b4ac50f95ca650872aded78c',1,'SUNphi::TensKind']]],
-  ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a10a4c301e4fc43c267175e5e72729cf9',1,'SUNphi::Grid']]],
+  ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a5dd4b48122fc7e754fb79e69bbbdf7ef',1,'SUNphi::Grid']]],
   ['dir',['dir',['../d3/dd7/namespaceSUNphi.html#ae2e5d0c42dbe9855d3b20935ca39145c',1,'SUNphi']]],
   ['dir',['Dir',['../da/dff/structSUNphi_1_1Dir.html',1,'SUNphi']]],
   ['dir_2ehpp',['Dir.hpp',['../de/dda/Dir_8hpp.html',1,'']]],

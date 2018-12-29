@@ -18,6 +18,7 @@ var searchData=
   ['mergeddelims2',['MergedDelims2',['../d4/d4b/classSUNphi_1_1Assigner.html#a7d243c92bac2c48fd652b02edf2616a7',1,'SUNphi::Assigner']]],
   ['metaprogramming_2ehpp',['Metaprogramming.hpp',['../da/d8e/Metaprogramming_8hpp.html',1,'']]],
   ['minoflist',['minOfList',['../d3/dd7/namespaceSUNphi.html#a9bcedb4b0596b7e77f6f0620b3e944c4',1,'SUNphi']]],
+  ['moveoffset',['moveOffset',['../d3/dd7/namespaceSUNphi.html#ae80082b2e607318ad8e682431f6c7a45',1,'SUNphi']]],
   ['mul',['Mul',['../da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df',1,'SUNphi::IntSeq']]],
   ['muladd',['mulAdd',['../d3/dd7/namespaceSUNphi.html#a9b7f7efa55b39f3d73c768476ed122f1',1,'SUNphi']]],
   ['muladd_2ehpp',['MulAdd.hpp',['../da/d06/MulAdd_8hpp.html',1,'']]],

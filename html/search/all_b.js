@@ -11,5 +11,6 @@ var searchData=
   ['lastsmaller',['lastSmaller',['../d3/dd7/namespaceSUNphi.html#aa6bd149fbf4d55bc75e1a74a49e1fcac',1,'SUNphi']]],
   ['lastsmaller_3c_20i_20_3e',['lastSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#aa76f9c2411e695f843df2cc84a662289',1,'SUNphi']]],
   ['lattice_2ehpp',['Lattice.hpp',['../da/d34/Lattice_8hpp.html',1,'']]],
+  ['lowestbitof',['lowestBitOf',['../d3/dd7/namespaceSUNphi.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e',1,'SUNphi']]],
   ['lvalue_5fref',['LVALUE_REF',['../d0/d81/TypeTraits_8hpp.html#ab2dcee42767f6bf5f377dd887ff75cf6',1,'TypeTraits.hpp']]]
 ];

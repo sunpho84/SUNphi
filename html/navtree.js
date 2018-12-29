@@ -42,8 +42,8 @@ var NAVTREEINDEX =
 "d4/df5/SUN_8hpp.html#a4160a64e967f7451a34355645037cb8f",
 "d7/dea/IntSeqCat_8hpp.html",
 "da/def/structSUNphi_1_1IntSeq.html#a9d8e5fa6a7e4eda04f5af8183296fcb4",
-"dd/d03/classSUNphi_1_1UMinuser.html#a8216ffd4ee05ec4f639442fc280a4fed",
-"functions_func_f.html"
+"dd/d03/classSUNphi_1_1UMinuser.html#a6751965c1c2a68bbad6aae8f1856903c",
+"functions_func.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

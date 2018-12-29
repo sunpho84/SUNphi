@@ -16,6 +16,7 @@ var searchData=
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS',['../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs_5fcheck',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK',['../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5ftemplate_5fpars',['SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS',['../d4/d77/SFINAE_8hpp.html#a42eb945edda2b3040077165cb738a391',1,'SFINAE.hpp']]],
+  ['shiftedcoords',['shiftedCoords',['../dd/dca/classSUNphi_1_1Grid.html#a14ae3eeb4e108b6ee0417b0c0c883dc9',1,'SUNphi::Grid']]],
   ['sides',['sides',['../dd/dca/classSUNphi_1_1Grid.html#abaa2f805f9f6e7aadfc497c7b9610a09',1,'SUNphi::Grid']]],
   ['simd_2ehpp',['SIMD.hpp',['../d0/d24/SIMD_8hpp.html',1,'']]],
   ['simple_5fbinary_5fsmet_5fbuilder',['SIMPLE_BINARY_SMET_BUILDER',['../da/d5e/BinarySmET_8hpp.html#a5b1670a4ffc87bb85f17f9edf1a7145b',1,'BinarySmET.hpp']]],

@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('db/d33/Grid_8hpp.html','../../');});
 <code>#include &lt;vector&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../d4/dba/CRTP_8hpp_source.html">metaprogramming/CRTP.hpp</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="../../df/dee/Debug_8hpp_source.html">system/Debug.hpp</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="../../df/d95/Bits_8hpp_source.html">utility/Bits.hpp</a>&gt;</code><br/>
 </div>
 <p><a href="../../db/d33/Grid_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -170,6 +171,9 @@ template&lt;int NDims, typename Coord &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ae80082b2e607318ad8e682431f6c7a45"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae80082b2e607318ad8e682431f6c7a45">SUNphi::moveOffset</a> [2]</td></tr>
+<tr class="memdesc:ae80082b2e607318ad8e682431f6c7a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset to move <code>BW</code> or <code>FW</code>.  <a href="#ae80082b2e607318ad8e682431f6c7a45">More...</a><br/></td></tr>
+<tr class="separator:ae80082b2e607318ad8e682431f6c7a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30db2a0dbc86ba898e732d2739f21b2f"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a30db2a0dbc86ba898e732d2739f21b2f">SUNphi::HASHING</a></td></tr>
 <tr class="memdesc:a30db2a0dbc86ba898e732d2739f21b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant asserting to hash.  <a href="#a30db2a0dbc86ba898e732d2739f21b2f">More...</a><br/></td></tr>
 <tr class="separator:a30db2a0dbc86ba898e732d2739f21b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +184,7 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines hypercubic cartesian grids. </p>
 <p>An hypercubic grid with number of dimensions fixed at compile time. Periodic boundary conditions are imposed at all faces and lexicographic indexing with first-neighbours connectivity is embedded. The coordinates od points and neighbors can be hashed, deciding at compile time.</p>
-<p>Given the number of dimensions, the two orientations are provided, such that the 2*nDims neighbors are stored alternating backward and forward directions. </p>
+<p>Given the number of dimensions, the two orientations are provided, such that the 2*nDims neighbors are stored alternating first all backwards, thenforward directions. </p>
 
 <p>Definition in file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -198,7 +202,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provide the type Coords. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
