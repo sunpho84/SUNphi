@@ -12,14 +12,15 @@
 /// deciding at compile time.
 ///
 /// Given the number of dimensions, the two orientations are provided,
-/// such that the 2*nDims neighbors are stored alternating backward
-/// and forward directions.
+/// such that the 2*nDims neighbors are stored alternating first all
+/// backwards, thenforward directions.
 
 #include <array>
 #include <vector>
 
 #include <metaprogramming/CRTP.hpp>
 #include <system/Debug.hpp>
+#include <utility/Bits.hpp>
 
 /// Provide the type Coords
 #define PROVIDE_COORDS				\
@@ -34,6 +35,10 @@ namespace SUNphi
 {
   /// Value to identifiy orientations
   enum Orientation{BW=0,FW=1};
+  
+  /// Offset to move \c BW or \c FW
+  constexpr int moveOffset[2]=
+    {-1,+1};
   
   /// Constant asserting to hash
   static constexpr bool HASHING=
@@ -69,8 +74,6 @@ namespace SUNphi
 		     HASHING>
   {
     
-    PROVIDE_CRTP_CAST_OPERATOR(T);
-    
     PROVIDE_COORDS;
     
     /// Hashed coords of all points
@@ -99,6 +102,8 @@ namespace SUNphi
     }
     
   public:
+    
+    PROVIDE_CRTP_CAST_OPERATOR(T);
     
     /// Fill all the HashTables
     void fillHashTables()
@@ -138,11 +143,11 @@ namespace SUNphi
 		     NOT_HASHING>
   {
     
-    PROVIDE_CRTP_CAST_OPERATOR(T);
-    
     PROVIDE_COORDS;
     
   public:
+    
+    PROVIDE_CRTP_CAST_OPERATOR(T);
     
     /// Get the coords of given point, computing it
     Coords getCoordsOfPoint(Idx i) const
@@ -238,41 +243,53 @@ namespace SUNphi
     
     /// Loop on all dimension calling the passed function
     template <typename F>            // Type of the function
-    void forAllDims(F&& f) const   ///< Function to be called
+    static void forAllDims(F&& f)   ///< Function to be called
     {
       for(int mu=0;mu<nDims;mu++)
 	f(mu);
     }
     
-    /// Loop on all points calling the passed function
-    template <typename F>              // Type of the function
-    void forAllPoints(F&& f) const   ///< Function to be called
-    {
-      for(Idx i=0;i<volume();i++)
-	f(i);
-    }
-    
     /// Loop on all oriented directions calling the passed function
-    template <typename F>               // Type of the function
-    void forAllOriDirs(F&& f) const   ///< Function to be called
+    template <typename F>                // Type of the function
+    static void forAllOriDirs(F&& f)   ///< Function to be called
     {
       for(int oriDir=0;oriDir<nOriDirs;oriDir++)
 	f(oriDir);
     }
     
-    /// Orientation of an oriented directions
-    Orientation oriOfOriDir(int oriDir) const
+    /// Loop on all points calling the passed function
+    template <typename F>        // Type of the function
+    void forAllPoints(F&& f)   ///< Function to be called
     {
-      if(oriDir&0x1)
-	return FW;
+      for(Idx i=0;i<volume();i++)
+	f(i);
+    }
+    
+    /// Orientation of an oriented directions
+    static Orientation oriOfOriDir(const int oriDir)
+    {
+      Orientation out;
+      
+      // Check smallest bit
+      if(bitOf(oriDir,0))
+	out=FW;
       else
-	return BW;
+	out=BW;
+      
+      return out;
     }
     
     /// Dimension of an oriented directions
-    int dimOfOriDir(int oriDir) const
+    int dimOfOriDir(const int oriDir) const
     {
+      // Divide by two
       return oriDir>>1;
+    }
+    
+    /// Oriented direction given orientation and dimension
+    int oriDirOfOriAndDim(const Orientation ori,const int dim) const
+    {
+      return ori+dim*2;
     }
     
     /// Set the sides and trigger the volume change
@@ -333,10 +350,42 @@ namespace SUNphi
 		  
 		  // Increment the coordinate
 		  out=
-		    out*s[mu]+cs[mu];
+		    out*s+cs[mu];
 		});
       
       return out;
+    }
+    
+    /// Returns the coordinates shifted in the asked direction
+    ///
+    /// Periodic boundary conditions are always assumed
+    Coords shiftedCoords(const Coords& in,const int oriDir,const int amount=1) const
+    {
+      /// Returned coordinates
+      Coords out;
+      
+      /// Orientation
+      const int ori=
+	oriOfOriDir(oriDir);
+      
+      /// Dimension to shift
+      const int shiftMu=
+	dimOfOriDir(oriDir);
+      
+      /// Offset to add
+      const int offset=
+	(sides[shiftMu]+moveOffset[ori])*amount;
+      
+      forAllDims([&](int mu)
+		 {
+		   if(mu!=shiftMu)
+		     out[mu]=in[mu];
+		   else
+		     out[mu]=(in[mu]+offset)%sides[mu];
+		 });
+      
+      return out;
+      
     }
     
     /// Construct from sides
