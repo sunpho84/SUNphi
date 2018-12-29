@@ -423,7 +423,7 @@ void checkGrid()
 
 void checkFlagMasks()
 {
-  enum{A,B,C};
+  enum r_t {A,B,C};
   
   constexpr int maskAC=
     combineFlags<A,C>;

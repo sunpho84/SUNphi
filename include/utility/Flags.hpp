@@ -19,21 +19,35 @@ namespace SUNphi
   constexpr int flagMask=
     1<<static_cast<int>(Flag);
   
-  /// Add flags to a mask at compile time
-  template <auto...Flags>   // Flags to be added
+  /// Combine flags to form a mask at compile time
+  ///
+  /// Internal implementation to catch error
+  template <auto...Flags>   // Flags to be combined
+  [[ maybe_unused ]]
+  constexpr int _combineFlags()
+  {
+    STATIC_ASSERT_ARE_SAME(decltype(Flags)...);
+    
+    return (flagMask<Flags>|...);
+  }
+  
+  /// Combine flags to form a mask at compile time
+  ///
+  /// Gives visibility to internal implementation
+  template <auto...Flags>   // Flags to be combined
   [[ maybe_unused ]]
   constexpr int combineFlags=
-       (flagMask<Flags> | ...);
+       _combineFlags<Flags...>();
   
   /// Add flags to a mask at compile time
-  template <int InMask,     // Incoming flagset
+  template <int InMask,     // Incoming mask
 	    auto...Flags>   // Flags to be added
   [[ maybe_unused ]]
   constexpr int addFlags=
        InMask | combineFlags<Flags...>;
   
   /// Remove flags to a mask at compile time
-  template <int InMask,     // Incoming flagset
+  template <int InMask,     // Incoming mask
 	    auto...Flags>   // Flags to be removed
   [[ maybe_unused ]]
   constexpr int remFlags=
