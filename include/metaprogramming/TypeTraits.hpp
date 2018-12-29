@@ -131,6 +131,40 @@ namespace SUNphi
   static constexpr bool isSame<T,T> =
     true;
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns true if all types Ts are the same
+  ///
+  /// Internal implementation
+  template <typename T=void,
+	    typename...Tail>
+  constexpr bool _areSame()
+  {
+    if constexpr(sizeof...(Tail)==0)
+       return true;
+    else
+      return (isSame<T,Tail> && ...);
+  }
+  
+  /// Returns true if all Ts are the same type
+  ///
+  /// Gives visibility to internal representation
+  template <typename...Ts>
+  [[ maybe_unused ]]
+  constexpr bool areSame=
+    _areSame<Ts...>();
+  
+  /// Assert if types are not the same
+#define STATIC_ASSERT_ARE_SAME(...)		\
+  static_assert(areSame<__VA_ARGS__>,"Error, types are not the same")
+  
+  /// Forces a set of types to be the same
+  template <class...Args>
+  class ConstrainAreSame
+  {
+    STATIC_ASSERT_ARE_SAME(Args...);
+  };
+  
   /////////////////////////////////////////////////////////////////////
   
   /// Provides type T if B is true, or F if is false

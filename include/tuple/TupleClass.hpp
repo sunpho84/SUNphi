@@ -121,25 +121,6 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Checks if a set of types are the same
-  ///
-  /// Perform an "and" of all single-type check
-  /// \todo use foldable expression instead
-  template <class Head,
-	    class...Tail>
-  [[ maybe_unused ]]
-  static constexpr bool areSame=
-    IntSeq<isSame<Head,Tail>...>::hMul;
-  
-  /// Forces a set of types to be the same
-  template <class...Args>
-  class ConstrainAreSame
-  {
-    static_assert(areSame<Args...>,"Error, types are not the same");
-  };
-  
-  /////////////////////////////////////////////////////////////////////
-  
   /// Counts the same types
   ///
   /// Single pair of types case - forbids implementation
