@@ -13,7 +13,7 @@ var searchData=
   ['isfloatingpoint',['isFloatingPoint',['../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d',1,'SUNphi']]],
   ['isfullystatic',['isFullyStatic',['../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837',1,'SUNphi::TensKind']]],
   ['isfunction',['isFunction',['../d3/dd7/namespaceSUNphi.html#addc6a306ed5696b5085d995ea080c526',1,'SUNphi']]],
-  ['ishashing',['isHashing',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#a4f12a9afd0e76378002e9a09e9538b0b',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;::isHashing()'],['../dc/df3/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHED_01_4.html#a85be554bc59471e40b862ab1642c88da',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHED &gt;::isHashing()']]],
+  ['ishashing',['isHashing',['../dd/dca/classSUNphi_1_1Grid.html#a5f87ad4e7caf4507b612ab7163102e99',1,'SUNphi::Grid']]],
   ['isintegral',['isIntegral',['../d3/dd7/namespaceSUNphi.html#afdbfd0b9e1a6096c9249ee8a8be02c1d',1,'SUNphi']]],
   ['islvalue',['isLvalue',['../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
   ['isnnarysmet',['isNnarySmET',['../d3/dd7/namespaceSUNphi.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orientation',['Orientation',['../d3/dd7/namespaceSUNphi.html#ac682f0879a1c598390150ca77ce82479',1,'SUNphi']]]
+  ['gridflag',['GridFlag',['../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c',1,'SUNphi']]]
 ];

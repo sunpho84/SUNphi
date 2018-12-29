@@ -10,5 +10,5 @@ var searchData=
   ['getrawalignedmem',['getRawAlignedMem',['../d3/dd7/namespaceSUNphi.html#a617976906032089be21d99331835da8f',1,'SUNphi']]],
   ['getstor',['getStor',['../d8/d1c/classSUNphi_1_1Tens.html#adbdd48967cfd28ef9c73f149856875b4',1,'SUNphi::Tens::getStor() const '],['../d8/d1c/classSUNphi_1_1Tens.html#a3576c6b972d3185a9e0555dcc703869b',1,'SUNphi::Tens::getStor()'],['../d3/dd7/namespaceSUNphi.html#a1d354395c6ec69f519a1908b3d1e1bed',1,'SUNphi::getStor(SMET &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#aa92285dd832c749cd0f3d0adf3e634c5',1,'SUNphi::getStor(SMET &amp;&amp;smet)'],['../d3/dd7/namespaceSUNphi.html#a9c14cafe315cb0ed6d3820f2b5bbaa34',1,'SUNphi::getStor(SMET &amp;&amp;smet)']]],
   ['gettail',['getTail',['../d3/dd7/namespaceSUNphi.html#a73969b2e282453e65ed9666b1dea3c4c',1,'SUNphi']]],
-  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#aadf851100179a92069e9949933017043',1,'SUNphi::Grid::Grid()'],['../d3/dd7/namespaceSUNphi.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]]
+  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../d3/dd7/namespaceSUNphi.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]]
 ];

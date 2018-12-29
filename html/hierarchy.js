@@ -300,11 +300,11 @@ var hierarchy =
       [ "SUNphi::_isTuple< T >", "d3/d6f/structSUNphi_1_1__isTuple.html", null ]
     ] ],
     [ "SUNphi::GridHashable< T, NDims, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", null ],
-    [ "SUNphi::GridHashable< Grid< NDims, Coord, Idx, Hashing >, NDims, Coord, Idx, Hashing >", "dc/d35/classSUNphi_1_1GridHashable.html", [
-      [ "SUNphi::Grid< NDims, Coord, Idx, Hashing >", "dd/dca/classSUNphi_1_1Grid.html", null ]
+    [ "SUNphi::GridHashable< Grid< NDims, Coord, Idx, Flags >, NDims, Coord, Idx, getFlag< Flags, GridFlag::HASHED > >", "dc/d35/classSUNphi_1_1GridHashable.html", [
+      [ "SUNphi::Grid< NDims, Coord, Idx, Flags >", "dd/dca/classSUNphi_1_1Grid.html", null ]
     ] ],
-    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, HASHED >", "d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html", null ],
-    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, NOT_HASHED >", "dc/df3/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHED_01_4.html", null ],
+    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, false >", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html", null ],
+    [ "SUNphi::GridHashable< T, NDims, Coord, Idx, true >", "d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html", null ],
     [ "SUNphi::HasMember_assertMergeableWith< Type >", "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html", null ],
     [ "SUNphi::HasMember_compSize< Type >", "de/d50/structSUNphi_1_1HasMember__compSize.html", null ],
     [ "SUNphi::HasMember_eval< Type >", "d8/dfe/structSUNphi_1_1HasMember__eval.html", null ],
