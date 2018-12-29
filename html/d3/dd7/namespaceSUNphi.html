@@ -6601,7 +6601,7 @@ template&lt;int InMask, auto... Flags&gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">       InMask ^ <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
+<div class="line">       InMask &amp; ~<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
 <div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdoc">Add flags to a mask at compile time. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00025">Flags.hpp:25</a></div></div>
 </div><!-- fragment -->
 <p>Remove flags to a mask at compile time. </p>

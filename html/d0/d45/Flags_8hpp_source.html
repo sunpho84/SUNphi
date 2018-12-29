@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('d0/d45/Flags_8hpp_source.html','../../
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">auto</span>...Flags&gt;   <span class="comment">// Flags to be removed</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  [[ maybe_unused ]]</div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d3/dd7/namespaceSUNphi.html#ab1eacab043f0652e76b48006a7d89fe2">   39</a></span>&#160;  constexpr <span class="keywordtype">int</span> <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ab1eacab043f0652e76b48006a7d89fe2">remFlags</a>=</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;       InMask ^ <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;       InMask &amp; ~<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> Mask,</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">auto</span> Flag&gt;</div>
