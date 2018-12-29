@@ -1,8 +1,10 @@
 var searchData=
 [
   ['factorize',['factorize',['../d3/dd7/namespaceSUNphi.html#ac728c27faf9b21f9472930644b10f103',1,'SUNphi']]],
-  ['fillcoordsofpointshashtables',['fillCoordsOfPointsHashTables',['../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html#ab761f69c4980b9f9719aa3f7d5eee279',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;']]],
-  ['fillhashtables',['fillHashTables',['../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html#aa9815891c4b30a60a1b92b9ef594d8da',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;']]],
+  ['fillcoordsofpointshashtables',['fillCoordsOfPointsHashTables',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#a8826001ebcf9053549c94f3ce3d0e430',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;']]],
+  ['fillhashtables',['fillHashTables',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#a50aeb0f15fe29ffdff55de6a970807dc',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;']]],
+  ['fillneighsofpointshashtables',['fillNeighsOfPointsHashTables',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#a7be5ef6b69cbd4bfbb4edef566b432e8',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;']]],
+  ['fillvolumehashtable',['fillVolumeHashTable',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#a91be7cc1f4d9908f674f76f03a32922f',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;']]],
   ['foralldims',['forAllDims',['../dd/dca/classSUNphi_1_1Grid.html#a3c0f6299ce106c4498faaa030f6d7812',1,'SUNphi::Grid']]],
   ['foralloridirs',['forAllOriDirs',['../dd/dca/classSUNphi_1_1Grid.html#abaed8dd5bf1d7e3b502aca90828c3ceb',1,'SUNphi::Grid']]],
   ['forallpoints',['forAllPoints',['../dd/dca/classSUNphi_1_1Grid.html#abef88e952286e937f5088df80ac8af84',1,'SUNphi::Grid']]],

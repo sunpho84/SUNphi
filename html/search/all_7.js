@@ -3,7 +3,6 @@ var searchData=
   ['get',['get',['../d3/dd7/namespaceSUNphi.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../d3/dd7/namespaceSUNphi.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getallbutpos',['getAllButPos',['../d3/dd7/namespaceSUNphi.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../d3/dd7/namespaceSUNphi.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
-  ['getcoordsofpoint',['getCoordsOfPoint',['../df/da9/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html#ad0fdddfb5e750a8ddcae6463ee4f28fe',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHING &gt;']]],
   ['gethead',['getHead',['../d3/dd7/namespaceSUNphi.html#a80105860987af904efaa86d980d8063e',1,'SUNphi']]],
   ['getindexed',['getIndexed',['../d3/dd7/namespaceSUNphi.html#a75c031eff47914cc075977344c95ea69',1,'SUNphi']]],
   ['getintoflist',['getIntOfList',['../d3/dd7/namespaceSUNphi.html#a95c06147575cd65a542addaeb82bc8cc',1,'SUNphi']]],
@@ -18,6 +17,6 @@ var searchData=
   ['grid_5fdebug',['GRID_DEBUG',['../db/d33/Grid_8hpp.html#a562b8131f1b0d66fdf0f3a1b36100517',1,'Grid.hpp']]],
   ['gridhashable',['GridHashable',['../dc/d35/classSUNphi_1_1GridHashable.html',1,'SUNphi']]],
   ['gridhashable_3c_20grid_3c_20ndims_2c_20coord_2c_20idx_2c_20hashing_20_3e_2c_20ndims_2c_20coord_2c_20idx_2c_20hashing_20_3e',['GridHashable&lt; Grid&lt; NDims, Coord, Idx, Hashing &gt;, NDims, Coord, Idx, Hashing &gt;',['../dc/d35/classSUNphi_1_1GridHashable.html',1,'SUNphi']]],
-  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20hashing_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;',['../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html',1,'SUNphi']]],
-  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20not_5fhashing_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHING &gt;',['../df/da9/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHING_01_4.html',1,'SUNphi']]]
+  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20hashed_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html',1,'SUNphi']]],
+  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20not_5fhashed_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHED &gt;',['../dc/df3/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHED_01_4.html',1,'SUNphi']]]
 ];

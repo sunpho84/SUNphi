@@ -9,7 +9,8 @@ var searchData=
   ['compsrangegroupssize',['compsRangeGroupsSize',['../d3/d22/classSUNphi_1_1TensStor.html#a933901919cafcc8bd5f66425fab561a8',1,'SUNphi::TensStor']]],
   ['compsrangesize',['compsRangeSize',['../d3/d22/classSUNphi_1_1TensStor.html#a0b8fb7206d7da3d9197da0c1a245fbc6',1,'SUNphi::TensStor']]],
   ['computecoordsofpoint',['computeCoordsOfPoint',['../dd/dca/classSUNphi_1_1Grid.html#ac619f551765fdf666d2703df8d91a71c',1,'SUNphi::Grid']]],
+  ['computeneighofpoint',['computeNeighOfPoint',['../dd/dca/classSUNphi_1_1Grid.html#a02c91ce5f499bea0f882bb180cff8e4f',1,'SUNphi::Grid']]],
   ['conj',['conj',['../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637',1,'SUNphi::conj(T &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#a3e19f4ffa189059c167b60fd22d8342d',1,'SUNphi::conj(T &amp;&amp;smet)'],['../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34',1,'SUNphi::conj(D &amp;&amp;smet)']]],
   ['conjer',['Conjer',['../d2/d24/classSUNphi_1_1Conjer.html#af376f70446b12e1c681269bd43517ec5',1,'SUNphi::Conjer']]],
-  ['coordsofpoint',['coordsOfPoint',['../d6/d94/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHING_01_4.html#ac2b308c7a7e804c9b82155cf2ab60e63',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHING &gt;']]]
+  ['coordsofpoint',['coordsOfPoint',['../d2/d1c/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01HASHED_01_4.html#ae19bf8b58fa5fd3f7b27049d30defd1f',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, HASHED &gt;::coordsOfPoint()'],['../dc/df3/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01NOT__HASHED_01_4.html#a080209e841df59fb8acaabc547add35c',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, NOT_HASHED &gt;::coordsOfPoint()']]]
 ];

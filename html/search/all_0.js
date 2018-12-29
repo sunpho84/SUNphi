@@ -70,6 +70,7 @@ var searchData=
   ['_5frangeseq',['_RangeSeq',['../d0/dde/structSUNphi_1_1__RangeSeq.html',1,'SUNphi']]],
   ['_5frefevalbycompsname',['_refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#abc972718a2bd9e542d4efa11446c6b98',1,'SUNphi::NnarySmET::_refEvalByCompsName(IntSeq&lt; I &gt;, IntSeq&lt; Pos...&gt;, Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c',1,'SUNphi::NnarySmET::_refEvalByCompsName(Ts &amp;&amp;...ts)']]],
   ['_5fremovefromorderedintseq',['_removeFromOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#af1c48c15bdb3967be82cccb56cf88d58',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt; Bef...&gt; &amp;, const IntSeq&lt; HeadAft, TailAft...&gt; &amp;)'],['../d3/dd7/namespaceSUNphi.html#ae686be2b40809c1af7a11802b57d6222',1,'SUNphi::_removeFromOrderedIntSeq(const IntSeq&lt;&gt; &amp;, const IntSeq&lt;&gt; &amp;)']]],
+  ['_5fsides',['_sides',['../dd/dca/classSUNphi_1_1Grid.html#aadfa07871121c9075dd71c66c61b6a47',1,'SUNphi::Grid']]],
   ['_5ftenskindfromtuple',['_TensKindFromTuple',['../d8/d33/structSUNphi_1_1__TensKindFromTuple.html',1,'SUNphi']]],
   ['_5ftenskindfromtuple_3c_20tuple_3c_20tp_2e_2e_2e_3e_20_3e',['_TensKindFromTuple&lt; Tuple&lt; Tp...&gt; &gt;',['../da/ded/structSUNphi_1_1__TensKindFromTuple_3_01Tuple_3_01Tp_8_8_8_4_01_4.html',1,'SUNphi']]],
   ['_5ftuplehastype',['_tupleHasType',['../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055',1,'SUNphi']]],
