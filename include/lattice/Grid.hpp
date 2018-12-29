@@ -41,11 +41,11 @@ namespace SUNphi
     {-1,+1};
   
   /// Constant asserting to hash
-  static constexpr bool HASHING=
+  static constexpr bool HASHED=
     true;
   
   /// Constant asserting not to hash
-  static constexpr bool NOT_HASHING=
+  static constexpr bool NOT_HASHED=
     false;
   
   /////////////////////////////////////////////////////////////////
@@ -71,34 +71,74 @@ namespace SUNphi
 		     NDims,
 		     Coord,
 		     Idx,
-		     HASHING>
+		     HASHED>
   {
     
     PROVIDE_COORDS;
     
+    /// Type to hold the neighbors
+    typedef std::array<Coord,2*NDims> Neigh;
+    
     /// Hashed coords of all points
     std::vector<Coords> coordsOfPointsHashTable;
     
-    /// Set the hash table of coordinates of all points
-    void fillCoordsOfPointsHashTables()
+    /// Hashed neighbors
+    std::vector<Neigh> neighsOfPointsHashTable;
+    
+    /// Fills the required hashtable with the function
+    template <typename Tb,  // Type of the hashtable
+	      typename F>   // Type of the function
+    void fillVolumeHashTable(Tb& tb, ///< Hashtable to fill
+			     F f)    ///< function to call
     {
       /// Proxy volume
       const Idx volume=
 	CRTP_CAST.volume();
       
       // Check hashability
-      if(volume>coordsOfPointsHashTable.max_size())
+      if(volume>tb.max_size())
 	CRASH("Cannot hash a volume of",volume);
       
-      // Resize the hash table of coordsOfPoints
-      coordsOfPointsHashTable.resize(volume);
+      // Resize the hash table
+      tb.resize(volume);
       
       // Fill the table
       CRTP_CAST.forAllPoints([&](Idx i)
 			     {
-			       coordsOfPointsHashTable[i]=
-				 CRTP_CAST.computeCoordsOfPoint(i);
+			       tb[i]=
+				 f(i);
 			     });
+    }
+    
+    /// Set the hash table of coordinates of all points
+    void fillCoordsOfPointsHashTables()
+    {
+      fillVolumeHashTable(coordsOfPointsHashTable,
+			  [&](Idx i)
+			  {
+			    return
+			      CRTP_CAST.computeCoordsOfPoint(i);
+			  });
+    }
+    
+    /// Set the hash table of neighbors
+    void fillNeighsOfPointsHashTables()
+    {
+      fillVolumeHashTable(neighsOfPointsHashTable,
+			  [&](Idx i)
+			  {
+			    /// Neighbors to store
+			    Neigh out;
+			    
+			    // Loop on all oriented direction
+			    CRTP_CAST.forAllOriDirs([&](int oriDir)
+						    {
+						      out[oriDir]=
+							CRTP_CAST.computeNeighOfPoint(i,oriDir);
+						    });
+			    
+			    return out;
+			  });
     }
     
   public:
@@ -109,16 +149,27 @@ namespace SUNphi
     void fillHashTables()
     {
       fillCoordsOfPointsHashTables();
+      fillNeighsOfPointsHashTables();
     }
     
     /////////////////////////////////////////////////////////////////
     
-    /// Get the coords of given point, computing it
-    Coords coordsOfPoint(Idx i) const
+    /// Get the coords of given point
+    const Coords& coordsOfPoint(Idx i) const
     {
       CRTP_CAST.assertPointIsInRange(i);
       
       return coordsOfPointsHashTable[i];
+    }
+    
+    /// Return the neighbor in the given oriented dir
+    Idx neighOfPoint(const Idx i,
+		     const int oriDir) const
+    {
+      CRTP_CAST.assertPointIsInRange(i);
+      CRTP_CAST.assertOriDirIsInRange(oriDir);
+      
+      return neighsOfPointsHashTable[i][oriDir];
     }
     
     /// Flag asserting that hashing
@@ -140,7 +191,7 @@ namespace SUNphi
 		     NDims,
 		     Coord,
 		     Idx,
-		     NOT_HASHING>
+		     NOT_HASHED>
   {
     
     PROVIDE_COORDS;
@@ -150,9 +201,16 @@ namespace SUNphi
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
     /// Get the coords of given point, computing it
-    Coords getCoordsOfPoint(Idx i) const
+    Coords coordsOfPoint(Idx i) const
     {
       return CRTP_CAST.computeCoordsOfPoint(i);
+    }
+    
+    /// Return the neighbor in the given oriented dir, computing it
+    Idx neighOfPoint(const Idx i,
+		     const int oriDir) const
+    {
+      return CRTP_CAST.computeNeighOfPoint(i,oriDir);
     }
     
     /// Flag asserting not hashing
@@ -164,10 +222,10 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// A grid of points spanning an hypercubic grid
-  template <int NDims=4,             // Number of dimensions
-	    typename Coord=int32_t,  // Type of coordinate values
-	    typename Idx=int64_t,    // Type of index of points
-	    bool Hashing=true>       // Store or not tables
+  template <int NDims=4,              // Number of dimensions
+	    typename Coord=int32_t,   // Type of coordinate values
+	    typename Idx=int64_t,     // Type of index of points
+	    bool Hashing=HASHED>      // Store or not tables
   class Grid :
     public GridHashable<Grid<NDims,Coord,Idx,Hashing>,
 			NDims,
@@ -180,7 +238,7 @@ namespace SUNphi
   private:
     
     /// Side of the grid
-    Coords sides;
+    Coords _sides;
     
     /// Volume of the grid
     Idx _volume;
@@ -194,7 +252,7 @@ namespace SUNphi
       // Loop on all dimension, taking product
       forAllDims([&](int mu)
 		{
-		  _volume*=sides[mu];
+		  _volume*=side(mu);
 		});
     }
     
@@ -214,12 +272,26 @@ namespace SUNphi
       return _volume;
     }
     
+    /// Get the given side
+    Coord side(const int mu) const
+    {
+      return _sides[mu];
+    }
+    
     /// Check that a given point is in range
     void assertPointIsInRange(const Idx& i) const
     {
       if constexpr(GRID_DEBUG)
 	if(i<0 or i>=volume())
 	  CRASH("Cannot access to element",i);
+    }
+    
+    /// Check that a given oriented dir is in range
+    void assertOriDirIsInRange(const int& oriDir) const
+    {
+      if constexpr(GRID_DEBUG)
+        if(oriDir<0 or oriDir>=2*NDims)
+	  CRASH("Cannot use oriented dir",oriDir,"out of range [0,]",2*NDims);
     }
     
     /// Check that a given set of coords are in range
@@ -230,7 +302,7 @@ namespace SUNphi
 		  {
 		    /// Maximal value
 		    const Coord& m=
-		      CRTP_CAST.sides[mu];
+		      CRTP_CAST.side(mu);
 		    
 		    /// Coord mu value
 		    const Coord& c=
@@ -295,7 +367,7 @@ namespace SUNphi
     /// Set the sides and trigger the volume change
     void setSides(const Coords& extSides)
     {
-      sides=
+      _sides=
 	extSides;
       
       setVolume();
@@ -315,7 +387,8 @@ namespace SUNphi
       for(int mu=nDims-1;mu>=0;mu--)
 	{
 	  /// Dividend, corresponding to the \c mu side length
-	  const Coord& d=sides[mu];
+	  const Coord& d=
+	    side(mu);
 	  
 	  /// Quozient, corresponding to the index of the remaining \cnDims-1 components
 	  const Idx q=i/d;
@@ -334,7 +407,7 @@ namespace SUNphi
     }
     
     /// Compute the point of given coords
-    Idx pointOfCoords(const Coords& cs)
+    Idx pointOfCoords(const Coords& cs) const ///< Coordinates of the point
     {
       assertCoordsAreInRange(cs);
       
@@ -346,7 +419,7 @@ namespace SUNphi
 		{
 		  /// Grid side
 		  const Coord& s=
-		    CRTP_CAST.sides[mu];
+		    CRTP_CAST.side(mu);
 		  
 		  // Increment the coordinate
 		  out=
@@ -366,26 +439,35 @@ namespace SUNphi
       
       /// Orientation
       const int ori=
-	oriOfOriDir(oriDir);
+    	oriOfOriDir(oriDir);
       
       /// Dimension to shift
       const int shiftMu=
-	dimOfOriDir(oriDir);
+    	dimOfOriDir(oriDir);
       
       /// Offset to add
       const int offset=
-	(sides[shiftMu]+moveOffset[ori])*amount;
+    	(side(shiftMu)+moveOffset[ori])*amount;
       
       forAllDims([&](int mu)
-		 {
-		   if(mu!=shiftMu)
-		     out[mu]=in[mu];
-		   else
-		     out[mu]=(in[mu]+offset)%sides[mu];
-		 });
+    		 {
+    		   if(mu!=shiftMu)
+    		     out[mu]=in[mu];
+    		   else
+    		     out[mu]=(in[mu]+offset)%side(mu);
+    		 });
       
       return out;
+    }
+    
+    /// Compte the neighbor in the oriented direction oriDir of point i
+    Idx computeNeighOfPoint(const Idx i,             ///< Point
+			       const int oriDir) const  ///< Oriented direction
+    {
+      assertPointIsInRange(i);
+      assertOriDirIsInRange(oriDir);
       
+      return pointOfCoords(shiftedCoords(this->coordsOfPoint(i),oriDir));
     }
     
     /// Construct from sides
