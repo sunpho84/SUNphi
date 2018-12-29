@@ -15,6 +15,13 @@ var NAVTREEINDEX0 =
 "d0/d24/SIMD_8hpp.html#aaea3412d741b6e8789dc707f3c554b50":[3,0,2,7,2,0],
 "d0/d24/SIMD_8hpp_source.html":[3,0,2,7,2],
 "d0/d26/structSUNphi_1_1__IntSeqCat.html":[2,0,0,5],
+"d0/d45/Flags_8hpp.html":[3,0,2,10,1],
+"d0/d45/Flags_8hpp.html#a5a00ab4ef375318959380967abc92878":[3,0,2,10,1,1],
+"d0/d45/Flags_8hpp.html#ab1eacab043f0652e76b48006a7d89fe2":[3,0,2,10,1,4],
+"d0/d45/Flags_8hpp.html#ab5d47e7006013a7658cff339b5536805":[3,0,2,10,1,2],
+"d0/d45/Flags_8hpp.html#ac498ba60d979d9b5c832e56ac5345396":[3,0,2,10,1,0],
+"d0/d45/Flags_8hpp.html#adc11adcd711380f1211bc92f8c3e3484":[3,0,2,10,1,3],
+"d0/d45/Flags_8hpp_source.html":[3,0,2,10,1],
 "d0/d5e/Physics_8hpp.html":[3,0,2,16],
 "d0/d5e/Physics_8hpp_source.html":[3,0,2,16],
 "d0/d6d/Transpose_8hpp.html":[3,0,2,6,12],
@@ -242,12 +249,5 @@ var NAVTREEINDEX0 =
 "d2/d24/classSUNphi_1_1Conjer.html#a7e64468adb797a015e9d68673c23af0b":[2,0,0,75,1],
 "d2/d24/classSUNphi_1_1Conjer.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,75,25],
 "d2/d24/classSUNphi_1_1Conjer.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,75,16],
-"d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c":[2,0,0,75,5],
-"d2/d24/classSUNphi_1_1Conjer.html#a94542c3f9c0df8a842652c35f413bf68":[2,0,0,75,7],
-"d2/d24/classSUNphi_1_1Conjer.html#aa5cd438ee343ebb3b206d12798e01e46":[2,0,0,75,13],
-"d2/d24/classSUNphi_1_1Conjer.html#aab02a655af73e7c45979fc8ad720c5d7":[2,0,0,75,21],
-"d2/d24/classSUNphi_1_1Conjer.html#abc972718a2bd9e542d4efa11446c6b98":[2,0,0,75,9],
-"d2/d24/classSUNphi_1_1Conjer.html#aec0c2e26f9d26cf9e6b4aafcf07f2aef":[2,0,0,75,31],
-"d2/d24/classSUNphi_1_1Conjer.html#af376f70446b12e1c681269bd43517ec5":[2,0,0,75,8],
-"d2/d24/classSUNphi_1_1Conjer.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,75,28]
+"d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c":[2,0,0,75,5]
 };

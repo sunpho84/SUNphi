@@ -1288,6 +1288,25 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a6d75beaf6774318d2a6e3f2a1436dbd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d75beaf6774318d2a6e3f2a1436dbd2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TP</b> {})...&gt;</td></tr>
 <tr class="separator:a6d75beaf6774318d2a6e3f2a1436dbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d47e7006013a7658cff339b5536805"><td class="memTemplParams" colspan="2">template&lt;auto Flag&gt; </td></tr>
+<tr class="memitem:ab5d47e7006013a7658cff339b5536805"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab5d47e7006013a7658cff339b5536805">flagMask</a></td></tr>
+<tr class="separator:ab5d47e7006013a7658cff339b5536805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a00ab4ef375318959380967abc92878"><td class="memTemplParams" colspan="2">template&lt;auto... Flags&gt; </td></tr>
+<tr class="memitem:a5a00ab4ef375318959380967abc92878"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a></td></tr>
+<tr class="memdesc:a5a00ab4ef375318959380967abc92878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add flags to a mask at compile time.  <a href="#a5a00ab4ef375318959380967abc92878">More...</a><br/></td></tr>
+<tr class="separator:a5a00ab4ef375318959380967abc92878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac498ba60d979d9b5c832e56ac5345396"><td class="memTemplParams" colspan="2">template&lt;int InMask, auto... Flags&gt; </td></tr>
+<tr class="memitem:ac498ba60d979d9b5c832e56ac5345396"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac498ba60d979d9b5c832e56ac5345396">addFlags</a></td></tr>
+<tr class="memdesc:ac498ba60d979d9b5c832e56ac5345396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add flags to a mask at compile time.  <a href="#ac498ba60d979d9b5c832e56ac5345396">More...</a><br/></td></tr>
+<tr class="separator:ac498ba60d979d9b5c832e56ac5345396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1eacab043f0652e76b48006a7d89fe2"><td class="memTemplParams" colspan="2">template&lt;int InMask, auto... Flags&gt; </td></tr>
+<tr class="memitem:ab1eacab043f0652e76b48006a7d89fe2"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab1eacab043f0652e76b48006a7d89fe2">remFlags</a></td></tr>
+<tr class="memdesc:ab1eacab043f0652e76b48006a7d89fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove flags to a mask at compile time.  <a href="#ab1eacab043f0652e76b48006a7d89fe2">More...</a><br/></td></tr>
+<tr class="separator:ab1eacab043f0652e76b48006a7d89fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc11adcd711380f1211bc92f8c3e3484"><td class="memTemplParams" colspan="2">template&lt;int Mask, auto Flag&gt; </td></tr>
+<tr class="memitem:adc11adcd711380f1211bc92f8c3e3484"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#adc11adcd711380f1211bc92f8c3e3484">getFlag</a></td></tr>
+<tr class="memdesc:adc11adcd711380f1211bc92f8c3e3484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a given flag from a mask.  <a href="#adc11adcd711380f1211bc92f8c3e3484">More...</a><br/></td></tr>
+<tr class="separator:adc11adcd711380f1211bc92f8c3e3484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa00fa242ec59da2fc52f750c44b45c16"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa00fa242ec59da2fc52f750c44b45c16">ASSERT_IF_NOT_PRESENT</a></td></tr>
 <tr class="memdesc:aa00fa242ec59da2fc52f750c44b45c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lament the absence of an element.  <a href="#aa00fa242ec59da2fc52f750c44b45c16">More...</a><br/></td></tr>
 <tr class="separator:aa00fa242ec59da2fc52f750c44b45c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4733,6 +4752,27 @@ template&lt;class T , class... Tp&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ac498ba60d979d9b5c832e56ac5345396"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int InMask, auto... Flags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::addFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">       InMask | <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
+<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdoc">Add flags to a mask at compile time. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00025">Flags.hpp:25</a></div></div>
+</div><!-- fragment -->
+<p>Add flags to a mask at compile time. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6d59cd1088324b6c67903e9f88adacd0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4926,6 +4966,26 @@ template&lt;typename From , typename To &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a5a00ab4ef375318959380967abc92878"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;auto... Flags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::combineFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">       (flagMask&lt;Flags&gt; | ...)</div>
+</div><!-- fragment -->
+<p>Add flags to a mask at compile time. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aeb97b1097d4d1f1a5729af1c115fabe7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5093,6 +5153,46 @@ template&lt;int I&gt; </div>
 <p>Empty sequence case </p>
 
 <p>Definition at line <a class="el" href="../../d3/dbe/IntListOrder_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../d3/dbe/IntListOrder_8hpp_source.html">IntListOrder.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5d47e7006013a7658cff339b5536805"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;auto Flag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::flagMask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    1&lt;&lt;<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Flag)</div>
+</div><!-- fragment --><p>Create a mask for a given flag</p>
+<p>Shift right by the amount of bits </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc11adcd711380f1211bc92f8c3e3484"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Mask, auto Flag&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::getFlag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">       Mask &amp; flagMask&lt;Flag&gt;</div>
+</div><!-- fragment -->
+<p>Get a given flag from a mask. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -6486,6 +6586,27 @@ template&lt;int Min, int Shift, int Max&gt; </div>
 <p>Index of the real part of a <code><a class="el" href="../../de/dee/structSUNphi_1_1Compl.html">Compl</a></code>. </p>
 
 <p>Definition at line <a class="el" href="../../d8/de8/Compl_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d8/de8/Compl_8hpp_source.html">Compl.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1eacab043f0652e76b48006a7d89fe2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int InMask, auto... Flags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::remFlags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">       InMask ^ <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
+<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdoc">Add flags to a mask at compile time. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00025">Flags.hpp:25</a></div></div>
+</div><!-- fragment -->
+<p>Remove flags to a mask at compile time. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>

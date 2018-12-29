@@ -36,6 +36,8 @@ var searchData=
   ['firstsmaller',['firstSmaller',['../d3/dd7/namespaceSUNphi.html#a8be496e5c941b2899d1231697b5aa73b',1,'SUNphi']]],
   ['firstsmaller_3c_20i_20_3e',['firstSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#a843446251add0d7dcdde2e48554e501d',1,'SUNphi']]],
   ['firstvectorizingcomp',['firstVectorizingComp',['../d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08',1,'SUNphi::TensKind']]],
+  ['flagmask',['flagMask',['../d3/dd7/namespaceSUNphi.html#ab5d47e7006013a7658cff339b5536805',1,'SUNphi']]],
+  ['flags_2ehpp',['Flags.hpp',['../d0/d45/Flags_8hpp.html',1,'']]],
   ['foralldims',['forAllDims',['../dd/dca/classSUNphi_1_1Grid.html#a3c0f6299ce106c4498faaa030f6d7812',1,'SUNphi::Grid']]],
   ['foralloridirs',['forAllOriDirs',['../dd/dca/classSUNphi_1_1Grid.html#abaed8dd5bf1d7e3b502aca90828c3ceb',1,'SUNphi::Grid']]],
   ['forallpoints',['forAllPoints',['../dd/dca/classSUNphi_1_1Grid.html#abef88e952286e937f5088df80ac8af84',1,'SUNphi::Grid']]],

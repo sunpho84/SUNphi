@@ -3,6 +3,7 @@ var searchData=
   ['get',['get',['../d3/dd7/namespaceSUNphi.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../d3/dd7/namespaceSUNphi.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getallbutpos',['getAllButPos',['../d3/dd7/namespaceSUNphi.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../d3/dd7/namespaceSUNphi.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
+  ['getflag',['getFlag',['../d3/dd7/namespaceSUNphi.html#adc11adcd711380f1211bc92f8c3e3484',1,'SUNphi']]],
   ['gethead',['getHead',['../d3/dd7/namespaceSUNphi.html#a80105860987af904efaa86d980d8063e',1,'SUNphi']]],
   ['getindexed',['getIndexed',['../d3/dd7/namespaceSUNphi.html#a75c031eff47914cc075977344c95ea69',1,'SUNphi']]],
   ['getintoflist',['getIntOfList',['../d3/dd7/namespaceSUNphi.html#a95c06147575cd65a542addaeb82bc8cc',1,'SUNphi']]],

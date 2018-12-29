@@ -21,6 +21,7 @@ var searchData=
   ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html',1,'SUNphi']]],
   ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#ad1676cfd4fa1a1f9ced5e59def2cc4f3',1,'SUNphi::RelBinder']]],
   ['relbinderinternaleval',['relBinderInternalEval',['../d5/d1c/classSUNphi_1_1RelBinder.html#afd794e77335090d310e59d995ff49db9',1,'SUNphi::RelBinder::relBinderInternalEval(IntSeq&lt; Head...&gt;, IntSeq&lt; Tail...&gt;, const Id &amp;id, const Tuple&lt; Args...&gt; &amp;targs) const '],['../d5/d1c/classSUNphi_1_1RelBinder.html#ab3562e0701a755316118db9fcbb60896',1,'SUNphi::RelBinder::relBinderInternalEval(Ts &amp;&amp;...ts)']]],
+  ['remflags',['remFlags',['../d3/dd7/namespaceSUNphi.html#ab1eacab043f0652e76b48006a7d89fe2',1,'SUNphi']]],
   ['removecv',['RemoveCV',['../d3/dd7/namespaceSUNphi.html#a309c8f787f444f852361c4c5ca5cfe87',1,'SUNphi']]],
   ['removefromorderedintseq',['RemoveFromOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#af0e3e9b7bb526323339af195b620568d',1,'SUNphi']]],
   ['removefromordereduniqueintseq',['RemoveFromOrderedUniqueIntSeq',['../d3/dd7/namespaceSUNphi.html#acf190e59da358bee8352b27d0a1abfde',1,'SUNphi']]],
@@ -33,6 +34,6 @@ var searchData=
   ['rw',['Rw',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740',1,'SUNphi::TwinTensCompOf&lt; Spin &gt;::Rw()'],['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html#ab8eb572fc9bc9674a77042e1a5b8e66f',1,'SUNphi::TwinTensCompOf&lt; Col &gt;::Rw()']]],
   ['rwcol',['rwCol',['../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8',1,'SUNphi']]],
   ['rwcol',['RwCol',['../d8/dc9/structSUNphi_1_1RwCol.html',1,'SUNphi']]],
-  ['rwspin',['RwSpin',['../dd/ded/structSUNphi_1_1RwSpin.html',1,'SUNphi']]],
-  ['rwspin',['rwSpin',['../d3/dd7/namespaceSUNphi.html#af5dcac73f81177737932be5439d41ce8',1,'SUNphi']]]
+  ['rwspin',['rwSpin',['../d3/dd7/namespaceSUNphi.html#af5dcac73f81177737932be5439d41ce8',1,'SUNphi']]],
+  ['rwspin',['RwSpin',['../dd/ded/structSUNphi_1_1RwSpin.html',1,'SUNphi']]]
 ];

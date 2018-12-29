@@ -8,6 +8,7 @@ var searchData=
   ['add_2ehpp',['Add.hpp',['../da/d65/Add_8hpp.html',1,'']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e',1,'SUNphi::Adder']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html',1,'SUNphi']]],
+  ['addflags',['addFlags',['../d3/dd7/namespaceSUNphi.html#ac498ba60d979d9b5c832e56ac5345396',1,'SUNphi']]],
   ['addpointer',['AddPointer',['../d3/dd7/namespaceSUNphi.html#a7f8ae981a52d211ee9e56eff9222363c',1,'SUNphi']]],
   ['addpointeriffunction',['AddPointerIfFunction',['../d3/dd7/namespaceSUNphi.html#a716ef8de43987727a6f4d784b9b5d4b1',1,'SUNphi']]],
   ['adj',['adj',['../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
@@ -34,6 +35,6 @@ var searchData=
   ['assign',['assign',['../d3/dd7/namespaceSUNphi.html#aa3235642bedbaf4675b54936e87e2318',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#afde6f5de64de3abb2035ab4b14d70b19',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs)']]],
   ['assign_2ehpp',['Assign.hpp',['../d1/d9b/Assign_8hpp.html',1,'']]],
   ['assignable',['ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d',1,'BaseSmET.hpp']]],
-  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
-  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]]
+  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
+  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]]
 ];
