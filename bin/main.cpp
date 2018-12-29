@@ -145,6 +145,8 @@ void checkScalarWrap()
     ", val: "<<c.eval()<<
     ", type id: "<<typeid(decltype(c)).name()<<endl;
   
+  cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  
   /// Rewrap into a SmeT an rvalue
   auto d=
     scalarWrap(10);
@@ -270,8 +272,10 @@ void checkNnaryBuilder()
   auto mulAdder=
     mulAdd(tens3,tens2,tens1);
   
-  using Mu=
-    decltype(mulAdder);
+  // using Mu=
+  //   decltype(mulAdder);
+
+  mulAdder.eval(0,0,0);
   
   // using Md=
   //   Mu::MergingDelimsOfRefs<IntSeq<0,3>>;
@@ -332,7 +336,7 @@ void checkSumOfTwoSmETs()
   
   cout<<"d: "<<d.eval(1,1,1)<<endl;
   
-  auto sum=a+b;
+  //auto sum=a+b;
   // this was added here to show the maximally mergeable delims
   //int e=decltype(sum)::MergeableComps{};
   //int e=decltype(sum)::PosOfRef1TcsInResTk{};
@@ -353,7 +357,7 @@ void checkSumOfTwoSmETs()
   
   cout<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
   cout<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
-
+  
   // using P1=
   //   decltype(c)::posOfAddend1TcInResTk;
   // cout<<"PosOf types 1: "<<printIntSeq(P1{})<<endl;
@@ -378,10 +382,50 @@ void checkSumOfTwoSmETs()
   
 }
 
+/// Performs simple checks on the Grid class
+void checkGrid()
+{
+  auto G=
+    Grid<2,int32_t,int64_t,HASHED>({1,2});
+  
+  G.setSides({3,3});
+  
+  cout<<G.volume()<<" "<<decltype(G)::isHashing<<endl;
+  
+  cout<<"Shifting"<<endl;
+  G.forAllPoints([&](int64_t i)
+		 {
+		   cout<<i<<endl;
+		   
+		   G.forAllOriDirs([&](int oriDir)
+				   {
+				     auto j=G.neighOfPoint(i,oriDir);
+				     
+				     cout<<" "<<oriDir<<": "<<j<<endl;
+				   });
+		   
+		 });
+  
+  cout<<"Oriented directions:"<<endl;
+  G.forAllOriDirs([&](int oriDir)
+		  {
+		    cout<<oriDir<<" orientation: "<<G.oriOfOriDir(oriDir)<<" "<<G.dimOfOriDir(oriDir)<<endl;
+		  });
+  
+  for(int i=0;i<G.volume()+1;i++)
+    {
+      cout<<i<<" ";
+      auto c=G.coordsOfPoint(i);
+      for(int mu=0;mu<2;mu++) cout<<" "<<c[mu];
+      cout<<endl;
+    }
+}
 
 //
 int main()
 {
+  checkGrid();
+  
   checkNonComplConjCancelation();
   
   checkNestedConjCancelation();
@@ -440,6 +484,9 @@ int main()
     cout<<decltype(c.getMaximallyMergedCompsView())::Tk::name()<<endl;
     cout<<" c: "<<decltype(c)::Tk::name()<<endl;
     cout<<" bb2: "<<decltype(bb2)::Tk::name()<<endl;
+    // int o=decltype(b1)::ExtraDelims{};
+    // int oo=decltype(b1)::PosOfResTcsInRefsTk{};
+    // int p=decltype(b1)::MergeableComps{};
     cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
   }
   
