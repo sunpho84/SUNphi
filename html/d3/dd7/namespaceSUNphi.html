@@ -172,6 +172,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html">_EnableIf&lt; true, T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d0b/classSUNphi_1_1ConstrainAreSame.html">ConstrainAreSame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a set of types to be the same.  <a href="../../d2/d0b/classSUNphi_1_1ConstrainAreSame.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de8/structSUNphi_1_1__Conditional.html">_Conditional</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db7/structSUNphi_1_1__Conditional_3_01true_00_01T_00_01F_01_4.html">_Conditional&lt; true, T, F &gt;</a></td></tr>
@@ -392,9 +395,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/de0/structSUNphi_1_1ConstrainIsTuple.html">ConstrainIsTuple</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain the class T to be a Tuple.  <a href="../../df/de0/structSUNphi_1_1ConstrainIsTuple.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d0b/classSUNphi_1_1ConstrainAreSame.html">ConstrainAreSame</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces a set of types to be the same.  <a href="../../d2/d0b/classSUNphi_1_1ConstrainAreSame.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html">ConstrainTupleTypesAreAllDifferent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain all types in the tuple to be different.  <a href="../../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html#details">More...</a><br/></td></tr>
@@ -725,6 +725,9 @@ template&lt;int NDims, typename Coord &gt; </td></tr>
 <tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac728c27faf9b21f9472930644b10f103">factorize</a> (T n)</td></tr>
 <tr class="memdesc:ac728c27faf9b21f9472930644b10f103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="#ac728c27faf9b21f9472930644b10f103">More...</a><br/></td></tr>
 <tr class="separator:ac728c27faf9b21f9472930644b10f103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6124ed3ae4bb2d0dd2e718c98f4ed881"><td class="memTemplParams" colspan="2">template&lt;typename T  = void, typename... Tail&gt; </td></tr>
+<tr class="memitem:a6124ed3ae4bb2d0dd2e718c98f4ed881"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6124ed3ae4bb2d0dd2e718c98f4ed881">_areSame</a> ()</td></tr>
+<tr class="separator:a6124ed3ae4bb2d0dd2e718c98f4ed881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memTemplItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac958ebeb40834e959e0f6847a91d0ffe">asMutable</a> (const T &amp;v) noexcept</td></tr>
 <tr class="separator:ac958ebeb40834e959e0f6847a91d0ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -977,6 +980,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a7e078ec9e899cd7fc3b4ce6c1b9a5b9e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e">lowestBitOf</a> (const T &amp;in)</td></tr>
 <tr class="memdesc:a7e078ec9e899cd7fc3b4ce6c1b9a5b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the lowest bit of a variable.  <a href="#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e">More...</a><br/></td></tr>
 <tr class="separator:a7e078ec9e899cd7fc3b4ce6c1b9a5b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f7cb5b38025e61233dff65cf800dd4"><td class="memTemplParams" colspan="2">template&lt;auto... Flags&gt; </td></tr>
+<tr class="memitem:a19f7cb5b38025e61233dff65cf800dd4"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a19f7cb5b38025e61233dff65cf800dd4">_combineFlags</a> ()</td></tr>
+<tr class="separator:a19f7cb5b38025e61233dff65cf800dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1099,6 +1105,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a4e2ebf308cda3504417f00d9ce87c057"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4e2ebf308cda3504417f00d9ce87c057"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4e2ebf308cda3504417f00d9ce87c057">isSame&lt; T, T &gt;</a></td></tr>
 <tr class="separator:a4e2ebf308cda3504417f00d9ce87c057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347fcb5eac900f80f1b148f6a658d4d5"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a347fcb5eac900f80f1b148f6a658d4d5"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a347fcb5eac900f80f1b148f6a658d4d5">areSame</a></td></tr>
+<tr class="separator:a347fcb5eac900f80f1b148f6a658d4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a31cbd161e017ef6fd57019e099d59ce4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4">isLvalue</a></td></tr>
 <tr class="memdesc:a31cbd161e017ef6fd57019e099d59ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is lvalue reference.  <a href="#a31cbd161e017ef6fd57019e099d59ce4">More...</a><br/></td></tr>
@@ -1250,9 +1259,6 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:afa5c6c95c7f31ae4ed56af9d54194e2b"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afa5c6c95c7f31ae4ed56af9d54194e2b">tupleSize</a></td></tr>
 <tr class="memdesc:afa5c6c95c7f31ae4ed56af9d54194e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of elements in a <code>Tuple</code>.  <a href="#afa5c6c95c7f31ae4ed56af9d54194e2b">More...</a><br/></td></tr>
 <tr class="separator:afa5c6c95c7f31ae4ed56af9d54194e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ec64fb8b905444f599ad6d772ee67c"><td class="memTemplParams" colspan="2">template&lt;class Head , class... Tail&gt; </td></tr>
-<tr class="memitem:a45ec64fb8b905444f599ad6d772ee67c"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a45ec64fb8b905444f599ad6d772ee67c">areSame</a></td></tr>
-<tr class="separator:a45ec64fb8b905444f599ad6d772ee67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab82b658a944eda342825aee5ba434c5a"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 , class  = FalseType&gt; </td></tr>
 <tr class="memitem:ab82b658a944eda342825aee5ba434c5a"><td class="memTemplItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab82b658a944eda342825aee5ba434c5a">_nOfTypeInTuple</a></td></tr>
 <tr class="separator:ab82b658a944eda342825aee5ba434c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1293,7 +1299,6 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="separator:ab5d47e7006013a7658cff339b5536805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a00ab4ef375318959380967abc92878"><td class="memTemplParams" colspan="2">template&lt;auto... Flags&gt; </td></tr>
 <tr class="memitem:a5a00ab4ef375318959380967abc92878"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a></td></tr>
-<tr class="memdesc:a5a00ab4ef375318959380967abc92878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add flags to a mask at compile time.  <a href="#a5a00ab4ef375318959380967abc92878">More...</a><br/></td></tr>
 <tr class="separator:a5a00ab4ef375318959380967abc92878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac498ba60d979d9b5c832e56ac5345396"><td class="memTemplParams" colspan="2">template&lt;int InMask, auto... Flags&gt; </td></tr>
 <tr class="memitem:ac498ba60d979d9b5c832e56ac5345396"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac498ba60d979d9b5c832e56ac5345396">addFlags</a></td></tr>
@@ -1367,7 +1372,7 @@ template&lt;bool B, typename T , typename F &gt; </div>
 <p>Provides type T if B is true, or F if is false</p>
 <p>Wraps the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00173">173</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00207">207</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -2039,6 +2044,48 @@ template&lt;bool AlsoEqual, int First, int Second, int... Tail&gt; </div>
 <p>Return true if First&lt;Second or First==Second (only if AlsoEqual==true). Call iteratively itself if more than two arguents are passed. </p>
 
 <p>Definition at line <a class="el" href="../../d3/dbe/IntListOrder_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d3/dbe/IntListOrder_8hpp_source.html">IntListOrder.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6124ed3ae4bb2d0dd2e718c98f4ed881"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void, typename... Tail&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::_areSame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if all types Ts are the same</p>
+<p>Internal implementation </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19f7cb5b38025e61233dff65cf800dd4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;auto... Flags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::_combineFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Combine flags to form a mask at compile time</p>
+<p>Internal implementation to catch error </p>
+
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -2864,7 +2911,7 @@ template&lt;typename T , typename... Tp&gt; </div>
 <p>Return true if <code>Tuple</code> Tp contains the type T</p>
 <p>Internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00216">216</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -2896,7 +2943,7 @@ template&lt;typename... ToBeSearchedTypes, typename... ContainingTypes&gt; </div
 <p>Checks that a tuple is contained into another one</p>
 <p>Internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00264">264</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00245">245</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -2983,7 +3030,7 @@ template&lt;typename T &gt; </div>
 <p>Remove <code>const</code> qualifier from anything</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>Check that the "dangling  reference forbidding" below, currently not working, is not actually necessary </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00262">262</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00296">296</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4720,7 +4767,7 @@ template&lt;class T1 , class T2 , class  = FalseType&gt; </div>
 </div><!-- fragment --><p>Counts the same types</p>
 <p>Single pair of types case - forbids implementation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -4748,7 +4795,7 @@ template&lt;class T , class... Tp&gt; </div>
 </div><!-- fragment --><p>Counts the same type</p>
 <p>Counts the occurrency of type T inside a tuple </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -4765,11 +4812,11 @@ template&lt;int InMask, auto... Flags&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">       InMask | <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
-<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdoc">Add flags to a mask at compile time. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00025">Flags.hpp:25</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00039">Flags.hpp:39</a></div></div>
 </div><!-- fragment -->
 <p>Add flags to a mask at compile time. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00032">32</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -4812,11 +4859,11 @@ template&lt;typename Head  = int, typename... Tail&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    areIntegrals&lt;Head&gt; and <a class="code" href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">areIntegrals</a>&lt;Tail...&gt;</div>
-<div class="ttc" id="namespaceSUNphi_html_ad583dd449e2a359a9429060db23e5d4e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">SUNphi::areIntegrals</a></div><div class="ttdeci">constexpr bool areIntegrals</div><div class="ttdoc">Identifies whether a set of types are a integer-like. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00395">TypeTraits.hpp:395</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_ad583dd449e2a359a9429060db23e5d4e"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e">SUNphi::areIntegrals</a></div><div class="ttdeci">constexpr bool areIntegrals</div><div class="ttdoc">Identifies whether a set of types are a integer-like. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00429">TypeTraits.hpp:429</a></div></div>
 </div><!-- fragment -->
 <p>Identifies whether a set of types are a integer-like. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00395">395</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00429">429</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4836,7 +4883,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 <p>Identifies whether a single types is integer-like. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00400">400</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00434">434</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4882,33 +4929,24 @@ template&lt;int... Ints&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a45ec64fb8b905444f599ad6d772ee67c"></a>
+<a class="anchor" id="a347fcb5eac900f80f1b148f6a658d4d5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class Head , class... Tail&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename... Ts&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool SUNphi::areSame</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">    IntSeq&lt;isSame&lt;Head,Tail&gt;...&gt;<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">::hMul</a></div>
-<div class="ttc" id="namespaceSUNphi_html_ad672c67c71c13820a0dcd0b12b88b438"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ad672c67c71c13820a0dcd0b12b88b438">SUNphi::hMul</a></div><div class="ttdeci">constexpr int hMul</div><div class="ttdoc">Product of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00062">IntListOperations.hpp:62</a></div></div>
-</div><!-- fragment --><p>Checks if a set of types are the same</p>
-<p>Perform an "and" of all single-type check </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000028">Todo:</a></b></dt><dd>use foldable expression instead </dd></dl>
+<div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a6124ed3ae4bb2d0dd2e718c98f4ed881">_areSame</a>&lt;Ts...&gt;()</div>
+<div class="ttc" id="namespaceSUNphi_html_a6124ed3ae4bb2d0dd2e718c98f4ed881"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a6124ed3ae4bb2d0dd2e718c98f4ed881">SUNphi::_areSame</a></div><div class="ttdeci">constexpr bool _areSame()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00141">TypeTraits.hpp:141</a></div></div>
+</div><!-- fragment --><p>Returns true if all Ts are the same type</p>
+<p>Gives visibility to internal representation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -4978,11 +5016,12 @@ template&lt;auto... Flags&gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">       (flagMask&lt;Flags&gt; | ...)</div>
-</div><!-- fragment -->
-<p>Add flags to a mask at compile time. </p>
+<div class="line">       <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a19f7cb5b38025e61233dff65cf800dd4">_combineFlags</a>&lt;Flags...&gt;()</div>
+<div class="ttc" id="namespaceSUNphi_html_a19f7cb5b38025e61233dff65cf800dd4"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a19f7cb5b38025e61233dff65cf800dd4">SUNphi::_combineFlags</a></div><div class="ttdeci">constexpr int _combineFlags()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00027">Flags.hpp:27</a></div></div>
+</div><!-- fragment --><p>Combine flags to form a mask at compile time</p>
+<p>Gives visibility to internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -5192,7 +5231,7 @@ template&lt;int Mask, auto Flag&gt; </div>
 </div><!-- fragment -->
 <p>Get a given flag from a mask. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -5701,7 +5740,7 @@ template&lt;typename Base , typename Derived &gt; </div>
 </div><!-- fragment -->
 <p>Identifies whether Base is a base class of Derived. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00232">232</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00266">266</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -5766,7 +5805,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 <p>Returns whether T is const or not. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00245">245</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -5815,7 +5854,7 @@ template&lt;typename F &gt; </div>
 </div><!-- fragment -->
 <p>Returns whether the passed argument is a function. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00240">240</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00274">274</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -5835,7 +5874,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 <p>Check if the type is lvalue reference. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -5912,7 +5951,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 <p>Check if the type is rvalue reference. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00191">191</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -6290,7 +6329,7 @@ template&lt;class T , class  = ConstrainIsTuple&lt;T&gt;&gt; </div>
 </div><!-- fragment --><p>Count the number of different types in a <code>Tuple</code> </p>
 <p>Generic type - forbids instantiation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00179">179</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00160">160</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -6316,12 +6355,12 @@ template&lt;class... Tp&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    IntSeq&lt;(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#af877fd927f6e7f68c60742d9fd6eee75">nOfTypeInTuple</a>&lt;Tp,<a class="code" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt;Tp...&gt;&gt; ==1)...&gt;::<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d">hSum</a></div>
 <div class="ttc" id="namespaceSUNphi_html_a08e4ecccf0f9751e631c2660e41e088d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a08e4ecccf0f9751e631c2660e41e088d">SUNphi::hSum</a></div><div class="ttdeci">constexpr int hSum</div><div class="ttdoc">Sum of all integers. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d3e/IntListOperations_8hpp_source.html#l00025">IntListOperations.hpp:25</a></div></div>
-<div class="ttc" id="namespaceSUNphi_html_af877fd927f6e7f68c60742d9fd6eee75"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af877fd927f6e7f68c60742d9fd6eee75">SUNphi::nOfTypeInTuple</a></div><div class="ttdeci">static constexpr int nOfTypeInTuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00168">TupleClass.hpp:168</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_af877fd927f6e7f68c60742d9fd6eee75"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#af877fd927f6e7f68c60742d9fd6eee75">SUNphi::nOfTypeInTuple</a></div><div class="ttdeci">static constexpr int nOfTypeInTuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00149">TupleClass.hpp:149</a></div></div>
 <div class="ttc" id="namespaceSUNphi_html_ae8bd2374a8eb13af54ead4b5e2e8558c"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">SUNphi::Tuple</a></div><div class="ttdeci">std::tuple&lt; Tp...&gt; Tuple</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00020">TupleClass.hpp:20</a></div></div>
 </div><!-- fragment --><p>Count the number of different types in a <code>Tuple</code> </p>
 <p>Real tuple case </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00186">186</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00167">167</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -6379,7 +6418,7 @@ template&lt;class T , class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 </div><!-- fragment --><p>Counts the same type</p>
 <p>Gives external visibility to the implementation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00168">168</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -6602,11 +6641,11 @@ template&lt;int InMask, auto... Flags&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">       InMask &amp; ~<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">combineFlags</a>&lt;Flags...&gt;</div>
-<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdoc">Add flags to a mask at compile time. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00025">Flags.hpp:25</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a5a00ab4ef375318959380967abc92878"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878">SUNphi::combineFlags</a></div><div class="ttdeci">constexpr int combineFlags</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/Flags_8hpp_source.html#l00039">Flags.hpp:39</a></div></div>
 </div><!-- fragment -->
 <p>Remove flags to a mask at compile time. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d45/Flags_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d0/d45/Flags_8hpp_source.html">Flags.hpp</a>.</p>
 
 </div>
 </div>
@@ -6623,12 +6662,12 @@ template&lt;typename T , typename Tp , typename  = ConstrainIsTuple&lt;Tp&gt;&gt
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055">_tupleHasType</a>(<a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>{},Tp{})</div>
-<div class="ttc" id="namespaceSUNphi_html_afc903664555a6ee3d136d0ba45398055"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055">SUNphi::_tupleHasType</a></div><div class="ttdeci">constexpr bool _tupleHasType(T, Tuple&lt; Tp...&gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00216">TupleClass.hpp:216</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_afc903664555a6ee3d136d0ba45398055"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#afc903664555a6ee3d136d0ba45398055">SUNphi::_tupleHasType</a></div><div class="ttdeci">constexpr bool _tupleHasType(T, Tuple&lt; Tp...&gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00197">TupleClass.hpp:197</a></div></div>
 <div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
 </div><!-- fragment -->
 <p>Return true if <code>Tuple</code> Tp contains the type T. </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00227">227</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00208">208</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -6645,11 +6684,11 @@ template&lt;typename TpToSearch , typename TpContaining &gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#a23114624468dc2079b5a9084e1c47a45">_tupleHasTypes</a>(TpToSearch{},TpContaining{})</div>
-<div class="ttc" id="namespaceSUNphi_html_a23114624468dc2079b5a9084e1c47a45"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a23114624468dc2079b5a9084e1c47a45">SUNphi::_tupleHasTypes</a></div><div class="ttdeci">constexpr bool _tupleHasTypes(Tuple&lt; ToBeSearchedTypes...&gt;, Tuple&lt; ContainingTypes...&gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00264">TupleClass.hpp:264</a></div></div>
+<div class="ttc" id="namespaceSUNphi_html_a23114624468dc2079b5a9084e1c47a45"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a23114624468dc2079b5a9084e1c47a45">SUNphi::_tupleHasTypes</a></div><div class="ttdeci">constexpr bool _tupleHasTypes(Tuple&lt; ToBeSearchedTypes...&gt;, Tuple&lt; ContainingTypes...&gt;)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d31/TupleClass_8hpp_source.html#l00245">TupleClass.hpp:245</a></div></div>
 </div><!-- fragment --><p>Checks that a tuple is contained into another one</p>
 <p>Gives visibility to the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00276">276</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00257">257</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -6697,7 +6736,7 @@ template&lt;class T , class  = ConstrainIsTuple&lt;T&gt;&gt; </div>
 </div><!-- fragment -->
 <p>Check whether all types of a <code>Tuple</code> are different. </p>
 
-<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html#l00176">176</a> of file <a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">TupleClass.hpp</a>.</p>
 
 </div>
 </div>

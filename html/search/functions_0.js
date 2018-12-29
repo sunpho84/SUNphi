@@ -2,6 +2,8 @@ var searchData=
 [
   ['_5fareordered',['_areOrdered',['../d3/dd7/namespaceSUNphi.html#ac6f6a412c3eec8f1ad0c29c57eb0bd9e',1,'SUNphi']]],
   ['_5fareorderedmin2ints',['_areOrderedMin2Ints',['../d3/dd7/namespaceSUNphi.html#a31453e65b0bfae779cb3ee139b8caace',1,'SUNphi']]],
+  ['_5faresame',['_areSame',['../d3/dd7/namespaceSUNphi.html#a6124ed3ae4bb2d0dd2e718c98f4ed881',1,'SUNphi']]],
+  ['_5fcombineflags',['_combineFlags',['../d3/dd7/namespaceSUNphi.html#a19f7cb5b38025e61233dff65cf800dd4',1,'SUNphi']]],
   ['_5fcompsmergeability',['_compsMergeability',['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a842644f1790c8e6abdd3185503632199',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt;&gt; P1, IntSeq&lt;&gt; P2)'],['../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#a99fe7d8a45952d2bf24c2525d734a84d',1,'SUNphi::PairOfTensKindMergeability::_compsMergeability(IntSeq&lt; MDel1...&gt; MD1, IntSeq&lt; MDel2...&gt; MD2, IntSeq&lt; Head1, Tail1...&gt; P1, IntSeq&lt; Head2, Tail2...&gt; P2)']]],
   ['_5fdyncompspos',['_DynCompsPos',['../d8/df8/classSUNphi_1_1TensKind.html#a46e099c3edb1e5ef8d76c9028fa52964',1,'SUNphi::TensKind']]],
   ['_5ffirslarger',['_firsLarger',['../d3/dd7/namespaceSUNphi.html#a87e7e8f527168edc2e495a8104f3945f',1,'SUNphi']]],
