@@ -385,12 +385,15 @@ void checkSumOfTwoSmETs()
 /// Performs simple checks on the Grid class
 void checkGrid()
 {
+  static constexpr int flags=
+    combineFlags<GridFlag::HASHED>;
+  
   auto G=
-    Grid<2,int32_t,int64_t,HASHED>({1,2});
+    Grid<2,int32_t,int64_t,flags>({1,2});
   
   G.setSides({3,3});
   
-  cout<<G.volume()<<" "<<decltype(G)::isHashing<<endl;
+  cout<<G.volume()<<" "<<decltype(G)::hashingTag<<endl;
   
   cout<<"Shifting"<<endl;
   G.forAllPoints([&](int64_t i)

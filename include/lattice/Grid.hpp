@@ -21,6 +21,7 @@
 #include <metaprogramming/CRTP.hpp>
 #include <system/Debug.hpp>
 #include <utility/Bits.hpp>
+#include <utility/Flags.hpp>
 
 /// Provide the type Coords
 #define PROVIDE_COORDS				\
@@ -40,13 +41,12 @@ namespace SUNphi
   constexpr int moveOffset[2]=
     {-1,+1};
   
-  /// Constant asserting to hash
-  static constexpr bool HASHED=
-    true;
+  /// List of flags
+  enum class GridFlag{HASHED}; ///< Hash data
   
-  /// Constant asserting not to hash
-  static constexpr bool NOT_HASHED=
-    false;
+  /// Default parameters for grid
+  constexpr int GRID_DEFAULT_FLAGS=
+    combineFlags<GridFlag::HASHED>;
   
   /////////////////////////////////////////////////////////////////
   
@@ -71,7 +71,7 @@ namespace SUNphi
 		     NDims,
 		     Coord,
 		     Idx,
-		     HASHED>
+		     true>
   {
     
     PROVIDE_COORDS;
@@ -172,8 +172,8 @@ namespace SUNphi
       return neighsOfPointsHashTable[i][oriDir];
     }
     
-    /// Flag asserting that hashing
-    static constexpr char isHashing[]=
+    /// Tag asserting that hashing
+    static constexpr char hashingTag[]=
       "Hashing";
     
   };
@@ -191,7 +191,7 @@ namespace SUNphi
 		     NDims,
 		     Coord,
 		     Idx,
-		     NOT_HASHED>
+		     false>
   {
     
     PROVIDE_COORDS;
@@ -213,8 +213,8 @@ namespace SUNphi
       return CRTP_CAST.computeNeighOfPoint(i,oriDir);
     }
     
-    /// Flag asserting not hashing
-    static constexpr char isHashing[]=
+    /// Tag asserting not hashing
+    static constexpr char hashingTag[]=
       "Not Hashing";
     
   };
@@ -222,20 +222,18 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// A grid of points spanning an hypercubic grid
-  template <int NDims=4,              // Number of dimensions
-	    typename Coord=int32_t,   // Type of coordinate values
-	    typename Idx=int64_t,     // Type of index of points
-	    bool Hashing=HASHED>      // Store or not tables
+  template <int NDims=4,                                   // Number of dimensions
+	    typename Coord=int32_t,                        // Type of coordinate values
+	    typename Idx=int64_t,                          // Type of index of points
+	    int Flags=GRID_DEFAULT_FLAGS>                  // Flags
   class Grid :
-    public GridHashable<Grid<NDims,Coord,Idx,Hashing>,
+    public GridHashable<Grid<NDims,Coord,Idx,Flags>,
 			NDims,
 			Coord,
 			Idx,
-			Hashing>
+			getFlag<Flags,GridFlag::HASHED>>
   {
     PROVIDE_COORDS;
-    
-  private:
     
     /// Side of the grid
     Coords _sides;
@@ -257,6 +255,14 @@ namespace SUNphi
     }
     
   public:
+    
+    /// Flags of the class
+    static constexpr int flags=
+      Flags;
+    
+    /// Extract the flag determiing whether is hashing
+    static constexpr bool isHashing=
+      getFlag<flags,GridFlag::HASHED>;
     
     /// Number of dimensions
     static constexpr int nDims=
@@ -372,7 +378,7 @@ namespace SUNphi
       
       setVolume();
       
-      if constexpr(Hashing)
+      if constexpr(isHashing)
 	this->fillHashTables();
     }
     
