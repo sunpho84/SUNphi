@@ -14,6 +14,10 @@
 #define CRASH(...)							\
   SUNphi::internalCrash(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
 
+/// Include a comment in the assembler, recognizable in the compilation
+#define ASM_BOOKMARK(COMMENT)					\
+  asm("#Bookmark " __FILE__ " " COMMENT)
+
 namespace SUNphi
 {
   /// Write the list of called routines

@@ -18,10 +18,12 @@
 #include <array>
 #include <vector>
 
+#include <math/Arithmetic.hpp>
 #include <metaprogramming/CRTP.hpp>
 #include <system/Debug.hpp>
 #include <utility/Bits.hpp>
 #include <utility/Flags.hpp>
+#include <utility/Position.hpp>
 
 /// Provide the type Coords
 #define PROVIDE_COORDS				\
@@ -42,7 +44,8 @@ namespace SUNphi
     {-1,+1};
   
   /// List of flags
-  enum class GridFlag{HASHED}; ///< Hash data
+  enum class GridFlag{HASHED,      ///< Hash data
+		      SHIFTED_BC}; ///< Implements shifted bounday conditions
   
   /// Default parameters for grid
   constexpr int GRID_DEFAULT_FLAGS=
@@ -180,6 +183,146 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Shifted boundary condition feature
+  ///
+  /// Forward declaration
+  template <typename T,      // External type inheriting from
+	    int NDims,       // Number of dimensions
+	    typename Coord,  // Type of coordinate values
+	    typename Idx,    // Type of index of points
+	    bool Shifting>   // Flag to choose if shifting is supported or not
+  class GridShiftableBC;
+  
+  /// Shifted boundary condition feature
+  ///
+  /// Version supporting shift
+  template <typename T,      // External type inheriting from
+	    int NDims,       // Number of dimensions
+	    typename Coord,  // Type of coordinate values
+	    typename Idx>    // Type of index of points
+  class GridShiftableBC<T,
+			NDims,
+			Coord,
+			Idx,
+			true>
+  {
+    
+    PROVIDE_COORDS;
+    
+    /// Direction identifying the face which is shifted
+    int _shiftedFace;
+    
+    /// Matrix storing the shift induced on each direction
+    Coords _shiftOfBC;
+    
+  public:
+    
+    PROVIDE_CRTP_CAST_OPERATOR(T);
+    
+    /// Set shift for boundary
+    void setShift(const int dir,       ///< Direction
+		  const Coords& shift) ///< Amount to shift
+    {
+      _shiftedFace=dir;
+      
+      CRTP_CAST.forAllDims([&](int mu)
+			   {
+			     _shiftOfBC[mu]=
+			       safeModulo(shift[mu],CRTP_CAST.sides[mu]);
+			   });
+			   
+      if(_shiftOfBC[dir]!=0)
+	CRASH("Shift of shiftedFace ",dir,"must be zero, it is",_shiftOfBC[dir]);
+    }
+    
+    /// Gets the shifting face
+    int shiftedFace() const
+    {
+      return _shiftedFace;
+    }
+    
+    /// Gets the shifting of the given direction
+    Coord shiftOfBC(int mu) const
+    {
+      return _shiftOfBC[mu];
+    }
+    
+    /// Returns the shifted coord due to boundary passing
+    Coord getShiftedCoordPerpToMove(const Coords& in,      ///< Input coords
+				    const int ori,         ///< Orientation
+				    const int mu,          ///< Direction
+				    const Coord nBCpassed) ///< Number of BC passed (positive number)
+      const
+    {
+      if(shiftedFace()==mu)
+	{
+	  /// Offset for the shift due to BC
+	  const Coord muOffset=
+	    this->shiftOfBC(mu)*ori*nBCpassed;
+	  
+	  /// Raw destination
+	  const Coord rawMuDest=
+	    in[mu]+muOffset;
+	  
+	  return
+	    safeModulo(rawMuDest,CRTP_CAST.side(mu));
+	}
+      else
+	return
+	  in[mu];
+    }
+  };
+  
+  /// Shifted boundary condition feature
+  ///
+  /// Version not supporting shift
+  template <typename T,      // External type inheriting from
+	    int NDims,       // Number of dimensions
+	    typename Coord,  // Type of coordinate values
+	    typename Idx>    // Type of index of points
+  class GridShiftableBC<T,
+			NDims,
+			Coord,
+			Idx,
+			false>
+  {
+    PROVIDE_COORDS;
+    
+  public:
+    
+    /// Set shift for boundary (dummy version)
+    void setShift(const int dir,       ///< Direction
+		  const Coords& shift) ///< Amount to shift
+    {
+    }
+    
+    /// Gets the shifting face
+    constexpr int shiftedFace() const
+    {
+      return NOT_PRESENT;
+    }
+    
+    /// Gets the shifting of the given direction
+    constexpr int shiftOfBC(int mu) const
+    {
+      return 0;
+    }
+    
+    /// Returns the shifted coord due to boundary passing
+    ///
+    /// Dummy version
+    Coord getShiftedCoordPerpToMove(const Coords& in,      ///< Input coords
+				    const int ori,         ///< Orientation
+				    const int mu,          ///< Direction
+				    const Coord nBCpassed) ///< Number of BC passed (positive number)
+      const
+    {
+      return in[mu];
+    }
+  };
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Hashable properties of a \c Grid
   ///
   /// Not hashing version
@@ -231,7 +374,12 @@ namespace SUNphi
 			NDims,
 			Coord,
 			Idx,
-			getFlag<Flags,GridFlag::HASHED>>
+			getFlag<Flags,GridFlag::HASHED>>,
+    public GridShiftableBC<Grid<NDims,Coord,Idx,Flags>,
+			   NDims,
+			   Coord,
+			   Idx,
+			   getFlag<Flags,GridFlag::SHIFTED_BC>>
   {
     PROVIDE_COORDS;
     
@@ -260,9 +408,13 @@ namespace SUNphi
     static constexpr int flags=
       Flags;
     
-    /// Extract the flag determiing whether is hashing
+    /// Extract the flag determining whether is hashing
     static constexpr bool isHashing=
       getFlag<flags,GridFlag::HASHED>;
+    
+    /// Extract the flag determining whether BC might be shifted
+    static constexpr bool isShiftingBC=
+      getFlag<flags,GridFlag::SHIFTED_BC>;
     
     /// Number of dimensions
     static constexpr int nDims=
@@ -396,7 +548,7 @@ namespace SUNphi
 	  const Coord& d=
 	    side(mu);
 	  
-	  /// Quozient, corresponding to the index of the remaining \cnDims-1 components
+	  /// Quozient, corresponding to the index of the remaining \c nDims-1 components
 	  const Idx q=i/d;
 	  
 	  /// Remainder, corresponding to the coordinate
@@ -452,23 +604,38 @@ namespace SUNphi
     	dimOfOriDir(oriDir);
       
       /// Offset to add
-      const int offset=
+      const Coord offset=
     	(side(shiftMu)+moveOffset[ori])*amount;
+      
+      /// Destintion not considering wrap
+      const Coord rawDest=
+	in[shiftMu]+offset;
+      
+      /// Actual destintion
+      const Coord dest=
+	rawDest%side(shiftMu);
+      
+      /// Numbr of boundaries passed
+      const Coord nBCpassed=
+	rawDest/side(shiftMu);
       
       forAllDims([&](int mu)
     		 {
     		   if(mu!=shiftMu)
-    		     out[mu]=in[mu];
-    		   else
-    		     out[mu]=(in[mu]+offset)%side(mu);
+		     out[mu]=
+		       this->getShiftedCoordPerpToMove(in,ori,mu,nBCpassed);
+		   else
+    		     out[mu]=
+		       dest;
     		 });
       
       return out;
     }
     
-    /// Compte the neighbor in the oriented direction oriDir of point i
-    Idx computeNeighOfPoint(const Idx i,             ///< Point
-			       const int oriDir) const  ///< Oriented direction
+    /// Compute the neighbor in the oriented direction oriDir of point i
+    Idx computeNeighOfPoint(const Idx i,        ///< Point
+			    const int oriDir)   ///< Oriented direction
+      const
     {
       assertPointIsInRange(i);
       assertOriDirIsInRange(oriDir);
