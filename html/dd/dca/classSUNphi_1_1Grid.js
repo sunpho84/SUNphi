@@ -23,6 +23,7 @@ var classSUNphi_1_1Grid =
     [ "_volume", "dd/dca/classSUNphi_1_1Grid.html#afa574b761d7b14da4e5093ad3531b137", null ],
     [ "flags", "dd/dca/classSUNphi_1_1Grid.html#aa7f208ab8cf437513f62856140b60c15", null ],
     [ "isHashing", "dd/dca/classSUNphi_1_1Grid.html#a5f87ad4e7caf4507b612ab7163102e99", null ],
+    [ "isShiftingBC", "dd/dca/classSUNphi_1_1Grid.html#a96f3dfc963664309d6e01c8033658fbb", null ],
     [ "nDims", "dd/dca/classSUNphi_1_1Grid.html#a3fb84f3cd20047db0cd2bddee52de4e7", null ],
     [ "nOriDirs", "dd/dca/classSUNphi_1_1Grid.html#ae2c76c9cfac92abb578dde9943ea6000", null ]
 ];

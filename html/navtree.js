@@ -9,7 +9,8 @@ var NAVTREE =
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ]
+        [ "Enumerations", "namespacemembers_enum.html", null ],
+        [ "Enumerator", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Classes", null, [
@@ -38,12 +39,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d33/TupleTypeCat_8hpp_source.html",
-"d4/d8b/structSUNphi_1_1BinarySmET.html#a4b46ea85ccd68848ca76d967b1f07222",
-"d7/d7a/TensComp_8hpp.html",
-"da/def/structSUNphi_1_1IntSeq.html",
-"dd/d03/classSUNphi_1_1UMinuser.html#a15da6f3c9613c0d5475c90e7a48c3c72",
-"dir_2ea30aa2956a8db99dd22aa5e597f384.html"
+"d2/d26/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_4_01_4.html#afbb7c6244d6452e7edcf60386eb1a27b",
+"d4/d8b/structSUNphi_1_1BinarySmET.html#a0cec6cc86dbecb8d68ff15e3f2c4eb1f",
+"d7/d03/structSUNphi_1_1HasMember__Tk.html",
+"da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html#a7ec622419e561a4fa4737a3bb8bb44eb",
+"dc/d8f/TensClass_8hpp.html#ac954c2ff4673a3539bfc776adb9efe2d",
+"df/d95/Bits_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

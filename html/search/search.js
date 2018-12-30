@@ -15,8 +15,9 @@ var indexSectionsWithContent =
   5: "_abcdefghilmnoprstv",
   6: "abcdefikmnprstuvy",
   7: "gop",
-  8: "acdefgilmnprsu",
-  9: "t"
+  8: "h",
+  9: "acdefgilmnprsu",
+  10: "t"
 };
 
 var indexSectionNames =
@@ -29,8 +30,9 @@ var indexSectionNames =
   5: "variables",
   6: "typedefs",
   7: "enums",
-  8: "defines",
-  9: "pages"
+  8: "enumvalues",
+  9: "defines",
+  10: "pages"
 };
 
 function convertToId(search)
