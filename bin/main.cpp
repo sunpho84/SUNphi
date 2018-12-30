@@ -441,9 +441,30 @@ void checkFlagMasks()
   static_assert(maskB==2,"Expecting 2");
 }
 
+void checkSafeModulo()
+{
+  /// Function to test the result of modulo
+  auto check=
+    [](const int val,const int mod,const int expRes)
+    {
+      /// Result
+      int res=
+        safeModulo(val,mod);
+      
+      if(expRes!=res)
+	CRASH(val,"MOD ",res,"expected ",expRes,", is",res);
+    };
+  
+  check(5,3,2);
+  check(-2,3,1);
+  check(-3,3,0);
+}
+
 //
 int main()
 {
+  checkSafeModulo();
+  
   checkFlagMasks();
   
   checkGrid();
