@@ -31,8 +31,17 @@ namespace SUNphi
     /// Result of the factorization
     std::vector<T> out;
     
-    /// Initial value of the divisor
-    T d=2;
+    /// List of all known primes
+    const std::vector<T> primesList=
+      {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97};
+    
+    /// Iterator to the initial value of the divisor
+    auto dPtr=
+      primesList.begin();
+    
+    /// Divisor
+    T d=
+      *dPtr;
     
     // Loops until n is 1
     while(n!=1)
@@ -52,10 +61,12 @@ namespace SUNphi
 	  }
 	else
 	  // Increment the divisor
-	  if(d==2)
-	    d=3;
+	  if(d<primesList.back())
+	    d=
+	      (*(++dPtr));
 	  else
-	    d+=2;
+	    d+=
+	      2;
       }
     
     return out;

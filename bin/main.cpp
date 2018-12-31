@@ -460,9 +460,44 @@ void checkSafeModulo()
   check(-3,3,0);
 }
 
+void checkFactorize()
+{
+  auto check=
+    [](const int n,const std::vector<int> expFacts)
+    {
+      const std::vector<int> facts=
+      factorize(n);
+    
+    if(facts.size()!=expFacts.size())
+      CRASH("Factorizing",n,"facts size",facts.size(),"different from size expected,",expFacts.size());
+    
+    for(int iFact=0;iFact<(int)facts.size();iFact++)
+      {
+	const int f=
+	  facts[iFact];
+	
+	const int eF=
+	  expFacts[iFact];
+	
+	if(f!=eF)
+	  CRASH("Factorizing",n,"Factor",iFact,"is expected to be",eF,"is",f);
+      }
+  };
+  
+  check(1,{1});
+  check(2,{2});
+  check(3,{3});
+  check(4,{2,2});
+  check(5,{5});
+  check(6,{2,3});
+  check(101,{101});
+}
+
 //
 int main()
 {
+  checkFactorize();
+  
   checkSafeModulo();
   
   checkFlagMasks();
