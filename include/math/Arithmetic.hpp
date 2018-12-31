@@ -39,6 +39,13 @@ namespace SUNphi
       :
       r;
   }
+  
+  /// Square of a number
+  template <typename T>
+  T sqr(const T& x)
+  {
+    return x*x;
+  }
 }
 
 #endif
