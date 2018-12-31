@@ -441,6 +441,7 @@ void checkFlagMasks()
   static_assert(maskB==2,"Expecting 2");
 }
 
+/// Check that modulo operation is performed as expected
 void checkSafeModulo()
 {
   /// Function to test the result of modulo
@@ -460,22 +461,28 @@ void checkSafeModulo()
   check(-3,3,0);
 }
 
+/// Check that a number factorizes as expected
 void checkFactorize()
 {
+  /// Function checking the number factorization
   auto check=
-    [](const int n,const std::vector<int> expFacts)
+    [](const int n,                         ///< Number to factorize
+       const std::vector<int> expFacts)     ///< Expected factors
     {
+      /// Factors to be checked
       const std::vector<int> facts=
-      factorize(n);
-    
+        factorize(n);
+      
     if(facts.size()!=expFacts.size())
       CRASH("Factorizing",n,"facts size",facts.size(),"different from size expected,",expFacts.size());
     
     for(int iFact=0;iFact<(int)facts.size();iFact++)
       {
+	/// Factor obtained
 	const int f=
 	  facts[iFact];
 	
+	/// Factor expected
 	const int eF=
 	  expFacts[iFact];
 	
