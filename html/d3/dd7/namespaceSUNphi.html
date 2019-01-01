@@ -163,13 +163,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html">GridHashable&lt; T, NDims, Coord, Idx, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">GridHashable&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/classSUNphi_1_1GridShiftableBC.html">GridShiftableBC</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html">GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">GridShiftableBC&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">GridHashable&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">Grid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A grid of points spanning an hypercubic grid.  <a href="../../dd/dca/classSUNphi_1_1Grid.html#details">More...</a><br/></td></tr>
@@ -624,7 +624,8 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ac682f0879a1c598390150ca77ce82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to identifiy orientations. <br/></td></tr>
 <tr class="separator:ac682f0879a1c598390150ca77ce82479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c">GridFlag</a> { <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca92b1a7d5a98a43c91fa0c6c435f4b3a8">GridFlag::HASHED</a>, 
-<b>SHIFTED_BC</b>
+<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca931c8be36bfdf49a1a7d2fa9879a0005">GridFlag::SHIFTED_BC</a>, 
+<b>ALWAYS_WRAPPING</b>
  }</td></tr>
 <tr class="memdesc:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of flags.  <a href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c">More...</a><br/></td></tr>
 <tr class="separator:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -735,6 +736,11 @@ template&lt;int NDims, typename Coord &gt; </td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdbc23a72d6a49054aee06b5e5a2d8d8">safeModulo</a> (const T &amp;val, const T &amp;mod)</td></tr>
 <tr class="separator:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eeddf88e05361ef8f44c0af72c11289"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0eeddf88e05361ef8f44c0af72c11289"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0eeddf88e05361ef8f44c0af72c11289"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0eeddf88e05361ef8f44c0af72c11289">sqr</a> (const T &amp;x)</td></tr>
+<tr class="memdesc:a0eeddf88e05361ef8f44c0af72c11289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square of a number. <br/></td></tr>
+<tr class="separator:a0eeddf88e05361ef8f44c0af72c11289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac728c27faf9b21f9472930644b10f103">factorize</a> (T n)</td></tr>
 <tr class="memdesc:ac728c27faf9b21f9472930644b10f103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="#ac728c27faf9b21f9472930644b10f103">More...</a><br/></td></tr>
@@ -2039,9 +2045,12 @@ template&lt;bool B&gt; </div>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a27cd85d7ce87fe68bd4ccfe8b0116e6ca92b1a7d5a98a43c91fa0c6c435f4b3a8"></a>HASHED</em>&#160;</td><td class="fielddoc">
 <p>Hash data. </p>
 </td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a27cd85d7ce87fe68bd4ccfe8b0116e6ca931c8be36bfdf49a1a7d2fa9879a0005"></a>SHIFTED_BC</em>&#160;</td><td class="fielddoc">
+<p>Implements shifted bounday conditions. </p>
+</td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -5357,7 +5366,7 @@ template&lt;int I, int... Ints&gt; </div>
 </div><!-- fragment -->
 <p>Default parameters for grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -6320,7 +6329,7 @@ template&lt;int Head, int... Tail&gt; </div>
 </div><!-- fragment -->
 <p>Offset to move <code>BW</code> or <code>FW</code>. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

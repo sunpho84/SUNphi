@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"da/d65/Add_8hpp_source.html":[3,0,2,6,0],
+"da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html":[2,0,0,52,2],
 "da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html#a7ec622419e561a4fa4737a3bb8bb44eb":[2,0,0,52,2,0],
 "da/d8e/Metaprogramming_8hpp.html":[3,0,2,15],
 "da/d8e/Metaprogramming_8hpp_source.html":[3,0,2,15],
@@ -97,6 +99,7 @@ var NAVTREEINDEX4 =
 "db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb":[3,0,2,2,0,11],
 "db/d33/Grid_8hpp.html#a144e2dc7a4def3e0b1810716a1c39717":[3,0,2,2,0,12],
 "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c":[3,0,2,2,0,9],
+"db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca1a53229cb53661430bcfd29ba566a0e1":[3,0,2,2,0,9,2],
 "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca92b1a7d5a98a43c91fa0c6c435f4b3a8":[3,0,2,2,0,9,0],
 "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca931c8be36bfdf49a1a7d2fa9879a0005":[3,0,2,2,0,9,1],
 "db/d33/Grid_8hpp.html#a562b8131f1b0d66fdf0f3a1b36100517":[3,0,2,2,0,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX4 =
 "dc/d88/Tuple_8hpp_source.html":[3,0,2,21],
 "dc/d8f/TensClass_8hpp.html":[3,0,2,8,1],
 "dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,8,1,4],
-"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,8,1,1],
-"dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789":[3,0,2,8,1,2],
-"dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34":[3,0,2,8,1,6],
-"dc/d8f/TensClass_8hpp.html#aa92285dd832c749cd0f3d0adf3e634c5":[3,0,2,8,1,5]
+"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,8,1,1]
 };

@@ -205,6 +205,7 @@ var NAVTREEINDEX0 =
 "d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html":[2,0,0,64,2],
 "d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html#a210ea99755250764d9f2855c4ced4d8b":[2,0,0,64,2,0],
 "d1/deb/Arithmetic_8hpp.html":[3,0,2,3,0],
+"d1/deb/Arithmetic_8hpp.html#a0eeddf88e05361ef8f44c0af72c11289":[3,0,2,3,0,1],
 "d1/deb/Arithmetic_8hpp.html#acdbc23a72d6a49054aee06b5e5a2d8d8":[3,0,2,3,0,0],
 "d1/deb/Arithmetic_8hpp_source.html":[3,0,2,3,0],
 "d1/dfc/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_4.html":[2,0,0,103],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d2/d24/classSUNphi_1_1Conjer.html#abc972718a2bd9e542d4efa11446c6b98":[2,0,0,79,9],
 "d2/d24/classSUNphi_1_1Conjer.html#aec0c2e26f9d26cf9e6b4aafcf07f2aef":[2,0,0,79,31],
 "d2/d24/classSUNphi_1_1Conjer.html#af376f70446b12e1c681269bd43517ec5":[2,0,0,79,8],
-"d2/d24/classSUNphi_1_1Conjer.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,79,28],
-"d2/d26/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_4_01_4.html":[2,0,0,2,2]
+"d2/d24/classSUNphi_1_1Conjer.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,79,28]
 };

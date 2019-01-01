@@ -132,13 +132,17 @@ Public Member Functions</h2></td></tr>
 Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a2987e6582f899fac271d0fa82c181333">neighOfPoint</a> (const Idx i, const int oriDir) const </td></tr>
 <tr class="memdesc:a2987e6582f899fac271d0fa82c181333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the neighbor in the given oriented dir, computing it. <br/></td></tr>
 <tr class="separator:a2987e6582f899fac271d0fa82c181333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690484e7846916abfdce10bb9ec85b6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a690484e7846916abfdce10bb9ec85b6b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a690484e7846916abfdce10bb9ec85b6b">fillHashTables</a> () const </td></tr>
+<tr class="memdesc:a690484e7846916abfdce10bb9ec85b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all the HashTables (dummy version) <br/></td></tr>
+<tr class="separator:a690484e7846916abfdce10bb9ec85b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a63ebbfe5f5401979a8d499b78c98be5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63ebbfe5f5401979a8d499b78c98be5f"></a>
+<tr class="memitem:ad0ce1a70b2ed4ca806aa09cd75cbb6f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0ce1a70b2ed4ca806aa09cd75cbb6f1"></a>
 class <a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">SUNphi::GridHashable</a>&lt; T, <br class="typebreak"/>
 NDims, Coord, Idx, false &gt;:: { ... } &#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a63ebbfe5f5401979a8d499b78c98be5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad0ce1a70b2ed4ca806aa09cd75cbb6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -150,6 +154,9 @@ Static Public Attributes</h2></td></tr>
 Private Types</h2></td></tr>
 <tr class="memitem:a51fd79268f7555a3a1b367c7b04ec8a4"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; Coord, NDims &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a51fd79268f7555a3a1b367c7b04ec8a4">Coords</a></td></tr>
 <tr class="separator:a51fd79268f7555a3a1b367c7b04ec8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1856778317bd2273589f6fe0f01f35dc"><td class="memItemLeft" align="right" valign="top">typedef std::array&lt; Coord, <br class="typebreak"/>
+2 *NDims &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1856778317bd2273589f6fe0f01f35dc">Neigh</a></td></tr>
+<tr class="separator:a1856778317bd2273589f6fe0f01f35dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, int NDims, typename Coord, typename Idx&gt;<br/>
@@ -158,7 +165,7 @@ class SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;</h3>
 <p>Hashable properties of a <code><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html" title="A grid of points spanning an hypercubic grid. ">Grid</a></code> </p>
 <p>Not hashing version </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00333">333</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a51fd79268f7555a3a1b367c7b04ec8a4"></a>
 <div class="memitem">
@@ -181,7 +188,32 @@ template&lt;typename T , int NDims, typename Coord , typename Idx &gt; </div>
 </div><div class="memdoc">
 <p>Type to hold sizes, coordinate, etc </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00340">340</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00200">200</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1856778317bd2273589f6fe0f01f35dc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int NDims, typename Coord , typename Idx &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::array&lt;Coord,2*NDims&gt; <a class="el" href="../../dc/d35/classSUNphi_1_1GridHashable.html">SUNphi::GridHashable</a>&lt; T, NDims, Coord, Idx, false &gt;::<a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1856778317bd2273589f6fe0f01f35dc">Neigh</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Type to hold the neighbors </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00200">200</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -210,7 +242,7 @@ template&lt;typename T , int NDims, typename Coord , typename Idx &gt; </div>
 </div><div class="memdoc">
 <p>Cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00344">344</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +270,7 @@ template&lt;typename T , int NDims, typename Coord , typename Idx &gt; </div>
 </div><div class="memdoc">
 <p>Constant cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00344">344</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +299,7 @@ template&lt;typename T , int NDims, typename Coord , typename Idx &gt; </div>
 </div><!-- fragment -->
 <p>Tag asserting not hashing. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00360">360</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00225">225</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

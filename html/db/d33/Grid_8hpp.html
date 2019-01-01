@@ -134,13 +134,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/classSUNphi_1_1GridShiftableBC.html">SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, Shifting &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html">SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid&lt; NDims, Coord, Idx, Flags &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A grid of points spanning an hypercubic grid.  <a href="../../dd/dca/classSUNphi_1_1Grid.html#details">More...</a><br/></td></tr>
@@ -170,7 +170,8 @@ Enumerations</h2></td></tr>
 <tr class="memdesc:ac682f0879a1c598390150ca77ce82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to identifiy orientations. <br/></td></tr>
 <tr class="separator:ac682f0879a1c598390150ca77ce82479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c">SUNphi::GridFlag</a> { <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca92b1a7d5a98a43c91fa0c6c435f4b3a8">SUNphi::GridFlag::HASHED</a>, 
-<b>SHIFTED_BC</b>
+<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca931c8be36bfdf49a1a7d2fa9879a0005">SUNphi::GridFlag::SHIFTED_BC</a>, 
+<b>ALWAYS_WRAPPING</b>
  }</td></tr>
 <tr class="memdesc:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of flags.  <a href="../../d3/dd7/namespaceSUNphi.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c">More...</a><br/></td></tr>
 <tr class="separator:a27cd85d7ce87fe68bd4ccfe8b0116e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +210,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    \</div>
-<div class="line">    typedef std::array&lt;Coord,NDims&gt; Coords</div>
+<div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div>
+<div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh</div>
 </div><!-- fragment -->
 <p>Provide the type Coords. </p>
 

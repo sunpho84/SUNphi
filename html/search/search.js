@@ -15,7 +15,7 @@ var indexSectionsWithContent =
   5: "_abcdefghilmnoprstv",
   6: "abcdefikmnprstuvy",
   7: "gop",
-  8: "h",
+  8: "hs",
   9: "acdefgilmnprsu",
   10: "t"
 };

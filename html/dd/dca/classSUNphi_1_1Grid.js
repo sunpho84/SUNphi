@@ -1,6 +1,7 @@
 var classSUNphi_1_1Grid =
 [
     [ "Coords", "dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af", null ],
+    [ "Neigh", "dd/dca/classSUNphi_1_1Grid.html#a072a659b92ccf74423fc61f069002a6c", null ],
     [ "Grid", "dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79", null ],
     [ "assertCoordsAreInRange", "dd/dca/classSUNphi_1_1Grid.html#a160a49645ad23cb4e66912a145008f06", null ],
     [ "assertOriDirIsInRange", "dd/dca/classSUNphi_1_1Grid.html#ac6f7b944aa208b1578afec3785ccfa99", null ],
@@ -10,13 +11,13 @@ var classSUNphi_1_1Grid =
     [ "dimOfOriDir", "dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90", null ],
     [ "forAllDims", "dd/dca/classSUNphi_1_1Grid.html#a73a43907a0c67cd7d40b28c6fddb9d9c", null ],
     [ "forAllOriDirs", "dd/dca/classSUNphi_1_1Grid.html#ae7050a44a46b68c14f58f03c7ea454e5", null ],
-    [ "forAllPoints", "dd/dca/classSUNphi_1_1Grid.html#a550e5a96e32b85ed15fdf74bdefd5527", null ],
+    [ "forAllPoints", "dd/dca/classSUNphi_1_1Grid.html#af217e84bd0b605e882ed57728ecaaa90", null ],
     [ "oriDirOfOriAndDim", "dd/dca/classSUNphi_1_1Grid.html#acb986468a63babb7173c03ea6d54ba61", null ],
     [ "oriOfOriDir", "dd/dca/classSUNphi_1_1Grid.html#a3bcde486ad4aeb49a4e65d8f9ceb7245", null ],
     [ "pointOfCoords", "dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337", null ],
     [ "setSides", "dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54", null ],
     [ "setVolume", "dd/dca/classSUNphi_1_1Grid.html#ae26d5182f71a1f5dfe1edca74ed8a498", null ],
-    [ "shiftedCoords", "dd/dca/classSUNphi_1_1Grid.html#a100a5d26287535db386c67654a6d3fd0", null ],
+    [ "shiftedCoords", "dd/dca/classSUNphi_1_1Grid.html#aa281541592b5700ce0d42d8757782fa3", null ],
     [ "side", "dd/dca/classSUNphi_1_1Grid.html#aeb77871bb8ab636d1479b770b1fff424", null ],
     [ "volume", "dd/dca/classSUNphi_1_1Grid.html#ab680ef17ae0414c8a5b0b9fd05f27455", null ],
     [ "_sides", "dd/dca/classSUNphi_1_1Grid.html#a984d2c3b815f52dfd0eec934d33c53ac", null ],
