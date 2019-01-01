@@ -7,5 +7,5 @@ bin_PROGRAMS=
 bin_PROGRAMS+=main
 main_SOURCES=main.cpp
 
-bin_PROGRAMS+=test
-test_SOURCES=test.cpp
+bin_PROGRAMS+=checks
+checks_SOURCES=checks.cpp
