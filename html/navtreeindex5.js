@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,8,1,1],
 "dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789":[3,0,2,8,1,2],
 "dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34":[3,0,2,8,1,6],
 "dc/d8f/TensClass_8hpp.html#aa92285dd832c749cd0f3d0adf3e634c5":[3,0,2,8,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "de/dee/structSUNphi_1_1Compl.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,35,6],
 "de/dee/structSUNphi_1_1Compl.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,35,7],
 "df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[1,0,0,1],
-"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[2,0,0,1],
-"df/d0a/main_8cpp_source.html":[3,0,0,0]
+"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[2,0,0,1]
 };

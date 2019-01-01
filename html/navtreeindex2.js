@@ -104,6 +104,7 @@ var NAVTREEINDEX2 =
 "d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,0,1,5],
 "d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047":[3,0,2,0,1,9],
 "d5/d3e/IntListOperations_8hpp_source.html":[3,0,2,0,1],
+"d5/d44/checks_8cpp_source.html":[3,0,0,0],
 "d5/d4a/structSUNphi_1_1IsNotNull.html":[2,0,0,111],
 "d5/d4a/structSUNphi_1_1IsNotNull.html#a68dec46e430900f15c4e5fbf25f58dc5":[2,0,0,111,0],
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html":[2,0,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d6/db9/classSUNphi_1_1Binder.html#ae77807728d71c8d57e22ec47ea195fe2":[2,0,0,78,20],
 "d6/db9/classSUNphi_1_1Binder.html#ae8d0e83ee3dcd8c6fa4350163f4e4821":[2,0,0,78,4],
 "d6/db9/classSUNphi_1_1Binder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,78,33],
-"d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html":[2,0,0,66,2],
-"d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html#a825e2789647ed658ac0f0e58166192f1":[2,0,0,66,2,0]
+"d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html":[2,0,0,66,2]
 };
