@@ -54,7 +54,7 @@ script:
   - cd build
   - ../configure
   - make
-  - bin/test
+  - bin/checks
   
 # Generate and deploy documentation
 after_success:
