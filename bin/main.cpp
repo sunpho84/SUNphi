@@ -385,43 +385,101 @@ void checkSumOfTwoSmETs()
 /// Performs simple checks on the Grid class
 void checkGrid()
 {
+  /// Flags of the grid
   static constexpr int flags=
-    combineFlags<GridFlag::HASHED>;
+    combineFlags<GridFlag::HASHED,
+		 GridFlag::SHIFTED_BC>;
   
-  auto G=
+  /// Check that volume is as expected
+  auto checkVolume=[](const auto grid,
+		      const int64_t expVolume)
+    {
+      /// Voluem of the grid
+      const int64_t volume=
+        grid.volume();
+      
+      if(expVolume!=volume)
+	CRASH("Expected volume",expVolume,"obtained",volume);
+    };
+  
+  /// Grid
+  auto grid=
     Grid<2,int32_t,int64_t,flags>({1,2});
   
-  G.setSides({3,3});
+  /// Type of grid
+  using Grid=
+    decltype(grid);
   
-  cout<<G.volume()<<" "<<decltype(G)::hashingTag<<endl;
+  checkVolume(grid,2);
   
-  cout<<"Shifting"<<endl;
-  G.forAllPoints([&](int64_t i)
-		 {
-		   cout<<i<<endl;
-		   
-		   G.forAllOriDirs([&](int oriDir)
-				   {
-				     auto j=G.neighOfPoint(i,oriDir);
-				     
-				     cout<<" "<<oriDir<<": "<<j<<endl;
-				   });
-		   
-		 });
+  grid.setSides({3,3});
   
-  cout<<"Oriented directions:"<<endl;
-  G.forAllOriDirs([&](int oriDir)
-		  {
-		    cout<<oriDir<<" orientation: "<<G.oriOfOriDir(oriDir)<<" "<<G.dimOfOriDir(oriDir)<<endl;
-		  });
+  checkVolume(grid,9);
   
-  for(int i=0;i<G.volume()+1;i++)
-    {
-      cout<<i<<" ";
-      auto c=G.coordsOfPoint(i);
-      for(int mu=0;mu<2;mu++) cout<<" "<<c[mu];
-      cout<<endl;
-    }
+  /// Type of the list of neighbors
+  using GridNeighs=
+    std::vector<typename Grid::Neigh>;
+  
+  /// Cehck neighbors
+  auto checkNeigh=[](const auto& grid,               ///< Grid to check
+		     const GridNeighs& expNeighs)    ///< Expected neighbors
+                    {
+		      grid.forAllPoints([&](const int64_t i)
+                                           {
+					     Grid::forAllOriDirs([&](const int oriDir)
+                                                                   {
+								     /// Neighbor
+								     auto neigh=
+								       grid.neighOfPoint(i,oriDir);
+								     
+								     /// Expected neighbor
+								     auto expNeigh=
+								        expNeighs[i][oriDir];
+								     
+								     if(neigh!=expNeigh)
+								       CRASH("Point",i,"direction",oriDir,"expected neighbor",expNeigh,"obtained",neigh);
+								   });
+					   });
+		    };
+  
+  /// List of expected neighbors when not shifting BC
+  const GridNeighs expUnshiftedNeigh=
+    {{6,3,2,1},
+     {7,4,0,2},
+     {8,5,1,0},
+     {0,6,5,4},
+     {1,7,3,5},
+     {2,8,4,3},
+     {3,0,8,7},
+     {4,1,6,8},
+     {5,2,7,6}};
+  
+  checkNeigh(grid,expUnshiftedNeigh);
+  
+  cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  
+  grid.setShiftBC(1,{1,0});
+  
+  /// List of expected neighbors when shifting BC
+  const GridNeighs expShiftedNeigh=
+    {{6,3,8,1},
+     {7,4,0,2},
+     {8,5,1,3},
+     {0,6,2,4},
+     {1,7,3,5},
+     {2,8,4,6},
+     {3,0,5,7},
+     {4,1,6,8},
+     {5,2,7,0}};
+  
+  /// Shift read from grid
+  const int shiftOfBC0=
+    grid.shiftOfBC(0);
+  
+  if(shiftOfBC0!=1)
+    CRASH("Expected shift of",1,"obtained",shiftOfBC0);
+  
+  checkNeigh(grid,expShiftedNeigh);
 }
 
 void checkFlagMasks()
