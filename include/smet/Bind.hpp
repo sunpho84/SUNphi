@@ -140,11 +140,11 @@ namespace SUNphi
       const
     {
       return get<0>(refs).eval(get<Head>(targs)...,
-		      id,
-		      get<Tail>(targs)...);
+			       id,
+			       get<Tail>(targs)...);
     }
     
-    PROVIDE_ALSO_NON_CONST_METHOD(binderInternalEval);
+    //PROVIDE_ALSO_NON_CONST_METHOD(binderInternalEval);
     
     /// Evaluator, external interface
     ///
@@ -180,7 +180,7 @@ namespace SUNphi
 				std::forward_as_tuple(args...));
     }
     
-    PROVIDE_ALSO_NON_CONST_METHOD(eval);
+    // PROVIDE_ALSO_NON_CONST_METHOD(eval);
     
     PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Binder);
     
@@ -191,7 +191,7 @@ namespace SUNphi
 	      typename=EnableIf<isSame<Unqualified<SMET>,Unqualified<Ref<0>>>>> \
     explicit Binder(SMET&& smet, ///< Reference to bind
 		    int id)      ///< Component to get
-      : refs(std::forward_as_tuple(smet)),id(id)
+      : refs(forw<SMET>(smet)),id(id)
     {
 #ifdef DEBUG_BINDER
       using namespace std;
@@ -217,11 +217,12 @@ namespace SUNphi
 	    typename SMET,                       // Type to bind, deduced from argument
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   DECLAUTO bind(SMET&& smet,                     ///< Quantity to bind to
-		const int id,                  ///< Entry of the component to bind
+		const int id,                    ///< Entry of the component to bind
 		SFINAE_WORSEN_DEFAULT_VERSION_ARGS)
   {
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;
     
+    /// Actual type to get
     using Tg=
       CompOrTwinned<_Tg,SMET>;
     
