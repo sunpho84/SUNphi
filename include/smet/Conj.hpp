@@ -53,28 +53,25 @@ namespace SUNphi
     PROVIDE_NNARY_SMET_SIMPLE_CREATOR(Conjer);
     
     /// Evaluator for \c Conjer
-    template <typename...Args>           // Type of the arguments
-    DECLAUTO eval(const Args&...args)    //!< Components to get
+    template <typename...Args>    // Type of the arguments
+    auto eval(Args&&...args)    //!< Components to get
       const
     {
       STATIC_ASSERT_ARE_N_TYPES(TkOf<Ref<0>>::nTypes,args);
       
       /// Detect if we have to put "-" in the result
       const bool isIm=
-	get<posOfCompl>(Tuple<Args...>(args...));
-      
-      /// sign to add
-      const int sign=
-	1-isIm*2;
+	get<posOfCompl>(Tuple<Args...>(forw<Args>(args)...));
       
       /// Temporary result
-      const auto val=
-	get<0>(refs).eval(forw<const Args>(args)...);
+      auto val=
+	get<0>(refs).eval(forw<Args>(args)...);
       
-      return sign*val;
+      if(isIm)
+      	return -val;
+      else
+      	return +val;
     }
-    
-    PROVIDE_ALSO_NON_CONST_METHOD(eval);
   };
   
   // Check that a test Conjer is a NnarySmET
