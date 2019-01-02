@@ -1,8 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"da/d65/Add_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,6,0,6],
-"da/d65/Add_8hpp_source.html":[3,0,2,6,0],
-"da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html":[2,0,0,52,2],
 "da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html#a7ec622419e561a4fa4737a3bb8bb44eb":[2,0,0,52,2,0],
 "da/d8e/Metaprogramming_8hpp.html":[3,0,2,15],
 "da/d8e/Metaprogramming_8hpp_source.html":[3,0,2,15],
@@ -249,5 +246,8 @@ var NAVTREEINDEX4 =
 "dc/d88/Tuple_8hpp.html":[3,0,2,21],
 "dc/d88/Tuple_8hpp_source.html":[3,0,2,21],
 "dc/d8f/TensClass_8hpp.html":[3,0,2,8,1],
-"dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,8,1,4]
+"dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,8,1,4],
+"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,8,1,1],
+"dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789":[3,0,2,8,1,2],
+"dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34":[3,0,2,8,1,6]
 };

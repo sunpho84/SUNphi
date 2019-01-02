@@ -1,9 +1,6 @@
 var NAVTREEINDEX6 =
 {
-"df/d0a/main_8cpp_source.html":[3,0,0,1],
-"df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,119],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d95/Bits_8hpp.html":[3,0,2,10,0],
 "df/d95/Bits_8hpp.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e":[3,0,2,10,0,1],
 "df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e":[3,0,2,10,0,0],
@@ -96,8 +93,8 @@ var NAVTREEINDEX6 =
 "globals_func.html":[3,1,1],
 "hierarchy.html":[2,2],
 "index.html":[],
-"namespacemembers.html":[1,1,0,0],
 "namespacemembers.html":[1,1,0],
+"namespacemembers.html":[1,1,0,0],
 "namespacemembers_a.html":[1,1,0,1],
 "namespacemembers_b.html":[1,1,0,2],
 "namespacemembers_c.html":[1,1,0,3],
