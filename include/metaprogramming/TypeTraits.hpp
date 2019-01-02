@@ -240,10 +240,13 @@ namespace SUNphi
     typename std::remove_cv<T>::type;
   
   /// Returns whether T is const or not
-  template <typename T>  // Type
+  ///
+  /// Warning!!! This is not the same than asking \c std::is_const
+  template <typename _T,            // Asked type
+	    typename T=RemRef<_T>>  // Type without ref
   [[ maybe_unused ]]
   constexpr bool isConst=
-    std::is_const<T>::value;
+    not isSame<RemoveCV<T>,T>;
   
   /// Returns const or non const T depending on condition
   template <bool B,       // Condition
