@@ -496,7 +496,16 @@ void checkBinding()
   
   if(res!=value)
     CRASH("Expected",value,"obtained",res);
-    
+  
+  const Tens<TensKind<RwSpin,Compl>,double> co;
+  
+  /// Type of the binding
+  using T=
+    decltype(rwSpin(imag(co),0));
+  
+  static_assert(isConst<T>,"Expected const");
+  static_assert(isLvalue<T>,"Expected const");
+  
   TEST_PASSED;
 }
 
