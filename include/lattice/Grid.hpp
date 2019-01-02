@@ -101,7 +101,7 @@ namespace SUNphi
 	CRTP_CAST.volume();
       
       // Check hashability
-      if(volume>tb.max_size())
+      if(volume>(int)tb.max_size())
 	CRASH("Cannot hash a volume of",volume);
       
       // Resize the hash table
