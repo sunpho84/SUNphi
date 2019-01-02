@@ -35,6 +35,27 @@ DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
  
+# Check if we enanble MPI autosearch
+AC_ARG_ENABLE(MPI-autosearch,
+	AS_HELP_STRING([--enable-MPI-autosearch],[Enable MPI autosearch]),
+	enable_MPI_autosearch="${enableval}",
+	enable_MPI_autosearch="yes")
+AC_MSG_RESULT([enabling MPI autosearch... $enable_MPI_autosearch])
+
+# Search automatically MPI for c++
+if test "$enable_MPI_autosearch" == "yes"
+then
+	AC_LANG_PUSH([C++])
+	LX_FIND_MPI
+	AC_LANG_POP([C++])
+	AC_MSG_RESULT([with C++ MPI preprocessor options... $MPI_CXXFLAGS])
+	AC_MSG_RESULT([with C++ MPI link options... $MPI_CXXLDFLAGS])
+	AC_MSG_RESULT([with C++ MPI libs... $MPI_CXXLIBS])
+	CPPFLAGS="$MPI_CXXFLAGS $CPPFLAGS"
+	LIBS="$MPI_CXXLIBS $LIBS"
+	LDFLAGS="$MPI_CXXLDFLAGS $LDFLAGS"
+fi
+
 # Configure output
 AC_CONFIG_FILES(Makefile bin/Makefile config/Doxyfile)
  
