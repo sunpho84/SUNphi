@@ -20,7 +20,10 @@ namespace SUNphi
   /// The tensor storage allocates and deallocates the memory location
   /// where a tensor is materially stored, keeping track of the amount
   /// of memory allocated. Facilities to reallocate the memory are
-  /// provided
+  /// provided.
+  ///
+  /// \todo many things, including considering a static storage if
+  /// size is small and statically known
   template <class TK,
 	    class T>
   class TensStor :
