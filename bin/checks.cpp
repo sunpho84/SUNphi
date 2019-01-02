@@ -470,7 +470,7 @@ void checkDuplicatedCallRemoverOrAbsorber()
 }
 
 /// Test the nested binding of a tens
-void testBinding()
+void checkBinding()
 {
   ///Tensor to be used
   Tens<TensKind<RwSpin,Compl>,double> cicc;
@@ -501,7 +501,7 @@ void testBinding()
 }
 
 /// Test the conjugation
-void testConj()
+void checkConj()
 {
   /// Tensor type
   using ComplTens=
@@ -530,7 +530,7 @@ void testConj()
   
   // Check imag value
   if(imag(c)!=-im)
-    CRASH("Imag part:",real(c),"expected:",-im);
+    CRASH("Imag part:",imag(c),"expected:",-im);
   
   TEST_PASSED;
 }
@@ -991,6 +991,10 @@ int main()
   checkLhsTranspose();
   
   checkDuplicatedCallRemoverOrAbsorber();
+  
+  checkBinding();
+  
+  checkConj();
   
   return 0;
 }
