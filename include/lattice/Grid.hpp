@@ -103,7 +103,7 @@ namespace SUNphi
       // Check hashability
       const auto& maxHashability=
 	tb.max_size();
-      if(volume>maxHashability)
+      if(static_cast<decltype(maxHashability)>(volume)>maxHashability)
 	CRASH("Cannot hash a volume of",volume,", max allowed:",maxHashability);
       
       // Resize the hash table
