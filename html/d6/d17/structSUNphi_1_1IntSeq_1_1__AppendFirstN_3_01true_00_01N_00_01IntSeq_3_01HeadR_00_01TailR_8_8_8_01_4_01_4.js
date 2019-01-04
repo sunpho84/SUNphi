@@ -1,0 +1,4 @@
+var structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4 =
+[
+    [ "type", "d6/d17/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4.html#ace3c369e09b3048104ce94b01d26082b", null ]
+];
