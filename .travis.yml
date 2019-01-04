@@ -27,6 +27,7 @@ addons:
       - doxygen-gui
       - graphviz
       - g++-8
+      - libopenmpi-dev
 #      - clang-6.0
 #      - libclang1-6.0
 
