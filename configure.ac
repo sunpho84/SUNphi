@@ -27,25 +27,22 @@ CFLAGS="$CXXFLAGS $OPENMP_CFLAGS"
 CPPFLAGS="$CPPFLAGS $OPENMP_CPPFLAGS"
 CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
 
-# Check if we enanble MPI autosearch
-AC_ARG_ENABLE(MPI-autosearch,
-	AS_HELP_STRING([--enable-MPI-autosearch],[Enable MPI autosearch]),
-	enable_MPI_autosearch="${enableval}",
-	enable_MPI_autosearch="yes")
-AC_MSG_RESULT([enabling MPI autosearch... $enable_MPI_autosearch])
-
 # Search automatically MPI for c++
-if test "$enable_MPI_autosearch" == "yes"
+AC_LANG_PUSH([C++])
+LX_FIND_MPI
+AC_LANG_POP([C++])
+AC_MSG_RESULT([with C++ MPI preprocessor options... $MPI_CXXFLAGS])
+AC_MSG_RESULT([with C++ MPI link options... $MPI_CXXLDFLAGS])
+AC_MSG_RESULT([with C++ MPI libs... $MPI_CXXLIBS])
+
+# Check if we have MPI
+if test "$have_CXX_mpi" == "yes"
 then
-	AC_LANG_PUSH([C++])
-	LX_FIND_MPI
-	AC_LANG_POP([C++])
-	AC_MSG_RESULT([with C++ MPI preprocessor options... $MPI_CXXFLAGS])
-	AC_MSG_RESULT([with C++ MPI link options... $MPI_CXXLDFLAGS])
-	AC_MSG_RESULT([with C++ MPI libs... $MPI_CXXLIBS])
 	CPPFLAGS="$MPI_CXXFLAGS $CPPFLAGS"
 	LIBS="$MPI_CXXLIBS $LIBS"
 	LDFLAGS="$MPI_CXXLDFLAGS $LDFLAGS"
+else
+	AC_MSG_ERROR(["Unable to find MPI"])
 fi
 
 # Configure doxygen
