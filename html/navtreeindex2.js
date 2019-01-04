@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d4/d8b/structSUNphi_1_1BinarySmET.html":[2,0,0,77],
 "d4/d8b/structSUNphi_1_1BinarySmET.html#a0cec6cc86dbecb8d68ff15e3f2c4eb1f":[2,0,0,77,4],
 "d4/d8b/structSUNphi_1_1BinarySmET.html#a24c7947f477a783b9d274bd6cbd12be0":[2,0,0,77,2],
 "d4/d8b/structSUNphi_1_1BinarySmET.html#a302bf10f8751e25cd44cf91bf0a0b988":[2,0,0,77,0],
@@ -115,10 +116,10 @@ var NAVTREEINDEX2 =
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,0,0,2],
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,0,0,6],
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,0,0,7],
-"d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,4,2],
-"d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d":[3,0,2,4,2,1],
-"d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0":[3,0,2,4,2,0],
-"d5/d8c/SwallowSemicolon_8hpp_source.html":[3,0,2,4,2],
+"d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,4,3],
+"d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d":[3,0,2,4,3,1],
+"d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0":[3,0,2,4,3,0],
+"d5/d8c/SwallowSemicolon_8hpp_source.html":[3,0,2,4,3],
 "d5/da6/IntSeqInsert_8hpp_source.html":[3,0,2,0,6],
 "d5/dd3/classSUNphi_1_1Transposer.html":[2,0,0,88],
 "d5/dd3/classSUNphi_1_1Transposer.html#a09430932afa1895571644cb219ecd732":[2,0,0,88,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d6/db9/classSUNphi_1_1Binder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,78,31],
 "d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html":[2,0,0,66,2],
 "d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html#a825e2789647ed658ac0f0e58166192f1":[2,0,0,66,2,0],
-"d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html":[2,0,0,45],
-"d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html#ab7c490241d38b2c93b7c152aad69600a":[2,0,0,45,0]
+"d6/ddd/structSUNphi_1_1__TwinCompOf_3_01RwCol_01_4.html":[2,0,0,45]
 };

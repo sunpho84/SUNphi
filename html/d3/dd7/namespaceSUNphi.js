@@ -123,5 +123,6 @@ var namespaceSUNphi =
     [ "_TupleWrap", "d9/d27/structSUNphi_1_1__TupleWrap.html", "d9/d27/structSUNphi_1_1__TupleWrap" ],
     [ "_TupleWrap< Tuple< T...> >", "d7/de9/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_4_01_4.html", "d7/de9/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_4_01_4" ],
     [ "IsPresent", "dd/de6/structSUNphi_1_1IsPresent.html", "dd/de6/structSUNphi_1_1IsPresent" ],
+    [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ],
     [ "IncapsulatedString", "da/d56/structSUNphi_1_1IncapsulatedString.html", "da/d56/structSUNphi_1_1IncapsulatedString" ]
 ];

@@ -1,6 +1,8 @@
 var searchData=
 [
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html',1,'SUNphi']]],
+  ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
+  ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['smet',['SmET',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20adder_3c_20_5frefs_2e_2e_2e_3e_20_3e',['SmET&lt; Adder&lt; _Refs...&gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20assigner_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['SmET&lt; Assigner&lt; _Ref1, _Ref2 &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],

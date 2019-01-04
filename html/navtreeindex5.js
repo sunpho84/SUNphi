@@ -1,5 +1,11 @@
 var NAVTREEINDEX5 =
 {
+"dc/d88/Tuple_8hpp_source.html":[3,0,2,21],
+"dc/d8f/TensClass_8hpp.html":[3,0,2,8,1],
+"dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,8,1,4],
+"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,8,1,1],
+"dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789":[3,0,2,8,1,2],
+"dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34":[3,0,2,8,1,6],
 "dc/d8f/TensClass_8hpp.html#aa92285dd832c749cd0f3d0adf3e634c5":[3,0,2,8,1,5],
 "dc/d8f/TensClass_8hpp.html#ac954c2ff4673a3539bfc776adb9efe2d":[3,0,2,8,1,3],
 "dc/d8f/TensClass_8hpp_source.html":[3,0,2,8,1],
@@ -175,6 +181,7 @@ var NAVTREEINDEX5 =
 "de/d2d/TupleOrder_8hpp.html#acf81841aec54ab650800087a08062bba":[3,0,2,9,3,3],
 "de/d2d/TupleOrder_8hpp.html#ae5c8d825e6c25b7bcba64a7820bd8dd7":[3,0,2,9,3,6],
 "de/d2d/TupleOrder_8hpp_source.html":[3,0,2,9,3],
+"de/d4a/StaticMemberWithInitializator_8hpp_source.html":[3,0,2,4,2],
 "de/d50/structSUNphi_1_1HasMember__compSize.html":[2,0,0,95],
 "de/d50/structSUNphi_1_1HasMember__compSize.html#a2187cbcca027bad50a43b66f113f1e56":[2,0,0,95,6],
 "de/d50/structSUNphi_1_1HasMember__compSize.html#a4a3105b27465765df0017c3112eb516c":[2,0,0,95,5],
@@ -220,6 +227,7 @@ var NAVTREEINDEX5 =
 "de/d58/classSUNphi_1_1Adder.html#ae402d88baf215f7ed5ac39379c9fa876":[2,0,0,48,0],
 "de/d58/classSUNphi_1_1Adder.html#ae9d9609b3c66dd8fff91e95137b1d178":[2,0,0,48,21],
 "de/d58/classSUNphi_1_1Adder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,48,30],
+"de/da3/classfuffa.html":[2,0,1],
 "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html":[2,0,0,73,1],
 "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html#a009c37939d7dbf806853dd4c7c1ab8c4":[2,0,0,73,1,0],
 "de/dc2/structSUNphi_1_1HasMember__eval_1_1Derived.html":[2,0,0,52,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX5 =
 "de/dee/structSUNphi_1_1Compl.html#a34b2a861b988d7711cf30b6248da3b0d":[2,0,0,35,1],
 "de/dee/structSUNphi_1_1Compl.html#a592ed1584d6f2c9b31f15e8876bc2193":[2,0,0,35,4],
 "de/dee/structSUNphi_1_1Compl.html#a62036115814b61e36c3699da76b23f8f":[2,0,0,35,5],
-"de/dee/structSUNphi_1_1Compl.html#aa7a59e642f782c5731ab75cc4d74d6de":[2,0,0,35,0],
-"de/dee/structSUNphi_1_1Compl.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,35,2],
-"de/dee/structSUNphi_1_1Compl.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,35,6],
-"de/dee/structSUNphi_1_1Compl.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,35,7],
-"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[2,0,0,1],
-"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[1,0,0,1],
-"df/d0a/main_8cpp_source.html":[3,0,0,1],
-"df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,119],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0]
+"de/dee/structSUNphi_1_1Compl.html#aa7a59e642f782c5731ab75cc4d74d6de":[2,0,0,35,0]
 };
