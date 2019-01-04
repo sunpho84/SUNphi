@@ -582,6 +582,27 @@ void checkMPIisInitalized()
   TEST_PASSED;
 }
 
+/// Check MPI all reduce
+void checkMPIallReduce()
+{
+  /// Value to sum
+  const int val=
+    2;
+  
+  /// Sum 2
+  const int sum=
+    Mpi::allReduce(val);
+  
+  /// Expected value of the sum
+  const int expSum=
+    2*Mpi::nRanks();
+  
+  if(sum!=expSum)
+    CRASH("Summing ",val," on all",Mpi::nRanks(),"nodes produced",sum,"instead of expected",expSum);
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1046,6 +1067,8 @@ int main()
   checkSingleInstances();
   
   checkMPIisInitalized();
+  
+  checkMPIallReduce();
   
   return 0;
 }

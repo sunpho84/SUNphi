@@ -36,10 +36,12 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+
 #ifdef SUNPHI_MAIN
-  /// Forces MPI initialization
+  /// MPI initialization
   Mpi mpi;
 #endif
+
 }
 
 #endif

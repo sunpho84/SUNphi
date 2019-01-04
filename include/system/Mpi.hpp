@@ -16,6 +16,30 @@
 
 namespace SUNphi
 {
+  /// Provides link from a type to the mathcing \c MPI_Datatype
+  ///
+  /// Useful to allow template usage of MPI
+#define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
+  /*! \c MPI_Datatype corresponding to TYPE */		\
+  template <>						\
+  MPI_Datatype mpiType<TYPE>()				\
+  {							\
+    return MPI_TYPE;					\
+  }
+  
+  /// MPI datatpe corresponding to not-provided type
+  template <typename T>
+  MPI_Datatype mpiType()
+  {
+    return nullptr;
+  }
+  
+  PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
+  
+  PROVIDE_MPI_DATATYPE(MPI_INT,int);
+  
+  PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
+  
   /// Crash on MPI error, providing a meaningful error
 #define MPI_CRASH_ON_ERROR(...)			\
   Mpi::CrashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
@@ -26,6 +50,8 @@ namespace SUNphi
   {
     
     PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,_rank,0,Rank of current MPI process);
+    
+    PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,_nRanks,0,Total number of ranks);
     
   public:
     
@@ -61,11 +87,21 @@ namespace SUNphi
     }
     
     /// Get current rank
-    static int currRank()
+    static int getRank()
     {
       /// Returned value
       int res;
       MPI_CRASH_ON_ERROR(MPI_Comm_rank(MPI_COMM_WORLD,&res),"Getting current rank");
+      
+      return res;
+    }
+    
+    /// Get the total number of ranks
+    static int getNRanks()
+    {
+      /// Returned value
+      int res;
+      MPI_CRASH_ON_ERROR(MPI_Comm_size(MPI_COMM_WORLD,&res),"Getting total number of ranks");
       
       return res;
     }
@@ -78,7 +114,10 @@ namespace SUNphi
 #endif
       
       _rank()=
-	currRank();
+	getRank();
+      
+      _nRanks()=
+	getNRanks();
     }
     
     /// Hashed value of current rank
@@ -87,10 +126,28 @@ namespace SUNphi
       return _rank();
     }
     
+    /// Hashed value of nRanks
+    static const int& nRanks()
+    {
+      return _nRanks();
+    }
+    
     /// Destructor
     ~Mpi()
     {
       finalize();
+    }
+    
+    /// Reduces among all MPI process
+    template <typename T>
+    static T allReduce(const T& in)
+    {
+      /// Result
+      T out;
+      
+      MPI_CRASH_ON_ERROR(MPI_Allreduce(&in,&out,1,mpiType<T>(),MPI_SUM,MPI_COMM_WORLD),"Reducing among all processes");
+      
+      return out;
     }
   };
 }
