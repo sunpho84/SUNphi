@@ -3,7 +3,8 @@
 //#define DEBUG_INDEXER
 //#define DEBUG_REL_BINDER
 
-#include <SUNphi.hpp>
+#define SUNPHI_MAIN
+ #include <SUNphi.hpp>
 
 #include <iostream>
 

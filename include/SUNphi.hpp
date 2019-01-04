@@ -4,6 +4,9 @@
 /// \file SUNphi.hpp
 ///
 /// \brief Main include file for the SUNphi library
+///
+/// Please define the macro: \c SUNPHI_MAIN before including in the
+/// main file of the project.
 
 /*!
   
@@ -33,6 +36,10 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+#ifdef SUNPHI_MAIN
+  /// Forces MPI initialization
+  Mpi mpi;
+#endif
 }
 
 #endif
