@@ -544,6 +544,25 @@ void checkConj()
   TEST_PASSED;
 }
 
+/// Test class
+template <typename T>
+class fuffa
+  : public SingleInstance<fuffa<T>>
+{
+};
+
+/// Check single instances
+void checkSingleInstances()
+{
+  /// Single instance of \c fuffa<void>
+  fuffa<void> test1;
+  
+  /// Single instance of \c fuffa<<int>
+  fuffa<int> test2;
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1004,6 +1023,8 @@ int main()
   checkBinding();
   
   checkConj();
+  
+  checkSingleInstances();
   
   return 0;
 }

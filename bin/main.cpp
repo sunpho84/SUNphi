@@ -12,6 +12,5 @@ using namespace SUNphi;
 
 int main()
 {
-  
   return 0;
 }
