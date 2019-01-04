@@ -29,13 +29,13 @@ namespace SUNphi
   class SingleInstance
   {
     
-    PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,count, 0,Counter of instances);
+    PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,count,0,Counter of instances);
     
     /// Check that no instance exists
     void crashIfInstancesExists()
     {
       if(count()!=0)
-	CRASH("Count is not zero:",count);
+	CRASH("Count is not zero:",count());
     }
     
   public:
