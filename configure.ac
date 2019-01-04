@@ -27,14 +27,6 @@ CFLAGS="$CXXFLAGS $OPENMP_CFLAGS"
 CPPFLAGS="$CPPFLAGS $OPENMP_CPPFLAGS"
 CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
 
-# Configure doxygen
-DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
-DX_PDF_FEATURE(OFF)
-DX_PS_FEATURE(OFF)
-DX_MAN_FEATURE(ON)
-DX_HTML_FEATURE(ON)
-AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
- 
 # Check if we enanble MPI autosearch
 AC_ARG_ENABLE(MPI-autosearch,
 	AS_HELP_STRING([--enable-MPI-autosearch],[Enable MPI autosearch]),
@@ -56,6 +48,14 @@ then
 	LDFLAGS="$MPI_CXXLDFLAGS $LDFLAGS"
 fi
 
+# Configure doxygen
+DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
+DX_PDF_FEATURE(OFF)
+DX_PS_FEATURE(OFF)
+DX_MAN_FEATURE(ON)
+DX_HTML_FEATURE(ON)
+AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
+ 
 # Configure output
 AC_CONFIG_FILES(Makefile bin/Makefile config/Doxyfile)
  
