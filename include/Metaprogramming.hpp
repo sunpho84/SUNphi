@@ -7,6 +7,7 @@
 
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/SFINAE.hpp>
+#include <metaprogramming/StaticMemberWithInitializator.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
