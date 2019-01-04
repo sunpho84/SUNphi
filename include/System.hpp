@@ -7,6 +7,8 @@
 
 #include <system/Debug.hpp>
 #include <system/Memory.hpp>
+#include <system/Mpi.hpp>
+#include <system/MpiImpl.hpp>
 #include <system/SIMD.hpp>
 
 #endif

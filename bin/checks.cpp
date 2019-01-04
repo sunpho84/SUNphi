@@ -550,9 +550,14 @@ template <typename T>
 class fuffa
   : public SingleInstance<fuffa<T>>
 {
+public:
+  /// Dummy initializer
+  fuffa<T>()
+  {
+  }
 };
 
-/// Check single instances
+/// Check single instances classes
 void checkSingleInstances()
 {
   /// Single instance of \c fuffa<void>
@@ -560,6 +565,19 @@ void checkSingleInstances()
   
   /// Single instance of \c fuffa<<int>
   fuffa<int> test2;
+  
+  TEST_PASSED;
+}
+
+/// Check that MPI is initialized
+void checkMPIisInitalized()
+{
+  /// Initialization flag
+  const int isInitialized=
+    Mpi::isInitialized();
+  
+  if(not isInitialized)
+    CRASH("MPI not initialized!");
   
   TEST_PASSED;
 }
@@ -1026,6 +1044,8 @@ int main()
   checkConj();
   
   checkSingleInstances();
+  
+  checkMPIisInitalized();
   
   return 0;
 }
