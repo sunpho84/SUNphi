@@ -34,7 +34,6 @@ namespace SUNphi
       (I!=NOT_PRESENT);
   };
   
-
 }
 
 #endif
