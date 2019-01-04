@@ -44,34 +44,27 @@ namespace SUNphi
 #define MPI_CRASH_ON_ERROR(...)			\
   Mpi::CrashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
   
-  /// Class providing all functionalities of MPI
-  class Mpi :
-    public SingleInstance<Mpi>
+  namespace Mpi
   {
-    
-    PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,_rank,0,Rank of current MPI process);
-    
-    PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR(int,_nRanks,0,Total number of ranks);
-    
-  public:
-    
     /// Decrypt the returned value of an MPI call
+    ///
+    /// Returns the value of \c rc
     template <typename...Args>
-    static void CrashOnError(const int line,
-			     const char *file,
-			     const char *function,
-			     const int rc,
-			     Args&&... args);
+    int CrashOnError(const int line,
+		     const char *file,
+		     const char *function,
+		     const int rc,
+		     Args&&... args);
     
     /// Initialize MPI
-    static void init()
+    void init()
     {
       /// Returned value of MPI
       MPI_CRASH_ON_ERROR(MPI_Init(nullptr,nullptr),"Error initializing MPI");
     }
     
     /// Check initialization flag
-    static int isInitialized()
+    int isInitialized()
     {
       /// Initialization flag
       int res;
@@ -81,13 +74,13 @@ namespace SUNphi
     }
     
     /// Finalize MPI
-    static void finalize()
+    void finalize()
     {
       MPI_CRASH_ON_ERROR(MPI_Finalize(),"Finalizing MPI");
     }
     
     /// Get current rank
-    static int getRank()
+    int getRank()
     {
       /// Returned value
       int res;
@@ -96,8 +89,18 @@ namespace SUNphi
       return res;
     }
     
+    /// Cached value of current rank
+    int rank()
+    {
+      /// Stored value
+      static int _rank=
+	getRank();
+      
+      return _rank;
+    }
+    
     /// Get the total number of ranks
-    static int getNRanks()
+    int getNRanks()
     {
       /// Returned value
       int res;
@@ -106,41 +109,19 @@ namespace SUNphi
       return res;
     }
     
-    /// Constructor, initializing MPI and filling rank
-    Mpi()
+    /// Cached value of total number of ranks
+    int nRanks()
     {
-#ifndef SUNPHI_DO_NOT_INITIALIZE_MPI
-      init();
-#endif
-      
-      _rank()=
-	getRank();
-      
-      _nRanks()=
+      /// Stored value
+      static int _nRanks=
 	getNRanks();
-    }
-    
-    /// Hashed value of current rank
-    static const int& rank()
-    {
-      return _rank();
-    }
-    
-    /// Hashed value of nRanks
-    static const int& nRanks()
-    {
-      return _nRanks();
-    }
-    
-    /// Destructor
-    ~Mpi()
-    {
-      finalize();
+      
+      return _nRanks;
     }
     
     /// Reduces among all MPI process
     template <typename T>
-    static T allReduce(const T& in)
+    T allReduce(const T& in)
     {
       /// Result
       T out;
@@ -149,7 +130,28 @@ namespace SUNphi
       
       return out;
     }
-  };
+    
+    /// Class used to make MPI alive
+    class MakeAlive :
+      public SingleInstance<MakeAlive>
+    {
+  public:
+    
+      /// Constructor, initializing MPI
+      MakeAlive()
+      {
+#ifndef SUNPHI_DO_NOT_INITIALIZE_MPI
+	init();
+#endif
+      }
+      
+      /// Destructor
+      ~MakeAlive()
+      {
+	finalize();
+      }
+    };
+  }
 }
 
 #undef MPI_CRASH_ON_ERROR

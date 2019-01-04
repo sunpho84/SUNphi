@@ -7,15 +7,15 @@
 
 #include <system/Mpi.hpp>
 
-namespace SUNphi
+namespace SUNphi::Mpi
 {
   /// Decrypt the returned value of an MPI call
   template <typename...Args>
-  void Mpi::CrashOnError(const int line,        ///< Line of file where the error needs to be checked
-			 const char *file,      ///< File where the error must be checked
-			 const char *function,  ///< Function where the error was possibly raised
-			 const int rc,          ///< Exit condition of the called routine
-			 Args&&... args)        ///< Other arguments
+  int CrashOnError(const int line,        ///< Line of file where the error needs to be checked
+		    const char *file,      ///< File where the error must be checked
+		    const char *function,  ///< Function where the error was possibly raised
+		    const int rc,          ///< Exit condition of the called routine
+		    Args&&... args)        ///< Other arguments
   {
     if(rc!=MPI_SUCCESS and rank()==0)
       {
@@ -28,6 +28,8 @@ namespace SUNphi
 	
 	internalCrash(line,file,args...,", raised error",rc,":",err);
       }
+    
+    return rc;
   }
 }
 

@@ -39,7 +39,7 @@ namespace SUNphi
 
 #ifdef SUNPHI_MAIN
   /// MPI initialization
-  Mpi mpi;
+  Mpi::MakeAlive mpi;
 #endif
 
 }
