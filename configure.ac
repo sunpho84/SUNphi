@@ -35,14 +35,20 @@ AC_MSG_RESULT([with C++ MPI preprocessor options... $MPI_CXXFLAGS])
 AC_MSG_RESULT([with C++ MPI link options... $MPI_CXXLDFLAGS])
 AC_MSG_RESULT([with C++ MPI libs... $MPI_CXXLIBS])
 
-# Check if we have MPI
-if test "$have_CXX_mpi" == "yes"
+# Check if we enable MPI
+AX_SIMPLE_ENABLE([MPI],[$have_CXX_mpi],[Enable MPI])
+if test "$enable_MPI" == "yes"
 then
-	CPPFLAGS="$MPI_CXXFLAGS $CPPFLAGS"
-	LIBS="$MPI_CXXLIBS $LIBS"
-	LDFLAGS="$MPI_CXXLDFLAGS $LDFLAGS"
-else
-	AC_MSG_ERROR(["Unable to find MPI"])
+	# Check if we have MPI
+	if test "$have_CXX_mpi" == "yes"
+	then
+		CPPFLAGS="$MPI_CXXFLAGS $CPPFLAGS"
+		LIBS="$MPI_CXXLIBS $LIBS"
+		LDFLAGS="$MPI_CXXLDFLAGS $LDFLAGS"
+		AC_DEFINE([USE_MPI],1,[Enable MPI])
+	else
+		AC_MSG_ERROR(["Unable to find MPI"])
+	fi
 fi
 
 # Configure doxygen
@@ -53,6 +59,27 @@ DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
  
+# Result of conf to screen
+AC_MSG_RESULT([
+--------------------------------------------------
+Configuration summary for $PACKAGE_NAME ($VERSION)
+--------------------------------------------------
+CC                  : $CC
+CPPFLAGS            : $CPPFLAGS
+CXXFLAGS            : $CXXFLAGS
+CXX                 : $CXX
+---
+LDFLAGS             : $LDFLAGS
+LIBS                : $LIBS
+---
+Installation prefix : $prefix
+$LIBRARY_RESULT
+$SUMMARY_RESULT
+--------------------------------------------------
+Configuration OK
+--------------------------------------------------
+])
+
 # Configure output
 AC_CONFIG_FILES(Makefile bin/Makefile config/Doxyfile)
  
