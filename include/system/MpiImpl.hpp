@@ -17,6 +17,9 @@ namespace SUNphi::Mpi
 		    const int rc,          ///< Exit condition of the called routine
 		    Args&&... args)        ///< Other arguments
   {
+    
+#ifdef USE_MPI
+    
     if(rc!=MPI_SUCCESS and rank()==0)
       {
 	/// Length of the error message
@@ -28,6 +31,8 @@ namespace SUNphi::Mpi
 	
 	internalCrash(line,file,args...,", raised error",rc,":",err);
       }
+    
+#endif
     
     return rc;
   }

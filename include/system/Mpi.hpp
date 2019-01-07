@@ -10,12 +10,20 @@
 /// unless the macro \c SUNPHI_DO_NOT_INITIALIZE_MPI is set before
 /// including SUNphi.hpp
 
-#include <mpi.h>
+#ifdef HAVE_CONFIG_H
+ #include "config.hpp"
+#endif
+
+#ifdef USE_MPI
+ #include <mpi.h>
+#endif
 
 #include <utility/SingleInstance.hpp>
 
 namespace SUNphi
 {
+ #ifdef USE_MPI
+  
   /// Provides link from a type to the mathcing \c MPI_Datatype
   ///
   /// Useful to allow template usage of MPI
@@ -44,6 +52,8 @@ namespace SUNphi
 #define MPI_CRASH_ON_ERROR(...)			\
   Mpi::CrashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
   
+#endif
+  
   namespace Mpi
   {
     /// Decrypt the returned value of an MPI call
@@ -57,40 +67,67 @@ namespace SUNphi
 		     Args&&... args);
     
     /// Initialize MPI
-    void init()
+    inline void init()
     {
-      /// Returned value of MPI
+#ifdef USE_MPI
       MPI_CRASH_ON_ERROR(MPI_Init(nullptr,nullptr),"Error initializing MPI");
+#endif
     }
     
     /// Check initialization flag
-    int isInitialized()
+    inline int isInitialized()
     {
+      
+#ifdef USE_MPI
+      
       /// Initialization flag
       int res;
       MPI_CRASH_ON_ERROR(MPI_Initialized(&res),"Checking MPI initialization");
       
       return res;
+      
+#else
+      
+      return 1;
+      
+#endif
+      
     }
     
     /// Finalize MPI
-    void finalize()
+    inline void finalize()
     {
+      
+#ifdef USE_MPI
+      
       MPI_CRASH_ON_ERROR(MPI_Finalize(),"Finalizing MPI");
+      
+#endif
+      
     }
     
     /// Get current rank
-    int getRank()
+    inline int getRank()
     {
+      
+#ifdef USE_MPI
+      
       /// Returned value
       int res;
       MPI_CRASH_ON_ERROR(MPI_Comm_rank(MPI_COMM_WORLD,&res),"Getting current rank");
       
       return res;
+      
+#else
+      
+      return 0;
+      
+#endif
+      
     }
     
     /// Cached value of current rank
-    int rank()
+    inline int rank()
     {
       /// Stored value
       static int _rank=
@@ -100,17 +137,27 @@ namespace SUNphi
     }
     
     /// Get the total number of ranks
-    int getNRanks()
+    inline int getNRanks()
     {
+      
+#ifdef USE_MPI
+      
       /// Returned value
       int res;
       MPI_CRASH_ON_ERROR(MPI_Comm_size(MPI_COMM_WORLD,&res),"Getting total number of ranks");
       
       return res;
+      
+#else
+      
+      return 1;
+	
+#endif
+      
     }
     
     /// Cached value of total number of ranks
-    int nRanks()
+    inline int nRanks()
     {
       /// Stored value
       static int _nRanks=
@@ -123,12 +170,22 @@ namespace SUNphi
     template <typename T>
     T allReduce(const T& in)
     {
+      
+#ifdef USE_MPI
+      
       /// Result
       T out;
       
       MPI_CRASH_ON_ERROR(MPI_Allreduce(&in,&out,1,mpiType<T>(),MPI_SUM,MPI_COMM_WORLD),"Reducing among all processes");
       
       return out;
+      
+#else
+      
+      return in;
+      
+#endif
+      
     }
     
     /// Class used to make MPI alive
@@ -154,6 +211,10 @@ namespace SUNphi
   }
 }
 
-#undef MPI_CRASH_ON_ERROR
+#ifdef USE_MPI
+ 
+ #undef MPI_CRASH_ON_ERROR
+ 
+#endif
 
 #endif
