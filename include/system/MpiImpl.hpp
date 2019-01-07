@@ -3,7 +3,7 @@
 
 /// \file MpiImpl.hpp
 ///
-/// \brief Internal implementation of some MPI function
+/// \brief Internal implementation of some MPI functions
 
 #include <system/Mpi.hpp>
 
@@ -11,7 +11,7 @@ namespace SUNphi::Mpi
 {
   /// Decrypt the returned value of an MPI call
   template <typename...Args>
-  int CrashOnError(const int line,        ///< Line of file where the error needs to be checked
+  int CrashOnError(const int line,         ///< Line of file where the error needs to be checked
 		    const char *file,      ///< File where the error must be checked
 		    const char *function,  ///< Function where the error was possibly raised
 		    const int rc,          ///< Exit condition of the called routine
