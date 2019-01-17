@@ -32,7 +32,8 @@ namespace SUNphi
 #define NON_CONST_QUALIF			\
   
   /// Token to be used in macro indicating "const" keyword
-#define CONST_QUALIF const
+#define CONST_QUALIF \
+  const
   
   /// Empty token to be used in macro expecting the kind of reference
 #define NON_REF
@@ -578,6 +579,18 @@ namespace SUNphi
   {									\
     STATIC_ASSERT_HAS_MEMBER(TAG,T);					\
   }
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the signed version of the passed type
+  template <typename T>     // Type to unsign
+  using SignedOf=
+    RefIf<isLvalue<T>,std::make_signed_t<RemRef<T>>>;
+  
+  /// Returns the unsigned version of the passed type
+  template <typename T>     // Type to sign
+  using UnsignedOf=
+    RefIf<isLvalue<T>,std::make_unsigned_t<RemRef<T>>>;
   
   /////////////////////////////////////////////////////////////////
 }
