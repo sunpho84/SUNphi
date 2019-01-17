@@ -603,6 +603,74 @@ void checkMPIallReduce()
   TEST_PASSED;
 }
 
+/// Test adding and removing of signness
+void checkSignUnsign()
+{
+  /// Check the unsigning of A into B
+#define CHECK_UNSIGN(A,B)						\
+  static_assert(isSame<UnsignedOf<A>,B>,"Unsigned version of " #A " is not the same of " #B)
+  
+  /// Check the signing of A into B
+#define CHECK_SIGN(A,B)						\
+  static_assert(isSame<SignedOf<A>,B>,"Signed version of " #A " is not the same of " #B)
+  
+  CHECK_UNSIGN(int64_t,uint64_t);
+  CHECK_UNSIGN(const int64_t,const uint64_t);
+  CHECK_UNSIGN(int64_t&,uint64_t&);
+  CHECK_UNSIGN(const int64_t&,const uint64_t&);
+  
+  CHECK_SIGN(uint64_t,int64_t);
+  CHECK_SIGN(const uint64_t,const int64_t);
+  CHECK_SIGN(uint64_t&,int64_t&);
+  CHECK_SIGN(const uint64_t&,const int64_t&);
+  
+  TEST_PASSED;
+  
+#undef CHECK_UNSIGN
+#undef CHECK_SIGN
+}
+
+/// Test vector class
+void checkVectorClass()
+{
+  /// Vector to allocate
+  Vector<int> a{1,2,3,6,1};
+  
+  /// Expected size
+  const long int expSize=
+    5;
+  
+  // Check size
+  if(a.size()!=expSize)
+    CRASH("Expected size: ",expSize,", obtained:",a.size());
+  
+  /// Sum of all elements of \c a
+  const int sum=
+    a.summatorial(1);
+  
+  /// Expected result of the sum
+  const int expSum=
+    12;
+  
+  // Check sum
+  if(sum!=expSum)
+    CRASH("Expected sum:",expSum,",obtained:",sum);
+  
+  /// Take the product of all elements of \c a
+  const int prod=
+    a.productorial(1);
+  
+  /// Expected result of the product
+  const int expProd=
+    36;
+  
+  // Check product
+  if(prod!=expProd)
+    CRASH("Expected prod:",expProd,",obtained:",prod);
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1033,6 +1101,10 @@ void checkSumOfTwoSmETs()
 
 int main()
 {
+  checkSignUnsign();
+  
+  checkVectorClass();
+  
   checkNonComplConjCancelation();
   
   checkNestedConjCancelation();
