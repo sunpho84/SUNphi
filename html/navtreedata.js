@@ -38,12 +38,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d2/d33/TupleTypeCat_8hpp.html#aaa2eb9b96050ad18ba1bf5d84cd0080d",
-"d4/d4b/classSUNphi_1_1Assigner.html#a9d64a7def7fa86ff59dfbca02a48ee6c",
-"d6/db9/classSUNphi_1_1Binder.html#a1e2a3be24132515bd6522b80e5ad9c40",
-"d9/dfb/Spin_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7",
-"dc/d5d/classSUNphi_1_1MulAdder.html#a6751965c1c2a68bbad6aae8f1856903c",
-"de/d2d/TupleOrder_8hpp.html#a9f60dd9c8c3a36f1ace90aa6d021d61a"
+"d2/d24/classSUNphi_1_1Conjer.html#afa3fc6cfc6c8bfa110266c728c2d6d54",
+"d4/d4b/classSUNphi_1_1Assigner.html#a99343008afb55b392d925add508508eb",
+"d6/db9/classSUNphi_1_1Binder.html#a1a58e4fbd7ec559a802aa92e8d70e3e3",
+"d9/dfb/Spin_8hpp.html#a8532480c6ab7f3851c3f18eefc919400",
+"dc/d5d/classSUNphi_1_1MulAdder.html#a4b46ea85ccd68848ca76d967b1f07222",
+"de/d2d/TupleOrder_8hpp.html#a6d75beaf6774318d2a6e3f2a1436dbd2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

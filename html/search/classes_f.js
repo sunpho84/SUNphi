@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wrapper',['Wrapper',['../d1/d77/classSUNphi_1_1Wrapper.html',1,'SUNphi']]]
+  ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]]
 ];

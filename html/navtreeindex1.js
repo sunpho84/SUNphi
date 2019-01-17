@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"d2/d24/classSUNphi_1_1Conjer.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,62,27],
+"d2/d33/TupleTypeCat_8hpp.html":[3,0,2,9,4],
 "d2/d33/TupleTypeCat_8hpp.html#aaa2eb9b96050ad18ba1bf5d84cd0080d":[3,0,2,9,4,0],
 "d2/d33/TupleTypeCat_8hpp_source.html":[3,0,2,9,4],
 "d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html":[2,0,0,112],
@@ -51,8 +53,8 @@ var NAVTREEINDEX1 =
 "d2/d69/NnarySmET_8hpp.html#ad378640872660b64ac332626a34f7e28":[3,0,2,6,8,13],
 "d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89":[3,0,2,6,8,19],
 "d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe":[3,0,2,6,8,14],
-"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,6,8,31],
 "d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,6,8,30],
+"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,6,8,31],
 "d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062":[3,0,2,6,8,22],
 "d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a":[3,0,2,6,8,18],
 "d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1":[3,0,2,6,8,29],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d4/d4b/classSUNphi_1_1Assigner.html#a796aabd131797f8b093c855067739dcd":[2,0,0,39,10],
 "d4/d4b/classSUNphi_1_1Assigner.html#a7d243c92bac2c48fd652b02edf2616a7":[2,0,0,39,3],
 "d4/d4b/classSUNphi_1_1Assigner.html#a83b9e6957e54c344c79bceecb8f3d310":[2,0,0,39,25],
-"d4/d4b/classSUNphi_1_1Assigner.html#a87c2586b420f9055c93e4c4b7168a21d":[2,0,0,39,0],
-"d4/d4b/classSUNphi_1_1Assigner.html#a99343008afb55b392d925add508508eb":[2,0,0,39,16],
-"d4/d4b/classSUNphi_1_1Assigner.html#a9bb60671abb4857ef4fe686ab40dcd34":[2,0,0,39,5]
+"d4/d4b/classSUNphi_1_1Assigner.html#a87c2586b420f9055c93e4c4b7168a21d":[2,0,0,39,0]
 };

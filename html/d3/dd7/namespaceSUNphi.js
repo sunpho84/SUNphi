@@ -156,5 +156,6 @@ var namespaceSUNphi =
     [ "TwinTensCompOf< Col >", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4" ],
     [ "TwinTensCompOf< Spin >", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4" ],
     [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
+    [ "Vector", "df/dc0/classSUNphi_1_1Vector.html", "df/dc0/classSUNphi_1_1Vector" ],
     [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
 ];
