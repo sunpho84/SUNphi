@@ -644,6 +644,36 @@ void checkVectorClass()
   if(a.size()!=expSize)
     CRASH("Expected size: ",expSize,", obtained:",a.size());
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Finds the first 6
+  const int first6=
+    a.findFirst(6);
+  
+  /// Expected position of first 6
+  const int expFirst6=
+    3;
+  
+  // Check position of first 6
+  if(first6!=expFirst6)
+    CRASH("First 6 expected at position",expFirst6,"found at",first6);
+  
+  /////////////////////////////////////////////////////////////////
+  
+  /// Finds the last 3
+  const int last3=
+    a.findLast(3);
+  
+  /// Expected position of last 3
+  const int expLast3=
+    2;
+  
+  // Check position of last 3
+  if(last3!=expLast3)
+    CRASH("First 3 expected at position",expLast3,"found at",last3);
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Sum of all elements of \c a
   const int sum=
     a.summatorial(1);
@@ -656,6 +686,8 @@ void checkVectorClass()
   if(sum!=expSum)
     CRASH("Expected sum:",expSum,",obtained:",sum);
   
+  /////////////////////////////////////////////////////////////////
+  
   /// Take the product of all elements of \c a
   const int prod=
     a.productorial(1);
@@ -667,6 +699,30 @@ void checkVectorClass()
   // Check product
   if(prod!=expProd)
     CRASH("Expected prod:",expProd,",obtained:",prod);
+  
+  /////////////////////////////////////////////////////////////////
+  
+  TEST_PASSED;
+}
+
+/// Test combinatorial
+void checkCombinatorial()
+{
+  /// Maximal number of object for each slot
+  const Vector<int> nMaxPerSlot=
+    {1,2,3,2};
+  
+  /// Number of objects
+  const int nObj=
+    3;
+  
+  /// Set the combinatorial
+  Combinatorial c(nMaxPerSlot,nObj);
+  
+  for(auto i : c.getLast())
+    {
+      cout<<i<<endl;
+    }
   
   TEST_PASSED;
 }
@@ -1104,6 +1160,8 @@ int main()
   checkSignUnsign();
   
   checkVectorClass();
+  
+  checkCombinatorial();
   
   checkNonComplConjCancelation();
   

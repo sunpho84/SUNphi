@@ -44,7 +44,25 @@ namespace SUNphi
   template <typename T>
   T sqr(const T& x)
   {
-    return x*x;
+    return
+      x*x;
+  }
+  
+  /// Sign of a number, +1 0 or -1
+  template <typename T>
+  T sign(const T& x)
+  {
+    // Positive case
+    if(x>0)
+      return +1;
+    
+    // Negative case
+    if(x<0)
+      return -1;
+    
+    // Null case
+    return
+      0;
   }
 }
 
