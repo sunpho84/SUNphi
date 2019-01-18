@@ -8,10 +8,10 @@ var searchData=
   ['check',['Check',['../d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html',1,'SUNphi::HasMember_ref1']]],
   ['check',['Check',['../d1/dce/structSUNphi_1_1HasMember__eval_1_1Check.html',1,'SUNphi::HasMember_eval']]],
   ['check',['Check',['../df/dd6/structSUNphi_1_1HasMember__isStoring_1_1Check.html',1,'SUNphi::HasMember_isStoring']]],
-  ['check',['Check',['../dc/d50/structSUNphi_1_1HasMember__getMergedCompsView_1_1Check.html',1,'SUNphi::HasMember_getMergedCompsView']]],
-  ['check',['Check',['../dc/d17/structSUNphi_1_1HasMember__ref2_1_1Check.html',1,'SUNphi::HasMember_ref2']]],
   ['check',['Check',['../df/d96/structSUNphi_1_1HasMember__Tk_1_1Check.html',1,'SUNphi::HasMember_Tk']]],
+  ['check',['Check',['../dc/d17/structSUNphi_1_1HasMember__ref2_1_1Check.html',1,'SUNphi::HasMember_ref2']]],
   ['check',['Check',['../dc/d79/structSUNphi_1_1HasMember__Fund_1_1Check.html',1,'SUNphi::HasMember_Fund']]],
+  ['check',['Check',['../dc/d50/structSUNphi_1_1HasMember__getMergedCompsView_1_1Check.html',1,'SUNphi::HasMember_getMergedCompsView']]],
   ['check',['Check',['../d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html',1,'SUNphi::HasMember_assertMergeableWith']]],
   ['check',['Check',['../d8/d57/structSUNphi_1_1HasMember__compSize_1_1Check.html',1,'SUNphi::HasMember_compSize']]],
   ['check',['Check',['../d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html',1,'SUNphi::HasMember_refs']]],
@@ -25,6 +25,9 @@ var searchData=
   ['cnspin',['CnSpin',['../dd/d61/structSUNphi_1_1CnSpin.html',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
   ['col',['Col',['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi::Col()'],['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi::col(T &amp;&amp;ref, const int id)']]],
+  ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html',1,'SUNphi']]],
+  ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1',1,'SUNphi::Combinatorial']]],
+  ['combinatorial_2ehpp',['Combinatorial.hpp',['../d6/d2b/Combinatorial_8hpp.html',1,'']]],
   ['combineflags',['combineFlags',['../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878',1,'SUNphi']]],
   ['compl',['Compl',['../de/dee/structSUNphi_1_1Compl.html',1,'SUNphi']]],
   ['compl_2ehpp',['Compl.hpp',['../d8/de8/Compl_8hpp.html',1,'']]],
@@ -136,5 +139,6 @@ var searchData=
   ['crashonerror',['CrashOnError',['../d8/d6a/Mpi_8hpp.html#ae0b60a9539bb8cebf9924edd957d759e',1,'SUNphi::Mpi']]],
   ['created',['created',['../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d',1,'SUNphi::TensStor']]],
   ['crtp_2ehpp',['CRTP.hpp',['../d4/dba/CRTP_8hpp.html',1,'']]],
-  ['crtp_5fcast',['CRTP_CAST',['../d4/dba/CRTP_8hpp.html#a096469fcc98d6dce86a93de07c24840f',1,'CRTP.hpp']]]
+  ['crtp_5fcast',['CRTP_CAST',['../d4/dba/CRTP_8hpp.html#a096469fcc98d6dce86a93de07c24840f',1,'CRTP.hpp']]],
+  ['curcombo',['curCombo',['../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e',1,'SUNphi::Combinatorial']]]
 ];

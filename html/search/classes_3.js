@@ -16,6 +16,7 @@ var searchData=
   ['check',['Check',['../d1/d4f/structSUNphi_1_1HasMember__MergeableComps_1_1Check.html',1,'SUNphi::HasMember_MergeableComps']]],
   ['cncol',['CnCol',['../d0/da2/structSUNphi_1_1CnCol.html',1,'SUNphi']]],
   ['cnspin',['CnSpin',['../dd/d61/structSUNphi_1_1CnSpin.html',1,'SUNphi']]],
+  ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html',1,'SUNphi']]],
   ['compl',['Compl',['../de/dee/structSUNphi_1_1Compl.html',1,'SUNphi']]],
   ['conjer',['Conjer',['../d2/d24/classSUNphi_1_1Conjer.html',1,'SUNphi']]],
   ['constrainareadders',['ConstrainAreAdders',['../df/d1f/structSUNphi_1_1ConstrainAreAdders.html',1,'SUNphi']]],

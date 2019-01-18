@@ -21,6 +21,7 @@ var searchData=
   ['print',['print',['../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
   ['print_2ehpp',['Print.hpp',['../d7/d55/Print_8hpp.html',1,'']]],
   ['printbacktracelist',['printBacktraceList',['../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
+  ['productorial',['productorial',['../df/dc0/classSUNphi_1_1Vector.html#a17781892c3dbe68eba33c7c6290eef85',1,'SUNphi::Vector::productorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#ab579d50cf7444f1a57d607894f88325f',1,'SUNphi::Vector::productorial(const UnsignedSize beg=0) const ']]],
   ['provide_5falso_5fnon_5fconst_5fmethod',['PROVIDE_ALSO_NON_CONST_METHOD',['../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be',1,'TypeTraits.hpp']]],
   ['provide_5fbinary_5fsmet_5frefs',['PROVIDE_BINARY_SMET_REFS',['../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79',1,'BinarySmET.hpp']]],
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],

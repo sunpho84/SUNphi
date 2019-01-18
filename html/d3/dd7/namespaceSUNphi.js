@@ -63,6 +63,7 @@ var namespaceSUNphi =
     [ "Binder", "d6/db9/classSUNphi_1_1Binder.html", "d6/db9/classSUNphi_1_1Binder" ],
     [ "CnCol", "d0/da2/structSUNphi_1_1CnCol.html", "d0/da2/structSUNphi_1_1CnCol" ],
     [ "CnSpin", "dd/d61/structSUNphi_1_1CnSpin.html", "dd/d61/structSUNphi_1_1CnSpin" ],
+    [ "Combinatorial", "de/d33/classSUNphi_1_1Combinatorial.html", "de/d33/classSUNphi_1_1Combinatorial" ],
     [ "Compl", "de/dee/structSUNphi_1_1Compl.html", "de/dee/structSUNphi_1_1Compl" ],
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html", "d2/d24/classSUNphi_1_1Conjer" ],
     [ "ConstrainAreAdders", "df/d1f/structSUNphi_1_1ConstrainAreAdders.html", null ],
