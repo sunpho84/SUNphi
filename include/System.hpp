@@ -10,6 +10,7 @@
 #include <system/Mpi.hpp>
 #include <system/MpiImpl.hpp>
 #include <system/SIMD.hpp>
+#include <system/Threads.hpp>
 #include <system/Vector.hpp>
 
 #endif
