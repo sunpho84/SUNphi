@@ -23,6 +23,7 @@ var searchData=
   ['allreduce',['allReduce',['../d8/d6a/Mpi_8hpp.html#a79a6844180c53eff3fc7e29c63f35a7e',1,'SUNphi::Mpi']]],
   ['always_5finline',['ALWAYS_INLINE',['../d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a',1,'Inline.hpp']]],
   ['appendfirstn',['AppendFirstN',['../da/def/structSUNphi_1_1IntSeq.html#a81c147c227a4daa132137e3e175c0e87',1,'SUNphi::IntSeq']]],
+  ['appendix_2ecpp',['appendix.cpp',['../dc/df8/appendix_8cpp.html',1,'']]],
   ['aredynamic',['AreDynamic',['../d8/df8/classSUNphi_1_1TensKind.html#a55e9d277b2e66ecfd8a01e75eabd3bfc',1,'SUNphi::TensKind']]],
   ['areintegrals',['areIntegrals',['../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e',1,'SUNphi']]],
   ['areintegrals_3c_20t_20_3e',['areIntegrals&lt; T &gt;',['../d3/dd7/namespaceSUNphi.html#a2f56717fe042f165d2ac201640f3898c',1,'SUNphi']]],

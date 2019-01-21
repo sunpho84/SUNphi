@@ -996,7 +996,7 @@ template&lt;typename T &gt; </td></tr>
 <tr class="separator:acce3c95aefe2f639a99026d32a5c48f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa63b8d6f93b72ee4c5febdddfe9f111b"><td class="memTemplParams" colspan="2">template&lt;bool assertIfNotPresent, typename... T, typename TP &gt; </td></tr>
 <tr class="memitem:aa63b8d6f93b72ee4c5febdddfe9f111b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa63b8d6f93b72ee4c5febdddfe9f111b">_posOfTypes</a> (<a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; T... &gt; t, TP tp) -&gt; <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9f60dd9c8c3a36f1ace90aa6d021d61a">_posOfType</a>&lt; assertIfNotPresent &gt;(T</td></tr>
-<tr class="memdesc:aa63b8d6f93b72ee4c5febdddfe9f111b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the types <code>T</code> in the Tuple <code>Tp</code>, asserting or not.  <a href="#aa63b8d6f93b72ee4c5febdddfe9f111b">More...</a><br /></td></tr>
+<tr class="memdesc:aa63b8d6f93b72ee4c5febdddfe9f111b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of the types <code>T</code> in the Tuple <code>TP</code>, asserting or not.  <a href="#aa63b8d6f93b72ee4c5febdddfe9f111b">More...</a><br /></td></tr>
 <tr class="separator:aa63b8d6f93b72ee4c5febdddfe9f111b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82133fd401b9dcb4ae7ace4fd98f2840"><td class="memTemplParams" colspan="2">template&lt;std::size_t I, class T &gt; </td></tr>
 <tr class="memitem:a82133fd401b9dcb4ae7ace4fd98f2840"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::tuple_element_t&lt; I, T &gt; &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a82133fd401b9dcb4ae7ace4fd98f2840">get</a> (T &amp;&amp;t)</td></tr>
@@ -3583,7 +3583,7 @@ template&lt;bool assertIfNotPresent, typename... T, typename TP &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Position of the types <code>T</code> in the Tuple <code>Tp</code>, asserting or not. </p>
+<p>Position of the types <code>T</code> in the Tuple <code>TP</code>, asserting or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">t</td><td>Holds the types to be searched </td></tr>
@@ -7164,7 +7164,7 @@ template&lt;int I&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00015">Aliver.cpp:15</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00027">Aliver.cpp:27</a></div></div>
 </div><!-- fragment --><p>Makes sure that the library is started</p>
 <p>Elaborates on the approach of <a href="https://stackoverflow.com/a/43352830">https://stackoverflow.com/a/43352830</a> 1) takes the returned value of the helper, which is never used 2) static ensures that every TU gets a separate instance </p>
 

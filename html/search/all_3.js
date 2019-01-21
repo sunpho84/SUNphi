@@ -39,6 +39,8 @@ var searchData=
   ['computecoordsofpoint',['computeCoordsOfPoint',['../dd/dca/classSUNphi_1_1Grid.html#a1f5850895ea94cf20491e1833e03909d',1,'SUNphi::Grid']]],
   ['computeneighofpoint',['computeNeighOfPoint',['../dd/dca/classSUNphi_1_1Grid.html#abf782d6411839bd65ef3dc7dccb659c4',1,'SUNphi::Grid']]],
   ['conditional',['Conditional',['../d3/dd7/namespaceSUNphi.html#ab3abb9888a607b122507a0322bc2d2d8',1,'SUNphi']]],
+  ['config_5fflags',['CONFIG_FLAGS',['../de/d06/Aliver_8cpp.html#a01fb41133660d75b17c52f463c461a22',1,'Aliver.cpp']]],
+  ['config_5ftime',['CONFIG_TIME',['../de/d06/Aliver_8cpp.html#aba38f0c926fb820677b5373f7b2e3c81',1,'Aliver.cpp']]],
   ['conj',['conj',['../d3/dd7/namespaceSUNphi.html#a381b663616baca11ca1606eab5ecb637',1,'SUNphi::conj(T &amp;&amp;smet, DummyTypes...)'],['../d3/dd7/namespaceSUNphi.html#a3e19f4ffa189059c167b60fd22d8342d',1,'SUNphi::conj(T &amp;&amp;smet)'],['../d3/dd7/namespaceSUNphi.html#aa8e94881e2711b5cb720d5839d7ecb34',1,'SUNphi::conj(D &amp;&amp;smet)']]],
   ['conj_2ehpp',['Conj.hpp',['../d2/d8f/Conj_8hpp.html',1,'']]],
   ['conjer',['Conjer',['../d2/d24/classSUNphi_1_1Conjer.html',1,'SUNphi']]],

@@ -51,7 +51,7 @@ var searchData=
   ['smet_5fgoes_5fon_5flhs',['SMET_GOES_ON_LHS',['../dc/d6b/BaseSmET_8hpp.html#aeaa6b7fa1b5cbb1bde2130876ab150be',1,'BaseSmET.hpp']]],
   ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
   ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],
-  ['spin',['spin',['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)'],['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()']]],
+  ['spin',['Spin',['../d3/dd7/namespaceSUNphi.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()'],['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)']]],
   ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
   ['sqr',['sqr',['../d3/dd7/namespaceSUNphi.html#a0eeddf88e05361ef8f44c0af72c11289',1,'SUNphi']]],
   ['static_5fassert_5fare_5fintegrals',['STATIC_ASSERT_ARE_INTEGRALS',['../d0/d81/TypeTraits_8hpp.html#a0147cab5da16a1c67f1f3ffb2d91889e',1,'TypeTraits.hpp']]],
