@@ -11,13 +11,13 @@ AUTOMAKE_OPTIONS= \
 lib_LIBRARIES= \
 	$(top_builddir)/lib/libsunphi.a
 
-# %D%/git_info.hpp: $(top_srcdir)/.git/HEAD $(top_srcdir)/.git/index $(top_srcdir)/config/get_git_info.sh Makefile
-# 	@echo "Reading git version"
-# 	@$(top_srcdir)/config/get_git_info.sh $(top_srcdir) > $@
-# $(top_srcdir)/.git/HEAD:
-# $(top_srcdir)/.git/index:
+%D%/gitInfo.hpp: $(top_srcdir)/.git/HEAD $(top_srcdir)/.git/index $(top_srcdir)/config/getGitInfo.sh Makefile
+	@echo "Reading git version"
+	@$(top_srcdir)/config/getGitInfo.sh $(top_srcdir) > $@
+$(top_srcdir)/.git/HEAD:
+$(top_srcdir)/.git/index:
 
-# BUILT_SOURCES=%D%/git_info.hpp
+BUILT_SOURCES=%D%/gitInfo.hpp
 
 # Library sources
 __top_builddir__lib_libsunphi_a_SOURCES= \

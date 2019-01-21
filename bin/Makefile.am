@@ -18,4 +18,6 @@ bin_PROGRAMS+=main
 main_SOURCES=main.cpp
 
 bin_PROGRAMS+=checks
-checks_SOURCES=checks.cpp
+checks_SOURCES= \
+	appendix.cpp \
+	checks.cpp
