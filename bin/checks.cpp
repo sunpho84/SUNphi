@@ -645,59 +645,26 @@ void checkVectorClass()
   
   /////////////////////////////////////////////////////////////////
   
-  /// Finds the first 6
-  const int first6=
-    a.findFirst(6);
+  /// Check first or last occurrency
+  auto check=[&a](const int& searching,
+		const int& expectedPos,
+		const bool& firstLast)
+    {
+      /// Finds
+      const int pos=
+      (firstLast==false)?
+      a.findFirst(searching):
+      a.findLast(searching);
+      
+      // Check position
+      if(pos!=expectedPos)
+	CRASH("First",searching,"expected at position",expectedPos,"found at",pos);
+    };
   
-  /// Expected position of first 6
-  const int expFirst6=
-    3;
-  
-  // Check position of first 6
-  if(first6!=expFirst6)
-    CRASH("First 6 expected at position",expFirst6,"found at",first6);
-  
-  /////////////////////////////////////////////////////////////////
-  
-  /// Finds the first 4
-  const int first4=
-    a.findFirst(4);
-  
-  /// Expected position of first 4
-  const int expFirst4=
-    5;
-  
-  // Check position of first 4
-  if(first4!=expFirst4)
-    CRASH("First 4 expected at position",expFirst4,"found at",first4);
-  
-  /////////////////////////////////////////////////////////////////
-  
-  /// Finds the last 3
-  const int last3=
-    a.findLast(3);
-  
-  /// Expected position of last 3
-  const int expLast3=
-    2;
-  
-  // Check position of last 3
-  if(last3!=expLast3)
-    CRASH("First 3 expected at position",expLast3,"found at",last3);
-  
-  /////////////////////////////////////////////////////////////////
-  
-  /// Finds the last 8
-  const int last8=
-    a.findLast(8);
-  
-  /// Expected position of last 8
-  const int expLast8=
-    -1;
-  
-  // Check position of last 8
-  if(last8!=expLast8)
-    CRASH("First 8 expected at position",expLast8,"found at",last8);
+  check(6,3,false);
+  check(4,expSize,false);
+  check(3,2,true);
+  check(8,-1,true);
   
   /////////////////////////////////////////////////////////////////
   
