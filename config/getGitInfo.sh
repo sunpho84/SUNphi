@@ -22,7 +22,7 @@ else
     echo '"'
     
     echo -n ' #define GIT_LOG "'
-    git log -1 --pretty=%B|tr -d "\n"
+    git log -1 --pretty=%B|tr -d "\n"|sed 's|\\|\\\\|'
     echo '"'
     
     echo

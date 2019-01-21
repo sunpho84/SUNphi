@@ -1,8 +1,8 @@
-# usage: AX_SIMPLE_ENABLE(Functionality, Default value, Description)
+# Usage: AX_SIMPLE_ENABLE(Functionality, Default value, Description)
 
 AC_DEFUN([AX_SIMPLE_ENABLE], [
 
-#introduce enable
+# Introduce enable
 AC_ARG_ENABLE($1,
 	AS_HELP_STRING([--enable-$1],[$3]),
 	enable_$1="${enableval}",
