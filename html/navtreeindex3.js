@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"d6/db8/structSUNphi_1_1__IntSeqCat_3_4.html#a1399577ba45d43b63249dc0b9b89c355":[2,0,0,18,0],
 "d6/db9/classSUNphi_1_1Binder.html":[2,0,0,57],
 "d6/db9/classSUNphi_1_1Binder.html#a045dcc260d77d1f343ce94e04a72417c":[2,0,0,57,0],
 "d6/db9/classSUNphi_1_1Binder.html#a06b3b5d023fedfd2d911c7ad35aa4c42":[2,0,0,57,37],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "d9/ddd/IntSeqGetEl_8hpp_source.html":[3,0,2,0,5],
 "d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html":[2,0,0,147,7],
 "d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a30a8ae28d689efcbb4535d0c9c163b8f":[2,0,0,147,7,4],
-"d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a31d6754327035663743b8e50ee67c43a":[2,0,0,147,7,3],
-"d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a4c9acc1362080685150459d4d34ff0af":[2,0,0,147,7,2]
+"d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a31d6754327035663743b8e50ee67c43a":[2,0,0,147,7,3]
 };
