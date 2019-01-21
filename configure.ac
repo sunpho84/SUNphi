@@ -23,11 +23,30 @@ AX_CXXFLAGS_WARN_ALL
 # Silent automake
 AM_SILENT_RULES([yes])
 
-# Search for OpenMP
+# Search automatically for OpenMP
 AC_OPENMP
-CFLAGS="$CXXFLAGS $OPENMP_CFLAGS"
-CPPFLAGS="$CPPFLAGS $OPENMP_CPPFLAGS"
-CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
+if test "$ac_cv_prog_cxx_openmp" == "unsupported"
+then
+	have_openmp="no"
+else
+	have_openmp="yes"
+fi
+
+# Check if we enable threads
+AX_SIMPLE_ENABLE([threads],[$have_openmp],[Enable threads])
+if test "$enable_threads" == "yes"
+then
+	# Check if we have OpenMP
+	if test "$have_openmp" != "no"
+	then
+		CFLAGS="$OPENMP_CFLAGS $CXXFLAGS"
+		CPPFLAGS="$OPENMP_CPPFLAGS $CPPFLAGS"
+		CXXFLAGS="$OPENMP_CXXFLAGS $CXXFLAGS"
+		AC_DEFINE([USE_THREADS],1,[Enable threads])
+	else
+		AC_MSG_ERROR(["Unable to find OpenMP"])
+	fi
+fi
 
 # Search automatically MPI for c++
 AC_LANG_PUSH([C++])
