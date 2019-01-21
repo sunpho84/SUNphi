@@ -9,7 +9,7 @@ AUTOMAKE_OPTIONS= \
 
 # Include the library
 LDADD= \
-	$(top_builddir)/lib/libsunphi.la
+	$(top_builddir)/lib/libsunphi.a
 
 # Init to null the list of program to ease the addition
 bin_PROGRAMS=

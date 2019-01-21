@@ -2,25 +2,31 @@
  #include "config.hpp"
 #endif
 
-/// \file SUNphi.cpp
+/// \file Aliver.cpp
 ///
-/// \brief Main file for the SUNphi library
+/// \brief Starts the library and close it
 
 #include <system/MpiImpl.hpp>
 
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+  int aliverHelper()
+  {
+    return
+      0;
+  }
+  
   /// Initialize the SUNphi library
   __attribute__((constructor))
-  static void makeAlive()
+  void makeAlive()
   {
     Mpi::init();
   }
   
   /// Finalize the SUNphi library
   __attribute__((destructor))
-  static void makeDead()
+  void makeDead()
   {
     Mpi::finalize();
   }

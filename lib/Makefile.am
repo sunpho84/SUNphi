@@ -8,8 +8,8 @@ AUTOMAKE_OPTIONS= \
 	subdir-objects
 
 # Target to build the library
-lib_LTLIBRARIES= \
-	$(top_builddir)/lib/libsunphi.la
+lib_LIBRARIES= \
+	$(top_builddir)/lib/libsunphi.a
 
 # %D%/git_info.hpp: $(top_srcdir)/.git/HEAD $(top_srcdir)/.git/index $(top_srcdir)/config/get_git_info.sh Makefile
 # 	@echo "Reading git version"
@@ -20,6 +20,6 @@ lib_LTLIBRARIES= \
 # BUILT_SOURCES=%D%/git_info.hpp
 
 # Library sources
-__top_builddir__lib_libsunphi_la_SOURCES= \
-	%D%/SUNphi.cpp
+__top_builddir__lib_libsunphi_a_SOURCES= \
+	%D%/Aliver.cpp
 

@@ -7,8 +7,7 @@ AM_CONFIG_HEADER(include/config.hpp)
 AC_CONFIG_MACRO_DIR([m4])
 AC_CANONICAL_HOST
 
-# Enable libtool
-LT_INIT
+AC_PROG_RANLIB
 
 # Enable C and C++
 AC_PROG_CC
