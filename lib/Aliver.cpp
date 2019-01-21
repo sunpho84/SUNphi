@@ -9,6 +9,18 @@
 #include <gitInfo.hpp>
 #include <system/MpiImpl.hpp>
 
+#ifndef CONFIG_TIME
+ /// Null time
+ #define CONFIG_TIME \
+ ""
+#endif
+
+#ifndef CONFIG_FLAGS
+ /// Null flags
+ #define CONFIG_FLAGS				\
+  ""
+#endif
+
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
