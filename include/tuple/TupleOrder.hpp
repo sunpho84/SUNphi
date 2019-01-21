@@ -93,7 +93,7 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Position of the types \c T in the Tuple \c Tp, asserting or not
+  /// Position of the types \c T in the Tuple \c TP, asserting or not
   template <bool assertIfNotPresent,  // Flag determining whether has to be assert or return NOT_PRESENT
 	    typename...T,             // Types to be searched
 	    typename TP>              // Type of the \c Tuple where to search
