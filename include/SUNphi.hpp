@@ -4,9 +4,6 @@
 /// \file SUNphi.hpp
 ///
 /// \brief Main include file for the SUNphi library
-///
-/// Please define the macro: \c SUNPHI_MAIN before including in the
-/// main file of the project.
 
 /*!
   
@@ -32,16 +29,5 @@
 #include <Tens.hpp>
 #include <Tuple.hpp>
 #include <Utility.hpp>
-
-/// Namespace of the SUNphi library
-namespace SUNphi
-{
-
-#ifdef SUNPHI_MAIN
-  /// MPI initialization
-  Mpi::MakeAlive mpi;
-#endif
-
-}
 
 #endif

@@ -7,7 +7,8 @@ AM_CONFIG_HEADER(include/config.hpp)
 AC_CONFIG_MACRO_DIR([m4])
 AC_CANONICAL_HOST
 
-AC_PROG_RANLIB
+# Enable libtool
+LT_INIT
 
 # Enable C and C++
 AC_PROG_CC
@@ -81,6 +82,9 @@ Configuration OK
 ])
 
 # Configure output
-AC_CONFIG_FILES(Makefile bin/Makefile config/Doxyfile)
- 
+AC_CONFIG_FILES(Makefile
+		bin/Makefile
+		lib/Makefile
+		config/Doxyfile)
+
 AC_OUTPUT

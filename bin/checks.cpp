@@ -1,5 +1,4 @@
-#define SUNPHI_MAIN
- #include <SUNphi.hpp>
+#include <SUNphi.hpp>
 
 #include <array>
 #include <iostream>

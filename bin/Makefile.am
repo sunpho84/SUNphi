@@ -1,7 +1,17 @@
-ACLOCAL_AMFLAGS=-I m4
 
-AM_CPPFLAGS=-I$(top_srcdir)/include
+# Include the header directory
+AM_CPPFLAGS= \
+	-I$(top_srcdir)/include
 
+# Build objects in subdirectories
+AUTOMAKE_OPTIONS= \
+	subdir-objects
+
+# Include the library
+LDADD= \
+	$(top_builddir)/lib/libsunphi.la
+
+# Init to null the list of program to ease the addition
 bin_PROGRAMS=
 
 bin_PROGRAMS+=main

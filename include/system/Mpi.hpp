@@ -18,28 +18,28 @@
  #include <mpi.h>
 #endif
 
-#include <utility/SingleInstance.hpp>
-
 namespace SUNphi
 {
  #ifdef USE_MPI
   
-  /// Provides link from a type to the mathcing \c MPI_Datatype
+  /// Provides link from a type to the matching \c MPI_Datatype
   ///
   /// Useful to allow template usage of MPI
 #define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
   /*! \c MPI_Datatype corresponding to TYPE */		\
   template <>						\
-  MPI_Datatype mpiType<TYPE>()				\
+  inline MPI_Datatype mpiType<TYPE>()			\
   {							\
-    return MPI_TYPE;					\
+    return						\
+      MPI_TYPE;						\
   }
   
   /// MPI datatpe corresponding to not-provided type
   template <typename T>
   MPI_Datatype mpiType()
   {
-    return nullptr;
+    return
+      nullptr;
   }
   
   PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
@@ -50,17 +50,26 @@ namespace SUNphi
   
   /// Crash on MPI error, providing a meaningful error
 #define MPI_CRASH_ON_ERROR(...)			\
-  Mpi::CrashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
+  Mpi::crashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
   
 #endif
   
   namespace Mpi
   {
+    /// Id of master rank
+    constexpr int MASTER_RANK=
+      0;
+    
+    /// Placeholder for all ranks
+    [[ maybe_unused ]]
+    constexpr int ALL_RANKS=
+      -1;
+    
     /// Decrypt the returned value of an MPI call
     ///
     /// Returns the value of \c rc
     template <typename...Args>
-    int CrashOnError(const int line,
+    int crashOnError(const int line,
 		     const char *file,
 		     const char *function,
 		     const int rc,
@@ -156,6 +165,16 @@ namespace SUNphi
       
     }
     
+    /// Check if this is the master rank
+    inline bool isMasterRank()
+    {
+      /// Store the result
+      static bool is=
+	(rank()==MASTER_RANK);
+      
+      return is;
+    }
+    
     /// Cached value of total number of ranks
     inline int nRanks()
     {
@@ -187,27 +206,6 @@ namespace SUNphi
 #endif
       
     }
-    
-    /// Class used to make MPI alive
-    class MakeAlive :
-      public SingleInstance<MakeAlive>
-    {
-  public:
-    
-      /// Constructor, initializing MPI
-      MakeAlive()
-      {
-#ifndef SUNPHI_DO_NOT_INITIALIZE_MPI
-	init();
-#endif
-      }
-      
-      /// Destructor
-      ~MakeAlive()
-      {
-	finalize();
-      }
-    };
   }
 }
 
