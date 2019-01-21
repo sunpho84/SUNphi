@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_5f_5fattribute_5f_5f',['__attribute__',['../d3/dd7/namespaceSUNphi.html#abf7f5e4f9b28947fe8280ab6fe18abb6',1,'SUNphi::__attribute__((constructor)) void makeAlive()'],['../d3/dd7/namespaceSUNphi.html#adb145a5e4a3740703c8bca406a26fe70',1,'SUNphi::__attribute__((destructor)) void makeDead()']]],
   ['_5fappendfirstn',['_AppendFirstN',['../d8/dcd/structSUNphi_1_1IntSeq_1_1__AppendFirstN.html',1,'SUNphi::IntSeq']]],
   ['_5fappendfirstn_3c_20false_2c_20n_2c_20intseq_3c_20r_2e_2e_2e_20_3e_20_3e',['_AppendFirstN&lt; false, N, IntSeq&lt; R... &gt; &gt;',['../dc/dda/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01false_00_01N_00_01IntSeq_3_01R_8_8_8_01_4_01_4.html',1,'SUNphi::IntSeq']]],
   ['_5fappendfirstn_3c_20true_2c_20n_2c_20intseq_3c_20headr_2c_20tailr_2e_2e_2e_20_3e_20_3e',['_AppendFirstN&lt; true, N, IntSeq&lt; HeadR, TailR... &gt; &gt;',['../d6/d17/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4.html',1,'SUNphi::IntSeq']]],

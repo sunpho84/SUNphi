@@ -1,9 +1,6 @@
 var namespaceSUNphi =
 [
     [ "_RelBindInternalChecks", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks" ],
-    [ "Mpi", null, [
-      [ "MakeAlive", "df/d1e/classSUNphi_1_1Mpi_1_1MakeAlive.html", "df/d1e/classSUNphi_1_1Mpi_1_1MakeAlive" ]
-    ] ],
     [ "_BlendTensKinds", "de/d12/structSUNphi_1_1__BlendTensKinds.html", null ],
     [ "_BlendTensKinds< Head1, Head2, Tail... >", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4" ],
     [ "_BlendTensKinds< Tk >", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4.html", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4" ],

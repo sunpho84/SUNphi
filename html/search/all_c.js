@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['makealive',['MakeAlive',['../df/d1e/classSUNphi_1_1Mpi_1_1MakeAlive.html',1,'SUNphi::Mpi']]],
-  ['makealive',['MakeAlive',['../df/d1e/classSUNphi_1_1Mpi_1_1MakeAlive.html#ac3796850a05a7b54eb26b5af0abc742c',1,'SUNphi::Mpi::MakeAlive']]],
+  ['makesurealiverisreferenced',['makeSureAliverIsReferenced',['../d3/dd7/namespaceSUNphi.html#ac9d94f5be3ce9e06d10056b98d9e36cf',1,'SUNphi']]],
+  ['master_5frank',['MASTER_RANK',['../d8/d6a/Mpi_8hpp.html#adeb52a681717c5989dc0f37127648ea0',1,'SUNphi::Mpi']]],
   ['math_2ehpp',['Math.hpp',['../d8/df1/Math_8hpp.html',1,'']]],
   ['max',['max',['../da/def/structSUNphi_1_1IntSeq.html#af9b370eb2608e777cce94847981ba5a3',1,'SUNphi::IntSeq']]],
   ['maxknownsubmultiple',['maxKnownSubMultiple',['../d1/d96/structSUNphi_1_1TensComp.html#ae29a38b5b9a7ff35e0798d43279090c3',1,'SUNphi::TensComp']]],
@@ -26,8 +26,8 @@ var searchData=
   ['mul',['Mul',['../da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df',1,'SUNphi::IntSeq']]],
   ['muladd',['mulAdd',['../d3/dd7/namespaceSUNphi.html#a9b7f7efa55b39f3d73c768476ed122f1',1,'SUNphi']]],
   ['muladd_2ehpp',['MulAdd.hpp',['../da/d06/MulAdd_8hpp.html',1,'']]],
-  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]],
   ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
+  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]],
   ['myt',['MyT',['../da/d65/Add_8hpp.html#a5fed21f6a353cc5d70bb127fe5bcc963',1,'SUNphi::CheckAdderIsNnarySmet::MyT()'],['../da/d06/MulAdd_8hpp.html#abcb4a54427ae0d55146c92794eab84b9',1,'SUNphi::CheckMulAdderIsNnarySmet::MyT()']]],
   ['mytc',['MyTc',['../da/d65/Add_8hpp.html#ae238bc7ea8e64c38e24560b647d8e121',1,'SUNphi::CheckAdderIsNnarySmet::MyTc()'],['../da/d06/MulAdd_8hpp.html#a6701178cec27d35392a6f97e7689d431',1,'SUNphi::CheckMulAdderIsNnarySmet::MyTc()']]],
   ['mytk',['MyTk',['../da/d65/Add_8hpp.html#a9aa88afc3b19d756d1f2fa57820c2149',1,'SUNphi::CheckAdderIsNnarySmet::MyTk()'],['../da/d06/MulAdd_8hpp.html#aacabb978edbb88ab2177bb391f93c354',1,'SUNphi::CheckMulAdderIsNnarySmet::MyTk()']]]

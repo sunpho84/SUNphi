@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['makealive',['MakeAlive',['../df/d1e/classSUNphi_1_1Mpi_1_1MakeAlive.html#ac3796850a05a7b54eb26b5af0abc742c',1,'SUNphi::Mpi::MakeAlive']]],
   ['maybeunused',['maybeUnused',['../db/dde/Unused_8hpp.html#a49d7da8c222e83ae8d42bb4ca6b7d2ea',1,'Unused.hpp']]],
   ['maybeunusedfd',['maybeUnusedFD',['../d3/dd7/namespaceSUNphi.html#ad42df6f4e786eb21661f8f399acb69a7',1,'SUNphi::maybeUnusedFD()'],['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#ad2eef232040ba16d5d27fdc243ce06f5',1,'SUNphi::_RelBindInternalChecks::maybeUnusedFD()']]],
   ['mergedcomps',['mergedComps',['../d3/d22/classSUNphi_1_1TensStor.html#a536cfdc4f0c4942f7abcb7dd2fa170a7',1,'SUNphi::TensStor']]],

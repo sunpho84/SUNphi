@@ -60,6 +60,7 @@ var searchData=
   ['isintegral',['isIntegral',['../d3/dd7/namespaceSUNphi.html#afdbfd0b9e1a6096c9249ee8a8be02c1d',1,'SUNphi']]],
   ['isintseq',['isIntSeq',['../d3/dd7/namespaceSUNphi.html#addbca57cd3b0fe9c03fd72e0b7103a2d',1,'SUNphi']]],
   ['islvalue',['isLvalue',['../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
+  ['ismasterrank',['isMasterRank',['../d8/d6a/Mpi_8hpp.html#ae58ad18a7f3a426ddafbd5829fb72e46',1,'SUNphi::Mpi']]],
   ['ismatrixcomp',['IsMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1',1,'SUNphi::TensKind']]],
   ['ismuladder',['isMulAdder',['../d3/dd7/namespaceSUNphi.html#a56035a909d47442946850caf39ebaa93',1,'SUNphi']]],
   ['isnnarysmet',['isNnarySmET',['../d3/dd7/namespaceSUNphi.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],

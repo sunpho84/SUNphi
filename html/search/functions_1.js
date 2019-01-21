@@ -3,6 +3,7 @@ var searchData=
   ['add',['add',['../d3/dd7/namespaceSUNphi.html#a5872359ff930d8bd62bf794615caf226',1,'SUNphi']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e',1,'SUNphi::Adder']]],
   ['adj',['adj',['../d3/dd7/namespaceSUNphi.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
+  ['aliverhelper',['aliverHelper',['../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d',1,'SUNphi']]],
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
   ['allreduce',['allReduce',['../d8/d6a/Mpi_8hpp.html#a79a6844180c53eff3fc7e29c63f35a7e',1,'SUNphi::Mpi']]],
   ['asmutable',['asMutable',['../d3/dd7/namespaceSUNphi.html#ac958ebeb40834e959e0f6847a91d0ffe',1,'SUNphi']]],

@@ -16,6 +16,6 @@ var searchData=
   ['coordsofpoint',['coordsOfPoint',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a26d4f888d8b6c964a85f390050dc374d',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::coordsOfPoint()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a9a6921aec7d50a5d3e4d8b9dae10fcdf',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::coordsOfPoint()']]],
   ['count',['count',['../db/d2f/classSUNphi_1_1SingleInstance.html#a3234cb342404a4bbbe61ce2a155faf3b',1,'SUNphi::SingleInstance']]],
   ['crashifinstancesexists',['crashIfInstancesExists',['../db/d2f/classSUNphi_1_1SingleInstance.html#a2371bd4f6f40f040af917b32c17dd587',1,'SUNphi::SingleInstance']]],
-  ['crashonerror',['CrashOnError',['../d8/d6a/Mpi_8hpp.html#ae0b60a9539bb8cebf9924edd957d759e',1,'SUNphi::Mpi']]],
+  ['crashonerror',['crashOnError',['../d8/d6a/Mpi_8hpp.html#a97469bf3c68db84a9866dfefb6f5388c',1,'SUNphi::Mpi']]],
   ['curcombo',['curCombo',['../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e',1,'SUNphi::Combinatorial']]]
 ];
