@@ -123,32 +123,26 @@ namespace SUNphi
 	};
     }
     
-    /// Returns an operator comparing with a given value and returns ret after n times, !ret otherwise
-    template <bool Ret=true>                      // Returned value when n=0
-    static auto getStopperAfter(const T& val,     ///< Value to compare
-				const Size n=1)   ///< Number of occurencies to encounter before stopping
+    /// Returns an operator comparing and returning Ret when occurring, !Ret if not
+    template <bool Ret=true>                    // Returned value
+    static auto getComparer(const T& val)     ///< Value to compare
     {
       return
-	getActer([val,nRes=n](const Vector<T>& v,Size pos) mutable
+	getActer([val](const Vector<T>& v,Size pos) mutable
 		 {
-		   if(nRes==0)
+		   if(v[pos]==val)
 		     return
 		       Ret;
 		   else
-		     {
-		       if(v[pos]==val)
-			 nRes--;
-		       
-		       return
-			 not Ret;
-		     }
+		     return
+		       not Ret;
 		 });
     }
     
     /// Perform the action all elements starting from first up to last (excluded) or until the condition is true or false
     ///
     /// Returns the last position where the condition was true, or the
-    /// size of the vector plus one if that was never true
+    /// past-beyond delimiter if never occurred
     template <bool falseTrue,  /// Go on until the condition is false or true
 	      typename C,      /// Condition function type
 	      typename A>      /// Action to perform
@@ -162,20 +156,19 @@ namespace SUNphi
       const Size off=
 	sign(last-first);
       
-      /// Last true position
-      Size lastRunPos=
-	size()+1;
+      /// Position
+      Size pos=
+	first;
       
       // Loop
-      for(Size pos=first;pos!=last and cond(*this,pos)==falseTrue;pos+=off)
+      while(pos!=last and cond(*this,pos)==falseTrue)
 	{
 	  act(*this,pos);
-	  lastRunPos=
-	    pos;
+	  pos+=off;
 	}
       
       return
-	lastRunPos;
+	pos;
     }
     
     /// Finds the first element where the condition is false
@@ -201,7 +194,7 @@ namespace SUNphi
       const
     {
       return
-	loopUntil<false>(0,size(),getStopperAfter(val),getNullAction());
+      	loopUntil<false>(0,size(),getComparer(val),getNullAction());
     }
     
     /// Finds the last element \c val
@@ -209,7 +202,7 @@ namespace SUNphi
       const
     {
       return
-	loopUntil<false>(size()-1,-1,getStopperAfter(val),getNullAction());
+	loopUntil<false>(size()-1,-1,getComparer(val),getNullAction());
     }
     
   };
