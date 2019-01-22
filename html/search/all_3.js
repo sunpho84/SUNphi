@@ -24,7 +24,7 @@ var searchData=
   ['cncol',['CnCol',['../d0/da2/structSUNphi_1_1CnCol.html',1,'SUNphi']]],
   ['cnspin',['CnSpin',['../dd/d61/structSUNphi_1_1CnSpin.html',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
-  ['col',['Col',['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi::Col()'],['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi::col(T &amp;&amp;ref, const int id)']]],
+  ['col',['col',['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi::col(T &amp;&amp;ref, const int id)'],['../d3/dd7/namespaceSUNphi.html#acdce53faa1c2c790355655aa46c7175c',1,'SUNphi::Col()']]],
   ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html',1,'SUNphi']]],
   ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1',1,'SUNphi::Combinatorial']]],
   ['combinatorial_2ehpp',['Combinatorial.hpp',['../d6/d2b/Combinatorial_8hpp.html',1,'']]],

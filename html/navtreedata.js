@@ -42,9 +42,9 @@ var NAVTREEINDEX =
 "d4/d4b/classSUNphi_1_1Assigner.html#a60a84bec705258752a2754d652775f3b",
 "d6/d8a/structSUNphi_1_1HasMember__isStoring.html#a26629612d2d8a5f06c0cd88f80acfba7",
 "d9/ddd/IntSeqGetEl_8hpp.html#a7a25b03ab4b8d8aa7fdb221ac3e43cd5",
-"dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54",
-"dd/dce/structSUNphi_1_1HasMember__refs.html#a9d69f71e51334d0b31ce987da172471a",
-"functions_p.html"
+"dc/d2f/structSUNphi_1_1NnarySmET.html#a3f5ed01aad92159a9e3c96cf87811f57",
+"dd/dca/classSUNphi_1_1Grid.html#afa574b761d7b14da4e5093ad3531b137",
+"functions_i.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

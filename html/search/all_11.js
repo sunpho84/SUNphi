@@ -9,7 +9,7 @@ var searchData=
   ['scalarwrap_2ehpp',['ScalarWrap.hpp',['../d9/d0c/ScalarWrap_8hpp.html',1,'']]],
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html',1,'SUNphi']]],
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html#aa462c7702af041273deda75d42a069c4',1,'SUNphi::ScalarWrapper']]],
-  ['scref',['ScRef',['../db/d12/classSUNphi_1_1ScalarWrapper.html#a09c2aa07f099d6abb253d2d4fd781435',1,'SUNphi::ScalarWrapper::ScRef()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#ad0493bf2b033d8403ee338d18ad84844',1,'SUNphi::ScalarWrapper::scRef()']]],
+  ['scref',['scRef',['../db/d12/classSUNphi_1_1ScalarWrapper.html#ad0493bf2b033d8403ee338d18ad84844',1,'SUNphi::ScalarWrapper::scRef()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#a09c2aa07f099d6abb253d2d4fd781435',1,'SUNphi::ScalarWrapper::ScRef()']]],
   ['setshiftbc',['setShiftBC',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['setsides',['setSides',['../dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54',1,'SUNphi::Grid']]],
   ['setvolume',['setVolume',['../dd/dca/classSUNphi_1_1Grid.html#ae26d5182f71a1f5dfe1edca74ed8a498',1,'SUNphi::Grid']]],
