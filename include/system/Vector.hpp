@@ -11,6 +11,7 @@
 #include <numeric>
 #include <vector>
 
+#include <math/Arithmetic.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
