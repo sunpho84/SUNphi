@@ -8,3 +8,6 @@ rm -fr \
     configure
 
 autoreconf --verbose --install --force
+
+mkdir -pv include/external
+wget -O include/external/inplace_function.h https://raw.githubusercontent.com/WG21-SG14/SG14/master/SG14/inplace_function.h

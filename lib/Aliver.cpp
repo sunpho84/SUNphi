@@ -8,6 +8,7 @@
 
 #include <gitInfo.hpp>
 #include <system/MpiImpl.hpp>
+#include <system/Threads.hpp>
 
 #ifndef CONFIG_TIME
  /// Null time
@@ -89,6 +90,10 @@ namespace SUNphi
     printVersionContacts();
     printGitInfo();
     printConfigurePars();
+    
+    ThreadPool threads;
+    
+    threads.loopDo(0,10,[](int i){std::cout<<i<<std::endl;});
   }
   
   /// Says bye bye
