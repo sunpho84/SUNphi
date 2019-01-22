@@ -149,6 +149,7 @@ var namespaceSUNphi =
     [ "TensComp", "d1/d96/structSUNphi_1_1TensComp.html", "d1/d96/structSUNphi_1_1TensComp" ],
     [ "TensKind", "d8/df8/classSUNphi_1_1TensKind.html", "d8/df8/classSUNphi_1_1TensKind" ],
     [ "TensStor", "d3/d22/classSUNphi_1_1TensStor.html", "d3/d22/classSUNphi_1_1TensStor" ],
+    [ "ThreadPool", "dc/d0f/classSUNphi_1_1ThreadPool.html", "dc/d0f/classSUNphi_1_1ThreadPool" ],
     [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
     [ "TwinTensCompOf", "d7/d08/structSUNphi_1_1TwinTensCompOf.html", null ],
     [ "TwinTensCompOf< Col >", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4" ],

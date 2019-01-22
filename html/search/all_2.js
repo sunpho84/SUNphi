@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['barrier',['Barrier',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html',1,'SUNphi::ThreadPool']]],
+  ['barrier',['barrier',['../dc/d0f/classSUNphi_1_1ThreadPool.html#af881134f9de317f85f8731ae5cc7fda6',1,'SUNphi::ThreadPool']]],
   ['baseadder',['BaseAdder',['../d6/d4b/structSUNphi_1_1BaseAdder.html',1,'SUNphi']]],
   ['baseassigner',['BaseAssigner',['../dd/d4a/structSUNphi_1_1BaseAssigner.html',1,'SUNphi']]],
   ['basebinarysmet',['BaseBinarySmET',['../d2/d98/structSUNphi_1_1BaseBinarySmET.html',1,'SUNphi']]],
@@ -23,8 +25,8 @@ var searchData=
   ['binarysmet_3c_20assigner_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['BinarySmET&lt; Assigner&lt; _Ref1, _Ref2 &gt; &gt;',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['bind',['bind',['../d3/dd7/namespaceSUNphi.html#a149981a35c9bfdd4bce95d3526bcde3e',1,'SUNphi']]],
   ['bind_2ehpp',['Bind.hpp',['../dc/de1/Bind_8hpp.html',1,'']]],
-  ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html',1,'SUNphi']]],
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html#a292fad679e538c338009b4ee1e954650',1,'SUNphi::Binder']]],
+  ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html',1,'SUNphi']]],
   ['binderinternaleval',['binderInternalEval',['../d6/db9/classSUNphi_1_1Binder.html#a51a9454d4d415055639fa28f2afd6655',1,'SUNphi::Binder']]],
   ['bitof',['bitOf',['../d3/dd7/namespaceSUNphi.html#a81cb061982d71eed06caa20d73bef24e',1,'SUNphi']]],
   ['bits_2ehpp',['Bits.hpp',['../df/d95/Bits_8hpp.html',1,'']]],

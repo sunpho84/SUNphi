@@ -40,11 +40,11 @@ var NAVTREEINDEX =
 "annotated.html",
 "d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c",
 "d4/d4b/classSUNphi_1_1Assigner.html#a60a84bec705258752a2754d652775f3b",
-"d6/da8/structSUNphi_1_1TensKind_1_1TensCompsListMerged.html",
-"d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a30a8ae28d689efcbb4535d0c9c163b8f",
-"dc/d5d/classSUNphi_1_1MulAdder.html#a343ed0cc50be2b6fa576f42973ecbfd8",
-"dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d",
-"functions_u.html"
+"d6/d8a/structSUNphi_1_1HasMember__isStoring.html#a26629612d2d8a5f06c0cd88f80acfba7",
+"d9/ddd/IntSeqGetEl_8hpp.html#a7a25b03ab4b8d8aa7fdb221ac3e43cd5",
+"dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54",
+"dd/dce/structSUNphi_1_1HasMember__refs.html#a9d69f71e51334d0b31ce987da172471a",
+"functions_p.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

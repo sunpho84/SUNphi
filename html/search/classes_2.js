@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['barrier',['Barrier',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html',1,'SUNphi::ThreadPool']]],
   ['baseadder',['BaseAdder',['../d6/d4b/structSUNphi_1_1BaseAdder.html',1,'SUNphi']]],
   ['baseassigner',['BaseAssigner',['../dd/d4a/structSUNphi_1_1BaseAssigner.html',1,'SUNphi']]],
   ['basebinarysmet',['BaseBinarySmET',['../d2/d98/structSUNphi_1_1BaseBinarySmET.html',1,'SUNphi']]],
