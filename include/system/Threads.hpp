@@ -38,7 +38,7 @@ namespace SUNphi
 	  pthread_barrier_wait(&barrier);
 	
 	if(rc!=0 and rc!=PTHREAD_BARRIER_SERIAL_THREAD)
-	  switch(rc)
+	  switch(errno)
 	    {
 	    case EINVAL:
 	      CRASH("The value specified by barrier does not refer to an initialized barrier object");
@@ -52,11 +52,8 @@ namespace SUNphi
       
       Barrier(const int& nThreads)
       {
-	const int rc=
-	  pthread_barrier_init(&barrier,nullptr,nThreads);
-	
-	if(rc!=0)
-	  switch(rc)
+	if(pthread_barrier_init(&barrier,nullptr,nThreads)!=0)
+	  switch(errno)
 	    {
 	    case EBUSY:
 	      CRASH("The implementation has detected an attempt to reinitialize a barrier while it is in use");
@@ -77,11 +74,8 @@ namespace SUNphi
       
       ~Barrier()
       {
-	const int rc=
-	  pthread_barrier_destroy(&barrier);
-	
-	if(rc!=0)
-	  switch(rc)
+	if(pthread_barrier_destroy(&barrier)!=0)
+	  switch(errno)
 	    {
 	    case EBUSY:
 	      CRASH("The implementation has detected an attempt to destroy a barrier while it is in use");
@@ -94,7 +88,7 @@ namespace SUNphi
 	    }
       }
       
-      void wait()
+      void sync()
       {
 	rawWait();
       }
@@ -105,7 +99,11 @@ namespace SUNphi
     static constexpr int MAX_POOL_FUNCTION_SIZE=
       128;
     
-    bool poolIsFilled{false};
+    /// States if the pool is waiting for work
+    bool isWaitingForWork{false};
+    
+    /// States if the pool is filled
+    bool isFilled{false};
     
     /// Type to encapsulate the work to be done
     using Work=
@@ -118,7 +116,35 @@ namespace SUNphi
     Work work;
     
     /// Incapsulate the threads
-    Vector<pthread_t> threads;
+    ///
+    /// At the beginning, the pool contains only the main thread, with
+    /// its id. Then when is filled, the pool contains the thread
+    /// identifier. This is an opaque number, which cannot serve the
+    /// purpose of getting the thread rank in the pool. This is why we define the next function
+    Vector<pthread_t> pool{1,pthread_self()};
+    
+    /// Get the rank of the current thread
+    int getThreadRank()
+      const
+    {
+      /// Current pthread
+      const pthread_t cur=
+	pthread_self();
+      
+      /// Position in the pool
+      int rank=
+	pool.findFirst(cur);
+      
+      // Check that the thread is found
+      if(rank==nActiveThreads())
+	CRASH("Unable to find cur thread",cur);
+      
+      return
+	rank;
+    }
+    
+    /// Number of threads
+    int nThreads;
     
     /// Barrier used by the threads
     Barrier barrier;
@@ -142,9 +168,17 @@ namespace SUNphi
       
       delete ptr;
       
-      pool.barrier.wait();
+      printf("Thread: %d %d, %lu %p\n",iThread,pool.getThreadRank(),pthread_self(),_ptr);
       
-      printf("Thread: %d, %lu %p\n",iThread,pthread_self(),_ptr);
+      pool.waitForWorktoDo();
+      
+      // tobefixed
+      // while(pool.isWaitingForWork)
+      // 	{
+      // 	  pool.waitForWorktoDo();
+	  
+      // 	  pool.work(iThread);
+      // 	};
       
       return
 	nullptr;
@@ -152,25 +186,27 @@ namespace SUNphi
     
     void fill(const pthread_attr_t* attr=nullptr)
     {
-      if(poolIsFilled)
+      if(isFilled)
 	CRASH("Cannot fill again the pool!");
       
-      poolIsFilled=
+      isFilled=
 	true;
       
-      for(int iThread=1;iThread<nThreads();iThread++)
+      isWaitingForWork=
+	true;
+      
+      pool.resize(nThreads);
+      
+      for(int iThread=1;iThread<nThreads;iThread++)
 	{
-	  std::cout<<"iThread spawned"<<std::endl;
+	  std::cout<<iThread<<" spawned"<<std::endl;
 	  // sleep(1);
 	  
 	  ThreadPars* pack=
 	    new ThreadPars{this,iThread};
 	  
-	  const int rc=
-	    pthread_create(&threads[iThread],attr,swim,pack);
-	  
-	  if(rc!=0)
-	    switch(rc)
+	  if(pthread_create(&pool[iThread],attr,swim,pack)!=0)
+	    switch(errno)
 	      {
 	      case EAGAIN:
 		CRASH("A system-imposed limit on the number of threads was encountered");
@@ -189,21 +225,21 @@ namespace SUNphi
     
     void empty()
     {
-      barrier.wait();
+      barrier.sync();
       
-      if(not poolIsFilled)
-	CRASH("Cannot empty an empty pool!");
-      
-      poolIsFilled=
+      isWaitingForWork=
 	false;
       
-      for(int iThread=1;iThread<nThreads();iThread++)
+      if(not isFilled)
+	CRASH("Cannot empty an empty pool!");
+      
+      isFilled=
+	false;
+      
+      for(int iThread=1;iThread<nThreads;iThread++)
 	{
-	  const int rc=
-	    pthread_join(threads[iThread],nullptr);
-	  
-	  if(rc!=0)
-	    switch(rc)
+	  if(pthread_join(pool[iThread],nullptr)!=0)
+	    switch(errno)
 	      {
 	      case EDEADLK:
 		CRASH("A deadlock was detected");
@@ -217,44 +253,74 @@ namespace SUNphi
 	      default:
 		CRASH("Other error");
 	      }
+	  
+	  std::cout<<iThread<<" destroyed"<<std::endl;
 	}
+      
+      pool.resize(1);
     }
     
   public:
     
-    decltype(threads)::Size nThreads()
+    int nActiveThreads()
       const
     {
       return
-	threads.size();
+	pool.size();
+    }
+    
+    void waitForWorktoDo()
+    {
+      barrier.sync();
+    }
+    
+    void raisePoolAttention()
+    {
+      barrier.sync();
+    }
+    
+    template <typename F>
+    void workOn(F f)
+    {
+      if(not isWaitingForWork)
+	CRASH("Trying to give work to not-waiting pool!");
+      
+      work=
+	f;
+      
+      isWaitingForWork=
+	false;
+      
+      raisePoolAttention();
+      
+      //f(iThread);
     }
     
     template <typename Size,
 	      typename F>
-    void loopDo(const Size& beg,const Size& end,F f)
+    void loopSplit(const Size& beg,
+		   const Size& end,
+		   F f)
     {
-      work=
-	[beg,end,nThreads=this->nThreads(),&f](int iThread)
-	{
-	  const Size threadLoad=
-	  (end-beg+nThreads-1)/nThreads;
-	  
-	  const Size threadBeg=
-	  threadLoad*iThread;
-	  
-	  const Size threadEnd=
-	  std::min(end,threadBeg+threadLoad);
-	  
-	  for(Size i=threadBeg;i<threadEnd;i++)
-	    f(i);
-	};
-      
+      workOn([beg,end,nPieces=this->nActiveThreads(),&f](int iThread)
+	     {
+	       const Size threadLoad=
+		 (end-beg+nPieces-1)/nPieces;
+	       
+	       const Size threadBeg=
+		 threadLoad*iThread;
+	       
+	       const Size threadEnd=
+		 std::min(end,threadBeg+threadLoad);
+	       
+	       for(Size i=threadBeg;i<threadEnd;i++)
+		 f(i);
+	     });
     }
     
     ThreadPool(int nThreads=std::thread::hardware_concurrency()) :
-      threads(nThreads),barrier(nThreads)
+      nThreads(nThreads),barrier(nThreads)
     {
-      threads.resize(nThreads);
       fill();
     }
     

@@ -93,7 +93,7 @@ namespace SUNphi
     
     ThreadPool threads;
     
-    threads.loopDo(0,10,[](int i){std::cout<<i<<std::endl;});
+    //threads.loopSplit(0,10,[](int i){std::cout<<i<<std::endl;});
   }
   
   /// Says bye bye
