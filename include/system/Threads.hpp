@@ -31,8 +31,12 @@ namespace SUNphi
       /// Raw pthread barrier
       pthread_barrier_t barrier;
       
+#ifdef DEBUG_MODE
+      
       /// Value used to check the barrier
-      int currentTag;
+      const char* currentTag;
+      
+#endif
       
       /// Raw synchronization, simply wait that all threads call this
       void rawSync()
@@ -101,18 +105,24 @@ namespace SUNphi
       }
       
       /// Synchronize checking the name of the barrier
-      void sync(const int& tag, ///< Value determining the tag
+      void sync(const char* tag, ///< Value determining the tag
 		const int& rank) ///< Rank used to check
       {
 	rawSync();
 	
+#ifdef DEBUG_MODE
+	
 	if(rank==masterRank)
-	  currentTag=tag;
+	  currentTag=
+	    tag;
 	
 	rawSync();
 	
 	if(currentTag!=tag)
 	  CRASH("Rank",rank,"was expecting",tag,"but",currentTag,"encountered");
+	
+#endif
+	
       }
     };
     
@@ -296,6 +306,7 @@ namespace SUNphi
 	}
     }
     
+    /// Stop the pool
     void doNotworkAnymore()
     {
       // Mark that the pool is not waiting any more for work
@@ -355,18 +366,20 @@ namespace SUNphi
 	pool.size();
     }
     
-    static constexpr int workAssignmentTag=
-			      6;
+    /// Tag to mark that assignment has been done
+    static constexpr char workAssignmentTag[]=
+      "WorkAssOrNoMoreWork";
     
-    static constexpr int workNoMoreTag=
-			      6;
+    /// Tag to mark that no more work has to be done
+    static constexpr auto& workNoMoreTag=
+      workAssignmentTag;
     
     /// Start the work for the other threads
     void tellThePoolWorkIsAssigned(const int& rank) ///< Thread rank
     {
       checkMasterOnly(rank);
       
-      printf("Thread %d is telling the pool that work has been assigned (tag: %d)\n",rank,workAssignmentTag);
+      printf("Thread %d is telling the pool that work has been assigned (tag: %s)\n",rank,workAssignmentTag);
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
@@ -381,7 +394,7 @@ namespace SUNphi
     {
       checkPoolOnly(rank);
       
-      printf("Thread %d is waiting the pool for work to be assigned (tag %d)\n",rank,workAssignmentTag);
+      printf("Thread %d is waiting the pool for work to be assigned (tag %s)\n",rank,workAssignmentTag);
       
       barrier.sync(workAssignmentTag,rank);
     }
@@ -394,7 +407,7 @@ namespace SUNphi
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      printf("Thread %d is telling the pool not to work any longer (tag: %d)\n",rank,workNoMoreTag);
+      printf("Thread %d is telling the pool not to work any longer (tag: %s)\n",rank,workNoMoreTag);
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -405,15 +418,16 @@ namespace SUNphi
       barrier.sync(workNoMoreTag,rank);
     }
     
-    static constexpr int workFinishedTag=
-			      7;
+    /// Tag to mark that the work is finished
+    static constexpr char workFinishedTag[]=
+      "WorkFinished";
     
     /// Waiting for work to be done means to synchronize with the master
     void tellTheMasterWorkIsFinished(const int& rank) ///< Thread rank
     {
       checkPoolOnly(rank);
       
-      printf("Thread %d has finished working (tag: %d)\n",rank,workFinishedTag);
+      printf("Thread %d has finished working (tag: %s)\n",rank,workFinishedTag);
       
       barrier.sync(workFinishedTag,rank);
     }
@@ -423,7 +437,7 @@ namespace SUNphi
     {
       checkMasterOnly(rank);
       
-      printf("Thread %d is waiting for work to be finished (tag: %d)\n",rank,workFinishedTag);
+      printf("Thread %d is waiting for work to be finished (tag: %s)\n",rank,workFinishedTag);
       
       // The master signals to the pool that he is waiting for the
       // pool to finish the work
