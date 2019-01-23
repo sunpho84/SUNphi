@@ -18,5 +18,5 @@ var searchData=
   ['sqr',['sqr',['../d3/dd7/namespaceSUNphi.html#a0eeddf88e05361ef8f44c0af72c11289',1,'SUNphi']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
   ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aeef0ef305514d94a5229b89d92da1787',1,'SUNphi::ThreadPool']]],
-  ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a2c3ca312b98ab4743f7fae80d2a97e8a',1,'SUNphi::ThreadPool::Barrier::sync(const int &amp;tag, const int &amp;rank)']]]
+  ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a9c4150f4dab9d747823c0f9cd6b0be8e',1,'SUNphi::ThreadPool::Barrier::sync(const char *tag, const int &amp;rank)']]]
 ];

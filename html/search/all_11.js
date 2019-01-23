@@ -84,6 +84,6 @@ var searchData=
   ['swallow_5fsemicolon_5fat_5fglobal_5fscope',['SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE',['../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d',1,'SwallowSemicolon.hpp']]],
   ['swallowsemicolon_2ehpp',['SwallowSemicolon.hpp',['../d5/d8c/SwallowSemicolon_8hpp.html',1,'']]],
   ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aeef0ef305514d94a5229b89d92da1787',1,'SUNphi::ThreadPool']]],
-  ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a2c3ca312b98ab4743f7fae80d2a97e8a',1,'SUNphi::ThreadPool::Barrier::sync(const int &amp;tag, const int &amp;rank)']]],
+  ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a9c4150f4dab9d747823c0f9cd6b0be8e',1,'SUNphi::ThreadPool::Barrier::sync(const char *tag, const int &amp;rank)']]],
   ['system_2ehpp',['System.hpp',['../d4/d25/System_8hpp.html',1,'']]]
 ];

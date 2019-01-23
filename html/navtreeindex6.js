@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"dd/dca/classSUNphi_1_1Grid.html#aa281541592b5700ce0d42d8757782fa3":[2,0,0,109,17],
 "dd/dca/classSUNphi_1_1Grid.html#aa7f208ab8cf437513f62856140b60c15":[2,0,0,109,22],
 "dd/dca/classSUNphi_1_1Grid.html#ab680ef17ae0414c8a5b0b9fd05f27455":[2,0,0,109,19],
 "dd/dca/classSUNphi_1_1Grid.html#abf782d6411839bd65ef3dc7dccb659c4":[2,0,0,109,7],
@@ -238,8 +237,8 @@ var NAVTREEINDEX6 =
 "functions_e.html":[2,3,0,5],
 "functions_enum.html":[2,3,4],
 "functions_f.html":[2,3,0,6],
-"functions_func.html":[2,3,1],
 "functions_func.html":[2,3,1,0],
+"functions_func.html":[2,3,1],
 "functions_func_0x7e.html":[2,3,1,20],
 "functions_func_a.html":[2,3,1,1],
 "functions_func_b.html":[2,3,1,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "functions_func_f.html":[2,3,1,6],
 "functions_func_g.html":[2,3,1,7],
 "functions_func_i.html":[2,3,1,8],
-"functions_func_l.html":[2,3,1,9]
+"functions_func_l.html":[2,3,1,9],
+"functions_func_m.html":[2,3,1,10]
 };

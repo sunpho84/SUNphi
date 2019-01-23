@@ -28,7 +28,7 @@ var classSUNphi_1_1ThreadPool =
     [ "nThreads", "dc/d0f/classSUNphi_1_1ThreadPool.html#ad19717e8f6b1c7290044b5798f050ed8", null ],
     [ "pool", "dc/d0f/classSUNphi_1_1ThreadPool.html#a8504f2782c082e9cf2bebf7ed253f012", null ],
     [ "work", "dc/d0f/classSUNphi_1_1ThreadPool.html#a1114074fdd5084501e3fcdccf04bfbc7", null ],
-    [ "workAssignmentTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#a3aac7a5210e0629bf8146bff26cfb67c", null ],
-    [ "workFinishedTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#ad6d41777912904a26c379caefe2defe6", null ],
-    [ "workNoMoreTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#a9e363c5637e2195604f7bb2175f3711c", null ]
+    [ "workAssignmentTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#a1740dac6da61d849ddf6865ffc1a2333", null ],
+    [ "workFinishedTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#add809f284da1259d01477bde24978664", null ],
+    [ "workNoMoreTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#accf11b8fc41036139d1aa8d495a2147e", null ]
 ];
