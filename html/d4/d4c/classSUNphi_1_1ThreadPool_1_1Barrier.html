@@ -131,8 +131,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a626b0fa366c181a5e4d85adc4d5f5b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05fca785db8229a7ea3eb74291a88c02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05fca785db8229a7ea3eb74291a88c02"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02">sync</a> ()</td></tr>
-<tr class="memdesc:a05fca785db8229a7ea3eb74291a88c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize, possibly checking the name of the barrier. <br /></td></tr>
+<tr class="memdesc:a05fca785db8229a7ea3eb74291a88c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize, without checking the name of the barrier. <br /></td></tr>
 <tr class="separator:a05fca785db8229a7ea3eb74291a88c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3ca312b98ab4743f7fae80d2a97e8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a2c3ca312b98ab4743f7fae80d2a97e8a">sync</a> (const int &amp;tag, const int &amp;rank)</td></tr>
+<tr class="memdesc:a2c3ca312b98ab4743f7fae80d2a97e8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize checking the name of the barrier.  <a href="#a2c3ca312b98ab4743f7fae80d2a97e8a">More...</a><br /></td></tr>
+<tr class="separator:a2c3ca312b98ab4743f7fae80d2a97e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -146,6 +149,10 @@ Private Attributes</h2></td></tr>
 pthread_barrier_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a69d39ac9779e789af0b7773c7ff0e9d6">barrier</a></td></tr>
 <tr class="memdesc:a69d39ac9779e789af0b7773c7ff0e9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw pthread barrier. <br /></td></tr>
 <tr class="separator:a69d39ac9779e789af0b7773c7ff0e9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e5fbe3529d448fe8c2c8b5d9a7b55a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5e5fbe3529d448fe8c2c8b5d9a7b55a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#ad5e5fbe3529d448fe8c2c8b5d9a7b55a">currentTag</a></td></tr>
+<tr class="memdesc:ad5e5fbe3529d448fe8c2c8b5d9a7b55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value used to check the barrier. <br /></td></tr>
+<tr class="separator:ad5e5fbe3529d448fe8c2c8b5d9a7b55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> for the pthread barrier functionality. </p>
@@ -182,7 +189,7 @@ pthread_barrier_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -211,7 +218,52 @@ pthread_barrier_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Raw synchronization, simply wait that all threads call this. </p>
 <p>Call the barrier and get the result </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c3ca312b98ab4743f7fae80d2a97e8a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::Barrier::sync </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Synchronize checking the name of the barrier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>Value determining the tag </td></tr>
+    <tr><td class="paramname">rank</td><td>Rank used to check </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00104">104</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>

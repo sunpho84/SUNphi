@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['raisepoolattention',['raisePoolAttention',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a72d92a9e5d88ea7713b4d8d4d7f563c6',1,'SUNphi::ThreadPool']]],
   ['rank',['rank',['../d8/d6a/Mpi_8hpp.html#a6266039990f1db4189b8556668e71d05',1,'SUNphi::Mpi']]],
   ['rawsync',['rawSync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a6ee1de51f2e1887a4fed4df5367ac29e',1,'SUNphi::ThreadPool::Barrier']]],
   ['real',['real',['../d3/dd7/namespaceSUNphi.html#aa80c945a2eb32b4469fab34303a28000',1,'SUNphi']]],

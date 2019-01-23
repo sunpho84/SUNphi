@@ -2,6 +2,8 @@ var searchData=
 [
   ['canbefactorofsimdvector',['canBeFactorOfSIMDVector',['../d3/dd7/namespaceSUNphi.html#aaea3412d741b6e8789dc707f3c554b50',1,'SUNphi']]],
   ['canbesizeofsimdvector',['canBeSizeOfSIMDVector',['../d3/dd7/namespaceSUNphi.html#a51a19a9535fb9c3814c5cc55ece63f8f',1,'SUNphi']]],
+  ['checkmasteronly',['checkMasterOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aae6660d93324a938fdd303f5e3c2718d',1,'SUNphi::ThreadPool']]],
+  ['checkpoolonly',['checkPoolOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a4e03c56f0482488658c45b75d6ac52a7',1,'SUNphi::ThreadPool']]],
   ['cncol',['cnCol',['../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
   ['col',['col',['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi']]],

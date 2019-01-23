@@ -23,9 +23,11 @@ var NAVTREEINDEX2 =
 "d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html":[2,0,0,149,0],
 "d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02":[2,0,0,149,0,3],
 "d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a23128656f2a78c476c0c4adf612232f8":[2,0,0,149,0,0],
+"d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a2c3ca312b98ab4743f7fae80d2a97e8a":[2,0,0,149,0,4],
 "d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a626b0fa366c181a5e4d85adc4d5f5b13":[2,0,0,149,0,1],
-"d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a69d39ac9779e789af0b7773c7ff0e9d6":[2,0,0,149,0,4],
+"d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a69d39ac9779e789af0b7773c7ff0e9d6":[2,0,0,149,0,5],
 "d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a6ee1de51f2e1887a4fed4df5367ac29e":[2,0,0,149,0,2],
+"d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#ad5e5fbe3529d448fe8c2c8b5d9a7b55a":[2,0,0,149,0,6],
 "d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html":[2,0,0,126,0],
 "d4/d63/structSUNphi_1_1ConstrainHasMember__isAssignable.html":[2,0,0,88],
 "d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,147,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "d6/d62/structSUNphi_1_1ConstrainAreTransposers.html":[2,0,0,79],
 "d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html":[2,0,0,100],
 "d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html#a71a3b7bed7292fc0992fec1b26688bfd":[2,0,0,100,0],
-"d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html":[2,0,0,121,2],
-"d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html#ad78807a235b996f6edd15ede3c37de9b":[2,0,0,121,2,0],
-"d6/d8a/structSUNphi_1_1HasMember__isStoring.html":[2,0,0,123]
+"d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html":[2,0,0,121,2]
 };

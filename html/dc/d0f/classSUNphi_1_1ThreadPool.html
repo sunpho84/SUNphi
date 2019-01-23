@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('dc/d0f/classSUNphi_1_1ThreadPool.html'
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
@@ -138,14 +139,21 @@ Public Member Functions</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a8c4916b9a131806c552fb1f20fe6946c">nActiveThreads</a> () const </td></tr>
 <tr class="memdesc:a8c4916b9a131806c552fb1f20fe6946c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of allocated threads. <br /></td></tr>
 <tr class="separator:a8c4916b9a131806c552fb1f20fe6946c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a323ac9c60092a54831914602c52cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29a323ac9c60092a54831914602c52cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a29a323ac9c60092a54831914602c52cd">waitForWorktoDo</a> ()</td></tr>
-<tr class="memdesc:a29a323ac9c60092a54831914602c52cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting for work to be done means to synchronize with the master. <br /></td></tr>
-<tr class="separator:a29a323ac9c60092a54831914602c52cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72d92a9e5d88ea7713b4d8d4d7f563c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72d92a9e5d88ea7713b4d8d4d7f563c6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a72d92a9e5d88ea7713b4d8d4d7f563c6">raisePoolAttention</a> ()</td></tr>
-<tr class="memdesc:a72d92a9e5d88ea7713b4d8d4d7f563c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The master signals to the pool to start work by synchronizing with it. <br /></td></tr>
-<tr class="separator:a72d92a9e5d88ea7713b4d8d4d7f563c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9081f8bc48d7e0054f7a0125a042c36b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a9081f8bc48d7e0054f7a0125a042c36b">tellThePoolWorkIsAssigned</a> (const int &amp;rank)</td></tr>
+<tr class="memdesc:a9081f8bc48d7e0054f7a0125a042c36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the work for the other threads.  <a href="#a9081f8bc48d7e0054f7a0125a042c36b">More...</a><br /></td></tr>
+<tr class="separator:a9081f8bc48d7e0054f7a0125a042c36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7a8895ca9421bbd0051245c6e2c78c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#adf7a8895ca9421bbd0051245c6e2c78c">waitForWorkToBeAssigned</a> (const int &amp;rank)</td></tr>
+<tr class="memdesc:adf7a8895ca9421bbd0051245c6e2c78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting for work to be done means to synchronize with the master.  <a href="#adf7a8895ca9421bbd0051245c6e2c78c">More...</a><br /></td></tr>
+<tr class="separator:adf7a8895ca9421bbd0051245c6e2c78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2569a7de663cd1365bdbf28f03b79185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a2569a7de663cd1365bdbf28f03b79185">tellThePoolNotToWorkAnyLonger</a> (const int &amp;rank)</td></tr>
+<tr class="memdesc:a2569a7de663cd1365bdbf28f03b79185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the pool from working.  <a href="#a2569a7de663cd1365bdbf28f03b79185">More...</a><br /></td></tr>
+<tr class="separator:a2569a7de663cd1365bdbf28f03b79185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41aaa88dec91263b8d65771949c481f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a41aaa88dec91263b8d65771949c481f3">tellTheMasterWorkIsFinished</a> (const int &amp;rank)</td></tr>
+<tr class="memdesc:a41aaa88dec91263b8d65771949c481f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting for work to be done means to synchronize with the master.  <a href="#a41aaa88dec91263b8d65771949c481f3">More...</a><br /></td></tr>
+<tr class="separator:a41aaa88dec91263b8d65771949c481f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38ddd9750d76390483a3703318719b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#af38ddd9750d76390483a3703318719b1">waitForPoolToFinishAssignedWork</a> (const int &amp;rank)</td></tr>
+<tr class="memdesc:af38ddd9750d76390483a3703318719b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait that the work assigned to the pool is finished.  <a href="#af38ddd9750d76390483a3703318719b1">More...</a><br /></td></tr>
+<tr class="separator:af38ddd9750d76390483a3703318719b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#aab9a93c9ad43c1f5e50c77e2235d47de">workOn</a> (F f)</td></tr>
 <tr class="separator:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +170,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memdesc:ab71d1a2b41072f8019ea3361dcc69e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor emptying the pool. <br /></td></tr>
 <tr class="separator:ab71d1a2b41072f8019ea3361dcc69e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a3aac7a5210e0629bf8146bff26cfb67c"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>workAssignmentTag</b></td></tr>
+<tr class="separator:a3aac7a5210e0629bf8146bff26cfb67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e363c5637e2195604f7bb2175f3711c"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>workNoMoreTag</b></td></tr>
+<tr class="separator:a9e363c5637e2195604f7bb2175f3711c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d41777912904a26c379caefe2defe6"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>workFinishedTag</b></td></tr>
+<tr class="separator:ad6d41777912904a26c379caefe2defe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr class="memitem:a965834421c128261b4ed2e9f43809cea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a965834421c128261b4ed2e9f43809cea"></a>
@@ -170,7 +187,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 <tr class="separator:a965834421c128261b4ed2e9f43809cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8687c077aaa69d4702e79e28a38db2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff8687c077aaa69d4702e79e28a38db2"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#aff8687c077aaa69d4702e79e28a38db2">ThreadPars</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; <a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html">ThreadPool</a> *, int &gt;</td></tr>
-<tr class="memdesc:aff8687c077aaa69d4702e79e28a38db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair of parameters containing the threadpool and the thread id. <br /></td></tr>
+<tr class="memdesc:aff8687c077aaa69d4702e79e28a38db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pair of parameters containing the threadpool and the thread rank. <br /></td></tr>
 <tr class="separator:aff8687c077aaa69d4702e79e28a38db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -178,12 +195,22 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a2dd69220be9e1c273102b1c48b5d3d0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a2dd69220be9e1c273102b1c48b5d3d0a">getThreadRank</a> () const </td></tr>
 <tr class="memdesc:a2dd69220be9e1c273102b1c48b5d3d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the rank of the current thread.  <a href="#a2dd69220be9e1c273102b1c48b5d3d0a">More...</a><br /></td></tr>
 <tr class="separator:a2dd69220be9e1c273102b1c48b5d3d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e03c56f0482488658c45b75d6ac52a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e03c56f0482488658c45b75d6ac52a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a4e03c56f0482488658c45b75d6ac52a7">checkPoolOnly</a> (const int &amp;rank) const </td></tr>
+<tr class="memdesc:a4e03c56f0482488658c45b75d6ac52a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that only the pool is accessing to a checkpoint. <br /></td></tr>
+<tr class="separator:a4e03c56f0482488658c45b75d6ac52a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6660d93324a938fdd303f5e3c2718d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae6660d93324a938fdd303f5e3c2718d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#aae6660d93324a938fdd303f5e3c2718d">checkMasterOnly</a> (const int &amp;rank) const </td></tr>
+<tr class="memdesc:aae6660d93324a938fdd303f5e3c2718d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that only the master thread is accessing to a checkpoint. <br /></td></tr>
+<tr class="separator:aae6660d93324a938fdd303f5e3c2718d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e283d975c87a544291a9b90bd8429d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a87e283d975c87a544291a9b90bd8429d">fill</a> (const pthread_attr_t *attr=nullptr)</td></tr>
 <tr class="memdesc:a87e283d975c87a544291a9b90bd8429d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the pool with the number of thread assigned.  <a href="#a87e283d975c87a544291a9b90bd8429d">More...</a><br /></td></tr>
 <tr class="separator:a87e283d975c87a544291a9b90bd8429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad52f981d1ec94e116c7fb20f39ff43be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad52f981d1ec94e116c7fb20f39ff43be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#ad52f981d1ec94e116c7fb20f39ff43be">empty</a> ()</td></tr>
-<tr class="memdesc:ad52f981d1ec94e116c7fb20f39ff43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty the thread pool. <br /></td></tr>
+<tr class="memitem:ae18f42a38281f76eec04dd220277a946"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae18f42a38281f76eec04dd220277a946"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>doNotworkAnymore</b> ()</td></tr>
+<tr class="separator:ae18f42a38281f76eec04dd220277a946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52f981d1ec94e116c7fb20f39ff43be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#ad52f981d1ec94e116c7fb20f39ff43be">empty</a> ()</td></tr>
+<tr class="memdesc:ad52f981d1ec94e116c7fb20f39ff43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty the thread pool.  <a href="#ad52f981d1ec94e116c7fb20f39ff43be">More...</a><br /></td></tr>
 <tr class="separator:ad52f981d1ec94e116c7fb20f39ff43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
@@ -219,12 +246,43 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a51d6117f20ebc88c611f5b6e584ab7b9"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a51d6117f20ebc88c611f5b6e584ab7b9">MAX_POOL_FUNCTION_SIZE</a></td></tr>
 <tr class="memdesc:a51d6117f20ebc88c611f5b6e584ab7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal size of the stack used for thw work.  <a href="#a51d6117f20ebc88c611f5b6e584ab7b9">More...</a><br /></td></tr>
 <tr class="separator:a51d6117f20ebc88c611f5b6e584ab7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a26db1b80c3ecb4a1dbba41c8fde13"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a46a26db1b80c3ecb4a1dbba41c8fde13">masterRank</a></td></tr>
+<tr class="memdesc:a46a26db1b80c3ecb4a1dbba41c8fde13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank of master thread.  <a href="#a46a26db1b80c3ecb4a1dbba41c8fde13">More...</a><br /></td></tr>
+<tr class="separator:a46a26db1b80c3ecb4a1dbba41c8fde13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains a thread pool. </p>
 
 <p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad52f981d1ec94e116c7fb20f39ff43be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Empty the thread pool. </p>
+<p>Stop the pool from working </p>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00310">310</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a87e283d975c87a544291a9b90bd8429d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -255,7 +313,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00206">206</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00256">256</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +342,7 @@ Static Private Attributes</h2></td></tr>
 <p>Current pthread</p>
 <p>Position in the pool </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,12 +394,12 @@ template&lt;typename Size , typename F &gt; </div>
   <table class="params">
     <tr><td class="paramname">beg</td><td>Beginning of the loop </td></tr>
     <tr><td class="paramname">end</td><td>End of the loop </td></tr>
-    <tr><td class="paramname">f</td><td>Function to be called </td></tr>
+    <tr><td class="paramname">f</td><td>Function to be called, accepting two integers: the first is the thread rank, the second the loop argument </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00342">342</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00464">464</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,12 +425,13 @@ template&lt;typename Size , typename F &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Function called when starting a thread</p>
-<p>When called, get the thread pool and the thread id as arguments through the function parameter. This is expcted to be allocated outside through a <code>new</code> call, so it is deleted after taking reference to the pool, and checking the thread id.</p>
+<p>When called, get the thread pool and the thread rank as arguments through the function parameter. This is expcted to be allocated outside through a <code>new</code> call, so it is deleted after taking reference to the pool, and checking the thread rank.</p>
 <p>All threads but the master one swim in this pool back and forth, waiting for job to be done. </p>
 <p>Cast the <code>void</code> pointer to the tuple</p>
 <p>Takes a reference to the parameters</p>
 <p>Takes a reference to the pool</p>
-<p>Copy the thread id </p>
+<p>Copy the thread rank</p>
+<p>Work until asked to empty </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_ptr</td><td>Initialization data </td></tr>
@@ -380,7 +439,177 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00206">206</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41aaa88dec91263b8d65771949c481f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::tellTheMasterWorkIsFinished </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Waiting for work to be done means to synchronize with the master. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rank</td><td>Thread rank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00412">412</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2569a7de663cd1365bdbf28f03b79185"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::tellThePoolNotToWorkAnyLonger </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stop the pool from working. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rank</td><td>Thread rank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00390">390</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9081f8bc48d7e0054f7a0125a042c36b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::tellThePoolWorkIsAssigned </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start the work for the other threads. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rank</td><td>Thread rank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00365">365</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af38ddd9750d76390483a3703318719b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::waitForPoolToFinishAssignedWork </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wait that the work assigned to the pool is finished. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rank</td><td>Thread rank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00422">422</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf7a8895ca9421bbd0051245c6e2c78c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::ThreadPool::waitForWorkToBeAssigned </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>rank</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Waiting for work to be done means to synchronize with the master. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rank</td><td>Thread rank </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00380">380</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -408,7 +637,7 @@ template&lt;typename F &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Gives to all threads some work to be done</p>
-<p>The object <code>f</code> must be callable, returning void and getting an integer as a parameter, representing the thread id </p>
+<p>The object <code>f</code> must be callable, returning void and getting an integer as a parameter, representing the thread rank </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td>Function embedding the work </td></tr>
@@ -416,11 +645,35 @@ template&lt;typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00319">319</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00442">442</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a46a26db1b80c3ecb4a1dbba41c8fde13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::ThreadPool::masterRank</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      0</div></div><!-- fragment -->
+<p>Rank of master thread. </p>
+
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00130">130</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a51d6117f20ebc88c611f5b6e584ab7b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +694,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      128</div></div><!-- fragment -->
 <p>Maximal size of the stack used for thw work. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00120">120</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +718,7 @@ template&lt;typename F &gt; </div>
 <p>Incapsulate the threads</p>
 <p>At the beginning, the pool contains only the main thread, with its id. Then when is filled, the pool contains the thread identifier. This is an opaque number, which cannot serve the purpose of getting the thread rank in the pool. This is why we define the next function </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00128">128</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -489,7 +742,73 @@ template&lt;typename F &gt; </div>
 <p>Work to be done in the pool</p>
 <p>This incapsulates a function returning void, and getting an integer as an argument, corresponding to the thread </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00120">120</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3aac7a5210e0629bf8146bff26cfb67c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::ThreadPool::workAssignmentTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">                  6</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00358">358</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6d41777912904a26c379caefe2defe6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::ThreadPool::workFinishedTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">                  7</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00408">408</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e363c5637e2195604f7bb2175f3711c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SUNphi::ThreadPool::workNoMoreTag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">                  6</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00361">361</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
