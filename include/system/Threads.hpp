@@ -15,9 +15,6 @@
  #include <thread>
 #endif
 
-#include <cstdio>
-#include <unistd.h>
-
 #include <external/inplace_function.h>
 #include <Tuple.hpp>
 #include <system/Debug.hpp>
@@ -25,15 +22,19 @@
 
 namespace SUNphi
 {
+  /// Contains a thread pool
   class ThreadPool
   {
     /// Wrapper for the pthread barrier functionality
     class Barrier
     {
+      /// Raw pthread barrier
       pthread_barrier_t barrier;
       
-      void rawWait()
+      /// Raw synchronization, simply wait that all threads call this
+      void rawSync()
       {
+	/// Call the barrier and get the result
 	const int rc=
 	  pthread_barrier_wait(&barrier);
 	
@@ -50,7 +51,8 @@ namespace SUNphi
       
     public:
       
-      Barrier(const int& nThreads)
+      ///Build the barrier for \c nThreads threads
+      Barrier(const int& nThreads) ///< Number of threads for which the barrier is defined
       {
 	if(pthread_barrier_init(&barrier,nullptr,nThreads)!=0)
 	  switch(errno)
@@ -72,6 +74,7 @@ namespace SUNphi
 	    }
       }
       
+      /// Destroys the barrier
       ~Barrier()
       {
 	if(pthread_barrier_destroy(&barrier)!=0)
@@ -88,9 +91,10 @@ namespace SUNphi
 	    }
       }
       
+      /// Synchronize, possibly checking the name of the barrier
       void sync()
       {
-	rawWait();
+	rawSync();
       }
       
     };
@@ -109,7 +113,7 @@ namespace SUNphi
     using Work=
       stdext::inplace_function<void(int),MAX_POOL_FUNCTION_SIZE>;
     
-    /// Work to be done
+    /// Work to be done in the pool
     ///
     /// This incapsulates a function returning void, and getting an
     /// integer as an argument, corresponding to the thread
@@ -149,20 +153,34 @@ namespace SUNphi
     /// Barrier used by the threads
     Barrier barrier;
     
+    /// Pair of parameters containing the threadpool and the thread id
     using ThreadPars=
       Tuple<ThreadPool*,int>;
     
-    static void* swim(void* _ptr)
+    /// Function called when starting a thread
+    ///
+    /// When called, get the thread pool and the thread id as
+    /// arguments through the function parameter. This is expcted to
+    /// be allocated outside through a \c new call, so it is deleted
+    /// after taking reference to the pool, and checking the thread id.
+    ///
+    /// All threads but the master one swim in this pool back and forth,
+    /// waiting for job to be done.
+    static void* swim(void* _ptr) ///< Initialization data
     {
+      /// Cast the \c void pointer to the tuple
       ThreadPars* ptr=
 	static_cast<ThreadPars*>(_ptr);
       
+      /// Takes a reference to the parameters
       ThreadPars& pars=
 	*ptr;
       
+      /// Takes a reference to the pool
       ThreadPool& pool=
 	*get<0>(pars);
       
+      /// Copy the thread id
       int iThread=
 	get<1>(pars);
       
@@ -184,28 +202,33 @@ namespace SUNphi
 	nullptr;
     }
     
-    void fill(const pthread_attr_t* attr=nullptr)
+    /// Fill the pool with the number of thread assigned
+    void fill(const pthread_attr_t* attr=nullptr) ///< Possible attributes of the threads
     {
+      // Checks that the pool is not filled
       if(isFilled)
 	CRASH("Cannot fill again the pool!");
       
+      // Marks the pool as filled
       isFilled=
 	true;
       
+      // Marks the pool is waiting for job to be done
       isWaitingForWork=
 	true;
       
+      // Resize the pool to contain all threads
       pool.resize(nThreads);
       
       for(int iThread=1;iThread<nThreads;iThread++)
 	{
 	  std::cout<<iThread<<" spawned"<<std::endl;
-	  // sleep(1);
 	  
-	  ThreadPars* pack=
+	  // Allocates the parameters of the thread
+	  ThreadPars* pars=
 	    new ThreadPars{this,iThread};
 	  
-	  if(pthread_create(&pool[iThread],attr,swim,pack)!=0)
+	  if(pthread_create(&pool[iThread],attr,swim,pars)!=0)
 	    switch(errno)
 	      {
 	      case EAGAIN:
@@ -223,17 +246,22 @@ namespace SUNphi
 	}
     }
     
+    /// Empty the thread pool
     void empty()
     {
-      barrier.sync();
-      
-      isWaitingForWork=
-	false;
-      
+      // Check that the pool is not empty
       if(not isFilled)
 	CRASH("Cannot empty an empty pool!");
       
+      // Mark that the pool is not filled
       isFilled=
+	false;
+      
+      // Temporary name to force the other threads go out of the pool
+      barrier.sync();
+      
+      // Mark that the pool is not waiting any more for work
+      isWaitingForWork=
 	false;
       
       for(int iThread=1;iThread<nThreads;iThread++)
@@ -257,11 +285,13 @@ namespace SUNphi
 	  std::cout<<iThread<<" destroyed"<<std::endl;
 	}
       
+      // Resize down the pool
       pool.resize(1);
     }
     
   public:
     
+    /// Gets the number of allocated threads
     int nActiveThreads()
       const
     {
@@ -269,47 +299,61 @@ namespace SUNphi
 	pool.size();
     }
     
+    /// Waiting for work to be done means to synchronize with the master
     void waitForWorktoDo()
     {
       barrier.sync();
     }
     
+    /// The master signals to the pool to start work by synchronizing with it
     void raisePoolAttention()
     {
       barrier.sync();
     }
     
+    /// Gives to all threads some work to be done
+    ///
+    /// The object \c f must be callable, returning void and getting
+    /// an integer as a parameter, representing the thread id
     template <typename F>
-    void workOn(F f)
+    void workOn(F f) ///< Function embedding the work
     {
+      // Check that the pool is waiting for work
       if(not isWaitingForWork)
 	CRASH("Trying to give work to not-waiting pool!");
       
+      // Store the work
       work=
 	f;
       
+      // Mark that the pool is not waiting for job to be done
       isWaitingForWork=
 	false;
       
+      // Set off the other threads
       raisePoolAttention();
       
       //f(iThread);
     }
     
-    template <typename Size,
-	      typename F>
-    void loopSplit(const Size& beg,
-		   const Size& end,
-		   F f)
+    /// Split a loop into \c nTrheads chunks, giving each chunk as a work for a corresponding thread
+    template <typename Size,           // Type for the range of the loop
+	      typename F>              // Type for the work function
+    void loopSplit(const Size& beg,  ///< Beginning of the loop
+		   const Size& end,  ///< End of the loop
+		   F f)              ///< Function to be called
     {
       workOn([beg,end,nPieces=this->nActiveThreads(),&f](int iThread)
 	     {
+	       /// Workload for each thread, taking into account the remainder
 	       const Size threadLoad=
 		 (end-beg+nPieces-1)/nPieces;
 	       
+	       /// Beginning of the chunk
 	       const Size threadBeg=
 		 threadLoad*iThread;
 	       
+	       /// End of the chunk
 	       const Size threadEnd=
 		 std::min(end,threadBeg+threadLoad);
 	       
@@ -318,12 +362,14 @@ namespace SUNphi
 	     });
     }
     
+    /// Constructor starting the thread pool with a given number of threads
     ThreadPool(int nThreads=std::thread::hardware_concurrency()) :
       nThreads(nThreads),barrier(nThreads)
     {
       fill();
     }
     
+    /// Destructor emptying the pool
     ~ThreadPool()
     {
       std::cout<<"Want to destroy"<<std::endl;

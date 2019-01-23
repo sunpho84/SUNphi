@@ -37,7 +37,7 @@ Makefile.in
 /config/install-sh
 /config/missing
 build*
-/include/config.hpp.in
+/include/config.hpp.in*
 /compile_commands.json
 /Makefile
 /GPATH
