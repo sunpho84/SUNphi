@@ -83,5 +83,7 @@ var searchData=
   ['swallow_5fsemicolon_5fat_5fclass_5fscope',['SWALLOW_SEMICOLON_AT_CLASS_SCOPE',['../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0',1,'SwallowSemicolon.hpp']]],
   ['swallow_5fsemicolon_5fat_5fglobal_5fscope',['SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE',['../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d',1,'SwallowSemicolon.hpp']]],
   ['swallowsemicolon_2ehpp',['SwallowSemicolon.hpp',['../d5/d8c/SwallowSemicolon_8hpp.html',1,'']]],
+  ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aeef0ef305514d94a5229b89d92da1787',1,'SUNphi::ThreadPool']]],
+  ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier']]],
   ['system_2ehpp',['System.hpp',['../d4/d25/System_8hpp.html',1,'']]]
 ];
