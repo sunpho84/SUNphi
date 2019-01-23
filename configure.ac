@@ -34,6 +34,24 @@ AC_MSG_RESULT([with C++ MPI preprocessor options... $MPI_CXXFLAGS])
 AC_MSG_RESULT([with C++ MPI link options... $MPI_CXXLDFLAGS])
 AC_MSG_RESULT([with C++ MPI libs... $MPI_CXXLIBS])
 
+# Debug or not
+AX_SIMPLE_ENABLE([debug],[no],[Enable debug mode (strip all optimization, add -O0 -g)])
+if test "$enable_debug" == "yes"
+then
+  changequote({,})
+  remove_flags='s|-O[0-9s]*||g;s|-g[0-9]*||g'
+
+  CFLAGS=`echo "$CFLAGS"|sed -e $remove_flags`
+  CPPFLAGS=`echo "$CPPFLAGS"|sed -e $remove_flags`
+  CXXFLAGS=`echo "$CXXFLAGS"|sed -e $remove_flags`
+
+  CPPFLAGS="$CPPFLAGS -g -O0"
+  
+  changequote([,])
+  
+  AC_DEFINE([DEBUG_MODE],1,[Enable debug mode])
+fi
+
 # Check if we enable MPI
 AX_SIMPLE_ENABLE([MPI],[$have_CXX_mpi],[Enable MPI])
 if test "$enable_MPI" == "yes"
