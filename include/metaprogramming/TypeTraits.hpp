@@ -12,6 +12,8 @@
 
 #include <type_traits>
 
+#include <metaprogramming/SwallowSemicolon.hpp>
+
 namespace SUNphi
 {
   /// A bool constant type holding value "true"
@@ -336,7 +338,8 @@ namespace SUNphi
   template <typename...Ts> /* Type of all arguments                  */	\
   DECLAUTO NAME(Ts&&...ts) /*!< Arguments                            */	\
   {									\
-    return CALL_CLASS_CONST_METHOD_REMOVING_CONST(NAME(forw<Ts>(ts)...)); \
+    return								\
+      CALL_CLASS_CONST_METHOD_REMOVING_CONST(NAME(forw<Ts>(ts)...));	\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
