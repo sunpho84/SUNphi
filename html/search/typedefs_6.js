@@ -4,6 +4,7 @@ var searchData=
   ['insertintseqinorderedintseq',['InsertIntSeqInOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a6e1cffd48f2496f1acae56b7de775ef9',1,'SUNphi']]],
   ['inserttruetwinnedpos',['InsertTrueTwinnedPos',['../d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68',1,'SUNphi::TensKind']]],
   ['inserttruetwinnedposoftuple',['InsertTrueTwinnedPosOfTuple',['../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a',1,'SUNphi']]],
+  ['instant',['Instant',['../d3/dd7/namespaceSUNphi.html#a75d696e3b4708391d314bca82abbe472',1,'SUNphi']]],
   ['intseqcat',['IntSeqCat',['../d3/dd7/namespaceSUNphi.html#a8f2d962267db9817082a1738769b7e39',1,'SUNphi']]],
   ['intseqfilter',['IntSeqFilter',['../d3/dd7/namespaceSUNphi.html#ae60031ca05f637ebafadef8570b5d931',1,'SUNphi']]],
   ['intseqfirstn',['IntSeqFirstN',['../d3/dd7/namespaceSUNphi.html#a0a9b8c90e309f5bde54d2b81863a5177',1,'SUNphi']]],

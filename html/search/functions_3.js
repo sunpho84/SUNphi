@@ -19,5 +19,8 @@ var searchData=
   ['count',['count',['../db/d2f/classSUNphi_1_1SingleInstance.html#a3234cb342404a4bbbe61ce2a155faf3b',1,'SUNphi::SingleInstance']]],
   ['crashifinstancesexists',['crashIfInstancesExists',['../db/d2f/classSUNphi_1_1SingleInstance.html#a2371bd4f6f40f040af917b32c17dd587',1,'SUNphi::SingleInstance']]],
   ['crashonerror',['crashOnError',['../d8/d6a/Mpi_8hpp.html#a97469bf3c68db84a9866dfefb6f5388c',1,'SUNphi::Mpi']]],
-  ['curcombo',['curCombo',['../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e',1,'SUNphi::Combinatorial']]]
+  ['cstring',['cString',['../d3/dd7/namespaceSUNphi.html#a9bef329ab1e417fc38ce15db59027624',1,'SUNphi::cString(const char *in)'],['../d3/dd7/namespaceSUNphi.html#a209d82c3897d63fd48add4ada6abb8ce',1,'SUNphi::cString(const std::string &amp;in)']]],
+  ['cumulativemeasure',['cumulativeMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a8730f74ff7d2d34611c44f4a00c610da',1,'SUNphi::Timer']]],
+  ['curcombo',['curCombo',['../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e',1,'SUNphi::Combinatorial']]],
+  ['currentmeasure',['currentMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a7c3cbd6f70491b9fb0c21ff42fc2d23a',1,'SUNphi::Timer']]]
 ];

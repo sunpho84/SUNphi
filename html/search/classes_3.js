@@ -67,5 +67,6 @@ var searchData=
   ['constrainntypes',['ConstrainNTypes',['../d8/d4a/structSUNphi_1_1ConstrainNTypes.html',1,'SUNphi']]],
   ['constraintuplehasnottype',['ConstrainTupleHasNotType',['../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html',1,'SUNphi']]],
   ['constraintuplehastype',['ConstrainTupleHasType',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
-  ['constraintupletypesarealldifferent',['ConstrainTupleTypesAreAllDifferent',['../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html',1,'SUNphi']]]
+  ['constraintupletypesarealldifferent',['ConstrainTupleTypesAreAllDifferent',['../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html',1,'SUNphi']]],
+  ['cstringcomparer',['CStringComparer',['../d7/dcb/structSUNphi_1_1CStringComparer.html',1,'SUNphi']]]
 ];

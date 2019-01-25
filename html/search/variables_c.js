@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback']]],
+  ['name',['name',['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()']]],
   ['ncn_5fcol',['NCN_Col',['../d3/dd7/namespaceSUNphi.html#a37b64c0a12ba1ed70d40a9cd81b76d25',1,'SUNphi']]],
   ['ncn_5fspin',['NCN_Spin',['../d3/dd7/namespaceSUNphi.html#a6da8f6f82d5819d1a6ed09ea9cf2b883',1,'SUNphi']]],
   ['ncol',['NCOL',['../d3/dd7/namespaceSUNphi.html#aeea08fdb768379f4f657584f4f0ab64d',1,'SUNphi']]],
@@ -14,8 +14,10 @@ var searchData=
   ['neighsofpointshashtable',['neighsOfPointsHashTable',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a5952e344d8419da316b44a25e09a1d08',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['nestedidyn',['nestedIDyn',['../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#ada8aae86eb54ca5a30e70ac1cfa4c5a9',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;']]],
   ['nmaxperslot',['nMaxPerSlot',['../de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db',1,'SUNphi::Combinatorial']]],
+  ['nmeasures',['nMeasures',['../d6/de9/classSUNphi_1_1Timer.html#a7c9b8d31306d7d7cae0369f57482f6c6',1,'SUNphi::Timer']]],
   ['nntc1',['NNTC1',['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a3aeb01b547f4f8c3df2691bdb61c1bc2',1,'SUNphi::_RelBindInternalChecks']]],
   ['nntc2',['NNTC2',['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a2d7817e3790c9af0baec029cf6c6eddf',1,'SUNphi::_RelBindInternalChecks']]],
+  ['no_5ffather',['NO_FATHER',['../d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4',1,'SUNphi::Timer']]],
   ['nobj',['nObj',['../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382',1,'SUNphi::Combinatorial']]],
   ['noftypeintuple',['nOfTypeInTuple',['../d3/dd7/namespaceSUNphi.html#af877fd927f6e7f68c60742d9fd6eee75',1,'SUNphi']]],
   ['nonnull',['nonNull',['../d0/dde/structSUNphi_1_1__RangeSeq.html#ab81626ce8a7edcb1ea8e33a58ae8d799',1,'SUNphi::_RangeSeq']]],

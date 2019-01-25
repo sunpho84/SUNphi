@@ -16,6 +16,8 @@ var searchData=
   ['size',['size',['../df/dc0/classSUNphi_1_1Vector.html#a0afc9ee7d4b9fc8ccbd84c750dff5d71',1,'SUNphi::Vector']]],
   ['spin',['spin',['../d3/dd7/namespaceSUNphi.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi']]],
   ['sqr',['sqr',['../d3/dd7/namespaceSUNphi.html#a0eeddf88e05361ef8f44c0af72c11289',1,'SUNphi']]],
+  ['start',['start',['../d6/de9/classSUNphi_1_1Timer.html#ad653c3c923202256623bf37d10559119',1,'SUNphi::Timer']]],
+  ['stop',['stop',['../d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2',1,'SUNphi::Timer']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
   ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aeef0ef305514d94a5229b89d92da1787',1,'SUNphi::ThreadPool']]],
   ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a9c4150f4dab9d747823c0f9cd6b0be8e',1,'SUNphi::ThreadPool::Barrier::sync(const char *tag, const int &amp;rank)']]]
