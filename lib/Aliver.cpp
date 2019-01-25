@@ -9,6 +9,7 @@
 #include <gitInfo.hpp>
 #include <system/MpiImpl.hpp>
 #include <system/Threads.hpp>
+#include <system/Timer.hpp>
 
 #ifndef CONFIG_TIME
  /// Null time
@@ -105,6 +106,9 @@ namespace SUNphi
     if(Mpi::isMasterRank())
       printf("\n Ciao!\n\n");
   }
+  
+  /// Statistics
+  Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
   
   /// Finalize the SUNphi library
   __attribute__((destructor))
