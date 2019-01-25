@@ -5,6 +5,8 @@
 ///
 /// \brief Header file to support string operations
 
+#include <string>
+
 namespace SUNphi
 {
   /// Provides a string as member of a struct
@@ -22,8 +24,28 @@ namespace SUNphi
   /*! Returns the name of the type */					\
   static constexpr const char* name()					\
   {									\
-    return STR;								\
+    return								\
+      STR;								\
   }
+  
+  /// Returns the c-string of the passed quantity
+  ///
+  /// Case in which the input is already a c-string
+  inline const char* cString(const char* in) ///< Input
+  {
+    return
+      in;
+  }
+  
+  /// Returns the c-string of the passed quantity
+  ///
+  /// Case in which the input is a c++ string
+  inline const char* cString(const std::string& in) ///< Input
+  {
+    return
+      in.c_str();
+  }
+  
 }
 
 #endif

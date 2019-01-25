@@ -10,7 +10,7 @@
 #include <cstdint>
 #include <numeric>
 
-#include <system/Vector.hpp>
+#include <containers/Vector.hpp>
 
 namespace SUNphi
 {

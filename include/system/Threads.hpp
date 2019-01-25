@@ -18,7 +18,7 @@
 #include <external/inplace_function.h>
 #include <Tuple.hpp>
 #include <system/Debug.hpp>
-#include <system/Vector.hpp>
+#include <containers/Vector.hpp>
 
 namespace SUNphi
 {
