@@ -1,5 +1,16 @@
 var NAVTREEINDEX4 =
 {
+"d8/df8/classSUNphi_1_1TensKind.html#aa5c31e72d1216d0eda848586c308e95d":[2,0,0,148,15],
+"d8/df8/classSUNphi_1_1TensKind.html#aa6ded86ef2f6f7088dc33620e902cdec":[2,0,0,148,23],
+"d8/df8/classSUNphi_1_1TensKind.html#aa840722888788a06df58634e15443d36":[2,0,0,148,31],
+"d8/df8/classSUNphi_1_1TensKind.html#aaaa825ca08282bb6233dce666fc37046":[2,0,0,148,20],
+"d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68":[2,0,0,148,14],
+"d8/df8/classSUNphi_1_1TensKind.html#aad1e33d53335ae4f28cb9be6264bcef4":[2,0,0,148,8],
+"d8/df8/classSUNphi_1_1TensKind.html#aba4985f7f8b09e10be7e338a2d844a08":[2,0,0,148,24],
+"d8/df8/classSUNphi_1_1TensKind.html#acb4377383592c0a41acba13476f65fb8":[2,0,0,148,28],
+"d8/df8/classSUNphi_1_1TensKind.html#accfdfabe79f4c2c1ef0844330f73b706":[2,0,0,148,21],
+"d8/df8/classSUNphi_1_1TensKind.html#ad2aed55991b937d92ae0def866e20d71":[2,0,0,148,13],
+"d8/df8/classSUNphi_1_1TensKind.html#af0f2ccefd83ff82d95aa1511bbe53385":[2,0,0,148,19],
 "d8/df8/classSUNphi_1_1TensKind.html#af34e7a36a2ef8967ff5c4d2d65c21470":[2,0,0,148,18],
 "d8/dfd/config_8hpp_source.html":[3,0,1,0,0],
 "d8/dfe/structSUNphi_1_1HasMember__eval.html":[2,0,0,119],
@@ -238,16 +249,5 @@ var NAVTREEINDEX4 =
 "db/dde/Unused_8hpp.html":[3,0,2,11,8],
 "db/dde/Unused_8hpp.html#a49d7da8c222e83ae8d42bb4ca6b7d2ea":[3,0,2,11,8,1],
 "db/dde/Unused_8hpp.html#aec797c5e33c3c2b48b8bc89e51da83bb":[3,0,2,11,8,0],
-"db/dde/Unused_8hpp_source.html":[3,0,2,11,8],
-"dc/d02/structSUNphi_1_1__IntsUpTo.html":[2,0,0,22],
-"dc/d02/structSUNphi_1_1__IntsUpTo.html#aaf993073cfc48ff9a5cf11d40d2efb29":[2,0,0,22,0],
-"dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0":[2,0,0,22,1],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html":[2,0,0,155],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058":[2,0,0,155,0],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740":[2,0,0,155,1],
-"dc/d0f/classSUNphi_1_1ThreadPool.html":[2,0,0,150],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a1114074fdd5084501e3fcdccf04bfbc7":[2,0,0,150,27],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a12557ed7bcdfaabc3868f15f900e5d37":[2,0,0,150,22],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a14cc92e4106cdf4235baf3d37931d83a":[2,0,0,150,21],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a1740dac6da61d849ddf6865ffc1a2333":[2,0,0,150,28]
+"db/dde/Unused_8hpp_source.html":[3,0,2,11,8]
 };

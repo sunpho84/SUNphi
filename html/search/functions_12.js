@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html#a53713cf362de640a3bf474f71d851a1f',1,'SUNphi::Vector::Vector(Args &amp;&amp;...args)'],['../df/dc0/classSUNphi_1_1Vector.html#a1922d3f580fab56a279973633b17a79c',1,'SUNphi::Vector::Vector(std::initializer_list&lt; T &gt; il)']]],
-  ['volume',['volume',['../dd/dca/classSUNphi_1_1Grid.html#ab680ef17ae0414c8a5b0b9fd05f27455',1,'SUNphi::Grid']]]
+  ['uminus',['uMinus',['../d3/dd7/namespaceSUNphi.html#a4cc1b72bbd095a42cf57c334b8ba67f3',1,'SUNphi::uMinus(Ts &amp;&amp;...smets)'],['../d3/dd7/namespaceSUNphi.html#aac1168c9468bb07a3f41508a9ba13222',1,'SUNphi::uMinus(T &amp;&amp;smet)']]],
+  ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html#a4ffefaac5c4ec1b123cd34ba991b3077',1,'SUNphi::UMinuser']]]
 ];

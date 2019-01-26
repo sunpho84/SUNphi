@@ -1,5 +1,16 @@
 var NAVTREEINDEX6 =
 {
+"dd/d61/structSUNphi_1_1CnSpin.html#a184b55c1c6edab8deb0340485991e897":[2,0,0,59,3],
+"dd/d61/structSUNphi_1_1CnSpin.html#a3a25b8e1353f5a01f33d140621bfa09f":[2,0,0,59,1],
+"dd/d61/structSUNphi_1_1CnSpin.html#a592ed1584d6f2c9b31f15e8876bc2193":[2,0,0,59,4],
+"dd/d61/structSUNphi_1_1CnSpin.html#a62036115814b61e36c3699da76b23f8f":[2,0,0,59,5],
+"dd/d61/structSUNphi_1_1CnSpin.html#aa7a59e642f782c5731ab75cc4d74d6de":[2,0,0,59,0],
+"dd/d61/structSUNphi_1_1CnSpin.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,59,2],
+"dd/d61/structSUNphi_1_1CnSpin.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,59,6],
+"dd/d61/structSUNphi_1_1CnSpin.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,59,7],
+"dd/d69/structSUNphi_1_1__IntSeqFilter.html":[2,0,0,19],
+"dd/d8a/structSUNphi_1_1HasMember__isAssignable.html":[2,0,0,123],
+"dd/d8a/structSUNphi_1_1HasMember__isAssignable.html#a101b5433dd35ce16d68531a003ecc587":[2,0,0,123,7],
 "dd/d8a/structSUNphi_1_1HasMember__isAssignable.html#a614670933b73c5cec0520ca08abfabe5":[2,0,0,123,4],
 "dd/d8a/structSUNphi_1_1HasMember__isAssignable.html#a6b4ff982d1008f0be942a69c65165c40":[2,0,0,123,6],
 "dd/d8a/structSUNphi_1_1HasMember__isAssignable.html#aa74e59c519e784a6a33223c4ef67a391":[2,0,0,123,5],
@@ -238,16 +249,5 @@ var NAVTREEINDEX6 =
 "df/ddd/structSUNphi_1_1ConstrainAreMulAdders.html":[2,0,0,70],
 "df/ddf/structSUNphi_1_1BaseTransposer.html":[2,0,0,53],
 "df/de0/structSUNphi_1_1ConstrainIsTuple.html":[2,0,0,103],
-"df/de8/structSUNphi_1_1ConstrainHasMember__compSize.html":[2,0,0,83],
-"df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html":[2,0,0,128,1],
-"df/dea/structSUNphi_1_1HasMember__ref2_1_1Derived.html#a7284d6654072657b06c06e1895af70aa":[2,0,0,128,1,0],
-"df/dee/Debug_8hpp.html":[3,0,2,8,0],
-"df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d":[3,0,2,8,0,1],
-"df/dee/Debug_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55":[3,0,2,8,0,3],
-"df/dee/Debug_8hpp.html#ae65f838a62c22e7f99e4ff6dccdfa105":[3,0,2,8,0,0],
-"df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418":[3,0,2,8,0,2],
-"df/dee/Debug_8hpp_source.html":[3,0,2,8,0],
-"dir_062dd3d6849305887aa6c2f56ce95494.html":[3,0,2,8],
-"dir_2b5be2f018c651c9a6a97d677fdb10f6.html":[3,0,2,5],
-"dir_2cc15010050477bfdc996c66dbc57fa0.html":[3,0,2,1]
+"df/de8/structSUNphi_1_1ConstrainHasMember__compSize.html":[2,0,0,83]
 };

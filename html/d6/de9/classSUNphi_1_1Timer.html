@@ -112,6 +112,8 @@ $(document).ready(function(){initNavTree('d6/de9/classSUNphi_1_1Timer.html','../
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d0/d15/classSUNphi_1_1Timer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -131,6 +133,17 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a80cefedc520775d02fe547230a22233c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a80cefedc520775d02fe547230a22233c">operator[]</a> (const char *subName)</td></tr>
+<tr class="memdesc:a80cefedc520775d02fe547230a22233c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets reference to the mapped sub timer.  <a href="#a80cefedc520775d02fe547230a22233c">More...</a><br /></td></tr>
+<tr class="separator:a80cefedc520775d02fe547230a22233c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9d620b3f0572c976b5cc1c8b7c55e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c9d620b3f0572c976b5cc1c8b7c55e8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a7c9d620b3f0572c976b5cc1c8b7c55e8">hasChildren</a> () const </td></tr>
+<tr class="memdesc:a7c9d620b3f0572c976b5cc1c8b7c55e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if has children. <br /></td></tr>
+<tr class="separator:a7c9d620b3f0572c976b5cc1c8b7c55e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7d52103eb06dbfd9cd030c7d14b5dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf7d52103eb06dbfd9cd030c7d14b5dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#adf7d52103eb06dbfd9cd030c7d14b5dc">hasRunningChildren</a> () const </td></tr>
+<tr class="memdesc:adf7d52103eb06dbfd9cd030c7d14b5dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if has running children. <br /></td></tr>
+<tr class="separator:adf7d52103eb06dbfd9cd030c7d14b5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a373c8895ca3f3a2de54dad0d90451832"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a373c8895ca3f3a2de54dad0d90451832"></a>
 const <a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a373c8895ca3f3a2de54dad0d90451832">father</a> () const </td></tr>
 <tr class="memdesc:a373c8895ca3f3a2de54dad0d90451832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the father. <br /></td></tr>
@@ -144,7 +157,7 @@ const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="separator:ad43b39c7903964f83b51b36704867a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad653c3c923202256623bf37d10559119"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad653c3c923202256623bf37d10559119"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#ad653c3c923202256623bf37d10559119">start</a> ()</td></tr>
-<tr class="memdesc:ad653c3c923202256623bf37d10559119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the stopwatch. <br /></td></tr>
+<tr class="memdesc:ad653c3c923202256623bf37d10559119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly starts the stopwatch. <br /></td></tr>
 <tr class="separator:ad653c3c923202256623bf37d10559119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c3cbd6f70491b9fb0c21ff42fc2d23a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c3cbd6f70491b9fb0c21ff42fc2d23a"></a>
 <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2fece34f264789a6ac9b0c85667d4dbc">Duration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a7c3cbd6f70491b9fb0c21ff42fc2d23a">currentMeasure</a> () const </td></tr>
@@ -187,6 +200,24 @@ Static Public Attributes</h2></td></tr>
 <tr class="memdesc:a5621cda515b1f6aa2166fe1dab631ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark that there is no father.  <a href="#a5621cda515b1f6aa2166fe1dab631ca4">More...</a><br /></td></tr>
 <tr class="separator:a5621cda515b1f6aa2166fe1dab631ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a085396d943aa02f7ad9c79d1e4909bd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a085396d943aa02f7ad9c79d1e4909bd2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2">Started</a> { <b>IMPLICITLY</b>, 
+<b>EXPLICITLY</b>
+ }<tr class="memdesc:a085396d943aa02f7ad9c79d1e4909bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Started mode: was it started by a children or explicityly? <br /></td></tr>
+</td></tr>
+<tr class="separator:a085396d943aa02f7ad9c79d1e4909bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a84acc5cc34fb1cf290aa47e33eab5634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a84acc5cc34fb1cf290aa47e33eab5634">innerStart</a> (const bool implExpl)</td></tr>
+<tr class="memdesc:a84acc5cc34fb1cf290aa47e33eab5634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common start.  <a href="#a84acc5cc34fb1cf290aa47e33eab5634">More...</a><br /></td></tr>
+<tr class="separator:a84acc5cc34fb1cf290aa47e33eab5634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97e92c9b5b9704b46ac6e0cf0d846f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad97e92c9b5b9704b46ac6e0cf0d846f5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5">childrenStarted</a> ()</td></tr>
+<tr class="memdesc:ad97e92c9b5b9704b46ac6e0cf0d846f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts through a children. <br /></td></tr>
+<tr class="separator:ad97e92c9b5b9704b46ac6e0cf0d846f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7c9b8d31306d7d7cae0369f57482f6c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c9b8d31306d7d7cae0369f57482f6c6"></a>
@@ -213,12 +244,24 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a8f51b3d26e8766cc9d0889a943b6f9fe">_father</a></td></tr>
 <tr class="memdesc:a8f51b3d26e8766cc9d0889a943b6f9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Father of current timer. <br /></td></tr>
 <tr class="separator:a8f51b3d26e8766cc9d0889a943b6f9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f62d7f3d4bf068ca3937352acd8b00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94f62d7f3d4bf068ca3937352acd8b00"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a94f62d7f3d4bf068ca3937352acd8b00">nStartedChildren</a> {0}</td></tr>
+<tr class="memdesc:a94f62d7f3d4bf068ca3937352acd8b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of children measuring. <br /></td></tr>
+<tr class="separator:a94f62d7f3d4bf068ca3937352acd8b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e2a7af3e2e1a24faf564cf1fba2154"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5e2a7af3e2e1a24faf564cf1fba2154"></a>
+<a class="el" href="../../d3/dd7/namespaceSUNphi.html#aeb2ffa5de9b0bed5c12962cb78b9051b">MapWithCStrKey</a>&lt; <a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#ab5e2a7af3e2e1a24faf564cf1fba2154">children</a></td></tr>
+<tr class="memdesc:ab5e2a7af3e2e1a24faf564cf1fba2154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Children. <br /></td></tr>
+<tr class="separator:ab5e2a7af3e2e1a24faf564cf1fba2154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0cff1240972c71327056a5cd6be3b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e0cff1240972c71327056a5cd6be3b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html#a6e0cff1240972c71327056a5cd6be3b2">isExplicitlyStarted</a></td></tr>
+<tr class="memdesc:a6e0cff1240972c71327056a5cd6be3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether it was explicitly started (or from a children) <br /></td></tr>
+<tr class="separator:a6e0cff1240972c71327056a5cd6be3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Splittable stopwatch</p>
 <p>If the stopwatch is created with <code>isStoppable</code> set to true, it cannot be stopped and is automatically started </p>
 
-<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa73cf58f7c80b61730e4340e03efaeb4"></a>
 <div class="memitem">
@@ -268,7 +311,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00170">170</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00237">237</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
 
 </div>
 </div>
@@ -304,7 +347,65 @@ template&lt;typename... Ts&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00073">73</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00150">150</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a84acc5cc34fb1cf290aa47e33eab5634"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Timer::innerStart </td>
+          <td>(</td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>implExpl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Common start. </p>
+<p>Store whether the stopwatch was explitly or implicitly started </p>
+
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80cefedc520775d02fe547230a22233c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a>&amp; SUNphi::Timer::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>subName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets reference to the mapped sub timer. </p>
+<p>Finds the sub timer </p>
+
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +430,7 @@ template&lt;typename... Ts&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="keyword">nullptr</span></div></div><!-- fragment -->
 <p>Used to mark that there is no father. </p>
 
-<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/dbf/Timer_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../d8/dbf/Timer_8hpp_source.html">Timer.hpp</a>.</p>
 
 </div>
 </div>

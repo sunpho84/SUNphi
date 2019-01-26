@@ -14,6 +14,7 @@ var searchData=
   ['isconjer',['isConjer',['../d3/dd7/namespaceSUNphi.html#acc8a59169068ff15f821f2c4459ea873',1,'SUNphi']]],
   ['isconst',['isConst',['../d3/dd7/namespaceSUNphi.html#a5a385933a0536023e13907c8f9bea991',1,'SUNphi']]],
   ['isdynamic',['isDynamic',['../d1/d96/structSUNphi_1_1TensComp.html#a592ed1584d6f2c9b31f15e8876bc2193',1,'SUNphi::TensComp::isDynamic()'],['../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8',1,'SUNphi::isDynamic()']]],
+  ['isexplicitlystarted',['isExplicitlyStarted',['../d6/de9/classSUNphi_1_1Timer.html#a6e0cff1240972c71327056a5cd6be3b2',1,'SUNphi::Timer']]],
   ['isfilled',['isFilled',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a14cc92e4106cdf4235baf3d37931d83a',1,'SUNphi::ThreadPool']]],
   ['isfloatingpoint',['isFloatingPoint',['../d3/dd7/namespaceSUNphi.html#a733173cc775b0b0ef9f4cc26c125629d',1,'SUNphi']]],
   ['isfullystatic',['isFullyStatic',['../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837',1,'SUNphi::TensKind']]],

@@ -277,9 +277,6 @@ var hierarchy =
     [ "SUNphi::HasMember_compSize< Type >::Fallback", "d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html", [
       [ "SUNphi::HasMember_compSize< Type >::Derived", "d4/dee/structSUNphi_1_1HasMember__compSize_1_1Derived.html", null ]
     ] ],
-    [ "SUNphi::HasMember_eval< Type >::Fallback", "da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html", [
-      [ "SUNphi::HasMember_eval< Type >::Derived", "de/dc2/structSUNphi_1_1HasMember__eval_1_1Derived.html", null ]
-    ] ],
     [ "SUNphi::HasMember_ref1< Type >::Fallback", "d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html", [
       [ "SUNphi::HasMember_ref1< Type >::Derived", "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html", null ]
     ] ],
@@ -294,6 +291,9 @@ var hierarchy =
     ] ],
     [ "SUNphi::HasMember_name< Type >::Fallback", "d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html", [
       [ "SUNphi::HasMember_name< Type >::Derived", "da/df2/structSUNphi_1_1HasMember__name_1_1Derived.html", null ]
+    ] ],
+    [ "SUNphi::HasMember_eval< Type >::Fallback", "da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html", [
+      [ "SUNphi::HasMember_eval< Type >::Derived", "de/dc2/structSUNphi_1_1HasMember__eval_1_1Derived.html", null ]
     ] ],
     [ "SUNphi::HasMember_isStoring< Type >::Fallback", "d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html", [
       [ "SUNphi::HasMember_isStoring< Type >::Derived", "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html", null ]

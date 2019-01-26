@@ -4,10 +4,10 @@ var indexSectionsWithContent =
   1: "_abcdfghimnrstuvw",
   2: "s",
   3: "abcdfgilmnprstuvw",
-  4: "_abcdefgilmnoprstuvw~",
+  4: "_abcdefghilmnoprstuvw~",
   5: "_abcdefghilmnoprstvw",
   6: "abcdefikmnprstuvwy",
-  7: "gop",
+  7: "gops",
   8: "hs",
   9: "acdefgilmnprsu",
   10: "t"

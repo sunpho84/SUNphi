@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['rank',['rank',['../d8/d6a/Mpi_8hpp.html#a6266039990f1db4189b8556668e71d05',1,'SUNphi::Mpi']]],
-  ['rawsync',['rawSync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a6ee1de51f2e1887a4fed4df5367ac29e',1,'SUNphi::ThreadPool::Barrier']]],
-  ['real',['real',['../d3/dd7/namespaceSUNphi.html#aa80c945a2eb32b4469fab34303a28000',1,'SUNphi']]],
-  ['refevalbycompsname',['refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#a15da6f3c9613c0d5475c90e7a48c3c72',1,'SUNphi::NnarySmET::refEvalByCompsName(Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54',1,'SUNphi::NnarySmET::refEvalByCompsName(Tp &amp;&amp;targs)']]],
-  ['reim',['reIm',['../d3/dd7/namespaceSUNphi.html#afa7b62a5bb9b78fe811605090a47c943',1,'SUNphi']]],
-  ['relbind',['relBind',['../d3/dd7/namespaceSUNphi.html#aac5f594cb28b895f5662c7a16df3c045',1,'SUNphi']]],
-  ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#ad1676cfd4fa1a1f9ced5e59def2cc4f3',1,'SUNphi::RelBinder']]],
-  ['relbinderinternaleval',['relBinderInternalEval',['../d5/d1c/classSUNphi_1_1RelBinder.html#a2d416cf08e0f9a822f953e572faa3522',1,'SUNphi::RelBinder::relBinderInternalEval(IntSeq&lt; Head... &gt;, IntSeq&lt; Tail... &gt;, const Id &amp;id, const Tuple&lt; Args... &gt; &amp;targs) const '],['../d5/d1c/classSUNphi_1_1RelBinder.html#ab3562e0701a755316118db9fcbb60896',1,'SUNphi::RelBinder::relBinderInternalEval(Ts &amp;&amp;...ts)']]],
-  ['representativefunction',['representativeFunction',['../de/d58/classSUNphi_1_1Adder.html#a6c543726b77fdf05f99a21b87d81f7ad',1,'SUNphi::Adder::representativeFunction()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a65d6441339afd9a95178aaedb81ad1c2',1,'SUNphi::Transposer::representativeFunction()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#a23c0f034b929342a757fec63bbaad694',1,'SUNphi::ScalarWrapper::representativeFunction()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a343ed0cc50be2b6fa576f42973ecbfd8',1,'SUNphi::MulAdder::representativeFunction()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a650eeac350011155d82fd658c506c81f',1,'SUNphi::UMinuser::representativeFunction()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a5d4039e8fe96cc7473d1c7520717351f',1,'SUNphi::Wrapper::representativeFunction()']]],
-  ['rewindoradvance',['rewindOrAdvance',['../de/d33/classSUNphi_1_1Combinatorial.html#ab592ed93974b4c7c392533999649853b',1,'SUNphi::Combinatorial']]],
-  ['rwcol',['rwCol',['../d3/dd7/namespaceSUNphi.html#a35370ddf1fda4f823c41fddfebcb98c8',1,'SUNphi']]],
-  ['rwspin',['rwSpin',['../d3/dd7/namespaceSUNphi.html#af5dcac73f81177737932be5439d41ce8',1,'SUNphi']]]
+  ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
+  ['print',['print',['../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
+  ['printbacktracelist',['printBacktraceList',['../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
+  ['printbailout',['printBailout',['../d3/dd7/namespaceSUNphi.html#a0b2c22c8905cb4e19065f489d947d369',1,'SUNphi']]],
+  ['printbanner',['printBanner',['../d3/dd7/namespaceSUNphi.html#a11b01d2a3fb5e746790e79b7f126271c',1,'SUNphi']]],
+  ['printconfigurepars',['printConfigurePars',['../d3/dd7/namespaceSUNphi.html#a3563a843c7d1ab50e3ac4c46e7742c82',1,'SUNphi']]],
+  ['printgitinfo',['printGitInfo',['../d3/dd7/namespaceSUNphi.html#ae281c34c10a1e5cb7564082d1f8d7954',1,'SUNphi']]],
+  ['printversioncontacts',['printVersionContacts',['../d3/dd7/namespaceSUNphi.html#aa315a45327cb4b5d52ca8616959501e9',1,'SUNphi']]],
+  ['productorial',['productorial',['../df/dc0/classSUNphi_1_1Vector.html#a17781892c3dbe68eba33c7c6290eef85',1,'SUNphi::Vector::productorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#ab579d50cf7444f1a57d607894f88325f',1,'SUNphi::Vector::productorial(const UnsignedSize beg=0) const ']]]
 ];

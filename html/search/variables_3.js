@@ -1,6 +1,7 @@
 var searchData=
 [
   ['canbeconverted',['canBeConverted',['../d3/dd7/namespaceSUNphi.html#ada4b857c07c2d9392292181763ade3f4',1,'SUNphi']]],
+  ['children',['children',['../d6/de9/classSUNphi_1_1Timer.html#ab5e2a7af3e2e1a24faf564cf1fba2154',1,'SUNphi::Timer']]],
   ['combineflags',['combineFlags',['../d3/dd7/namespaceSUNphi.html#a5a00ab4ef375318959380967abc92878',1,'SUNphi']]],
   ['compsize',['compSize',['../d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html#a15452fead4122d911e6b55bca6de4a1d',1,'SUNphi::HasMember_compSize::Fallback']]],
   ['contains',['contains',['../d8/df8/classSUNphi_1_1TensKind.html#a437e8eac96fb02e9137c51a0df99573d',1,'SUNphi::TensKind']]],
