@@ -34,7 +34,7 @@ namespace SUNphi
   /// A map which can be safely used with a c-string
   template <typename T> // Mapped type
   using MapWithCStrKey=
-    std::map<const char*,int,CStringComparer>;
+    std::map<const char*,T,CStringComparer>;
 }
 
 

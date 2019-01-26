@@ -12,6 +12,7 @@
 
 #include <chrono>
 
+#include <containers/Map.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <system/Debug.hpp>
 
@@ -60,7 +61,83 @@ namespace SUNphi
     /// Father of current timer
     Timer* _father;
     
+    /// Number of children measuring
+    int nStartedChildren{0};
+    
+    /// Children
+    MapWithCStrKey<Timer> children;
+    
+    /// Determine whether it was explicitly started (or from a children)
+    bool isExplicitlyStarted;
+    
+    /// Started mode: was it started by a children or explicityly?
+    enum Started{IMPLICITLY,EXPLICITLY};
+    
+    /// Common start
+    void innerStart(const bool implExpl)
+    {
+      // Check that the timer was not started already
+      if(isStarted())
+	CRASH("Trying to start the already started stopwatch",name);
+      
+      // Mark the timer as started
+      isStartedFlag=
+	true;
+      
+      /// Store whether the stopwatch was explitly or implicitly started
+      isExplicitlyStarted=
+	(implExpl==EXPLICITLY);
+      
+      // Increments the number of intervals measured
+      nMeasures++;
+      
+      // Take current time
+      lastMomentStarted=
+	takeTime();
+    }
+    
+    /// Starts through a children
+    void childrenStarted()
+    {
+      if(not isStarted())
+	innerStart(IMPLICITLY);
+      
+      nStartedChildren++;
+    }
+    
   public:
+    
+    /// Gets reference to the mapped sub timer
+    Timer& operator[](const char* subName)
+    {
+      /// Finds the sub timer
+      auto ref=
+	children.find(subName);
+      
+      // Insert if not found
+      if(ref==children.end())
+	  ref=
+	    children.try_emplace(subName,subName,this).first;
+      
+      return
+	ref->second;
+    }
+    
+    /// Checks if has children
+    bool hasChildren()
+      const
+    {
+      return
+	children.size();
+    }
+    
+    /// Checks if has running children
+    bool hasRunningChildren()
+      const
+    {
+      return
+	nStartedChildren!=0;
+    }
     
     /// Gets a reference to the father
     const Timer& father()
@@ -93,23 +170,10 @@ namespace SUNphi
 	isStartedFlag;
     }
     
-    /// Starts the stopwatch
+    /// Explicitly starts the stopwatch
     void start()
     {
-      // Check that the timer was not started already
-      if(isStarted())
-	CRASH("Trying to start the already started stopwatch",name);
-      
-      // Mark the timer as started
-      isStartedFlag=
-	true;
-      
-      // Increments the number of intervals measured
-      nMeasures++;
-      
-      // Take current time
-      lastMomentStarted=
-	takeTime();
+      innerStart(EXPLICITLY);
     }
     
     /// Returns the last measured or the current one
@@ -152,6 +216,9 @@ namespace SUNphi
       
       if(not isStoppable)
 	CRASH("Trying to stop the unstoppable stopwatch",name);
+      
+      if(hasRunningChildren())
+	CRASH("Trying to stop stopwatch",name,"with",nStartedChildren,"running children");
       
       // Store the stopping time
       lastMomentStopped=
