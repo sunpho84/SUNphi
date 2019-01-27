@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]]
+  ['logger',['Logger',['../d3/d78/classSUNphi_1_1Logger.html',1,'SUNphi']]]
 ];

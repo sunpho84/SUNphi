@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['file',['file',['../d3/d78/classSUNphi_1_1Logger.html#a17eb17227ebde70bfb485572bf29f2bb',1,'SUNphi::Logger']]],
   ['firslarger',['firsLarger',['../d3/dd7/namespaceSUNphi.html#acfd6aa2ab268d1e6cefeff93fc36af37',1,'SUNphi']]],
   ['firslarger_3c_20i_20_3e',['firsLarger&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#a0fc77ba4fc2b28ff2cb1143bafe67815',1,'SUNphi']]],
   ['first',['first',['../da/def/structSUNphi_1_1IntSeq.html#a26d1e940559ef4c780ff39c6cd7045d0',1,'SUNphi::IntSeq']]],

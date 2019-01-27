@@ -448,6 +448,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/de6/structSUNphi_1_1IsPresent.html">IsPresent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filterer which check presence of its parameter.  <a href="../../dd/de6/structSUNphi_1_1IsPresent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write output to a file, using different level of indentation.  <a href="../../d3/d78/classSUNphi_1_1Logger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d5d/classSUNphi_1_1MulAdder.html">MulAdder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to add a <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> with the prodcut of two others: <code>a+b*c</code>.  <a href="../../dc/d5d/classSUNphi_1_1MulAdder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -930,6 +933,13 @@ template&lt;int Rem, int IncrAft, bool IgnoreIfPresent&gt; </td></tr>
 <tr class="memitem:a5ddd6d103aa57654ee8b4c925802147b"><td class="memTemplParams" colspan="2">template&lt;typename... ToBeSearchedTypes, typename... ContainingTypes&gt; </td></tr>
 <tr class="memitem:a5ddd6d103aa57654ee8b4c925802147b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5ddd6d103aa57654ee8b4c925802147b">_tupleHasTypes</a> (<a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; ToBeSearchedTypes... &gt;, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; ContainingTypes... &gt;)</td></tr>
 <tr class="separator:a5ddd6d103aa57654ee8b4c925802147b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55">printBacktraceList</a> ()</td></tr>
+<tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
+<tr class="separator:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
+<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
+<tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
 <tr class="memitem:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae">print</a> (S &amp;out)</td></tr>
 <tr class="separator:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -956,13 +966,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:affbfd274f5650ccd16fd450623c7e019"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#affbfd274f5650ccd16fd450623c7e019">sign</a> (const T &amp;x)</td></tr>
 <tr class="memdesc:affbfd274f5650ccd16fd450623c7e019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign of a number, +1 0 or -1. <br /></td></tr>
 <tr class="separator:affbfd274f5650ccd16fd450623c7e019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55">printBacktraceList</a> ()</td></tr>
-<tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
-<tr class="separator:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
-<tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81cb061982d71eed06caa20d73bef24e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a81cb061982d71eed06caa20d73bef24e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a81cb061982d71eed06caa20d73bef24e">bitOf</a> (const T &amp;in, const int pos)</td></tr>
 <tr class="memdesc:a81cb061982d71eed06caa20d73bef24e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to a given bit of a variable.  <a href="#a81cb061982d71eed06caa20d73bef24e">More...</a><br /></td></tr>
@@ -1172,6 +1175,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <a class="el" href="../../d6/de9/classSUNphi_1_1Timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad3481e5243c3d2bac0d91bd64b9e32c9">timings</a> (&quot;Total time&quot;, Timer::NO_FATHER, Timer::UNSTOPPABLE)</td></tr>
 <tr class="memdesc:ad3481e5243c3d2bac0d91bd64b9e32c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistics. <br /></td></tr>
 <tr class="separator:ad3481e5243c3d2bac0d91bd64b9e32c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd07626736a01bd8c3ab0618ec4af74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fd07626736a01bd8c3ab0618ec4af74"></a>
+<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><b>logger</b> (&quot;/dev/stdout&quot;)</td></tr>
+<tr class="separator:a2fd07626736a01bd8c3ab0618ec4af74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b01d2a3fb5e746790e79b7f126271c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11b01d2a3fb5e746790e79b7f126271c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a11b01d2a3fb5e746790e79b7f126271c">printBanner</a> ()</td></tr>
 <tr class="memdesc:a11b01d2a3fb5e746790e79b7f126271c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the banner. <br /></td></tr>
@@ -1398,6 +1404,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplParams" colspan="2">template&lt;typename TpToSearch , typename TpContaining &gt; </td></tr>
 <tr class="memitem:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3330d99dcdc530c0a7be5eb1b2af9eb">tupleHasTypes</a></td></tr>
 <tr class="separator:ab3330d99dcdc530c0a7be5eb1b2af9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a03905f8d2122989469d759e85bfd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19a03905f8d2122989469d759e85bfd5"></a>
+<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><b>logger</b></td></tr>
+<tr class="separator:a19a03905f8d2122989469d759e85bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae80082b2e607318ad8e682431f6c7a45"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae80082b2e607318ad8e682431f6c7a45">moveOffset</a> [2]</td></tr>
 <tr class="memdesc:ae80082b2e607318ad8e682431f6c7a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset to move <code>BW</code> or <code>FW</code>.  <a href="#ae80082b2e607318ad8e682431f6c7a45">More...</a><br /></td></tr>
 <tr class="separator:ae80082b2e607318ad8e682431f6c7a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -7272,7 +7281,7 @@ template&lt;int I&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00032">Aliver.cpp:32</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00036">Aliver.cpp:36</a></div></div>
 </div><!-- fragment --><p>Makes sure that the library is started</p>
 <p>Elaborates on the approach of <a href="https://stackoverflow.com/a/43352830">https://stackoverflow.com/a/43352830</a> 1) takes the returned value of the helper, which is never used 2) static ensures that every TU gets a separate instance </p>
 

@@ -137,6 +137,7 @@ var namespaceSUNphi =
     [ "IsNonNegative", "d8/d0c/structSUNphi_1_1IsNonNegative.html", "d8/d0c/structSUNphi_1_1IsNonNegative" ],
     [ "IsNotNull", "d5/d4a/structSUNphi_1_1IsNotNull.html", "d5/d4a/structSUNphi_1_1IsNotNull" ],
     [ "IsPresent", "dd/de6/structSUNphi_1_1IsPresent.html", "dd/de6/structSUNphi_1_1IsPresent" ],
+    [ "Logger", "d3/d78/classSUNphi_1_1Logger.html", "d3/d78/classSUNphi_1_1Logger" ],
     [ "MulAdder", "dc/d5d/classSUNphi_1_1MulAdder.html", "dc/d5d/classSUNphi_1_1MulAdder" ],
     [ "NnarySmET", "dc/d2f/structSUNphi_1_1NnarySmET.html", "dc/d2f/structSUNphi_1_1NnarySmET" ],
     [ "RelBinder", "d5/d1c/classSUNphi_1_1RelBinder.html", "d5/d1c/classSUNphi_1_1RelBinder" ],

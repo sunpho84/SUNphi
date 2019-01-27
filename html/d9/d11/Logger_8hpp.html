@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: build/lib/gitInfo.hpp Source File</title>
+<title>SUNphi: include/ios/Logger.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d1/d59/gitInfo_8hpp_source.html','../../');});
+$(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -105,16 +105,50 @@ $(document).ready(function(){initNavTree('d1/d59/gitInfo_8hpp_source.html','../.
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">gitInfo.hpp</div>  </div>
+<div class="title">Logger.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">_GIT_INFO_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">_GIT_INFO_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">GIT_HASH</span> <span class="stringliteral">&quot;747f4913e37332c9efb9493709cd7d5cb6b47cd9&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">GIT_TIME</span> <span class="stringliteral">&quot;Sun Jan 27 02:00:15 2019 +0100&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">GIT_COMMITTER</span> <span class="stringliteral">&quot;Francesco Sanfilippo&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">GIT_LOG</span> <span class="stringliteral">&quot;Adding indenter&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div></div><!-- fragment --></div><!-- contents -->
+
+<p>Header file to define a logger wrapping FILE*.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../df/dee/Debug_8hpp_source.html">system/Debug.hpp</a>&gt;</code><br />
+</div>
+<p><a href="../../d9/d11/Logger_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">SUNphi::Logger</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write output to a file, using different level of indentation.  <a href="../../d3/d78/classSUNphi_1_1Logger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
+<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a19a03905f8d2122989469d759e85bfd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19a03905f8d2122989469d759e85bfd5"></a>
+Logger&#160;</td><td class="memItemRight" valign="bottom"><b>SUNphi::logger</b></td></tr>
+<tr class="separator:a19a03905f8d2122989469d759e85bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header file to define a logger wrapping FILE*. </p>
+
+<p>Definition in file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="../../dir_7a9c7094c62de71bbec4b12c7c975b93.html">lib</a></li><li class="navelem"><b>gitInfo.hpp</b></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_c34bc3bbd9d9cc4e9f6dcfcd5b425f2b.html">ios</a></li><li class="navelem"><a class="el" href="../../d9/d11/Logger_8hpp.html">Logger.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

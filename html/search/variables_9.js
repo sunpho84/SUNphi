@@ -2,6 +2,7 @@ var searchData=
 [
   ['id',['id',['../d6/db9/classSUNphi_1_1Binder.html#ae12d944fe54c48a3b564b305421df93a',1,'SUNphi::Binder']]],
   ['imag_5fpart_5fid',['IMAG_PART_ID',['../d3/dd7/namespaceSUNphi.html#af9c479f2751ade1b58e168cea23e0adb',1,'SUNphi']]],
+  ['indentlev',['indentLev',['../d3/d78/classSUNphi_1_1Logger.html#a45cfb7bf7049a669bae2f6f99ff237ef',1,'SUNphi::Logger']]],
   ['intseq',['intSeq',['../d3/dd7/namespaceSUNphi.html#a1ee2a99d78b5ccbb4ed4d3e7b034d659',1,'SUNphi']]],
   ['isadder',['isAdder',['../d3/dd7/namespaceSUNphi.html#ab87e41e0c2e6e86e3ba3f3996b884e1b',1,'SUNphi']]],
   ['isaliasing',['isAliasing',['../d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html#ad78807a235b996f6edd15ede3c37de9b',1,'SUNphi::HasMember_isAliasing::Fallback']]],
@@ -25,6 +26,7 @@ var searchData=
   ['islvalue',['isLvalue',['../d3/dd7/namespaceSUNphi.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
   ['ismuladder',['isMulAdder',['../d3/dd7/namespaceSUNphi.html#a56035a909d47442946850caf39ebaa93',1,'SUNphi']]],
   ['isnnarysmet',['isNnarySmET',['../d3/dd7/namespaceSUNphi.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],
+  ['isonnewline',['isOnNewLine',['../d3/d78/classSUNphi_1_1Logger.html#a0ac9c381e93e85b3e995f14d7e7927c1',1,'SUNphi::Logger']]],
   ['isordered',['isOrdered',['../da/def/structSUNphi_1_1IntSeq.html#a70e009823c017a7bd2486e4757f3fcfb',1,'SUNphi::IntSeq']]],
   ['isorderedintseq',['isOrderedIntSeq',['../d3/dd7/namespaceSUNphi.html#a302d28a5e97d3f2dafd2064ed7d1ff02',1,'SUNphi']]],
   ['isorderedintseq_3c_20intseq_3c_20ints_2e_2e_2e_20_3e_20_3e',['isOrderedIntSeq&lt; IntSeq&lt; Ints... &gt; &gt;',['../d3/dd7/namespaceSUNphi.html#a6be5c1f600f694603d91fc5ffe099091',1,'SUNphi']]],

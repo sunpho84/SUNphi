@@ -5,6 +5,7 @@ var searchData=
   ['checkmasteronly',['checkMasterOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aae6660d93324a938fdd303f5e3c2718d',1,'SUNphi::ThreadPool']]],
   ['checkpoolonly',['checkPoolOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a4e03c56f0482488658c45b75d6ac52a7',1,'SUNphi::ThreadPool']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
+  ['close',['close',['../d3/d78/classSUNphi_1_1Logger.html#aec8ac6c87b1aad4eae3f720b0409ccc7',1,'SUNphi::Logger']]],
   ['cncol',['cnCol',['../d3/dd7/namespaceSUNphi.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d3/dd7/namespaceSUNphi.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
   ['col',['col',['../d3/dd7/namespaceSUNphi.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi']]],
