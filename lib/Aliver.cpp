@@ -7,6 +7,8 @@
 /// \brief Starts the library and close it
 
 #include <gitInfo.hpp>
+
+#include <ios/Logger.hpp>
 #include <system/MpiImpl.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
@@ -28,6 +30,8 @@ namespace SUNphi
 {
   /// Statistics
   Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
+  
+  Logger logger("/dev/stdout");
   
   int aliverHelper()
   {

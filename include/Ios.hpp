@@ -5,6 +5,7 @@
 ///
 /// \brief Header file to include all i/o files
 
+#include <ios/Logger.hpp>
 #include <ios/Print.hpp>
 
 #endif
