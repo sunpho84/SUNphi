@@ -26,6 +26,9 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+  /// Statistics
+  Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
+  
   int aliverHelper()
   {
     return
@@ -106,9 +109,6 @@ namespace SUNphi
     if(Mpi::isMasterRank())
       printf("\n Ciao!\n\n");
   }
-  
-  /// Statistics
-  Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
   
   /// Finalize the SUNphi library
   __attribute__((destructor))
