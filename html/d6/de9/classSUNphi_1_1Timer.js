@@ -1,7 +1,7 @@
 var classSUNphi_1_1Timer =
 [
-    [ "UNSTOPPABLE", "d6/de9/classSUNphi_1_1Timer.html#a09ac080c270e13d0e1967862a037caeca2661cc5c5eceb3630dd14c63fa193e07", null ],
-    [ "STOPPABLE", "d6/de9/classSUNphi_1_1Timer.html#a09ac080c270e13d0e1967862a037caeca3f984c8cc53f309d593ea25e4d809c20", null ],
+    [ "UNSTOPPABLE", "d6/de9/classSUNphi_1_1Timer.html#a6bc4fda04a89ece0104bcfd9b2c24ba5a2661cc5c5eceb3630dd14c63fa193e07", null ],
+    [ "STOPPABLE", "d6/de9/classSUNphi_1_1Timer.html#a6bc4fda04a89ece0104bcfd9b2c24ba5a3f984c8cc53f309d593ea25e4d809c20", null ],
     [ "Started", "d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2", [
       [ "IMPLICITLY", "d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2a825e354aa875a5da77d0b491f51f5235", null ],
       [ "EXPLICITLY", "d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2ab4fb3c69349d00aa17b9eac75c701a7c", null ]

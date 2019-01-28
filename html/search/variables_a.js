@@ -11,5 +11,5 @@ var searchData=
   ['lastnon_3c_20i_20_3e',['lastNon&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#ad61bf24e73e37e537e80c6aa3a213f40',1,'SUNphi']]],
   ['lastsmaller',['lastSmaller',['../d3/dd7/namespaceSUNphi.html#aa6bd149fbf4d55bc75e1a74a49e1fcac',1,'SUNphi']]],
   ['lastsmaller_3c_20i_20_3e',['lastSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#aa76f9c2411e695f843df2cc84a662289',1,'SUNphi']]],
-  ['logger',['logger',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70',1,'SUNphi::ScopeIndenter']]]
+  ['logger',['logger',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70',1,'SUNphi::ScopeIndenter::logger()'],['../d3/dd7/namespaceSUNphi.html#a19a03905f8d2122989469d759e85bfd5',1,'SUNphi::logger()']]]
 ];

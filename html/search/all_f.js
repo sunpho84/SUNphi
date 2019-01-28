@@ -19,6 +19,7 @@ var searchData=
   ['posoftypenotasserting',['posOfTypeNotAsserting',['../d3/dd7/namespaceSUNphi.html#ae5c8d825e6c25b7bcba64a7820bd8dd7',1,'SUNphi']]],
   ['posoftypes',['PosOfTypes',['../d3/dd7/namespaceSUNphi.html#a7e49560fe5650ab279ff170b7fc6643e',1,'SUNphi']]],
   ['posoftypesnotasserting',['PosOfTypesNotAsserting',['../d3/dd7/namespaceSUNphi.html#abc7e2f156d73be4e7b75c0b2f13d06d9',1,'SUNphi']]],
+  ['prependtime',['prependTime',['../d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82',1,'SUNphi::Logger']]],
   ['print',['print',['../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d3/dd7/namespaceSUNphi.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
   ['print_2ehpp',['Print.hpp',['../d7/d55/Print_8hpp.html',1,'']]],
   ['printbacktracelist',['printBacktraceList',['../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],

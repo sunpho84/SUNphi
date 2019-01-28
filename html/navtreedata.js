@@ -39,12 +39,12 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c",
-"d4/d18/Memory_8hpp.html",
-"d6/d3f/TensKind_8hpp.html#a3a190d865f5836e550f52ed114b1c6fd",
-"d8/de8/Compl_8hpp.html#af9c479f2751ade1b58e168cea23e0adb",
-"db/d2f/classSUNphi_1_1SingleInstance.html",
-"dd/d03/classSUNphi_1_1UMinuser.html#a8c309d1995166ecd2318b36445fde18d",
-"df/d95/Bits_8hpp_source.html"
+"d4/d03/Utility_8hpp_source.html",
+"d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3",
+"d8/de8/Compl_8hpp.html#a345eb23d93feb680882e8663c469512d",
+"db/d18/Macros_8hpp.html#a79a04ec076b9108f003c5fba84e2163e",
+"dd/d03/classSUNphi_1_1UMinuser.html#a695131ecaef2370a1057c332ceac2238",
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
