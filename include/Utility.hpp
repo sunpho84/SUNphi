@@ -10,6 +10,7 @@
 #include <utility/Combinatorial.hpp>
 #include <utility/Flags.hpp>
 #include <utility/Inline.hpp>
+#include <utility/Macros.hpp>
 #include <utility/Position.hpp>
 #include <utility/SingleInstance.hpp>
 #include <utility/String.hpp>
