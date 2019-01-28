@@ -37,13 +37,17 @@ namespace SUNphi
     /// Starts a new line
     void startNewLine()
     {
-      // Writes the given number of spaces
-      for(int i=0;i<indentLev;i++)
-	fputc(' ',file);
-      
       // Set that we are not any longer at the beginning of a new line
       isOnNewLine=
 	false;
+      
+      // Prepend with time
+      if(prependTime)
+	(*this)<<durationInSec(timings.currentMeasure())<<" s:\t";
+      
+      // Writes the given number of spaces
+      for(int i=0;i<indentLev;i++)
+	fputc(' ',file);
     }
     
   public:
@@ -117,7 +121,7 @@ namespace SUNphi
 	this->close();
     }
     
-    /// Intercepts the end of line call (might be more complicated actually
+    /// Intercepts the end of line call (might be more complicated actually)
     Logger& operator<<(std::ostream&(*)(std::ostream&))
     {
       endLine();
@@ -152,6 +156,22 @@ namespace SUNphi
 	  // Increment the char
 	  p++;
 	}
+      
+      return
+	*this;
+    }
+    
+    /// Prints a c++ string
+    Logger& operator<<(const std::string& str)
+    {
+      return
+	(*this)<<str.c_str();
+    }
+    
+    /// Prints a double
+    Logger& operator<<(const double& d)
+    {
+      fprintf(file,"%.06f",d);
       
       return
 	*this;
