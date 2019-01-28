@@ -5,6 +5,7 @@ var searchData=
   ['imag',['imag',['../d3/dd7/namespaceSUNphi.html#aa1b5f3fd83e1fada66cd6a5da0b57f81',1,'SUNphi']]],
   ['imag_5fpart_5fid',['IMAG_PART_ID',['../d3/dd7/namespaceSUNphi.html#af9c479f2751ade1b58e168cea23e0adb',1,'SUNphi']]],
   ['incapsulatedstring',['IncapsulatedString',['../da/d56/structSUNphi_1_1IncapsulatedString.html',1,'SUNphi']]],
+  ['indent_5fmore_5ffor_5fcurrent_5fscope',['INDENT_MORE_FOR_CURRENT_SCOPE',['../d9/d11/Logger_8hpp.html#ab1b978e813f771934563cbe85ba2a1ed',1,'Logger.hpp']]],
   ['indentless',['indentLess',['../d3/d78/classSUNphi_1_1Logger.html#a144bd23775889591cc4ad07f1f0cda7d',1,'SUNphi::Logger']]],
   ['indentlev',['indentLev',['../d3/d78/classSUNphi_1_1Logger.html#a45cfb7bf7049a669bae2f6f99ff237ef',1,'SUNphi::Logger']]],
   ['indentmore',['indentMore',['../d3/d78/classSUNphi_1_1Logger.html#a4ef0544e6ff25d8c9896d9608d2f7377',1,'SUNphi::Logger']]],

@@ -7,6 +7,7 @@ var dir_3a4d35156996fb70540e167b84a39bd1 =
     ] ],
     [ "Flags.hpp", "d0/d45/Flags_8hpp.html", "d0/d45/Flags_8hpp" ],
     [ "Inline.hpp", "d5/d3b/Inline_8hpp.html", "d5/d3b/Inline_8hpp" ],
+    [ "Macros.hpp", "db/d18/Macros_8hpp.html", "db/d18/Macros_8hpp" ],
     [ "Position.hpp", "dc/d58/Position_8hpp.html", "dc/d58/Position_8hpp" ],
     [ "SingleInstance.hpp", "d1/d5e/SingleInstance_8hpp.html", [
       [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ]

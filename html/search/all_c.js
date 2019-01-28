@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['macros_2ehpp',['Macros.hpp',['../db/d18/Macros_8hpp.html',1,'']]],
   ['makesurealiverisreferenced',['makeSureAliverIsReferenced',['../d3/dd7/namespaceSUNphi.html#ac9d94f5be3ce9e06d10056b98d9e36cf',1,'SUNphi']]],
   ['map_2ehpp',['Map.hpp',['../dc/dbe/Map_8hpp.html',1,'']]],
   ['mapwithcstrkey',['MapWithCStrKey',['../d3/dd7/namespaceSUNphi.html#aeb2ffa5de9b0bed5c12962cb78b9051b',1,'SUNphi']]],
@@ -30,8 +31,8 @@ var searchData=
   ['mul',['Mul',['../da/def/structSUNphi_1_1IntSeq.html#a204ee151f532805566c9f720e24a73df',1,'SUNphi::IntSeq']]],
   ['muladd',['mulAdd',['../d3/dd7/namespaceSUNphi.html#a9b7f7efa55b39f3d73c768476ed122f1',1,'SUNphi']]],
   ['muladd_2ehpp',['MulAdd.hpp',['../da/d06/MulAdd_8hpp.html',1,'']]],
-  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
   ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]],
+  ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
   ['myt',['MyT',['../da/d65/Add_8hpp.html#a5fed21f6a353cc5d70bb127fe5bcc963',1,'SUNphi::CheckAdderIsNnarySmet::MyT()'],['../da/d06/MulAdd_8hpp.html#abcb4a54427ae0d55146c92794eab84b9',1,'SUNphi::CheckMulAdderIsNnarySmet::MyT()']]],
   ['mytc',['MyTc',['../da/d65/Add_8hpp.html#ae238bc7ea8e64c38e24560b647d8e121',1,'SUNphi::CheckAdderIsNnarySmet::MyTc()'],['../da/d06/MulAdd_8hpp.html#a6701178cec27d35392a6f97e7689d431',1,'SUNphi::CheckMulAdderIsNnarySmet::MyTc()']]],
   ['mytk',['MyTk',['../da/d65/Add_8hpp.html#a9aa88afc3b19d756d1f2fa57820c2149',1,'SUNphi::CheckAdderIsNnarySmet::MyTk()'],['../da/d06/MulAdd_8hpp.html#aacabb978edbb88ab2177bb391f93c354',1,'SUNphi::CheckMulAdderIsNnarySmet::MyTk()']]]
