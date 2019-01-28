@@ -8,6 +8,7 @@
 #include <cstdio>
 
 #include <system/Debug.hpp>
+#include <utility/Macros.hpp>
 
 namespace SUNphi
 {
@@ -156,6 +157,33 @@ namespace SUNphi
 	*this;
     }
   };
+  
+  /// Increment the logger indentation level for the object scope
+  class ScopeIndenter
+  {
+    /// Pointed logger
+    Logger& logger;
+    
+  public:
+    
+    /// Create and increase indent level
+    ScopeIndenter(Logger& logger) :
+      logger(logger)
+    {
+      logger.indentMore();
+    }
+    
+    /// Delete and decrease indent level
+    ~ScopeIndenter()
+    {
+      logger.indentLess();
+    }
+  };
+  
+  /// Mark the logger to be more indented
+#define INDENT_MORE_FOR_CURRENT_SCOPE(LOGGER)				\
+  /*! Indent current scope */						\
+  ScopeIndenter NAME4(__FILE__,__LINE__,LOGGER,INDENTER)(logger)
   
   extern Logger logger;
 }
