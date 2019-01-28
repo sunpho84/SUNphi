@@ -252,6 +252,23 @@ namespace SUNphi
     }
   };
   
+  /// Convert duration into a units of measure
+  template <typename U,                        // Units
+	    typename O=double>                 // Output type
+  double durationIn(const Duration& duration) ///< Input duration
+  {
+    return
+      std::chrono::duration<O,U>(duration).count();
+  }
+  
+  /// Convert duration into seconds
+  template <typename O=double>                    // Output type
+  double durationInSec(const Duration& duration) ///< Input duration
+  {
+    return
+      std::chrono::duration<O>(duration).count();
+  }
+  
   /// Global timings
   extern Timer timings;
 }

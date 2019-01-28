@@ -8,6 +8,7 @@
 #include <cstdio>
 
 #include <system/Debug.hpp>
+#include <system/Timer.hpp>
 #include <utility/Macros.hpp>
 
 namespace SUNphi
@@ -19,7 +20,10 @@ namespace SUNphi
     int indentLev{0};
     
     /// Store if a new line was started
-    bool isOnNewLine;
+    bool isOnNewLine{true};
+    
+    /// Determine wheter the new line includes time
+    bool prependTime;
     
     /// File pointed by the logger
     FILE* file{nullptr};
@@ -104,7 +108,10 @@ namespace SUNphi
     }
     
     /// Create with a path
-    Logger(const char* path)
+    Logger(const char* path,              ///< Path to open
+	   const bool& prependTime=true)  ///< Prepend or not with time
+      :
+      prependTime(prependTime)
     {
       this->open(path);
     }
