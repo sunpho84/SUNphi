@@ -176,6 +176,8 @@ namespace SUNphi
     }
     
     /// Prints a double
+    ///
+    /// \todo fix the precision
     Logger& operator<<(const double& d)
     {
       fprintf(file,"%.06f",d);

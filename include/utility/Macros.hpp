@@ -23,8 +23,8 @@
 #define CONCAT2(X,Y)				\
   _CONCAT2_WRAP(X,Y)
 
-//// Concatenate three tokens
-#define CONCAT3(X,Y,Z)			\
+/// Concatenate three tokens
+#define CONCAT3(X,Y,Z)				\
   CONCAT(CONCAT2(X,Y),Z)
 
 /////////////////////////////////////////////////////////////////

@@ -31,6 +31,9 @@ namespace SUNphi
   /// Statistics
   Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
   
+  /// Global logger
+  ///
+  /// \todo check if we can refer to stdout
   Logger logger("/dev/stdout");
   
   int aliverHelper()

@@ -133,10 +133,6 @@ namespace SUNphi
       nPerSlot=
 	getFirst();
     }
-    
-    void setLast()
-    {
-    }
   };
 }
 
