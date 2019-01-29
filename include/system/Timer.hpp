@@ -14,6 +14,7 @@
 
 #include <containers/Map.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/UniversalReferences.hpp>
 #include <system/Debug.hpp>
 
 namespace SUNphi

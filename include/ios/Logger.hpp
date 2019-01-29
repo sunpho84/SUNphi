@@ -47,7 +47,7 @@ namespace SUNphi
       
       // Prepend with time
       if(prependTime)
-	(*this)<<durationInSec(timings.currentMeasure())<<" s:\t";
+	fprintf(file,"%.010f s:\t",durationInSec(timings.currentMeasure()));
       
       // Writes the given number of spaces
       for(int i=0;i<indentLev;i++)
@@ -55,6 +55,20 @@ namespace SUNphi
     }
     
   public:
+    
+    /// Precision to print real number
+    int realPrecision{6};
+    
+    /// Flag to determine whether print always or not the sign
+    bool alwaysPrintSign{false};
+    
+    /// Print mode for double/float
+    enum class RealFormat{GENERAL=0,FIXED=1,ENGINEER=2};
+    
+    /// Format mode for real number
+    RealFormat realFormat{RealFormat::GENERAL};
+    
+    /////////////////////////////////////////////////////////////////
     
     /// Increase indentation
     void indentMore()
@@ -140,7 +154,7 @@ namespace SUNphi
     /// Prints a string
     Logger& operator<<(const char* str)
     {
-      /// Poiter to the first char of the string
+      /// Pointer to the first char of the string
       const char* p=
 	str;
       
@@ -176,11 +190,21 @@ namespace SUNphi
     }
     
     /// Prints a double
-    ///
-    /// \todo fix the precision
     Logger& operator<<(const double& d)
     {
-      fprintf(file,"%.06f",d);
+      // If at the beginning of the new line, indent
+      if(isOnNewLine)
+	startNewLine();
+      
+      /// String to print real numbers
+      ///
+      /// The first component is signed or not
+      /// The second component is the format
+      static constexpr char realFormatString[2][3][6]=
+	{{"%.*g","%.*f","%.*e"},
+	 {"%+.*g","%+.*f","%+.*e"}};
+      
+      fprintf(file,realFormatString[alwaysPrintSign][(int)realFormat],realPrecision,d);
       
       return
 	*this;
@@ -210,9 +234,58 @@ namespace SUNphi
   };
   
   /// Mark the logger to be more indented
-#define INDENT_MORE_FOR_CURRENT_SCOPE(LOGGER)				\
-  /*! Indent current scope */						\
-  ScopeIndenter NAME4(__FILE__,__LINE__,LOGGER,INDENTER)(logger)
+#define SCOPE_INDENT(VAR)					\
+  /*! Indent current scope */					\
+  ScopeIndenter NAME2(SCOPE_INDENTER,__LINE__)(VAR)
+  
+  /// Change the attribute for the object scope
+  template <typename T>
+  class ScopeChangeAttribute
+  {
+    /// Reference
+    T& ref;
+    
+    /// Old value
+    const T oldVal;
+    
+  public:
+    
+    /// Create and increase indent level
+    ScopeChangeAttribute(T& ref,        ///< Reference to change
+  			 const T& val)  ///< Value to set
+      : ref(ref),oldVal(ref)
+    {
+      // Set the new value
+      ref=
+  	val;
+    }
+    
+    /// Delete and decrease indent level
+    ~ScopeChangeAttribute()
+    {
+      // Set back the old value
+      ref=
+  	oldVal;
+    }
+  };
+  
+  /// Deduction guide for ScopeChangeAttribute
+  template <typename T>
+    ScopeChangeAttribute(T& ref,
+  			 const T& val)
+    -> ScopeChangeAttribute<T>;
+  
+  /// Set for current scope
+#define SET_FOR_CURRENT_SCOPE(VAR,...)				\
+  ScopeChangeAttribute NAME2(SET,__LINE__)(VAR,__VA_ARGS__)
+  
+  /// Set the precision for current scope
+#define SCOPE_REAL_PRECISION(LOGGER,VAL)			\
+  SET_FOR_CURRENT_SCOPE(LOGGER.realPrecision,VAL)
+  
+  /// Set printing or not sign at the beginning of a number for current scope
+#define SCOPE_ALWAYS_PUT_SIGN(LOGGER)			\
+  SET_FOR_CURRENT_SCOPE(LOGGER.alwaysPrintSign,true)
   
   extern Logger logger;
 }
