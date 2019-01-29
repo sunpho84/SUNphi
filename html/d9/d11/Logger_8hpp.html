@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Logger.hpp File Reference</div>  </div>
@@ -132,6 +133,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html">SUNphi::ScopeIndenter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the logger indentation level for the object scope.  <a href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html">SUNphi::ScopeChangeAttribute&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the attribute for the object scope.  <a href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -141,9 +145,29 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ab1b978e813f771934563cbe85ba2a1ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#ab1b978e813f771934563cbe85ba2a1ed">INDENT_MORE_FOR_CURRENT_SCOPE</a>(LOGGER)</td></tr>
-<tr class="memdesc:ab1b978e813f771934563cbe85ba2a1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the logger to be more indented.  <a href="#ab1b978e813f771934563cbe85ba2a1ed">More...</a><br /></td></tr>
-<tr class="separator:ab1b978e813f771934563cbe85ba2a1ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc0d2846722c538df677fa14c79a3cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#aecc0d2846722c538df677fa14c79a3cf">SCOPE_INDENT</a>(VAR)</td></tr>
+<tr class="memdesc:aecc0d2846722c538df677fa14c79a3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the logger to be more indented.  <a href="#aecc0d2846722c538df677fa14c79a3cf">More...</a><br /></td></tr>
+<tr class="separator:aecc0d2846722c538df677fa14c79a3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270ce01030eddbe38ed54671998a2462"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a270ce01030eddbe38ed54671998a2462"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a270ce01030eddbe38ed54671998a2462">SET_FOR_CURRENT_SCOPE</a>(VAR, ...)&#160;&#160;&#160;ScopeChangeAttribute <a class="el" href="../../db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8">NAME2</a>(SET,__LINE__)(VAR,__VA_ARGS__)</td></tr>
+<tr class="memdesc:a270ce01030eddbe38ed54671998a2462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set for current scope. <br /></td></tr>
+<tr class="separator:a270ce01030eddbe38ed54671998a2462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2">SCOPE_REAL_PRECISION</a>(LOGGER,  VAL)&#160;&#160;&#160;<a class="el" href="../../d9/d11/Logger_8hpp.html#a270ce01030eddbe38ed54671998a2462">SET_FOR_CURRENT_SCOPE</a>(LOGGER.realPrecision,VAL)</td></tr>
+<tr class="memdesc:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the precision for current scope. <br /></td></tr>
+<tr class="separator:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18493bdb144a0dcbb5763d22c722e40b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18493bdb144a0dcbb5763d22c722e40b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a18493bdb144a0dcbb5763d22c722e40b">SCOPE_ALWAYS_PUT_SIGN</a>(LOGGER)&#160;&#160;&#160;<a class="el" href="../../d9/d11/Logger_8hpp.html#a270ce01030eddbe38ed54671998a2462">SET_FOR_CURRENT_SCOPE</a>(LOGGER.alwaysPrintSign,true)</td></tr>
+<tr class="memdesc:a18493bdb144a0dcbb5763d22c722e40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set printing or not sign at the beginning of a number for current scope. <br /></td></tr>
+<tr class="separator:a18493bdb144a0dcbb5763d22c722e40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7c39db9a5ee077e2cdbd642028b21a76"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7c39db9a5ee077e2cdbd642028b21a76">SUNphi::ScopeChangeAttribute</a> (T &amp;ref, const T &amp;val) -&gt; ScopeChangeAttribute&lt; T &gt;</td></tr>
+<tr class="memdesc:a7c39db9a5ee077e2cdbd642028b21a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html" title="Change the attribute for the object scope. ">ScopeChangeAttribute</a>. <br /></td></tr>
+<tr class="separator:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -155,25 +179,24 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ab1b978e813f771934563cbe85ba2a1ed"></a>
+<a class="anchor" id="aecc0d2846722c538df677fa14c79a3cf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define INDENT_MORE_FOR_CURRENT_SCOPE</td>
+          <td class="memname">#define SCOPE_INDENT</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">LOGGER</td><td>)</td>
+          <td class="paramname">VAR</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                        \</div><div class="line">  ScopeIndenter <a class="code" href="../../db/d18/Macros_8hpp.html#a9b87b5f87269df7806a65ffd37008083">NAME4</a>(__FILE__,__LINE__,LOGGER,INDENTER)(<a class="code" href="../../d3/dd7/namespaceSUNphi.html#a19a03905f8d2122989469d759e85bfd5">logger</a>)</div><div class="ttc" id="namespaceSUNphi_html_a19a03905f8d2122989469d759e85bfd5"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#a19a03905f8d2122989469d759e85bfd5">SUNphi::logger</a></div><div class="ttdeci">Logger logger</div></div>
-<div class="ttc" id="Macros_8hpp_html_a9b87b5f87269df7806a65ffd37008083"><div class="ttname"><a href="../../db/d18/Macros_8hpp.html#a9b87b5f87269df7806a65ffd37008083">NAME4</a></div><div class="ttdeci">#define NAME4(X, Y, W, Z)</div><div class="ttdoc">Merges four tokens with three _. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/Macros_8hpp_source.html#l00041">Macros.hpp:41</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  ScopeIndenter <a class="code" href="../../db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8">NAME2</a>(SCOPE_INDENTER,__LINE__)(VAR)</div><div class="ttc" id="Macros_8hpp_html_ac70b472800724a4a60166f92cea1c6c8"><div class="ttname"><a href="../../db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8">NAME2</a></div><div class="ttdeci">#define NAME2(X, Y)</div><div class="ttdoc">Merges two tokens using a _. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/Macros_8hpp_source.html#l00033">Macros.hpp:33</a></div></div>
 </div><!-- fragment -->
 <p>Mark the logger to be more indented. </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00237">237</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>

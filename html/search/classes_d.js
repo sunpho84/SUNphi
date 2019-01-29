@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html',1,'SUNphi']]],
+  ['scopechangeattribute',['ScopeChangeAttribute',['../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html',1,'SUNphi']]],
   ['scopeindenter',['ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],

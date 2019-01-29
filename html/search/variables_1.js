@@ -4,6 +4,7 @@ var searchData=
   ['addflags',['addFlags',['../d3/dd7/namespaceSUNphi.html#ac498ba60d979d9b5c832e56ac5345396',1,'SUNphi']]],
   ['alignment',['ALIGNMENT',['../d3/dd7/namespaceSUNphi.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],
   ['all_5franks',['ALL_RANKS',['../d8/d6a/Mpi_8hpp.html#ad4d63f013ed16da4e22ee5e1b6c4bc36',1,'SUNphi::Mpi']]],
+  ['alwaysprintsign',['alwaysPrintSign',['../d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22',1,'SUNphi::Logger']]],
   ['areintegrals',['areIntegrals',['../d3/dd7/namespaceSUNphi.html#ad583dd449e2a359a9429060db23e5d4e',1,'SUNphi']]],
   ['areintegrals_3c_20t_20_3e',['areIntegrals&lt; T &gt;',['../d3/dd7/namespaceSUNphi.html#a2f56717fe042f165d2ac201640f3898c',1,'SUNphi']]],
   ['areordered',['areOrdered',['../d3/dd7/namespaceSUNphi.html#abfa5399478de852ac1359f4c95a86c50',1,'SUNphi']]],

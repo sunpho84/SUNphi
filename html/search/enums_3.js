@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['started',['Started',['../d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2',1,'SUNphi::Timer']]]
+  ['realformat',['RealFormat',['../d3/d78/classSUNphi_1_1Logger.html#abd814f590e576f3d5e815a2281424b5c',1,'SUNphi::Logger']]]
 ];

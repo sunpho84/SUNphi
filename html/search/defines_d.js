@@ -2,6 +2,10 @@ var searchData=
 [
   ['same_5ffund_5fas_5fref',['SAME_FUND_AS_REF',['../d2/d69/NnarySmET_8hpp.html#a02a293e0950fb7d86bc561238c395038',1,'NnarySmET.hpp']]],
   ['same_5ftk_5fas_5fref',['SAME_TK_AS_REF',['../d2/d69/NnarySmET_8hpp.html#a5de97755944e8a8cba5ba57bc37feff3',1,'NnarySmET.hpp']]],
+  ['scope_5falways_5fput_5fsign',['SCOPE_ALWAYS_PUT_SIGN',['../d9/d11/Logger_8hpp.html#a18493bdb144a0dcbb5763d22c722e40b',1,'Logger.hpp']]],
+  ['scope_5findent',['SCOPE_INDENT',['../d9/d11/Logger_8hpp.html#aecc0d2846722c538df677fa14c79a3cf',1,'Logger.hpp']]],
+  ['scope_5freal_5fprecision',['SCOPE_REAL_PRECISION',['../d9/d11/Logger_8hpp.html#a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2',1,'Logger.hpp']]],
+  ['set_5ffor_5fcurrent_5fscope',['SET_FOR_CURRENT_SCOPE',['../d9/d11/Logger_8hpp.html#a270ce01030eddbe38ed54671998a2462',1,'Logger.hpp']]],
   ['sfinae_5fon_5ftemplate_5farg',['SFINAE_ON_TEMPLATE_ARG',['../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS',['../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs_5fcheck',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK',['../d4/d77/SFINAE_8hpp.html#ac4472c6b6673ff19a71572cb014260dc',1,'SFINAE.hpp']]],

@@ -144,6 +144,7 @@ var namespaceSUNphi =
     [ "RwCol", "d8/dc9/structSUNphi_1_1RwCol.html", "d8/dc9/structSUNphi_1_1RwCol" ],
     [ "RwSpin", "dd/ded/structSUNphi_1_1RwSpin.html", "dd/ded/structSUNphi_1_1RwSpin" ],
     [ "ScalarWrapper", "db/d12/classSUNphi_1_1ScalarWrapper.html", "db/d12/classSUNphi_1_1ScalarWrapper" ],
+    [ "ScopeChangeAttribute", "dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html", "dd/d9e/classSUNphi_1_1ScopeChangeAttribute" ],
     [ "ScopeIndenter", "d3/d11/classSUNphi_1_1ScopeIndenter.html", "d3/d11/classSUNphi_1_1ScopeIndenter" ],
     [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ],
     [ "SmET", "d1/d31/structSUNphi_1_1SmET.html", "d1/d31/structSUNphi_1_1SmET" ],

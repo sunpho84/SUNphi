@@ -22,6 +22,7 @@ var searchData=
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
   ['allreduce',['allReduce',['../d8/d6a/Mpi_8hpp.html#a79a6844180c53eff3fc7e29c63f35a7e',1,'SUNphi::Mpi']]],
   ['always_5finline',['ALWAYS_INLINE',['../d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a',1,'Inline.hpp']]],
+  ['alwaysprintsign',['alwaysPrintSign',['../d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22',1,'SUNphi::Logger']]],
   ['appendfirstn',['AppendFirstN',['../da/def/structSUNphi_1_1IntSeq.html#a81c147c227a4daa132137e3e175c0e87',1,'SUNphi::IntSeq']]],
   ['appendix_2ecpp',['appendix.cpp',['../dc/df8/appendix_8cpp.html',1,'']]],
   ['aredynamic',['AreDynamic',['../d8/df8/classSUNphi_1_1TensKind.html#a55e9d277b2e66ecfd8a01e75eabd3bfc',1,'SUNphi::TensKind']]],
@@ -43,7 +44,7 @@ var searchData=
   ['assign',['assign',['../d3/dd7/namespaceSUNphi.html#afde6f5de64de3abb2035ab4b14d70b19',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs)'],['../d3/dd7/namespaceSUNphi.html#aa3235642bedbaf4675b54936e87e2318',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)']]],
   ['assign_2ehpp',['Assign.hpp',['../d1/d9b/Assign_8hpp.html',1,'']]],
   ['assignable',['ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d',1,'BaseSmET.hpp']]],
-  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
+  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
   ['averagemeasure',['averageMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a',1,'SUNphi::Timer']]]
 ];

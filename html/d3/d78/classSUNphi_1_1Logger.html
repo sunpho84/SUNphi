@@ -108,7 +108,9 @@ $(document).ready(function(){initNavTree('d3/d78/classSUNphi_1_1Logger.html','..
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d7/db7/classSUNphi_1_1Logger-members.html">List of all members</a>  </div>
@@ -122,6 +124,15 @@ $(document).ready(function(){initNavTree('d3/d78/classSUNphi_1_1Logger.html','..
 
 <p><code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abd814f590e576f3d5e815a2281424b5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd814f590e576f3d5e815a2281424b5c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#abd814f590e576f3d5e815a2281424b5c">RealFormat</a> { <b>GENERAL</b> =0, 
+<b>FIXED</b> =1, 
+<b>ENGINEER</b> =2
+ }<tr class="memdesc:abd814f590e576f3d5e815a2281424b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print mode for double/float. <br /></td></tr>
+</td></tr>
+<tr class="separator:abd814f590e576f3d5e815a2281424b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ef0544e6ff25d8c9896d9608d2f7377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ef0544e6ff25d8c9896d9608d2f7377"></a>
@@ -163,7 +174,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memdesc:a699d3b0b647ad1642b08bd530f36a7fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a c++ string. <br /></td></tr>
 <tr class="separator:a699d3b0b647ad1642b08bd530f36a7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26230d254d3b6ce80b2a1420cc44013"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#af26230d254d3b6ce80b2a1420cc44013">operator&lt;&lt;</a> (const double &amp;d)</td></tr>
+<tr class="memdesc:af26230d254d3b6ce80b2a1420cc44013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a double.  <a href="#af26230d254d3b6ce80b2a1420cc44013">More...</a><br /></td></tr>
 <tr class="separator:af26230d254d3b6ce80b2a1420cc44013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6a219a6490070ba94ca36b863c059447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a219a6490070ba94ca36b863c059447"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a6a219a6490070ba94ca36b863c059447">realPrecision</a> {6}</td></tr>
+<tr class="memdesc:a6a219a6490070ba94ca36b863c059447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precision to print real number. <br /></td></tr>
+<tr class="separator:a6a219a6490070ba94ca36b863c059447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0daacc2890b7169796686d87e31ebf22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0daacc2890b7169796686d87e31ebf22"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22">alwaysPrintSign</a> {false}</td></tr>
+<tr class="memdesc:a0daacc2890b7169796686d87e31ebf22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to determine whether print always or not the sign. <br /></td></tr>
+<tr class="separator:a0daacc2890b7169796686d87e31ebf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf367c9c42de758440776d5b4433185e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf367c9c42de758440776d5b4433185e"></a>
+<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#abd814f590e576f3d5e815a2281424b5c">RealFormat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#aaf367c9c42de758440776d5b4433185e">realFormat</a> {RealFormat::GENERAL}</td></tr>
+<tr class="memdesc:aaf367c9c42de758440776d5b4433185e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format mode for real number. <br /></td></tr>
+<tr class="separator:aaf367c9c42de758440776d5b4433185e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -241,7 +268,7 @@ FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -269,9 +296,9 @@ FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </div><div class="memdoc">
 
 <p>Prints a string. </p>
-<p>Poiter to the first char of the string </p>
+<p>Pointer to the first char of the string </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -296,10 +323,12 @@ FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Prints a double</p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>fix the precision </dd></dl>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Prints a double. </p>
+<p>String to print real numbers</p>
+<p>The first component is signed or not The second component is the format </p>
+
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00193">193</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
