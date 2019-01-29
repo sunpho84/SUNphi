@@ -16,9 +16,10 @@
 #endif
 
 #include <external/inplace_function.h>
-#include <Tuple.hpp>
-#include <system/Debug.hpp>
+
 #include <containers/Vector.hpp>
+#include <system/Debug.hpp>
+#include <Tuple.hpp>
 
 namespace SUNphi
 {
@@ -34,7 +35,7 @@ namespace SUNphi
 #ifdef DEBUG_MODE
       
       /// Value used to check the barrier
-      const char* currentTag;
+      const char* currBarrName;
       
 #endif
       
@@ -105,21 +106,21 @@ namespace SUNphi
       }
       
       /// Synchronize checking the name of the barrier
-      void sync(const char* tag, ///< Value determining the tag
-		const int& rank) ///< Rank used to check
+      void sync(const char* barrName, //< Name of the barrier
+		const int& threadId) ///< Id of the thread used coming to check
       {
 	rawSync();
 	
 #ifdef DEBUG_MODE
 	
-	if(rank==masterRank)
-	  currentTag=
-	    tag;
+	if(threadId==masterThreadId)
+	  currBarrName=
+	    barrName;
 	
 	rawSync();
 	
-	if(currentTag!=tag)
-	  CRASH("Rank",rank,"was expecting",tag,"but",currentTag,"encountered");
+	if(currBarrName!=barrName)
+	  CRASH("Thread id",threadId,"was expecting",currBarrName,"but",barrName,"encountered");
 	
 #endif
 	
@@ -136,9 +137,12 @@ namespace SUNphi
     /// States if the pool is filled
     bool isFilled{false};
     
-    /// Rank of master thread
-    static constexpr int masterRank=
+    /// Thread id of master thread
+    static constexpr int masterThreadId=
       0;
+    
+    /// Thread id of master thread
+    const pthread_t masterThreadTag{getThreadTag()};
     
     /// Type to encapsulate the work to be done
     using Work=
@@ -155,27 +159,35 @@ namespace SUNphi
     /// At the beginning, the pool contains only the main thread, with
     /// its id. Then when is filled, the pool contains the thread
     /// identifier. This is an opaque number, which cannot serve the
-    /// purpose of getting the thread rank in the pool. This is why we define the next function
+    /// purpose of getting the thread progressive in the pool. This is
+    /// why we define the next function
     Vector<pthread_t> pool{1,pthread_self()};
     
-    /// Get the rank of the current thread
-    int getThreadRank()
+    /// Return the thread tag
+    static pthread_t getThreadTag()
+    {
+      return
+	pthread_self();
+    }
+    
+    /// Get the thread of the current thread
+    int getThreadId()
       const
     {
       /// Current pthread
-      const pthread_t cur=
-	pthread_self();
+      const pthread_t threadTag=
+	getThreadTag();
       
       /// Position in the pool
-      int rank=
-	pool.findFirst(cur);
+      int threadId=
+	pool.findFirst(threadTag);
       
       // Check that the thread is found
-      if(rank==nActiveThreads())
-	CRASH("Unable to find cur thread",cur);
+      if(threadId==nActiveThreads())
+	CRASH("Unable to find thread with tag",threadTag);
       
       return
-	rank;
+	threadId;
     }
     
     /// Number of threads
@@ -185,31 +197,31 @@ namespace SUNphi
     Barrier barrier;
     
     /// Check that only the pool is accessing to a checkpoint
-    void checkPoolOnly(const int& rank)
+    void checkPoolOnly(const int& threadId) ///< Calling thread
       const
     {
-      if(rank==masterRank)
+      if(threadId==masterThreadId)
 	CRASH("Only pool threads are allowed");
     }
     
     /// Check that only the master thread is accessing to a checkpoint
-    void checkMasterOnly(const int& rank)
+    void checkMasterOnly(const int& threadId) ///< Calling thread
       const
     {
-      if(rank!=masterRank)
-	CRASH("Only master thread is allowed, obtained",rank);
+      if(threadId!=masterThreadId)
+	CRASH("Only master thread is allowed, but thread",threadId,"is trying to act");
     }
     
-    /// Pair of parameters containing the threadpool and the thread rank
+    /// Pair of parameters containing the threadpool and the thread id
     using ThreadPars=
       Tuple<ThreadPool*,int>;
     
     /// Function called when starting a thread
     ///
-    /// When called, get the thread pool and the thread rank as
+    /// When called, get the thread pool and the thread thread as
     /// arguments through the function parameter. This is expcted to
     /// be allocated outside through a \c new call, so it is deleted
-    /// after taking reference to the pool, and checking the thread rank.
+    /// after taking reference to the pool, and checking the thread thread.
     ///
     /// All threads but the master one swim in this pool back and forth,
     /// waiting for job to be done.
@@ -227,13 +239,13 @@ namespace SUNphi
       ThreadPool& pool=
 	*get<0>(pars);
       
-      /// Copy the thread rank
-      int rank=
+      /// Copy the thread thread
+      int threadId=
 	get<1>(pars);
       
       delete ptr;
       
-      printf("Thread: %d (check: %d) entering the pool, %lu %p\n",rank,pool.getThreadRank(),pthread_self(),_ptr);
+      printf("Thread id: %d (check: %d) entering the pool, %lu %p\n",threadId,pool.getThreadId(),pthread_self(),_ptr);
       
       /// Work until asked to empty
       bool keepSwimming=
@@ -241,22 +253,22 @@ namespace SUNphi
       
       while(keepSwimming)
 	{
-	  pool.waitForWorkToBeAssigned(rank);
+	  pool.waitForWorkToBeAssigned(threadId);
 	  
 	  keepSwimming=
 	    pool.isFilled;
 	  
-	  printf("Thread: %d keep swimming: %d\n",rank,keepSwimming);
+	  printf("Thread id: %d keep swimming: %d\n",threadId,keepSwimming);
 	  
 	  if(keepSwimming)
 	    {
-	      pool.work(rank);
+	      pool.work(threadId);
 	      
-	      pool.tellTheMasterWorkIsFinished(rank);
+	      pool.tellTheMasterWorkIsFinished(threadId);
 	    }
 	}
       
-      printf("Thread: %d (check: %d) exiting the pool, %lu %p\n",rank,pool.getThreadRank(),pthread_self(),_ptr);
+      printf("Thread: %d (check: %d) exiting the pool, %lu %p\n",threadId,pool.getThreadId(),pthread_self(),_ptr);
       
       return
 	nullptr;
@@ -280,15 +292,15 @@ namespace SUNphi
       // Resize the pool to contain all threads
       pool.resize(nThreads);
       
-      for(int iThread=1;iThread<nThreads;iThread++)
+      for(int threadId=1;threadId<nThreads;threadId++)
 	{
-	  printf("%d spwawned\n",iThread);
+	  printf("thread of id %d spwawned\n",threadId);
 	  
 	  // Allocates the parameters of the thread
 	  ThreadPars* pars=
-	    new ThreadPars{this,iThread};
+	    new ThreadPars{this,threadId};
 	  
-	  if(pthread_create(&pool[iThread],attr,swim,pars)!=0)
+	  if(pthread_create(&pool[threadId],attr,swim,pars)!=0)
 	    switch(errno)
 	      {
 	      case EAGAIN:
@@ -329,11 +341,11 @@ namespace SUNphi
 	false;
       
       /// Stop the pool from working
-      tellThePoolNotToWorkAnyLonger(masterRank);
+      tellThePoolNotToWorkAnyLonger(masterThreadId);
       
-      for(int iThread=1;iThread<nThreads;iThread++)
+      for(int threadId=1;threadId<nThreads;threadId++)
 	{
-	  if(pthread_join(pool[iThread],nullptr)!=0)
+	  if(pthread_join(pool[threadId],nullptr)!=0)
 	    switch(errno)
 	      {
 	      case EDEADLK:
@@ -349,7 +361,7 @@ namespace SUNphi
 		CRASH("Other error");
 	      }
 	  
-	  printf("%d destroyed\n",iThread);
+	  printf("Thread of id %d destroyed\n",threadId);
 	}
       
       // Resize down the pool
@@ -357,6 +369,14 @@ namespace SUNphi
     }
     
   public:
+    
+    /// Compares the thread tag with the master one
+    bool isMasterThread()
+      const
+    {
+      return
+	getThreadTag()==masterThreadTag;
+    }
     
     /// Gets the number of allocated threads
     int nActiveThreads()
@@ -375,39 +395,39 @@ namespace SUNphi
       workAssignmentTag;
     
     /// Start the work for the other threads
-    void tellThePoolWorkIsAssigned(const int& rank) ///< Thread rank
+    void tellThePoolWorkIsAssigned(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(rank);
+      checkMasterOnly(threadId);
       
-      printf("Thread %d is telling the pool that work has been assigned (tag: %s)\n",rank,workAssignmentTag);
+      printf("Thread of id %d is telling the pool that work has been assigned (tag: %s)\n",threadId,workAssignmentTag);
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
 	false;
       
       // The master signals to the pool to start work by synchronizing with it
-      barrier.sync(workAssignmentTag,rank);
+      barrier.sync(workAssignmentTag,threadId);
     }
     
     /// Waiting for work to be done means to synchronize with the master
-    void waitForWorkToBeAssigned(const int& rank) ///< Thread rank
+    void waitForWorkToBeAssigned(const int& threadId) ///< Thread id
     {
-      checkPoolOnly(rank);
+      checkPoolOnly(threadId);
       
-      printf("Thread %d is waiting the pool for work to be assigned (tag %s)\n",rank,workAssignmentTag);
+      printf("Thread of id %d is waiting the pool for work to be assigned (tag %s)\n",threadId,workAssignmentTag);
       
-      barrier.sync(workAssignmentTag,rank);
+      barrier.sync(workAssignmentTag,threadId);
     }
     
     /// Stop the pool from working
-    void tellThePoolNotToWorkAnyLonger(const int& rank) ///< Thread rank
+    void tellThePoolNotToWorkAnyLonger(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(rank);
+      checkMasterOnly(threadId);
       
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      printf("Thread %d is telling the pool not to work any longer (tag: %s)\n",rank,workNoMoreTag);
+      printf("Thread of id %d is telling the pool not to work any longer (tag: %s)\n",threadId,workNoMoreTag);
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -415,7 +435,7 @@ namespace SUNphi
       
       // The master signals to the pool that he is waiting for the
       // pool to finish the work
-      barrier.sync(workNoMoreTag,rank);
+      barrier.sync(workNoMoreTag,threadId);
     }
     
     /// Tag to mark that the work is finished
@@ -423,25 +443,25 @@ namespace SUNphi
       "WorkFinished";
     
     /// Waiting for work to be done means to synchronize with the master
-    void tellTheMasterWorkIsFinished(const int& rank) ///< Thread rank
+    void tellTheMasterWorkIsFinished(const int& threadId) ///< Thread id
     {
-      checkPoolOnly(rank);
+      checkPoolOnly(threadId);
       
-      printf("Thread %d has finished working (tag: %s)\n",rank,workFinishedTag);
+      printf("Thread of id %d has finished working (tag: %s)\n",threadId,workFinishedTag);
       
-      barrier.sync(workFinishedTag,rank);
+      barrier.sync(workFinishedTag,threadId);
     }
     
     /// Wait that the work assigned to the pool is finished
-    void waitForPoolToFinishAssignedWork(const int& rank) ///< Thread rank
+    void waitForPoolToFinishAssignedWork(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(rank);
+      checkMasterOnly(threadId);
       
-      printf("Thread %d is waiting for work to be finished (tag: %s)\n",rank,workFinishedTag);
+      printf("Thread of id %d is waiting for work to be finished (tag: %s)\n",threadId,workFinishedTag);
       
       // The master signals to the pool that he is waiting for the
       // pool to finish the work
-      barrier.sync(workFinishedTag,rank);
+      barrier.sync(workFinishedTag,threadId);
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -451,7 +471,7 @@ namespace SUNphi
     /// Gives to all threads some work to be done
     ///
     /// The object \c f must be callable, returning void and getting
-    /// an integer as a parameter, representing the thread rank
+    /// an integer as a parameter, representing the thread id
     template <typename F>
     void workOn(F f) ///< Function embedding the work
     {
@@ -464,12 +484,12 @@ namespace SUNphi
 	f;
       
       // Set off the other threads
-      tellThePoolWorkIsAssigned(masterRank);
+      tellThePoolWorkIsAssigned(masterThreadId);
       
       work(0);
       
       // Wait that the pool finishes the work
-      waitForPoolToFinishAssignedWork(masterRank);
+      waitForPoolToFinishAssignedWork(masterThreadId);
     }
     
     /// Split a loop into \c nTrheads chunks, giving each chunk as a work for a corresponding thread
@@ -477,9 +497,9 @@ namespace SUNphi
 	      typename F>              // Type for the work function
     void loopSplit(const Size& beg,  ///< Beginning of the loop
 		   const Size& end,  ///< End of the loop
-		   F f)              ///< Function to be called, accepting two integers: the first is the thread rank, the second the loop argument
+		   F f)              ///< Function to be called, accepting two integers: the first is the thread id, the second the loop argument
     {
-      workOn([beg,end,nPieces=this->nActiveThreads(),&f](const int& rank)
+      workOn([beg,end,nPieces=this->nActiveThreads(),&f](const int& threadId)
 	     {
 	       /// Workload for each thread, taking into account the remainder
 	       const Size threadLoad=
@@ -487,14 +507,14 @@ namespace SUNphi
 	       
 	       /// Beginning of the chunk
 	       const Size threadBeg=
-		 threadLoad*rank;
+		 threadLoad*threadId;
 	       
 	       /// End of the chunk
 	       const Size threadEnd=
 		 std::min(end,threadBeg+threadLoad);
 	       
 	       for(Size i=threadBeg;i<threadEnd;i++)
-		 f(rank,i);
+		 f(threadId,i);
 	     });
     }
     
