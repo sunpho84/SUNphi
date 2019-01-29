@@ -25,21 +25,21 @@
 
 /// Concatenate three tokens
 #define CONCAT3(X,Y,Z)				\
-  CONCAT(CONCAT2(X,Y),Z)
+  CONCAT2(CONCAT2(X,Y),Z)
 
 /////////////////////////////////////////////////////////////////
 
 /// Merges two tokens using a _
 #define NAME2(X,Y)				\
-  X ## _ ## Y
+  CONCAT3(X,_,Y)
 
 /// Merges three tokens with two _
 #define NAME3(X,Y,Z)				\
-  X ## _ ## Y ## _ ## Z
+  CONCAT3(X,_,CONCAT3(Y,Z))
 
 /// Merges four tokens with three _
 #define NAME4(X,Y,W,Z)				\
-    X ## _ ## Y ## _ ## W ## _ ## Z
+  CONCAT3(X,_,CONCAT3(Y,CONVAT3(W,Z)))
 
 namespace SUNphi
 {
