@@ -12,6 +12,8 @@
 #include <system/MpiImpl.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
+#include <utility/Aliver.hpp>
+#include <utility/SingleInstance.hpp>
 
 #ifndef CONFIG_TIME
  /// Null time
@@ -28,6 +30,12 @@
 /// Namespace of the SUNphi library
 namespace SUNphi
 {
+  int aliverHelper()
+  {
+    return
+      0;
+  }
+  
   /// Statistics
   Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
   
@@ -36,94 +44,99 @@ namespace SUNphi
   /// \todo check if we can refer to stdout
   Logger logger("/dev/stdout");
   
-  int aliverHelper()
-  {
-    return
-      0;
-  }
+  /// Mpi initializer
+  Mpi mpi;
   
-  /// Prints the banner
-  void printBanner()
+  /// Class used to provocate initialization of Mpi
+  class Aliver : public SingleInstance<Aliver>
   {
-    if(Mpi::isMasterRank())
-      printf(
-	     "       ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  \n"
-	     "       █░█       █░█       █░█         \t" "                 █░█                   \n"
-	     "  ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  \n"
-	     "  █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  \n"
-	     "   █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                \n"
-	     "    █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            \n"
-	     "     █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           \n"
-	     "      █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         \n"
-	     " ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        \n"
-	     "█░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n"
-	     " ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n"
-	     "       ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        \n"
-	     "      █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         \n"
-	     "     █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          \n"
-	     "    █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            \n"
-	     "   █░█     █░███████████░█     █░█    \t"  "             ███████████              \n"
-	     "  █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  \n"
-	     "  ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  \n"
-	     "        █░█      █░█      █░█        \t"   "                 █░█                 \n"
-	     "       █░█       █░█       █░█       \t"   "                 █░█                 \n"
-	     "       ▀▀        ▀█▀        ▀▀      \t"    "                 ▀█▀                \n");
-  }
-  
-  /// Prints the version, and contacts
-  void printVersionContacts()
-  {
-    if(Mpi::isMasterRank())
-      printf("\nInitializing %s library, v" PACKAGE_VERSION ", send bug report to <" PACKAGE_BUGREPORT ">\n",PACKAGE_NAME);
-  }
-  
-  /// Prints the git info
-  void printGitInfo()
-  {
-    if(Mpi::isMasterRank())
-      printf("Commit %s made at %s by %s with message: \"%s\"\n",GIT_HASH,GIT_TIME,GIT_COMMITTER,GIT_LOG);
-  }
-  
-  /// Prints configure info
-  void printConfigurePars()
-  {
-    if(Mpi::isMasterRank())
-      printf("Configured at %s with flags: %s\n",CONFIG_TIME,CONFIG_FLAGS);
-  }
-  
-  /// Initialize the SUNphi library
-  __attribute__((constructor))
-  void makeAlive()
-  {
-    Mpi::init();
     
-    printBanner();
-    printVersionContacts();
-    printGitInfo();
-    printConfigurePars();
+    /// Prints the banner
+    void printBanner()
+      const
+    {
+      logger<<"       ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  \n";
+      logger<<"       █░█       █░█       █░█         \t" "                 █░█                   \n";
+      logger<<"  ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  \n";
+      logger<<"  █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  \n";
+      logger<<"   █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                \n";
+      logger<<"    █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            \n";
+      logger<<"     █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           \n";
+      logger<<"      █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         \n";
+      logger<<" ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        \n";
+      logger<<"█░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n";
+      logger<<" ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n";
+      logger<<"       ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        \n";
+      logger<<"      █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         \n";
+      logger<<"     █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          \n";
+      logger<<"    █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            \n";
+      logger<<"   █░█     █░███████████░█     █░█    \t"  "             ███████████              \n";
+      logger<<"  █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  \n";
+      logger<<"  ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  \n";
+      logger<<"        █░█      █░█      █░█        \t"   "                 █░█                 \n";
+      logger<<"       █░█       █░█       █░█       \t"   "                 █░█                 \n";
+      logger<<"       ▀▀        ▀█▀        ▀▀      \t"    "                 ▀█▀                \n";
+    }
     
-    ThreadPool threads;
+    /// Prints the version, and contacts
+    void printVersionContacts()
+      const
+    {
+      logger<<"\nInitializing "<<PACKAGE_NAME<<" library, v"<<PACKAGE_VERSION<<", send bug report to <"<<PACKAGE_BUGREPORT<<">\n";
+    }
     
-    threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
+    /// Prints the git info
+    void printGitInfo()
+      const
+    {
+      logger<<"Commit "<<GIT_HASH<<" made at "<<GIT_TIME<<" by "<<GIT_COMMITTER<<" with message: \""<<GIT_LOG<<"\"\n";
+    }
     
-    threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
+    /// Prints configure info
+    void printConfigurePars()
+      const
+    {
+      logger<<"Configured at "<<CONFIG_TIME<<" with flags: "<<CONFIG_FLAGS<<"\n";
+    }
     
-  }
+    /// Says bye bye
+    void printBailout()
+      const
+    {
+      logger<<"\n Ciao!\n\n";
+    }
+    
+  public:
+    
+    /// Creates
+    Aliver()
+    {
+      printBanner();
+      printVersionContacts();
+      printGitInfo();
+      printConfigurePars();
+      
+      ThreadPool threads;
+      
+      // ASM_BOOKMARK("See thread self");
+      
+      // bool i=threads.isMasterThread();
+      // ASM_BOOKMARK("See thread self");
+      
+      // logger<<"is: "<<i<<std::endl;
+      
+      threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
+      
+      threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
+    }
+    
+    /// Destroyer
+    ~Aliver()
+    {
+      printBailout();
+    }
+  };
   
-  /// Says bye bye
-  void printBailout()
-  {
-    if(Mpi::isMasterRank())
-      printf("\n Ciao!\n\n");
-  }
-  
-  /// Finalize the SUNphi library
-  __attribute__((destructor))
-  void makeDead()
-  {
-    Mpi::finalize();
-    
-    printBailout();
-  }
+  Aliver aliver;
 }
 

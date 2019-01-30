@@ -573,7 +573,7 @@ void checkMPIisInitalized()
 {
   /// Initialization flag
   const int isInitialized=
-    Mpi::isInitialized();
+    mpi.isInitialized();
   
   if(not isInitialized)
     CRASH("MPI not initialized!");
@@ -590,14 +590,14 @@ void checkMPIallReduce()
   
   /// Sum 2
   const int sum=
-    Mpi::allReduce(val);
+    mpi.allReduce(val);
   
   /// Expected value of the sum
   const int expSum=
-    2*Mpi::nRanks();
+    2*mpi.nRanks();
   
   if(sum!=expSum)
-    CRASH("Summing ",val," on all",Mpi::nRanks(),"nodes produced",sum,"instead of expected",expSum);
+    CRASH("Summing ",val," on all",mpi.nRanks(),"nodes produced",sum,"instead of expected",expSum);
   
   TEST_PASSED;
 }

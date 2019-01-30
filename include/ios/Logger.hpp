@@ -128,6 +128,8 @@ namespace SUNphi
       prependTime(prependTime)
     {
       this->open(path);
+      
+      *this<<"Logger initialized"<<std::endl;
     }
     
     /// Destroy

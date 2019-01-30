@@ -5,10 +5,6 @@
 ///
 /// \brief Incapsulate all functionalities of MPI into a more
 /// convenient form
-///
-/// Automatically initialize MPI with the inclusion of the library,
-/// unless the macro \c SUNPHI_DO_NOT_INITIALIZE_MPI is set before
-/// including SUNphi.hpp
 
 #ifdef HAVE_CONFIG_H
  #include "config.hpp"
@@ -18,73 +14,106 @@
  #include <mpi.h>
 #endif
 
+#include <ios/Logger.hpp>
+#include <utility/SingleInstance.hpp>
+
 namespace SUNphi
 {
- #ifdef USE_MPI
   
-  /// Provides link from a type to the matching \c MPI_Datatype
-  ///
-  /// Useful to allow template usage of MPI
-#define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
-  /*! \c MPI_Datatype corresponding to TYPE */		\
-  template <>						\
-  inline MPI_Datatype mpiType<TYPE>()			\
-  {							\
-    return						\
-      MPI_TYPE;						\
-  }
-  
-  /// MPI datatpe corresponding to not-provided type
-  template <typename T>
-  MPI_Datatype mpiType()
+  /// Class wrapping all MPI functionalities
+  class Mpi : public SingleInstance<Mpi>
   {
-    return
-      nullptr;
-  }
-  
-  PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
-  
-  PROVIDE_MPI_DATATYPE(MPI_INT,int);
-  
-  PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
-  
-  /// Crash on MPI error, providing a meaningful error
-#define MPI_CRASH_ON_ERROR(...)			\
-  Mpi::crashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
-  
-#endif
-  
-  namespace Mpi
-  {
-    /// Id of master rank
-    constexpr int MASTER_RANK=
-      0;
+#ifdef USE_MPI
     
-    /// Placeholder for all ranks
-    [[ maybe_unused ]]
-    constexpr int ALL_RANKS=
-      -1;
+    /// Provides link from a type to the matching \c MPI_Datatype
+    ///
+    /// Useful to allow template usage of MPI
+#define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
+    /*! \c MPI_Datatype corresponding to TYPE */	\
+    template <>						\
+    MPI_Datatype mpiType<TYPE>()			\
+      const						\
+    {							\
+      return						\
+	MPI_TYPE;					\
+    }
+    
+    /// MPI datatpe corresponding to not-provided type
+    template <typename T>
+    MPI_Datatype mpiType()
+      const
+    {
+      return
+	nullptr;
+    }
+    
+    PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
+    
+    PROVIDE_MPI_DATATYPE(MPI_INT,int);
+    
+    PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
+    
+    /// Crash on MPI error, providing a meaningful error
+#define MPI_CRASH_ON_ERROR(...)						\
+    Mpi::crashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
+#endif
     
     /// Decrypt the returned value of an MPI call
     ///
     /// Returns the value of \c rc
     template <typename...Args>
-    int crashOnError(const int line,
-		     const char *file,
-		     const char *function,
-		     const int rc,
-		     Args&&... args);
+    int crashOnError(const int line,         ///< Line of file where the error needs to be checked
+		     const char *file,      ///< File where the error must be checked
+		     const char *function,  ///< Function where the error was possibly raised
+		     const int rc,          ///< Exit condition of the called routine
+		     Args&&... args)        ///< Other arguments
+      const
+    {
+#ifdef USE_MPI
+      
+      if(rc!=MPI_SUCCESS and rank()==0)
+	{
+	  /// Length of the error message
+	  int len;
+	  
+	  /// Error message
+	  char err[MPI_MAX_ERROR_STRING];
+	  MPI_Error_string(rc,err,&len);
+	  
+	  internalCrash(line,file,args...,", raised error",rc,":",err);
+	}
+      
+#endif
+      
+      return
+	rc;
+    }
+    
+  public:
+    
+    /// Id of master rank
+    static constexpr int MASTER_RANK=
+      0;
+    
+    /// Placeholder for all ranks
+    [[ maybe_unused ]]
+    static constexpr int ALL_RANKS=
+      -1;
     
     /// Initialize MPI
-    inline void init()
+    Mpi()
     {
 #ifdef USE_MPI
       MPI_CRASH_ON_ERROR(MPI_Init(nullptr,nullptr),"Error initializing MPI");
+      
+      
+      logger<<"MPI initialized\n";
 #endif
     }
     
     /// Check initialization flag
-    inline int isInitialized()
+    bool isInitialized()
+      const
     {
       
 #ifdef USE_MPI
@@ -93,18 +122,19 @@ namespace SUNphi
       int res;
       MPI_CRASH_ON_ERROR(MPI_Initialized(&res),"Checking MPI initialization");
       
-      return res;
+      return
+	res;
       
 #else
       
-      return 1;
+      return
+	true;
       
 #endif
-      
     }
     
     /// Finalize MPI
-    inline void finalize()
+    ~Mpi()
     {
       
 #ifdef USE_MPI
@@ -115,8 +145,9 @@ namespace SUNphi
       
     }
     
-    /// Get current rank
-    inline int getRank()
+    /// Get current rank calling explicitly MPI
+    int getRank()
+      const
     {
       
 #ifdef USE_MPI
@@ -125,28 +156,33 @@ namespace SUNphi
       int res;
       MPI_CRASH_ON_ERROR(MPI_Comm_rank(MPI_COMM_WORLD,&res),"Getting current rank");
       
-      return res;
+      return
+	res;
       
 #else
       
-      return 0;
+      return
+	0;
       
 #endif
       
     }
     
     /// Cached value of current rank
-    inline int rank()
+    int rank()
+      const
     {
       /// Stored value
       static int _rank=
 	getRank();
       
-      return _rank;
+      return
+	_rank;
     }
     
-    /// Get the total number of ranks
-    inline int getNRanks()
+    /// Get the total number of ranks, calling explicitly MPI
+    int getNRanks()
+      const
     {
       
 #ifdef USE_MPI
@@ -155,39 +191,46 @@ namespace SUNphi
       int res;
       MPI_CRASH_ON_ERROR(MPI_Comm_size(MPI_COMM_WORLD,&res),"Getting total number of ranks");
       
-      return res;
+      return
+	res;
       
 #else
       
-      return 1;
+      return
+	1;
 	
 #endif
       
     }
     
     /// Check if this is the master rank
-    inline bool isMasterRank()
+    bool isMasterRank()
+      const
     {
       /// Store the result
       static bool is=
 	(rank()==MASTER_RANK);
       
-      return is;
+      return
+	is;
     }
     
     /// Cached value of total number of ranks
-    inline int nRanks()
+    int nRanks()
+      const
     {
       /// Stored value
       static int _nRanks=
 	getNRanks();
       
-      return _nRanks;
+      return
+	_nRanks;
     }
     
     /// Reduces among all MPI process
     template <typename T>
     T allReduce(const T& in)
+      const
     {
       
 #ifdef USE_MPI
@@ -206,7 +249,9 @@ namespace SUNphi
 #endif
       
     }
-  }
+  };
+  
+  extern Mpi mpi;
 }
 
 #ifdef USE_MPI

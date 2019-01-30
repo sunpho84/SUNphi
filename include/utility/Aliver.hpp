@@ -17,6 +17,10 @@ namespace SUNphi
   /// 2) static ensures that every TU gets a separate instance
   static int makeSureAliverIsReferenced=
     aliverHelper();
+  
+  class Aliver;
+  
+  extern Aliver aliver;
 }
 
 #endif
