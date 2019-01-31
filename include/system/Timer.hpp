@@ -272,6 +272,46 @@ namespace SUNphi
   
   /// Global timings
   extern Timer timings;
+  
+  /// Returns the duration of executing a function
+  template <typename F,                  // Function type
+	    typename...Args>             // Arguments type
+  auto durationOf(Duration& duration,  ///< Variable where to store the duration
+		  F&& f,               ///< Function to execute
+		  Args&&...args)       ///< Arguments to call
+  {
+    /// Beginning instant
+    Instant start=
+      takeTime();
+    
+    /// Store the result
+    auto res=
+      f(forw<Args>(args)...);
+    
+    duration=
+      takeTime()-start;
+    
+    return
+      res;
+  }
+  
+  /// Returns the duration of executing a function
+  ///
+  /// Result of f() is discarded
+  template <typename F,                  // Function type
+	    typename...Args>             // Arguments type
+  Duration durationOf(F&& f,            ///< Function to execute
+		      Args&&...args)    ///< Arguments to call
+  {
+    /// Result to be returned
+    Duration duration;
+    
+    duationOf(duration,forw<F>(f),forw<Args>(args)...);
+    
+    return
+      duration;
+  }
+  
 }
 
 #endif
