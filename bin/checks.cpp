@@ -9,7 +9,7 @@ using namespace SUNphi;
 
 /// Report that a test is passed
 #define TEST_PASSED \
-  cout<<__PRETTY_FUNCTION__<<" passed!"<<endl
+  logger<<__PRETTY_FUNCTION__<<" passed!"
 
 /// Prints an IntSeq
 template <int...Ints>
@@ -25,7 +25,7 @@ std::string printIntSeq(IntSeq<Ints...>)
 // void test_first_vectorizer()
 // {
 //   int a=MyTk::firstVectorizingComp<double>;
-//   cout<<a<<endl;
+//   logger<<a;
 // }
 
 /// Check that \c conj is ignored when Compl is not a component
@@ -715,7 +715,7 @@ void checkCombinatorial()
   
   for(auto i : c.getLast())
     {
-      cout<<i<<endl;
+      logger<<i;
     }
   
   TEST_PASSED;
@@ -734,11 +734,11 @@ void checkIsAliasing()
   auto a=wrap(Tens<TensKind<Compl>,double>{});
   auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
   
-  cout<< isSame<RemRef<decltype(a)>,RemRef<decltype(b)>> <<endl;
-  cout<<isSame<decltype(a),decltype(b)><<endl;
-  cout<<"t.isAliasing(t): "<<t.isAliasing(t.getStor())<<endl;
-  cout<<"t.isAliasing(u): "<<t.isAliasing(u.getStor())<<endl;
-  cout<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor())<<endl;
+  logger<< isSame<RemRef<decltype(a)>,RemRef<decltype(b)>> ;
+  logger<<isSame<decltype(a),decltype(b)>;
+  logger<<"t.isAliasing(t): "<<t.isAliasing(t.getStor());
+  logger<<"t.isAliasing(u): "<<t.isAliasing(u.getStor());
+  logger<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor());
 }
 
 void checkBindComplicatedExpression()
@@ -755,7 +755,7 @@ void checkBindComplicatedExpression()
   using MyTens=Tens<MyTk,double>;
   
   //int a=MyTk::firstVectorizingComp<double>;
-  //cout<<a<<endl;
+  //logger<<a;
   
   int vol=10;
   MyTens cicc(vol);
@@ -782,8 +782,8 @@ void checkBindComplicatedExpression()
   // // eval(binder1)=8.0;
   // printf("%d\n",cicc.getStor().nel);
   printf("ANNA %lg\n",binder1);
-  // cout<<Spacetime::name()<<endl;
-  // cout<<Col::name()<<endl;
+  // logger<<Spacetime::name();
+  // logger<<Col::name();
  }
 
 // void test_assigner()
@@ -799,7 +799,7 @@ void checkBindComplicatedExpression()
 //   MyTens1 cicc1;
 //   MyTens2 cicc2;
   
-//   cout<<"cicc1 storage: "<<getStor(cicc1)._v<<endl;
+//   logger<<"cicc1 storage: "<<getStor(cicc1)._v;
   
 //   for(int icol=0;icol<NCOL;icol++)
 //     for(int ispin=0;ispin<NSPIN;ispin++)
@@ -824,9 +824,9 @@ void checkBindComplicatedExpression()
 //   // 	{
 //   // 	  double b=col(spin(reim(cicc2,icompl),ispin),icol);
 //   // 	  a+=b;
-//   // 	  cout<<b<<endl;
+//   // 	  logger<<b;
 //   // 	}
-//   // cout<<a<<endl;
+//   // logger<<a;
   
 //   // using MyTk1=TensKind<Col,Compl>;
 //   // using MyTens1=Tens<MyTk1,double>;
@@ -842,16 +842,16 @@ void checkBindComplicatedExpression()
 //   //     col(reim(cicc1,icompl),icol).eval()=
 //   // 	icompl;
   
-//   // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+//   // logger<<"/////////////////////////////////////////////////////////////////";
 //   // // for(int icol=0;icol<NCOL;icol++)
 //   // //   for(int icompl=0;icompl<NCOMPL;icompl++)
 //   // //     {
 //   // // 	col(reim(cicc2,icompl),icol).eval()=
 //   // // 	  col(reim(conj(cicc1),icompl),icol).eval();
-//   // // 	cout<<col(reim(cicc2,icompl),icol).eval()<<
-//   // // 	  " "<<col(reim(cicc1,icompl),icol).eval()<<endl;
+//   // // 	logger<<col(reim(cicc2,icompl),icol).eval()<<
+//   // // 	  " "<<col(reim(cicc1,icompl),icol).eval();
 //   // //     }
-//   // // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+//   // // logger<<"/////////////////////////////////////////////////////////////////";
 
 //   // auto c1=conj(cicc1);
 //   // auto ass=assign(cicc2,c1);
@@ -859,7 +859,7 @@ void checkBindComplicatedExpression()
   
 //   // for(int icol=0;icol<NCOL;icol++)
 //   //   for(int icompl=0;icompl<NCOMPL;icompl++)
-//   //     cout<<col(reim(cicc2,icompl),icol).eval()<<" "<<col(reim(cicc1,icompl),icol).eval()<<endl;
+//   //     logger<<col(reim(cicc2,icompl),icol).eval()<<" "<<col(reim(cicc1,icompl),icol).eval();
   
 // }
 
@@ -952,23 +952,23 @@ void checkNnaryBuilder()
     
   //   auto b1=relBind<RwCol,CnCol>(c,[](int id){return id;});
   //   auto b2=relBind<CnCol,RwCol>(c,[](int id){return id;});
-  //   // cout<<decltype(c)::Tk::name()<<endl;
-  //   // cout<<decltype(b1)::Tk::name()<<endl;
-  //   // cout<<decltype(b2)::Tk::name()<<endl;
-  //   cout<<c.eval(1,2,0,1)<< " "<<b1.eval(2,0,1)<<" "<<b2.eval(1,2,0)<<endl;
+  //   // logger<<decltype(c)::Tk::name();
+  //   // logger<<decltype(b1)::Tk::name();
+  //   // logger<<decltype(b2)::Tk::name();
+  //   logger<<c.eval(1,2,0,1)<< " "<<b1.eval(2,0,1)<<" "<<b2.eval(1,2,0);
     
   //   auto bb1=relBind<Spin,Col>(b1,[](int id){return id+1;});
   //   auto bb2=relBind<Spin,Col>(b2,[](int id){return id+1;});
     
-  //   cout<<c.eval(1,2,0,1)<< " "<<bb1.eval(0,1)<<" "<<bb2.eval(1,0)<<endl;
+  //   logger<<c.eval(1,2,0,1)<< " "<<bb1.eval(0,1)<<" "<<bb2.eval(1,0);
     
-  //   cout<<decltype(c.getMaximallyMergedCompsView())::Tk::name()<<endl;
-  //   cout<<" c: "<<decltype(c)::Tk::name()<<endl;
-  //   cout<<" bb2: "<<decltype(bb2)::Tk::name()<<endl;
+  //   logger<<decltype(c.getMaximallyMergedCompsView())::Tk::name();
+  //   logger<<" c: "<<decltype(c)::Tk::name();
+  //   logger<<" bb2: "<<decltype(bb2)::Tk::name();
   //   // int o=decltype(b1)::ExtraDelims{};
   //   // int oo=decltype(b1)::PosOfResTcsInRefsTk{};
   //   // int p=decltype(b1)::MergeableComps{};
-  //   cout<<decltype(b1.getMaximallyMergedCompsView())::Tk::name()<<endl;
+  //   logger<<decltype(b1.getMaximallyMergedCompsView())::Tk::name();
   // }
   
   // //come trovare le componenti non twinnate? crea un IntSeq che dica
@@ -980,7 +980,7 @@ void checkNnaryBuilder()
     
   //   MyTens c;
     
-  //   cout<<" "<<posOfType<RwCol,MyTk::Twinned::types><<endl;
+  //   logger<<" "<<posOfType<RwCol,MyTk::Twinned::types>;
     
   //   STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(+c));
   // }
@@ -1020,24 +1020,24 @@ void checkNnaryBuilder()
   // cicc.getMaximallyMergedCompsView()=1.0;
   
   // auto i=imag(conj(cnCol(spin(rwCol(-cicc,0),0),0)));
-  // cout<<i<<endl;
+  // logger<<i;
   
-  // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  // logger<<"/////////////////////////////////////////////////////////////////";
   
   // for(int irw_col=0;irw_col<NCOL;irw_col++)
   //   for(int ispin=0;ispin<NSPIN;ispin++)
   //     for(int icn_col=0;icn_col<NCOL;icn_col++)
   // 	for(int ri=0;ri<NCOMPL;ri++)
   // 	  {
-  // 	    cout<<"------"<<endl;
-  // 	    cout<<&rwCol(reIm(cnCol(spin(cicc,
+  // 	    logger<<"------";
+  // 	    logger<<&rwCol(reIm(cnCol(spin(cicc,
   // 					 ispin),
   // 				  icn_col),
   // 			      ri),
-  // 			 irw_col)<<endl;
+  // 			 irw_col);
   // 	  }
   
-  // cout<<"/////////////////////////////////////////////////////////////////"<<endl;
+  // logger<<"/////////////////////////////////////////////////////////////////";
   
   // double a=0.0;
   // for(int irw_col=0;irw_col<NCOL;irw_col++)
@@ -1052,7 +1052,7 @@ void checkNnaryBuilder()
   // 	// 		    icn_col),
   // 	// 		   irw_col)));
   
-  // cout<<a<<endl;
+  // logger<<a;
   
 
 /// Check the sum of two \c SmET
@@ -1100,7 +1100,7 @@ void checkSumOfTwoSmETs()
   
   d=(a+b).getMaximallyMergedCompsView();
   
-  cout<<"d: "<<d.eval(1,1,1)<<endl;
+  logger<<"d: "<<d.eval(1,1,1);
   
   //auto sum=a+b;
   // this was added here to show the maximally mergeable delims
@@ -1109,48 +1109,68 @@ void checkSumOfTwoSmETs()
   //int e=decltype(sum)::MergedDelims1<IntSeq<0,1,3,4>>{};
   
   
-  //cout<<"Col: "<<c.compSize<RwCol>()<<endl;
-  //cout<<"Spin: "<<c.compSize<CnSpin>()<<endl;
-  cout<<"Tensor Kind of addendum 1: "<<decltype(a)::Tk::name()<<endl;
+  //logger<<"Col: "<<c.compSize<RwCol>();
+  //logger<<"Spin: "<<c.compSize<CnSpin>();
+  logger<<"Tensor Kind of addendum 1: "<<decltype(a)::Tk::name();
   using M1=
     typename decltype(a)::MergeableComps;
-  cout<<"Mergeability of addendum 1: "<<printIntSeq(M1{})<<endl;
-  cout<<"Tensor Kind of addendum 2: "<<decltype(b)::Tk::name()<<endl;
+  logger<<"Mergeability of addendum 1: "<<printIntSeq(M1{});
+  logger<<"Tensor Kind of addendum 2: "<<decltype(b)::Tk::name();
   using M2=
     typename decltype(b)::MergeableComps;
-  cout<<"Mergeability of addendum 2: "<<printIntSeq(M2{})<<endl;
-  cout<<"Tensor Kind: "<<decltype(a+b)::Tk::name()<<endl;
+  logger<<"Mergeability of addendum 2: "<<printIntSeq(M2{});
+  logger<<"Tensor Kind: "<<decltype(a+b)::Tk::name();
   
-  cout<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
-  cout<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{})<<endl;
+  logger<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
+  logger<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
   
   // using P1=
   //   decltype(c)::posOfAddend1TcInResTk;
-  // cout<<"PosOf types 1: "<<printIntSeq(P1{})<<endl;
+  // logger<<"PosOf types 1: "<<printIntSeq(P1{});
   // using P2=
   //   decltype(c)::posOfAddend2TcInResTk;
-  // cout<<"PosOf types 2: "<<printIntSeq(P2{})<<endl;
+  // logger<<"PosOf types 2: "<<printIntSeq(P2{});
   
   // using P3=
   //   PairOfTensKindMergeability::template CompsMergeability<M1,M2,P1,P2>;
   
-  // cout<<"Mergeability: "<<printIntSeq(P3{})<<endl;
+  // logger<<"Mergeability: "<<printIntSeq(P3{});
   
   // using MDel=
   //   IntSeq<0,1,3,4>;
   
-  // cout<<"Trying to merge with: "<<printIntSeq(MDel{})<<endl;
+  // logger<<"Trying to merge with: "<<printIntSeq(MDel{});
   
   // using P4=
   //   decltype(c)::template MergedDelims1<MDel>;
   
-  // cout<<"The first needs to be merged like this: "<<printIntSeq(P4{})<<endl;
+  // logger<<"The first needs to be merged like this: "<<printIntSeq(P4{});
   
   TEST_PASSED;
 }
 
 int main()
 {
+  logger<<"Timings: "<<timings.isStarted()<<" "<<timings.currentMeasure().count();
+  logger<<"Timings: "<<timings["ciao"].isStarted()<<" "<<timings["ciao"].currentMeasure().count();
+  
+  logger<<"Anna\n";
+  {
+    SCOPE_INDENT(logger);
+    SCOPE_REAL_PRECISION(logger,3);
+    {
+      SCOPE_INDENT(logger);
+      SCOPE_ALWAYS_PUT_SIGN(logger);
+      SCOPE_REAL_PRECISION(logger,10);
+      logger<<1.23523524<<"\n";
+    }
+    logger<<1.23523524<<"\n";
+    
+    logger<<"Elena\n";
+  }
+  
+  logger<<"Caterina\n";
+  
   checkSignUnsign();
   
   checkVectorClass();
