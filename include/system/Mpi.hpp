@@ -15,6 +15,7 @@
 #endif
 
 #include <ios/Logger.hpp>
+#include <system/Timer.hpp>
 #include <utility/SingleInstance.hpp>
 
 namespace SUNphi
@@ -104,10 +105,13 @@ namespace SUNphi
     Mpi()
     {
 #ifdef USE_MPI
-      MPI_CRASH_ON_ERROR(MPI_Init(nullptr,nullptr),"Error initializing MPI");
       
+      /// Takes the time
+      Duration initDur;
       
-      logger<<"MPI initialized\n";
+      MPI_CRASH_ON_ERROR(durationOf(initDur,MPI_Init,nullptr,nullptr),"Error initializing MPI");
+      
+      logger<<"MPI initialized in "<<durationInSec(initDur)<<" s \n";
 #endif
     }
     
