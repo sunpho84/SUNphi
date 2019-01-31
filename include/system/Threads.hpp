@@ -15,10 +15,12 @@
  #include <thread>
 #endif
 
+#include <cstring>
+
 #include <external/inplace_function.h>
 
 #include <containers/Vector.hpp>
-#include <ios/Logger.hpp>
+//#include <ios/Logger.hpp>
 #include <system/Debug.hpp>
 #include <Tuple.hpp>
 
@@ -279,98 +281,10 @@ namespace SUNphi
     ///
     /// All threads but the master one swim in this pool back and forth,
     /// waiting for job to be done.
-    static void* swim(void* _ptr) ///< Initialization data
-    {
-      /// Cast the \c void pointer to the tuple
-      ThreadPars* ptr=
-	static_cast<ThreadPars*>(_ptr);
-      
-      /// Takes a reference to the parameters
-      ThreadPars& pars=
-	*ptr;
-      
-      /// Takes a reference to the pool
-      ThreadPool& pool=
-	*get<0>(pars);
-      
-      /// Copy the thread thread
-      int threadId=
-	get<1>(pars);
-      
-      delete ptr;
-      
-      logger<<"Thread id: "<<threadId<<" (check: "<<pool.getThreadId()<<") entering the pool, "<<pthread_self()<<"\n";
-      
-      /// Work until asked to empty
-      bool keepSwimming=
-	pool.isFilled;
-      
-      while(keepSwimming)
-	{
-	  pool.waitForWorkToBeAssigned(threadId);
-	  
-	  keepSwimming=
-	    pool.isFilled;
-	  
-	  logger<<"Thread id: "<<threadId<<" keep swimming: "<<keepSwimming<<"\n";
-	  
-	  if(keepSwimming)
-	    {
-	      pool.work(threadId);
-	      
-	      pool.tellTheMasterWorkIsFinished(threadId);
-	    }
-	}
-      
-      logger<<"Thread: "<<threadId<<" (check: "<<pool.getThreadId()<<") exiting the pool, "<<pthread_self()<<"\n";
-      
-      return
-	nullptr;
-    }
+    friend void* swim(void* _ptr); ///< Initialization data
     
     /// Fill the pool with the number of thread assigned
-    void fill(const pthread_attr_t* attr=nullptr) ///< Possible attributes of the threads
-    {
-      // Checks that the pool is not filled
-      if(isFilled)
-	CRASH("Cannot fill again the pool!");
-      
-      // Marks the pool as filled
-      isFilled=
-	true;
-      
-      // Marks the pool is waiting for job to be done
-      isWaitingForWork=
-	true;
-      
-      // Resize the pool to contain all threads
-      pool.resize(nThreads);
-      
-      for(int threadId=1;threadId<nThreads;threadId++)
-	{
-	  logger<<"thread of id "<<threadId<<" spwawned\n";
-	  
-	  // Allocates the parameters of the thread
-	  ThreadPars* pars=
-	    new ThreadPars{this,threadId};
-	  
-	  if(pthread_create(&pool[threadId],attr,swim,pars)!=0)
-	    switch(errno)
-	      {
-	      case EAGAIN:
-		CRASH("A system-imposed limit on the number of threads was encountered");
-		break;
-	      case EINVAL:
-		CRASH("Invalid settings in attr");
-		break;
-	      case EPERM:
-		CRASH("No permission to set the scheduling policy and parameters specified in attr");
-		break;
-	      default:
-		CRASH("Other error");
-	      }
-	}
-    }
+    void fill(const pthread_attr_t* attr=nullptr); ///< Possible attributes of the threads
     
     /// Stop the pool
     void doNotworkAnymore()
@@ -415,7 +329,7 @@ namespace SUNphi
 		CRASH("Other error");
 	      }
 	  
-	  logger<<"Thread of id "<<threadId<<" destroyed\n";
+	  //logger<<"Thread of id "<<threadId<<" destroyed\n";
 	}
       
       // Resize down the pool
@@ -468,7 +382,7 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      logger<<"Thread of id "<<threadId<<" is telling the pool that work has been assigned (tag: "<<workAssignmentTag<<"\n";
+      //logger<<"Thread of id "<<threadId<<" is telling the pool that work has been assigned (tag: "<<workAssignmentTag<<"\n";
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
@@ -483,7 +397,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      logger<<"Thread of id "<<threadId<<" is waiting the pool for work to be assigned (tag "<<workAssignmentTag<<"\n";
+      //logger<<"Thread of id "<<threadId<<" is waiting the pool for work to be assigned (tag "<<workAssignmentTag<<"\n";
       
       barrier.sync(workAssignmentTag,threadId);
     }
@@ -496,7 +410,7 @@ namespace SUNphi
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      logger<<"Thread of id "<<threadId<<" is telling the pool not to work any longer (tag: "<<workNoMoreTag<<"\n";
+      //logger<<"Thread of id "<<threadId<<" is telling the pool not to work any longer (tag: "<<workNoMoreTag<<"\n";
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -516,7 +430,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      logger<<"Thread of id "<<threadId<<" has finished working (tag: "<<workFinishedTag<<")\n";
+      //logger<<"Thread of id "<<threadId<<" has finished working (tag: "<<workFinishedTag<<")\n";
       
       barrier.sync(workFinishedTag,threadId);
     }
@@ -531,7 +445,7 @@ namespace SUNphi
 	  /// Makes the print sequential across threads
 	  THREADS_SCOPE_SEQUENTIAL();
 	  
-	  logger<<"Thread of id "<<threadId<<" is waiting for work to be finished (tag: "<<workFinishedTag<<")\n";
+	  //logger<<"Thread of id "<<threadId<<" is waiting for work to be finished (tag: "<<workFinishedTag<<")\n";
 	  mutexUnlock();
 	}
       
@@ -604,7 +518,7 @@ namespace SUNphi
     /// Destructor emptying the pool
     ~ThreadPool()
     {
-      logger<<"Destroying the pool\n";
+      //logger<<"Destroying the pool\n";
       empty();
     }
   };
