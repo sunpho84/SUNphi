@@ -18,14 +18,68 @@
 #include <external/inplace_function.h>
 
 #include <containers/Vector.hpp>
+#include <ios/Logger.hpp>
 #include <system/Debug.hpp>
 #include <Tuple.hpp>
 
 namespace SUNphi
 {
+  /// States that we want to debug threads
+  constexpr bool DEBUG_THREADS=
+    true;
+  
   /// Contains a thread pool
   class ThreadPool
   {
+    /// Class to lock a mutex for the object scope
+    class Mutex
+    {
+      /// Internal mutex
+      pthread_mutex_t mutex PTHREAD_MUTEX_INITIALIZER;
+      
+    public:
+      
+      /// Lock the mutex
+      void lock()
+      {
+	if(pthread_mutex_lock(&mutex))
+	  CRASH("Error locking,",strerror(errno));
+      }
+      
+      /// Unlock the mutex
+      void unlock()
+      {
+	if(pthread_mutex_unlock(&mutex))
+	  CRASH("Error unlocking,",strerror(errno));
+      }
+    };
+    
+    /// Keep a mutex locked for the duration of the object
+    class ScopeMutexLocker
+    {
+      /// Reference to the mutex
+      Mutex& mutex;
+      
+    public:
+      
+      /// Create, store the reference and lock
+      ScopeMutexLocker(Mutex& mutex) ///< Mutex to be kept locked
+	: mutex(mutex)
+      {
+	mutex.lock();
+      }
+      
+      /// Unlock and destroy
+      ~ScopeMutexLocker()
+      {
+	mutex.unlock();
+      }
+    };
+    
+    /// Puts a scope mutex locker making the scope sequential
+#define THREADS_SCOPE_SEQUENTIAL()				\
+    ScopeMutexLocker sequentializer ## __LINE__ (mutex);
+    
     /// Wrapper for the pthread barrier functionality
     class Barrier
     {
@@ -245,7 +299,7 @@ namespace SUNphi
       
       delete ptr;
       
-      printf("Thread id: %d (check: %d) entering the pool, %lu %p\n",threadId,pool.getThreadId(),pthread_self(),_ptr);
+      logger<<"Thread id: "<<threadId<<" (check: "<<pool.getThreadId()<<") entering the pool, "<<pthread_self()<<"\n";
       
       /// Work until asked to empty
       bool keepSwimming=
@@ -258,7 +312,7 @@ namespace SUNphi
 	  keepSwimming=
 	    pool.isFilled;
 	  
-	  printf("Thread id: %d keep swimming: %d\n",threadId,keepSwimming);
+	  logger<<"Thread id: "<<threadId<<" keep swimming: "<<keepSwimming<<"\n";
 	  
 	  if(keepSwimming)
 	    {
@@ -268,7 +322,7 @@ namespace SUNphi
 	    }
 	}
       
-      printf("Thread: %d (check: %d) exiting the pool, %lu %p\n",threadId,pool.getThreadId(),pthread_self(),_ptr);
+      logger<<"Thread: "<<threadId<<" (check: "<<pool.getThreadId()<<") exiting the pool, "<<pthread_self()<<"\n";
       
       return
 	nullptr;
@@ -294,7 +348,7 @@ namespace SUNphi
       
       for(int threadId=1;threadId<nThreads;threadId++)
 	{
-	  printf("thread of id %d spwawned\n",threadId);
+	  logger<<"thread of id "<<threadId<<" spwawned\n";
 	  
 	  // Allocates the parameters of the thread
 	  ThreadPars* pars=
@@ -361,14 +415,29 @@ namespace SUNphi
 		CRASH("Other error");
 	      }
 	  
-	  printf("Thread of id %d destroyed\n",threadId);
+	  logger<<"Thread of id "<<threadId<<" destroyed\n";
 	}
       
       // Resize down the pool
       pool.resize(1);
     }
     
+    /// Global mutex
+    Mutex mutex;
+    
   public:
+    
+    /// Lock the mutex
+    void mutexLock()
+    {
+      mutex.lock();
+    }
+    
+    /// Unlock the mutex
+    void mutexUnlock()
+    {
+      mutex.unlock();
+    }
     
     /// Compares the thread tag with the master one
     bool isMasterThread()
@@ -399,7 +468,7 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      printf("Thread of id %d is telling the pool that work has been assigned (tag: %s)\n",threadId,workAssignmentTag);
+      logger<<"Thread of id "<<threadId<<" is telling the pool that work has been assigned (tag: "<<workAssignmentTag<<"\n";
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
@@ -414,7 +483,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      printf("Thread of id %d is waiting the pool for work to be assigned (tag %s)\n",threadId,workAssignmentTag);
+      logger<<"Thread of id "<<threadId<<" is waiting the pool for work to be assigned (tag "<<workAssignmentTag<<"\n";
       
       barrier.sync(workAssignmentTag,threadId);
     }
@@ -427,7 +496,7 @@ namespace SUNphi
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      printf("Thread of id %d is telling the pool not to work any longer (tag: %s)\n",threadId,workNoMoreTag);
+      logger<<"Thread of id "<<threadId<<" is telling the pool not to work any longer (tag: "<<workNoMoreTag<<"\n";
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -447,7 +516,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      printf("Thread of id %d has finished working (tag: %s)\n",threadId,workFinishedTag);
+      logger<<"Thread of id "<<threadId<<" has finished working (tag: "<<workFinishedTag<<")\n";
       
       barrier.sync(workFinishedTag,threadId);
     }
@@ -457,7 +526,14 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      printf("Thread of id %d is waiting for work to be finished (tag: %s)\n",threadId,workFinishedTag);
+      if constexpr(DEBUG_THREADS)
+	{
+	  /// Makes the print sequential across threads
+	  THREADS_SCOPE_SEQUENTIAL();
+	  
+	  logger<<"Thread of id "<<threadId<<" is waiting for work to be finished (tag: "<<workFinishedTag<<")\n";
+	  mutexUnlock();
+	}
       
       // The master signals to the pool that he is waiting for the
       // pool to finish the work
@@ -528,10 +604,13 @@ namespace SUNphi
     /// Destructor emptying the pool
     ~ThreadPool()
     {
-      printf("Want to destroy\n");
+      logger<<"Destroying the pool\n";
       empty();
     }
   };
+  
+  /// Global threads
+  extern ThreadPool threads;
 }
 
 #endif
