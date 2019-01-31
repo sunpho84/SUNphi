@@ -9,7 +9,7 @@
 #include <gitInfo.hpp>
 
 #include <ios/Logger.hpp>
-#include <system/MpiImpl.hpp>
+#include <system/Mpi.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/Aliver.hpp>
@@ -55,55 +55,57 @@ namespace SUNphi
     void printBanner()
       const
     {
-      logger<<"       ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  \n";
-      logger<<"       █░█       █░█       █░█         \t" "                 █░█                   \n";
-      logger<<"  ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  \n";
-      logger<<"  █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  \n";
-      logger<<"   █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                \n";
-      logger<<"    █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            \n";
-      logger<<"     █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           \n";
-      logger<<"      █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         \n";
-      logger<<" ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        \n";
-      logger<<"█░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n";
-      logger<<" ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        \n";
-      logger<<"       ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        \n";
-      logger<<"      █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         \n";
-      logger<<"     █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          \n";
-      logger<<"    █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            \n";
-      logger<<"   █░█     █░███████████░█     █░█    \t"  "             ███████████              \n";
-      logger<<"  █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  \n";
-      logger<<"  ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  \n";
-      logger<<"        █░█      █░█      █░█        \t"   "                 █░█                 \n";
-      logger<<"       █░█       █░█       █░█       \t"   "                 █░█                 \n";
-      logger<<"       ▀▀        ▀█▀        ▀▀      \t"    "                 ▀█▀                \n";
+      logger<<"";
+      logger<<"          ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  ";
+      logger<<"          █░█       █░█       █░█         \t" "                 █░█                   ";
+      logger<<"     ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  ";
+      logger<<"     █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  ";
+      logger<<"      █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                ";
+      logger<<"       █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            ";
+      logger<<"        █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           ";
+      logger<<"         █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         ";
+      logger<<"    ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        ";
+      logger<<"   █░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      logger<<"    ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      logger<<"          ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        ";
+      logger<<"         █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         ";
+      logger<<"        █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          ";
+      logger<<"       █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            ";
+      logger<<"      █░█     █░███████████░█     █░█    \t"  "             ███████████              ";
+      logger<<"     █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  ";
+      logger<<"     ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  ";
+      logger<<"           █░█      █░█      █░█        \t"   "                 █░█                 ";
+      logger<<"          █░█       █░█       █░█       \t"   "                 █░█                 ";
+      logger<<"          ▀▀        ▀█▀        ▀▀       \t"  "                  ▀█▀                ";
+      logger<<"";
     }
     
     /// Prints the version, and contacts
     void printVersionContacts()
       const
     {
-      logger<<"\nInitializing "<<PACKAGE_NAME<<" library, v"<<PACKAGE_VERSION<<", send bug report to <"<<PACKAGE_BUGREPORT<<">\n";
+      logger<<"\nInitializing "<<PACKAGE_NAME<<" library, v"<<PACKAGE_VERSION<<", send bug report to <"<<PACKAGE_BUGREPORT<<">";
     }
     
     /// Prints the git info
     void printGitInfo()
       const
     {
-      logger<<"Commit "<<GIT_HASH<<" made at "<<GIT_TIME<<" by "<<GIT_COMMITTER<<" with message: \""<<GIT_LOG<<"\"\n";
+      logger<<"Commit "<<GIT_HASH<<" made at "<<GIT_TIME<<" by "<<GIT_COMMITTER<<" with message: \""<<GIT_LOG<<"\"";
     }
     
     /// Prints configure info
     void printConfigurePars()
       const
     {
-      logger<<"Configured at "<<CONFIG_TIME<<" with flags: "<<CONFIG_FLAGS<<"\n";
+      logger<<"Configured at "<<CONFIG_TIME<<" with flags: "<<CONFIG_FLAGS<<"";
     }
     
     /// Says bye bye
     void printBailout()
       const
     {
-      logger<<"\n Ciao!\n\n";
+      logger<<"\n Ciao!\n";
     }
     
   public:
@@ -115,15 +117,6 @@ namespace SUNphi
       printVersionContacts();
       printGitInfo();
       printConfigurePars();
-      
-      ThreadPool threads;
-      
-      // ASM_BOOKMARK("See thread self");
-      
-      // bool i=threads.isMasterThread();
-      // ASM_BOOKMARK("See thread self");
-      
-      // logger<<"is: "<<i<<std::endl;
       
       threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
       
