@@ -44,8 +44,7 @@ namespace SUNphi
   /// \todo check if we can refer to stdout
   Logger logger("/dev/stdout");
   
-  /// Mpi initializer
-  Mpi mpi;
+  Logger fakeLogger("/dev/null");
   
   /// Class used to provocate initialization of Mpi
   class Aliver : public SingleInstance<Aliver>

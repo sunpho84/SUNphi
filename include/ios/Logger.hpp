@@ -14,7 +14,7 @@
 #include <cstdio>
 
 #include <system/Debug.hpp>
-#include <system/Mpi.hpp>
+//#include <system/Mpi.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
@@ -220,8 +220,8 @@ namespace SUNphi
 	threads.isMasterThread() or not onlyMasterThread;
       
       /// Check whether current rank should print or not
-      const bool thisRankPrint=
-	mpi.isMasterThread() or not onlyMasterThread;
+      // const bool thisRankPrint=
+      // 	mpi.isMasterThread() or not onlyMasterThread;
       
       return
 	std::move(LoggerLine(*this)<<forw<T>(t));

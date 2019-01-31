@@ -102,18 +102,9 @@ namespace SUNphi
       -1;
     
     /// Initialize MPI
-    Mpi()
-    {
-#ifdef USE_MPI
-      
-      /// Takes the time
-      Duration initDur;
-      
-      MPI_CRASH_ON_ERROR(durationOf(initDur,MPI_Init,nullptr,nullptr),"Error initializing MPI");
-      
-      logger<<"MPI initialized in "<<durationInSec(initDur)<<" s \n";
-#endif
-    }
+    ///
+    /// Implemented in cpp
+    Mpi();
     
     /// Check initialization flag
     bool isInitialized()
@@ -138,16 +129,9 @@ namespace SUNphi
     }
     
     /// Finalize MPI
-    ~Mpi()
-    {
-      
-#ifdef USE_MPI
-      
-      MPI_CRASH_ON_ERROR(MPI_Finalize(),"Finalizing MPI");
-      
-#endif
-      
-    }
+    ///
+    /// Implemented in cpp
+    ~Mpi();
     
     /// Get current rank calling explicitly MPI
     int getRank()
@@ -255,13 +239,8 @@ namespace SUNphi
     }
   };
   
+  /// Gloabl MPI
   extern Mpi mpi;
 }
-
-#ifdef USE_MPI
- 
- #undef MPI_CRASH_ON_ERROR
- 
-#endif
 
 #endif
