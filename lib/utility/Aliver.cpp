@@ -35,17 +35,6 @@ namespace SUNphi
     return
       0;
   }
-  
-  /// Statistics
-  Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
-  
-  /// Global logger
-  ///
-  /// \todo check if we can refer to stdout
-  Logger logger("/dev/stdout");
-  
-  Logger fakeLogger("/dev/null");
-  
   /// Class used to provocate initialization of Mpi
   class Aliver : public SingleInstance<Aliver>
   {
@@ -117,9 +106,9 @@ namespace SUNphi
       printGitInfo();
       printConfigurePars();
       
-      threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
+      logger<<"ANNA "<<threads.isMasterThread();//  loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
       
-      threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
+      // threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
     }
     
     /// Destroyer
@@ -129,6 +118,10 @@ namespace SUNphi
     }
   };
   
+  Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
+  Logger logger("/dev/stdout");
   Aliver aliver;
+  Logger fakeLogger("/dev/null");
+  Mpi mpi;
+  ThreadPool threads;
 }
-
