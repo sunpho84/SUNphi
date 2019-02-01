@@ -369,11 +369,11 @@ namespace SUNphi
 	pool.size();
     }
     
-    /// Tag to mark that assignment has been done
+    /// Tag to mark that assignment has been finished
     static constexpr char workAssignmentTag[]=
       "WorkAssOrNoMoreWork";
     
-    /// Tag to mark that no more work has to be done
+    /// Tag to mark that no more work has to do
     static constexpr auto& workNoMoreTag=
       workAssignmentTag;
     
@@ -392,12 +392,38 @@ namespace SUNphi
       barrier.sync(workAssignmentTag,threadId);
     }
     
+    /// Tag to mark that the thread is ready to swim
+    static constexpr char threadHasBeenCreated[]=
+      "ThreadHasBeenCreated";
+    
+    /// Tell the master that the thread is created and ready to swim
+    void tellTheMasterThreadIsCreated(const int& threadId) ///< Thread id
+    {
+      checkPoolOnly(threadId);
+      
+      minimalLogger(runLog,"Thread of id %d is telling that has been created and is ready to swim (tag: %s)",(int)threadId,threadHasBeenCreated);
+      
+      // The thread signals to the master that has been created and ready to swim
+      barrier.sync(threadHasBeenCreated,threadId);
+    }
+    
+    /// Waiting for threads are created and ready to swim
+    void waitPoolToBeFilled(const int& threadId) ///< Thread id
+    {
+      checkMasterOnly(threadId);
+      
+      minimalLogger(runLog,"Thread of id %d is waiting for threads in the pool to be ready to ready to swim (tag: %s)",(int)threadId,threadHasBeenCreated);
+      
+      // The master wait that the threads have been created by syncing with them
+      barrier.sync(threadHasBeenCreated,threadId);
+    }
+    
     /// Waiting for work to be done means to synchronize with the master
     void waitForWorkToBeAssigned(const int& threadId) ///< Thread id
     {
       checkPoolOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d is waiting the pool for work to be assigned (tag %s)",threadId,workAssignmentTag);
+      minimalLogger(runLog,"Thread of id %d is waiting in the pool for work to be assigned (tag %s)",threadId,workAssignmentTag);
       
       barrier.sync(workAssignmentTag,threadId);
     }

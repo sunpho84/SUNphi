@@ -54,6 +54,9 @@ namespace SUNphi
       LoggerLine(const Logger& logger)
 	: hasToEnd(true),logger(logger)
       {
+#warning DARIVEDERE
+	threads.mutexLock();
+	
 	startNewLine();
       }
       
@@ -75,7 +78,11 @@ namespace SUNphi
       ~LoggerLine()
       {
 	if(hasToEnd)
-	  endLine();
+	  {
+	    endLine();
+#warning DARIVEDERE
+	    threads.mutexUnlock();
+	  }
       }
       
       /// Prints a string

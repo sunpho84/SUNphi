@@ -21,7 +21,7 @@ namespace SUNphi
     ThreadPool& pool=
       *get<0>(pars);
     
-    /// Copy the thread thread
+    /// Copy the thread id
     int threadId=
       get<1>(pars);
     
@@ -32,6 +32,8 @@ namespace SUNphi
     /// Work until asked to empty
     bool keepSwimming=
       pool.isFilled;
+    
+    pool.tellTheMasterThreadIsCreated(threadId);
     
     while(keepSwimming)
       {
@@ -99,5 +101,7 @@ namespace SUNphi
 		CRASH("Other error");
 	      }
 	}
+      
+      waitPoolToBeFilled(masterThreadId);
     }
 }
