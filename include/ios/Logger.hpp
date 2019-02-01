@@ -24,6 +24,7 @@ namespace SUNphi
   /// Write output to a file, using different level of indentation
   class Logger
   {
+    /// Single line in the logger
     class LoggerLine
     {
       /// Store the reference to the weather the line has to be ended or not
@@ -32,6 +33,7 @@ namespace SUNphi
       /// Reference to the logger
       const Logger& logger;
       
+      /// Forbids copying a line
       LoggerLine(const LoggerLine&)=delete;
       
     public:

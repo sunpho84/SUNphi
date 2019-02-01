@@ -63,7 +63,7 @@ namespace SUNphi
     ///
     /// Returns the value of \c rc
     template <typename...Args>
-    int crashOnError(const int line,         ///< Line of file where the error needs to be checked
+    int crashOnError(const int line,        ///< Line of file where the error needs to be checked
 		     const char *file,      ///< File where the error must be checked
 		     const char *function,  ///< Function where the error was possibly raised
 		     const int rc,          ///< Exit condition of the called routine
