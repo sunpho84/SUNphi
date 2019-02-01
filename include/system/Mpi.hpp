@@ -20,40 +20,34 @@
 
 namespace SUNphi
 {
+  /// Provides the \c MPI_Datatype of an any unknown type
+  template <typename T>
+  inline MPI_Datatype mpiType()
+  {
+    return
+      nullptr;
+  }
+  
+  /// Provides the \c MPI_Datatype of a given type
+#define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
+  template <>						\
+  inline MPI_Datatype mpiType<TYPE>()			\
+  {							\
+    return						\
+      MPI_TYPE;						\
+  }							\
+  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE
+  
+  PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
+  
+  PROVIDE_MPI_DATATYPE(MPI_INT,int);
+  
+  PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
   
   /// Class wrapping all MPI functionalities
   class Mpi : public SingleInstance<Mpi>
   {
 #ifdef USE_MPI
-    
-    /// Provides link from a type to the matching \c MPI_Datatype
-    ///
-    /// Useful to allow template usage of MPI
-#define PROVIDE_MPI_DATATYPE(MPI_TYPE,TYPE)		\
-    /*! \c MPI_Datatype corresponding to TYPE */	\
-    template <>						\
-    MPI_Datatype mpiType<TYPE>()			\
-      const						\
-    {							\
-      return						\
-	MPI_TYPE;					\
-    }
-    
-    /// MPI datatpe corresponding to not-provided type
-    template <typename T>
-    MPI_Datatype mpiType()
-      const
-    {
-      return
-	nullptr;
-    }
-    
-    PROVIDE_MPI_DATATYPE(MPI_CHAR,char);
-    
-    PROVIDE_MPI_DATATYPE(MPI_INT,int);
-    
-    PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
-    
     /// Crash on MPI error, providing a meaningful error
 #define MPI_CRASH_ON_ERROR(...)						\
     Mpi::crashOnError(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
