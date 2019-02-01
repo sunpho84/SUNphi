@@ -7,7 +7,6 @@ var searchData=
   ['fillhashtables',['fillHashTables',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#ade2318475760df0005bdd282709873dc',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::fillHashTables()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a690484e7846916abfdce10bb9ec85b6b',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::fillHashTables()']]],
   ['fillneighsofpointshashtables',['fillNeighsOfPointsHashTables',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a43fdafac10445001fe2d373a15dbf812',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['fillvolumehashtable',['fillVolumeHashTable',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a6cef95d7884153c4e6fd95c6ff61b726',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;']]],
-  ['finalize',['finalize',['../d8/d6a/Mpi_8hpp.html#a598d0f387a1591faa445f18802d1b8c0',1,'SUNphi::Mpi']]],
   ['findfirst',['findFirst',['../df/dc0/classSUNphi_1_1Vector.html#a3aae580c5bca9d59695912ae0e1c5660',1,'SUNphi::Vector']]],
   ['findfirstwherenot',['findFirstWhereNot',['../df/dc0/classSUNphi_1_1Vector.html#a45a5b68e9006ce09c91f126e3f34651a',1,'SUNphi::Vector']]],
   ['findlast',['findLast',['../df/dc0/classSUNphi_1_1Vector.html#afc39d6a0678bbc8ccde52095174aa100',1,'SUNphi::Vector']]],

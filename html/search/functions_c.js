@@ -5,6 +5,6 @@ var searchData=
   ['neighofpoint',['neighOfPoint',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#acb019f6526b5d40c2d5090d11844713e',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::neighOfPoint()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a2987e6582f899fac271d0fa82c181333',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::neighOfPoint()']]],
   ['neverinstantiatedfunction',['neverInstantiatedFunction',['../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938',1,'SUNphi']]],
   ['nmaxobj',['nMaxObj',['../de/d33/classSUNphi_1_1Combinatorial.html#a44f777aa4d55d45f059cbec485973be5',1,'SUNphi::Combinatorial']]],
-  ['nranks',['nRanks',['../d8/d6a/Mpi_8hpp.html#aaf9942d07a4cc0b118e1e542be4368b7',1,'SUNphi::Mpi']]],
+  ['nranks',['nRanks',['../df/d09/classSUNphi_1_1Mpi.html#a9e2bc3d2d4dacbddb093dbe1ac2de5a9',1,'SUNphi::Mpi']]],
   ['nslots',['nSlots',['../de/d33/classSUNphi_1_1Combinatorial.html#a7c14f77824a6eeffca84ce0c26ac115a',1,'SUNphi::Combinatorial']]]
 ];

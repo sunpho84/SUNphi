@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_5f_5fattribute_5f_5f',['__attribute__',['../d3/dd7/namespaceSUNphi.html#abf7f5e4f9b28947fe8280ab6fe18abb6',1,'SUNphi::__attribute__((constructor)) void makeAlive()'],['../d3/dd7/namespaceSUNphi.html#adb145a5e4a3740703c8bca406a26fe70',1,'SUNphi::__attribute__((destructor)) void makeDead()']]],
   ['_5fareordered',['_areOrdered',['../d3/dd7/namespaceSUNphi.html#ac6f6a412c3eec8f1ad0c29c57eb0bd9e',1,'SUNphi']]],
   ['_5fareorderedmin2ints',['_areOrderedMin2Ints',['../d3/dd7/namespaceSUNphi.html#a31453e65b0bfae779cb3ee139b8caace',1,'SUNphi']]],
   ['_5faresame',['_areSame',['../d3/dd7/namespaceSUNphi.html#a6124ed3ae4bb2d0dd2e718c98f4ed881',1,'SUNphi']]],

@@ -57,7 +57,7 @@ var searchData=
   ['not_5fpresent',['NOT_PRESENT',['../d3/dd7/namespaceSUNphi.html#a1704de9acff8e8441dbcf1abc9b5cc01',1,'SUNphi']]],
   ['not_5fstoring',['NOT_STORING',['../dc/d6b/BaseSmET_8hpp.html#a180ac09cd081f0303641f2482954f66d',1,'BaseSmET.hpp']]],
   ['nperslot',['nPerSlot',['../de/d33/classSUNphi_1_1Combinatorial.html#a4378a6636e517eac8bca8b2a24dc2041',1,'SUNphi::Combinatorial']]],
-  ['nranks',['nRanks',['../d8/d6a/Mpi_8hpp.html#aaf9942d07a4cc0b118e1e542be4368b7',1,'SUNphi::Mpi']]],
+  ['nranks',['nRanks',['../df/d09/classSUNphi_1_1Mpi.html#a9e2bc3d2d4dacbddb093dbe1ac2de5a9',1,'SUNphi::Mpi']]],
   ['nrw_5fcol',['NRW_Col',['../d3/dd7/namespaceSUNphi.html#a8194485c27988603bf011890e00fcb15',1,'SUNphi']]],
   ['nrw_5fspin',['NRW_Spin',['../d3/dd7/namespaceSUNphi.html#a8532480c6ab7f3851c3f18eefc919400',1,'SUNphi']]],
   ['nsimd_5fcomponents',['NSIMD_COMPONENTS',['../d3/dd7/namespaceSUNphi.html#a838913a9890df3a5ac205bd64f2eda73',1,'SUNphi']]],

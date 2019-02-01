@@ -21,7 +21,8 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", "functions_type" ],
-        [ "Enumerations", "functions_enum.html", null ]
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -38,13 +39,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c",
-"d3/dd7/namespaceSUNphi.html",
-"d6/d17/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4.html",
-"d8/dcd/structSUNphi_1_1IntSeq_1_1__AppendFirstN.html",
-"db/d12/classSUNphi_1_1ScalarWrapper.html#abd16f15cace6e08875c01ed5b409ba87",
-"dd/d03/classSUNphi_1_1UMinuser.html#a3564a907f7fd329a541967473fc7ecb4",
-"de/dda/Dir_8hpp_source.html"
+"d2/d24/classSUNphi_1_1Conjer.html#a8236bf435ac2125d31cadc98a79fff10",
+"d3/dbe/IntListOrder_8hpp.html#af043ff525cec37e98a03411447d5d836",
+"d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html",
+"d8/dc9/structSUNphi_1_1RwCol.html#ae29a38b5b9a7ff35e0798d43279090c3",
+"db/d12/classSUNphi_1_1ScalarWrapper.html#a49244cd7816784d8dce6a3b041163c44",
+"dc/dbf/structSUNphi_1_1__IntSeqFirstN.html",
+"de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_rela.html"><span>Related&#160;Functions</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -170,6 +171,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>adapter
 : <a class="el" href="d5/d1c/classSUNphi_1_1RelBinder.html#a829319995809aa5456718e40579d0271">SUNphi::RelBinder&lt; _BoundType, _BoundToType, _Ad, _Refs &gt;</a>
+</li>
+<li>ALL_RANKS
+: <a class="el" href="df/d09/classSUNphi_1_1Mpi.html#ad4d63f013ed16da4e22ee5e1b6c4bc36">SUNphi::Mpi</a>
 </li>
 <li>alwaysPrintSign
 : <a class="el" href="d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22">SUNphi::Logger</a>
@@ -279,6 +283,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1f0cfa01012443c7c8937620e5c585f1">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;</a>
 , <a class="el" href="d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a6dfd480bf35dff157d9b179e90ade494">SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;</a>
 </li>
+<li>hasToEnd
+: <a class="el" href="d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ace8085da2172ea82ca2498d3198e93b5">SUNphi::Logger::LoggerLine</a>
+</li>
 <li>headSize
 : <a class="el" href="d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#ab6471214fbc2a7d1d04adc63418351cb">SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;</a>
 </li>
@@ -326,9 +333,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>isHashing
 : <a class="el" href="dd/dca/classSUNphi_1_1Grid.html#a5f87ad4e7caf4507b612ab7163102e99">SUNphi::Grid&lt; NDims, Coord, Idx, Flags &gt;</a>
-</li>
-<li>isOnNewLine
-: <a class="el" href="d3/d78/classSUNphi_1_1Logger.html#a0ac9c381e93e85b3e995f14d7e7927c1">SUNphi::Logger</a>
 </li>
 <li>isOrdered
 : <a class="el" href="da/def/structSUNphi_1_1IntSeq.html#a70e009823c017a7bd2486e4757f3fcfb">SUNphi::IntSeq&lt; Ints &gt;</a>
@@ -385,14 +389,21 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="d6/de9/classSUNphi_1_1Timer.html#a9094dab4e3ae4ad550c21ad45dd1d22e">SUNphi::Timer</a>
 </li>
 <li>logger
-: <a class="el" href="d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70">SUNphi::ScopeIndenter</a>
+: <a class="el" href="d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a737169275d2ab1c76471e649b15f0ce5">SUNphi::Logger::LoggerLine</a>
+, <a class="el" href="d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70">SUNphi::ScopeIndenter</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>masterRank
-: <a class="el" href="dc/d0f/classSUNphi_1_1ThreadPool.html#a46a26db1b80c3ecb4a1dbba41c8fde13">SUNphi::ThreadPool</a>
+<li>MASTER_RANK
+: <a class="el" href="df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">SUNphi::Mpi</a>
+</li>
+<li>masterThreadId
+: <a class="el" href="dc/d0f/classSUNphi_1_1ThreadPool.html#af415a1c843d3903571f450b9414d1c6a">SUNphi::ThreadPool</a>
+</li>
+<li>masterThreadTag
+: <a class="el" href="dc/d0f/classSUNphi_1_1ThreadPool.html#a1b3a8a8225eec04c323557ae10cd5aab">SUNphi::ThreadPool</a>
 </li>
 <li>max
 : <a class="el" href="da/def/structSUNphi_1_1IntSeq.html#af9b370eb2608e777cce94847981ba5a3">SUNphi::IntSeq&lt; Ints &gt;</a>
@@ -408,6 +419,10 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>MergeableComps
 : <a class="el" href="d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html#a210ea99755250764d9f2855c4ced4d8b">SUNphi::HasMember_MergeableComps&lt; Type &gt;::Fallback</a>
+</li>
+<li>mutex
+: <a class="el" href="dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e">SUNphi::ThreadPool</a>
+, <a class="el" href="d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#ae354aace9472d46d3ab479b4030a6c1c">SUNphi::ThreadPool::ScopeMutexLocker</a>
 </li>
 </ul>
 
@@ -483,6 +498,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>oldVal
 : <a class="el" href="dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html#a35d0c80a8a220e1a8f92e4c6feab6ab1">SUNphi::ScopeChangeAttribute&lt; T &gt;</a>
 </li>
+<li>onlyMasterRank
+: <a class="el" href="d3/d78/classSUNphi_1_1Logger.html#ae05a3c09c2212f470756e8f1b093c943">SUNphi::Logger</a>
+</li>
+<li>onlyMasterThread
+: <a class="el" href="d3/d78/classSUNphi_1_1Logger.html#ad1fe1b1bba2070f540ce2ecde0d394ba">SUNphi::Logger</a>
+</li>
 </ul>
 
 
@@ -498,6 +519,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>prependTime
 : <a class="el" href="d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82">SUNphi::Logger</a>
+</li>
+<li>PTHREAD_MUTEX_INITIALIZER
+: <a class="el" href="db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html#a153b6e27b40ee437f50655d9dedecf1c">SUNphi::ThreadPool::Mutex</a>
 </li>
 </ul>
 
@@ -586,6 +610,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>thisDynamic
 : <a class="el" href="d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#a769aa30da880848d59f63d76f4dab4e0">SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;</a>
+</li>
+<li>threadHasBeenCreated
+: <a class="el" href="dc/d0f/classSUNphi_1_1ThreadPool.html#ab585250ea6acca0883914c0d88576e29">SUNphi::ThreadPool</a>
 </li>
 <li>Tk
 : <a class="el" href="d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html#aea96dc710e55bd66d48f4c2617812eec">SUNphi::HasMember_Tk&lt; Type &gt;::Fallback</a>

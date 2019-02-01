@@ -120,6 +120,7 @@ $(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../df/dee/Debug_8hpp_source.html">system/Debug.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/d3b/Threads_8hpp_source.html">system/Threads.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/dbf/Timer_8hpp_source.html">system/Timer.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../db/d18/Macros_8hpp_source.html">utility/Macros.hpp</a>&gt;</code><br />
 </div>
@@ -129,6 +130,9 @@ $(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">SUNphi::Logger</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write output to a file, using different level of indentation.  <a href="../../d3/d78/classSUNphi_1_1Logger.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">SUNphi::Logger::LoggerLine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single line in the logger.  <a href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html">SUNphi::ScopeIndenter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the logger indentation level for the object scope.  <a href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html#details">More...</a><br /></td></tr>
@@ -171,11 +175,14 @@ template&lt;typename T &gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a19a03905f8d2122989469d759e85bfd5"><td class="memItemLeft" align="right" valign="top">Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a19a03905f8d2122989469d759e85bfd5">SUNphi::logger</a></td></tr>
-<tr class="separator:a19a03905f8d2122989469d759e85bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19393a3bdd006493fb56d5af4118a1d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19393a3bdd006493fb56d5af4118a1d4"></a>
+Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a19393a3bdd006493fb56d5af4118a1d4">SUNphi::runLog</a></td></tr>
+<tr class="memdesc:a19393a3bdd006493fb56d5af4118a1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global logger. <br /></td></tr>
+<tr class="separator:a19393a3bdd006493fb56d5af4118a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file to define a logger wrapping FILE*. </p>
+<p>The internal class is used to really print, while the external one to determine whether to print or not, and to lock in case the threads are present. If printing is not needed, a fake internal logger is passed. </p>
 
 <p>Definition in file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -196,7 +203,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Mark the logger to be more indented. </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00237">237</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00282">282</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
