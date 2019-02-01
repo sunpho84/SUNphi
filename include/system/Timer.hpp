@@ -270,7 +270,6 @@ namespace SUNphi
       std::chrono::duration<O>(duration).count();
   }
   
-  /// Global timings
   extern Timer timings;
   
   /// Returns the duration of executing a function

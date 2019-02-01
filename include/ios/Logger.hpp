@@ -323,7 +323,7 @@ namespace SUNphi
 #define SCOPE_ALWAYS_PUT_SIGN(LOGGER)			\
   SET_FOR_CURRENT_SCOPE(LOGGER.alwaysPrintSign,true)
   
-  extern Logger logger;
+  extern Logger runLog;
 }
 
 #endif

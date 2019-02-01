@@ -16,7 +16,7 @@ namespace SUNphi
     
     MPI_CRASH_ON_ERROR(durationOf(initDur,MPI_Init,nullptr,nullptr),"Error initializing MPI");
     
-    logger<<"MPI initialized in "<<durationInSec(initDur)<<" s \n";
+    runLog<<"MPI initialized in "<<durationInSec(initDur)<<" s \n";
 #endif
   }
   

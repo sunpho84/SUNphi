@@ -20,7 +20,7 @@
 #include <external/inplace_function.h>
 
 #include <containers/Vector.hpp>
-//#include <ios/Logger.hpp>
+#include <ios/MinimalLogger.hpp>
 #include <system/Debug.hpp>
 #include <Tuple.hpp>
 
@@ -162,8 +162,8 @@ namespace SUNphi
       }
       
       /// Synchronize checking the name of the barrier
-      void sync(const char* barrName, //< Name of the barrier
-		const int& threadId) ///< Id of the thread used coming to check
+      void sync(const char* barrName, ///< Name of the barrier
+		const int& threadId)  ///< Id of the thread used coming to check
       {
 	rawSync();
 	
@@ -329,7 +329,7 @@ namespace SUNphi
 		CRASH("Other error");
 	      }
 	  
-	  //logger<<"Thread of id "<<threadId<<" destroyed\n";
+	  minimalLogger(runLog,"Thread of id %d destroyed",(int)threadId);
 	}
       
       // Resize down the pool
@@ -382,7 +382,7 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      //logger<<"Thread of id "<<threadId<<" is telling the pool that work has been assigned (tag: "<<workAssignmentTag<<"\n";
+      minimalLogger(runLog,"Thread of id %d is telling the pool that work has been assigned (tag: %s)",(int)threadId,workAssignmentTag);
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
@@ -397,7 +397,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      //logger<<"Thread of id "<<threadId<<" is waiting the pool for work to be assigned (tag "<<workAssignmentTag<<"\n";
+      minimalLogger(runLog,"Thread of id %d is waiting the pool for work to be assigned (tag %s)",threadId,workAssignmentTag);
       
       barrier.sync(workAssignmentTag,threadId);
     }
@@ -410,7 +410,7 @@ namespace SUNphi
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      //logger<<"Thread of id "<<threadId<<" is telling the pool not to work any longer (tag: "<<workNoMoreTag<<"\n";
+      minimalLogger(runLog,"Thread of id %d is telling the pool not to work any longer (tag: %s)",(int)threadId,workNoMoreTag);
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -430,7 +430,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      //logger<<"Thread of id "<<threadId<<" has finished working (tag: "<<workFinishedTag<<")\n";
+      minimalLogger(runLog,"Thread of id %d has finished working (tag: %s)",(int)threadId,workFinishedTag);
       
       barrier.sync(workFinishedTag,threadId);
     }
@@ -445,7 +445,7 @@ namespace SUNphi
 	  /// Makes the print sequential across threads
 	  THREADS_SCOPE_SEQUENTIAL();
 	  
-	  //logger<<"Thread of id "<<threadId<<" is waiting for work to be finished (tag: "<<workFinishedTag<<")\n";
+	  minimalLogger(runLog,"Thread of id %d is waiting for work to be finished (tag: %s",(int)threadId,workFinishedTag);
 	  mutexUnlock();
 	}
       
@@ -518,7 +518,7 @@ namespace SUNphi
     /// Destructor emptying the pool
     ~ThreadPool()
     {
-      //logger<<"Destroying the pool\n";
+      minimalLogger(runLog,"Destroying the pool");
       empty();
     }
   };

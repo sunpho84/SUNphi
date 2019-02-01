@@ -43,57 +43,57 @@ namespace SUNphi
     void printBanner()
       const
     {
-      logger<<"";
-      logger<<"          ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  ";
-      logger<<"          █░█       █░█       █░█         \t" "                 █░█                   ";
-      logger<<"     ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  ";
-      logger<<"     █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  ";
-      logger<<"      █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                ";
-      logger<<"       █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            ";
-      logger<<"        █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           ";
-      logger<<"         █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         ";
-      logger<<"    ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        ";
-      logger<<"   █░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
-      logger<<"    ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
-      logger<<"          ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        ";
-      logger<<"         █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         ";
-      logger<<"        █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          ";
-      logger<<"       █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            ";
-      logger<<"      █░█     █░███████████░█     █░█    \t"  "             ███████████              ";
-      logger<<"     █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  ";
-      logger<<"     ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  ";
-      logger<<"           █░█      █░█      █░█        \t"   "                 █░█                 ";
-      logger<<"          █░█       █░█       █░█       \t"   "                 █░█                 ";
-      logger<<"          ▀▀        ▀█▀        ▀▀       \t"  "                  ▀█▀                ";
-      logger<<"";
+      runLog<<"";
+      runLog<<"          ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  ";
+      runLog<<"          █░█       █░█       █░█         \t" "                 █░█                   ";
+      runLog<<"     ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  ";
+      runLog<<"     █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  ";
+      runLog<<"      █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                ";
+      runLog<<"       █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            ";
+      runLog<<"        █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           ";
+      runLog<<"         █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         ";
+      runLog<<"    ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        ";
+      runLog<<"   █░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<"    ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<"          ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<"         █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         ";
+      runLog<<"        █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          ";
+      runLog<<"       █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            ";
+      runLog<<"      █░█     █░███████████░█     █░█    \t"  "             ███████████              ";
+      runLog<<"     █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  ";
+      runLog<<"     ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  ";
+      runLog<<"           █░█      █░█      █░█        \t"   "                 █░█                 ";
+      runLog<<"          █░█       █░█       █░█       \t"   "                 █░█                 ";
+      runLog<<"          ▀▀        ▀█▀        ▀▀       \t"  "                  ▀█▀                ";
+      runLog<<"";
     }
     
     /// Prints the version, and contacts
     void printVersionContacts()
       const
     {
-      logger<<"\nInitializing "<<PACKAGE_NAME<<" library, v"<<PACKAGE_VERSION<<", send bug report to <"<<PACKAGE_BUGREPORT<<">";
+      runLog<<"\nInitializing "<<PACKAGE_NAME<<" library, v"<<PACKAGE_VERSION<<", send bug report to <"<<PACKAGE_BUGREPORT<<">";
     }
     
     /// Prints the git info
     void printGitInfo()
       const
     {
-      logger<<"Commit "<<GIT_HASH<<" made at "<<GIT_TIME<<" by "<<GIT_COMMITTER<<" with message: \""<<GIT_LOG<<"\"";
+      runLog<<"Commit "<<GIT_HASH<<" made at "<<GIT_TIME<<" by "<<GIT_COMMITTER<<" with message: \""<<GIT_LOG<<"\"";
     }
     
     /// Prints configure info
     void printConfigurePars()
       const
     {
-      logger<<"Configured at "<<CONFIG_TIME<<" with flags: "<<CONFIG_FLAGS<<"";
+      runLog<<"Configured at "<<CONFIG_TIME<<" with flags: "<<CONFIG_FLAGS<<"";
     }
     
     /// Says bye bye
     void printBailout()
       const
     {
-      logger<<"\n Ciao!\n";
+      runLog<<"\n Ciao!\n";
     }
     
   public:
@@ -106,7 +106,7 @@ namespace SUNphi
       printGitInfo();
       printConfigurePars();
       
-      logger<<"ANNA "<<threads.isMasterThread();//  loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
+      runLog<<"ANNA "<<threads.isMasterThread();//  loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
       
       // threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
     }
@@ -118,10 +118,21 @@ namespace SUNphi
     }
   };
   
+  /// Global timings
   Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
-  Logger logger("/dev/stdout");
+  
+  /// Global logger
+  Logger runLog("/dev/stdout");
+  
+  /// Presentation of the library
   Aliver aliver;
-  Logger fakeLogger("/dev/null");
+  
+  /// Fake logger
+  Logger logNull("/dev/null");
+  
+  /// Global MPI
   Mpi mpi;
+  
+  /// Global thread pool
   ThreadPool threads;
 }

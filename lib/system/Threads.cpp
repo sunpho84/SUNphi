@@ -27,7 +27,7 @@ namespace SUNphi
     
     delete ptr;
     
-    //logger<<"Thread id: "<<threadId<<" (check: "<<pool.getThreadId()<<") entering the pool, "<<pthread_self()<<"\n";
+    //runLog<<"Thread id: "<<threadId<<" (check: "<<pool.getThreadId()<<") entering the pool, "<<pthread_self()<<"\n";
     
     /// Work until asked to empty
     bool keepSwimming=
@@ -40,7 +40,7 @@ namespace SUNphi
 	keepSwimming=
 	  pool.isFilled;
 	
-	logger<<"Thread id: "<<threadId<<" keep swimming: "<<keepSwimming<<"\n";
+	runLog<<"Thread id: "<<threadId<<" keep swimming: "<<keepSwimming<<"\n";
 	
 	if(keepSwimming)
 	  {
@@ -50,7 +50,7 @@ namespace SUNphi
 	  }
       }
     
-    //logger<<"Thread: "<<threadId<<" (check: "<<pool.getThreadId()<<") exiting the pool, "<<pthread_self()<<"\n";
+    //runLog<<"Thread: "<<threadId<<" (check: "<<pool.getThreadId()<<") exiting the pool, "<<pthread_self()<<"\n";
     
     return
       nullptr;
@@ -58,7 +58,7 @@ namespace SUNphi
   
   void ThreadPool::fill(const pthread_attr_t* attr)
     {
-      logger<<"Filling the thread pool with "<<nThreads<<" threads";
+      runLog<<"Filling the thread pool with "<<nThreads<<" threads";
       
       // Checks that the pool is not filled
       if(isFilled)
@@ -77,7 +77,7 @@ namespace SUNphi
       
       for(int threadId=1;threadId<nThreads;threadId++)
 	{
-	  //logger<<"thread of id "<<threadId<<" spwawned\n";
+	  //runLog<<"thread of id "<<threadId<<" spwawned\n";
 	  
 	  // Allocates the parameters of the thread
 	  ThreadPars* pars=

@@ -21,6 +21,7 @@ BUILT_SOURCES=%D%/gitInfo.hpp
 
 # Library sources
 __top_builddir__lib_libsunphi_a_SOURCES= \
+	%D%/ios/MinimalLogger.cpp \
 	%D%/system/Mpi.cpp \
 	%D%/system/Threads.cpp \
 	%D%/utility/Aliver.cpp
