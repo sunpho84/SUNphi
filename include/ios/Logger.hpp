@@ -10,9 +10,9 @@
 /// threads are present. If printing is not needed, a fake internal
 /// logger is passed.
 
-
 #include <cstdio>
 
+#include <ios/TextColors.hpp>
 #include <system/Debug.hpp>
 //#include <system/Mpi.hpp>
 #include <system/Threads.hpp>
@@ -27,8 +27,14 @@ namespace SUNphi
     /// Single line in the logger
     class LoggerLine
     {
-      /// Store the reference to the weather the line has to be ended or not
-      bool hasToEnd;
+      /// Store wether the line has to be ended or not
+      bool hasToEndLine;
+      
+      /// Store wether the line is crashing
+      bool hasToCrash;
+      
+      /// Mark that the color has changed in this line
+      bool colorChanged;
       
       /// Reference to the logger
       const Logger& logger;
@@ -52,7 +58,10 @@ namespace SUNphi
       
       /// Construct
       LoggerLine(const Logger& logger)
-	: hasToEnd(true),logger(logger)
+	: hasToEndLine(true),
+	  hasToCrash(false),
+	  colorChanged(false),
+	  logger(logger)
       {
 #warning DARIVEDERE
 	threads.mutexLock();
@@ -62,9 +71,18 @@ namespace SUNphi
       
       /// Move constructor
       LoggerLine(LoggerLine&& oth)
-	: hasToEnd(true),logger(oth.logger)
+      	: hasToEndLine(true),
+      	  hasToCrash(oth.hasToCrash),
+	  colorChanged(oth.colorChanged),
+      	  logger(oth.logger)
       {
-	oth.hasToEnd=
+      	oth.hasToEndLine=
+      	  false;
+	
+      	oth.hasToCrash=
+      	  false;
+	
+	oth.colorChanged=
 	  false;
       }
       
@@ -77,12 +95,40 @@ namespace SUNphi
       /// Destroy (end the line)
       ~LoggerLine()
       {
-	if(hasToEnd)
+	if(hasToEndLine)
 	  {
+	    // Ends the quoted text
+	    if(hasToCrash)
+	      *this<<"\"";
+	    
+	    // Reset color
+	    if(colorChanged)
+	      *this<<TextColor::DEFAULT;
+	    
+	    // Ends the line
 	    endLine();
 #warning DARIVEDERE
 	    threads.mutexUnlock();
 	  }
+	
+	if(hasToCrash)
+	  {
+	    printBacktraceList();
+	    exit(1);
+	  }
+      }
+      
+      /// Changes the color of the line
+      LoggerLine& operator<<(const TextColor& c)
+      {
+	colorChanged=
+	  true;
+	
+	return
+	  *this<<
+	    TEXT_CHANGE_COLOR_HEAD<<
+	    static_cast<char>(c)<<
+	    TEXT_CHANGE_COLOR_TAIL;
       }
       
       /// Prints a string
@@ -103,11 +149,21 @@ namespace SUNphi
 	      }
 	    else
 	      // Prints the char
-	      fputc(*p,logger.file);
+	      *this<<*p;
 	    
 	    // Increment the char
 	    p++;
 	  }
+	
+	return
+	  *this;
+      }
+      
+      /// Prints a char
+      LoggerLine& operator<<(const char& c)
+      {
+	// Prints the char
+	fputc(c,logger.file);
 	
 	return
 	  *this;
@@ -118,6 +174,39 @@ namespace SUNphi
       {
 	return
 	  (*this)<<str.c_str();
+      }
+      
+      /// Prints crash information
+      ///
+      /// Then sets the flag \c hasToCrash to true, such that at
+      /// destroy of the line, crash happens
+      LoggerLine& operator<<(const Crasher& cr)
+      {
+	this->hasToCrash=
+	  true;
+	
+	(*this)<<TextColor::RED<<" ERROR in function "<<cr.funcName<<" at line "<<cr.line<<" of file "<<cr.path<<": \"";
+	
+	return
+	  *this;
+      }
+      
+      /// Prints an integer
+      LoggerLine& operator<<(const int& i)
+      {
+	fprintf(logger.file,"%d",i);
+	
+	return
+	  *this;
+      }
+      
+      /// Prints a long integer
+      LoggerLine& operator<<(const int64_t& l)
+      {
+	fprintf(logger.file,"%ld",l);
+	
+	return
+	  *this;
       }
       
       /// Prints a double

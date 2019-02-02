@@ -9,6 +9,7 @@
 #include <gitInfo.hpp>
 
 #include <ios/Logger.hpp>
+#include <ios/TextColors.hpp>
 #include <system/Mpi.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
@@ -44,28 +45,28 @@ namespace SUNphi
       const
     {
       runLog<<"";
-      runLog<<"          ▄▄        ▄█▄        ▄▄        \t" "                 ▄█▄                  ";
-      runLog<<"          █░█       █░█       █░█         \t" "                 █░█                   ";
-      runLog<<"     ▄▄    █░█      █░█      █░█    ▄▄   \t"  "                 █░█                  ";
-      runLog<<"     █░█    █░█     █░█     █░█    █░█   \t"  "                 █░█                  ";
-      runLog<<"      █░█    █░█  ███████  █░█    █░█    \t"  "               ███████                ";
-      runLog<<"       █░█    █████░░░░░█████    █░█     \t"  "           █████░█░█░█████            ";
-      runLog<<"        █░█  ██░░░░░░░░░░░░░██  █░█      \t"  "          ██░░░░░█░█░░░░░██           ";
-      runLog<<"         █░██░░░░░░░░░░░░░░░░░██░█       \t"  "        ██░░░░░░░█░█░░░░░░░██         ";
-      runLog<<"    ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t"  "       ██░░░░░░░░█░█░░░░░░░░██        ";
-      runLog<<"   █░░░░░░█░████████░░░████████░█░░░░░░█ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
-      runLog<<"    ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t"  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
-      runLog<<"          ██░░░░░░░░░░░░░░░░░░░░█        \t"  "       ██░░░░░░░░█░█░░░░░░░░░█        ";
-      runLog<<"         █░██░░░░░███████░░░░░░█░█       \t"  "        ██░░░░░░░█░█░░░░░░░░█         ";
-      runLog<<"        █░█  █░░░░░░░░░░░░░░░██ █░█      \t"  "          █░░░░░░█░█░░░░░░██          ";
-      runLog<<"       █░█    ██░░░░░░░░░░░██    █░█     \t"  "           ██░░░░█░█░░░░██            ";
-      runLog<<"      █░█     █░███████████░█     █░█    \t"  "             ███████████              ";
-      runLog<<"     █░█     █░█    █░█    █░█     █░█   \t"  "                 █░█                  ";
-      runLog<<"     ▀▀     █░█     █░█     █░█     ▀▀  \t"   "                 █░█                  ";
-      runLog<<"           █░█      █░█      █░█        \t"   "                 █░█                 ";
-      runLog<<"          █░█       █░█       █░█       \t"   "                 █░█                 ";
-      runLog<<"          ▀▀        ▀█▀        ▀▀       \t"  "                  ▀█▀                ";
-      runLog<<"";
+      runLog<<TextColor::BROWN<<"          ▄▄        ▄█▄        ▄▄        \t"<<TextColor::PURPLE<< "                 ▄█▄                  ";
+      runLog<<TextColor::BROWN<<"          █░█       █░█       █░█         \t"<<TextColor::PURPLE<< "                 █░█                   ";
+      runLog<<TextColor::BROWN<<"     ▄▄    █░█      █░█      █░█    ▄▄   \t"<<TextColor::PURPLE<<  "                 █░█                  ";
+      runLog<<TextColor::BROWN<<"     █░█    █░█     █░█     █░█    █░█   \t"<<TextColor::PURPLE<<  "                 █░█                  ";
+      runLog<<TextColor::BROWN<<"      █░█    █░█  ███████  █░█    █░█    \t"<<TextColor::PURPLE<<  "               ███████                ";
+      runLog<<TextColor::BROWN<<"       █░█    █████░░░░░█████    █░█     \t"<<TextColor::PURPLE<<  "           █████░█░█░█████            ";
+      runLog<<TextColor::BROWN<<"        █░█  ██░░░░░░░░░░░░░██  █░█      \t"<<TextColor::PURPLE<<  "          ██░░░░░█░█░░░░░██           ";
+      runLog<<TextColor::BROWN<<"         █░██░░░░░░░░░░░░░░░░░██░█       \t"<<TextColor::PURPLE<<  "        ██░░░░░░░█░█░░░░░░░██         ";
+      runLog<<TextColor::BROWN<<"    ▄▄▄▄▄▄███████████░███████████▄▄▄▄▄▄ \t" <<TextColor::PURPLE<< "       ██░░░░░░░░█░█░░░░░░░░██        ";
+      runLog<<TextColor::BROWN<<"   █░░░░░░█░████████░░░████████░█░░░░░░█ \t"<<TextColor::PURPLE<<  "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<TextColor::BROWN<<"    ▀▀▀▀▀▀█░░░████░░░░░░░████░░░█▀▀▀▀▀▀ \t" <<TextColor::PURPLE<< "       █░░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<TextColor::BROWN<<"          ██░░░░░░░░░░░░░░░░░░░░█        \t"<<TextColor::PURPLE<<  "       ██░░░░░░░░█░█░░░░░░░░░█        ";
+      runLog<<TextColor::BROWN<<"         █░██░░░░░███████░░░░░░█░█       \t"<<TextColor::PURPLE<<  "        ██░░░░░░░█░█░░░░░░░░█         ";
+      runLog<<TextColor::BROWN<<"        █░█  █░░░░░░░░░░░░░░░██ █░█      \t"<<TextColor::PURPLE<<  "          █░░░░░░█░█░░░░░░██          ";
+      runLog<<TextColor::BROWN<<"       █░█    ██░░░░░░░░░░░██    █░█     \t"<<TextColor::PURPLE<<  "           ██░░░░█░█░░░░██            ";
+      runLog<<TextColor::BROWN<<"      █░█     █░███████████░█     █░█    \t"<<TextColor::PURPLE<<  "             ███████████              ";
+      runLog<<TextColor::BROWN<<"     █░█     █░█    █░█    █░█     █░█   \t"<<TextColor::PURPLE<<  "                 █░█                  ";
+      runLog<<TextColor::BROWN<<"     ▀▀     █░█     █░█     █░█     ▀▀  \t" <<TextColor::PURPLE<<  "                 █░█                  ";
+      runLog<<TextColor::BROWN<<"           █░█      █░█      █░█        \t" <<TextColor::PURPLE<<  "                 █░█                 ";
+      runLog<<TextColor::BROWN<<"          █░█       █░█       █░█       \t" <<TextColor::PURPLE<<  "                 █░█                 ";
+      runLog<<TextColor::BROWN<<"          ▀▀        ▀█▀        ▀▀       \t" <<TextColor::PURPLE<< "                 ▀█▀                ";
+      runLog<< "";
     }
     
     /// Prints the version, and contacts

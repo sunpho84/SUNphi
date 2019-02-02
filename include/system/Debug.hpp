@@ -8,6 +8,8 @@
 #include <execinfo.h>
 #include <iostream>
 
+#include <ios/MinimalLogger.hpp>
+
 /// Macro to make the crash being more explicit
 #define CRASH(...)							\
   SUNphi::internalCrash(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)
@@ -18,6 +20,23 @@
 
 namespace SUNphi
 {
+  /// Keep all the information to crash
+  struct Crasher
+  {
+    /// File where the crash happened
+    const char* path;
+    
+    /// Line number where the crash happened
+    const int line;
+    
+    /// Function where the crash happened
+    const char* funcName;
+  };
+  
+  /// Initialize the crasher
+#define CRASHI					\
+  runLog<<Crasher{__FILE__,__LINE__,__PRETTY_FUNCTION__}
+  
   /// Write the list of called routines
   inline void printBacktraceList()
   {
@@ -25,9 +44,9 @@ namespace SUNphi
     int frames=backtrace(callstack,128);
     char** strs=backtrace_symbols(callstack,frames);
     
-    std::cerr<<"Backtracing..."<<std::endl;
+    minimalLogger(runLog,"Backtracing...");
     for(int i=0;i<frames;i++)
-      std::cerr<<strs[i]<<std::endl;
+      minimalLogger(runLog,strs[i]);
     
     free(strs);
   }

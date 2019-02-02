@@ -3,7 +3,7 @@
 
 /// \file MinimalLogger.hpp
 ///
-/// \brief /// Minimal version of the logger
+/// \brief Minimal version of the logger
 ///
 /// This file can be included in place of Logger.hpp, in case the
 /// former cannot be included due to missing requirements, e.g. in
