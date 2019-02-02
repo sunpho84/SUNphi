@@ -2,6 +2,8 @@ var searchData=
 [
   ['tenscompslisttotmaxknownsubmultiple',['tensCompsListTotMaxKnownSubMultiple',['../d8/df8/classSUNphi_1_1TensKind.html#a171d70377c8c527dca8927b9fffcfab6',1,'SUNphi::TensKind']]],
   ['tenscompslisttotsize',['tensCompsListTotSize',['../d8/df8/classSUNphi_1_1TensKind.html#aa840722888788a06df58634e15443d36',1,'SUNphi::TensKind']]],
+  ['text_5fchange_5fcolor_5fhead',['TEXT_CHANGE_COLOR_HEAD',['../d3/dd7/namespaceSUNphi.html#aec8d7af4a21676b1c9f9519ae99c76c7',1,'SUNphi']]],
+  ['text_5fchange_5fcolor_5ftail',['TEXT_CHANGE_COLOR_TAIL',['../d3/dd7/namespaceSUNphi.html#a22849d59de4e186614d3516b924a97d8',1,'SUNphi']]],
   ['thisdynamic',['thisDynamic',['../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#a769aa30da880848d59f63d76f4dab4e0',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;']]],
   ['threadhasbeencreated',['threadHasBeenCreated',['../dc/d0f/classSUNphi_1_1ThreadPool.html#ab585250ea6acca0883914c0d88576e29',1,'SUNphi::ThreadPool']]],
   ['threads',['threads',['../d3/dd7/namespaceSUNphi.html#a3b3a08e7eff1fd2940aadfd20f53d171',1,'SUNphi']]],

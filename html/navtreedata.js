@@ -39,13 +39,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/d24/classSUNphi_1_1Conjer.html#a8236bf435ac2125d31cadc98a79fff10",
-"d3/dbe/IntListOrder_8hpp.html#af043ff525cec37e98a03411447d5d836",
-"d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html",
-"d8/dc9/structSUNphi_1_1RwCol.html#ae29a38b5b9a7ff35e0798d43279090c3",
-"db/d12/classSUNphi_1_1ScalarWrapper.html#a49244cd7816784d8dce6a3b041163c44",
-"dc/dbf/structSUNphi_1_1__IntSeqFirstN.html",
-"de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e"
+"d2/d24/classSUNphi_1_1Conjer.html#a6ed1add477ce6057bf17a62daab4ec52",
+"d3/dbe/IntListOrder_8hpp.html#ac64cb60c4cd5f2b0106dbf9534ec781f",
+"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#adf825c0a10f9060d883ca2b9805eb5b8",
+"d8/dc9/structSUNphi_1_1RwCol.html#a592ed1584d6f2c9b31f15e8876bc2193",
+"db/d12/classSUNphi_1_1ScalarWrapper.html#a09c2aa07f099d6abb253d2d4fd781435",
+"dc/d8f/TensClass_8hpp.html#a7c26d84e3ccff161fe8aec5daf2a6f0b",
+"de/d58/classSUNphi_1_1Adder.html#a0945beceeea78e1104d09dedbbbddfb1",
+"namespacemembers_type.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

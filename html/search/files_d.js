@@ -5,6 +5,7 @@ var searchData=
   ['tenscomp_2ehpp',['TensComp.hpp',['../d7/d7a/TensComp_8hpp.html',1,'']]],
   ['tenskind_2ehpp',['TensKind.hpp',['../d6/d3f/TensKind_8hpp.html',1,'']]],
   ['tensstor_2ehpp',['TensStor.hpp',['../d1/d7a/TensStor_8hpp.html',1,'']]],
+  ['textcolors_2ehpp',['TextColors.hpp',['../de/d19/TextColors_8hpp.html',1,'']]],
   ['threads_2ehpp',['Threads.hpp',['../d3/d3b/Threads_8hpp.html',1,'']]],
   ['timer_2ehpp',['Timer.hpp',['../d8/dbf/Timer_8hpp.html',1,'']]],
   ['transpose_2ehpp',['Transpose.hpp',['../d0/d6d/Transpose_8hpp.html',1,'']]],

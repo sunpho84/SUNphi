@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('df/dee/Debug_8hpp.html','../../');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
@@ -118,9 +119,16 @@ $(document).ready(function(){initNavTree('df/dee/Debug_8hpp.html','../../');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;execinfo.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">ios/MinimalLogger.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../df/dee/Debug_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d07/structSUNphi_1_1Crasher.html">SUNphi::Crasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep all the information to crash.  <a href="../../d1/d07/structSUNphi_1_1Crasher.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
@@ -137,6 +145,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#ae65f838a62c22e7f99e4ff6dccdfa105">ASM_BOOKMARK</a>(COMMENT)&#160;&#160;&#160;asm(&quot;#Bookmark &quot; __FILE__ &quot; &quot; COMMENT)</td></tr>
 <tr class="memdesc:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include a comment in the assembler, recognizable in the compilation. <br /></td></tr>
 <tr class="separator:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b14ea4e5ba79c8836b8edbbf983adf4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#a5b14ea4e5ba79c8836b8edbbf983adf4">CRASHI</a>&#160;&#160;&#160;runLog&lt;&lt;Crasher{__FILE__,__LINE__,__PRETTY_FUNCTION__}</td></tr>
+<tr class="memdesc:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the crasher. <br /></td></tr>
+<tr class="separator:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

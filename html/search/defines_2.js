@@ -8,5 +8,6 @@ var searchData=
   ['config_5ftime',['CONFIG_TIME',['../de/d06/Aliver_8cpp.html#aba38f0c926fb820677b5373f7b2e3c81',1,'Aliver.cpp']]],
   ['const_5fqualif',['CONST_QUALIF',['../d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240',1,'TypeTraits.hpp']]],
   ['crash',['CRASH',['../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d',1,'Debug.hpp']]],
+  ['crashi',['CRASHI',['../df/dee/Debug_8hpp.html#a5b14ea4e5ba79c8836b8edbbf983adf4',1,'Debug.hpp']]],
   ['crtp_5fcast',['CRTP_CAST',['../d4/dba/CRTP_8hpp.html#a096469fcc98d6dce86a93de07c24840f',1,'CRTP.hpp']]]
 ];

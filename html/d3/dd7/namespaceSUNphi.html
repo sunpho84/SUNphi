@@ -387,6 +387,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html">ConstrainTupleTypesAreAllDifferent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain all types in the tuple to be different.  <a href="../../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d07/structSUNphi_1_1Crasher.html">Crasher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep all the information to crash.  <a href="../../d1/d07/structSUNphi_1_1Crasher.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcb/structSUNphi_1_1CStringComparer.html">CStringComparer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object incapsulating the comparison operator between two c strings.  <a href="../../d7/dcb/structSUNphi_1_1CStringComparer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -829,6 +832,22 @@ template&lt;typename Tc , typename SMET , typename  = ConstrainIsTensComp&lt;Tc&
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a0c3a9f132137f70f400bcae5207ac11a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c3a9f132137f70f400bcae5207ac11a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0c3a9f132137f70f400bcae5207ac11a">TextColor</a> : char { <br />
+&#160;&#160;<b>BLACK</b> ='0', 
+<b>RED</b> ='1', 
+<b>GREEN</b> ='2', 
+<b>BROWN</b> ='3', 
+<br />
+&#160;&#160;<b>BLUE</b> ='4', 
+<b>PURPLE</b> ='5', 
+<b>CYAN</b> ='6', 
+<b>GREY</b> ='7', 
+<br />
+&#160;&#160;<b>DEFAULT</b> ='9'
+<br />
+ }<tr class="memdesc:a0c3a9f132137f70f400bcae5207ac11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the various supported colors. <br /></td></tr>
+</td></tr>
+<tr class="separator:a0c3a9f132137f70f400bcae5207ac11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac682f0879a1c598390150ca77ce82479"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac682f0879a1c598390150ca77ce82479"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac682f0879a1c598390150ca77ce82479">Orientation</a> { <b>BW</b> =0, 
 <b>FW</b> =1
  }<tr class="memdesc:ac682f0879a1c598390150ca77ce82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value to identifiy orientations. <br /></td></tr>
@@ -958,6 +977,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
 <tr class="memdesc:aefc47f1022713393c1f22dc3107f3418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crash with a detailed message.  <a href="#aefc47f1022713393c1f22dc3107f3418">More...</a><br /></td></tr>
 <tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a983825154c3b066e753ad3641bd04fe1">minimalLogger</a> (<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a> &amp;logger, const char *format,...)</td></tr>
+<tr class="separator:a983825154c3b066e753ad3641bd04fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdbc23a72d6a49054aee06b5e5a2d8d8">safeModulo</a> (const T &amp;val, const T &amp;mod)</td></tr>
 <tr class="separator:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -971,8 +992,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:affbfd274f5650ccd16fd450623c7e019"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#affbfd274f5650ccd16fd450623c7e019">sign</a> (const T &amp;x)</td></tr>
 <tr class="memdesc:affbfd274f5650ccd16fd450623c7e019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sign of a number, +1 0 or -1. <br /></td></tr>
 <tr class="separator:affbfd274f5650ccd16fd450623c7e019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a983825154c3b066e753ad3641bd04fe1">minimalLogger</a> (<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a> &amp;logger, const char *format,...)</td></tr>
-<tr class="separator:a983825154c3b066e753ad3641bd04fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82133fd401b9dcb4ae7ace4fd98f2840"><td class="memTemplParams" colspan="2">template&lt;std::size_t I, class T &gt; </td></tr>
 <tr class="memitem:a82133fd401b9dcb4ae7ace4fd98f2840"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::tuple_element_t&lt; I, T &gt; &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a82133fd401b9dcb4ae7ace4fd98f2840">get</a> (T &amp;&amp;t)</td></tr>
 <tr class="separator:a82133fd401b9dcb4ae7ace4fd98f2840"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1435,6 +1454,12 @@ template&lt;typename T &gt; </td></tr>
 <a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a19393a3bdd006493fb56d5af4118a1d4">runLog</a></td></tr>
 <tr class="memdesc:a19393a3bdd006493fb56d5af4118a1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global logger. <br /></td></tr>
 <tr class="separator:a19393a3bdd006493fb56d5af4118a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aec8d7af4a21676b1c9f9519ae99c76c7">TEXT_CHANGE_COLOR_HEAD</a> []</td></tr>
+<tr class="memdesc:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">First part of the string whcih change color.  <a href="#aec8d7af4a21676b1c9f9519ae99c76c7">More...</a><br /></td></tr>
+<tr class="separator:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22849d59de4e186614d3516b924a97d8"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a22849d59de4e186614d3516b924a97d8">TEXT_CHANGE_COLOR_TAIL</a> []</td></tr>
+<tr class="memdesc:a22849d59de4e186614d3516b924a97d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last part of the string whcih change color.  <a href="#a22849d59de4e186614d3516b924a97d8">More...</a><br /></td></tr>
+<tr class="separator:a22849d59de4e186614d3516b924a97d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29703b0dc98a249700138ceb7bac9758"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a29703b0dc98a249700138ceb7bac9758">DEBUG_THREADS</a></td></tr>
 <tr class="memdesc:a29703b0dc98a249700138ceb7bac9758"><td class="mdescLeft">&#160;</td><td class="mdescRight">States that we want to debug threads.  <a href="#a29703b0dc98a249700138ceb7bac9758">More...</a><br /></td></tr>
 <tr class="separator:a29703b0dc98a249700138ceb7bac9758"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5072,7 +5097,7 @@ template&lt;class... Args&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../df/dee/Debug_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/dee/Debug_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
 
 </div>
 </div>
@@ -5196,7 +5221,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d7a/MinimalLogger_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../db/d7a/MinimalLogger_8cpp_source.html">MinimalLogger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d7a/MinimalLogger_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../db/d7a/MinimalLogger_8cpp_source.html">MinimalLogger.cpp</a>.</p>
 
 </div>
 </div>
@@ -7575,7 +7600,7 @@ template&lt;int I&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00033">Aliver.cpp:33</a></div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <a class="code" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a>()</div><div class="ttc" id="namespaceSUNphi_html_aefb3bd85afa3e1418572d526cbe3021d"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a></div><div class="ttdeci">int aliverHelper()</div><div class="ttdoc">Helper to make sure that the initializing functions are referenced. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d06/Aliver_8cpp_source.html#l00034">Aliver.cpp:34</a></div></div>
 </div><!-- fragment --><p>Makes sure that the library is started</p>
 <p>Elaborates on the approach of <a href="https://stackoverflow.com/a/43352830">https://stackoverflow.com/a/43352830</a> 1) takes the returned value of the helper, which is never used 2) static ensures that every TU gets a separate instance </p>
 
@@ -7646,7 +7671,7 @@ template&lt;int Head, int... Tail&gt; </div>
 <p>Gloabl MPI. </p>
 <p>Global MPI. </p>
 
-<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
 
 </div>
 </div>
@@ -8000,6 +8025,54 @@ template&lt;int InMask, auto... Flags&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aec8d7af4a21676b1c9f9519ae99c76c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char SUNphi::TEXT_CHANGE_COLOR_HEAD[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;\x1b[3&quot;</span></div></div><!-- fragment -->
+<p>First part of the string whcih change color. </p>
+
+<p>Definition at line <a class="el" href="../../de/d19/TextColors_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../de/d19/TextColors_8hpp_source.html">TextColors.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22849d59de4e186614d3516b924a97d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char SUNphi::TEXT_CHANGE_COLOR_TAIL[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;m&quot;</span></div></div><!-- fragment -->
+<p>Last part of the string whcih change color. </p>
+
+<p>Definition at line <a class="el" href="../../de/d19/TextColors_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d19/TextColors_8hpp_source.html">TextColors.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3b3a08e7eff1fd2940aadfd20f53d171"></a>
 <div class="memitem">
 <div class="memproto">
@@ -8013,7 +8086,7 @@ template&lt;int InMask, auto... Flags&gt; </div>
 <p>Global threads. </p>
 <p>Global thread pool. </p>
 
-<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
 
 </div>
 </div>
