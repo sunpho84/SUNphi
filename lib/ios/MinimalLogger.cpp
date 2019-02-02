@@ -4,12 +4,13 @@
 
 /// \file MinimalLogger.cpp
 ///
-/// \brief Implements the minimalLogger
+/// \brief Implements the minimalLogger, see explenation in the hpp
 
 #include <cstdarg>
 #include <cstdio>
 
 #include <ios/Logger.hpp>
+#include <ios/MinimalLogger.hpp>
 
 namespace SUNphi
 {
