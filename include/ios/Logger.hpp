@@ -9,6 +9,7 @@
 /// to determine whether to print or not, and to lock in case the
 /// threads are present. If printing is not needed, a fake internal
 /// logger is passed.
+/// \todo REVIEW THIS, I think we will short circuit the printing
 
 #include <cstdio>
 
@@ -78,12 +79,6 @@ namespace SUNphi
       {
       	oth.hasToEndLine=
       	  false;
-	
-      	oth.hasToCrash=
-      	  false;
-	
-	oth.colorChanged=
-	  false;
       }
       
       /// Ends the line
@@ -95,6 +90,7 @@ namespace SUNphi
       /// Destroy (end the line)
       ~LoggerLine()
       {
+	// Wrap everything here
 	if(hasToEndLine)
 	  {
 	    // Ends the quoted text
@@ -109,12 +105,12 @@ namespace SUNphi
 	    endLine();
 #warning DARIVEDERE
 	    threads.mutexUnlock();
-	  }
-	
-	if(hasToCrash)
-	  {
-	    printBacktraceList();
-	    exit(1);
+	    
+	    if(hasToCrash)
+	      {
+		printBacktraceList();
+		exit(1);
+	      }
 	  }
       }
       
