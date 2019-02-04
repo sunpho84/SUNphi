@@ -112,7 +112,9 @@ $(document).ready(function(){initNavTree('d3/d78/classSUNphi_1_1Logger.html','..
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d7/db7/classSUNphi_1_1Logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::Logger Class Reference</div>  </div>
@@ -159,11 +161,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:a5f6c8990f0a588604e37af97012c48aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8ac6c87b1aad4eae3f720b0409ccc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec8ac6c87b1aad4eae3f720b0409ccc7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#aec8ac6c87b1aad4eae3f720b0409ccc7">close</a> ()</td></tr>
-<tr class="memdesc:aec8ac6c87b1aad4eae3f720b0409ccc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close, crashing if not open. <br /></td></tr>
+<tr class="memdesc:aec8ac6c87b1aad4eae3f720b0409ccc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close. <br /></td></tr>
 <tr class="separator:aec8ac6c87b1aad4eae3f720b0409ccc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a878a62c98c821f677f17e795c43632dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a878a62c98c821f677f17e795c43632dc"><td class="memTemplParams" colspan="2"><a class="anchor" id="a878a62c98c821f677f17e795c43632dc"></a>
+template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a878a62c98c821f677f17e795c43632dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a878a62c98c821f677f17e795c43632dc">operator&lt;&lt;</a> (T &amp;&amp;t)</td></tr>
-<tr class="memdesc:a878a62c98c821f677f17e795c43632dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new line, and print it.  <a href="#a878a62c98c821f677f17e795c43632dc">More...</a><br /></td></tr>
+<tr class="memdesc:a878a62c98c821f677f17e795c43632dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new line, and print it. <br /></td></tr>
 <tr class="separator:a878a62c98c821f677f17e795c43632dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa7a160390aa1b1a28355d25e97d4f32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#aaa7a160390aa1b1a28355d25e97d4f32">Logger</a> (const char *path, const bool &amp;<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82">prependTime</a>=true)</td></tr>
 <tr class="memdesc:aaa7a160390aa1b1a28355d25e97d4f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create with a path.  <a href="#aaa7a160390aa1b1a28355d25e97d4f32">More...</a><br /></td></tr>
@@ -175,6 +178,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a45192a3a4e73fce6d894b4d3932b5e0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45192a3a4e73fce6d894b4d3932b5e0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a45192a3a4e73fce6d894b4d3932b5e0e">onlyMasterThreadPrint</a> {true}</td></tr>
+<tr class="memdesc:a45192a3a4e73fce6d894b4d3932b5e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether only master thread can write here. <br /></td></tr>
+<tr class="separator:a45192a3a4e73fce6d894b4d3932b5e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45137bf23da7dda483b2f3dd5d5d411e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45137bf23da7dda483b2f3dd5d5d411e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a45137bf23da7dda483b2f3dd5d5d411e">onlyMasterRankPrint</a> {true}</td></tr>
+<tr class="memdesc:a45137bf23da7dda483b2f3dd5d5d411e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decide whether only master MPI can write here. <br /></td></tr>
+<tr class="separator:a45137bf23da7dda483b2f3dd5d5d411e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a219a6490070ba94ca36b863c059447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a219a6490070ba94ca36b863c059447"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a6a219a6490070ba94ca36b863c059447">realPrecision</a> {6}</td></tr>
 <tr class="memdesc:a6a219a6490070ba94ca36b863c059447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precision to print real number. <br /></td></tr>
@@ -188,6 +199,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memdesc:aaf367c9c42de758440776d5b4433185e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format mode for real number. <br /></td></tr>
 <tr class="separator:aaf367c9c42de758440776d5b4433185e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a010f8989ef50fbb3045f64923cc61a43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a010f8989ef50fbb3045f64923cc61a43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43">getExclusiveAccess</a> ()</td></tr>
+<tr class="memdesc:a010f8989ef50fbb3045f64923cc61a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the exclusive access right. <br /></td></tr>
+<tr class="separator:a010f8989ef50fbb3045f64923cc61a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7bdd634fa659492aea777cae51663d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e7bdd634fa659492aea777cae51663d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a4e7bdd634fa659492aea777cae51663d">releaseExclusiveAccess</a> ()</td></tr>
+<tr class="memdesc:a4e7bdd634fa659492aea777cae51663d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the exclusive access right. <br /></td></tr>
+<tr class="separator:a4e7bdd634fa659492aea777cae51663d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a45cfb7bf7049a669bae2f6f99ff237ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45cfb7bf7049a669bae2f6f99ff237ef"></a>
@@ -198,23 +220,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82">prependTime</a></td></tr>
 <tr class="memdesc:a2a001323890441081aa9693c73770e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine wheter the new line includes time. <br /></td></tr>
 <tr class="separator:a2a001323890441081aa9693c73770e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a51ac35e1f3617df9790005ca688801"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a51ac35e1f3617df9790005ca688801"></a>
+<a class="el" href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html">ThreadPool::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a9a51ac35e1f3617df9790005ca688801">mutex</a></td></tr>
+<tr class="memdesc:a9a51ac35e1f3617df9790005ca688801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex used to lock the logger. <br /></td></tr>
+<tr class="separator:a9a51ac35e1f3617df9790005ca688801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17eb17227ebde70bfb485572bf29f2bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17eb17227ebde70bfb485572bf29f2bb"></a>
 FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#a17eb17227ebde70bfb485572bf29f2bb">file</a> {nullptr}</td></tr>
 <tr class="memdesc:a17eb17227ebde70bfb485572bf29f2bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">File pointed by the logger. <br /></td></tr>
 <tr class="separator:a17eb17227ebde70bfb485572bf29f2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1fe1b1bba2070f540ce2ecde0d394ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1fe1b1bba2070f540ce2ecde0d394ba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#ad1fe1b1bba2070f540ce2ecde0d394ba">onlyMasterThread</a> {true}</td></tr>
-<tr class="memdesc:ad1fe1b1bba2070f540ce2ecde0d394ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set that only master thread can write here. <br /></td></tr>
-<tr class="separator:ad1fe1b1bba2070f540ce2ecde0d394ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae05a3c09c2212f470756e8f1b093c943"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae05a3c09c2212f470756e8f1b093c943"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#ae05a3c09c2212f470756e8f1b093c943">onlyMasterRank</a> {true}</td></tr>
-<tr class="memdesc:ae05a3c09c2212f470756e8f1b093c943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set that only master thread can write here. <br /></td></tr>
-<tr class="separator:ae05a3c09c2212f470756e8f1b093c943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:af5f06caba063ed8f40231606b7265c92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5f06caba063ed8f40231606b7265c92"></a>
+static <a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92">fakeLogger</a></td></tr>
+<tr class="memdesc:af5f06caba063ed8f40231606b7265c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fake logger, printing to /dev/null. <br /></td></tr>
+<tr class="separator:af5f06caba063ed8f40231606b7265c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Write output to a file, using different level of indentation. </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaa7a160390aa1b1a28355d25e97d4f32"></a>
 <div class="memitem">
@@ -257,45 +282,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00325">325</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00375">375</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a878a62c98c821f677f17e795c43632dc"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a> SUNphi::Logger::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create a new line, and print it. </p>
-<p>Check whether current thread should print or not</p>
-<p>Check whether current rank should print or not </p>
-
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00310">310</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ios/<a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a></li>
+<li>lib/utility/<a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

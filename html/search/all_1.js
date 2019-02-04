@@ -22,6 +22,8 @@ var searchData=
   ['all_5franks',['ALL_RANKS',['../df/d09/classSUNphi_1_1Mpi.html#ad4d63f013ed16da4e22ee5e1b6c4bc36',1,'SUNphi::Mpi']]],
   ['allbuttype',['AllButType',['../d8/df8/classSUNphi_1_1TensKind.html#aad1e33d53335ae4f28cb9be6264bcef4',1,'SUNphi::TensKind']]],
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
+  ['allows_5fall_5franks_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE',['../d9/d11/Logger_8hpp.html#a171fcfa8bdaf0dbe624b098bb502be51',1,'Logger.hpp']]],
+  ['allows_5fall_5fthreads_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE',['../d9/d11/Logger_8hpp.html#a18246ca4fc6d0f99de8b8860a84b5856',1,'Logger.hpp']]],
   ['allreduce',['allReduce',['../df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1',1,'SUNphi::Mpi']]],
   ['always_5finline',['ALWAYS_INLINE',['../d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a',1,'Inline.hpp']]],
   ['alwaysprintsign',['alwaysPrintSign',['../d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22',1,'SUNphi::Logger']]],

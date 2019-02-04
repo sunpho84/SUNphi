@@ -39,7 +39,7 @@ var searchData=
   ['muladd_2ehpp',['MulAdd.hpp',['../da/d06/MulAdd_8hpp.html',1,'']]],
   ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
   ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html',1,'SUNphi']]],
-  ['mutex',['mutex',['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#ae354aace9472d46d3ab479b4030a6c1c',1,'SUNphi::ThreadPool::ScopeMutexLocker::mutex()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e',1,'SUNphi::ThreadPool::mutex()']]],
+  ['mutex',['mutex',['../d3/d78/classSUNphi_1_1Logger.html#a9a51ac35e1f3617df9790005ca688801',1,'SUNphi::Logger::mutex()'],['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#ae354aace9472d46d3ab479b4030a6c1c',1,'SUNphi::ThreadPool::ScopeMutexLocker::mutex()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e',1,'SUNphi::ThreadPool::mutex()']]],
   ['mutex',['Mutex',['../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html',1,'SUNphi::ThreadPool']]],
   ['mutexlock',['mutexLock',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aa2c5a60ba610c366bd747cd10f990c28',1,'SUNphi::ThreadPool']]],
   ['mutexunlock',['mutexUnlock',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a46bbee95bdc8054104549d368dd4a5f0',1,'SUNphi::ThreadPool']]],

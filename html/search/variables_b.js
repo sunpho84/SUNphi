@@ -13,5 +13,5 @@ var searchData=
   ['minoflist',['minOfList',['../d3/dd7/namespaceSUNphi.html#a9bcedb4b0596b7e77f6f0620b3e944c4',1,'SUNphi']]],
   ['moveoffset',['moveOffset',['../d3/dd7/namespaceSUNphi.html#ae80082b2e607318ad8e682431f6c7a45',1,'SUNphi']]],
   ['mpi',['mpi',['../d3/dd7/namespaceSUNphi.html#aad036f41502907a2ac92b432c057010f',1,'SUNphi']]],
-  ['mutex',['mutex',['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#ae354aace9472d46d3ab479b4030a6c1c',1,'SUNphi::ThreadPool::ScopeMutexLocker::mutex()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e',1,'SUNphi::ThreadPool::mutex()']]]
+  ['mutex',['mutex',['../d3/d78/classSUNphi_1_1Logger.html#a9a51ac35e1f3617df9790005ca688801',1,'SUNphi::Logger::mutex()'],['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#ae354aace9472d46d3ab479b4030a6c1c',1,'SUNphi::ThreadPool::ScopeMutexLocker::mutex()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e',1,'SUNphi::ThreadPool::mutex()']]]
 ];

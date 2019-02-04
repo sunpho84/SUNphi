@@ -474,8 +474,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d12/classSUNphi_1_1ScalarWrapper.html">ScalarWrapper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html">ScopeChangeAttribute</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the attribute for the object scope.  <a href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html">ScopeChangeVar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the variable for the object scope.  <a href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html">ScopeIndenter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the logger indentation level for the object scope.  <a href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html#details">More...</a><br /></td></tr>
@@ -964,11 +966,6 @@ template&lt;int Rem, int IncrAft, bool IgnoreIfPresent&gt; </td></tr>
 <tr class="memitem:a5ddd6d103aa57654ee8b4c925802147b"><td class="memTemplParams" colspan="2">template&lt;typename... ToBeSearchedTypes, typename... ContainingTypes&gt; </td></tr>
 <tr class="memitem:a5ddd6d103aa57654ee8b4c925802147b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5ddd6d103aa57654ee8b4c925802147b">_tupleHasTypes</a> (<a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; ToBeSearchedTypes... &gt;, <a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; ContainingTypes... &gt;)</td></tr>
 <tr class="separator:a5ddd6d103aa57654ee8b4c925802147b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7c39db9a5ee077e2cdbd642028b21a76"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a7c39db9a5ee077e2cdbd642028b21a76">ScopeChangeAttribute</a> (T &amp;ref, const T &amp;val) -&gt; <a class="el" href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html">ScopeChangeAttribute</a>&lt; T &gt;</td></tr>
-<tr class="memdesc:a7c39db9a5ee077e2cdbd642028b21a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="../../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html" title="Change the attribute for the object scope. ">ScopeChangeAttribute</a>. <br /></td></tr>
-<tr class="separator:a7c39db9a5ee077e2cdbd642028b21a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55">printBacktraceList</a> ()</td></tr>
 <tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
@@ -979,6 +976,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a983825154c3b066e753ad3641bd04fe1">minimalLogger</a> (<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a> &amp;logger, const char *format,...)</td></tr>
 <tr class="separator:a983825154c3b066e753ad3641bd04fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae610623dbe7e5cea5be039f9e1b385c3"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae610623dbe7e5cea5be039f9e1b385c3">mpiType</a> ()</td></tr>
+<tr class="memdesc:ae610623dbe7e5cea5be039f9e1b385c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the <code>MPI_Datatype</code> of an any unknown type. <br /></td></tr>
+<tr class="separator:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746a3b98a87ca887ef02923e2e863165"><td class="memTemplParams" colspan="2"><a class="anchor" id="a746a3b98a87ca887ef02923e2e863165"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a746a3b98a87ca887ef02923e2e863165"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; char &gt;</b> ()</td></tr>
+<tr class="separator:a746a3b98a87ca887ef02923e2e863165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
+<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816f0108f7dda0d852cd8f441951cdc3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a816f0108f7dda0d852cd8f441951cdc3"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:a816f0108f7dda0d852cd8f441951cdc3"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; int &gt;</b> ()</td></tr>
+<tr class="separator:a816f0108f7dda0d852cd8f441951cdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad7c094b97e50787dfe63e8aa1bdd215b"></a>
+template&lt;&gt; </td></tr>
+<tr class="memitem:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; double &gt;</b> ()</td></tr>
+<tr class="separator:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#acdbc23a72d6a49054aee06b5e5a2d8d8">safeModulo</a> (const T &amp;val, const T &amp;mod)</td></tr>
 <tr class="separator:acdbc23a72d6a49054aee06b5e5a2d8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1045,6 +1061,16 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0d0b428ec19c927d7b85b1a7e9723c1f"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... Args&gt; </td></tr>
 <tr class="memitem:a0d0b428ec19c927d7b85b1a7e9723c1f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a2fece34f264789a6ac9b0c85667d4dbc">Duration</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0d0b428ec19c927d7b85b1a7e9723c1f">durationOf</a> (F &amp;&amp;f, Args &amp;&amp;...args)</td></tr>
 <tr class="separator:a0d0b428ec19c927d7b85b1a7e9723c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c1cd368ce7661e7493b3452da633f0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a89c1cd368ce7661e7493b3452da633f0"></a>
+template&lt;typename FBegin , typename FEnd &gt; </td></tr>
+<tr class="memitem:a89c1cd368ce7661e7493b3452da633f0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a89c1cd368ce7661e7493b3452da633f0">ScopeDoer</a> (FBegin fBegin, FEnd fEnd) -&gt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; FBegin, FEnd &gt;</td></tr>
+<tr class="memdesc:a89c1cd368ce7661e7493b3452da633f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>. <br /></td></tr>
+<tr class="separator:a89c1cd368ce7661e7493b3452da633f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24376a565f23eb8535c38c528ab49996"><td class="memTemplParams" colspan="2"><a class="anchor" id="a24376a565f23eb8535c38c528ab49996"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a24376a565f23eb8535c38c528ab49996"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a24376a565f23eb8535c38c528ab49996">ScopeChangeVar</a> (T &amp;ref, const T &amp;val) -&gt; <a class="el" href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html">ScopeChangeVar</a>&lt; T &gt;</td></tr>
+<tr class="memdesc:a24376a565f23eb8535c38c528ab49996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html" title="Change the variable for the object scope. ">ScopeChangeVar</a>. <br /></td></tr>
+<tr class="separator:a24376a565f23eb8535c38c528ab49996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memTemplParams" colspan="2">template&lt;class S &gt; </td></tr>
 <tr class="memitem:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a23c2e0e40d874796ce7240566fbcb7ae">print</a> (S &amp;out)</td></tr>
 <tr class="separator:a23c2e0e40d874796ce7240566fbcb7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1157,8 +1183,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5872359ff930d8bd62bf794615caf226"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
 <tr class="memitem:a5872359ff930d8bd62bf794615caf226"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d58/classSUNphi_1_1Adder.html">Adder</a>&lt; Ts... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a5872359ff930d8bd62bf794615caf226">add</a> (Ts &amp;&amp;...smets)</td></tr>
 <tr class="separator:a5872359ff930d8bd62bf794615caf226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb071e5c750597f2ed9d00fbba26f938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a> ()</td></tr>
-<tr class="separator:afb071e5c750597f2ed9d00fbba26f938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , TypeIf&lt;(isSmET&lt; T1 &gt; and isSmET&lt; T2 &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4d5f8dc4041e8bd7f71656bdb0ea8cf2">operator+</a> (T1 &amp;&amp;smet1, T2 &amp;&amp;smet2)</td></tr>
 <tr class="memdesc:a4d5f8dc4041e8bd7f71656bdb0ea8cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement smet1+smet2.  <a href="#a4d5f8dc4041e8bd7f71656bdb0ea8cf2">More...</a><br /></td></tr>
@@ -1221,23 +1245,6 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa1491c895b9023d418376db2728889c1"><td class="memTemplParams" colspan="2">template&lt;typename D , TypeIf&lt;(isWrapper&lt; D &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa1491c895b9023d418376db2728889c1"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa1491c895b9023d418376db2728889c1">wrap</a> (D &amp;&amp;smet)</td></tr>
 <tr class="separator:aa1491c895b9023d418376db2728889c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae610623dbe7e5cea5be039f9e1b385c3"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae610623dbe7e5cea5be039f9e1b385c3">mpiType</a> ()</td></tr>
-<tr class="memdesc:ae610623dbe7e5cea5be039f9e1b385c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the <code>MPI_Datatype</code> of an any unknown type. <br /></td></tr>
-<tr class="separator:ae610623dbe7e5cea5be039f9e1b385c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746a3b98a87ca887ef02923e2e863165"><td class="memTemplParams" colspan="2"><a class="anchor" id="a746a3b98a87ca887ef02923e2e863165"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a746a3b98a87ca887ef02923e2e863165"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; char &gt;</b> ()</td></tr>
-<tr class="separator:a746a3b98a87ca887ef02923e2e863165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a816f0108f7dda0d852cd8f441951cdc3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a816f0108f7dda0d852cd8f441951cdc3"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:a816f0108f7dda0d852cd8f441951cdc3"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; int &gt;</b> ()</td></tr>
-<tr class="separator:a816f0108f7dda0d852cd8f441951cdc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad7c094b97e50787dfe63e8aa1bdd215b"></a>
-template&lt;&gt; </td></tr>
-<tr class="memitem:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memTemplItemLeft" align="right" valign="top">MPI_Datatype&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mpiType&lt; double &gt;</b> ()</td></tr>
-<tr class="separator:ad7c094b97e50787dfe63e8aa1bdd215b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefb3bd85afa3e1418572d526cbe3021d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb3bd85afa3e1418572d526cbe3021d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefb3bd85afa3e1418572d526cbe3021d">aliverHelper</a> ()</td></tr>
 <tr class="memdesc:aefb3bd85afa3e1418572d526cbe3021d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to make sure that the initializing functions are referenced. <br /></td></tr>
@@ -1460,6 +1467,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a22849d59de4e186614d3516b924a97d8"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a22849d59de4e186614d3516b924a97d8">TEXT_CHANGE_COLOR_TAIL</a> []</td></tr>
 <tr class="memdesc:a22849d59de4e186614d3516b924a97d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last part of the string whcih change color.  <a href="#a22849d59de4e186614d3516b924a97d8">More...</a><br /></td></tr>
 <tr class="separator:a22849d59de4e186614d3516b924a97d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad036f41502907a2ac92b432c057010f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html">Mpi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aad036f41502907a2ac92b432c057010f">mpi</a></td></tr>
+<tr class="memdesc:aad036f41502907a2ac92b432c057010f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gloabl MPI.  <a href="#aad036f41502907a2ac92b432c057010f">More...</a><br /></td></tr>
+<tr class="separator:aad036f41502907a2ac92b432c057010f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29703b0dc98a249700138ceb7bac9758"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a29703b0dc98a249700138ceb7bac9758">DEBUG_THREADS</a></td></tr>
 <tr class="memdesc:a29703b0dc98a249700138ceb7bac9758"><td class="mdescLeft">&#160;</td><td class="mdescRight">States that we want to debug threads.  <a href="#a29703b0dc98a249700138ceb7bac9758">More...</a><br /></td></tr>
 <tr class="separator:a29703b0dc98a249700138ceb7bac9758"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1650,19 +1660,12 @@ constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:ae1b278db616fc529bdb31d98a9741747"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae1b278db616fc529bdb31d98a9741747"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae1b278db616fc529bdb31d98a9741747">isWrapper</a> = <a class="el" href="../../d3/dd7/namespaceSUNphi.html#a9b5295825641bc81667e9a03072512ec">isBaseOf</a>&lt;<a class="el" href="../../d8/da7/structSUNphi_1_1BaseWrapper.html">BaseWrapper</a> ,T&gt;</td></tr>
 <tr class="separator:ae1b278db616fc529bdb31d98a9741747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad036f41502907a2ac92b432c057010f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html">Mpi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aad036f41502907a2ac92b432c057010f">mpi</a></td></tr>
-<tr class="memdesc:aad036f41502907a2ac92b432c057010f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gloabl MPI.  <a href="#aad036f41502907a2ac92b432c057010f">More...</a><br /></td></tr>
-<tr class="separator:aad036f41502907a2ac92b432c057010f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9d94f5be3ce9e06d10056b98d9e36cf"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ac9d94f5be3ce9e06d10056b98d9e36cf">makeSureAliverIsReferenced</a></td></tr>
 <tr class="separator:ac9d94f5be3ce9e06d10056b98d9e36cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26e7fb087e5f8c2b14896ba23904aa0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26e7fb087e5f8c2b14896ba23904aa0c"></a>
 <a class="el" href="../../df/df6/classSUNphi_1_1Aliver.html">Aliver</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a26e7fb087e5f8c2b14896ba23904aa0c">aliver</a></td></tr>
 <tr class="memdesc:a26e7fb087e5f8c2b14896ba23904aa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presentation of the library. <br /></td></tr>
 <tr class="separator:a26e7fb087e5f8c2b14896ba23904aa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df1a7236601402fe80b1d06bf753a5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6df1a7236601402fe80b1d06bf753a5a"></a>
-<a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6df1a7236601402fe80b1d06bf753a5a">logNull</a> (&quot;/dev/null&quot;)</td></tr>
-<tr class="memdesc:a6df1a7236601402fe80b1d06bf753a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fake logger. <br /></td></tr>
-<tr class="separator:a6df1a7236601402fe80b1d06bf753a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. </p>
@@ -5216,7 +5219,7 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">logger</td><td><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html" title="Write output to a file, using different level of indentation. ">Logger</a> to be used </td></tr>
-    <tr><td class="paramname">format</td><td>Formattign string </td></tr>
+    <tr><td class="paramname">format</td><td>Formatting string </td></tr>
   </table>
   </dd>
 </dl>
@@ -6193,7 +6196,7 @@ template&lt;auto... Flags&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="keyword">true</span></div></div><!-- fragment -->
 <p>States that we want to debug threads. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -7671,7 +7674,7 @@ template&lt;int Head, int... Tail&gt; </div>
 <p>Gloabl MPI. </p>
 <p>Global MPI. </p>
 
-<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00135">135</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
 
 </div>
 </div>
@@ -8086,7 +8089,7 @@ template&lt;int InMask, auto... Flags&gt; </div>
 <p>Global threads. </p>
 <p>Global thread pool. </p>
 
-<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d06/Aliver_8cpp_source.html#l00140">140</a> of file <a class="el" href="../../de/d06/Aliver_8cpp_source.html">Aliver.cpp</a>.</p>
 
 </div>
 </div>

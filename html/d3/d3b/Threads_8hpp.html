@@ -131,14 +131,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html">SUNphi::ThreadPool</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains a thread pool.  <a href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html">SUNphi::ThreadPool::Barrier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html">SUNphi::ThreadPool::Mutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to lock a mutex for the object scope.  <a href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html">SUNphi::ThreadPool::ScopeMutexLocker</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep a mutex locked for the duration of the object.  <a href="../../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html">SUNphi::ThreadPool::Barrier</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> for the pthread barrier functionality.  <a href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -165,6 +164,7 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides a thread pool. </p>
+<p>The thread pool is implemented through <code>pthread</code> library, so we can start and stop the threads in every moment of the execution, at variance with the static-behavior of <code>Nissa</code> library, where the program would have opened a <code>OpenMP</code> parallel statement and jumped inside it. </p>
 
 <p>Definition in file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 </div></div><!-- contents -->

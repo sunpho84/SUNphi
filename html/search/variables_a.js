@@ -12,6 +12,5 @@ var searchData=
   ['lastsmaller',['lastSmaller',['../d3/dd7/namespaceSUNphi.html#aa6bd149fbf4d55bc75e1a74a49e1fcac',1,'SUNphi']]],
   ['lastsmaller_3c_20i_20_3e',['lastSmaller&lt; I &gt;',['../d3/dd7/namespaceSUNphi.html#aa76f9c2411e695f843df2cc84a662289',1,'SUNphi']]],
   ['line',['line',['../d1/d07/structSUNphi_1_1Crasher.html#acf85c25179a1dfe4eeb1dfe4144116b6',1,'SUNphi::Crasher']]],
-  ['logger',['logger',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a737169275d2ab1c76471e649b15f0ce5',1,'SUNphi::Logger::LoggerLine::logger()'],['../d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70',1,'SUNphi::ScopeIndenter::logger()']]],
-  ['lognull',['logNull',['../d3/dd7/namespaceSUNphi.html#a6df1a7236601402fe80b1d06bf753a5a',1,'SUNphi']]]
+  ['logger',['logger',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a5ec7dccf14d62520b7b014d34f9ac35e',1,'SUNphi::Logger::LoggerLine::logger()'],['../d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70',1,'SUNphi::ScopeIndenter::logger()']]]
 ];

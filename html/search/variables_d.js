@@ -1,7 +1,7 @@
 var searchData=
 [
   ['offset',['offset',['../d0/dde/structSUNphi_1_1__RangeSeq.html#a0cde1425de456d886a56bb145577e784',1,'SUNphi::_RangeSeq']]],
-  ['oldval',['oldVal',['../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html#a35d0c80a8a220e1a8f92e4c6feab6ab1',1,'SUNphi::ScopeChangeAttribute']]],
-  ['onlymasterrank',['onlyMasterRank',['../d3/d78/classSUNphi_1_1Logger.html#ae05a3c09c2212f470756e8f1b093c943',1,'SUNphi::Logger']]],
-  ['onlymasterthread',['onlyMasterThread',['../d3/d78/classSUNphi_1_1Logger.html#ad1fe1b1bba2070f540ce2ecde0d394ba',1,'SUNphi::Logger']]]
+  ['oldval',['oldVal',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a65b9a1d2ee7c43f8b7b3fa4435a3d653',1,'SUNphi::ScopeChangeVar']]],
+  ['onlymasterrankprint',['onlyMasterRankPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45137bf23da7dda483b2f3dd5d5d411e',1,'SUNphi::Logger']]],
+  ['onlymasterthreadprint',['onlyMasterThreadPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45192a3a4e73fce6d894b4d3932b5e0e',1,'SUNphi::Logger']]]
 ];

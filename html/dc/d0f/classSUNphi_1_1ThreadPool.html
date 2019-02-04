@@ -131,7 +131,6 @@ $(document).ready(function(){initNavTree('dc/d0f/classSUNphi_1_1ThreadPool.html'
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html">Barrier</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/d77/classSUNphi_1_1Wrapper.html" title="Class to wrap a SmET. ">Wrapper</a> for the pthread barrier functionality.  <a href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html">Mutex</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to lock a mutex for the object scope.  <a href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html#details">More...</a><br /></td></tr>
@@ -142,9 +141,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a341aafd8c7563e1cb288f618f28961e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2">getThreadId</a> () const </td></tr>
+<tr class="memdesc:a341aafd8c7563e1cb288f618f28961e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread of the current thread.  <a href="#a341aafd8c7563e1cb288f618f28961e2">More...</a><br /></td></tr>
+<tr class="separator:a341aafd8c7563e1cb288f618f28961e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c5a60ba610c366bd747cd10f990c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2c5a60ba610c366bd747cd10f990c28"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#aa2c5a60ba610c366bd747cd10f990c28">mutexLock</a> ()</td></tr>
-<tr class="memdesc:aa2c5a60ba610c366bd747cd10f990c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the mutex. <br /></td></tr>
+<tr class="memdesc:aa2c5a60ba610c366bd747cd10f990c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the internal mutex. <br /></td></tr>
 <tr class="separator:aa2c5a60ba610c366bd747cd10f990c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46bbee95bdc8054104549d368dd4a5f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46bbee95bdc8054104549d368dd4a5f0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a46bbee95bdc8054104549d368dd4a5f0">mutexUnlock</a> ()</td></tr>
@@ -179,6 +181,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <tr class="memitem:af628cbc84fe6d92e2b3e451259febcca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#af628cbc84fe6d92e2b3e451259febcca">waitForPoolToFinishAssignedWork</a> (const int &amp;threadId)</td></tr>
 <tr class="memdesc:af628cbc84fe6d92e2b3e451259febcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait that the work assigned to the pool is finished.  <a href="#af628cbc84fe6d92e2b3e451259febcca">More...</a><br /></td></tr>
 <tr class="separator:af628cbc84fe6d92e2b3e451259febcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a16624008184f58c597ffa0cfa1e6bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a16624008184f58c597ffa0cfa1e6bb"></a>
+const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a6a16624008184f58c597ffa0cfa1e6bb">getIfWaitingForWork</a> () const </td></tr>
+<tr class="memdesc:a6a16624008184f58c597ffa0cfa1e6bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the pool is waiting for work. <br /></td></tr>
+<tr class="separator:a6a16624008184f58c597ffa0cfa1e6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#aab9a93c9ad43c1f5e50c77e2235d47de">workOn</a> (F f)</td></tr>
 <tr class="separator:aab9a93c9ad43c1f5e50c77e2235d47de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,9 +229,6 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a341aafd8c7563e1cb288f618f28961e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2">getThreadId</a> () const </td></tr>
-<tr class="memdesc:a341aafd8c7563e1cb288f618f28961e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread of the current thread.  <a href="#a341aafd8c7563e1cb288f618f28961e2">More...</a><br /></td></tr>
-<tr class="separator:a341aafd8c7563e1cb288f618f28961e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842dc231a9b68394c2df16499fac7beb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a842dc231a9b68394c2df16499fac7beb">checkPoolOnly</a> (const int &amp;threadId) const </td></tr>
 <tr class="memdesc:a842dc231a9b68394c2df16499fac7beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that only the pool is accessing to a checkpoint.  <a href="#a842dc231a9b68394c2df16499fac7beb">More...</a><br /></td></tr>
 <tr class="separator:a842dc231a9b68394c2df16499fac7beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,7 +269,7 @@ const pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="separator:a1b3a8a8225eec04c323557ae10cd5aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1114074fdd5084501e3fcdccf04bfbc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a965834421c128261b4ed2e9f43809cea">Work</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a1114074fdd5084501e3fcdccf04bfbc7">work</a></td></tr>
 <tr class="separator:a1114074fdd5084501e3fcdccf04bfbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8504f2782c082e9cf2bebf7ed253f012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; pthread_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a8504f2782c082e9cf2bebf7ed253f012">pool</a> {1,pthread_self()}</td></tr>
+<tr class="memitem:a8504f2782c082e9cf2bebf7ed253f012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; pthread_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a8504f2782c082e9cf2bebf7ed253f012">pool</a></td></tr>
 <tr class="separator:a8504f2782c082e9cf2bebf7ed253f012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad19717e8f6b1c7290044b5798f050ed8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad19717e8f6b1c7290044b5798f050ed8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#ad19717e8f6b1c7290044b5798f050ed8">nThreads</a></td></tr>
@@ -274,7 +277,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <tr class="separator:ad19717e8f6b1c7290044b5798f050ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af881134f9de317f85f8731ae5cc7fda6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af881134f9de317f85f8731ae5cc7fda6"></a>
 <a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html">Barrier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#af881134f9de317f85f8731ae5cc7fda6">barrier</a></td></tr>
-<tr class="memdesc:af881134f9de317f85f8731ae5cc7fda6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html" title="Wrapper for the pthread barrier functionality. ">Barrier</a> used by the threads. <br /></td></tr>
+<tr class="memdesc:af881134f9de317f85f8731ae5cc7fda6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html">Barrier</a> used by the threads. <br /></td></tr>
 <tr class="separator:af881134f9de317f85f8731ae5cc7fda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dabd40319744103744f74308be7dc0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dabd40319744103744f74308be7dc0e"></a>
 <a class="el" href="../../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a6dabd40319744103744f74308be7dc0e">mutex</a></td></tr>
@@ -299,7 +302,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains a thread pool. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00040">40</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aea0ea45c6f2b1f8e7e7ef3b0df9ce626"></a>
 <div class="memitem">
@@ -331,7 +334,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00264">264</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +368,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00256">256</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -393,7 +396,7 @@ Friends</h2></td></tr>
 <p>Empty the thread pool. </p>
 <p>Stop the pool from working </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00301">301</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00240">240</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +445,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -451,7 +454,7 @@ Friends</h2></td></tr>
 <p>Current pthread</p>
 <p>Position in the pool </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00230">230</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00281">281</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +511,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00514">514</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00540">540</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +545,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00400">400</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +579,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00455">455</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00474">474</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +613,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00432">432</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00451">451</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -644,7 +647,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00381">381</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00397">397</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -679,7 +682,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00465">465</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00484">484</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +716,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00422">422</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00438">438</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -747,7 +750,7 @@ template&lt;typename Size , typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00411">411</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00427">427</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -783,7 +786,7 @@ template&lt;typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00492">492</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00518">518</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -845,7 +848,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      0</div></div><!-- fragment -->
 <p>Thread id of master thread. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -869,7 +872,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      128</div></div><!-- fragment -->
 <p>Maximal size of the stack used for thw work. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00146">146</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +884,7 @@ template&lt;typename F &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt;pthread_t&gt; SUNphi::ThreadPool::pool {1,pthread_self()}</td>
+          <td class="memname"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt;pthread_t&gt; SUNphi::ThreadPool::pool</td>
         </tr>
       </table>
   </td>
@@ -893,7 +896,7 @@ template&lt;typename F &gt; </div>
 <p>Incapsulate the threads</p>
 <p>At the beginning, the pool contains only the main thread, with its id. Then when is filled, the pool contains the thread identifier. This is an opaque number, which cannot serve the purpose of getting the thread progressive in the pool. This is why we define the next function </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00179">179</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -917,7 +920,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="stringliteral">&quot;ThreadHasBeenCreated&quot;</span></div></div><!-- fragment -->
 <p>Tag to mark that the thread is ready to swim. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00396">396</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00412">412</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -941,7 +944,7 @@ template&lt;typename F &gt; </div>
 <p>Work to be done in the pool</p>
 <p>This incapsulates a function returning void, and getting an integer as an argument, corresponding to the thread </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00170">170</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -965,7 +968,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="stringliteral">&quot;WorkAssOrNoMoreWork&quot;</span></div></div><!-- fragment -->
 <p>Tag to mark that assignment has been finished. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00373">373</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00389">389</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +992,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="stringliteral">&quot;WorkFinished&quot;</span></div></div><!-- fragment -->
 <p>Tag to mark that the work is finished. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00451">451</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00470">470</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>
@@ -1013,7 +1016,7 @@ template&lt;typename F &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <a class="code" href="../../dc/d0f/classSUNphi_1_1ThreadPool.html#a1740dac6da61d849ddf6865ffc1a2333">workAssignmentTag</a></div></div><!-- fragment -->
 <p>Tag to mark that no more work has to do. </p>
 
-<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00377">377</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d3b/Threads_8hpp_source.html#l00393">393</a> of file <a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>.</p>
 
 </div>
 </div>

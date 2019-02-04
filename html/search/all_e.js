@@ -1,9 +1,9 @@
 var searchData=
 [
   ['offset',['offset',['../d0/dde/structSUNphi_1_1__RangeSeq.html#a0cde1425de456d886a56bb145577e784',1,'SUNphi::_RangeSeq']]],
-  ['oldval',['oldVal',['../dd/d9e/classSUNphi_1_1ScopeChangeAttribute.html#a35d0c80a8a220e1a8f92e4c6feab6ab1',1,'SUNphi::ScopeChangeAttribute']]],
-  ['onlymasterrank',['onlyMasterRank',['../d3/d78/classSUNphi_1_1Logger.html#ae05a3c09c2212f470756e8f1b093c943',1,'SUNphi::Logger']]],
-  ['onlymasterthread',['onlyMasterThread',['../d3/d78/classSUNphi_1_1Logger.html#ad1fe1b1bba2070f540ce2ecde0d394ba',1,'SUNphi::Logger']]],
+  ['oldval',['oldVal',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a65b9a1d2ee7c43f8b7b3fa4435a3d653',1,'SUNphi::ScopeChangeVar']]],
+  ['onlymasterrankprint',['onlyMasterRankPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45137bf23da7dda483b2f3dd5d5d411e',1,'SUNphi::Logger']]],
+  ['onlymasterthreadprint',['onlyMasterThreadPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45192a3a4e73fce6d894b4d3932b5e0e',1,'SUNphi::Logger']]],
   ['open',['open',['../d3/d78/classSUNphi_1_1Logger.html#a6911ee46c09d2e6b5479d1e9465b68a2',1,'SUNphi::Logger']]],
   ['operator_28_29',['operator()',['../d7/dcb/structSUNphi_1_1CStringComparer.html#aae4ff1dc639f6d2d3d3b04fdafd9f26a',1,'SUNphi::CStringComparer::operator()()'],['../d1/d31/structSUNphi_1_1SmET.html#a302bf10f8751e25cd44cf91bf0a0b988',1,'SUNphi::SmET::operator()(Oth &amp;&amp;...oth)'],['../d1/d31/structSUNphi_1_1SmET.html#a4b46ea85ccd68848ca76d967b1f07222',1,'SUNphi::SmET::operator()(Oth &amp;&amp;...oth) const ']]],
   ['operator_2b',['operator+',['../d3/dd7/namespaceSUNphi.html#a4d5f8dc4041e8bd7f71656bdb0ea8cf2',1,'SUNphi::operator+(T1 &amp;&amp;smet1, T2 &amp;&amp;smet2)'],['../d3/dd7/namespaceSUNphi.html#a165c9c89862d50b23b2f3d674a14aa89',1,'SUNphi::operator+(T &amp;&amp;smet)']]],

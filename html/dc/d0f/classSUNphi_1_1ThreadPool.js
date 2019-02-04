@@ -12,6 +12,7 @@ var classSUNphi_1_1ThreadPool =
     [ "doNotworkAnymore", "dc/d0f/classSUNphi_1_1ThreadPool.html#ae18f42a38281f76eec04dd220277a946", null ],
     [ "empty", "dc/d0f/classSUNphi_1_1ThreadPool.html#ad52f981d1ec94e116c7fb20f39ff43be", null ],
     [ "fill", "dc/d0f/classSUNphi_1_1ThreadPool.html#a87e283d975c87a544291a9b90bd8429d", null ],
+    [ "getIfWaitingForWork", "dc/d0f/classSUNphi_1_1ThreadPool.html#a6a16624008184f58c597ffa0cfa1e6bb", null ],
     [ "getThreadId", "dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2", null ],
     [ "getThreadTag", "dc/d0f/classSUNphi_1_1ThreadPool.html#a9bf29acb1ff4cbee2e5b549748ba40bb", null ],
     [ "isMasterThread", "dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6", null ],

@@ -18,6 +18,7 @@ var searchData=
   ['hasmember_5ftk',['hasMember_Tk',['../d3/dd7/namespaceSUNphi.html#a31388ba85a984596f9d605934040682f',1,'SUNphi']]],
   ['hastocrash',['hasToCrash',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a9c352c0983674e8d2e2f315a90a187cb',1,'SUNphi::Logger::LoggerLine']]],
   ['hastoendline',['hasToEndLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4a8e7863f230e73555741a625c5cfb7f',1,'SUNphi::Logger::LoggerLine']]],
+  ['hastolock',['hasToLock',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7cb94eae9564d990515c67aeca45fdb2',1,'SUNphi::Logger::LoggerLine']]],
   ['hastwin',['hasTwin',['../d3/dd7/namespaceSUNphi.html#a4692578508fbbf9aff7ed592deef12cf',1,'SUNphi']]],
   ['hastwin_3c_20cncol_20_3e',['hasTwin&lt; CnCol &gt;',['../d3/dd7/namespaceSUNphi.html#a703c93385079c219886575613ad71fcc',1,'SUNphi']]],
   ['hastwin_3c_20cnspin_20_3e',['hasTwin&lt; CnSpin &gt;',['../d3/dd7/namespaceSUNphi.html#a5490d64035bd442c8d8b04af140e0d4a',1,'SUNphi']]],

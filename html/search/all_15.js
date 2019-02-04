@@ -4,7 +4,7 @@ var searchData=
   ['waitforworktobeassigned',['waitForWorkToBeAssigned',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a5a041f4ed6194362eeffbbaa345db4a6',1,'SUNphi::ThreadPool']]],
   ['waitpooltobefilled',['waitPoolToBeFilled',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a18fd522426885487d5552fa758f35c80',1,'SUNphi::ThreadPool']]],
   ['wire',['wire',['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a6c0e07bcec204742207f84a60cf93bc2',1,'SUNphi::_RelBindInternalChecks']]],
-  ['work',['work',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a1114074fdd5084501e3fcdccf04bfbc7',1,'SUNphi::ThreadPool::work()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a965834421c128261b4ed2e9f43809cea',1,'SUNphi::ThreadPool::Work()']]],
+  ['work',['Work',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a965834421c128261b4ed2e9f43809cea',1,'SUNphi::ThreadPool::Work()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a1114074fdd5084501e3fcdccf04bfbc7',1,'SUNphi::ThreadPool::work()']]],
   ['workassignmenttag',['workAssignmentTag',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a1740dac6da61d849ddf6865ffc1a2333',1,'SUNphi::ThreadPool']]],
   ['workfinishedtag',['workFinishedTag',['../dc/d0f/classSUNphi_1_1ThreadPool.html#add809f284da1259d01477bde24978664',1,'SUNphi::ThreadPool']]],
   ['worknomoretag',['workNoMoreTag',['../dc/d0f/classSUNphi_1_1ThreadPool.html#accf11b8fc41036139d1aa8d495a2147e',1,'SUNphi::ThreadPool']]],
