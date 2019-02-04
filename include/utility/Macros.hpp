@@ -35,11 +35,11 @@
 
 /// Merges three tokens with two _
 #define NAME3(X,Y,Z)				\
-  CONCAT3(X,_,CONCAT3(Y,Z))
+  NAME2(X,NAME2(Y,Z))
 
 /// Merges four tokens with three _
 #define NAME4(X,Y,W,Z)				\
-  CONCAT3(X,_,CONCAT3(Y,CONVAT3(W,Z)))
+  NAME2(X,NAME3(Y,W,Z))
 
 namespace SUNphi
 {
