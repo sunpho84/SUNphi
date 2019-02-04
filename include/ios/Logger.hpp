@@ -44,6 +44,12 @@ namespace SUNphi
       /// Check whether should actually print or not
       const bool reallyPrint;
       
+      /// Check if some other rank could be printing
+      const bool someOtherRankCouldBePrinting;
+      
+      /// Check if some other thread could be printing
+      const bool someOtherThreadCouldBePrinting;
+      
       /// Check whether we need to lock
       const bool hasToLock;
       
@@ -68,12 +74,12 @@ namespace SUNphi
 	    fprintf(logger.file,"%.010f s",durationInSec(timings.currentMeasure()));
 	
 	// Prepend with rank
-	if(not logger.onlyMasterRank)
+	if(someOtherRankCouldBePrinting)
 	  rc+=
 	    fprintf(logger.file," Rank %d",mpi.rank());
 	
 	// Prepend with thread
-	if(not logger.onlyMasterThread)
+	if(someOtherThreadCouldBePrinting)
 	  rc+=
 	    fprintf(logger.file," Thread %d",threads.getThreadId());
 	
@@ -91,8 +97,10 @@ namespace SUNphi
 	: hasToEndLine(true),
 	  hasToCrash(false),
 	  colorChanged(false),
-	  reallyPrint((threads.isMasterThread() or not logger.onlyMasterThread) and (mpi.isMasterRank() or not logger.onlyMasterRank)),
-	  hasToLock((not logger.onlyMasterThread) and (not threads.getIfWaitingForWork())),
+	  reallyPrint((threads.isMasterThread() or not logger.onlyMasterThreadPrint) and (mpi.isMasterRank() or not logger.onlyMasterRankPrint)),
+	  someOtherRankCouldBePrinting(mpi.nRanks()!=1 and not logger.onlyMasterRankPrint),
+	  someOtherThreadCouldBePrinting(threads.nActiveThreads()!=1 and not logger.onlyMasterThreadPrint),
+	  hasToLock(reallyPrint and someOtherThreadCouldBePrinting),
 	  logger(reallyPrint?logger:fakeLogger)
       {
 	
@@ -108,6 +116,8 @@ namespace SUNphi
       	  hasToCrash(oth.hasToCrash),
 	  colorChanged(oth.colorChanged),
 	  reallyPrint(oth.reallyPrint),
+	  someOtherRankCouldBePrinting(oth.someOtherRankCouldBePrinting),
+	  someOtherThreadCouldBePrinting(oth.someOtherThreadCouldBePrinting),
 	  hasToLock(oth.hasToLock),
       	  logger(oth.logger)
       {
@@ -282,39 +292,13 @@ namespace SUNphi
     /// File pointed by the logger
     FILE* file{nullptr};
     
-    /// Decide whether only master thread can write here
-    bool onlyMasterThread{true};
-    
-    /// Decide whether only master MPI can write here
-    bool onlyMasterRank{true};
-    
   public:
     
-    /// Allow only master thread to write
-    void allowOnlyMasterThread()
-    {
-      if(threads.isMasterThread())
-	onlyMasterThread=true;
-    }
+    /// Decide whether only master thread can write here
+    bool onlyMasterThreadPrint{true};
     
-    /// Allow all threads to write
-    void allowAllThreads()
-    {
-      if(threads.isMasterThread())
-	onlyMasterThread=false;
-    }
-    
-    /// Allow only master rank to write
-    void allowOnlyMasterRank()
-    {
-      onlyMasterRank=true;
-    }
-    
-    /// Allow all ranks to write
-    void allowAllRanks()
-    {
-      onlyMasterRank=false;
-    }
+    /// Decide whether only master MPI can write here
+    bool onlyMasterRankPrint{true};
     
     /// Precision to print real number
     int realPrecision{6};
@@ -435,54 +419,25 @@ namespace SUNphi
   /*! Indent current scope */					\
   ScopeIndenter NAME2(SCOPE_INDENTER,__LINE__)(VAR)
   
-  /// Change the attribute for the object scope
-  template <typename T>
-  class ScopeChangeAttribute
-  {
-    /// Reference
-    T& ref;
-    
-    /// Old value
-    const T oldVal;
-    
-  public:
-    
-    /// Create and increase indent level
-    ScopeChangeAttribute(T& ref,        ///< Reference to change
-  			 const T& val)  ///< Value to set
-      : ref(ref),oldVal(ref)
-    {
-      // Set the new value
-      ref=
-  	val;
-    }
-    
-    /// Delete and decrease indent level
-    ~ScopeChangeAttribute()
-    {
-      // Set back the old value
-      ref=
-  	oldVal;
-    }
-  };
-  
-  /// Deduction guide for ScopeChangeAttribute
-  template <typename T>
-    ScopeChangeAttribute(T& ref,
-  			 const T& val)
-    -> ScopeChangeAttribute<T>;
-  
   /// Set for current scope
-#define SET_FOR_CURRENT_SCOPE(VAR,...)				\
-  ScopeChangeAttribute NAME2(SET,__LINE__)(VAR,__VA_ARGS__)
+#define SET_FOR_CURRENT_SCOPE(NAME,VAR,...)			\
+  ScopeChangeVar NAME3(SET,NAME,__LINE__)(VAR,__VA_ARGS__)
   
   /// Set the precision for current scope
 #define SCOPE_REAL_PRECISION(LOGGER,VAL)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER.realPrecision,VAL)
+  SET_FOR_CURRENT_SCOPE(LOGGER_REAL_PRECISION,LOGGER.realPrecision,VAL)
   
   /// Set printing or not sign at the beginning of a number for current scope
 #define SCOPE_ALWAYS_PUT_SIGN(LOGGER)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER.alwaysPrintSign,true)
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALWAYS_PRINT_SIGN,LOGGER.alwaysPrintSign,true)
+  
+  /// Makes all thread print for current scope
+#define ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)			\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_THREADS_PRINT,LOGGER.onlyMasterThreadPrint,false)
+  
+  /// Makes all thread print for current scope
+#define ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)		\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_PRINT,LOGGER.onlyMasterRankPrint,false)
   
   extern Logger runLog;
 }

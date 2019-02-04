@@ -107,10 +107,14 @@ namespace SUNphi
       printGitInfo();
       printConfigurePars();
       
-      threads.workOn([](const int threadID){runLog<<"ANNA "<<threadID;});
+      threads.workOn([](const int threadID){runLog<<"ANNA";});
       
-      threads.workOn([](const int threadID){runLog<<"ANNA "<<threadID;});
-      
+      {
+	ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(runLog);
+	ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(runLog);
+	
+	threads.workOn([](const int threadID){runLog<<"ANNA";});
+      }
       // threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
     }
     
