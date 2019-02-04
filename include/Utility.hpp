@@ -12,6 +12,7 @@
 #include <utility/Inline.hpp>
 #include <utility/Macros.hpp>
 #include <utility/Position.hpp>
+#include <utility/ScopeDoer.hpp>
 #include <utility/SingleInstance.hpp>
 #include <utility/String.hpp>
 #include <utility/Unused.hpp>

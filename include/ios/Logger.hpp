@@ -19,6 +19,7 @@
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
+#include <utility/ScopeDoer.hpp>
 
 namespace SUNphi
 {
