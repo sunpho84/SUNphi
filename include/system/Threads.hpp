@@ -5,6 +5,12 @@
 ///
 /// \brief Provides a thread pool
 ///
+/// The thread pool is implemented through \c pthread library, so we
+/// can start and stop the threads in every moment of the execution,
+/// at variance with the static-behavior of \c Nissa library, where
+/// the program would have opened a \c OpenMP parallel statement and
+/// jumped inside it.
+///
 
 #ifdef HAVE_CONFIG_H
  #include "config.hpp"
@@ -33,56 +39,9 @@ namespace SUNphi
   /// Contains a thread pool
   class ThreadPool
   {
-    /// Class to lock a mutex for the object scope
-    class Mutex
-    {
-      /// Internal mutex
-      pthread_mutex_t mutex PTHREAD_MUTEX_INITIALIZER;
-      
-    public:
-      
-      /// Lock the mutex
-      void lock()
-      {
-	if(pthread_mutex_lock(&mutex))
-	  CRASH("Error locking,",strerror(errno));
-      }
-      
-      /// Unlock the mutex
-      void unlock()
-      {
-	if(pthread_mutex_unlock(&mutex))
-	  CRASH("Error unlocking,",strerror(errno));
-      }
-    };
-    
-    /// Keep a mutex locked for the duration of the object
-    class ScopeMutexLocker
-    {
-      /// Reference to the mutex
-      Mutex& mutex;
-      
-    public:
-      
-      /// Create, store the reference and lock
-      ScopeMutexLocker(Mutex& mutex) ///< Mutex to be kept locked
-	: mutex(mutex)
-      {
-	mutex.lock();
-      }
-      
-      /// Unlock and destroy
-      ~ScopeMutexLocker()
-      {
-	mutex.unlock();
-      }
-    };
-    
-    /// Puts a scope mutex locker making the scope sequential
-#define THREADS_SCOPE_SEQUENTIAL()				\
-    ScopeMutexLocker sequentializer ## __LINE__ (mutex);
-    
     /// Wrapper for the pthread barrier functionality
+    ///
+    /// Low level barrier not meant to be called explictly
     class Barrier
     {
       /// Raw pthread barrier
@@ -217,33 +176,13 @@ namespace SUNphi
     /// identifier. This is an opaque number, which cannot serve the
     /// purpose of getting the thread progressive in the pool. This is
     /// why we define the next function
-    Vector<pthread_t> pool{1,pthread_self()};
+    Vector<pthread_t> pool;
     
     /// Return the thread tag
     static pthread_t getThreadTag()
     {
       return
 	pthread_self();
-    }
-    
-    /// Get the thread of the current thread
-    int getThreadId()
-      const
-    {
-      /// Current pthread
-      const pthread_t threadTag=
-	getThreadTag();
-      
-      /// Position in the pool
-      int threadId=
-	pool.findFirst(threadTag);
-      
-      // Check that the thread is found
-      if(threadId==nActiveThreads())
-	CRASH("Unable to find thread with tag",threadTag);
-      
-      return
-	threadId;
     }
     
     /// Number of threads
@@ -336,12 +275,89 @@ namespace SUNphi
       pool.resize(1);
     }
     
+  public:
+    
+    /// Get the thread of the current thread
+    int getThreadId()
+      const
+    {
+      /// Current pthread
+      const pthread_t threadTag=
+	getThreadTag();
+      
+      /// Position in the pool
+      int threadId=
+	pool.findFirst(threadTag);
+      
+      // Check that the thread is found
+      if(threadId==nActiveThreads())
+	{
+	  fprintf(stdout,"%d %d\n",threadId,nActiveThreads());
+	  for(auto & p : pool)
+	    fprintf(stdout,"%d\n",(int)p);
+	  CRASH("Unable to find thread with tag",threadTag);
+	}
+      return
+	threadId;
+    }
+    
+    /// Class to lock a mutex for the object scope
+    class Mutex
+    {
+      /// Internal mutex
+      pthread_mutex_t mutex PTHREAD_MUTEX_INITIALIZER;
+      
+    public:
+      
+      /// Lock the mutex
+      void lock()
+      {
+	if(pthread_mutex_lock(&mutex))
+	  CRASH("Error locking,",strerror(errno));
+      }
+      
+      /// Unlock the mutex
+      void unlock()
+      {
+	if(pthread_mutex_unlock(&mutex))
+	  CRASH("Error unlocking,",strerror(errno));
+      }
+    };
+    
+    /// Keep a mutex locked for the duration of the object
+    class ScopeMutexLocker
+    {
+      /// Reference to the mutex
+      Mutex& mutex;
+      
+    public:
+      
+      /// Create, store the reference and lock
+      ScopeMutexLocker(Mutex& mutex) ///< Mutex to be kept locked
+	: mutex(mutex)
+      {
+	mutex.lock();
+      }
+      
+      /// Unlock and destroy
+      ~ScopeMutexLocker()
+      {
+	mutex.unlock();
+      }
+    };
+    
+  private:
+    
     /// Global mutex
     Mutex mutex;
     
   public:
     
-    /// Lock the mutex
+    /// Puts a scope mutex locker making the scope sequential
+#define THREADS_SCOPE_SEQUENTIAL()				\
+    ScopeMutexLocker sequentializer ## __LINE__ (mutex);
+    
+    /// Lock the internal mutex
     void mutexLock()
     {
       mutex.lock();
@@ -382,7 +398,7 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d is telling the pool that work has been assigned (tag: %s)",(int)threadId,workAssignmentTag);
+      minimalLogger(runLog,"Telling the pool that work has been assigned (tag: %s)",workAssignmentTag);
       
       // Mark down that the pool is not waiting for work
       isWaitingForWork=
@@ -401,7 +417,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d is telling that has been created and is ready to swim (tag: %s)",(int)threadId,threadHasBeenCreated);
+      minimalLogger(runLog,"Telling that thread has been created and is ready to swim (tag: %s)",threadHasBeenCreated);
       
       // The thread signals to the master that has been created and ready to swim
       barrier.sync(threadHasBeenCreated,threadId);
@@ -412,7 +428,7 @@ namespace SUNphi
     {
       checkMasterOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d is waiting for threads in the pool to be ready to ready to swim (tag: %s)",(int)threadId,threadHasBeenCreated);
+      minimalLogger(runLog,"waiting for threads in the pool to be ready to ready to swim (tag: %s)",threadHasBeenCreated);
       
       // The master wait that the threads have been created by syncing with them
       barrier.sync(threadHasBeenCreated,threadId);
@@ -423,7 +439,10 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d is waiting in the pool for work to be assigned (tag %s)",threadId,workAssignmentTag);
+      // This printing is messing up, because is occurring in the pool
+      // where the thread is expected to be already waiting for work,
+      // and is not locking the logger correctly
+      //minimalLogger(runLog,"waiting in the pool for work to be assigned (tag %s)",workAssignmentTag);
       
       barrier.sync(workAssignmentTag,threadId);
     }
@@ -436,7 +455,7 @@ namespace SUNphi
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
       
-      minimalLogger(runLog,"Thread of id %d is telling the pool not to work any longer (tag: %s)",(int)threadId,workNoMoreTag);
+      minimalLogger(runLog,"Telling the pool not to work any longer (tag: %s)",workNoMoreTag);
       
       // Mark down that the pool is waiting for work
       isWaitingForWork=
@@ -456,7 +475,7 @@ namespace SUNphi
     {
       checkPoolOnly(threadId);
       
-      minimalLogger(runLog,"Thread of id %d has finished working (tag: %s)",(int)threadId,workFinishedTag);
+      minimalLogger(runLog,"finished working (tag: %s)",workFinishedTag);
       
       barrier.sync(workFinishedTag,threadId);
     }
@@ -471,7 +490,7 @@ namespace SUNphi
 	  /// Makes the print sequential across threads
 	  THREADS_SCOPE_SEQUENTIAL();
 	  
-	  minimalLogger(runLog,"Thread of id %d is waiting for work to be finished (tag: %s",(int)threadId,workFinishedTag);
+	  minimalLogger(runLog,"waiting for pool to finish the work (tag: %s)",workFinishedTag);
 	  mutexUnlock();
 	}
       
@@ -482,6 +501,13 @@ namespace SUNphi
       // Mark down that the pool is waiting for work
       isWaitingForWork=
 	true;
+    }
+    
+    /// Return whether the pool is waiting for work
+    const bool& getIfWaitingForWork() const
+    {
+      return
+	isWaitingForWork;
     }
     
     /// Gives to all threads some work to be done
@@ -536,7 +562,9 @@ namespace SUNphi
     
     /// Constructor starting the thread pool with a given number of threads
     ThreadPool(int nThreads=std::thread::hardware_concurrency()) :
-      nThreads(nThreads),barrier(nThreads)
+      pool(1,pthread_self()),
+      nThreads(nThreads),
+      barrier(nThreads)
     {
       fill();
     }

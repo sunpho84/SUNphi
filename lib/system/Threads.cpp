@@ -27,7 +27,7 @@ namespace SUNphi
     
     delete ptr;
     
-    //runLog<<"Thread id: "<<threadId<<" (check: "<<pool.getThreadId()<<") entering the pool, "<<pthread_self()<<"\n";
+    //runLog<<"entering the pool";
     
     /// Work until asked to empty
     bool keepSwimming=
@@ -42,7 +42,7 @@ namespace SUNphi
 	keepSwimming=
 	  pool.isFilled;
 	
-	runLog<<"Thread id: "<<threadId<<" keep swimming: "<<keepSwimming<<"\n";
+	runLog<<" keep swimming: "<<keepSwimming<<"\n";
 	
 	if(keepSwimming)
 	  {
@@ -52,7 +52,7 @@ namespace SUNphi
 	  }
       }
     
-    //runLog<<"Thread: "<<threadId<<" (check: "<<pool.getThreadId()<<") exiting the pool, "<<pthread_self()<<"\n";
+    //runLog<<"exiting the pool";
     
     return
       nullptr;
@@ -60,22 +60,20 @@ namespace SUNphi
   
   void ThreadPool::fill(const pthread_attr_t* attr)
     {
+      runLog.allowAllThreads();
+      
       runLog<<"Filling the thread pool with "<<nThreads<<" threads";
       
       // Checks that the pool is not filled
       if(isFilled)
 	CRASH("Cannot fill again the pool!");
       
-      // Marks the pool as filled
+      // Resize the pool to contain all threads
+      pool.resize(nThreads,0);
+      
+      // Marks the pool as filled, even if we are still filling it, this will keep the threads swimming
       isFilled=
 	true;
-      
-      // Marks the pool is waiting for job to be done
-      isWaitingForWork=
-	true;
-      
-      // Resize the pool to contain all threads
-      pool.resize(nThreads);
       
       for(int threadId=1;threadId<nThreads;threadId++)
 	{
@@ -103,5 +101,12 @@ namespace SUNphi
 	}
       
       waitPoolToBeFilled(masterThreadId);
+      
+      runLog.allowOnlyMasterThread();
+      
+      // Marks the pool is waiting for job to be done
+      isWaitingForWork=
+	true;
+      
     }
 }

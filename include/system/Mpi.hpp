@@ -14,7 +14,8 @@
  #include <mpi.h>
 #endif
 
-#include <ios/Logger.hpp>
+#include <ios/MinimalLogger.hpp>
+#include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/SingleInstance.hpp>
 
@@ -220,13 +221,17 @@ namespace SUNphi
       /// Result
       T out;
       
+      minimalLogger(runLog,"%p %d",&out,rank());
+      
       MPI_CRASH_ON_ERROR(MPI_Allreduce(&in,&out,1,mpiType<T>(),MPI_SUM,MPI_COMM_WORLD),"Reducing among all processes");
       
-      return out;
+      return
+	out;
       
 #else
       
-      return in;
+      return
+	in;
       
 #endif
       

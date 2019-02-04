@@ -20,7 +20,7 @@ namespace SUNphi
   ///
   /// We cannot use variadic template version here, as the logger cannot be called directly here, since "Logger.hpp" is expected
   void minimalLogger(Logger& logger,           ///< Logger to be used
-		     const char* format,       ///< Formattign string
+		     const char* format,       ///< Formatting string
 		     ...);
 }
 

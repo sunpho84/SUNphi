@@ -15,7 +15,7 @@
 
 #include <ios/TextColors.hpp>
 #include <system/Debug.hpp>
-//#include <system/Mpi.hpp>
+#include <system/Mpi.hpp>
 #include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
@@ -25,20 +25,29 @@ namespace SUNphi
   /// Write output to a file, using different level of indentation
   class Logger
   {
+    /// Fake logger, printing to /dev/null
+    static Logger fakeLogger;
+    
     /// Single line in the logger
     class LoggerLine
     {
       /// Store wether the line has to be ended or not
       bool hasToEndLine;
       
-      /// Store wether the line is crashing
+      /// Store whether the line is crashing
       bool hasToCrash;
       
       /// Mark that the color has changed in this line
       bool colorChanged;
       
+      /// Check whether should actually print or not
+      const bool reallyPrint;
+      
+      /// Check whether we need to lock
+      const bool hasToLock;
+      
       /// Reference to the logger
-      const Logger& logger;
+      Logger& logger;
       
       /// Forbids copying a line
       LoggerLine(const LoggerLine&)=delete;
@@ -48,9 +57,28 @@ namespace SUNphi
       /// Starts a new line
       void startNewLine()
       {
-	// Prepend with time
+	/// Total number of the character written
+	int rc=
+	  0;
+	
+ 	// Prepend with time
 	if(logger.prependTime)
-	  fprintf(logger.file,"%.010f s:\t",durationInSec(timings.currentMeasure()));
+	  rc+=
+	    fprintf(logger.file,"%.010f s",durationInSec(timings.currentMeasure()));
+	
+	// Prepend with rank
+	if(not logger.onlyMasterRank)
+	  rc+=
+	    fprintf(logger.file," Rank %d",mpi.rank());
+	
+	// Prepend with thread
+	if(not logger.onlyMasterThread)
+	  rc+=
+	    fprintf(logger.file," Thread %d",threads.getThreadId());
+	
+	// Mark the margin
+	if(rc)
+	  fprintf(logger.file,":\t");
 	
 	// Writes the given number of spaces
 	for(int i=0;i<logger.indentLev;i++)
@@ -58,15 +86,18 @@ namespace SUNphi
       }
       
       /// Construct
-      LoggerLine(const Logger& logger)
+      LoggerLine(Logger& logger)
 	: hasToEndLine(true),
 	  hasToCrash(false),
 	  colorChanged(false),
-	  logger(logger)
+	  reallyPrint((threads.isMasterThread() or not logger.onlyMasterThread) and (mpi.isMasterRank() or not logger.onlyMasterRank)),
+	  hasToLock((not logger.onlyMasterThread) and (not threads.getIfWaitingForWork())),
+	  logger(reallyPrint?logger:fakeLogger)
       {
-#warning DARIVEDERE
-	threads.mutexLock();
 	
+	if(hasToLock)
+	  logger.getExclusiveAccess();
+	  
 	startNewLine();
       }
       
@@ -75,6 +106,8 @@ namespace SUNphi
       	: hasToEndLine(true),
       	  hasToCrash(oth.hasToCrash),
 	  colorChanged(oth.colorChanged),
+	  reallyPrint(oth.reallyPrint),
+	  hasToLock(oth.hasToLock),
       	  logger(oth.logger)
       {
       	oth.hasToEndLine=
@@ -103,8 +136,9 @@ namespace SUNphi
 	    
 	    // Ends the line
 	    endLine();
-#warning DARIVEDERE
-	    threads.mutexUnlock();
+	    
+	    if(hasToLock)
+	      logger.releaseExclusiveAccess();
 	    
 	    if(hasToCrash)
 	      {
@@ -229,16 +263,57 @@ namespace SUNphi
     /// Determine wheter the new line includes time
     bool prependTime;
     
+    /// Mutex used to lock the logger
+    mutable ThreadPool::Mutex mutex;
+    
+    /// Set the exclusive access right
+    void getExclusiveAccess()
+    {
+      mutex.lock();
+    }
+    
+    /// Release the exclusive access right
+    void releaseExclusiveAccess()
+    {
+      mutex.unlock();
+    }
+    
     /// File pointed by the logger
     FILE* file{nullptr};
     
-    /// Set that only master thread can write here
+    /// Decide whether only master thread can write here
     bool onlyMasterThread{true};
     
-    /// Set that only master thread can write here
+    /// Decide whether only master MPI can write here
     bool onlyMasterRank{true};
     
   public:
+    
+    /// Allow only master thread to write
+    void allowOnlyMasterThread()
+    {
+      if(threads.isMasterThread())
+	onlyMasterThread=true;
+    }
+    
+    /// Allow all threads to write
+    void allowAllThreads()
+    {
+      if(threads.isMasterThread())
+	onlyMasterThread=false;
+    }
+    
+    /// Allow only master rank to write
+    void allowOnlyMasterRank()
+    {
+      onlyMasterRank=true;
+    }
+    
+    /// Allow all ranks to write
+    void allowAllRanks()
+    {
+      onlyMasterRank=false;
+    }
     
     /// Precision to print real number
     int realPrecision{6};
@@ -290,33 +365,23 @@ namespace SUNphi
 	file!=nullptr;
     }
     
-    /// Close, crashing if not open
+    /// Close
     void close()
     {
-      // Check that is open
-      if(not isOpen())
-	CRASH("Not open!");
-      
-      // Close
-      fclose(file);
-      
-      // Set the file to null
-      file=
-	nullptr;
+      if(isOpen())
+	{
+	  fclose(file);
+	  
+	  // Set the file to null
+	  file=
+	    nullptr;
+	}
     }
     
     /// Create a new line, and print it
     template <typename T>
     LoggerLine operator<<(T&& t)
     {
-      /// Check whether current thread should print or not
-      const bool thisThreadPrint=
-	threads.isMasterThread() or not onlyMasterThread;
-      
-      /// Check whether current rank should print or not
-      // const bool thisRankPrint=
-      // 	mpi.isMasterThread() or not onlyMasterThread;
-      
       return
 	std::move(LoggerLine(*this)<<forw<T>(t));
     }
@@ -329,7 +394,8 @@ namespace SUNphi
     {
       this->open(path);
       
-      *this<<"Logger"<<" initialized";
+      // Cannot print, otherwise all rank would!
+      //*this<<"Logger initialized";
     }
     
     /// Destroy

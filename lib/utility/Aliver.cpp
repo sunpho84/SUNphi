@@ -107,7 +107,9 @@ namespace SUNphi
       printGitInfo();
       printConfigurePars();
       
-      runLog<<"ANNA "<<threads.isMasterThread();//  loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints %d\n",rank,i);});
+      threads.workOn([](const int threadID){runLog<<"ANNA "<<threadID;});
+      
+      threads.workOn([](const int threadID){runLog<<"ANNA "<<threadID;});
       
       // threads.loopSplit(0,10,[](const int& rank,const int& i){printf("Rank %d prints again %d\n",rank,i);});
     }
@@ -122,18 +124,17 @@ namespace SUNphi
   /// Global timings
   Timer timings("Total time",Timer::NO_FATHER,Timer::UNSTOPPABLE);
   
+  Logger Logger::fakeLogger("/dev/null");
+  
   /// Global logger
   Logger runLog("/dev/stdout");
-  
-  /// Presentation of the library
-  Aliver aliver;
-  
-  /// Fake logger
-  Logger logNull("/dev/null");
   
   /// Global MPI
   Mpi mpi;
   
   /// Global thread pool
   ThreadPool threads;
+  
+  /// Presentation of the library
+  Aliver aliver;
 }
