@@ -18,6 +18,7 @@
   Doxygen on Travis-ci nodes, this will be fixed "soon".
 */
 
+#include <Debug.hpp>
 #include <Ints.hpp>
 #include <Ios.hpp>
 #include <Lattice.hpp>

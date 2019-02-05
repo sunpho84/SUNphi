@@ -9,8 +9,8 @@
  #include "config.hpp"
 #endif
 
+#include <debug/Crash.hpp>
 #include <threads/Thread.hpp>
-#include <system/Debug.hpp>
 
 namespace SUNphi
 {
@@ -39,14 +39,7 @@ namespace SUNphi
 	pthread_barrier_wait(&barrier);
       
       if(rc!=0 and rc!=PTHREAD_BARRIER_SERIAL_THREAD)
-	switch(errno)
-	  {
-	  case EINVAL:
-	    CRASH("The value specified by barrier does not refer to an initialized barrier object");
-	    break;
-	  default:
-	    CRASH("Other error");
-	  }
+	CRASH.printStdLibErr()<<"while barrier was waiting";
     }
     
   public:

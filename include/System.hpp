@@ -5,7 +5,6 @@
 ///
 /// \brief Header file for low-level system function
 
-#include <system/Debug.hpp>
 #include <system/Memory.hpp>
 #include <system/Mpi.hpp>
 #include <system/SIMD.hpp>

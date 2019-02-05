@@ -1,7 +1,7 @@
 #ifndef _SINGLE_INSTANCE_HPP
 #define _SINGLE_INSTANCE_HPP
 
-#include <system/Debug.hpp>
+#include <debug/Crash.hpp>
 #include <metaprogramming/StaticMemberWithInitializator.hpp>
 
 /// \file SingleInstance.hpp

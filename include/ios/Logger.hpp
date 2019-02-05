@@ -21,7 +21,6 @@
 
 #include <Threads.hpp>
 #include <ios/TextColors.hpp>
-#include <system/Debug.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
@@ -232,7 +231,7 @@ namespace SUNphi
 	this->hasToCrash=
 	  true;
 	
-	(*this)<<TextColor::RED<<" ERROR in function "<<cr.funcName<<" at line "<<cr.line<<" of file "<<cr.path<<": \"";
+	(*this)<<TextColor::RED<<" ERROR in function "<<cr.getFuncName()<<" at line "<<cr.getLine()<<" of file "<<cr.getPath()<<": \"";
 	
 	return
 	  *this;
@@ -337,7 +336,7 @@ namespace SUNphi
     {
       // Check not open
       if(isOpen())
-	CRASH("Cannot open an already opened file");
+	CRASH<<"Cannot open an already opened file";
       
       // Tries to open
       file=
@@ -345,7 +344,7 @@ namespace SUNphi
       
       // Check
       if(file==nullptr)
-	CRASH("Unable to open file",path);
+	CRASH<<"Unable to open file "<<path;;
     }
     
     /// Check if open
