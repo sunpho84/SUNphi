@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a98a6733ac11cdf79277e21702d4dc69d',1,'SUNphi::ThreadPool']]]
+  ['threadpoolswim',['threadPoolSwim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#ad64e6c9a4b91311a0a448211fb4cbd85',1,'SUNphi::ThreadPool']]]
 ];

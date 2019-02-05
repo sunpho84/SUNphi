@@ -28,7 +28,7 @@ var classSUNphi_1_1ThreadPool =
     [ "waitForWorkToBeAssigned", "dc/d0f/classSUNphi_1_1ThreadPool.html#a5a041f4ed6194362eeffbbaa345db4a6", null ],
     [ "waitPoolToBeFilled", "dc/d0f/classSUNphi_1_1ThreadPool.html#a18fd522426885487d5552fa758f35c80", null ],
     [ "workOn", "dc/d0f/classSUNphi_1_1ThreadPool.html#aab9a93c9ad43c1f5e50c77e2235d47de", null ],
-    [ "swim", "dc/d0f/classSUNphi_1_1ThreadPool.html#a98a6733ac11cdf79277e21702d4dc69d", null ],
+    [ "threadPoolSwim", "dc/d0f/classSUNphi_1_1ThreadPool.html#ad64e6c9a4b91311a0a448211fb4cbd85", null ],
     [ "barrier", "dc/d0f/classSUNphi_1_1ThreadPool.html#af881134f9de317f85f8731ae5cc7fda6", null ],
     [ "isFilled", "dc/d0f/classSUNphi_1_1ThreadPool.html#a14cc92e4106cdf4235baf3d37931d83a", null ],
     [ "isWaitingForWork", "dc/d0f/classSUNphi_1_1ThreadPool.html#a12557ed7bcdfaabc3868f15f900e5d37", null ],

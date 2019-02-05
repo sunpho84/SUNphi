@@ -48,7 +48,6 @@ var searchData=
   ['provide_5fmergeable_5fcomps_5faccording_5fto_5frefs_5fand_5fextra',['PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_REFS_AND_EXTRA',['../d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89',1,'NnarySmET.hpp']]],
   ['provide_5fmergeable_5fcomps_5faccording_5fto_5ftwo_5frefs',['PROVIDE_MERGEABLE_COMPS_ACCORDING_TO_TWO_REFS',['../da/d5e/BinarySmET_8hpp.html#a1db658f6375a4641dc6c774600a510da',1,'BinarySmET.hpp']]],
   ['provide_5fmergeable_5fcomps_5fmarking_5fone_5fas_5fnon_5fmergeable',['PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE',['../dc/d6b/BaseSmET_8hpp.html#a0967a494ce6416d595dbe85bc009df81',1,'BaseSmET.hpp']]],
-  ['provide_5fmpi_5fdatatype',['PROVIDE_MPI_DATATYPE',['../d8/d6a/Mpi_8hpp.html#a140cf03349c8a119619aa781bb677ab4',1,'Mpi.hpp']]],
   ['provide_5fname',['PROVIDE_NAME',['../d8/d32/String_8hpp.html#a9c53a2f9c0c7e8b6108db2619a4549ef',1,'String.hpp']]],
   ['provide_5fnnary_5fget_5fmerged_5fcomps_5fview',['PROVIDE_NNARY_GET_MERGED_COMPS_VIEW',['../d2/d69/NnarySmET_8hpp.html#a2e7743fd0a21880f018c5a11f2fb6039',1,'NnarySmET.hpp']]],
   ['provide_5fnnary_5fget_5fmerged_5fcomps_5fview_5faccording_5fto_5frepresentative_5ffunction',['PROVIDE_NNARY_GET_MERGED_COMPS_VIEW_ACCORDING_TO_REPRESENTATIVE_FUNCTION',['../d2/d69/NnarySmET_8hpp.html#a64f06187d70938817e161b9145f8f434',1,'NnarySmET.hpp']]],

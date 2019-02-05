@@ -24,6 +24,5 @@ var searchData=
   ['startnewline',['startNewLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a768687d35bc97af8fb61f3fab6babfb6',1,'SUNphi::Logger::LoggerLine']]],
   ['stop',['stop',['../d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2',1,'SUNphi::Timer']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
-  ['swim',['swim',['../d3/dd7/namespaceSUNphi.html#aaeb5a3743a557f34e52787cedea6a8b5',1,'SUNphi']]],
   ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#af48bb487a45b9a0829ca100933b2c1fc',1,'SUNphi::ThreadPool::Barrier::sync(const char *barrName, const int &amp;threadId)']]]
 ];

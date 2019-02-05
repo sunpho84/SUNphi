@@ -21,7 +21,7 @@ var searchData=
   ['scopeindenter',['ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#aff0dc8f2d51cae1546a249300387e605',1,'SUNphi::ScopeIndenter']]],
   ['scopemutexlocker',['ScopeMutexLocker',['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html',1,'SUNphi::ThreadPool']]],
   ['scopemutexlocker',['ScopeMutexLocker',['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#a6a1e64004abef0eacdc0c34d8248fe6e',1,'SUNphi::ThreadPool::ScopeMutexLocker']]],
-  ['scref',['scRef',['../db/d12/classSUNphi_1_1ScalarWrapper.html#ad0493bf2b033d8403ee338d18ad84844',1,'SUNphi::ScalarWrapper::scRef()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#a09c2aa07f099d6abb253d2d4fd781435',1,'SUNphi::ScalarWrapper::ScRef()']]],
+  ['scref',['ScRef',['../db/d12/classSUNphi_1_1ScalarWrapper.html#a09c2aa07f099d6abb253d2d4fd781435',1,'SUNphi::ScalarWrapper::ScRef()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#ad0493bf2b033d8403ee338d18ad84844',1,'SUNphi::ScalarWrapper::scRef()']]],
   ['set_5ffor_5fcurrent_5fscope',['SET_FOR_CURRENT_SCOPE',['../d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda',1,'Logger.hpp']]],
   ['setshiftbc',['setShiftBC',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['setsides',['setSides',['../dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54',1,'SUNphi::Grid']]],
@@ -48,7 +48,7 @@ var searchData=
   ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20mpi_20_3e',['SingleInstance&lt; Mpi &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['site',['site',['../d3/dd7/namespaceSUNphi.html#a4a9c193cd452ad7e0b5d38fca763c5cc',1,'SUNphi']]],
-  ['size',['size',['../da/def/structSUNphi_1_1IntSeq.html#a59af33ae8081e677624492043a1c8f96',1,'SUNphi::IntSeq::size()'],['../d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c',1,'SUNphi::TensComp::size()'],['../df/dc0/classSUNphi_1_1Vector.html#a0afc9ee7d4b9fc8ccbd84c750dff5d71',1,'SUNphi::Vector::size() const '],['../df/dc0/classSUNphi_1_1Vector.html#a5116fba1a194138c47c59eeb9bebcc19',1,'SUNphi::Vector::Size()']]],
+  ['size',['Size',['../df/dc0/classSUNphi_1_1Vector.html#a5116fba1a194138c47c59eeb9bebcc19',1,'SUNphi::Vector::Size()'],['../da/def/structSUNphi_1_1IntSeq.html#a59af33ae8081e677624492043a1c8f96',1,'SUNphi::IntSeq::size()'],['../d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c',1,'SUNphi::TensComp::size()'],['../df/dc0/classSUNphi_1_1Vector.html#a0afc9ee7d4b9fc8ccbd84c750dff5d71',1,'SUNphi::Vector::size()']]],
   ['slot',['Slot',['../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01',1,'SUNphi::Combinatorial']]],
   ['smet',['SmET',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_2ehpp',['SmET.hpp',['../d9/d21/SmET_8hpp.html',1,'']]],
@@ -104,7 +104,6 @@ var searchData=
   ['swallow_5fsemicolon_5fat_5fclass_5fscope',['SWALLOW_SEMICOLON_AT_CLASS_SCOPE',['../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0',1,'SwallowSemicolon.hpp']]],
   ['swallow_5fsemicolon_5fat_5fglobal_5fscope',['SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE',['../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d',1,'SwallowSemicolon.hpp']]],
   ['swallowsemicolon_2ehpp',['SwallowSemicolon.hpp',['../d5/d8c/SwallowSemicolon_8hpp.html',1,'']]],
-  ['swim',['swim',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a98a6733ac11cdf79277e21702d4dc69d',1,'SUNphi::ThreadPool::swim()'],['../d3/dd7/namespaceSUNphi.html#aaeb5a3743a557f34e52787cedea6a8b5',1,'SUNphi::swim()']]],
   ['sync',['sync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#af48bb487a45b9a0829ca100933b2c1fc',1,'SUNphi::ThreadPool::Barrier::sync(const char *barrName, const int &amp;threadId)']]],
   ['system_2ehpp',['System.hpp',['../d4/d25/System_8hpp.html',1,'']]]
 ];
