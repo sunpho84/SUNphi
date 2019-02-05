@@ -10,6 +10,7 @@ var searchData=
   ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
   ['string_2ehpp',['String.hpp',['../d8/d32/String_8hpp.html',1,'']]],
   ['sun_2ehpp',['SUN.hpp',['../d4/df5/SUN_8hpp.html',1,'']]],
+  ['sunphi_2ecpp',['SUNphi.cpp',['../dd/d2b/SUNphi_8cpp.html',1,'']]],
   ['sunphi_2ehpp',['SUNphi.hpp',['../d1/d8b/SUNphi_8hpp.html',1,'']]],
   ['swallowsemicolon_2ehpp',['SwallowSemicolon.hpp',['../d5/d8c/SwallowSemicolon_8hpp.html',1,'']]],
   ['system_2ehpp',['System.hpp',['../d4/d25/System_8hpp.html',1,'']]]

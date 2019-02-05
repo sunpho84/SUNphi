@@ -7,6 +7,6 @@ var searchData=
   ['vector_2ehpp',['Vector.hpp',['../de/dd9/Vector_8hpp.html',1,'']]],
   ['vector_3c_20int_20_3e',['Vector&lt; Int &gt;',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]],
   ['vector_3c_20pthread_5ft_20_3e',['Vector&lt; pthread_t &gt;',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]],
-  ['voidif',['VoidIf',['../d3/dd7/namespaceSUNphi.html#a0599cb789276721d74cf627d5afb69d6',1,'SUNphi']]],
+  ['voidif',['VoidIf',['../d0/d81/TypeTraits_8hpp.html#a0599cb789276721d74cf627d5afb69d6',1,'SUNphi']]],
   ['volume',['volume',['../dd/dca/classSUNphi_1_1Grid.html#ab680ef17ae0414c8a5b0b9fd05f27455',1,'SUNphi::Grid']]]
 ];

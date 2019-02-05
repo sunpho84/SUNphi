@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('df/dee/Debug_8hpp.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -129,16 +128,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep all the information to crash.  <a href="../../d1/d07/structSUNphi_1_1Crasher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace of the <a class="el" href="../../d3/dd7/namespaceSUNphi.html" title="Namespace of the SUNphi library. ">SUNphi</a> library. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a7c4906fd9a25964e49819c6c97d3387d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c4906fd9a25964e49819c6c97d3387d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a>(...)&#160;&#160;&#160;<a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">SUNphi::internalCrash</a>(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a>(...)&#160;&#160;&#160;SUNphi::internalCrash(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)</td></tr>
 <tr class="memdesc:a7c4906fd9a25964e49819c6c97d3387d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to make the crash being more explicit. <br /></td></tr>
 <tr class="separator:a7c4906fd9a25964e49819c6c97d3387d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65f838a62c22e7f99e4ff6dccdfa105"></a>
@@ -153,19 +146,73 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55">SUNphi::printBacktraceList</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55">SUNphi::printBacktraceList</a> ()</td></tr>
 <tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
 <tr class="separator:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">SUNphi::internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
-<tr class="memdesc:aefc47f1022713393c1f22dc3107f3418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crash with a detailed message.  <a href="../../d3/dd7/namespaceSUNphi.html#aefc47f1022713393c1f22dc3107f3418">More...</a><br /></td></tr>
+<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418">SUNphi::internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
+<tr class="memdesc:aefc47f1022713393c1f22dc3107f3418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crash with a detailed message.  <a href="../../df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418">More...</a><br /></td></tr>
 <tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for debugging routines. </p>
 
 <p>Definition in file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_aefc47f1022713393c1f22dc3107f3418"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::internalCrash </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>funcName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Args &amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crash with a detailed message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Line of code where the crash happended </td></tr>
+    <tr><td class="paramname">path</td><td>Name of the file where the crash happened </td></tr>
+    <tr><td class="paramname">funcName</td><td>Name of the function where the crash happened </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments to print the error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../df/dee/Debug_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,5 +1,7 @@
 var NAVTREEINDEX0 =
 {
+".html":[1,0,0],
+".html":[2,0,0],
 "annotated.html":[2,0],
 "classes.html":[2,1],
 "d0/d06/structSUNphi_1_1HasMember__isAssignable_1_1Derived.html":[2,0,0,125,1],
@@ -113,7 +115,6 @@ var NAVTREEINDEX0 =
 "d1/d07/structSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4":[2,0,0,109,2],
 "d1/d07/structSUNphi_1_1Crasher.html#aa294d6cc03fc82960aa3b2465226a327":[2,0,0,109,0],
 "d1/d07/structSUNphi_1_1Crasher.html#acf85c25179a1dfe4eeb1dfe4144116b6":[2,0,0,109,1],
-"d1/d0b/Threads_8cpp_source.html":[3,0,3,1,1],
 "d1/d0d/structSUNphi_1_1BaseTensComp.html":[2,0,0,52],
 "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html":[2,0,0,126,1],
 "d1/d2b/structSUNphi_1_1HasMember__isStoring_1_1Derived.html#ab3a9bde0e088b2cd295436f481257d0c":[2,0,0,126,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d2/d24/classSUNphi_1_1Conjer.html#a578544259000e56173eb4df6edd6a14a":[2,0,0,63,20],
 "d2/d24/classSUNphi_1_1Conjer.html#a5a744623c20b396fe872611e64eafb1d":[2,0,0,63,31],
 "d2/d24/classSUNphi_1_1Conjer.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,63,10],
-"d2/d24/classSUNphi_1_1Conjer.html#a68896d73ee69538a335f567429c83dd4":[2,0,0,63,18],
-"d2/d24/classSUNphi_1_1Conjer.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,63,14]
+"d2/d24/classSUNphi_1_1Conjer.html#a68896d73ee69538a335f567429c83dd4":[2,0,0,63,18]
 };

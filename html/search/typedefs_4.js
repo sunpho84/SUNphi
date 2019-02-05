@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['enableif',['EnableIf',['../d3/dd7/namespaceSUNphi.html#a36390d39df970fd50dd457210d0079f4',1,'SUNphi']]],
+  ['enableif',['EnableIf',['../d0/d81/TypeTraits_8hpp.html#a36390d39df970fd50dd457210d0079f4',1,'SUNphi']]],
   ['extradelims',['ExtraDelims',['../d6/db9/classSUNphi_1_1Binder.html#a045dcc260d77d1f343ce94e04a72417c',1,'SUNphi::Binder::ExtraDelims()'],['../de/d58/classSUNphi_1_1Adder.html#ae402d88baf215f7ed5ac39379c9fa876',1,'SUNphi::Adder::ExtraDelims()'],['../d2/d24/classSUNphi_1_1Conjer.html#a7d209a279dae127b288b945306d1e902',1,'SUNphi::Conjer::ExtraDelims()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a506d217168531a53083ae667171d83a6',1,'SUNphi::Transposer::ExtraDelims()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a3ea95252d10b3d9a4000d68584fd315b',1,'SUNphi::MulAdder::ExtraDelims()'],['../d5/d1c/classSUNphi_1_1RelBinder.html#a5682dc94da00a19ad90bd310288cc7d8',1,'SUNphi::RelBinder::ExtraDelims()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a05dabeecb881bb9123ce52c010f47894',1,'SUNphi::UMinuser::ExtraDelims()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a1c20f4b339b5533cd70b2c1b0ede74f4',1,'SUNphi::Wrapper::ExtraDelims()']]]
 ];
