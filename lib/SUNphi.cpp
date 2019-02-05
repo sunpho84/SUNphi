@@ -63,7 +63,8 @@ namespace SUNphi
     else
       logger<<message;
   }
-  
+
+#ifdef USE_THREADS
   void ThreadPool::fill(const pthread_attr_t* attr)
     {
       {
@@ -114,6 +115,7 @@ namespace SUNphi
       isWaitingForWork=
 	true;
     }
+#endif // USE_THREADS
   
   int aliverHelper()
   {

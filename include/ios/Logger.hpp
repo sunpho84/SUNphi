@@ -8,8 +8,14 @@
 /// The internal class is used to really print, while the external one
 /// to determine whether to print or not, and to lock in case the
 /// threads are present. If printing is not needed, a fake internal
-/// logger is passed.
-/// \todo REVIEW THIS, I think we will short circuit the printing
+/// logger is passed, printing on /dev/null
+///
+/// If threads are running, and all threads are allowed to print, the
+/// Logger is locked so that only one thread at the time can print,
+/// and all lines are prepended with thread id indication.
+///
+/// If MPI is running, and all ranks are allowed, to print, each line
+/// is prepended with the rank id. No cross-ranks lock is issued.
 
 #include <cstdio>
 

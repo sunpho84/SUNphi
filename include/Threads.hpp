@@ -11,6 +11,8 @@
 
 #ifdef USE_THREADS
  #include <threads/ThreadPool.hpp>
+#else
+ #include <threads/FakePool.hpp>
 #endif
 
 #endif
