@@ -3,11 +3,11 @@
 #endif
 
 #include <ios/Logger.hpp>
-#include <system/Threads.hpp>
+#include <threads/ThreadPool.hpp>
 
 namespace SUNphi
 {
-  void* swim(void* _ptr)
+  void* threadPoolSwim(void* _ptr)
   {
     /// Cast the \c void pointer to the tuple
     ThreadPool::ThreadPars* ptr=
@@ -84,7 +84,7 @@ namespace SUNphi
 	    ThreadPars* pars=
 	      new ThreadPars{this,threadId};
 	    
-	    if(pthread_create(&pool[threadId],attr,swim,pars)!=0)
+	    if(pthread_create(&pool[threadId],attr,threadPoolSwim,pars)!=0)
 	      switch(errno)
 		{
 		case EAGAIN:

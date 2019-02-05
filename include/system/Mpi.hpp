@@ -15,12 +15,13 @@
 #endif
 
 #include <ios/MinimalLogger.hpp>
-#include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/SingleInstance.hpp>
+#include <Threads.hpp>
 
 namespace SUNphi
 {
+#ifdef USE_MPI
   /// Provides the \c MPI_Datatype of an any unknown type
   template <typename T>
   inline MPI_Datatype mpiType()
@@ -44,6 +45,7 @@ namespace SUNphi
   PROVIDE_MPI_DATATYPE(MPI_INT,int);
   
   PROVIDE_MPI_DATATYPE(MPI_DOUBLE,double);
+#endif
   
   /// Class wrapping all MPI functionalities
   class Mpi : public SingleInstance<Mpi>

@@ -13,10 +13,10 @@
 
 #include <cstdio>
 
+#include <Threads.hpp>
 #include <ios/TextColors.hpp>
 #include <system/Debug.hpp>
 #include <system/Mpi.hpp>
-#include <system/Threads.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
 #include <utility/ScopeDoer.hpp>

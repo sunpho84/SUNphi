@@ -1,7 +1,7 @@
-#ifndef _THREADS_HPP
-#define _THREADS_HPP
+#ifndef _THREADPOOL_HPP
+#define _THREADPOOL_HPP
 
-/// \file Threads.hpp
+/// \file ThreadPool.hpp
 ///
 /// \brief Provides a thread pool
 ///
@@ -16,12 +16,13 @@
  #include "config.hpp"
 #endif
 
-#ifdef USE_THREADS
- #include <pthread.h>
- #include <thread>
+#ifndef USE_THREADS
+ #error "Do not include this file explicitly, please include <Threads.hpp> instead!"
 #endif
 
 #include <cstring>
+#include <pthread.h>
+#include <thread>
 
 #include <external/inplace_function.h>
 
@@ -44,7 +45,7 @@ namespace SUNphi
     /// Low level barrier not meant to be called explictly
     class Barrier
     {
-      /// Raw pthread barrier
+      /// Raw barrier
       pthread_barrier_t barrier;
       
 #ifdef DEBUG_MODE
@@ -183,6 +184,8 @@ namespace SUNphi
     {
       return
 	pthread_self();
+      return
+	0;
     }
     
     /// Number of threads
@@ -220,7 +223,7 @@ namespace SUNphi
     ///
     /// All threads but the master one swim in this pool back and forth,
     /// waiting for job to be done.
-    friend void* swim(void* _ptr); ///< Initialization data
+    friend void* threadPoolSwim(void* _ptr); ///< Initialization data
     
     /// Fill the pool with the number of thread assigned
     void fill(const pthread_attr_t* attr=nullptr); ///< Possible attributes of the threads
@@ -297,6 +300,7 @@ namespace SUNphi
 	    fprintf(stdout,"%d\n",(int)p);
 	  CRASH("Unable to find thread with tag",threadTag);
 	}
+      
       return
 	threadId;
     }
@@ -562,7 +566,7 @@ namespace SUNphi
     
     /// Constructor starting the thread pool with a given number of threads
     ThreadPool(int nThreads=std::thread::hardware_concurrency()) :
-      pool(1,pthread_self()),
+      pool(1,getThreadTag()),
       nThreads(nThreads),
       barrier(nThreads)
     {
