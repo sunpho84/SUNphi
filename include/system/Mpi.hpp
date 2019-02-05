@@ -99,9 +99,18 @@ namespace SUNphi
       -1;
     
     /// Initialize MPI
-    ///
-    /// Implemented in cpp
-    Mpi();
+    Mpi()
+    {
+#ifdef USE_MPI
+      
+      /// Takes the time
+      Duration initDur;
+      
+      MPI_CRASH_ON_ERROR(durationOf(initDur,MPI_Init,nullptr,nullptr),"Error initializing MPI");
+      
+      minimalLogger(runLog,"MPI initialized in %lg s",durationInSec(initDur));
+#endif
+    }
     
     /// Check initialization flag
     bool isInitialized()
@@ -126,9 +135,15 @@ namespace SUNphi
     }
     
     /// Finalize MPI
-    ///
-    /// Implemented in cpp
-    ~Mpi();
+    ~Mpi()
+    {
+    
+#ifdef USE_MPI
+      
+      MPI_CRASH_ON_ERROR(MPI_Finalize(),"Finalizing MPI");
+      
+#endif
+    }
     
     /// Get current rank calling explicitly MPI
     int getRank()

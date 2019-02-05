@@ -33,6 +33,14 @@
 
 namespace SUNphi
 {
+  /// Makes all thread print for current scope
+#define ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)			\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_THREADS_PRINT,LOGGER.onlyMasterThreadPrint,false)
+  
+  /// Makes all thread print for current scope
+#define ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)		\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_PRINT,LOGGER.onlyMasterRankPrint,false)
+  
   /// States that we want to debug threads
   constexpr bool DEBUG_THREADS=
     true;
@@ -223,7 +231,56 @@ namespace SUNphi
     ///
     /// All threads but the master one swim in this pool back and forth,
     /// waiting for job to be done.
-    friend void* threadPoolSwim(void* _ptr); ///< Initialization data
+    static void* threadPoolSwim(void* _ptr) ///< Initialization data
+    {
+      /// Cast the \c void pointer to the tuple
+      ThreadPool::ThreadPars* ptr=
+	static_cast<ThreadPool::ThreadPars*>(_ptr);
+      
+      /// Takes a reference to the parameters
+      ThreadPool::ThreadPars& pars=
+	*ptr;
+      
+      /// Takes a reference to the pool
+      ThreadPool& pool=
+	*get<0>(pars);
+      
+      /// Copy the thread id
+      int threadId=
+	get<1>(pars);
+      
+      delete ptr;
+      
+      //runLog<<"entering the pool";
+      
+      /// Work until asked to empty
+      bool keepSwimming=
+	pool.isFilled;
+      
+      pool.tellTheMasterThreadIsCreated(threadId);
+      
+      while(keepSwimming)
+	{
+	  pool.waitForWorkToBeAssigned(threadId);
+	  
+	  keepSwimming=
+	    pool.isFilled;
+	  
+	  minimalLogger(runLog," keep swimming: %d",keepSwimming);
+	  
+	  if(keepSwimming)
+	    {
+	      pool.work(threadId);
+	      
+	      pool.tellTheMasterWorkIsFinished(threadId);
+	    }
+	}
+      
+      minimalLogger(runLog,"exiting the pool");
+      
+      return
+	nullptr;
+    }
     
     /// Fill the pool with the number of thread assigned
     void fill(const pthread_attr_t* attr=nullptr); ///< Possible attributes of the threads
