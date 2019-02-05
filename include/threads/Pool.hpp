@@ -1,7 +1,7 @@
-#ifndef _THREADPOOL_HPP
-#define _THREADPOOL_HPP
+#ifndef _POOL_HPP
+#define _POOL_HPP
 
-/// \file ThreadPool.hpp
+/// \file Pool.hpp
 ///
 /// \brief Provides a thread pool
 ///
@@ -16,137 +16,21 @@
  #include "config.hpp"
 #endif
 
-#ifndef USE_THREADS
- #error "Do not include this file explicitly, please include <Threads.hpp> instead!"
-#endif
-
-#include <cstring>
-#include <pthread.h>
-#include <thread>
-
 #include <external/inplace_function.h>
 
-#include <containers/Vector.hpp>
-#include <ios/MinimalLogger.hpp>
-#include <system/Debug.hpp>
 #include <Tuple.hpp>
+#include <containers/Vector.hpp>
+#include <threads/Barrier.hpp>
+#include <threads/Mutex.hpp>
+#include <threads/Thread.hpp>
 
 namespace SUNphi
 {
-  /// Makes all thread print for current scope
-#define ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_THREADS_PRINT,LOGGER.onlyMasterThreadPrint,false)
-  
-  /// States that we want to debug threads
-  constexpr bool DEBUG_THREADS=
-    true;
+#ifdef USE_THREADS
   
   /// Contains a thread pool
   class ThreadPool
   {
-    /// Wrapper for the pthread barrier functionality
-    ///
-    /// Low level barrier not meant to be called explictly
-    class Barrier
-    {
-      /// Raw barrier
-      pthread_barrier_t barrier;
-      
-#ifdef DEBUG_MODE
-      
-      /// Value used to check the barrier
-      const char* currBarrName;
-      
-#endif
-      
-      /// Raw synchronization, simply wait that all threads call this
-      void rawSync()
-      {
-	/// Call the barrier and get the result
-	const int rc=
-	  pthread_barrier_wait(&barrier);
-	
-	if(rc!=0 and rc!=PTHREAD_BARRIER_SERIAL_THREAD)
-	  switch(errno)
-	    {
-	    case EINVAL:
-	      CRASH("The value specified by barrier does not refer to an initialized barrier object");
-	      break;
-	    default:
-	      CRASH("Other error");
-	    }
-      }
-      
-    public:
-      
-      /// Build the barrier for \c nThreads threads
-      Barrier(const int& nThreads) ///< Number of threads for which the barrier is defined
-      {
-	if(pthread_barrier_init(&barrier,nullptr,nThreads)!=0)
-	  switch(errno)
-	    {
-	    case EBUSY:
-	      CRASH("The implementation has detected an attempt to reinitialize a barrier while it is in use");
-	      break;
-	    case EAGAIN:
-	      CRASH("The system lacks the necessary resources to initialize another barrier");
-	      break;
-	    case EINVAL:
-	      CRASH("The value specified by count is equal to zero, or the value specified by attr is invalid");
-	      break;
-	    case ENOMEM:
-	      CRASH("Insufficient memory exists to initialize the barrier");
-	      break;
-	    default:
-	      CRASH("Other error");
-	    }
-      }
-      
-      /// Destroys the barrier
-      ~Barrier()
-      {
-	if(pthread_barrier_destroy(&barrier)!=0)
-	  switch(errno)
-	    {
-	    case EBUSY:
-	      CRASH("The implementation has detected an attempt to destroy a barrier while it is in use");
-	      break;
-	    case EINVAL:
-	      CRASH("The value specified by barrier is invalid");
-	      break;
-	    default:
-	      CRASH("Other error");
-	    }
-      }
-      
-      /// Synchronize, without checking the name of the barrier
-      void sync()
-      {
-	rawSync();
-      }
-      
-      /// Synchronize checking the name of the barrier
-      void sync(const char* barrName, ///< Name of the barrier
-		const int& threadId)  ///< Id of the thread used coming to check
-      {
-	rawSync();
-	
-#ifdef DEBUG_MODE
-	
-	if(threadId==masterThreadId)
-	  currBarrName=
-	    barrName;
-	
-	rawSync();
-	
-	if(currBarrName!=barrName)
-	  CRASH("Thread id",threadId,"was expecting",currBarrName,"but",barrName,"encountered");
-	
-#endif
-	
-      }
-    };
-    
     /// Maximal size of the stack used for thw work
     static constexpr int MAX_POOL_FUNCTION_SIZE=
       128;
@@ -156,10 +40,6 @@ namespace SUNphi
     
     /// States if the pool is filled
     bool isFilled{false};
-    
-    /// Thread id of master thread
-    static constexpr int masterThreadId=
-      0;
     
     /// Thread id of master thread
     const pthread_t masterThreadTag{getThreadTag()};
@@ -358,50 +238,6 @@ namespace SUNphi
 	threadId;
     }
     
-    /// Class to lock a mutex for the object scope
-    class Mutex
-    {
-      /// Internal mutex
-      pthread_mutex_t mutex PTHREAD_MUTEX_INITIALIZER;
-      
-    public:
-      
-      /// Lock the mutex
-      void lock()
-      {
-	if(pthread_mutex_lock(&mutex))
-	  CRASH("Error locking,",strerror(errno));
-      }
-      
-      /// Unlock the mutex
-      void unlock()
-      {
-	if(pthread_mutex_unlock(&mutex))
-	  CRASH("Error unlocking,",strerror(errno));
-      }
-    };
-    
-    /// Keep a mutex locked for the duration of the object
-    class ScopeMutexLocker
-    {
-      /// Reference to the mutex
-      Mutex& mutex;
-      
-    public:
-      
-      /// Create, store the reference and lock
-      ScopeMutexLocker(Mutex& mutex) ///< Mutex to be kept locked
-	: mutex(mutex)
-      {
-	mutex.lock();
-      }
-      
-      /// Unlock and destroy
-      ~ScopeMutexLocker()
-      {
-	mutex.unlock();
-      }
-    };
     
   private:
     
@@ -634,7 +470,99 @@ namespace SUNphi
     }
   };
   
-  /// Global threads
+#else
+  
+  /// Dummy thread pool
+  class ThreadPool
+  {
+    
+  public:
+    
+    /// Assert that only the pool is accessing
+    void assertPoolOnly(const int& threadId) ///< Calling thread
+      const
+    {
+    }
+    
+    /// Assert that only the master thread is accessing
+    void assertMasterOnly(const int& threadId) ///< Calling thread
+      const
+    {
+    }
+    
+    /// Get the thread of the current thread
+    int getThreadId()
+      const
+    {
+      return
+	0;
+    }
+    
+    /// Lock the internal mutex
+    void mutexLock()
+    {
+    }
+    
+    /// Unlock the mutex
+    void mutexUnlock()
+    {
+    }
+    
+    /// Compares the thread tag with the master one
+    bool isMasterThread()
+      const
+    {
+      return
+	true;
+    }
+    
+    /// Gets the number of allocated threads
+    int nActiveThreads()
+      const
+    {
+      return
+	1;
+    }
+    
+    
+    /// Return whether the pool is waiting for work
+    bool getIfWaitingForWork()
+      const
+    {
+      return
+	false;
+    }
+    
+    /// Gives to all threads some work to be done
+    ///
+    /// The object \c f must be callable, returning void and getting
+    /// an integer as a parameter, representing the thread id
+    template <typename F>
+    void workOn(F f) ///< Function embedding the work
+    {
+      f(0);
+    }
+    
+    /// Perform a loop
+    template <typename Size,           // Type for the range of the loop
+	      typename F>              // Type for the work function
+    void loopSplit(const Size& beg,  ///< Beginning of the loop
+		   const Size& end,  ///< End of the loop
+		   F f)              ///< Function to be called, accepting two integers: the first is the thread id, which will always be 0, the second the loop argument
+    {
+      for(Size i=beg;i<end;i++)
+	f(0,i);
+    }
+    
+    /// Dummy constructor
+    ThreadPool(int nThreads=1)
+    {
+    }
+  };
+  
+#endif
+  
+  /// Global thread pool
   extern ThreadPool threads;
 }
 

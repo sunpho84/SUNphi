@@ -9,10 +9,8 @@
  #include "config.hpp"
 #endif
 
-#ifdef USE_THREADS
- #include <threads/ThreadPool.hpp>
-#else
- #include <threads/FakePool.hpp>
-#endif
+#include <threads/Barrier.hpp>
+#include <threads/Mutex.hpp>
+#include <threads/Pool.hpp>
 
 #endif

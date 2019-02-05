@@ -281,7 +281,7 @@ namespace SUNphi
     bool prependTime;
     
     /// Mutex used to lock the logger
-    mutable ThreadPool::Mutex mutex;
+    mutable Mutex mutex;
     
     /// Set the exclusive access right
     void getExclusiveAccess()
