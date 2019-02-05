@@ -2,8 +2,6 @@ var searchData=
 [
   ['canbefactorofsimdvector',['canBeFactorOfSIMDVector',['../d0/d24/SIMD_8hpp.html#aaea3412d741b6e8789dc707f3c554b50',1,'SUNphi']]],
   ['canbesizeofsimdvector',['canBeSizeOfSIMDVector',['../d0/d24/SIMD_8hpp.html#a51a19a9535fb9c3814c5cc55ece63f8f',1,'SUNphi']]],
-  ['checkmasteronly',['checkMasterOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aea0ea45c6f2b1f8e7e7ef3b0df9ce626',1,'SUNphi::ThreadPool']]],
-  ['checkpoolonly',['checkPoolOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a842dc231a9b68394c2df16499fac7beb',1,'SUNphi::ThreadPool']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
   ['close',['close',['../d3/d78/classSUNphi_1_1Logger.html#aec8ac6c87b1aad4eae3f720b0409ccc7',1,'SUNphi::Logger']]],
   ['cncol',['cnCol',['../d4/df5/SUN_8hpp.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],

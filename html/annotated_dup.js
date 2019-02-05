@@ -113,6 +113,7 @@ var annotated_dup =
       [ "Crasher", "d1/d07/structSUNphi_1_1Crasher.html", "d1/d07/structSUNphi_1_1Crasher" ],
       [ "CStringComparer", "d7/dcb/structSUNphi_1_1CStringComparer.html", "d7/dcb/structSUNphi_1_1CStringComparer" ],
       [ "Dir", "da/dff/structSUNphi_1_1Dir.html", "da/dff/structSUNphi_1_1Dir" ],
+      [ "FakePool", "d7/dbc/classSUNphi_1_1FakePool.html", "d7/dbc/classSUNphi_1_1FakePool" ],
       [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],
       [ "GridHashable", "dc/d35/classSUNphi_1_1GridHashable.html", null ],
       [ "GridHashable< T, NDims, Coord, Idx, false >", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4" ],

@@ -166,7 +166,9 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file to define a logger wrapping FILE*. </p>
-<p>The internal class is used to really print, while the external one to determine whether to print or not, and to lock in case the threads are present. If printing is not needed, a fake internal logger is passed. </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>REVIEW THIS, I think we will short circuit the printing </dd></dl>
+<p>The internal class is used to really print, while the external one to determine whether to print or not, and to lock in case the threads are present. If printing is not needed, a fake internal logger is passed, printing on /dev/null</p>
+<p>If threads are running, and all threads are allowed to print, the Logger is locked so that only one thread at the time can print, and all lines are prepended with thread id indication.</p>
+<p>If MPI is running, and all ranks are allowed, to print, each line is prepended with the rank id. No cross-ranks lock is issued. </p>
 
 <p>Definition in file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -187,7 +189,7 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </div><!-- fragment -->
 <p>Mark the logger to be more indented. </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00418">418</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00424">424</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>

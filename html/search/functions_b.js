@@ -8,6 +8,6 @@ var searchData=
   ['mpi',['Mpi',['../df/d09/classSUNphi_1_1Mpi.html#a120ff923dfb29171e7afbe428007fc4e',1,'SUNphi::Mpi']]],
   ['muladd',['mulAdd',['../da/d06/MulAdd_8hpp.html#a9b7f7efa55b39f3d73c768476ed122f1',1,'SUNphi']]],
   ['muladder',['MulAdder',['../dc/d5d/classSUNphi_1_1MulAdder.html#a09179d7c51acdf761c05855c2d9dddfd',1,'SUNphi::MulAdder']]],
-  ['mutexlock',['mutexLock',['../dc/d0f/classSUNphi_1_1ThreadPool.html#aa2c5a60ba610c366bd747cd10f990c28',1,'SUNphi::ThreadPool']]],
-  ['mutexunlock',['mutexUnlock',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a46bbee95bdc8054104549d368dd4a5f0',1,'SUNphi::ThreadPool']]]
+  ['mutexlock',['mutexLock',['../d7/dbc/classSUNphi_1_1FakePool.html#a5ea60a35ab3d11fe4e6c0f3552e5b8b3',1,'SUNphi::FakePool::mutexLock()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#aa2c5a60ba610c366bd747cd10f990c28',1,'SUNphi::ThreadPool::mutexLock()']]],
+  ['mutexunlock',['mutexUnlock',['../d7/dbc/classSUNphi_1_1FakePool.html#a6d375437b0ef8726b71bbedffd7d3e59',1,'SUNphi::FakePool::mutexUnlock()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a46bbee95bdc8054104549d368dd4a5f0',1,'SUNphi::ThreadPool::mutexUnlock()']]]
 ];

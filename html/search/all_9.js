@@ -65,7 +65,7 @@ var searchData=
   ['isintseq',['isIntSeq',['../dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d',1,'SUNphi']]],
   ['islvalue',['isLvalue',['../d0/d81/TypeTraits_8hpp.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
   ['ismasterrank',['isMasterRank',['../df/d09/classSUNphi_1_1Mpi.html#a783f8bcab5c963bb833c38a7e50b0d23',1,'SUNphi::Mpi']]],
-  ['ismasterthread',['isMasterThread',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool']]],
+  ['ismasterthread',['isMasterThread',['../d7/dbc/classSUNphi_1_1FakePool.html#afdbb39164666760d3665d20a2216116b',1,'SUNphi::FakePool::isMasterThread()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool::isMasterThread()']]],
   ['ismatrixcomp',['IsMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1',1,'SUNphi::TensKind']]],
   ['ismuladder',['isMulAdder',['../da/d06/MulAdd_8hpp.html#a56035a909d47442946850caf39ebaa93',1,'SUNphi']]],
   ['isnnarysmet',['isNnarySmET',['../d2/d69/NnarySmET_8hpp.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],
