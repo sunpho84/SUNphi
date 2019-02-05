@@ -6,7 +6,6 @@ var searchData=
   ['scopechangevar',['ScopeChangeVar',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a7053354884d27eff3c483fc302016fe3',1,'SUNphi::ScopeChangeVar::ScopeChangeVar()'],['../de/d6a/ScopeDoer_8hpp.html#a24376a565f23eb8535c38c528ab49996',1,'SUNphi::ScopeChangeVar()']]],
   ['scopedoer',['ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a51192951f63e3e4c0bc66671e4285144',1,'SUNphi::ScopeDoer::ScopeDoer()'],['../de/d6a/ScopeDoer_8hpp.html#a89c1cd368ce7661e7493b3452da633f0',1,'SUNphi::ScopeDoer()']]],
   ['scopeindenter',['ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#aff0dc8f2d51cae1546a249300387e605',1,'SUNphi::ScopeIndenter']]],
-  ['scopemutexlocker',['ScopeMutexLocker',['../d2/dbe/classSUNphi_1_1ThreadPool_1_1ScopeMutexLocker.html#a6a1e64004abef0eacdc0c34d8248fe6e',1,'SUNphi::ThreadPool::ScopeMutexLocker']]],
   ['setshiftbc',['setShiftBC',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['setsides',['setSides',['../dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54',1,'SUNphi::Grid']]],
   ['setvolume',['setVolume',['../dd/dca/classSUNphi_1_1Grid.html#ae26d5182f71a1f5dfe1edca74ed8a498',1,'SUNphi::Grid']]],
@@ -24,5 +23,5 @@ var searchData=
   ['startnewline',['startNewLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a768687d35bc97af8fb61f3fab6babfb6',1,'SUNphi::Logger::LoggerLine']]],
   ['stop',['stop',['../d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2',1,'SUNphi::Timer']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
-  ['sync',['sync',['../da/dad/structSUNphi_1_1FakePool_1_1Barrier.html#ae78d6da8ec26fa5d481aeab0061ada74',1,'SUNphi::FakePool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a05fca785db8229a7ea3eb74291a88c02',1,'SUNphi::ThreadPool::Barrier::sync()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#af48bb487a45b9a0829ca100933b2c1fc',1,'SUNphi::ThreadPool::Barrier::sync(const char *barrName, const int &amp;threadId)']]]
+  ['sync',['sync',['../df/d49/structSUNphi_1_1Barrier.html#a9eca3ba935da713cf9c1696f12ed5e5e',1,'SUNphi::Barrier']]]
 ];

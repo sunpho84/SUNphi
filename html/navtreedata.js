@@ -28,6 +28,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -38,13 +39,12 @@ var NAVTREEINDEX =
 [
 ".html",
 "d2/d24/classSUNphi_1_1Conjer.html#a695131ecaef2370a1057c332ceac2238",
-"d3/dbe/IntListOrder_8hpp.html#a96ce02f4cf0607c494f1068c89d3573f",
-"d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html",
-"d8/d42/structSUNphi_1_1HasMember__Tk_1_1Derived.html#aea96dc710e55bd66d48f4c2617812eec",
-"da/def/structSUNphi_1_1IntSeq.html#a59af33ae8081e677624492043a1c8f96",
-"dc/d6b/BaseSmET_8hpp.html#a49a64ecc853b0499d52474ba566814f4",
-"de/d2d/TupleOrder_8hpp.html#abc7e2f156d73be4e7b75c0b2f13d06d9",
-"functions_u.html"
+"d3/dbe/IntListOrder_8hpp.html#aab85349f691e23aa0a77d5964fb17dd0",
+"d5/df6/structSUNphi_1_1ConstrainHasMember__assertMergeableWith.html",
+"d8/dc9/structSUNphi_1_1RwCol.html#a592ed1584d6f2c9b31f15e8876bc2193",
+"db/d04/Ints_8hpp.html",
+"dc/df8/appendix_8cpp.html",
+"de/d58/classSUNphi_1_1Adder.html#afa3fc6cfc6c8bfa110266c728c2d6d54"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

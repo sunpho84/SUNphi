@@ -1,7 +1,6 @@
 var searchData=
 [
   ['rank',['rank',['../df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485',1,'SUNphi::Mpi']]],
-  ['rawsync',['rawSync',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a6ee1de51f2e1887a4fed4df5367ac29e',1,'SUNphi::ThreadPool::Barrier']]],
   ['real',['real',['../d8/de8/Compl_8hpp.html#aa80c945a2eb32b4469fab34303a28000',1,'SUNphi']]],
   ['refevalbycompsname',['refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#a15da6f3c9613c0d5475c90e7a48c3c72',1,'SUNphi::NnarySmET::refEvalByCompsName(Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54',1,'SUNphi::NnarySmET::refEvalByCompsName(Tp &amp;&amp;targs)']]],
   ['reim',['reIm',['../d8/de8/Compl_8hpp.html#afa7b62a5bb9b78fe811605090a47c943',1,'SUNphi']]],

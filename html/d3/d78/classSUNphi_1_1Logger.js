@@ -20,7 +20,7 @@ var classSUNphi_1_1Logger =
     [ "fakeLogger", "d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92", null ],
     [ "file", "d3/d78/classSUNphi_1_1Logger.html#a17eb17227ebde70bfb485572bf29f2bb", null ],
     [ "indentLev", "d3/d78/classSUNphi_1_1Logger.html#a45cfb7bf7049a669bae2f6f99ff237ef", null ],
-    [ "mutex", "d3/d78/classSUNphi_1_1Logger.html#a9a51ac35e1f3617df9790005ca688801", null ],
+    [ "mutex", "d3/d78/classSUNphi_1_1Logger.html#af1cd0856935846bfbb3455ef85084614", null ],
     [ "onlyMasterRankPrint", "d3/d78/classSUNphi_1_1Logger.html#a45137bf23da7dda483b2f3dd5d5d411e", null ],
     [ "onlyMasterThreadPrint", "d3/d78/classSUNphi_1_1Logger.html#a45192a3a4e73fce6d894b4d3932b5e0e", null ],
     [ "prependTime", "d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82", null ],

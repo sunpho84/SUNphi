@@ -9,7 +9,7 @@ var searchData=
   ['undoatend',['undoAtEnd',['../d2/db3/classSUNphi_1_1ScopeDoer.html#adbd9bd89347e6e617ab978c56d204793',1,'SUNphi::ScopeDoer']]],
   ['universal_5freference_5fconstructor_5fof_5fwrapper_5fdisable',['UNIVERSAL_REFERENCE_CONSTRUCTOR_OF_WRAPPER_DISABLE',['../d2/d7d/UniversalReferences_8hpp.html#a689db65b3412a64c1efda859982934ee',1,'UniversalReferences.hpp']]],
   ['universalreferences_2ehpp',['UniversalReferences.hpp',['../d2/d7d/UniversalReferences_8hpp.html',1,'']]],
-  ['unlock',['unlock',['../d6/d29/structSUNphi_1_1FakePool_1_1Mutex.html#aea445d9a491bd88a501a8722dbbb79d9',1,'SUNphi::FakePool::Mutex::unlock()'],['../db/da6/classSUNphi_1_1ThreadPool_1_1Mutex.html#a1c2d226d7dfe7a129906584c958056f1',1,'SUNphi::ThreadPool::Mutex::unlock()']]],
+  ['unlock',['unlock',['../d6/d3d/structSUNphi_1_1Mutex.html#a4b94701f3873a79416fb695caec1cec8',1,'SUNphi::Mutex']]],
   ['unqualified',['Unqualified',['../d0/d81/TypeTraits_8hpp.html#a265d16e4d44bac1a54f236b14192f3f0',1,'SUNphi']]],
   ['unsignedof',['UnsignedOf',['../d0/d81/TypeTraits_8hpp.html#acbe553b607c13ed330f2d218e221ab35',1,'SUNphi']]],
   ['unsignedsize',['UnsignedSize',['../df/dc0/classSUNphi_1_1Vector.html#a491d67a0f82a935991d7251c10cdf02d',1,'SUNphi::Vector']]],

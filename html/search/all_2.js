@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['barrier',['Barrier',['../da/dad/structSUNphi_1_1FakePool_1_1Barrier.html',1,'SUNphi::FakePool']]],
-  ['barrier',['Barrier',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html',1,'SUNphi::ThreadPool']]],
-  ['barrier',['barrier',['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a69d39ac9779e789af0b7773c7ff0e9d6',1,'SUNphi::ThreadPool::Barrier::barrier()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#af881134f9de317f85f8731ae5cc7fda6',1,'SUNphi::ThreadPool::barrier()'],['../da/dad/structSUNphi_1_1FakePool_1_1Barrier.html#a4b5d985c59aeaf71088f60db92026d62',1,'SUNphi::FakePool::Barrier::Barrier()'],['../d4/d4c/classSUNphi_1_1ThreadPool_1_1Barrier.html#a23128656f2a78c476c0c4adf612232f8',1,'SUNphi::ThreadPool::Barrier::Barrier()']]],
+  ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html',1,'SUNphi']]],
+  ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html#a83c1da0715c9d8cbc292f637d2ef947d',1,'SUNphi::Barrier']]],
+  ['barrier_2ehpp',['Barrier.hpp',['../d2/d46/Barrier_8hpp.html',1,'']]],
   ['baseadder',['BaseAdder',['../d6/d4b/structSUNphi_1_1BaseAdder.html',1,'SUNphi']]],
   ['baseassigner',['BaseAssigner',['../dd/d4a/structSUNphi_1_1BaseAssigner.html',1,'SUNphi']]],
   ['basebinarysmet',['BaseBinarySmET',['../d2/d98/structSUNphi_1_1BaseBinarySmET.html',1,'SUNphi']]],

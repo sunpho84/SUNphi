@@ -55,7 +55,6 @@ var searchData=
   ['isdiagcomp',['IsDiagComp',['../d8/df8/classSUNphi_1_1TensKind.html#aa5c31e72d1216d0eda848586c308e95d',1,'SUNphi::TensKind']]],
   ['isdynamic',['isDynamic',['../d1/d96/structSUNphi_1_1TensComp.html#a592ed1584d6f2c9b31f15e8876bc2193',1,'SUNphi::TensComp::isDynamic()'],['../d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8',1,'SUNphi::isDynamic()']]],
   ['isexplicitlystarted',['isExplicitlyStarted',['../d6/de9/classSUNphi_1_1Timer.html#a6e0cff1240972c71327056a5cd6be3b2',1,'SUNphi::Timer']]],
-  ['isfilled',['isFilled',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a14cc92e4106cdf4235baf3d37931d83a',1,'SUNphi::ThreadPool']]],
   ['isfloatingpoint',['isFloatingPoint',['../d0/d81/TypeTraits_8hpp.html#a733173cc775b0b0ef9f4cc26c125629d',1,'SUNphi']]],
   ['isfullystatic',['isFullyStatic',['../d8/df8/classSUNphi_1_1TensKind.html#a474313cf3006be48e76e25fc2b629837',1,'SUNphi::TensKind']]],
   ['isfunction',['isFunction',['../d0/d81/TypeTraits_8hpp.html#addc6a306ed5696b5085d995ea080c526',1,'SUNphi']]],
@@ -65,7 +64,7 @@ var searchData=
   ['isintseq',['isIntSeq',['../dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d',1,'SUNphi']]],
   ['islvalue',['isLvalue',['../d0/d81/TypeTraits_8hpp.html#a31cbd161e017ef6fd57019e099d59ce4',1,'SUNphi']]],
   ['ismasterrank',['isMasterRank',['../df/d09/classSUNphi_1_1Mpi.html#a783f8bcab5c963bb833c38a7e50b0d23',1,'SUNphi::Mpi']]],
-  ['ismasterthread',['isMasterThread',['../d7/dbc/classSUNphi_1_1FakePool.html#afdbb39164666760d3665d20a2216116b',1,'SUNphi::FakePool::isMasterThread()'],['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool::isMasterThread()']]],
+  ['ismasterthread',['isMasterThread',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool']]],
   ['ismatrixcomp',['IsMatrixComp',['../d8/df8/classSUNphi_1_1TensKind.html#a21492af39f9ccde04dc36c9f2f37d8f1',1,'SUNphi::TensKind']]],
   ['ismuladder',['isMulAdder',['../da/d06/MulAdd_8hpp.html#a56035a909d47442946850caf39ebaa93',1,'SUNphi']]],
   ['isnnarysmet',['isNnarySmET',['../d2/d69/NnarySmET_8hpp.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],
@@ -97,6 +96,5 @@ var searchData=
   ['isuminuser',['isUMinuser',['../d2/dad/UnaryMinus_8hpp.html#a22e1516be70080cc9154838f179d721f',1,'SUNphi']]],
   ['isvalidcompmerge',['isValidCompMerge',['../d8/df8/classSUNphi_1_1TensKind.html#a428b037577568e928eb1d325b1ee4337',1,'SUNphi::TensKind']]],
   ['isvectorizable',['isVectorizable',['../d1/d96/structSUNphi_1_1TensComp.html#a62036115814b61e36c3699da76b23f8f',1,'SUNphi::TensComp']]],
-  ['iswaitingforwork',['isWaitingForWork',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a12557ed7bcdfaabc3868f15f900e5d37',1,'SUNphi::ThreadPool']]],
   ['iswrapper',['isWrapper',['../da/df3/Wrap_8hpp.html#ae1b278db616fc529bdb31d98a9741747',1,'SUNphi']]]
 ];

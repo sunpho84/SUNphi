@@ -6,6 +6,5 @@ var SUNphi_8cpp =
     [ "aliverHelper", "dd/d2b/SUNphi_8cpp.html#aefb3bd85afa3e1418572d526cbe3021d", null ],
     [ "minimalLogger", "dd/d2b/SUNphi_8cpp.html#a983825154c3b066e753ad3641bd04fe1", null ],
     [ "runLog", "dd/d2b/SUNphi_8cpp.html#aa522c31e7d45dde0b53600b1749d78a6", null ],
-    [ "timings", "dd/d2b/SUNphi_8cpp.html#ad3481e5243c3d2bac0d91bd64b9e32c9", null ],
-    [ "threads", "dd/d2b/SUNphi_8cpp.html#a3b3a08e7eff1fd2940aadfd20f53d171", null ]
+    [ "timings", "dd/d2b/SUNphi_8cpp.html#ad3481e5243c3d2bac0d91bd64b9e32c9", null ]
 ];
