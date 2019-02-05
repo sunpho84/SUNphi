@@ -21,6 +21,10 @@
 
 namespace SUNphi
 {
+  /// Makes all thread print for current scope
+#define ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)		\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_PRINT,LOGGER.onlyMasterRankPrint,false)
+  
 #ifdef USE_MPI
   /// Provides the \c MPI_Datatype of an any unknown type
   template <typename T>

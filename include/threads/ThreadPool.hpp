@@ -37,10 +37,6 @@ namespace SUNphi
 #define ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)			\
   SET_FOR_CURRENT_SCOPE(LOGGER_ALL_THREADS_PRINT,LOGGER.onlyMasterThreadPrint,false)
   
-  /// Makes all thread print for current scope
-#define ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)		\
-  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_PRINT,LOGGER.onlyMasterRankPrint,false)
-  
   /// States that we want to debug threads
   constexpr bool DEBUG_THREADS=
     true;
@@ -83,7 +79,7 @@ namespace SUNphi
       
     public:
       
-      ///Build the barrier for \c nThreads threads
+      /// Build the barrier for \c nThreads threads
       Barrier(const int& nThreads) ///< Number of threads for which the barrier is defined
       {
 	if(pthread_barrier_init(&barrier,nullptr,nThreads)!=0)
@@ -202,29 +198,13 @@ namespace SUNphi
     /// Barrier used by the threads
     Barrier barrier;
     
-    /// Check that only the pool is accessing to a checkpoint
-    void checkPoolOnly(const int& threadId) ///< Calling thread
-      const
-    {
-      if(threadId==masterThreadId)
-	CRASH("Only pool threads are allowed");
-    }
-    
-    /// Check that only the master thread is accessing to a checkpoint
-    void checkMasterOnly(const int& threadId) ///< Calling thread
-      const
-    {
-      if(threadId!=masterThreadId)
-	CRASH("Only master thread is allowed, but thread",threadId,"is trying to act");
-    }
-    
     /// Pair of parameters containing the threadpool and the thread id
     using ThreadPars=
       Tuple<ThreadPool*,int>;
     
     /// Function called when starting a thread
     ///
-    /// When called, get the thread pool and the thread thread as
+    /// When called, get the thread pool and the thread id as
     /// arguments through the function parameter. This is expcted to
     /// be allocated outside through a \c new call, so it is deleted
     /// after taking reference to the pool, and checking the thread thread.
@@ -336,6 +316,22 @@ namespace SUNphi
     }
     
   public:
+    
+    /// Assert that only the pool is accessing
+    void assertPoolOnly(const int& threadId) ///< Calling thread
+      const
+    {
+      if(threadId==masterThreadId)
+	CRASH("Only pool threads are allowed");
+    }
+    
+    /// Assert that only the master thread is accessing
+    void assertMasterOnly(const int& threadId) ///< Calling thread
+      const
+    {
+      if(threadId!=masterThreadId)
+	CRASH("Only master thread is allowed, but thread",threadId,"is trying to act");
+    }
     
     /// Get the thread of the current thread
     int getThreadId()
@@ -457,7 +453,7 @@ namespace SUNphi
     /// Start the work for the other threads
     void tellThePoolWorkIsAssigned(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(threadId);
+      assertMasterOnly(threadId);
       
       minimalLogger(runLog,"Telling the pool that work has been assigned (tag: %s)",workAssignmentTag);
       
@@ -476,7 +472,7 @@ namespace SUNphi
     /// Tell the master that the thread is created and ready to swim
     void tellTheMasterThreadIsCreated(const int& threadId) ///< Thread id
     {
-      checkPoolOnly(threadId);
+      assertPoolOnly(threadId);
       
       minimalLogger(runLog,"Telling that thread has been created and is ready to swim (tag: %s)",threadHasBeenCreated);
       
@@ -487,7 +483,7 @@ namespace SUNphi
     /// Waiting for threads are created and ready to swim
     void waitPoolToBeFilled(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(threadId);
+      assertMasterOnly(threadId);
       
       minimalLogger(runLog,"waiting for threads in the pool to be ready to ready to swim (tag: %s)",threadHasBeenCreated);
       
@@ -498,7 +494,7 @@ namespace SUNphi
     /// Waiting for work to be done means to synchronize with the master
     void waitForWorkToBeAssigned(const int& threadId) ///< Thread id
     {
-      checkPoolOnly(threadId);
+      assertPoolOnly(threadId);
       
       // This printing is messing up, because is occurring in the pool
       // where the thread is expected to be already waiting for work,
@@ -511,7 +507,7 @@ namespace SUNphi
     /// Stop the pool from working
     void tellThePoolNotToWorkAnyLonger(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(threadId);
+      assertMasterOnly(threadId);
       
       if(not isWaitingForWork)
 	CRASH("We cannot stop a working pool");
@@ -534,7 +530,7 @@ namespace SUNphi
     /// Waiting for work to be done means to synchronize with the master
     void tellTheMasterWorkIsFinished(const int& threadId) ///< Thread id
     {
-      checkPoolOnly(threadId);
+      assertPoolOnly(threadId);
       
       minimalLogger(runLog,"finished working (tag: %s)",workFinishedTag);
       
@@ -544,7 +540,7 @@ namespace SUNphi
     /// Wait that the work assigned to the pool is finished
     void waitForPoolToFinishAssignedWork(const int& threadId) ///< Thread id
     {
-      checkMasterOnly(threadId);
+      assertMasterOnly(threadId);
       
       if constexpr(DEBUG_THREADS)
 	{

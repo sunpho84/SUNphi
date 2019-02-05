@@ -1,48 +1,34 @@
 #ifndef _FAKEPOOL_HPP
 #define _FAKEPOOL_HPP
 
-/// \file FakeFool.hpp
+/// \file FakePool.hpp
 ///
 /// \brief Implement a fake pool, to be used when threads are disabled
 
 namespace SUNphi
 {
+  /// Allows all threads to print: this is implicit
 #define ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)
-  
-#define ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE(LOGGER)
   
   /// Contains a fake thread pool
   class FakePool
   {
-    /// Wrapper for the pthread barrier functionality
-    ///
-    /// Low level barrier not meant to be called explictly
-    class Barrier
+    /// Fake barrier
+    struct Barrier
     {
-      
-    public:
-      
-      ///Build the barrier for \c nThreads threads
+      /// Dummy build the barrier for \c nThreads threads
       Barrier(const int& nThreads) ///< Number of threads for which the barrier is defined
       {
       }
       
-      /// Destroys the barrier
-      ~Barrier()
-      {
-      }
-      
-      /// Synchronize, without checking the name of the barrier
-      void sync()
-      {
-      }
-      
-      /// Synchronize checking the name of the barrier
-      void sync(const char* barrName, ///< Name of the barrier
-		const int& threadId)  ///< Id of the thread used coming to check
+      /// Dummy synchronize checking the name of the barrier
+      void sync(const char* barrName=nullptr, ///< Name of the barrier
+		const int& threadId=0)        ///< Id of the thread used coming to check
       {
       }
     };
+    
+  public:
     
     /// Assert that only the pool is accessing
     void assertPoolOnly(const int& threadId) ///< Calling thread
@@ -56,18 +42,6 @@ namespace SUNphi
     {
     }
     
-    /// Stop the pool
-    void doNotworkAnymore()
-    {
-    }
-    
-    /// Empty the thread pool
-    void empty()
-    {
-    }
-    
-  public:
-    
     /// Get the thread of the current thread
     int getThreadId()
       const
@@ -76,11 +50,9 @@ namespace SUNphi
 	0;
     }
     
-    /// Class to lock a mutex for the object scope
-    class Mutex
+    /// Dummy mutex
+    struct Mutex
     {
-    public:
-      
       /// Lock the mutex
       void lock()
       {
@@ -92,14 +64,10 @@ namespace SUNphi
       }
     };
     
-    /// Keep a mutex locked for the duration of the object
-    class ScopeMutexLocker
+    /// Dummy mutex scope locker
+    struct ScopeMutexLocker
     {
     };
-    
-  private:
-    
-  public:
     
     /// Puts a scope mutex locker making the scope sequential
 #define THREADS_SCOPE_SEQUENTIAL()
@@ -130,40 +98,6 @@ namespace SUNphi
 	1;
     }
     
-    /// Start the work for the other threads
-    void tellThePoolWorkIsAssigned(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Tell the master that the thread is created and ready to swim
-    void tellTheMasterThreadIsCreated(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Waiting for threads are created and ready to swim
-    void waitPoolToBeFilled(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Waiting for work to be done means to synchronize with the master
-    void waitForWorkToBeAssigned(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Stop the pool from working
-    void tellThePoolNotToWorkAnyLonger(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Waiting for work to be done means to synchronize with the master
-    void tellTheMasterWorkIsFinished(const int& threadId) ///< Thread id
-    {
-    }
-    
-    /// Wait that the work assigned to the pool is finished
-    void waitForPoolToFinishAssignedWork(const int& threadId) ///< Thread id
-    {
-    }
     
     /// Return whether the pool is waiting for work
     bool getIfWaitingForWork()
@@ -183,28 +117,24 @@ namespace SUNphi
       f(0);
     }
     
-    /// Split a loop into \c nTrheads chunks, giving each chunk as a work for a corresponding thread
+    /// Perform a loop
     template <typename Size,           // Type for the range of the loop
 	      typename F>              // Type for the work function
     void loopSplit(const Size& beg,  ///< Beginning of the loop
 		   const Size& end,  ///< End of the loop
-		   F f)              ///< Function to be called, accepting two integers: the first is the thread id, the second the loop argument
+		   F f)              ///< Function to be called, accepting two integers: the first is the thread id, which will always be 0, the second the loop argument
     {
       for(Size i=beg;i<end;i++)
 	f(0,i);
     }
     
-    /// Constructor starting the thread pool with a given number of threads
+    /// Dummy constructor
     FakePool(int nThreads=1)
-    {
-    }
-    
-    /// Destructor emptying the pool
-    ~FakePool()
     {
     }
   };
   
+  /// Wraps the \c FakePool
   using ThreadPool=
     FakePool;
   
