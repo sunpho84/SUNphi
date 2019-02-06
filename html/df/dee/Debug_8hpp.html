@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/system/Debug.hpp File Reference</title>
+<title>SUNphi: include/Debug.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -105,119 +105,29 @@ $(document).ready(function(){initNavTree('df/dee/Debug_8hpp.html','../../');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Debug.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for debugging routines.  
+<p>Keeps all debug information.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;execinfo.h&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">ios/MinimalLogger.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html">debug/BackTracing.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/dd7/Crash_8hpp_source.html">debug/Crash.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/dcd/MinimalCrash_8hpp_source.html">debug/MinimalCrash.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d2e/OptimizationDiagnostic_8hpp_source.html">debug/OptimizationDiagnostic.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../df/dee/Debug_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d07/structSUNphi_1_1Crasher.html">SUNphi::Crasher</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep all the information to crash.  <a href="../../d1/d07/structSUNphi_1_1Crasher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a7c4906fd9a25964e49819c6c97d3387d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c4906fd9a25964e49819c6c97d3387d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a>(...)&#160;&#160;&#160;SUNphi::internalCrash(__LINE__,__FILE__,__PRETTY_FUNCTION__,__VA_ARGS__)</td></tr>
-<tr class="memdesc:a7c4906fd9a25964e49819c6c97d3387d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to make the crash being more explicit. <br /></td></tr>
-<tr class="separator:a7c4906fd9a25964e49819c6c97d3387d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65f838a62c22e7f99e4ff6dccdfa105"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#ae65f838a62c22e7f99e4ff6dccdfa105">ASM_BOOKMARK</a>(COMMENT)&#160;&#160;&#160;asm(&quot;#Bookmark &quot; __FILE__ &quot; &quot; COMMENT)</td></tr>
-<tr class="memdesc:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include a comment in the assembler, recognizable in the compilation. <br /></td></tr>
-<tr class="separator:ae65f838a62c22e7f99e4ff6dccdfa105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b14ea4e5ba79c8836b8edbbf983adf4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#a5b14ea4e5ba79c8836b8edbbf983adf4">CRASHI</a>&#160;&#160;&#160;runLog&lt;&lt;Crasher{__FILE__,__LINE__,__PRETTY_FUNCTION__}</td></tr>
-<tr class="memdesc:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the crasher. <br /></td></tr>
-<tr class="separator:a5b14ea4e5ba79c8836b8edbbf983adf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55">SUNphi::printBacktraceList</a> ()</td></tr>
-<tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
-<tr class="separator:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
-<tr class="memitem:aefc47f1022713393c1f22dc3107f3418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418">SUNphi::internalCrash</a> (const int line, const char *path, const char *funcName, const Args &amp;...args)</td></tr>
-<tr class="memdesc:aefc47f1022713393c1f22dc3107f3418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crash with a detailed message.  <a href="../../df/dee/Debug_8hpp.html#aefc47f1022713393c1f22dc3107f3418">More...</a><br /></td></tr>
-<tr class="separator:aefc47f1022713393c1f22dc3107f3418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for debugging routines. </p>
+<div class="textblock"><p>Keeps all debug information. </p>
 
 <p>Definition in file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_aefc47f1022713393c1f22dc3107f3418"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void SUNphi::internalCrash </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>funcName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Args &amp;...&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Crash with a detailed message. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>Line of code where the crash happended </td></tr>
-    <tr><td class="paramname">path</td><td>Name of the file where the crash happened </td></tr>
-    <tr><td class="paramname">funcName</td><td>Name of the function where the crash happened </td></tr>
-    <tr><td class="paramname">args</td><td>Arguments to print the error </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="../../df/dee/Debug_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../df/dee/Debug_8hpp_source.html">Debug.hpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_062dd3d6849305887aa6c2f56ce95494.html">system</a></li><li class="navelem"><a class="el" href="../../df/dee/Debug_8hpp.html">Debug.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../df/dee/Debug_8hpp.html">Debug.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

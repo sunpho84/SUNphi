@@ -120,6 +120,7 @@ $(document).ready(function(){initNavTree('dd/d2b/SUNphi_8cpp.html','../../');});
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;gitInfo.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/dd7/Crash_8hpp_source.html">debug/Crash.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">ios/MinimalLogger.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../de/d19/TextColors_8hpp_source.html">ios/TextColors.hpp</a>&gt;</code><br />
@@ -151,6 +152,8 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9a/MinimalLogger_8hpp.html#a983825154c3b066e753ad3641bd04fe1">SUNphi::minimalLogger</a> (Logger &amp;logger, const char *format,...)</td></tr>
 <tr class="separator:a983825154c3b066e753ad3641bd04fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195b99d4bf80a8cd04443114f8454d25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dcd/MinimalCrash_8hpp.html#a195b99d4bf80a8cd04443114f8454d25">SUNphi::minimalCrash</a> (const char *path, const int line, const char *funcName, const char *format,...)</td></tr>
+<tr class="separator:a195b99d4bf80a8cd04443114f8454d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefb3bd85afa3e1418572d526cbe3021d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefb3bd85afa3e1418572d526cbe3021d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d0a/Aliver_8hpp.html#aefb3bd85afa3e1418572d526cbe3021d">SUNphi::aliverHelper</a> ()</td></tr>
 <tr class="memdesc:aefb3bd85afa3e1418572d526cbe3021d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to make sure that the initializing functions are referenced. <br /></td></tr>
@@ -169,6 +172,63 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 
 <p>Definition in file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a195b99d4bf80a8cd04443114f8454d25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::minimalCrash </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>funcName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wraps the actual crasher through the old-style C variadic function</p>
+<p>We cannot use variadic template version here, as the crash cannot be called directly here, since "Logger.hpp" is expected </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>File where the crash happened </td></tr>
+    <tr><td class="paramname">line</td><td>Line number where the crash happened </td></tr>
+    <tr><td class="paramname">funcName</td><td>Function where the crash happened </td></tr>
+    <tr><td class="paramname">format</td><td>Formatting string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="file_a983825154c3b066e753ad3641bd04fe1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -200,16 +260,6 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </div><div class="memdoc">
 <p>Wraps the actual logger through the old-style C variadic function</p>
 <p>We cannot use variadic template version here, as the logger cannot be called directly here, since "Logger.hpp" is expected </p>
-<p>Maximal length to be be printed</p>
-<p>Message to be printed</p>
-<p>Starting of the variadic part</p>
-<p>Resulting length if the space had been enough</p>
-<p>Check if it was truncated</p>
-<p>Maximal length to be be printed</p>
-<p>Message to be printed</p>
-<p>Starting of the variadic part</p>
-<p>Resulting length if the space had been enough</p>
-<p>Check if it was truncated </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">logger</td><td><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html" title="Write output to a file, using different level of indentation. ">Logger</a> to be used </td></tr>
@@ -218,7 +268,7 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
 
 </div>
 </div>

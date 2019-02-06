@@ -123,7 +123,6 @@ $(document).ready(function(){initNavTree('dc/d6b/BaseSmET_8hpp.html','../../');}
 <code>#include &lt;<a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">metaprogramming/SwallowSemicolon.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../df/dee/Debug_8hpp_source.html">system/Debug.hpp</a>&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 </div>
 <p><a href="../../dc/d6b/BaseSmET_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -418,7 +417,7 @@ Variables</h2></td></tr>
 <p>&lt; Name of the attribute</p>
 <p>&lt; Default value </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -435,12 +434,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a>( ,  \</div><div class="line">               <a class="code" href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a>(<span class="stringliteral">&quot;Broken&quot;</span>);                 \</div><div class="line">                                    \</div><div class="line">               const <span class="keywordtype">void</span>* pAlias=              \</div><div class="line">                 static_cast&lt;<span class="keyword">const</span> <span class="keywordtype">void</span>*&gt;(&amp;alias);      \</div><div class="line">               const <span class="keywordtype">void</span>* p=                   \</div><div class="line">                 static_cast&lt;<span class="keyword">const</span> <span class="keywordtype">void</span>*&gt;(_p);          \</div><div class="line">                                    \</div><div class="line">               return pAlias==p;)</div><div class="ttc" id="Debug_8hpp_html_a7c4906fd9a25964e49819c6c97d3387d"><div class="ttname"><a href="../../df/dee/Debug_8hpp.html#a7c4906fd9a25964e49819c6c97d3387d">CRASH</a></div><div class="ttdeci">#define CRASH(...)</div><div class="ttdoc">Macro to make the crash being more explicit. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dee/Debug_8hpp_source.html#l00014">Debug.hpp:14</a></div></div>
-<div class="ttc" id="BaseSmET_8hpp_html_ab53ff7ac4dd5a730fcb46ee59f011d67"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a></div><div class="ttdeci">#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)</div><div class="ttdoc">Provides a isAliasing method, taking alias as argument. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00128">BaseSmET.hpp:128</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a>( ,  \</div><div class="line">               <a class="code" href="../../db/dd7/Crash_8hpp.html#a5a24df9755c49775ec259b3c7021df0e">CRASH</a>&lt;&lt;<span class="stringliteral">&quot;Broken&quot;</span>;             \</div><div class="line">                                    \</div><div class="line">               const <span class="keywordtype">void</span>* pAlias=              \</div><div class="line">                 static_cast&lt;<span class="keyword">const</span> <span class="keywordtype">void</span>*&gt;(&amp;alias);      \</div><div class="line">               const <span class="keywordtype">void</span>* p=                   \</div><div class="line">                 static_cast&lt;<span class="keyword">const</span> <span class="keywordtype">void</span>*&gt;(_p);          \</div><div class="line">                                    \</div><div class="line">               return pAlias==p;)</div><div class="ttc" id="Crash_8hpp_html_a5a24df9755c49775ec259b3c7021df0e"><div class="ttname"><a href="../../db/dd7/Crash_8hpp.html#a5a24df9755c49775ec259b3c7021df0e">CRASH</a></div><div class="ttdeci">#define CRASH</div><div class="ttdoc">Initialize the crasher. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd7/Crash_8hpp_source.html#l00013">Crash.hpp:13</a></div></div>
+<div class="ttc" id="BaseSmET_8hpp_html_ab53ff7ac4dd5a730fcb46ee59f011d67"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#ab53ff7ac4dd5a730fcb46ee59f011d67">PROVIDE_IS_ALIASING</a></div><div class="ttdeci">#define PROVIDE_IS_ALIASING(LONG_DESCRIPTION,...)</div><div class="ttdoc">Provides a isAliasing method, taking alias as argument. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00127">BaseSmET.hpp:127</a></div></div>
 </div><!-- fragment --><p>Set aliasing according to a passed pointer (provided class member)</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>This is mostly broken </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -462,7 +461,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provide the call operator with a given qualifier. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00280">280</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00279">279</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -482,7 +481,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">using</span> Fund=                 \</div><div class="line">    __VA_ARGS__</div></div><!-- fragment -->
 <p>Provides the <code>Fund</code> member. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -514,7 +513,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides a <code>getMergedCompsView</code> method, taking Is as template parameter. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00218">218</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -545,7 +544,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides a <code>isAliasing</code> method, taking <code>alias</code> as argument. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00128">128</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00127">127</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -572,13 +571,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a>(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</div><div class="line">                                    \           \</div><div class="line">  template &lt;<span class="keyword">typename</span> Is,                        \</div><div class="line">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</div><div class="line">  static constexpr <span class="keywordtype">void</span> assertMergeableWith()               \</div><div class="line">  {                                 \</div><div class="line">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,<span class="stringliteral">&quot;Unable to merge this components&quot;</span>); \</div><div class="line">  }                                 \</div><div class="line">                                    \           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMaximallyMergedCompsView()                \</div><div class="line">  {                                 \</div><div class="line">    return getMergedCompsView&lt;MergeableComps&gt;();            \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="BaseSmET_8hpp_html_a8c1e18cde1d9bcf226b3b9457181cd52"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a></div><div class="ttdeci">#define USING(DESCRIPTION, LONG_DESCRIPTION, NAME,...)</div><div class="ttdoc">Provides an attribute. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00028">BaseSmET.hpp:28</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a>(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</div><div class="line">                                    \           \</div><div class="line">  template &lt;<span class="keyword">typename</span> Is,                        \</div><div class="line">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</div><div class="line">  static constexpr <span class="keywordtype">void</span> assertMergeableWith()               \</div><div class="line">  {                                 \</div><div class="line">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,<span class="stringliteral">&quot;Unable to merge this components&quot;</span>); \</div><div class="line">  }                                 \</div><div class="line">                                    \           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMaximallyMergedCompsView()                \</div><div class="line">  {                                 \</div><div class="line">    return getMergedCompsView&lt;MergeableComps&gt;();            \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="BaseSmET_8hpp_html_a8c1e18cde1d9bcf226b3b9457181cd52"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a></div><div class="ttdeci">#define USING(DESCRIPTION, LONG_DESCRIPTION, NAME,...)</div><div class="ttdoc">Provides an attribute. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00027">BaseSmET.hpp:27</a></div></div>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment --><p>Provide the MergeableComps type, <code>assertMergebaleWith</code> and <code>getMaximallyMergedCompsView</code> </p>
 <p>The type must be an ordered <code>IntSeq</code> indicating the splitting point of the <code>TensKind</code>, as in this example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;// Maximal splitting</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;Using Tk=</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  TensKind&lt;Spin,Col&gt;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;PROVIDE_MERGEABLE_COMPS(/*! Description */,IntSeq&lt;0,2&gt;);</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -611,11 +610,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(LONG_DESCRIPTION,               \</div><div class="line">              InsertIntSeqInOrderedIntSeq&lt;          \</div><div class="line">              IntSeq&lt;POS,POS+1&gt;,    \</div><div class="line">              IN_MERGEABLE_COMPS,   \</div><div class="line">              IntSeq&lt;0,0&gt;,          \</div><div class="line">              <span class="keyword">true</span>&gt;)               </div><div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00181">BaseSmET.hpp:181</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(LONG_DESCRIPTION,               \</div><div class="line">              InsertIntSeqInOrderedIntSeq&lt;          \</div><div class="line">              IntSeq&lt;POS,POS+1&gt;,    \</div><div class="line">              IN_MERGEABLE_COMPS,   \</div><div class="line">              IntSeq&lt;0,0&gt;,          \</div><div class="line">              <span class="keyword">true</span>&gt;)               </div><div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00180">BaseSmET.hpp:180</a></div></div>
 </div><!-- fragment -->
 <p>States that the class has no mergeable component. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +634,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  using PosOfRef ## ID ## TcsInResTk=                   \</div><div class="line">    PosOfTypesNotAsserting&lt;typename Tk::types,typename TK ## ID::types&gt;; \</div><div class="line">                                    \ \</div><div class="line">  using PosOfRef ## ID ## PresTcsInResTk=               \</div><div class="line">    FilterVariadicClassPos&lt;IsPresent,PosOfRef ## ID ## TcsInResTk&gt;; \</div><div class="line">                                    \           \</div><div class="line">  template &lt;typename MD&gt; <span class="comment">/* Required merging delimiters */</span>      \</div><div class="line">  using MergedDelims ## ID=                     \</div><div class="line">    IntSeqGetElsAfterAppending&lt;TK ## ID::nTypes,false,MD,PosOfRef ## ID ## TcsInResTk&gt;</div></div><!-- fragment --><p>Provides the <code>MergedDelim</code> attribute for Refs of a given <code>ID</code> </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>Add some more explenation... </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00239">239</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00238">238</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -659,7 +658,7 @@ Variables</h2></td></tr>
 <p>Defines the assignement operator, calling assign. </p>
 <p>&lt; Name of the NnarySmET </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00299">299</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00298">298</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -680,7 +679,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides the <code>Tk</code> member. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00095">95</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -717,7 +716,7 @@ Variables</h2></td></tr>
 </dd></dl>
 <p>&lt; External builder </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00319">319</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00318">318</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -742,7 +741,7 @@ Variables</h2></td></tr>
 <p class="enddd">add isAliasing </p>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00260">260</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00259">259</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -790,7 +789,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">DESCRIPTION                             \                           \</div><div class="line">  LONG_DESCRIPTION                          \</div><div class="line">  static constexpr TYPE NAME=                       \</div><div class="line">    __VA_ARGS__</div></div><!-- fragment -->
 <p>Provides an attribute. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -832,7 +831,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">DESCRIPTION                         \                       \</div><div class="line">  LONG_DESCRIPTION                      \</div><div class="line">  using NAME=                           \</div><div class="line">    __VA_ARGS__</div></div><!-- fragment -->
 <p>Provides an attribute. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00028">28</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +849,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T not to inherits from <code><a class="el" href="../../d3/d5c/structSUNphi_1_1BaseSmET.html" title="Defines the BaseSmET type traits. ">BaseSmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +866,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T to inherits from <code><a class="el" href="../../d3/d5c/structSUNphi_1_1BaseSmET.html" title="Defines the BaseSmET type traits. ">BaseSmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -890,7 +889,7 @@ template&lt;typename T , auto DefVal = false&gt; </div>
 <p>and no external <code>Defval</code> is provided</p>
 <p>Internal implentation </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -909,7 +908,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) assertMergeableWith</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00216">216</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -927,7 +926,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) eval</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -945,7 +944,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) Fund</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00114">114</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00113">113</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -963,7 +962,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) getMergedCompsView</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00234">234</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -981,7 +980,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) isAliasing</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -999,7 +998,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) isAssignable</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1017,7 +1016,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) isStoring</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1034,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) MergeableComps</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1053,7 +1052,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) name</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1070,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) Tk</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00100">100</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1087,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Expression which is true if T inherits from <code><a class="el" href="../../d3/d5c/structSUNphi_1_1BaseSmET.html" title="Defines the BaseSmET type traits. ">BaseSmET</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1106,7 +1105,7 @@ template&lt;typename T , auto DefVal = false&gt; </div>
 <p>Provides a function to get isStoring , or a false if not present</p>
 <p>Gives visibility to internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00090">90</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>

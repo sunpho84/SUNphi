@@ -13,6 +13,7 @@ var classSUNphi_1_1Logger_1_1LoggerLine =
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a65da95a6360c37d40616c4ec761632c2", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a23a766ef9da7a82bba399a0e0eb0bbb7", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff3e95eb428ffac1ffec5b50fc10e057", null ],
+    [ "printVariadicMessage", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a78ded8554983da214ad47fb9f9d5f13a", null ],
     [ "startNewLine", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a768687d35bc97af8fb61f3fab6babfb6", null ],
     [ "colorChanged", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af5cc88ba9650595db64c3b9aa80b071d", null ],
     [ "hasToCrash", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a9c352c0983674e8d2e2f315a90a187cb", null ],

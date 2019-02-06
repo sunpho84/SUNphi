@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['path',['path',['../d1/d07/structSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4',1,'SUNphi::Crasher']]],
+  ['path',['path',['../db/de9/classSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4',1,'SUNphi::Crasher']]],
   ['pos',['pos',['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder']]],
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#a5a744623c20b396fe872611e64eafb1d',1,'SUNphi::Conjer']]],
   ['posoftype',['posOfType',['../de/d2d/TupleOrder_8hpp.html#aab5207e39daa5c0744e1daedb9a4058c',1,'SUNphi']]],

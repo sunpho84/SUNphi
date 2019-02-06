@@ -111,7 +111,7 @@ var annotated_dup =
       [ "ConstrainTupleHasNotType", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
       [ "ConstrainTupleHasType", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
       [ "ConstrainTupleTypesAreAllDifferent", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
-      [ "Crasher", "d1/d07/structSUNphi_1_1Crasher.html", "d1/d07/structSUNphi_1_1Crasher" ],
+      [ "Crasher", "db/de9/classSUNphi_1_1Crasher.html", "db/de9/classSUNphi_1_1Crasher" ],
       [ "CStringComparer", "d7/dcb/structSUNphi_1_1CStringComparer.html", "d7/dcb/structSUNphi_1_1CStringComparer" ],
       [ "Dir", "da/dff/structSUNphi_1_1Dir.html", "da/dff/structSUNphi_1_1Dir" ],
       [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],

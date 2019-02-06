@@ -17,6 +17,7 @@ var searchData=
   ['conjer',['Conjer',['../d2/d24/classSUNphi_1_1Conjer.html#af376f70446b12e1c681269bd43517ec5',1,'SUNphi::Conjer']]],
   ['coordsofpoint',['coordsOfPoint',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a26d4f888d8b6c964a85f390050dc374d',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::coordsOfPoint()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a9a6921aec7d50a5d3e4d8b9dae10fcdf',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::coordsOfPoint()']]],
   ['count',['count',['../db/d2f/classSUNphi_1_1SingleInstance.html#a3234cb342404a4bbbe61ce2a155faf3b',1,'SUNphi::SingleInstance']]],
+  ['crasher',['Crasher',['../db/de9/classSUNphi_1_1Crasher.html#a5129d4b1c9f921963f6c983204196a0e',1,'SUNphi::Crasher']]],
   ['crashifinstancesexists',['crashIfInstancesExists',['../db/d2f/classSUNphi_1_1SingleInstance.html#a2371bd4f6f40f040af917b32c17dd587',1,'SUNphi::SingleInstance']]],
   ['crashonerror',['crashOnError',['../df/d09/classSUNphi_1_1Mpi.html#ac423ccc74e978b39fb9cb794532ff3ff',1,'SUNphi::Mpi']]],
   ['cstring',['cString',['../d8/d32/String_8hpp.html#a9bef329ab1e417fc38ce15db59027624',1,'SUNphi::cString(const char *in)'],['../d8/d32/String_8hpp.html#a209d82c3897d63fd48add4ada6abb8ce',1,'SUNphi::cString(const std::string &amp;in)']]],

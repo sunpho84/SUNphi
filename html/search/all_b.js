@@ -13,7 +13,7 @@ var searchData=
   ['lastsmaller',['lastSmaller',['../d3/dbe/IntListOrder_8hpp.html#aa6bd149fbf4d55bc75e1a74a49e1fcac',1,'SUNphi']]],
   ['lastsmaller_3c_20i_20_3e',['lastSmaller&lt; I &gt;',['../d3/dbe/IntListOrder_8hpp.html#aa76f9c2411e695f843df2cc84a662289',1,'SUNphi']]],
   ['lattice_2ehpp',['Lattice.hpp',['../da/d34/Lattice_8hpp.html',1,'']]],
-  ['line',['line',['../d1/d07/structSUNphi_1_1Crasher.html#acf85c25179a1dfe4eeb1dfe4144116b6',1,'SUNphi::Crasher']]],
+  ['line',['line',['../db/de9/classSUNphi_1_1Crasher.html#acf85c25179a1dfe4eeb1dfe4144116b6',1,'SUNphi::Crasher']]],
   ['lock',['lock',['../d6/d3d/structSUNphi_1_1Mutex.html#afc82a80dc16bbbbdd9f6a5797fcd00b8',1,'SUNphi::Mutex']]],
   ['logger',['Logger',['../d3/d78/classSUNphi_1_1Logger.html#aaa7a160390aa1b1a28355d25e97d4f32',1,'SUNphi::Logger::Logger()'],['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a5ec7dccf14d62520b7b014d34f9ac35e',1,'SUNphi::Logger::LoggerLine::logger()'],['../d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70',1,'SUNphi::ScopeIndenter::logger()']]],
   ['logger',['Logger',['../d3/d78/classSUNphi_1_1Logger.html',1,'SUNphi']]],

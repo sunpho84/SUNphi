@@ -37,7 +37,7 @@ var searchData=
   ['arithmetic_2ehpp',['Arithmetic.hpp',['../d1/deb/Arithmetic_8hpp.html',1,'']]],
   ['array',['array',['../da/def/structSUNphi_1_1IntSeq.html#a7c9712c3f155c106b78851f3ff383585',1,'SUNphi::IntSeq']]],
   ['as_5fassignable_5fas_5fref',['AS_ASSIGNABLE_AS_REF',['../d2/d69/NnarySmET_8hpp.html#a8a546b4279e9829994b22933ebbf3b7e',1,'NnarySmET.hpp']]],
-  ['asm_5fbookmark',['ASM_BOOKMARK',['../df/dee/Debug_8hpp.html#ae65f838a62c22e7f99e4ff6dccdfa105',1,'Debug.hpp']]],
+  ['asm_5fbookmark',['ASM_BOOKMARK',['../db/d2e/OptimizationDiagnostic_8hpp.html#ae65f838a62c22e7f99e4ff6dccdfa105',1,'OptimizationDiagnostic.hpp']]],
   ['asmutable',['asMutable',['../d0/d81/TypeTraits_8hpp.html#ac958ebeb40834e959e0f6847a91d0ffe',1,'SUNphi']]],
   ['assert_5fif_5fnot_5fpresent',['ASSERT_IF_NOT_PRESENT',['../dc/d58/Position_8hpp.html#aa00fa242ec59da2fc52f750c44b45c16',1,'SUNphi']]],
   ['assertcoordsareinrange',['assertCoordsAreInRange',['../dd/dca/classSUNphi_1_1Grid.html#a160a49645ad23cb4e66912a145008f06',1,'SUNphi::Grid']]],

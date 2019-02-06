@@ -118,6 +118,8 @@ $(document).ready(function(){initNavTree('df/d0f/Pool_8hpp.html','../../');});
 <div class="textblock"><code>#include &lt;external/inplace_function.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../dc/d88/Tuple_8hpp_source.html">Tuple.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../de/dd9/Vector_8hpp_source.html">containers/Vector.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/dcd/MinimalCrash_8hpp_source.html">debug/MinimalCrash.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">ios/MinimalLogger.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/d46/Barrier_8hpp_source.html">threads/Barrier.hpp</a>&gt;</code><br />
 <code>#include &lt;threads/Mutex.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../db/dbc/Thread_8hpp_source.html">threads/Thread.hpp</a>&gt;</code><br />
@@ -132,9 +134,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3b3a08e7eff1fd2940aadfd20f53d171"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b3a08e7eff1fd2940aadfd20f53d171"></a>
-ThreadPool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0f/Pool_8hpp.html#a3b3a08e7eff1fd2940aadfd20f53d171">SUNphi::threads</a></td></tr>
-<tr class="memdesc:a3b3a08e7eff1fd2940aadfd20f53d171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global thread pool. <br /></td></tr>
+<tr class="memitem:a3b3a08e7eff1fd2940aadfd20f53d171"><td class="memItemLeft" align="right" valign="top">ThreadPool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0f/Pool_8hpp.html#a3b3a08e7eff1fd2940aadfd20f53d171">SUNphi::threads</a></td></tr>
+<tr class="memdesc:a3b3a08e7eff1fd2940aadfd20f53d171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global thread pool.  <a href="../../df/d0f/Pool_8hpp.html#a3b3a08e7eff1fd2940aadfd20f53d171">More...</a><br /></td></tr>
 <tr class="separator:a3b3a08e7eff1fd2940aadfd20f53d171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -142,7 +143,25 @@ ThreadPool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <p>The thread pool is implemented through <code>pthread</code> library, so we can start and stop the threads in every moment of the execution, at variance with the static-behavior of <code>Nissa</code> library, where the program would have opened a <code>OpenMP</code> parallel statement and jumped inside it. </p>
 
 <p>Definition in file <a class="el" href="../../df/d0f/Pool_8hpp_source.html">Pool.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="file_a3b3a08e7eff1fd2940aadfd20f53d171"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ThreadPool SUNphi::threads</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global thread pool. </p>
+<p>Global thrads. </p>
+
+<p>Definition at line <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html#l00211">211</a> of file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
