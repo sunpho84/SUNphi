@@ -16,10 +16,10 @@ env:
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
 
 env:
-  - THREADS=--enable-threads
-  - THREADS=--disable-threads
-  - MPI=--enable-MPI
-  - MPI=--disable-MPI
+  - THREADS=--enable-threads  MPI=--enable-MPI  DOXY=true
+  - THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
+  - THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
+  - THREADS=--disable-threads MPI=--disable-MPI DOXY=false
   
 # Install dependencies
 addons:
@@ -74,4 +74,4 @@ after_success:
   - doxygen -v
   - make doxygen-run
   - cd $TRAVIS_BUILD_DIR
-  - if [[ "$THREADS" == "--enable-threads" ]] && [[ "$MPI" == "--enable-MPI" ]] ;then . config/publishDocumentation.sh;fi
+  - if [[ ! -z "$DOXY" ]] ;then . config/publishDocumentation.sh;fi
