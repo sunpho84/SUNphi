@@ -2,7 +2,7 @@ var searchData=
 [
   ['range',['Range',['../d2/d37/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_01_4_00_01IntSeq_3_01IGroups_8_8_8_01_4_01_4.html#a222d0d7e9ca68eecbb45b87eae6074b5',1,'SUNphi::TensKind::_Merged&lt; IntSeq&lt; IDelims... &gt;, IntSeq&lt; IGroups... &gt; &gt;']]],
   ['ranges_2ehpp',['Ranges.hpp',['../dd/d15/Ranges_8hpp.html',1,'']]],
-  ['rangeseq',['rangeSeq',['../dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi::rangeSeq()'],['../dd/d15/Ranges_8hpp.html#ac6a4b17d20c20aa9fa3428f1233d6190',1,'SUNphi::RangeSeq()']]],
+  ['rangeseq',['RangeSeq',['../dd/d15/Ranges_8hpp.html#ac6a4b17d20c20aa9fa3428f1233d6190',1,'SUNphi::RangeSeq()'],['../dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi::rangeSeq()']]],
   ['rank',['rank',['../df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485',1,'SUNphi::Mpi']]],
   ['real',['real',['../d8/de8/Compl_8hpp.html#aa80c945a2eb32b4469fab34303a28000',1,'SUNphi']]],
   ['real_5fpart_5fid',['REAL_PART_ID',['../d8/de8/Compl_8hpp.html#a345eb23d93feb680882e8663c469512d',1,'SUNphi']]],
