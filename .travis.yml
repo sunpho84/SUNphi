@@ -18,8 +18,6 @@ env:
 env:
   - THREADS=--enable-threads
   - THREADS=--disable-threads
-  
-env:
   - MPI=--enable-MPI
   - MPI=--disable-MPI
   
