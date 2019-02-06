@@ -15,6 +15,14 @@ env:
     - GH_REPO_NAME: SUNphi
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
 
+env:
+  - THREADS=--enable-threads
+  - THREADS=--disable-threads
+  
+env:
+  - MPI=--enable-MPI
+  - MPI=--disable-MPI
+  
 # Install dependencies
 addons:
   apt:
@@ -55,7 +63,7 @@ script:
   - bash config/bootstrap
   - mkdir build
   - cd build
-  - ../configure
+  - ../configure THREADS MPI
   - make
   - bin/checks
   
@@ -68,4 +76,4 @@ after_success:
   - doxygen -v
   - make doxygen-run
   - cd $TRAVIS_BUILD_DIR
-  - . config/publishDocumentation.sh
+  - if [[ "$THREADS" == "--enable-threads" ]] && [[ "$MPI" == "--enable-MPI" ]] ;then . config/publishDocumentation.sh;fi
