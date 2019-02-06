@@ -86,6 +86,4 @@ namespace SUNphi
   };
 }
 
-#include <ios/Logger.hpp>
-
 #endif
