@@ -61,7 +61,7 @@ script:
   - bash config/bootstrap
   - mkdir build
   - cd build
-  - ../configure THREADS MPI
+  - ../configure $THREADS $MPI
   - make
   - bin/checks
   
