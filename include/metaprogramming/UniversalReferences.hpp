@@ -25,7 +25,7 @@ namespace SUNphi
 			    true) and
 			   std::is_convertible<RemRef<U>*,
 					       RemRef<T>*>::value>>
-  constexpr T&& forw(U&& u)
+  constexpr T&& forw(U&& u)     ///< Variable to forward
   {
     return static_cast<T&&>(u);
   }
