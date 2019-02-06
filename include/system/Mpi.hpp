@@ -202,9 +202,8 @@ namespace SUNphi
       
       return
 	1;
-	
-#endif
       
+#endif
     }
     
     /// Check if this is the master rank

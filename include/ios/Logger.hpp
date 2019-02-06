@@ -183,9 +183,9 @@ namespace SUNphi
 	  (rc<0 or rc>=MAX_LENGTH);
 	
 	if(truncated)
-	  logger<<message<<" (truncated line)";
+	  *this<<message<<" (truncated line)";
 	else
-	  logger<<message;
+	  *this<<message;
 	
 	return
 	  *this;
