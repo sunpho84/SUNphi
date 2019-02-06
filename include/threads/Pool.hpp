@@ -20,6 +20,8 @@
 
 #include <Tuple.hpp>
 #include <containers/Vector.hpp>
+#include <debug/MinimalCrash.hpp>
+#include <ios/MinimalLogger.hpp>
 #include <threads/Barrier.hpp>
 #include <threads/Mutex.hpp>
 #include <threads/Thread.hpp>
@@ -161,7 +163,7 @@ namespace SUNphi
     {
       // Check that the pool is not empty
       if(not isFilled)
-	CRASH("Cannot empty an empty pool!");
+	MINIMAL_CRASH("Cannot empty an empty pool!");
       
       // Mark that the pool is not filled
       isFilled=
@@ -173,20 +175,7 @@ namespace SUNphi
       for(int threadId=1;threadId<nThreads;threadId++)
 	{
 	  if(pthread_join(pool[threadId],nullptr)!=0)
-	    switch(errno)
-	      {
-	      case EDEADLK:
-		CRASH("A deadlock was detected");
-		break;
-	      case EINVAL:
-		CRASH("Thread is not a joinable thread, or another thread is already waiting to join with this thread");
-		break;
-	      case ESRCH:
-		CRASH("No thread with the ID thread could be found");
-		break;
-	      default:
-		CRASH("Other error");
-	      }
+	    MINIMAL_CRASH_STDLIBERR("joining threads");
 	  
 	  minimalLogger(runLog,"Thread of id %d destroyed",(int)threadId);
 	}
@@ -202,7 +191,7 @@ namespace SUNphi
       const
     {
       if(threadId==masterThreadId)
-	CRASH("Only pool threads are allowed");
+	MINIMAL_CRASH("Only pool threads are allowed");
     }
     
     /// Assert that only the master thread is accessing
@@ -210,7 +199,7 @@ namespace SUNphi
       const
     {
       if(threadId!=masterThreadId)
-	CRASH("Only master thread is allowed, but thread",threadId,"is trying to act");
+	MINIMAL_CRASH("Only master thread is allowed, but thread",threadId,"is trying to act");
     }
     
     /// Get the thread of the current thread
@@ -231,7 +220,7 @@ namespace SUNphi
 	  fprintf(stdout,"%d %d\n",threadId,nActiveThreads());
 	  for(auto & p : pool)
 	    fprintf(stdout,"%d\n",(int)p);
-	  CRASH("Unable to find thread with tag",threadTag);
+	  MINIMAL_CRASH("Unable to find thread with tag %d",threadTag);
 	}
       
       return
@@ -346,7 +335,7 @@ namespace SUNphi
       assertMasterOnly(threadId);
       
       if(not isWaitingForWork)
-	CRASH("We cannot stop a working pool");
+	MINIMAL_CRASH("We cannot stop a working pool");
       
       minimalLogger(runLog,"Telling the pool not to work any longer (tag: %s)",workNoMoreTag);
       
@@ -412,7 +401,7 @@ namespace SUNphi
     {
       // Check that the pool is waiting for work
       if(not isWaitingForWork)
-	CRASH("Trying to give work to not-waiting pool!");
+	MINIMAL_CRASH("Trying to give work to not-waiting pool!");
       
       // Store the work
       work=

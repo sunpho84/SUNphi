@@ -1,7 +1,7 @@
 #ifndef _OPTIMIZATION_DIAGNOSTIC_HPP
 #define _OPTIMIZATION_DIAGNOSTIC_HPP
 
-/// \file OptmizationDiagnostic.hpp
+/// \file OptimizationDiagnostic.hpp
 ///
 /// \brief Useful diagnostic to follow optimization
 

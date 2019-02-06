@@ -11,6 +11,7 @@
 #include <numeric>
 
 #include <containers/Vector.hpp>
+#include <debug/Crash.hpp>
 
 namespace SUNphi
 {
@@ -67,7 +68,7 @@ namespace SUNphi
       
       // Check that all have been assigned
       if(nObjToAss>0)
-	CRASH("Should have ended without objects to assign, have:",nObjToAss);
+	CRASH<<"Should have ended without objects to assign, have: "<<nObjToAss;
       
       return
 	res;
@@ -127,7 +128,7 @@ namespace SUNphi
     {
       // Check that the slots can accommodate the objects
       if(nMaxObj()<nObj)
-	CRASH("Can accommodate at most",nMaxObj(),"objects but",nObj,"asked");
+	CRASH<<"Can accommodate at most "<<nMaxObj()<<" objects but "<<nObj<<" asked";
       
       // Set first
       nPerSlot=

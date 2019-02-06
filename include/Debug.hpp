@@ -7,7 +7,7 @@
 
 #include <debug/BackTracing.hpp>
 #include <debug/Crash.hpp>
-#include <debug/Crasher.hpp>
+#include <debug/MinimalCrash.hpp>
 #include <debug/OptimizationDiagnostic.hpp>
 
 #endif

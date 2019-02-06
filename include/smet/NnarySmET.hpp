@@ -417,7 +417,8 @@ namespace SUNphi
   template <typename Tref>				\
   bool isAliasing(const Tref& alias) const		\
   {							\
-    CRASH("Fixme");					\
+    CRASH<<"Fixme";					\
+							\
     return true;					\
   }							\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE

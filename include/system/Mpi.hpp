@@ -82,7 +82,7 @@ namespace SUNphi
 	  char err[MPI_MAX_ERROR_STRING];
 	  MPI_Error_string(rc,err,&len);
 	  
-	  internalCrash(line,file,args...,", raised error",rc,":",err);
+	  minimalCrash(file,line,__PRETTY_FUNCTION__,"(args ignored!), raised error %d, err: %s",rc,err);
 	}
       
 #endif

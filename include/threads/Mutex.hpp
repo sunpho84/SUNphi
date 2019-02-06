@@ -11,8 +11,8 @@
 
 #include <cstring>
 
+#include <debug/MinimalCrash.hpp>
 #include <threads/Thread.hpp>
-#include <system/Debug.hpp>
 
 namespace SUNphi
 {
@@ -30,14 +30,14 @@ namespace SUNphi
     void lock()
     {
       if(pthread_mutex_lock(&mutex))
-	CRASH("Error locking,",strerror(errno));
+	MINIMAL_CRASH("Error locking, %s",strerror(errno));
     }
     
     /// Unlock the mutex
     void unlock()
     {
       if(pthread_mutex_unlock(&mutex))
-	CRASH("Error unlocking,",strerror(errno));
+	MINIMAL_CRASH("Error unlocking, %s",strerror(errno));
     }
   };
   

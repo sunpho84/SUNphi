@@ -10,7 +10,6 @@
 #include <metaprogramming/SwallowSemicolon.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
-#include <system/Debug.hpp>
 
 #include <iostream>
 
@@ -139,7 +138,7 @@ namespace SUNphi
   /// \todo This is mostly broken
 #define IS_ALIASING_ACCORDING_TO_POINTER(_p)				\
   PROVIDE_IS_ALIASING( /*! Check the aliasing with reference */,	\
-		       CRASH("Broken");					\
+		       CRASH<<"Broken";				\
 									\
 		       const void* pAlias=				\
 		         static_cast<const void*>(&alias);		\

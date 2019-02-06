@@ -30,6 +30,7 @@ namespace SUNphi
     
   public:
     
+    /// Creates the crasher
     Crasher(const char* path,
 	    const int line,
 	    const char* funcName)
@@ -84,5 +85,7 @@ namespace SUNphi
     
   };
 }
+
+#include <ios/Logger.hpp>
 
 #endif

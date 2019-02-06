@@ -13,7 +13,7 @@
 #include <chrono>
 
 #include <containers/Map.hpp>
-#include <debug/Crash.hpp>
+#include <debug/MinimalCrash.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
@@ -79,7 +79,7 @@ namespace SUNphi
     {
       // Check that the timer was not started already
       if(isStarted())
-	CRASH<<"Trying to start the already started stopwatch: "<<name;
+	MINIMAL_CRASH("Trying to start the already started stopwatch: %s",name);
       
       // Mark the timer as started
       isStartedFlag=
@@ -213,13 +213,13 @@ namespace SUNphi
     void stop()
     {
       if(not isStarted())
-	CRASH<<"Trying to stop the stopped stopwatch "<<name;
+	MINIMAL_CRASH("Trying to stop the stopped stopwatch %s",name);
       
       if(not isStoppable)
-	CRASH<<"Trying to stop the unstoppable stopwatch" <<name;
+	MINIMAL_CRASH("Trying to stop the unstoppable stopwatch %s",name);
       
       if(hasRunningChildren())
-	CRASH<<"Trying to stop stopwatch "<<name<<" with "<<nStartedChildren<<" running children";
+	MINIMAL_CRASH("Trying to stop stopwatch %s with %d running children",name,nStartedChildren);
       
       // Store the stopping time
       lastMomentStopped=

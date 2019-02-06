@@ -63,9 +63,10 @@ namespace SUNphi
     {
       // Returns the size if it's in the l.h.s \c Tk or in the r.h.s one
       if constexpr(tupleHasType<TC,TK1>)
-	 return ref1.template compSize<TC>();
+	 return
+	   ref1.template compSize<TC>();
       else
-	CRASH("Cannot refer to a TensComp which is not in the l.h.s");
+	CRASH<<"Cannot refer to a TensComp which is not in the l.h.s";
     }
     
     PROVIDE_BINARY_SMET_REFS;

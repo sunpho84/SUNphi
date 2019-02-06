@@ -5,7 +5,7 @@
 ///
 /// \brief Factorizes a number with a simple algorithm
 
-#include <system/Debug.hpp>
+#include <debug/Crash.hpp>
 
 #include <vector>
 
@@ -18,7 +18,7 @@ namespace SUNphi
     // Simple case with 0: must crash
     if(n<=0)
       {
-	CRASH("Unable to factorize %lld",(int64_t)n);
+	CRASH<<"Unable to factorize"<<n;
 	return {};
       }
     

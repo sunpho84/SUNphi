@@ -158,7 +158,7 @@ void checkScalarWrap()
     scalarWrap(b);
   
   if(c.eval()!=10)
-    CRASH("Wrapping 10 from rvalue failed");
+    CRASH<<"Wrapping 10 from rvalue failed";
   
   // Check that b and c are of the same type
   STATIC_ASSERT_IS_BASE_OF(decltype(c),decltype(b));
@@ -168,7 +168,7 @@ void checkScalarWrap()
     scalarWrap(10);
   
   if(d.eval()!=10)
-    CRASH("Wrapping 10 from rvalue failed");
+    CRASH<<"Wrapping 10 from rvalue failed";
   
   TEST_PASSED;
 }
@@ -222,7 +222,7 @@ void checkCallOperator()
     tens(0,0,0);
   
   if(val!=res)
-    CRASH("Tens is",res,"expected",val);
+    CRASH<<"Tens is "<<res<<" expected "<<val;
   
   /// Type of the result, to be checked
   using D=
@@ -250,7 +250,7 @@ void checkGrid()
         grid.volume();
       
       if(expVolume!=volume)
-	CRASH("Expected volume",expVolume,"obtained",volume);
+	CRASH<<"Expected volume"<<expVolume<<"obtained"<<volume;
     };
   
   /// Grid
@@ -288,7 +288,7 @@ void checkGrid()
 								        expNeighs[i][oriDir];
 								     
 								     if(neigh!=expNeigh)
-								       CRASH("Point",i,"direction",oriDir,"expected neighbor",expNeigh,"obtained",neigh);
+								       CRASH<<"Point"<<i<<"direction"<<oriDir<<"expected neighbor"<<expNeigh<<"obtained"<<neigh;
 								   });
 					   });
 		    };
@@ -326,7 +326,7 @@ void checkGrid()
     grid.shiftOfBC(0);
   
   if(shiftOfBC0!=1)
-    CRASH("Expected shift of",1,"obtained",shiftOfBC0);
+    CRASH<<"Expected shift of"<<1<<"obtained"<<shiftOfBC0;
   
   checkNeigh(grid,expShiftedNeigh);
   
@@ -369,7 +369,7 @@ void checkSafeModulo()
         safeModulo(val,mod);
       
       if(expRes!=res)
-	CRASH(val,"MOD ",res,"expected ",expRes,", is",res);
+	CRASH<<val<<" MOD "<<res<<" expected "<<expRes<<", is "<<res;
     };
   
   check(5,3,2);
@@ -392,7 +392,7 @@ void checkFactorize()
         factorize(n);
       
     if(facts.size()!=expFacts.size())
-      CRASH("Factorizing",n,"facts size",facts.size(),"different from size expected,",expFacts.size());
+      CRASH<<"Factorizing "<<n<<" facts size "<<(int)facts.size()<<" different from size expected, "<<(int)expFacts.size();
     
     for(int iFact=0;iFact<(int)facts.size();iFact++)
       {
@@ -405,7 +405,7 @@ void checkFactorize()
 	  expFacts[iFact];
 	
 	if(f!=eF)
-	  CRASH("Factorizing",n,"Factor",iFact,"is expected to be",eF,"is",f);
+	  CRASH<<"Factorizing "<<n<<" Factor "<<iFact<<" is expected to be "<<eF<<" is"<<f;
       }
   };
   
@@ -439,7 +439,7 @@ void checkLhsTranspose()
   for(int rw_c=0;rw_c<NCOL;rw_c++)
     for(int cn_c=0;cn_c<NCOL;cn_c++)
       if(rwCol(cnCol(t,cn_c),rw_c)!=rw_c)
-	CRASH("Matrix entry (",rw_c,",",cn_c,"expected",rw_c,"obtained",rwCol(cnCol(t,cn_c),rw_c));
+	CRASH<<"Matrix entry ("<<rw_c<<","<<cn_c<<" expected "<<rw_c<<" obtained "<<rwCol(cnCol(t,cn_c),rw_c);
   
   TEST_PASSED;
 }
@@ -495,7 +495,7 @@ void checkBinding()
     real(spin(cicc,0));
   
   if(res!=value)
-    CRASH("Expected",value,"obtained",res);
+    CRASH<<"Expected "<<value<<" obtained "<<res;
   
   const Tens<TensKind<RwSpin,Compl>,double> co;
   
@@ -535,11 +535,11 @@ void checkConj()
   
   // Check real value
   if(real(c)!=re)
-    CRASH("Real part:",real(c),"expected:",re);
+    CRASH<<"Real part: "<<real(c)<<" expected: "<<re;
   
   // Check imag value
   if(imag(c)!=-im)
-    CRASH("Imag part:",imag(c),"expected:",-im);
+    CRASH<<"Imag part: "<<imag(c)<<" expected: "<<-im;
   
   TEST_PASSED;
 }
@@ -576,7 +576,7 @@ void checkMPIisInitalized()
     mpi.isInitialized();
   
   if(not isInitialized)
-    CRASH("MPI not initialized!");
+    CRASH<<"MPI not initialized!";
   
   TEST_PASSED;
 }
@@ -597,7 +597,7 @@ void checkMPIallReduce()
     2*mpi.nRanks();
   
   if(sum!=expSum)
-    CRASH("Summing ",val," on all",mpi.nRanks(),"nodes produced",sum,"instead of expected",expSum);
+    CRASH<<"Summing "<<val<<" on all "<<mpi.nRanks()<<" nodes produced "<<sum<<" instead of expected "<<expSum;
   
   TEST_PASSED;
 }
@@ -641,7 +641,7 @@ void checkVectorClass()
   
   // Check size
   if(a.size()!=expSize)
-    CRASH("Expected size: ",expSize,", obtained:",a.size());
+    CRASH<<"Expected size: "<<expSize<<", obtained: "<<a.size();
   
   /////////////////////////////////////////////////////////////////
   
@@ -658,7 +658,7 @@ void checkVectorClass()
       
       // Check position
       if(pos!=expectedPos)
-	CRASH("First",searching,"expected at position",expectedPos,"found at",pos);
+	CRASH<<"First "<<searching<<" expected at position "<<expectedPos<<"found at "<<pos;
     };
   
   check(6,3,false);
@@ -678,7 +678,7 @@ void checkVectorClass()
   
   // Check sum
   if(sum!=expSum)
-    CRASH("Expected sum:",expSum,",obtained:",sum);
+    CRASH<<"Expected sum: "<<expSum<<", obtained: "<<sum;
   
   /////////////////////////////////////////////////////////////////
   
@@ -692,7 +692,7 @@ void checkVectorClass()
   
   // Check product
   if(prod!=expProd)
-    CRASH("Expected prod:",expProd,",obtained:",prod);
+    CRASH<<"Expected prod: "<<expProd<<",obtained: "<<prod;
   
   /////////////////////////////////////////////////////////////////
   

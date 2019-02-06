@@ -9,7 +9,9 @@
  #include "config.hpp"
 #endif
 
-#include <debug/Crash.hpp>
+#include <cstring>
+
+#include <debug/MinimalCrash.hpp>
 #include <threads/Thread.hpp>
 
 namespace SUNphi
@@ -39,7 +41,7 @@ namespace SUNphi
 	pthread_barrier_wait(&barrier);
       
       if(rc!=0 and rc!=PTHREAD_BARRIER_SERIAL_THREAD)
-	CRASH.printStdLibErr()<<"while barrier was waiting";
+	MINIMAL_CRASH_STDLIBERR("while barrier was waiting");
     }
     
   public:
@@ -48,40 +50,14 @@ namespace SUNphi
     Barrier(const int& nThreads) ///< Number of threads for which the barrier is defined
     {
       if(pthread_barrier_init(&barrier,nullptr,nThreads)!=0)
-	switch(errno)
-	  {
-	  case EBUSY:
-	    CRASH("The implementation has detected an attempt to reinitialize a barrier while it is in use");
-	    break;
-	  case EAGAIN:
-	    CRASH("The system lacks the necessary resources to initialize another barrier");
-	    break;
-	  case EINVAL:
-	    CRASH("The value specified by count is equal to zero, or the value specified by attr is invalid");
-	    break;
-	  case ENOMEM:
-	    CRASH("Insufficient memory exists to initialize the barrier");
-	    break;
-	  default:
-	    CRASH("Other error");
-	  }
+	MINIMAL_CRASH_STDLIBERR("while barrier inited");
     }
     
     /// Destroys the barrier
     ~Barrier()
     {
       if(pthread_barrier_destroy(&barrier)!=0)
-	switch(errno)
-	  {
-	  case EBUSY:
-	    CRASH("The implementation has detected an attempt to destroy a barrier while it is in use");
-	    break;
-	  case EINVAL:
-	    CRASH("The value specified by barrier is invalid");
-	    break;
-	  default:
-	    CRASH("Other error");
-	  }
+	MINIMAL_CRASH_STDLIBERR("while barrier was destroyed");
     }
     
     /// Synchronize, without checking the name of the barrier
@@ -105,7 +81,7 @@ namespace SUNphi
       rawSync();
       
       if(currBarrName!=barrName)
-	CRASH("Thread id",threadId,"was expecting",currBarrName,"but",barrName,"encountered");
+	MINIMAL_CRASH("Thread id %d was expecting %s but encountered %s",threadId,currBarrName,barrName);
       
 #endif
       

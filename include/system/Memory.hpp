@@ -8,7 +8,7 @@
 
 #include <cstdlib>
 
-#include <system/Debug.hpp>
+#include <debug/Crash.hpp>
 #include <system/SIMD.hpp>
 
 namespace SUNphi
@@ -21,7 +21,8 @@ namespace SUNphi
   {
     void* ptr;
     int rc=posix_memalign(&ptr,ALIGNMENT,sizeof(T)*nel);
-    if(rc) CRASH("Failed to allocate ",nel," elements of size ",sizeof(T),"with alignement",ALIGNMENT);
+    if(rc)
+      CRASH<<"Failed to allocate "<<(int64_t)nel<<" elements of size "<<(int64_t)sizeof(T)<<" with alignement "<<(int64_t)ALIGNMENT;
       
     return static_cast<T*>(ptr);
   }

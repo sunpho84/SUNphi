@@ -20,6 +20,8 @@
 #include <cstdio>
 
 #include <Threads.hpp>
+#include <debug/BackTracing.hpp>
+#include <debug/Crash.hpp>
 #include <ios/TextColors.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
@@ -162,6 +164,31 @@ namespace SUNphi
 		exit(1);
 	      }
 	  }
+      }
+      
+      /// Print a C-style variadic message
+      template <int MAX_LENGTH=256>  // Maximal length to be be printed
+      LoggerLine& printVariadicMessage(const char* format, ///< Format to print
+				       va_list ap)         ///< Variadic part
+      {
+	/// Message to be printed
+	char message[MAX_LENGTH];
+	
+	/// Resulting length if the space had been enough
+	int rc=
+	  vsnprintf(message,MAX_LENGTH,format,ap);
+	
+	/// Check if it was truncated
+	bool truncated=
+	  (rc<0 or rc>=MAX_LENGTH);
+	
+	if(truncated)
+	  logger<<message<<" (truncated line)";
+	else
+	  logger<<message;
+	
+	return
+	  *this;
       }
       
       /// Changes the color of the line
@@ -368,12 +395,27 @@ namespace SUNphi
 	}
     }
     
-    /// Create a new line, and print it
+    /// Create a new line
+    LoggerLine getNewLine()
+    {
+      return
+	*this;
+    }
+    
+    /// Create a new line, and print on it
     template <typename T>
     LoggerLine operator<<(T&& t)
     {
       return
-	std::move(LoggerLine(*this)<<forw<T>(t));
+	std::move(getNewLine()<<forw<T>(t));
+    }
+    
+    /// Print a C-style variadic message
+    LoggerLine printVariadicMessage(const char* format, ///< Format to print
+				    va_list ap)         ///< Variadic part
+    {
+      return
+	std::move(getNewLine().printVariadicMessage(format,ap));
     }
     
     /// Create with a path

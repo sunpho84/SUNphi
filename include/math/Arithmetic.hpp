@@ -6,7 +6,7 @@
 /// \brief Defines several template version of simple arithmetic operations
 ///
 
-#include <system/Debug.hpp>
+#include <debug/OptimizationDiagnostic.hpp>
 
 namespace SUNphi
 {

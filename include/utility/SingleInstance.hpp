@@ -1,7 +1,7 @@
 #ifndef _SINGLE_INSTANCE_HPP
 #define _SINGLE_INSTANCE_HPP
 
-#include <debug/Crash.hpp>
+#include <debug/MinimalCrash.hpp>
 #include <metaprogramming/StaticMemberWithInitializator.hpp>
 
 /// \file SingleInstance.hpp
@@ -35,7 +35,7 @@ namespace SUNphi
     void crashIfInstancesExists()
     {
       if(count()!=0)
-	CRASH("Count is not zero:",count());
+	MINIMAL_CRASH("Count is not zero: %d",count());
     }
     
   public:

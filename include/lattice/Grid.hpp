@@ -18,9 +18,9 @@
 #include <array>
 #include <vector>
 
+#include <debug/Crash.hpp>
 #include <math/Arithmetic.hpp>
 #include <metaprogramming/CRTP.hpp>
-#include <system/Debug.hpp>
 #include <utility/Bits.hpp>
 #include <utility/Flags.hpp>
 #include <utility/Position.hpp>
@@ -104,7 +104,7 @@ namespace SUNphi
       const auto& maxHashability=
 	tb.max_size();
       if(static_cast<decltype(maxHashability)>(volume)>maxHashability)
-	CRASH("Cannot hash a volume of",volume,", max allowed:",maxHashability);
+	CRASH<<"Cannot hash a volume of "<<volume<<", max allowed: "<<(int)maxHashability;
       
       // Resize the hash table
       tb.resize(volume);
@@ -273,7 +273,7 @@ namespace SUNphi
     {
       // Check null shift at face dir
       if(_shiftOfBC[dir]!=0)
-	CRASH("Shift of shiftedFace ",dir,"must be zero, it is",_shiftOfBC[dir]);
+	CRASH<<"Shift of shiftedFace "<<dir<<"must be zero, it is"<<_shiftOfBC[dir];
       
       // Set shifted face
       _shiftedFace=
@@ -456,7 +456,7 @@ namespace SUNphi
     {
       if constexpr(GRID_DEBUG)
 	if(i<0 or i>=volume())
-	  CRASH("Cannot access to element",i);
+	  CRASH<<"Cannot access to element "<<i;
     }
     
     /// Check that a given oriented dir is in range
@@ -464,7 +464,7 @@ namespace SUNphi
     {
       if constexpr(GRID_DEBUG)
         if(oriDir<0 or oriDir>=2*NDims)
-	  CRASH("Cannot use oriented dir",oriDir,"out of range [0,]",2*NDims);
+	  CRASH<<"Cannot use oriented dir "<<oriDir<<"out of range [0,"<<2*NDims<<"]";
     }
     
     /// Check that a given set of coords are in range
@@ -482,7 +482,7 @@ namespace SUNphi
 		      cs[mu];
 		    
 		    if(c<0 or c>=m)
-		      CRASH("Cannot have dimension",mu,"equal to",c,", negative or larger than",m);
+		      CRASH<<"Cannot have dimension "<<mu<<" equal to "<<c<<", negative or larger than "<<m;
 		  });
     }
     
