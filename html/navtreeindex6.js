@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,11,1,3],
 "dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789":[3,0,2,11,1,4],
 "dc/d8f/TensClass_8hpp.html#a7c26d84e3ccff161fe8aec5daf2a6f0b":[3,0,2,11,1,5],
 "dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34":[3,0,2,11,1,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "de/d50/structSUNphi_1_1HasMember__compSize.html#a2187cbcca027bad50a43b66f113f1e56":[2,0,0,122,6],
 "de/d50/structSUNphi_1_1HasMember__compSize.html#a4a3105b27465765df0017c3112eb516c":[2,0,0,122,5],
 "de/d50/structSUNphi_1_1HasMember__compSize.html#a76cee6ab94b9791927087d227dd3bc09":[2,0,0,122,3],
-"de/d50/structSUNphi_1_1HasMember__compSize.html#a799b06efc3fef50784009ba88faa4ef7":[2,0,0,122,4],
-"de/d50/structSUNphi_1_1HasMember__compSize.html#ab1d9fa51aaebf2b512b884ac9eda299c":[2,0,0,122,7]
+"de/d50/structSUNphi_1_1HasMember__compSize.html#a799b06efc3fef50784009ba88faa4ef7":[2,0,0,122,4]
 };

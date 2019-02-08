@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"da/df3/Wrap_8hpp_source.html":[3,0,2,9,16],
 "da/df9/structSUNphi_1_1HasMember__getMergedCompsView_1_1Derived.html":[2,0,0,125,1],
 "da/df9/structSUNphi_1_1HasMember__getMergedCompsView_1_1Derived.html#a9deb9e0fbce34e45039195ea185f2aec":[2,0,0,125,1,0],
 "da/dff/structSUNphi_1_1Dir.html":[2,0,0,112],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "dc/d88/Tuple_8hpp_source.html":[3,0,2,29],
 "dc/d8f/TensClass_8hpp.html":[3,0,2,11,1],
 "dc/d8f/TensClass_8hpp.html#a166cff0921d5dfd963f04caee8301f84":[3,0,2,11,1,6],
-"dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,11,1,7],
-"dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce":[3,0,2,11,1,3]
+"dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,11,1,7]
 };
