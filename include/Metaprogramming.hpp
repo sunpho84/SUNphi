@@ -6,6 +6,8 @@
 /// \brief Header file for the inclusion of all low level metaprogramming
 
 #include <metaprogramming/CRTP.hpp>
+#include <metaprogramming/Inline.hpp>
+#include <metaprogramming/LoopUnroll.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/StaticMemberWithInitializator.hpp>
 #include <metaprogramming/SwallowSemicolon.hpp>

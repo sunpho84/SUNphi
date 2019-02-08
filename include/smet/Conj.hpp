@@ -6,6 +6,7 @@
 /// \brief Header file for the definition of the conjugate of a number
 
 #include <physics/Compl.hpp>
+#include <ios/Logger.hpp>
 #include <tens/TensKind.hpp>
 #include <smet/NnarySmET.hpp>
 #include <smet/Transpose.hpp>

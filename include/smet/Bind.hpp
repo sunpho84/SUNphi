@@ -9,8 +9,8 @@
  #include <config.hpp>
 #endif
 
-#include <ints/IntSeqInsert.hpp>
 #include <ints/IntSeqRemove.hpp>
+#include <ios/Logger.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <smet/NnarySmET.hpp>
 #include <smet/Reference.hpp>
