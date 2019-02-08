@@ -721,6 +721,28 @@ void checkCombinatorial()
   TEST_PASSED;
 }
 
+/// Test the sitmo random generator
+void checkSitmo()
+{
+  /// Create a random number generator
+  prng rng;
+  
+  rng.seed(100);
+  
+  /// Test the rng
+  const int r=
+    rng();
+  
+  /// Expected result
+  constexpr unsigned int expR=
+    2442518809;
+  
+  if(r!=expR)
+    CRASH<<"Expected "<<expR<<" obtained "<<r;
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1213,6 +1235,8 @@ int main()
   checkMPIisInitalized();
   
   checkMPIallReduce();
+  
+  checkSitmo();
   
   return 0;
 }

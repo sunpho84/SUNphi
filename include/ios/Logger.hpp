@@ -273,6 +273,15 @@ namespace SUNphi
 	  *this;
       }
       
+      /// Prints an unsigned integer
+      LoggerLine& operator<<(const uint& i)
+      {
+	fprintf(logger.file,"%u",i);
+	
+	return
+	  *this;
+      }
+      
       /// Prints a long integer
       LoggerLine& operator<<(const int64_t& l)
       {
