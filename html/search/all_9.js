@@ -10,7 +10,6 @@ var searchData=
   ['indentmore',['indentMore',['../d3/d78/classSUNphi_1_1Logger.html#a4ef0544e6ff25d8c9896d9608d2f7377',1,'SUNphi::Logger']]],
   ['index',['index',['../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#ac21e4949e08cbff8a116b2b39491f098',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;::index()'],['../d2/d74/Indexer_8hpp.html#ab6b5f93577a2b54eabec888e3107de08',1,'SUNphi::index()']]],
   ['indexer_2ehpp',['Indexer.hpp',['../d2/d74/Indexer_8hpp.html',1,'']]],
-  ['inline_2ehpp',['Inline.hpp',['../d5/d3b/Inline_8hpp.html',1,'']]],
   ['innerstart',['innerStart',['../d6/de9/classSUNphi_1_1Timer.html#a84acc5cc34fb1cf290aa47e33eab5634',1,'SUNphi::Timer']]],
   ['inserttruetwinnedpos',['InsertTrueTwinnedPos',['../d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68',1,'SUNphi::TensKind']]],
   ['inserttruetwinnedposoftuple',['InsertTrueTwinnedPosOfTuple',['../d3/d89/TwinsComp_8hpp.html#afe2b4376fdd1cfa02460b88b5bbe852a',1,'SUNphi']]],

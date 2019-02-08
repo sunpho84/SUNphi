@@ -24,7 +24,6 @@ var searchData=
   ['allows_5fall_5franks_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE',['../d8/d6a/Mpi_8hpp.html#a171fcfa8bdaf0dbe624b098bb502be51',1,'Mpi.hpp']]],
   ['allows_5fall_5fthreads_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE',['../db/dbc/Thread_8hpp.html#a18246ca4fc6d0f99de8b8860a84b5856',1,'Thread.hpp']]],
   ['allreduce',['allReduce',['../df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1',1,'SUNphi::Mpi']]],
-  ['always_5finline',['ALWAYS_INLINE',['../d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a',1,'Inline.hpp']]],
   ['alwaysprintsign',['alwaysPrintSign',['../d3/d78/classSUNphi_1_1Logger.html#a0daacc2890b7169796686d87e31ebf22',1,'SUNphi::Logger']]],
   ['appendfirstn',['AppendFirstN',['../da/def/structSUNphi_1_1IntSeq.html#a81c147c227a4daa132137e3e175c0e87',1,'SUNphi::IntSeq']]],
   ['appendix_2ecpp',['appendix.cpp',['../dc/df8/appendix_8cpp.html',1,'']]],
@@ -49,7 +48,7 @@ var searchData=
   ['assign',['assign',['../d0/d6d/Transpose_8hpp.html#afde6f5de64de3abb2035ab4b14d70b19',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs)'],['../d1/d9b/Assign_8hpp.html#aa3235642bedbaf4675b54936e87e2318',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)']]],
   ['assign_2ehpp',['Assign.hpp',['../d1/d9b/Assign_8hpp.html',1,'']]],
   ['assignable',['ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d',1,'BaseSmET.hpp']]],
-  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
+  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
   ['averagemeasure',['averageMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a',1,'SUNphi::Timer']]]
 ];

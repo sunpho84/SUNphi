@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/utility/Inline.hpp Source File</title>
+<title>SUNphi: SUNphi::sitmo_enable_if&lt; C, T &gt; Struct Template Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -49,8 +49,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
-      <li><a href="../../annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="../../files.html"><span>Files</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,8 +71,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -87,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d5/d3b/Inline_8hpp_source.html','../../');});
+$(document).ready(function(){initNavTree('df/dbb/structSUNphi_1_1sitmo__enable__if.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -105,16 +107,35 @@ $(document).ready(function(){initNavTree('d5/d3b/Inline_8hpp_source.html','../..
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="../../d1/dbc/structSUNphi_1_1sitmo__enable__if-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Inline.hpp</div>  </div>
+<div class="title">SUNphi::sitmo_enable_if&lt; C, T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d3b/Inline_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">_INLINE_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">_INLINE_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/// \file Inline.hpp</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">///</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/// \brief Header file for the definition of inline-enforcing</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/// Force the compiler to inline the function</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">ALWAYS_INLINE</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">__attribute__</span><span class="preprocessor">(</span><span class="preprocessor">(</span><span class="preprocessor">always_inline</span><span class="preprocessor">)</span><span class="preprocessor">)</span> <span class="keyword">inline</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div></div><!-- fragment --></div><!-- contents -->
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa513a3632530fa9d552686e5fe5777c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa513a3632530fa9d552686e5fe5777c6"></a>
+typedef T&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="separator:aa513a3632530fa9d552686e5fe5777c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;bool C, typename T = void&gt;<br />
+struct SUNphi::sitmo_enable_if&lt; C, T &gt;</h3>
+
+
+<p>Definition at line <a class="el" href="../../dc/d9d/Sitmo_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../dc/d9d/Sitmo_8hpp_source.html">Sitmo.hpp</a>.</p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>include/random/<a class="el" href="../../dc/d9d/Sitmo_8hpp_source.html">Sitmo.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_3a4d35156996fb70540e167b84a39bd1.html">utility</a></li><li class="navelem"><a class="el" href="../../d5/d3b/Inline_8hpp.html">Inline.hpp</a></li>
+    <li class="navelem"><b>SUNphi</b></li><li class="navelem"><a class="el" href="../../df/dbb/structSUNphi_1_1sitmo__enable__if.html">sitmo_enable_if</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
