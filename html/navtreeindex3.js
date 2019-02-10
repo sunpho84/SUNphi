@@ -147,10 +147,6 @@ var NAVTREEINDEX3 =
 "d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a9f3a4767fd88beeaa5294bac23638ffa":[2,0,0,151,3],
 "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html":[2,0,0,96],
 "d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html":[2,0,0,93],
-"d7/d55/Print_8hpp.html":[3,0,2,3,2],
-"d7/d55/Print_8hpp.html#a23c2e0e40d874796ce7240566fbcb7ae":[3,0,2,3,2,0],
-"d7/d55/Print_8hpp.html#a6616fc919f745190c3d26f6062f45f4e":[3,0,2,3,2,1],
-"d7/d55/Print_8hpp_source.html":[3,0,2,3,2],
 "d7/d61/UnaryPlus_8hpp.html":[3,0,2,9,14],
 "d7/d61/UnaryPlus_8hpp.html#a165c9c89862d50b23b2f3d674a14aa89":[3,0,2,9,14,0],
 "d7/d61/UnaryPlus_8hpp_source.html":[3,0,2,9,14],
@@ -249,5 +245,9 @@ var NAVTREEINDEX3 =
 "d8/d9d/structSUNphi_1_1ConstrainAreRelBinders.html":[2,0,0,74],
 "d8/da7/structSUNphi_1_1BaseWrapper.html":[2,0,0,57],
 "d8/dbf/Timer_8hpp.html":[3,0,2,10,3],
-"d8/dbf/Timer_8hpp.html#a0d0b428ec19c927d7b85b1a7e9723c1f":[3,0,2,10,3,7]
+"d8/dbf/Timer_8hpp.html#a0d0b428ec19c927d7b85b1a7e9723c1f":[3,0,2,10,3,7],
+"d8/dbf/Timer_8hpp.html#a2fece34f264789a6ac9b0c85667d4dbc":[3,0,2,10,3,2],
+"d8/dbf/Timer_8hpp.html#a36ac6aa363ae9cd6d705e551e037a56e":[3,0,2,10,3,6],
+"d8/dbf/Timer_8hpp.html#a38e5c40dcbca7b595dcdb47e5da2ebb8":[3,0,2,10,3,4],
+"d8/dbf/Timer_8hpp.html#a4adb91524f90419ac449be36db370b54":[3,0,2,10,3,9]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"de/d50/structSUNphi_1_1HasMember__compSize.html#a799b06efc3fef50784009ba88faa4ef7":[2,0,0,122,4],
-"de/d50/structSUNphi_1_1HasMember__compSize.html#ab1d9fa51aaebf2b512b884ac9eda299c":[2,0,0,122,7],
 "de/d58/classSUNphi_1_1Adder.html":[2,0,0,37],
 "de/d58/classSUNphi_1_1Adder.html#a053f0bd43ad8443fe486fcecff6f6b7b":[2,0,0,37,15],
 "de/d58/classSUNphi_1_1Adder.html#a061ebda0fd517c37bb8d9638acb54a6d":[2,0,0,37,5],
@@ -97,8 +95,8 @@ var NAVTREEINDEX7 =
 "df/d49/structSUNphi_1_1Barrier.html#a9eca3ba935da713cf9c1696f12ed5e5e":[2,0,0,40,1],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,107],
 "df/d7a/LoopUnroll_8hpp_source.html":[3,0,2,6,2],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
 "df/d95/Bits_8hpp.html":[3,0,2,14,1],
 "df/d95/Bits_8hpp.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e":[3,0,2,14,1,1],
 "df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e":[3,0,2,14,1,0],
@@ -198,8 +196,8 @@ var NAVTREEINDEX7 =
 "dir_f7c9792946d4ae97dc97b9de2773b6b2.html":[3,0,2,7],
 "dir_fba38f648377aa56ae5d69782adf9e53.html":[3,0,2,5],
 "files.html":[3,0],
-"functions.html":[2,3,0,0],
 "functions.html":[2,3,0],
+"functions.html":[2,3,0,0],
 "functions_0x7e.html":[2,3,0,23],
 "functions_a.html":[2,3,0,1],
 "functions_b.html":[2,3,0,2],
@@ -243,11 +241,13 @@ var NAVTREEINDEX7 =
 "functions_r.html":[2,3,0,16],
 "functions_s.html":[2,3,0,17],
 "functions_t.html":[2,3,0,18],
-"functions_type.html":[2,3,3],
 "functions_type.html":[2,3,3,0],
+"functions_type.html":[2,3,3],
 "functions_type_b.html":[2,3,3,1],
 "functions_type_c.html":[2,3,3,2],
 "functions_type_d.html":[2,3,3,3],
 "functions_type_e.html":[2,3,3,4],
-"functions_type_f.html":[2,3,3,5]
+"functions_type_f.html":[2,3,3,5],
+"functions_type_i.html":[2,3,3,6],
+"functions_type_k.html":[2,3,3,7]
 };

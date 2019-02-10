@@ -1,7 +1,6 @@
 var searchData=
 [
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
-  ['print',['print',['../d7/d55/Print_8hpp.html#a23c2e0e40d874796ce7240566fbcb7ae',1,'SUNphi::print(S &amp;out)'],['../d7/d55/Print_8hpp.html#a6616fc919f745190c3d26f6062f45f4e',1,'SUNphi::print(S &amp;out, const Head &amp;head, Tail &amp;&amp;...tail)']]],
   ['printbacktracelist',['printBacktraceList',['../d3/dbc/BackTracing_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
   ['printbailout',['printBailout',['../df/df6/classSUNphi_1_1Aliver.html#ad4469a6555e11dfb2a8031a9698cff4e',1,'SUNphi::Aliver']]],
   ['printbanner',['printBanner',['../df/df6/classSUNphi_1_1Aliver.html#afb0918d628d2032e1481c711d428c733',1,'SUNphi::Aliver']]],
