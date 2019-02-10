@@ -307,6 +307,25 @@ namespace SUNphi
 	return
 	  *this;
       }
+      
+      /// Prints a pointer
+      template <typename T>
+      LoggerLine& operator<<(const T* p)
+      {
+	fprintf(logger.file,"%p",p);
+	
+	return
+	  *this;
+      }
+      
+      /// Prints after putting a space
+      template <typename T>
+      LoggerLine& operator*(T&& t)
+      {
+	return
+	  *this<<' '<<forw<T>(t);
+      }
+      
     };
     
     /// Indentation level

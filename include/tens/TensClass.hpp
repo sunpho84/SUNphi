@@ -5,6 +5,7 @@
 ///
 /// \brief Header file for the Tens class
 
+#include <ios/Logger.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
@@ -180,8 +181,11 @@ namespace SUNphi
 	      class=ConstrainNTypes<Tk::nTypes,Comps...>> /* Constrain the component to be in the same number of Tk */ \
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
-      if(DEBUG_TENS_COMPONENTS) print(std::cout,"Components: ",&v,comps...,"\n"); \
-      return v->eval(forw<const Comps>(comps)...);			\
+      if(DEBUG_TENS_COMPONENTS)						\
+	((runLog<<"Components: "<<&v) * ... *comps);			\
+									\
+      return								\
+	v->eval(forw<const Comps>(comps)...);				\
     }									\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
