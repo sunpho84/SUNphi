@@ -38,24 +38,6 @@ addons:
       - clang
       - libclang1
 
-# install
-#install:
-#   - cd /usr/lib/llvm-6.0/lib/
-#   - ls -lrtha
-#   - sudo ln -sf libclang-5.0.so.1 libclang.so.5
-#   - cd -
-#   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/llvm-5.0/lib/
-# # installing doxygen
-#    - wget ftp://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.14.src.tar.gz -O -|tar xzvf -
-#    - cd doxygen-1.8.14
-#    - mkdir build
-#    - cd build
-#    - cmake .. -Duse_libclang=ON
-#    - make
-#    - sudo make install
-#    - cd ../..
-#    - rm -fr doxygen-1.8.14
-
 script:
   - bash config/bootstrap
   - mkdir build
