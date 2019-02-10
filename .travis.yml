@@ -10,16 +10,17 @@ branches:
 # Environment variables
 env:
   global:
-    - CC=gcc-8
-    - CXX=g++-8
     - GH_REPO_NAME: SUNphi
     - GH_REPO_REF: github.com/sunpho84/SUNphi.git
   matrix:
-  - THREADS=--enable-threads  MPI=--enable-MPI  DOXY=true
-  - THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
-  - THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
-  - THREADS=--disable-threads MPI=--disable-MPI DOXY=false
-  - CXX=clang++ CC=clang THREADS=--enable-threads  MPI=--enable-MPI  DOXY=false
+  - CC=clang CXX=clang++ THREADS=--enable-threads  MPI=--enable-MPI  DOXY=true
+  - CC=clang CXX=clang++ THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
+  - CC=clang CXX=clang++ THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
+  - CC=clang CXX=clang++ THREADS=--disable-threads MPI=--disable-MPI DOXY=false
+  - CC=gcc-8 CXX=g++-8   THREADS=--enable-threads  MPI=--enable-MPI  DOXY=false
+  - CC=gcc-8 CXX=g++-8   THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
+  - CC=gcc-8 CXX=g++-8   THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
+  - CC=gcc-8 CXX=g++-8   THREADS=--disable-threads MPI=--disable-MPI DOXY=false
   
 # Install dependencies
 addons:

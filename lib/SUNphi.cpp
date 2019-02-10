@@ -23,7 +23,7 @@
 
 #ifndef CONFIG_TIME
  /// Null time
- #define CONFIG_TIME \
+ #define CONFIG_TIME				\
  ""
 #endif
 
@@ -39,6 +39,7 @@ namespace SUNphi
 		     const char* format,
 		     ...)
   {
+    /// Starts the variadic arguments
     va_list ap;
     va_start(ap,format);
     
@@ -53,6 +54,7 @@ namespace SUNphi
 		    const char* format,
 		    ...)
   {
+    /// Starts the variadic arguments
     va_list ap;
     va_start(ap,format);
     
