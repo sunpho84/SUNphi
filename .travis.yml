@@ -19,14 +19,13 @@ env:
   - THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
   - THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
   - THREADS=--disable-threads MPI=--disable-MPI DOXY=false
+  - CXX=clang++ CC=clang THREADS=--enable-threads  MPI=--enable-MPI  DOXY=false
   
 # Install dependencies
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-      - sourceline: 'deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-6.0 main'
-        key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
     packages:
       - doxygen
       - doxygen-doc
@@ -35,8 +34,8 @@ addons:
       - graphviz
       - g++-8
       - libopenmpi-dev
-#      - clang-6.0
-#      - libclang1-6.0
+      - clang
+      - libclang1
 
 # install
 #install:
