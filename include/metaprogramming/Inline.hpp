@@ -6,7 +6,7 @@
 /// \brief Force inlining of a function
 
 /// Force inlining of a function
-#define FORCE_INLINE \
+#define ALWAYS_INLINE \
   __attribute__((always_inline)) inline
 
 #endif

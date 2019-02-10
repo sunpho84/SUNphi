@@ -13,7 +13,7 @@ namespace SUNphi
 	    int max,                               // Maximal (excluded) value
 	    typename F,                            // Type of the function
 	    typename...Args>                       // Types of the arguments to pass
-  FORCE_INLINE void loopUnroll(F f,              ///< Function to cal
+  ALWAYS_INLINE void loopUnroll(F f,             ///< Function to cal
 			       Args&&...args)    ///< Arguments to pass
   {
     /// Current value
