@@ -162,6 +162,9 @@ var NAVTREEINDEX2 =
 "d5/d1c/classSUNphi_1_1RelBinder.html#af87b5c8a6af6f3e347ae1e01b7e34a1b":[2,0,0,147,11],
 "d5/d1c/classSUNphi_1_1RelBinder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,147,33],
 "d5/d33/structSUNphi_1_1ConstrainHasMember__getMergedCompsView.html":[2,0,0,88],
+"d5/d3b/Inline_8hpp.html":[3,0,2,6,1],
+"d5/d3b/Inline_8hpp.html#aa1dec568e79152c892dcf63f445cbd7a":[3,0,2,6,1,0],
+"d5/d3b/Inline_8hpp_source.html":[3,0,2,6,1],
 "d5/d3d/structSUNphi_1_1__EnableIf.html":[2,0,0,7],
 "d5/d3e/IntListOperations_8hpp.html":[3,0,2,2,1],
 "d5/d3e/IntListOperations_8hpp.html#a03669b5d05778a442a0ba261ccdc9b10":[3,0,2,2,1,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX2 =
 "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#aa857fae8ea77c0ba869b5335cecaeffb":[2,0,0,121,6],
 "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#ad10acc766f3d1ee1012152abf65c1270":[2,0,0,121,3],
 "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#af73978be75e1cbee0031f805e4d3d52e":[2,0,0,121,4],
-"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html":[2,0,0,119],
-"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a1a07760de62f6c014866ec8fba23d0f7":[2,0,0,119,8],
-"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a1c73d5e6e947b31966757f172d36c0de":[2,0,0,119,2],
-"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401":[2,0,0,119,5]
+"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html":[2,0,0,119]
 };

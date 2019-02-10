@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"de/d50/structSUNphi_1_1HasMember__compSize.html#a799b06efc3fef50784009ba88faa4ef7":[2,0,0,122,4],
 "de/d50/structSUNphi_1_1HasMember__compSize.html#ab1d9fa51aaebf2b512b884ac9eda299c":[2,0,0,122,7],
 "de/d58/classSUNphi_1_1Adder.html":[2,0,0,37],
 "de/d58/classSUNphi_1_1Adder.html#a053f0bd43ad8443fe486fcecff6f6b7b":[2,0,0,37,15],
@@ -40,10 +41,10 @@ var NAVTREEINDEX7 =
 "de/d58/classSUNphi_1_1Adder.html#ae402d88baf215f7ed5ac39379c9fa876":[2,0,0,37,0],
 "de/d58/classSUNphi_1_1Adder.html#ae9d9609b3c66dd8fff91e95137b1d178":[2,0,0,37,21],
 "de/d58/classSUNphi_1_1Adder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,37,30],
-"de/d6a/ScopeDoer_8hpp.html":[3,0,2,14,7],
-"de/d6a/ScopeDoer_8hpp.html#a24376a565f23eb8535c38c528ab49996":[3,0,2,14,7,2],
-"de/d6a/ScopeDoer_8hpp.html#a89c1cd368ce7661e7493b3452da633f0":[3,0,2,14,7,3],
-"de/d6a/ScopeDoer_8hpp_source.html":[3,0,2,14,7],
+"de/d6a/ScopeDoer_8hpp.html":[3,0,2,14,6],
+"de/d6a/ScopeDoer_8hpp.html#a24376a565f23eb8535c38c528ab49996":[3,0,2,14,6,2],
+"de/d6a/ScopeDoer_8hpp.html#a89c1cd368ce7661e7493b3452da633f0":[3,0,2,14,6,3],
+"de/d6a/ScopeDoer_8hpp_source.html":[3,0,2,14,6],
 "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html":[2,0,0,2],
 "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html#a68814e2c93d68569554efaaa8a80451d":[2,0,0,2,0],
 "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html#a746c2c9a288b9fe84d132dfb1c4d63d7":[2,0,0,2,1],
@@ -96,8 +97,8 @@ var NAVTREEINDEX7 =
 "df/d49/structSUNphi_1_1Barrier.html#a9eca3ba935da713cf9c1696f12ed5e5e":[2,0,0,40,1],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,107],
 "df/d7a/LoopUnroll_8hpp_source.html":[3,0,2,6,2],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d95/Bits_8hpp.html":[3,0,2,14,1],
 "df/d95/Bits_8hpp.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e":[3,0,2,14,1,1],
 "df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e":[3,0,2,14,1,0],
@@ -242,12 +243,11 @@ var NAVTREEINDEX7 =
 "functions_r.html":[2,3,0,16],
 "functions_s.html":[2,3,0,17],
 "functions_t.html":[2,3,0,18],
-"functions_type.html":[2,3,3,0],
 "functions_type.html":[2,3,3],
+"functions_type.html":[2,3,3,0],
 "functions_type_b.html":[2,3,3,1],
 "functions_type_c.html":[2,3,3,2],
 "functions_type_d.html":[2,3,3,3],
 "functions_type_e.html":[2,3,3,4],
-"functions_type_f.html":[2,3,3,5],
-"functions_type_i.html":[2,3,3,6]
+"functions_type_f.html":[2,3,3,5]
 };
