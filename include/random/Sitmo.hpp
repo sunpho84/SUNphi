@@ -28,6 +28,7 @@
 ///  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 ///  THE SOFTWARE.
 
+#include <array>
 #include <cstdint>
 #include <iostream>
 
@@ -40,18 +41,24 @@ namespace SUNphi
   class Sitmo
   {
     /// Key
-    uint64_t key[5];
+    std::array<uint64_t,5> key;
     
     /// State (counter)
-    uint64_t state[4];
+    std::array<uint64_t,4> state;
     
     // Cipher output: 4*64 bit=256 bit output
-    uint64_t cipheredState[4];
+    union
+    {
+      std::array<uint64_t,4> state;
+      const std::array<uint32_t,8> output;
+    } ciphered;
     
     /// Output chunk counter: determines wihch 32 of the 256 random bits in cipheredState is returned
     unsigned short iChunk;
     
-    void encryptCounter(uint64_t outputState[4])
+    /// Encrypts the counter, to set the state
+    void encryptCounter(std::array<uint64_t,4>& outputState) ///< Output state
+      const
     {
       /// Copy of the state, to be modififed
       uint64_t work[4];
@@ -107,9 +114,12 @@ namespace SUNphi
 					});
 		      });
       
+      // Copy the result to the output
       for(int i=0;i<4;i++)
 	outputState[i]=
 	  work[i]+key[i];
+      
+      // Increment entry 3
       outputState[3]+=
 	5;
     }
@@ -122,22 +132,14 @@ namespace SUNphi
     
     /// Copy constructor
     Sitmo(const Sitmo& oth) ///< Other engine
-    {
-      for(int i=0;i<4;i++)
-	{
-	  state[i]=oth.state[i];
-	  key[i]=oth.key[i];
-	  cipheredState[i]=oth.cipheredState[i];
-	}
-      iChunk=oth.iChunk;
-    }
+    =default;
     
     /// Construct from a seed
     Sitmo(const uint32_t& s=0)
     {
       seed(s);
     }
-
+    
     /// Sets the key
     void setKey(const uint32_t& k0=0,
 		const uint32_t& k1=0,
@@ -168,28 +170,46 @@ namespace SUNphi
       setKey(s);
       iChunk=0;
       
-      encryptCounter(cipheredState);
+      encryptCounter(ciphered.state);
     }
     
-    // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 8
-    // Advances e’s state ei to ei+1 = TA(ei) and returns GA(ei).
+    // // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 8
+    // // Advances e’s state ei to ei+1 = TA(ei) and returns GA(ei).
+    // uint32_t operator()()
+    // {
+    //   // can we return a value from the current block?
+    //   if (iChunk < 8) {
+    // 	unsigned short cipheredState_index = iChunk >> 1;
+    // 	iChunk++;
+    // 	if (iChunk&1) 
+    // 	  return cipheredState[cipheredState_index] & 0xFFFFFFFF; 
+    // 	else
+    // 	  return cipheredState[cipheredState_index] >> 32;
+    //   }
+      
+    //   // generate a new block and return the first 32 bits
+    //   (*this)++;
+    //   encryptCounter(cipheredState);
+    //   iChunk = 1; // the next call
+    //   return cipheredState[0] & 0xFFFFFFFF;   // this call
+    // }
+    
+    /// Returns one of the 8 chunks
     uint32_t operator()()
     {
-      // can we return a value from the current block?
-      if (iChunk < 8) {
-	unsigned short cipheredState_index = iChunk >> 1;
-	iChunk++;
-	if (iChunk&1) 
-	  return cipheredState[cipheredState_index] & 0xFFFFFFFF; 
-	else
-	  return cipheredState[cipheredState_index] >> 32;
-      }
+      if(iChunk>=8)
+    	{
+    	  // Generate a new block and return the first 32 bits
+    	  (*this)++;
+    	  encryptCounter(ciphered.state);
+	  
+	  // Reset the pointer to the beginnning of the chunk
+	  iChunk=
+	    0;
+    	}
       
-      // generate a new block and return the first 32 bits
-      (*this)++;
-      encryptCounter(cipheredState);
-      iChunk = 1; // the next call
-      return cipheredState[0] & 0xFFFFFFFF;   // this call
+      return
+	ciphered.output[iChunk++];
     }
     
     // -------------------------------------------------
@@ -215,7 +235,7 @@ namespace SUNphi
       z >>= 3;                // the number of buffers is elements/8
       ++z;                    // and one more because we crossed the buffer line
       (*this)+=z;
-      encryptCounter(cipheredState);
+      encryptCounter(ciphered.state);
     }
     
     // -------------------------------------------------
@@ -225,7 +245,7 @@ namespace SUNphi
     friend std::basic_ostream<CharT,Traits>&
     operator<<(std::basic_ostream<CharT,Traits>& os, const Sitmo& s) {
       for (unsigned short i=0; i<4; ++i)
-	os << s.key[i] << ' ' << s.state[i] << ' ' << s.cipheredState[i] << ' ';
+	os << s.key[i] << ' ' << s.state[i] << ' ' << s.ciphered.state[i] << ' ';
       os << s.iChunk;
       return os;
     }
@@ -234,7 +254,7 @@ namespace SUNphi
     friend std::basic_istream<CharT,Traits>&
     operator>>(std::basic_istream<CharT,Traits>& is, Sitmo& s) {
       for (unsigned short i=0; i<4; ++i)
-	is >> s.key[i] >> s.state[i] >> s.cipheredState[i];
+	is >> s.key[i] >> s.state[i] >> s.ciphered.state[i];
       is >> s.iChunk;
       return is;
     } 
@@ -248,7 +268,7 @@ namespace SUNphi
       for (unsigned short i=0; i<4; ++i) {
 	if (state[i] != y.state[i]) return false;
 	if (key[i] != y.key[i]) return false;
-	if (cipheredState[i] != y.cipheredState[i]) return false;
+	if (ciphered.state[i] != y.ciphered.state[i]) return false;
       }
       return true;
     }
@@ -267,7 +287,7 @@ namespace SUNphi
       state[2] = s2; 
       state[3] = s3;
       iChunk = o_counter % 8;
-      encryptCounter(cipheredState);
+      encryptCounter(ciphered.state);
     }
     
     /// Increments the counter by a given amount
