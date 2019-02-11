@@ -725,20 +725,40 @@ void checkCombinatorial()
 void checkSitmo()
 {
   /// Create a random number generator
-  prng rng;
+  Sitmo rng;
   
+  // seed
   rng.seed(100);
   
+  // Skip 8
+  for(int i=0;i<8;i++)
+    runLog<<rng();
+  
   /// Test the rng
-  const int r=
+  const uint32_t r=
     rng();
   
   /// Expected result
-  constexpr unsigned int expR=
-    2442518809;
+  constexpr uint32_t expR=
+    2770169712;
   
   if(r!=expR)
     CRASH<<"Expected "<<expR<<" obtained "<<r;
+  
+  /////////////////////////////////////////////////////////////////
+  
+  // Seed again
+  rng.seed(100);
+  
+  // Skip 8
+  rng.discard(8);
+  
+  /// Test the rng again
+  const uint32_t r2=
+    rng();
+  
+  if(r2!=expR)
+    CRASH<<"Expected "<<expR<<" obtained "<<r2;
   
   TEST_PASSED;
 }
