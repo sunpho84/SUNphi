@@ -18,7 +18,7 @@ var searchData=
   ['sign',['sign',['../d1/deb/Arithmetic_8hpp.html#affbfd274f5650ccd16fd450623c7e019',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html#a97991201fb8bc4e482e3798f11fcde3b',1,'SUNphi::SingleInstance']]],
   ['site',['site',['../dd/d10/SpaceTime_8hpp.html#a4a9c193cd452ad7e0b5d38fca763c5cc',1,'SUNphi']]],
-  ['sitmo',['Sitmo',['../d9/d59/classSUNphi_1_1Sitmo.html#a9adb3a0093cf3e51d3703489cf0f5920',1,'SUNphi::Sitmo::Sitmo(const Sitmo &amp;oth)'],['../d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a',1,'SUNphi::Sitmo::Sitmo(const uint32_t &amp;s=0)']]],
+  ['sitmo',['Sitmo',['../d9/d59/classSUNphi_1_1Sitmo.html#a7af9a41c4fab1c778e18090149f664ab',1,'SUNphi::Sitmo::Sitmo(const Sitmo &amp;oth)=default'],['../d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a',1,'SUNphi::Sitmo::Sitmo(const uint32_t &amp;s=0)']]],
   ['size',['size',['../df/dc0/classSUNphi_1_1Vector.html#a0afc9ee7d4b9fc8ccbd84c750dff5d71',1,'SUNphi::Vector']]],
   ['spin',['spin',['../d9/dfb/Spin_8hpp.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi']]],
   ['sqr',['sqr',['../d1/deb/Arithmetic_8hpp.html#a0eeddf88e05361ef8f44c0af72c11289',1,'SUNphi']]],

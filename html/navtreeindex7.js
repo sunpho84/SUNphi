@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544":[2,0,0,62,4],
 "de/d33/classSUNphi_1_1Combinatorial.html#ab592ed93974b4c7c392533999649853b":[2,0,0,62,8],
 "de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382":[2,0,0,62,10],
 "de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01":[2,0,0,62,0],
@@ -106,8 +107,8 @@ var NAVTREEINDEX7 =
 "df/d49/structSUNphi_1_1Barrier.html#a9eca3ba935da713cf9c1696f12ed5e5e":[2,0,0,40,1],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,107],
 "df/d7a/LoopUnroll_8hpp_source.html":[3,0,2,6,2],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d95/Bits_8hpp.html":[3,0,2,14,1],
 "df/d95/Bits_8hpp.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e":[3,0,2,14,1,1],
 "df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e":[3,0,2,14,1,0],
@@ -178,8 +179,8 @@ var NAVTREEINDEX7 =
 "dir_f7c9792946d4ae97dc97b9de2773b6b2.html":[3,0,2,7],
 "dir_fba38f648377aa56ae5d69782adf9e53.html":[3,0,2,5],
 "files.html":[3,0],
-"functions.html":[2,3,0,0],
 "functions.html":[2,3,0],
+"functions.html":[2,3,0,0],
 "functions_0x7e.html":[2,3,0,23],
 "functions_a.html":[2,3,0,1],
 "functions_b.html":[2,3,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "globals.html":[3,1,0],
 "globals_defs.html":[3,1,3],
 "globals_func.html":[3,1,1],
-"globals_vars.html":[3,1,2],
-"hierarchy.html":[2,2]
+"globals_vars.html":[3,1,2]
 };
