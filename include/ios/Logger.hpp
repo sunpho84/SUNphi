@@ -309,8 +309,8 @@ namespace SUNphi
       }
       
       /// Prints a pointer
-      template <typename T>
-      LoggerLine& operator<<(const T* p)
+      template <typename T>                 // Type pointed
+      LoggerLine& operator<<(const T* p)  ///< Pointer to be printed
       {
 	fprintf(logger.file,"%p",p);
 	
@@ -319,8 +319,8 @@ namespace SUNphi
       }
       
       /// Prints after putting a space
-      template <typename T>
-      LoggerLine& operator*(T&& t)
+      template <typename T>               // Type of the obected to print
+      LoggerLine& operator*(T&& t)      ///< Object to be printed
       {
 	return
 	  *this<<' '<<forw<T>(t);
