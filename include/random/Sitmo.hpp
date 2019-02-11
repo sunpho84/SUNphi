@@ -7,7 +7,7 @@
 ///
 ///  Copyright (c) 2012-2016 M.A. (Thijs) van den Berg, http://sitmo.com/
 ///
-///  Use, modification and distribution are subject to the MIT Software License. 
+///  Use, modification and distribution are subject to the MIT Software License.
 ///
 ///  The MIT License (MIT)
 ///  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,336 +37,274 @@
 
 namespace SUNphi
 {
+  class Sitmo
+  {
+    /// Key
+    uint64_t key[5];
+    
+    /// State (counter)
+    uint64_t state[4];
+    
+    // Cipher output: 4*64 bit=256 bit output
+    uint64_t cipheredState[4];
+    
+    /// Output chunk counter: determines wihch 32 of the 256 random bits in cipheredState is returned
+    unsigned short iChunk;
+    
+    void encryptCounter(uint64_t outputState[4])
+    {
+      /// Copy of the state, to be modififed
+      uint64_t work[4];
+      for(int i=0;i<4;i++)
+	work[i]=
+	  state[i];
+      
+      loopUnroll<0,5>([&work,this](const int j)
+		      {
+			loopUnroll<0,2>([j,&work,this](const int i)
+					{
+					  constexpr uint64_t mk[2][2]=
+					    {{14,16},{25,33}};
+					  
+					  uint64_t& x0=
+					    work[2*i];
+					  uint64_t& x1=
+					    work[(2*i+1)%4];
+					  const uint64_t& rx=
+					    mk[j%2][i];
+					  
+					  x1+=
+					    key[(2*i+1+j)%5]+((i==1)?j:0);
+					  x0+=
+					    x1+key[(2*i+j)%5];
+					  x1=
+					    (x1<<rx)|(x1>>(64-rx));
+					  x1^=
+					    x0;
+					});
+			loopUnroll<0,3>([j,&work](const int l)
+					{
+					  loopUnroll<0,2>([l,j,&work](const int i)
+							  {
+							    constexpr uint64_t m[2][3][2]=
+							      {{{52,57},{23,40},{5,37}},
+							       {{46,12},{58,22},{32,32}}};
+							    
+							    uint64_t& x0=
+							      work[2*i];
+							    uint64_t& x1=
+							      work[(2*i+((l%2==0)?3:1))%4];
+							    const uint64_t& rx=
+							      m[j%2][l][i];
+							    
+							    x0+=
+							      x1;
+							    x1=
+							      (x1<<rx)|(x1>>(64-rx));
+							    x1^=
+							      x0;
+							  });
+					});
+		      });
+      
+      for(int i=0;i<4;i++)
+	outputState[i]=
+	  work[i]+key[i];
+      outputState[3]+=
+	5;
+    }
+    
+  public:
+    
+    /// Maximal output
+    static constexpr uint32_t max=
+      0xFFFFFFFF;
+    
+    /// Copy constructor
+    Sitmo(const Sitmo& oth) ///< Other engine
+    {
+      for(int i=0;i<4;i++)
+	{
+	  state[i]=oth.state[i];
+	  key[i]=oth.key[i];
+	  cipheredState[i]=oth.cipheredState[i];
+	}
+      iChunk=oth.iChunk;
+    }
+    
+    /// Construct from a seed
+    Sitmo(const uint32_t& s=0)
+    {
+      seed(s);
+    }
 
-// enable_if for C__98 compilers
-template<bool C, typename T = void>
-struct sitmo_enable_if { typedef T type; };
-
-template<typename T>
-struct sitmo_enable_if<false, T> { };
-
-// SFINAE check for the existence of a "void generate(int*,int*)"member function
-template<typename T>
-struct has_generate_template
-{
-  typedef char (&Two)[2];
-  template<typename F, void (F::*)(int *, int *)> struct helper {};
-  template<typename C> static char test(helper<C, &C::template generate<int*> >*);
-  template<typename C> static Two test(...);
-  static bool const value = sizeof(test<T>(0)) == sizeof(char);
-};
-
-
-class prng_engine
-{
-public:
-  // "req" are requirements as stated in the C++ 11 draft n3242=11-0012
-  //
-  // req: 26.5.1.3 Uniform random number generator requirements, p.906, table 116, row 1
-  typedef uint32_t result_type;
-  
-  // req: 26.5.1.3 Uniform random number generator requirements, p.906, table 116, row 3 & 4
-#if __cplusplus <= 199711L
-  static result_type (min)() { return 0; }
-  static result_type (max)() { return 0xFFFFFFFF; }
-#else
-  static constexpr result_type (min)() { return 0; }
-  static constexpr result_type (max)() { return 0xFFFFFFFF; }
-#endif    
-  
-  // -------------------------------------------------
-  // Constructors
-  // -------------------------------------------------
-  
-  // req: 26.5.1.4 Random number engine requirements, p.907 table 117, row 1
-  // Creates an engine with the same initial state as all other
-  // default-constructed engines of type E.
-  prng_engine() 
-  {
-    seed();
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.907 table 117, row 2
-  // Creates an engine that compares equal to x.
-  prng_engine(const prng_engine& x)
-  {
-    for (unsigned short i=0; i<4; ++i) {
-      _s[i] = x._s[i];
-      _k[i] = x._k[i];
-      _o[i] = x._o[i];
-    }
-    _o_counter = x._o_counter;
-  }
-  
-  
-  // req: 26.5.1.4 Random number engine requirements, p.907 table 117, row 3
-  // Creates an engine with initial O(size of state) state determined by s.
-  prng_engine(uint32_t s) 
-  {
-    seed(s);
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 4
-  // Creates an engine with an initial state that depends on a sequence
-  // produced by one call to q.generate.
-  template<class Seq> 
-  prng_engine(Seq& q, typename sitmo_enable_if< has_generate_template<Seq>::value >::type* = 0 )
-  {
-    seed(q);
-  }
-  
-  // -------------------------------------------------
-  // Seeding
-  // -------------------------------------------------
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 5
-  void seed()
-  {
-    for (unsigned short i=0; i<4; ++i) {
-      _k[i] = 0;
-      _s[i] = 0;
-    }
-    _o_counter = 0;
-    
-    _o[0] = 0x09218ebde6c85537;
-    _o[1] = 0x55941f5266d86105;
-    _o[2] = 0x4bd25e16282434dc;
-    _o[3] = 0xee29ec846bd2e40b;
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 6
-  // s needs to be of return_type, which is uint32_t
-  void seed(uint32_t s)
-  { 
-    for (unsigned short i=0; i<4; ++i) {
-      _k[i] = 0;
-      _s[i] = 0;
-    }
-    _k[0] = s; 
-    _o_counter = 0;
-    
-    encrypt_counter();
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 7
-  template<class Seq> 
-  void seed(Seq& q, typename sitmo_enable_if< has_generate_template<Seq>::value >::type* = 0 )
-  {
-    typename Seq::result_type w[8];
-    q.generate(&w[0], &w[8]);
-    
-    for (unsigned short i=0; i<4; ++i) {
-      _k[i] = ( static_cast<uint64_t>(w[2*i]) << 32) | w[2*i+1];
-      _s[i] = 0;
-    }
-    _o_counter = 0;
-    
-    encrypt_counter();
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 8
-  // Advances e’s state ei to ei+1 = TA(ei) and returns GA(ei).
-  uint32_t operator()()
-  {
-    // can we return a value from the current block?
-    if (_o_counter < 8) {
-      unsigned short _o_index = _o_counter >> 1;
-      _o_counter++;
-      if (_o_counter&1) 
-        return _o[_o_index] & 0xFFFFFFFF; 
-      else
-        return _o[_o_index] >> 32;
+    /// Sets the key
+    void setKey(const uint32_t& k0=0,
+		const uint32_t& k1=0,
+		const uint32_t& k2=0,
+		const uint32_t& k3=0)
+    {
+      key[0]=
+	k0;
+      key[1]=
+	k1;
+      key[2]=
+	k2;
+      key[3]=
+	k3;
+      key[4]=
+	0x1BD11BDAA9FC1A22^key[0]^key[1]^key[2]^key[3];
     }
     
-    // generate a new block and return the first 32 bits
-    inc_counter();
-    encrypt_counter();
-    _o_counter = 1; // the next call
-    return _o[0] & 0xFFFFFFFF;   // this call
-  }
-  
-  // -------------------------------------------------
-  // misc
-  // -------------------------------------------------
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 9
-  // Advances e’s state ei to ei+z by any means equivalent to z
-  // consecutive calls e().
-  void discard(uint64_t z)
-  {
-    // check if we stay in the current block
-    // cast to unsigned int to prevent comparison warning
-    if (z < (uint64_t)(8 - _o_counter)) {
-      _o_counter += static_cast<unsigned short>(z);
-      return;
+    /// Init using the passed seed
+    void seed(const uint32_t& s=0)
+    {
+      for(int i=0;i<4;i++)
+	{
+	  key[i]=0;
+	  state[i]=0;
+	}
+      
+      setKey(s);
+      iChunk=0;
+      
+      encryptCounter(cipheredState);
     }
     
-    // we will have to generate a new block...
-    z -= (8 - _o_counter);  // discard the remainder of the current blok
-    _o_counter = z % 8;     // set the pointer in the correct element in the new block
-    z -= _o_counter;        // update z
-    z >>= 3;                // the number of buffers is elements/8
-    ++z;                    // and one more because we crossed the buffer line
-    inc_counter(z);
-    encrypt_counter();
-  }
-  
-  // -------------------------------------------------
-  // IO
-  // -------------------------------------------------
-  template<class CharT, class Traits>
-  friend std::basic_ostream<CharT,Traits>&
-  operator<<(std::basic_ostream<CharT,Traits>& os, const prng_engine& s) {
-    for (unsigned short i=0; i<4; ++i)
-      os << s._k[i] << ' ' << s._s[i] << ' ' << s._o[i] << ' ';
-    os << s._o_counter;
-    return os;
-  }
-  
-  template<class CharT, class Traits>
-  friend std::basic_istream<CharT,Traits>&
-  operator>>(std::basic_istream<CharT,Traits>& is, prng_engine& s) {
-    for (unsigned short i=0; i<4; ++i)
-      is >> s._k[i] >> s._s[i] >> s._o[i];
-    is >> s._o_counter;
-    return is;
-  } 
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 10
-  // This operator is an equivalence relation. With Sx and Sy as the infinite 
-  // sequences of values that would be generated by repeated future calls to 
-  // x() and y(), respectively, returns true if Sx = Sy; else returns false.
-  bool operator==(const prng_engine& y) 
-  {
-    if (_o_counter != y._o_counter) return false;
-    for (unsigned short i=0; i<4; ++i) {
-      if (_s[i] != y._s[i]) return false;
-      if (_k[i] != y._k[i]) return false;
-      if (_o[i] != y._o[i]) return false;
-    }
-    return true;
-  }
-  
-  // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 11
-  bool operator!=(const prng_engine& y) 
-  {
-    return !(*this == y);
-  }
-  
-  // Extra function to set the key
-  void set_key(uint64_t k0=0, uint64_t k1=0, uint64_t k2=0, uint64_t k3=0)
-  {
-    _k[0] = k0; _k[1] = k1; _k[2] = k2; _k[3] = k3;
-    encrypt_counter();
-  }
-  
-  // set the counter
-  void set_counter(uint64_t s0=0, uint64_t s1=0, uint64_t s2=0, uint64_t s3=0, unsigned short o_counter=0)
-  {
-    _s[0] = s0; 
-    _s[1] = s1; 
-    _s[2] = s2; 
-    _s[3] = s3;
-    _o_counter = o_counter % 8;
-    encrypt_counter();
-  }
-  
-  
-  // versioning
-  uint32_t version()
-  {
-    return 5;
-  }
-  
-private:
-  void encrypt_counter()
-  {
-    uint64_t b[4];
-    uint64_t k[5];
-    
-    for (unsigned short i=0; i<4; ++i) b[i] = _s[i];
-    for (unsigned short i=0; i<4; ++i) k[i] = _k[i];
-    
-    k[4] = 0x1BD11BDAA9FC1A22 ^ k[0] ^ k[1] ^ k[2] ^ k[3];
-    
-    loopUnroll<0,5>([&b,k](const int j)
-		    {
-		      loopUnroll<0,2>([j,&b,k](const int i)
-				      {
-					constexpr uint64_t mk[2][2]={{14,16},{25,33}};
-					
-					uint64_t& x0=b[2*i];
-					uint64_t& x1=b[(2*i+1)%4];
-					const uint64_t& rx=mk[j%2][i];
-					
-					x1+=k[(2*i+1+j)%5]+((i==1)?j:0);
-					x0+=x1+k[(2*i+j)%5];
-					x1=(x1<<rx)|(x1>>(64-rx));
-					x1^=x0;
-				      });
-		      loopUnroll<0,3>([j,&b](const int l)
-				      {
-					loopUnroll<0,2>([l,j,&b](const int i)
-							{
-							  constexpr uint64_t m[2][3][2]={{{52,57},{23,40},{5,37}},{{46,12},{58,22},{32,32}}};
-							  
-							  uint64_t& x0=b[2*i];
-							  uint64_t& x1=b[(2*i+((l%2==0)?3:1))%4];
-							  const uint64_t& rx=m[j%2][l][i];
-							  
-							  x0+=x1;
-							  x1=(x1<<rx)|(x1>>(64-rx));
-							  x1^=x0;
-							});
-				      });
-		    });
-    
-    for(int i=0;i<4;i++)
-      _o[i]=b[i]+k[i];
-    _o[3]+=5;
-  }
-  
-  void inc_counter()
-  {
-    ++_s[0]; 
-    if (_s[0] != 0) return;
-    
-    ++_s[1]; 
-    if (_s[1] != 0) return;
-    
-    ++_s[2]; 
-    if (_s[2] != 0) return;
-    
-    ++_s[3];
-  }
-  
-  void inc_counter(uint64_t z)
-  {
-    if (z > 0xFFFFFFFFFFFFFFFF - _s[0]) {   // check if we will overflow the first 64 bit int
-      ++_s[1];
-      if (_s[1] == 0) {
-        ++_s[2];
-        if (_s[2] == 0) {
-          ++_s[3];
-        }
+    // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 8
+    // Advances e’s state ei to ei+1 = TA(ei) and returns GA(ei).
+    uint32_t operator()()
+    {
+      // can we return a value from the current block?
+      if (iChunk < 8) {
+	unsigned short cipheredState_index = iChunk >> 1;
+	iChunk++;
+	if (iChunk&1) 
+	  return cipheredState[cipheredState_index] & 0xFFFFFFFF; 
+	else
+	  return cipheredState[cipheredState_index] >> 32;
       }
+      
+      // generate a new block and return the first 32 bits
+      (*this)++;
+      encryptCounter(cipheredState);
+      iChunk = 1; // the next call
+      return cipheredState[0] & 0xFFFFFFFF;   // this call
     }
-    _s[0] += z;
-  }
-  
-private:
-  uint64_t _k[4];             // key
-  uint64_t _s[4];             // state (counter)
-  uint64_t _o[4];             // cipher output    4 * 64 bit = 256 bit output
-  unsigned short _o_counter;  // output chunk counter, the 256 random bits in _o 
-  // are returned in eight 32 bit chunks
-};
-
-typedef prng_engine prng;
-typedef prng_engine sitmo;
-  
-} // namespace sitmo
-
-#undef MIXK
-#undef MIX2
+    
+    // -------------------------------------------------
+    // misc
+    // -------------------------------------------------
+    
+    // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 9
+    // Advances e’s state ei to ei+z by any means equivalent to z
+    // consecutive calls e().
+    void discard(uint64_t z)
+    {
+      // check if we stay in the current block
+      // cast to unsigned int to prevent comparison warning
+      if (z < (uint64_t)(8 - iChunk)) {
+	iChunk += static_cast<unsigned short>(z);
+	return;
+      }
+      
+      // we will have to generate a new block...
+      z -= (8 - iChunk);  // discard the remainder of the current blok
+      iChunk = z % 8;     // set the pointer in the correct element in the new block
+      z -= iChunk;        // update z
+      z >>= 3;                // the number of buffers is elements/8
+      ++z;                    // and one more because we crossed the buffer line
+      (*this)+=z;
+      encryptCounter(cipheredState);
+    }
+    
+    // -------------------------------------------------
+    // IO
+    // -------------------------------------------------
+    template<class CharT, class Traits>
+    friend std::basic_ostream<CharT,Traits>&
+    operator<<(std::basic_ostream<CharT,Traits>& os, const Sitmo& s) {
+      for (unsigned short i=0; i<4; ++i)
+	os << s.key[i] << ' ' << s.state[i] << ' ' << s.cipheredState[i] << ' ';
+      os << s.iChunk;
+      return os;
+    }
+    
+    template<class CharT, class Traits>
+    friend std::basic_istream<CharT,Traits>&
+    operator>>(std::basic_istream<CharT,Traits>& is, Sitmo& s) {
+      for (unsigned short i=0; i<4; ++i)
+	is >> s.key[i] >> s.state[i] >> s.cipheredState[i];
+      is >> s.iChunk;
+      return is;
+    } 
+    // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 10
+    // This operator is an equivalence relation. With Sx and Sy as the infinite 
+    // sequences of values that would be generated by repeated future calls to 
+    // x() and y(), respectively, returns true if Sx = Sy; else returns false.
+    bool operator==(const Sitmo& y) 
+    {
+      if (iChunk != y.iChunk) return false;
+      for (unsigned short i=0; i<4; ++i) {
+	if (state[i] != y.state[i]) return false;
+	if (key[i] != y.key[i]) return false;
+	if (cipheredState[i] != y.cipheredState[i]) return false;
+      }
+      return true;
+    }
+    
+    // req: 26.5.1.4 Random number engine requirements, p.908 table 117, row 11
+    bool operator!=(const Sitmo& y)
+    {
+      return !(*this == y);
+    }
+    
+    // set the counter
+    void set_counter(uint64_t s0=0, uint64_t s1=0, uint64_t s2=0, uint64_t s3=0, unsigned short o_counter=0)
+    {
+      state[0] = s0; 
+      state[1] = s1; 
+      state[2] = s2; 
+      state[3] = s3;
+      iChunk = o_counter % 8;
+      encryptCounter(cipheredState);
+    }
+    
+    /// Increments the counter by a given amount
+    Sitmo& operator+=(const uint64_t z)  ///< Amount to increment
+    {
+      /// Take note of old value, to check for overflow
+      const int old0=
+	state[0];
+      
+      // Increment
+      state[0]+=
+	z;
+      
+      // Overflow check
+      if(state[0]<=old0)
+	{
+	  /// Digit to increment
+	  int iDigit=
+	    1;
+	  
+	  // Carry over
+	  do state[iDigit]++;
+	  while(state[iDigit++]==0 and iDigit<4);
+	}
+      
+      return
+	*this;
+    }
+    
+    /// Unitary increment
+    Sitmo& operator++(int)
+    {
+      return
+	*this+=
+	1;
+    }
+  };
+}
 
 #endif
