@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['has_5fgenerate_5ftemplate',['has_generate_template',['../d5/d58/structSUNphi_1_1has__generate__template.html',1,'SUNphi']]],
   ['hasmember_5fassertmergeablewith',['HasMember_assertMergeableWith',['../d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html',1,'SUNphi']]],
   ['hasmember_5fcompsize',['HasMember_compSize',['../de/d50/structSUNphi_1_1HasMember__compSize.html',1,'SUNphi']]],
   ['hasmember_5feval',['HasMember_eval',['../d8/dfe/structSUNphi_1_1HasMember__eval.html',1,'SUNphi']]],
@@ -14,6 +13,5 @@ var searchData=
   ['hasmember_5fref1',['HasMember_ref1',['../da/db5/structSUNphi_1_1HasMember__ref1.html',1,'SUNphi']]],
   ['hasmember_5fref2',['HasMember_ref2',['../d3/d14/structSUNphi_1_1HasMember__ref2.html',1,'SUNphi']]],
   ['hasmember_5frefs',['HasMember_refs',['../dd/dce/structSUNphi_1_1HasMember__refs.html',1,'SUNphi']]],
-  ['hasmember_5ftk',['HasMember_Tk',['../d7/d03/structSUNphi_1_1HasMember__Tk.html',1,'SUNphi']]],
-  ['helper',['helper',['../dd/d07/structSUNphi_1_1has__generate__template_1_1helper.html',1,'SUNphi::has_generate_template']]]
+  ['hasmember_5ftk',['HasMember_Tk',['../d7/d03/structSUNphi_1_1HasMember__Tk.html',1,'SUNphi']]]
 ];

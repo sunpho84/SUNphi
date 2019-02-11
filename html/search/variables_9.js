@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ichunk',['iChunk',['../d9/d59/classSUNphi_1_1Sitmo.html#a1488f6be4df4e5e78decdc093696e542',1,'SUNphi::Sitmo']]],
   ['id',['id',['../d6/db9/classSUNphi_1_1Binder.html#ae12d944fe54c48a3b564b305421df93a',1,'SUNphi::Binder']]],
   ['imag_5fpart_5fid',['IMAG_PART_ID',['../d8/de8/Compl_8hpp.html#af9c479f2751ade1b58e168cea23e0adb',1,'SUNphi']]],
   ['indentlev',['indentLev',['../d3/d78/classSUNphi_1_1Logger.html#a45cfb7bf7049a669bae2f6f99ff237ef',1,'SUNphi::Logger']]],
