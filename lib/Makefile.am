@@ -21,5 +21,6 @@ BUILT_SOURCES=%D%/gitInfo.hpp
 
 # Library sources
 __top_builddir__lib_libsunphi_a_SOURCES= \
+	%D%/debug/BackTracing.cpp \
 	%D%/SUNphi.cpp
 
