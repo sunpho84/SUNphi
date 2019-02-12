@@ -16,24 +16,7 @@ namespace SUNphi
   {
     runLog<<"Backtracing...";
     
-    /// Maximal number of lines to be rewinded
-    constexpr int nMaxRew=
-      128;
-    
-    /// Rewinded stack
-    void* callstack[nMaxRew];
-    
-    /// Gets the stack and number of lines to be rewinded
-    int nRew=
-      backtrace(callstack,nMaxRew);
-    
-    /// Gets the symbols list
-    char** strs=
-      backtrace_symbols(callstack,nRew);
-    
-    for(int i=0;i<nRew;i++)
-      runLog<<strs[i];
-    
-    free(strs);
+    for(auto &p : getBackTraceList())
+      runLog<<p.compilUnit<<" "<<p.symbol<<" "<<p.offset;
   }
 }
