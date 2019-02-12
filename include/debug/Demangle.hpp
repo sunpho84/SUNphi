@@ -39,7 +39,7 @@ namespace SUNphi
     std::string out=
       (status==0)?
       name:
-      "(failed demangle)";
+      what+" (failed demangle)";
     
     // Free if succeded
     if(status==0)
