@@ -4,6 +4,7 @@ var searchData=
   ['getacter',['getActer',['../df/dc0/classSUNphi_1_1Vector.html#a2f3886703a75ed136611f43bd008d7e0',1,'SUNphi::Vector']]],
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
+  ['getbacktracelist',['getBackTraceList',['../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb',1,'SUNphi']]],
   ['getcomparer',['getComparer',['../df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5',1,'SUNphi::Vector']]],
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
   ['getexclusiveaccess',['getExclusiveAccess',['../d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43',1,'SUNphi::Logger']]],

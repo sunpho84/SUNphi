@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('d3/dbc/BackTracing_8hpp.html','../../'
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BackTracing.hpp File Reference</div>  </div>
@@ -114,14 +115,28 @@ $(document).ready(function(){initNavTree('d3/dbc/BackTracing_8hpp.html','../../'
 
 <p>Defines the backtracing function.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;execinfo.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">ios/MinimalLogger.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../de/dd9/Vector_8hpp_source.html">containers/Vector.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d2/df5/Demangle_8hpp_source.html">debug/Demangle.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d8/d32/String_8hpp_source.html">utility/String.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d3/dbc/BackTracing_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4a/classSUNphi_1_1BackTraceSymbol.html">SUNphi::BackTraceSymbol</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompose the backtrace symbol.  <a href="../../df/d4a/classSUNphi_1_1BackTraceSymbol.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3c13c8f0c61f375cac25993fb38413cb"><td class="memTemplParams" colspan="2">template&lt;int NMAX_REW = 128&gt; </td></tr>
+<tr class="memitem:a3c13c8f0c61f375cac25993fb38413cb"><td class="memTemplItemLeft" align="right" valign="top">Vector&lt; BackTraceSymbol &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb">SUNphi::getBackTraceList</a> ()</td></tr>
+<tr class="memdesc:a3c13c8f0c61f375cac25993fb38413cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the backtracing symbols list.  <a href="../../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb">More...</a><br /></td></tr>
+<tr class="separator:a3c13c8f0c61f375cac25993fb38413cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992573df4aa2bf7eb275f74ebc0f4cea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a992573df4aa2bf7eb275f74ebc0f4cea"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dbc/BackTracing_8hpp.html#a992573df4aa2bf7eb275f74ebc0f4cea">SUNphi::operator&lt;&lt;</a> (T &amp;&amp;os, const BackTraceSymbol &amp;s)</td></tr>
+<tr class="memdesc:a992573df4aa2bf7eb275f74ebc0f4cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a symbol to a stream.  <a href="../../d3/dbc/BackTracing_8hpp.html#a992573df4aa2bf7eb275f74ebc0f4cea">More...</a><br /></td></tr>
+<tr class="separator:a992573df4aa2bf7eb275f74ebc0f4cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3877df412abddaeeaa4d9441c0b4a55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3877df412abddaeeaa4d9441c0b4a55"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbc/BackTracing_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55">SUNphi::printBacktraceList</a> ()</td></tr>
 <tr class="memdesc:ab3877df412abddaeeaa4d9441c0b4a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the list of called routines. <br /></td></tr>
@@ -131,7 +146,72 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <div class="textblock"><p>Defines the backtracing function. </p>
 
 <p>Definition in file <a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html">BackTracing.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a3c13c8f0c61f375cac25993fb38413cb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NMAX_REW = 128&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;BackTraceSymbol&gt; SUNphi::getBackTraceList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the backtracing symbols list. </p>
+<p>Rewinded stack</p>
+<p>Gets the stack and number of lines to be rewinded</p>
+<p>Gets the symbols list</p>
+<p>Result </p>
+
+<p>Definition at line <a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html">BackTracing.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a992573df4aa2bf7eb275f74ebc0f4cea"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d4a/classSUNphi_1_1BackTraceSymbol.html">BackTraceSymbol</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print a symbol to a stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Stream </td></tr>
+    <tr><td class="paramname">s</td><td>Symbol to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html">BackTracing.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

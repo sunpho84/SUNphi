@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['backtracesymbol',['BackTraceSymbol',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html',1,'SUNphi']]],
   ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html',1,'SUNphi']]],
   ['baseadder',['BaseAdder',['../d6/d4b/structSUNphi_1_1BaseAdder.html',1,'SUNphi']]],
   ['baseassigner',['BaseAssigner',['../dd/d4a/structSUNphi_1_1BaseAssigner.html',1,'SUNphi']]],

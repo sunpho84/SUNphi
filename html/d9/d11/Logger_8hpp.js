@@ -6,5 +6,6 @@ var Logger_8hpp =
     [ "SCOPE_ALWAYS_PUT_SIGN", "d9/d11/Logger_8hpp.html#a18493bdb144a0dcbb5763d22c722e40b", null ],
     [ "SCOPE_INDENT", "d9/d11/Logger_8hpp.html#aecc0d2846722c538df677fa14c79a3cf", null ],
     [ "SCOPE_REAL_PRECISION", "d9/d11/Logger_8hpp.html#a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2", null ],
-    [ "SET_FOR_CURRENT_SCOPE", "d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda", null ]
+    [ "SET_FOR_CURRENT_SCOPE", "d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda", null ],
+    [ "runLog", "d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4", null ]
 ];

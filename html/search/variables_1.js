@@ -2,6 +2,7 @@ var searchData=
 [
   ['adapter',['adapter',['../d5/d1c/classSUNphi_1_1RelBinder.html#a829319995809aa5456718e40579d0271',1,'SUNphi::RelBinder']]],
   ['addflags',['addFlags',['../d0/d45/Flags_8hpp.html#ac498ba60d979d9b5c832e56ac5345396',1,'SUNphi']]],
+  ['address',['address',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html#a5767ecc26193a2aa29b04a6aab499de5',1,'SUNphi::BackTraceSymbol']]],
   ['alignment',['ALIGNMENT',['../d0/d24/SIMD_8hpp.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],
   ['aliver',['aliver',['../d2/d0a/Aliver_8hpp.html#a26e7fb087e5f8c2b14896ba23904aa0c',1,'SUNphi']]],
   ['all_5franks',['ALL_RANKS',['../df/d09/classSUNphi_1_1Mpi.html#ad4d63f013ed16da4e22ee5e1b6c4bc36',1,'SUNphi::Mpi']]],

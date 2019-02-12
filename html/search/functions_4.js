@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['demangle',['demangle',['../d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83',1,'SUNphi']]],
   ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90',1,'SUNphi::Grid']]],
   ['dir',['dir',['../de/dda/Dir_8hpp.html#ae2e5d0c42dbe9855d3b20935ca39145c',1,'SUNphi']]],
   ['durationin',['durationIn',['../d8/dbf/Timer_8hpp.html#a38e5c40dcbca7b595dcdb47e5da2ebb8',1,'SUNphi']]],

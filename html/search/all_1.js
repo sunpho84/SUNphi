@@ -11,6 +11,7 @@ var searchData=
   ['addflags',['addFlags',['../d0/d45/Flags_8hpp.html#ac498ba60d979d9b5c832e56ac5345396',1,'SUNphi']]],
   ['addpointer',['AddPointer',['../d0/d81/TypeTraits_8hpp.html#a7f8ae981a52d211ee9e56eff9222363c',1,'SUNphi']]],
   ['addpointeriffunction',['AddPointerIfFunction',['../d0/d81/TypeTraits_8hpp.html#a716ef8de43987727a6f4d784b9b5d4b1',1,'SUNphi']]],
+  ['address',['address',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html#a5767ecc26193a2aa29b04a6aab499de5',1,'SUNphi::BackTraceSymbol']]],
   ['adj',['adj',['../d8/d3a/Adj_8hpp.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
   ['adj_2ehpp',['Adj.hpp',['../d8/d3a/Adj_8hpp.html',1,'']]],
   ['alignment',['ALIGNMENT',['../d0/d24/SIMD_8hpp.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],

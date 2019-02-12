@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['backtracesymbol',['BackTraceSymbol',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html',1,'SUNphi']]],
+  ['backtracing_2ecpp',['BackTracing.cpp',['../dc/dd4/BackTracing_8cpp.html',1,'']]],
   ['backtracing_2ehpp',['BackTracing.hpp',['../d3/dbc/BackTracing_8hpp.html',1,'']]],
   ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html',1,'SUNphi']]],
   ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html#a83c1da0715c9d8cbc292f637d2ef947d',1,'SUNphi::Barrier']]],

@@ -116,7 +116,8 @@ $(document).ready(function(){initNavTree('d8/d32/String_8hpp.html','../../');});
 
 <p>Header file to support string operations.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="../../d8/d32/String_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -137,6 +138,25 @@ Functions</h2></td></tr>
 <tr class="separator:a9bef329ab1e417fc38ce15db59027624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a209d82c3897d63fd48add4ada6abb8ce"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#a209d82c3897d63fd48add4ada6abb8ce">SUNphi::cString</a> (const std::string &amp;in)</td></tr>
 <tr class="separator:a209d82c3897d63fd48add4ada6abb8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a0148720d72a1cc0ff2c6a37bfc07e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#a61a0148720d72a1cc0ff2c6a37bfc07e">SUNphi::substrBetweenPos</a> (const std::string &amp;str, const unsigned int &amp;beg, const unsigned int &amp;end)</td></tr>
+<tr class="memdesc:a61a0148720d72a1cc0ff2c6a37bfc07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring out of the passed chars, among position beg and end.  <a href="../../d8/d32/String_8hpp.html#a61a0148720d72a1cc0ff2c6a37bfc07e">More...</a><br /></td></tr>
+<tr class="separator:a61a0148720d72a1cc0ff2c6a37bfc07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f946fb6df85d23413ac1be2f185ac2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5f946fb6df85d23413ac1be2f185ac2"></a>
+constexpr unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#ac5f946fb6df85d23413ac1be2f185ac2">SUNphi::__strLength</a> (char)</td></tr>
+<tr class="memdesc:ac5f946fb6df85d23413ac1be2f185ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of a char. <br /></td></tr>
+<tr class="separator:ac5f946fb6df85d23413ac1be2f185ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46cc0f6b91b5ec7e8de2a0483a701124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46cc0f6b91b5ec7e8de2a0483a701124"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#a46cc0f6b91b5ec7e8de2a0483a701124">SUNphi::__strLength</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a46cc0f6b91b5ec7e8de2a0483a701124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of a std::string. <br /></td></tr>
+<tr class="separator:a46cc0f6b91b5ec7e8de2a0483a701124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c331f0c20461ae9865f34bce637bc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97c331f0c20461ae9865f34bce637bc8"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#a97c331f0c20461ae9865f34bce637bc8">SUNphi::__strLength</a> (const char *str)</td></tr>
+<tr class="memdesc:a97c331f0c20461ae9865f34bce637bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of a c-string. <br /></td></tr>
+<tr class="separator:a97c331f0c20461ae9865f34bce637bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b14749934120e1eeaaa353b1cdfff6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac9b14749934120e1eeaaa353b1cdfff6"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d32/String_8hpp.html#ac9b14749934120e1eeaaa353b1cdfff6">SUNphi::substrBetween</a> (const std::string &amp;str, const T &amp;i, const T &amp;f)</td></tr>
+<tr class="memdesc:ac9b14749934120e1eeaaa353b1cdfff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring out of the passed delimiters.  <a href="../../d8/d32/String_8hpp.html#ac9b14749934120e1eeaaa353b1cdfff6">More...</a><br /></td></tr>
+<tr class="separator:ac9b14749934120e1eeaaa353b1cdfff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file to support string operations. </p>
@@ -159,7 +179,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  static constexpr <span class="keyword">const</span> <span class="keywordtype">char</span>* name()                   \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      STR;                              \</div><div class="line">  }</div></div><!-- fragment -->
 <p>Provides a static <code>name()</code> method to a class, returning STR. </p>
 
-<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
 
 </div>
 </div>
@@ -194,7 +214,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
 
 </div>
 </div>
@@ -228,7 +248,117 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00043">43</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_ac9b14749934120e1eeaaa353b1cdfff6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SUNphi::substrBetween </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a substring out of the passed delimiters. </p>
+<p>Position of beginning token</p>
+<p>Beginning of the substring</p>
+<p>End of the substring </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Substring to split </td></tr>
+    <tr><td class="paramname">i</td><td>Beginning token </td></tr>
+    <tr><td class="paramname">f</td><td>End token </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a61a0148720d72a1cc0ff2c6a37bfc07e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SUNphi::substrBetweenPos </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>beg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a substring out of the passed chars, among position beg and end. </p>
+<p>Length to return </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>Substring to split </td></tr>
+    <tr><td class="paramname">beg</td><td>Beginning position </td></tr>
+    <tr><td class="paramname">end</td><td>End position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d8/d32/String_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d8/d32/String_8hpp_source.html">String.hpp</a>.</p>
 
 </div>
 </div>
