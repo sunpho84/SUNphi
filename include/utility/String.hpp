@@ -49,11 +49,11 @@ namespace SUNphi
   
   /// Returns a substring out of the passed chars, among position beg and end
   inline std::string substrBetweenPos(const std::string& str,    ///< Substring to split
-				      const unsigned int& beg,   ///< Beginning position
-				      const unsigned int& end)   ///< End position
+				      const size_t& beg,         ///< Beginning position
+				      const size_t& end)         ///< End position
   {
     /// Length to return
-    const unsigned len=
+    const size_t len=
       end-beg;
     
     return
@@ -63,21 +63,21 @@ namespace SUNphi
   }
   
   /// Length of a char
-  constexpr unsigned int __strLength(char)
+  constexpr size_t __strLength(char)
   {
     return
       1;
   }
   
   /// Length of a std::string
-  inline unsigned int __strLength(const std::string& str)
+  inline size_t __strLength(const std::string& str)
   {
     return
       str.length();
   }
   
   /// Length of a c-string
-  inline unsigned int __strLength(const char* str)
+  inline size_t __strLength(const char* str)
   {
     return
       strlen(str);
@@ -90,17 +90,17 @@ namespace SUNphi
 				   const T& f)             ///< End token
   {
     /// Position of beginning token
-    const unsigned int iPos=
+    const size_t iPos=
       str.find(i);
     
     /// Beginning of the substring
-    const unsigned int beg=
+    const size_t beg=
       (iPos==std::string::npos)?
-      iPos+__strLength(i):
-      iPos;
+      iPos:
+      iPos+__strLength(i);
     
     /// End of the substring
-    const unsigned int end=
+    const size_t end=
       str.find(f);
     
     return
