@@ -26,7 +26,7 @@ var searchData=
   ['startnewline',['startNewLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a768687d35bc97af8fb61f3fab6babfb6',1,'SUNphi::Logger::LoggerLine']]],
   ['stop',['stop',['../d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2',1,'SUNphi::Timer']]],
   ['substrbetween',['substrBetween',['../d8/d32/String_8hpp.html#ac9b14749934120e1eeaaa353b1cdfff6',1,'SUNphi']]],
-  ['substrbetweenpos',['substrBetweenPos',['../d8/d32/String_8hpp.html#a61a0148720d72a1cc0ff2c6a37bfc07e',1,'SUNphi']]],
+  ['substrbetweenpos',['substrBetweenPos',['../d8/d32/String_8hpp.html#ad04c678d364972ee9390e3ffeaa92fcc',1,'SUNphi']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
   ['sync',['sync',['../df/d49/structSUNphi_1_1Barrier.html#a9eca3ba935da713cf9c1696f12ed5e5e',1,'SUNphi::Barrier']]]
 ];

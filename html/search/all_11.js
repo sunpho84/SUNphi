@@ -102,7 +102,7 @@ var searchData=
   ['string_2ehpp',['String.hpp',['../d8/d32/String_8hpp.html',1,'']]],
   ['sub',['Sub',['../da/def/structSUNphi_1_1IntSeq.html#a7495becadb913e86710fe02e2125a073',1,'SUNphi::IntSeq']]],
   ['substrbetween',['substrBetween',['../d8/d32/String_8hpp.html#ac9b14749934120e1eeaaa353b1cdfff6',1,'SUNphi']]],
-  ['substrbetweenpos',['substrBetweenPos',['../d8/d32/String_8hpp.html#a61a0148720d72a1cc0ff2c6a37bfc07e',1,'SUNphi']]],
+  ['substrbetweenpos',['substrBetweenPos',['../d8/d32/String_8hpp.html#ad04c678d364972ee9390e3ffeaa92fcc',1,'SUNphi']]],
   ['summatorial',['summatorial',['../df/dc0/classSUNphi_1_1Vector.html#ae1db6c35f667887540d286d0e2e45e31',1,'SUNphi::Vector::summatorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#aad81da822256fd3706b31c7c42c64113',1,'SUNphi::Vector::summatorial(const UnsignedSize beg=0) const ']]],
   ['sun_2ehpp',['SUN.hpp',['../d4/df5/SUN_8hpp.html',1,'']]],
   ['sunphi_2ecpp',['SUNphi.cpp',['../dd/d2b/SUNphi_8cpp.html',1,'']]],
