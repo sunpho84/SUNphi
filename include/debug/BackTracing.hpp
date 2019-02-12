@@ -6,6 +6,7 @@
 /// \brief Defines the backtracing function
 
 #include <containers/Vector.hpp>
+#include <debug/Demangle.hpp>
 #include <utility/String.hpp>
 
 namespace SUNphi
@@ -21,6 +22,11 @@ namespace SUNphi
     /// Symbol name
     const std::string symbol;
     
+#ifdef CAN_DEMANGLE
+    /// Demangled symbol name
+    const std::string demangledSymbol;
+#endif
+    
     /// Offset
     const std::string offset;
     
@@ -31,6 +37,9 @@ namespace SUNphi
     BackTraceSymbol(const char* str) :
       compilUnit(substrBetweenPos(str,0,std::string(str).find('('))),
       symbol(substrBetween(str,'(','+')),
+#ifdef CAN_DEMANGLE
+      demangledSymbol(demangle(symbol)),
+#endif
       offset(substrBetween(str,'+',')')),
       address(substrBetween(str,'[',']'))
     {
@@ -63,6 +72,25 @@ namespace SUNphi
     
     return
       res;
+  }
+  
+  /// Print a symbol to a stream
+  template <typename T>                            // Type of the stream
+  DECLAUTO operator<<(T&& os,                    ///< Stream
+		      const BackTraceSymbol& s)  ///< Symbol to print
+  {
+    return
+      os<<s.compilUnit<<
+      ", symbol: "<<
+      ((s.symbol!="")?
+#ifdef CAN_DEMANGLE
+       demangle(s.symbol)
+#else
+       s.symbol
+#endif
+       :"n.a")<<
+      ", offset: "<<((s.offset!="")?s.offset:"n.a")<<
+      ", address: "<<s.address;
   }
   
   /// Write the list of called routines

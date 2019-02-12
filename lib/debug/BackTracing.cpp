@@ -8,6 +8,7 @@
 
 #include <execinfo.h>
 
+#include <debug/BackTracing.hpp>
 #include <ios/Logger.hpp>
 
 namespace SUNphi
@@ -17,6 +18,6 @@ namespace SUNphi
     runLog<<"Backtracing...";
     
     for(auto &p : getBackTraceList())
-      runLog<<p.compilUnit<<" "<<p.symbol<<" "<<p.offset;
+      runLog<<p;
   }
 }
