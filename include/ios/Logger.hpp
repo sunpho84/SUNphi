@@ -207,29 +207,35 @@ namespace SUNphi
       /// Prints a string
       LoggerLine& operator<<(const char* str)
       {
-	/// Pointer to the first char of the string
-	const char* p=
-	  str;
-	
-	// Prints until finding end of string
-	while(*p!='\0')
+	if(str==nullptr)
+	  return
+	    *this<<"(null)";
+	else
 	  {
-	    // If new line is found, end current line
-	    if(*p=='\n')
-	      {
-		endLine();
-		startNewLine();
-	      }
-	    else
-	      // Prints the char
-	      *this<<*p;
+	    /// Pointer to the first char of the string
+	    const char* p=
+	      str;
 	    
-	    // Increment the char
-	    p++;
+	    // Prints until finding end of string
+	    while(*p!='\0')
+	      {
+		// If new line is found, end current line
+		if(*p=='\n')
+		  {
+		    endLine();
+		    startNewLine();
+		  }
+		else
+		  // Prints the char
+		  *this<<*p;
+		
+		// Increment the char
+		p++;
+	      }
+	    
+	    return
+	      *this;
 	  }
-	
-	return
-	  *this;
       }
       
       /// Prints a char
