@@ -57,7 +57,7 @@ namespace SUNphi
       end-beg;
     
     return
-      (end>beg)?
+      (end>beg and end!=std::string::npos and beg!=std::string::npos)?
       str.substr(beg,len):
       "";
   }

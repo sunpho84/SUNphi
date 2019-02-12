@@ -22,11 +22,6 @@ namespace SUNphi
     /// Symbol name
     const std::string symbol;
     
-#ifdef CAN_DEMANGLE
-    /// Demangled symbol name
-    const std::string demangledSymbol;
-#endif
-    
     /// Offset
     const std::string offset;
     
@@ -37,9 +32,6 @@ namespace SUNphi
     BackTraceSymbol(const char* str) :
       compilUnit(substrBetweenPos(str,0,std::string(str).find('('))),
       symbol(substrBetween(str,'(','+')),
-#ifdef CAN_DEMANGLE
-      demangledSymbol(demangle(symbol)),
-#endif
       offset(substrBetween(str,'+',')')),
       address(substrBetween(str,'[',']'))
     {
