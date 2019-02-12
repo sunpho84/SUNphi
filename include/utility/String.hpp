@@ -5,6 +5,7 @@
 ///
 /// \brief Header file to support string operations
 
+#include <cstring>
 #include <string>
 
 namespace SUNphi
@@ -46,6 +47,57 @@ namespace SUNphi
       in.c_str();
   }
   
+  /// Returns a substring out of the passed chars, among position beg and end
+  inline std::string substrBetweenPos(const std::string& str, ///< Substring to split
+				      const int& beg,         ///< Beginning position
+				      const int& end)         ///< End position
+  {
+    /// Length to return
+    const int len=
+      end-beg;
+    
+    return
+      str.substr(beg,len);
+  }
+  
+  /// Length of a char
+  constexpr int __strLength(char)
+  {
+    return
+      1;
+  }
+  
+  /// Length of a std::string
+  inline int __strLength(const std::string& str)
+  {
+    return
+      str.length();
+  }
+  
+  /// Length of a c-string
+  inline int __strLength(const char* str)
+  {
+    return
+      strlen(str);
+  }
+  
+  /// Returns a substring out of the passed delimiters
+  template <typename T>
+  inline std::string substrBetween(const std::string& str, ///< Substring to split
+				   const T& i,             ///< Beginning token
+				   const T& f)             ///< End token
+  {
+    /// Beginning of the substring
+    const int beg=
+      str.find(i)+__strLength(i);
+    
+    /// End of the substring
+    const int end=
+      str.find(f);
+    
+    return
+      substrBetweenPos(str,beg,end);
+  }
 }
 
 #endif
