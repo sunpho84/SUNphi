@@ -68,6 +68,15 @@ then
 	fi
 fi
 
+# Search for dwarf
+if test "$enable_debug" == "yes"
+then
+	default_dwarf=true
+else
+	default_dwarf=false
+fi
+AX_SUBPACKAGE(dwarf,libdwarf/dwarf.h,dwarf,dwarf_child,DWARF,$default_dwarf)
+
 # Configure doxygen
 DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
 DX_PDF_FEATURE(OFF)
