@@ -9,6 +9,7 @@
 #warning //#include <random/Encrypter.hpp>
 
 #include <random/Sitmo.hpp>
+#include <random/TrueRandom.hpp>
 
 namespace SUNphi
 {
