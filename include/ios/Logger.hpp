@@ -194,11 +194,11 @@ namespace SUNphi
       }
       
       /// Catch-all print
-      template <typename T,                     // Type of the quantity to print
-		typename=decltype(File{}<<T{})> // SFINAE needed to avoid ambiguous overload
-      LoggerLine& operator<<(const T& t)      ///< Object to print
+      template <typename T,                             // Type of the quantity to print
+		typename=decltype(File{}<<RemRef<T>{})> // SFINAE needed to avoid ambiguous overload
+      LoggerLine& operator<<(T&& t)                     ///< Object to print
       {
-	logger.file()<<t;
+	logger.file()<<forw<T>(t);
 	
 	return
 	  *this;
