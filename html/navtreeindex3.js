@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#a08513e9ce4337808b9c84d44f69921b6":[2,0,0,122,5],
+"d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#aa857fae8ea77c0ba869b5335cecaeffb":[2,0,0,122,6],
 "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#ad10acc766f3d1ee1012152abf65c1270":[2,0,0,122,3],
 "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html#af73978be75e1cbee0031f805e4d3d52e":[2,0,0,122,4],
 "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html":[2,0,0,121],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "d8/d6a/Mpi_8hpp_source.html":[3,0,2,10,1],
 "d8/d7d/structSUNphi_1_1ConstrainHasMember__Fund.html":[2,0,0,88],
 "d8/d7e/structSUNphi_1_1ConstrainIsIntegral.html":[2,0,0,102],
-"d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html":[2,0,0,134,0],
-"d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html":[2,0,0,122,0],
-"d8/d9a/MinimalLogger_8hpp.html":[3,0,2,3,1]
+"d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html":[2,0,0,134,0]
 };

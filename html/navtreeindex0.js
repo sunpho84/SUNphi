@@ -188,6 +188,8 @@ var NAVTREEINDEX0 =
 "d1/d7a/TensStor_8hpp.html":[3,0,2,11,4],
 "d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b":[3,0,2,11,4,1],
 "d1/d7a/TensStor_8hpp_source.html":[3,0,2,11,4],
+"d1/d89/Dwarf_8hpp.html":[3,0,2,1,3],
+"d1/d89/Dwarf_8hpp_source.html":[3,0,2,1,3],
 "d1/d8b/SUNphi_8hpp.html":[3,0,2,25],
 "d1/d8b/SUNphi_8hpp_source.html":[3,0,2,25],
 "d1/d96/structSUNphi_1_1TensComp.html":[2,0,0,160],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "d2/d24/classSUNphi_1_1Conjer.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,65,10],
 "d2/d24/classSUNphi_1_1Conjer.html#a68896d73ee69538a335f567429c83dd4":[2,0,0,65,18],
 "d2/d24/classSUNphi_1_1Conjer.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,65,14],
-"d2/d24/classSUNphi_1_1Conjer.html#a6ed1add477ce6057bf17a62daab4ec52":[2,0,0,65,2],
-"d2/d24/classSUNphi_1_1Conjer.html#a7c06020cfbe2fbdb4ea34ae883554418":[2,0,0,65,12],
-"d2/d24/classSUNphi_1_1Conjer.html#a7d209a279dae127b288b945306d1e902":[2,0,0,65,0]
+"d2/d24/classSUNphi_1_1Conjer.html#a6ed1add477ce6057bf17a62daab4ec52":[2,0,0,65,2]
 };

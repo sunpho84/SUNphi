@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"dc/d5d/classSUNphi_1_1MulAdder.html#aaa90c9aff2d53eaec94114d77b622b94":[2,0,0,144,1],
+"dc/d5d/classSUNphi_1_1MulAdder.html#aba9166e3f1b553d6364afaac9ef61d32":[2,0,0,144,22],
 "dc/d5d/classSUNphi_1_1MulAdder.html#abebb6b47a6657f0b56340cc4c5db131c":[2,0,0,144,4],
 "dc/d5d/classSUNphi_1_1MulAdder.html#ac2841f162e091c1ce1adb17aad8aed81":[2,0,0,144,13],
 "dc/d5d/classSUNphi_1_1MulAdder.html#ac8308bc9af695307bc1899f060d0a25d":[2,0,0,144,35],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "dd/df8/IntSeq_8hpp.html#a302d28a5e97d3f2dafd2064ed7d1ff02":[3,0,2,2,3,12],
 "dd/df8/IntSeq_8hpp.html#a6be5c1f600f694603d91fc5ffe099091":[3,0,2,2,3,13],
 "dd/df8/IntSeq_8hpp.html#ad83e07565c46761a5d55dce9c28f4847":[3,0,2,2,3,8],
-"dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d":[3,0,2,2,3,11],
-"dd/df8/IntSeq_8hpp_source.html":[3,0,2,2,3],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html":[2,0,0,161,1]
+"dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d":[3,0,2,2,3,11]
 };

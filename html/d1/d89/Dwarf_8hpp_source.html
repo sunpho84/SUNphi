@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/random/TrueRandomGenerator.hpp File Reference</title>
+<title>SUNphi: include/debug/Dwarf.hpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d7/d05/TrueRandomGenerator_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('d1/d89/Dwarf_8hpp_source.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -105,44 +105,16 @@ $(document).ready(function(){initNavTree('d7/d05/TrueRandomGenerator_8hpp.html',
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">TrueRandomGenerator.hpp File Reference</div>  </div>
+<div class="title">Dwarf.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Generate random numbers according to the true random device.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;random&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">system/Mpi.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d1/d5e/SingleInstance_8hpp_source.html">utility/SingleInstance.hpp</a>&gt;</code><br />
-</div>
-<p><a href="../../d7/d05/TrueRandomGenerator_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d95/classSUNphi_1_1TrueRandomGenerator.html">SUNphi::TrueRandomGenerator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a9c7bc8007b11140431020e8e6320a4c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c7bc8007b11140431020e8e6320a4c9"></a>
-TrueRandomGenerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d05/TrueRandomGenerator_8hpp.html#a9c7bc8007b11140431020e8e6320a4c9">SUNphi::trueRandomGenerator</a></td></tr>
-<tr class="memdesc:a9c7bc8007b11140431020e8e6320a4c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global true random generator. <br /></td></tr>
-<tr class="separator:a9c7bc8007b11140431020e8e6320a4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generate random numbers according to the true random device. </p>
-
-<p>Definition in file <a class="el" href="../../d7/d05/TrueRandomGenerator_8hpp_source.html">TrueRandomGenerator.hpp</a>.</p>
-</div></div><!-- contents -->
+<a href="../../d1/d89/Dwarf_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">_DWARF_HPP</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">_DWARF_HPP</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/// \file Dwarf.hpp</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">///</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/// \brief Header file to support debug of the dwarf data</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> HAVE_CONFIG_H</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;config.hpp&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> <span class="preprocessor">USE_DWARF</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; <span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">libdwarf</span><span class="preprocessor">/</span><span class="preprocessor">dwarf</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace</span> SUNphi</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div></div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_081a228b1cfa69ae178332a28d6a95f4.html">random</a></li><li class="navelem"><a class="el" href="../../d7/d05/TrueRandomGenerator_8hpp.html">TrueRandomGenerator.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_0ca87e0e155b63d3277a4a8052f2e1d0.html">debug</a></li><li class="navelem"><a class="el" href="../../d1/d89/Dwarf_8hpp.html">Dwarf.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

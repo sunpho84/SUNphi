@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html":[2,0,0,122,0],
+"d8/d9a/MinimalLogger_8hpp.html":[3,0,2,3,1],
 "d8/d9a/MinimalLogger_8hpp.html#a983825154c3b066e753ad3641bd04fe1":[3,0,2,3,1,0],
 "d8/d9a/MinimalLogger_8hpp_source.html":[3,0,2,3,1],
 "d8/d9d/structSUNphi_1_1ConstrainAreRelBinders.html":[2,0,0,75],
@@ -115,18 +117,18 @@ var NAVTREEINDEX4 =
 "d9/d59/classSUNphi_1_1Sitmo.html#a6b012773f65b6705eff7f468f4ad1754":[2,0,0,156,11],
 "d9/d59/classSUNphi_1_1Sitmo.html#a6b012773f65b6705eff7f468f4ad1754":[2,0,0,156,12],
 "d9/d59/classSUNphi_1_1Sitmo.html#a6da491841b7b1e503212251ea022ba89":[2,0,0,156,22],
-"d9/d59/classSUNphi_1_1Sitmo.html#a7104a59c2cd8cc98be7d403231467419":[2,0,0,156,8],
 "d9/d59/classSUNphi_1_1Sitmo.html#a7104a59c2cd8cc98be7d403231467419":[2,0,0,156,7],
+"d9/d59/classSUNphi_1_1Sitmo.html#a7104a59c2cd8cc98be7d403231467419":[2,0,0,156,8],
 "d9/d59/classSUNphi_1_1Sitmo.html#a7af9a41c4fab1c778e18090149f664ab":[2,0,0,156,2],
 "d9/d59/classSUNphi_1_1Sitmo.html#a7af9a41c4fab1c778e18090149f664ab":[2,0,0,156,0],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8024913efb3328b0c330f5034e3ae722":[2,0,0,156,6],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8090e33b087bad1992849a8e50fefc2f":[2,0,0,156,13],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8090e33b087bad1992849a8e50fefc2f":[2,0,0,156,14],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8d8b157fabc5122bd6548371c49a0fe3":[2,0,0,156,27],
-"d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a":[2,0,0,156,1],
 "d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a":[2,0,0,156,3],
-"d9/d59/classSUNphi_1_1Sitmo.html#ac80bbdd5b07d9e9a86c30636ae4cfa1a":[2,0,0,156,16],
+"d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a":[2,0,0,156,1],
 "d9/d59/classSUNphi_1_1Sitmo.html#ac80bbdd5b07d9e9a86c30636ae4cfa1a":[2,0,0,156,15],
+"d9/d59/classSUNphi_1_1Sitmo.html#ac80bbdd5b07d9e9a86c30636ae4cfa1a":[2,0,0,156,16],
 "d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb":[2,0,0,156,4],
 "d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb":[2,0,0,156,5],
 "d9/d59/classSUNphi_1_1Sitmo.html#ad9f59655f5105c8b7f428fc15b0b928b":[2,0,0,156,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "da/d65/Add_8hpp.html#a5872359ff930d8bd62bf794615caf226":[3,0,2,9,0,8],
 "da/d65/Add_8hpp.html#a5fed21f6a353cc5d70bb127fe5bcc963":[3,0,2,9,0,5],
 "da/d65/Add_8hpp.html#a7861a33e6e18e86da33dbf3e492a629b":[3,0,2,9,0,3],
-"da/d65/Add_8hpp.html#a9aa88afc3b19d756d1f2fa57820c2149":[3,0,2,9,0,7],
-"da/d65/Add_8hpp.html#ab87e41e0c2e6e86e3ba3f3996b884e1b":[3,0,2,9,0,11],
-"da/d65/Add_8hpp.html#ae238bc7ea8e64c38e24560b647d8e121":[3,0,2,9,0,6]
+"da/d65/Add_8hpp.html#a9aa88afc3b19d756d1f2fa57820c2149":[3,0,2,9,0,7]
 };
