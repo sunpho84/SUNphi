@@ -1,7 +1,7 @@
-#ifndef _TRUERANDOM_HPP
-#define _TRUERANDOM_HPP
+#ifndef _TRUERANDOMGENERATOR_HPP
+#define _TRUERANDOMGENERATOR_HPP
 
-/// \file TrueRandom.hpp
+/// \file TrueRandomGenerator.hpp
 ///
 /// \brief Generate random numbers according to the true random device
 
