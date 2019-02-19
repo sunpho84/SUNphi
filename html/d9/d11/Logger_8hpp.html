@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Logger.hpp File Reference</div>  </div>
@@ -120,6 +119,7 @@ $(document).ready(function(){initNavTree('d9/d11/Logger_8hpp.html','../../');});
 <code>#include &lt;<a class="el" href="../../d3/d3b/Threads_8hpp_source.html">Threads.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d3/dbc/BackTracing_8hpp_source.html">debug/BackTracing.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../db/dd7/Crash_8hpp_source.html">debug/Crash.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d7/d8a/File_8hpp_source.html">ios/File.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../de/d19/TextColors_8hpp_source.html">ios/TextColors.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">system/Mpi.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d8/dbf/Timer_8hpp_source.html">system/Timer.hpp</a>&gt;</code><br />
@@ -140,28 +140,6 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the logger indentation level for the object scope.  <a href="../../d3/d11/classSUNphi_1_1ScopeIndenter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:aecc0d2846722c538df677fa14c79a3cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#aecc0d2846722c538df677fa14c79a3cf">SCOPE_INDENT</a>(VAR)</td></tr>
-<tr class="memdesc:aecc0d2846722c538df677fa14c79a3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the logger to be more indented.  <a href="#aecc0d2846722c538df677fa14c79a3cf">More...</a><br /></td></tr>
-<tr class="separator:aecc0d2846722c538df677fa14c79a3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f8f0ea1cf97b24c9bb6261c63ac6cda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f8f0ea1cf97b24c9bb6261c63ac6cda"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda">SET_FOR_CURRENT_SCOPE</a>(NAME,  VAR, ...)&#160;&#160;&#160;ScopeChangeVar <a class="el" href="../../db/d18/Macros_8hpp.html#a14646c9db4f0ec6e1749f85fbe510ba2">NAME3</a>(SET,NAME,__LINE__)(VAR,__VA_ARGS__)</td></tr>
-<tr class="memdesc:a3f8f0ea1cf97b24c9bb6261c63ac6cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set for current scope. <br /></td></tr>
-<tr class="separator:a3f8f0ea1cf97b24c9bb6261c63ac6cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2">SCOPE_REAL_PRECISION</a>(LOGGER,  VAL)&#160;&#160;&#160;<a class="el" href="../../d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda">SET_FOR_CURRENT_SCOPE</a>(LOGGER_REAL_PRECISION,LOGGER.realPrecision,VAL)</td></tr>
-<tr class="memdesc:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the precision for current scope. <br /></td></tr>
-<tr class="separator:a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18493bdb144a0dcbb5763d22c722e40b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18493bdb144a0dcbb5763d22c722e40b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a18493bdb144a0dcbb5763d22c722e40b">SCOPE_ALWAYS_PUT_SIGN</a>(LOGGER)&#160;&#160;&#160;<a class="el" href="../../d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda">SET_FOR_CURRENT_SCOPE</a>(LOGGER_ALWAYS_PRINT_SIGN,LOGGER.alwaysPrintSign,true)</td></tr>
-<tr class="memdesc:a18493bdb144a0dcbb5763d22c722e40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set printing or not sign at the beginning of a number for current scope. <br /></td></tr>
-<tr class="separator:a18493bdb144a0dcbb5763d22c722e40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e253123537b182a24d93ee87671bf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08e253123537b182a24d93ee87671bf9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d11/Logger_8hpp.html#a08e253123537b182a24d93ee87671bf9">SCOPE_ALL_RANKS_CAN_PRINT</a>(LOGGER)&#160;&#160;&#160;<a class="el" href="../../d9/d11/Logger_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda">SET_FOR_CURRENT_SCOPE</a>(LOGGER_ALL_RANKS_CAN_PRINT,LOGGER.onlyMasterRankPrint,false)</td></tr>
-<tr class="memdesc:a08e253123537b182a24d93ee87671bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows all ransk to print for current scope. <br /></td></tr>
-<tr class="separator:a08e253123537b182a24d93ee87671bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a19393a3bdd006493fb56d5af4118a1d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19393a3bdd006493fb56d5af4118a1d4"></a>
@@ -176,29 +154,7 @@ Logger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 <p>If MPI is running, and all ranks are allowed, to print, each line is prepended with the rank id. No cross-ranks lock is issued. </p>
 
 <p>Definition in file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="aecc0d2846722c538df677fa14c79a3cf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SCOPE_INDENT</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">VAR</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  ScopeIndenter <a class="code" href="../../db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8">NAME2</a>(SCOPE_INDENTER,__LINE__)(VAR)</div><div class="ttc" id="Macros_8hpp_html_ac70b472800724a4a60166f92cea1c6c8"><div class="ttname"><a href="../../db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8">NAME2</a></div><div class="ttdeci">#define NAME2(X, Y)</div><div class="ttdoc">Merges two tokens using a _. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d18/Macros_8hpp_source.html#l00033">Macros.hpp:33</a></div></div>
-</div><!-- fragment -->
-<p>Mark the logger to be more indented. </p>
-
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00499">499</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

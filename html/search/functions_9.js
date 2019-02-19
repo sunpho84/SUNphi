@@ -9,6 +9,6 @@ var searchData=
   ['isinitialized',['isInitialized',['../df/d09/classSUNphi_1_1Mpi.html#af2e1af70f280be297ab2d3b7767ce479',1,'SUNphi::Mpi']]],
   ['ismasterrank',['isMasterRank',['../df/d09/classSUNphi_1_1Mpi.html#a783f8bcab5c963bb833c38a7e50b0d23',1,'SUNphi::Mpi']]],
   ['ismasterthread',['isMasterThread',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool']]],
-  ['isopen',['isOpen',['../d3/d78/classSUNphi_1_1Logger.html#a5f6c8990f0a588604e37af97012c48aa',1,'SUNphi::Logger']]],
+  ['isopen',['isOpen',['../d5/d99/classSUNphi_1_1File.html#a6a95c7608210e34cd4de7f5aa3060ecc',1,'SUNphi::File']]],
   ['isstarted',['isStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad43b39c7903964f83b51b36704867a74',1,'SUNphi::Timer']]]
 ];

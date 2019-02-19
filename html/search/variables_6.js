@@ -2,7 +2,7 @@ var searchData=
 [
   ['fakelogger',['fakeLogger',['../d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92',1,'SUNphi::Logger']]],
   ['fend',['fEnd',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a7eb2803ca62638d743e932c26bbfd708',1,'SUNphi::ScopeDoer']]],
-  ['file',['file',['../d3/d78/classSUNphi_1_1Logger.html#a17eb17227ebde70bfb485572bf29f2bb',1,'SUNphi::Logger']]],
+  ['file',['file',['../d5/d99/classSUNphi_1_1File.html#a51c487adb0d5ac01a52b41203557805f',1,'SUNphi::File']]],
   ['firslarger',['firsLarger',['../d3/dbe/IntListOrder_8hpp.html#acfd6aa2ab268d1e6cefeff93fc36af37',1,'SUNphi']]],
   ['firslarger_3c_20i_20_3e',['firsLarger&lt; I &gt;',['../d3/dbe/IntListOrder_8hpp.html#a0fc77ba4fc2b28ff2cb1143bafe67815',1,'SUNphi']]],
   ['first',['first',['../da/def/structSUNphi_1_1IntSeq.html#a26d1e940559ef4c780ff39c6cd7045d0',1,'SUNphi::IntSeq']]],

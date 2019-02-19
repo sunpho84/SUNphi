@@ -116,6 +116,7 @@ var annotated_dup =
       [ "CStringComparer", "d7/dcb/structSUNphi_1_1CStringComparer.html", "d7/dcb/structSUNphi_1_1CStringComparer" ],
       [ "Dir", "da/dff/structSUNphi_1_1Dir.html", "da/dff/structSUNphi_1_1Dir" ],
       [ "Encrypter", "dc/d36/classSUNphi_1_1Encrypter.html", "dc/d36/classSUNphi_1_1Encrypter" ],
+      [ "File", "d5/d99/classSUNphi_1_1File.html", "d5/d99/classSUNphi_1_1File" ],
       [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],
       [ "GridHashable", "dc/d35/classSUNphi_1_1GridHashable.html", null ],
       [ "GridHashable< T, NDims, Coord, Idx, false >", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4" ],

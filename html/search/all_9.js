@@ -70,7 +70,7 @@ var searchData=
   ['isnnarysmet',['isNnarySmET',['../d2/d69/NnarySmET_8hpp.html#ac356f58b46610aae8fcb208da9a6f061',1,'SUNphi']]],
   ['isnonnegative',['IsNonNegative',['../d8/d0c/structSUNphi_1_1IsNonNegative.html',1,'SUNphi']]],
   ['isnotnull',['IsNotNull',['../d5/d4a/structSUNphi_1_1IsNotNull.html',1,'SUNphi']]],
-  ['isopen',['isOpen',['../d3/d78/classSUNphi_1_1Logger.html#a5f6c8990f0a588604e37af97012c48aa',1,'SUNphi::Logger']]],
+  ['isopen',['isOpen',['../d5/d99/classSUNphi_1_1File.html#a6a95c7608210e34cd4de7f5aa3060ecc',1,'SUNphi::File']]],
   ['isordered',['isOrdered',['../da/def/structSUNphi_1_1IntSeq.html#a70e009823c017a7bd2486e4757f3fcfb',1,'SUNphi::IntSeq']]],
   ['isorderedintseq',['isOrderedIntSeq',['../dd/df8/IntSeq_8hpp.html#a302d28a5e97d3f2dafd2064ed7d1ff02',1,'SUNphi']]],
   ['isorderedintseq_3c_20intseq_3c_20ints_2e_2e_2e_20_3e_20_3e',['isOrderedIntSeq&lt; IntSeq&lt; Ints... &gt; &gt;',['../dd/df8/IntSeq_8hpp.html#a6be5c1f600f694603d91fc5ffe099091',1,'SUNphi']]],

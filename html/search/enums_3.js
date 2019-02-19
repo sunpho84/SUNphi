@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['realformat',['RealFormat',['../d3/d78/classSUNphi_1_1Logger.html#abd814f590e576f3d5e815a2281424b5c',1,'SUNphi::Logger']]]
+  ['realformat',['RealFormat',['../d5/d99/classSUNphi_1_1File.html#a1e201885b341e4d45b173b5c3ab79265',1,'SUNphi::File']]]
 ];

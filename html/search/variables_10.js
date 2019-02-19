@@ -1,11 +1,12 @@
 var searchData=
 [
   ['rangeseq',['rangeSeq',['../dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi']]],
+  ['rc',['rc',['../d5/d99/classSUNphi_1_1File.html#a99d947e611d2b6fb4d58babc1cb04c3b',1,'SUNphi::File']]],
   ['real_5fpart_5fid',['REAL_PART_ID',['../d8/de8/Compl_8hpp.html#a345eb23d93feb680882e8663c469512d',1,'SUNphi']]],
-  ['realformat',['realFormat',['../d3/d78/classSUNphi_1_1Logger.html#aaf367c9c42de758440776d5b4433185e',1,'SUNphi::Logger']]],
+  ['realformat',['realFormat',['../d5/d99/classSUNphi_1_1File.html#aa0883738c01276b36bce51f934f96bb5',1,'SUNphi::File']]],
   ['reallyprint',['reallyPrint',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4da1216d6bd679561364dac89cb6b463',1,'SUNphi::Logger::LoggerLine']]],
   ['realmerge',['realMerge',['../d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a31d6754327035663743b8e50ee67c43a',1,'SUNphi::TensKind::TensCompsListMerged&lt; IntSeq&lt; IComps... &gt; &gt;']]],
-  ['realprecision',['realPrecision',['../d3/d78/classSUNphi_1_1Logger.html#a6a219a6490070ba94ca36b863c059447',1,'SUNphi::Logger']]],
+  ['realprecision',['realPrecision',['../d5/d99/classSUNphi_1_1File.html#a3bf38562fceef72d9fb69d7d67139439',1,'SUNphi::File']]],
   ['ref',['ref',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a9f3a4767fd88beeaa5294bac23638ffa',1,'SUNphi::ScopeChangeVar']]],
   ['ref1',['ref1',['../d4/d4b/classSUNphi_1_1Assigner.html#a724f800bd61caf39f61dbd60a531d471',1,'SUNphi::Assigner::ref1()'],['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html#a009c37939d7dbf806853dd4c7c1ab8c4',1,'SUNphi::HasMember_ref1::Fallback::ref1()']]],
   ['ref2',['ref2',['../d4/d4b/classSUNphi_1_1Assigner.html#a3bffcb80f0065eff53ef4a7e9e06923b',1,'SUNphi::Assigner::ref2()'],['../d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html#a7284d6654072657b06c06e1895af70aa',1,'SUNphi::HasMember_ref2::Fallback::ref2()']]],

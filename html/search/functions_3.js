@@ -3,7 +3,7 @@ var searchData=
   ['canbefactorofsimdvector',['canBeFactorOfSIMDVector',['../d0/d24/SIMD_8hpp.html#aaea3412d741b6e8789dc707f3c554b50',1,'SUNphi']]],
   ['canbesizeofsimdvector',['canBeSizeOfSIMDVector',['../d0/d24/SIMD_8hpp.html#a51a19a9535fb9c3814c5cc55ece63f8f',1,'SUNphi']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
-  ['close',['close',['../d3/d78/classSUNphi_1_1Logger.html#aec8ac6c87b1aad4eae3f720b0409ccc7',1,'SUNphi::Logger']]],
+  ['close',['close',['../d5/d99/classSUNphi_1_1File.html#ad7d75aba05cb909c51f33de509c7b572',1,'SUNphi::File']]],
   ['cncol',['cnCol',['../d4/df5/SUN_8hpp.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d9/dfb/Spin_8hpp.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
   ['col',['col',['../d4/df5/SUN_8hpp.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi']]],
