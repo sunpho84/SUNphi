@@ -16,6 +16,7 @@
 #include <ios/Logger.hpp>
 #include <ios/MinimalLogger.hpp>
 #include <ios/TextColors.hpp>
+#include <random/TrueRandomGenerator.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
 #include <utility/Aliver.hpp>
@@ -211,6 +212,9 @@ namespace SUNphi
   
   /// Global thrads
   ThreadPool threads;
+  
+  /// Global true random generator
+  TrueRandomGenerator trueRandomGenerator;
   
   /// Presentation of the library
   Aliver aliver;

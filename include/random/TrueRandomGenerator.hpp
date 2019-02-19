@@ -40,7 +40,6 @@ namespace SUNphi
     }
   };
   
-  /// Globally visible true random generator
   extern TrueRandomGenerator trueRandomGenerator;
 }
 
