@@ -194,8 +194,11 @@ namespace SUNphi
       }
       
       /// Catch-all print
+      ///
+      /// The SFINAE is needed to avoid that the method is used when
+      /// File does not know how to print
       template <typename T,                             // Type of the quantity to print
-		typename=decltype(File{}<<RemRef<T>{})> // SFINAE needed to avoid ambiguous overload
+		typename=decltype((*static_cast<File*>(nullptr))<<(*static_cast<RemRef<T>*>(nullptr)))> // SFINAE needed to avoid ambiguous overload
       LoggerLine& operator<<(T&& t)                     ///< Object to print
       {
 	logger.file()<<forw<T>(t);
@@ -335,7 +338,9 @@ namespace SUNphi
     }
     
     /// Create a new line, and print on it
-    template <typename T>
+    template <typename T,
+	      typename=decltype((*static_cast<LoggerLine*>(nullptr))<<(*static_cast<RemRef<T>*>(nullptr))), // SFINAE needed to avoid ambiguous overload
+	      typename=EnableIf<not canPrint<Logger,RemRef<T>>>>                                            // SFINAE to avoid ambiguous reimplementation
     LoggerLine operator<<(T&& t)
     {
       return
