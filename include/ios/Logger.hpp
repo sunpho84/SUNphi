@@ -22,6 +22,7 @@
 #include <Threads.hpp>
 #include <debug/BackTracing.hpp>
 #include <debug/Crash.hpp>
+#include <ios/File.hpp>
 #include <ios/TextColors.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
@@ -77,26 +78,29 @@ namespace SUNphi
 	
  	// Prepend with time
 	if(logger.prependTime)
-	  rc+=
-	    fprintf(logger.file,"%.010f s",durationInSec(timings.currentMeasure()));
+	  {
+	    SCOPE_REAL_PRECISION(logger.file,10);
+	    rc+=
+	      (logger.file<<durationInSec(timings.currentMeasure())<<" s").getRc();
+	  }
 	
 	// Prepend with rank
 	if(someOtherRankCouldBePrinting)
 	  rc+=
-	    fprintf(logger.file," Rank %d",mpi.rank());
+	    (logger.file<<" Rank "<<mpi.rank()).getRc();
 	
 	// Prepend with thread
 	if(someOtherThreadCouldBePrinting)
 	  rc+=
-	    fprintf(logger.file," Thread %d",threads.getThreadId());
+	    (logger.file<<" Thread "<<threads.getThreadId()).getRc();
 	
 	// Mark the margin
 	if(rc)
-	  fprintf(logger.file,":\t");
+	  logger.file<<":\t";
 	
 	// Writes the given number of spaces
 	for(int i=0;i<logger.indentLev;i++)
-	  fputc(' ',logger.file);
+	  logger.file<<' ';
       }
       
       /// Construct
@@ -135,7 +139,7 @@ namespace SUNphi
       /// Ends the line
       void endLine()
       {
-	fputc('\n',logger.file);
+	logger.file<<'\n';
       }
       
       /// Destroy (end the line)
@@ -166,26 +170,22 @@ namespace SUNphi
 	  }
       }
       
+      /// Catch-all print
+      template <typename T,                     // Type of the quantity to print
+		typename=decltype(File{}<<T{})> // SFINAE needed to avoid ambiguous overload
+      LoggerLine& operator<<(const T& t)      ///< Object to print
+      {
+	logger.file<<t;
+	
+	return
+	  *this;
+      }
+      
       /// Print a C-style variadic message
-      template <int MAX_LENGTH=256>  // Maximal length to be be printed
       LoggerLine& printVariadicMessage(const char* format, ///< Format to print
 				       va_list ap)         ///< Variadic part
       {
-	/// Message to be printed
-	char message[MAX_LENGTH];
-	
-	/// Resulting length if the space had been enough
-	int rc=
-	  vsnprintf(message,MAX_LENGTH,format,ap);
-	
-	/// Check if it was truncated
-	bool truncated=
-	  (rc<0 or rc>=MAX_LENGTH);
-	
-	if(truncated)
-	  *this<<message<<" (truncated line)";
-	else
-	  *this<<message;
+	logger.file.printVariadicMessage(format,ap);
 	
 	return
 	  *this;
@@ -204,57 +204,6 @@ namespace SUNphi
 	    TEXT_CHANGE_COLOR_TAIL;
       }
       
-      /// Prints a string
-      LoggerLine& operator<<(const char* str)
-      {
-	if(str==nullptr)
-	  return
-	    *this<<"(null)";
-	else
-	  {
-	    /// Pointer to the first char of the string
-	    const char* p=
-	      str;
-	    
-	    // Prints until finding end of string
-	    while(*p!='\0')
-	      {
-		// If new line is found, end current line
-		if(*p=='\n')
-		  {
-		    endLine();
-		    startNewLine();
-		  }
-		else
-		  // Prints the char
-		  *this<<*p;
-		
-		// Increment the char
-		p++;
-	      }
-	    
-	    return
-	      *this;
-	  }
-      }
-      
-      /// Prints a char
-      LoggerLine& operator<<(const char& c)
-      {
-	// Prints the char
-	fputc(c,logger.file);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints a c++ string
-      LoggerLine& operator<<(const std::string& str)
-      {
-	return
-	  (*this)<<str.c_str();
-      }
-      
       /// Prints crash information
       ///
       /// Then sets the flag \c hasToCrash to true, such that at
@@ -268,68 +217,6 @@ namespace SUNphi
 	
 	return
 	  *this;
-      }
-      
-      /// Prints an integer
-      LoggerLine& operator<<(const int& i)
-      {
-	fprintf(logger.file,"%d",i);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints an unsigned integer
-      LoggerLine& operator<<(const uint& i)
-      {
-	fprintf(logger.file,"%u",i);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints a long integer
-      LoggerLine& operator<<(const int64_t& l)
-      {
-	fprintf(logger.file,"%ld",l);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints a double
-      LoggerLine& operator<<(const double& d)
-      {
-	/// String to print real numbers
-	///
-	/// The first component is signed or not
-	/// The second component is the format
-	static constexpr char realFormatString[2][3][6]=
-	  {{"%.*g","%.*f","%.*e"},
-	   {"%+.*g","%+.*f","%+.*e"}};
-	
-	fprintf(logger.file,realFormatString[logger.alwaysPrintSign][(int)logger.realFormat],logger.realPrecision,d);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints a pointer
-      template <typename T>                 // Type pointed
-      LoggerLine& operator<<(const T* p)  ///< Pointer to be printed
-      {
-	fprintf(logger.file,"%p",p);
-	
-	return
-	  *this;
-      }
-      
-      /// Prints after putting a space
-      template <typename T>               // Type of the obected to print
-      LoggerLine& operator*(T&& t)      ///< Object to be printed
-      {
-	return
-	  *this<<' '<<forw<T>(t);
       }
       
     };
@@ -356,27 +243,23 @@ namespace SUNphi
     }
     
     /// File pointed by the logger
-    FILE* file{nullptr};
+    File file;
     
   public:
+    
+    /// Reference to the real format
+    File::RealFormat &realFormat=
+      file.realFormat;
+    
+    /// Reference to the real precision
+    int& realPrecision=
+        file.realPrecision;
     
     /// Decide whether only master thread can write here
     bool onlyMasterThreadPrint{true};
     
     /// Decide whether only master MPI can write here
     bool onlyMasterRankPrint{true};
-    
-    /// Precision to print real number
-    int realPrecision{6};
-    
-    /// Flag to determine whether print always or not the sign
-    bool alwaysPrintSign{false};
-    
-    /// Print mode for double/float
-    enum class RealFormat{GENERAL=0,FIXED=1,ENGINEER=2};
-    
-    /// Format mode for real number
-    RealFormat realFormat{RealFormat::GENERAL};
     
     /////////////////////////////////////////////////////////////////
     
@@ -390,43 +273,6 @@ namespace SUNphi
     void indentLess()
     {
       indentLev--;
-    }
-    
-    /// Open a file, crashing if impossible
-    void open(const char* path)
-    {
-      // Check not open
-      if(isOpen())
-	CRASH<<"Cannot open an already opened file";
-      
-      // Tries to open
-      file=
-	fopen(path,"w");
-      
-      // Check
-      if(file==nullptr)
-	CRASH<<"Unable to open file "<<path;;
-    }
-    
-    /// Check if open
-    bool isOpen()
-      const
-    {
-      return
-	file!=nullptr;
-    }
-    
-    /// Close
-    void close()
-    {
-      if(isOpen())
-	{
-	  fclose(file);
-	  
-	  // Set the file to null
-	  file=
-	    nullptr;
-	}
     }
     
     /// Create a new line
@@ -458,18 +304,10 @@ namespace SUNphi
       :
       prependTime(prependTime)
     {
-      this->open(path);
+      file.open(path,"w");
       
       // Cannot print, otherwise all rank would!
       //*this<<"Logger initialized";
-    }
-    
-    /// Destroy
-    ~Logger()
-    {
-      // Close if open
-      if(isOpen())
-	this->close();
     }
   };
   
@@ -494,27 +332,6 @@ namespace SUNphi
       logger.indentLess();
     }
   };
-  
-  /// Mark the logger to be more indented
-#define SCOPE_INDENT(VAR)					\
-  /*! Indent current scope */					\
-  ScopeIndenter NAME2(SCOPE_INDENTER,__LINE__)(VAR)
-  
-  /// Set for current scope
-#define SET_FOR_CURRENT_SCOPE(NAME,VAR,...)			\
-  ScopeChangeVar NAME3(SET,NAME,__LINE__)(VAR,__VA_ARGS__)
-  
-  /// Set the precision for current scope
-#define SCOPE_REAL_PRECISION(LOGGER,VAL)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER_REAL_PRECISION,LOGGER.realPrecision,VAL)
-  
-  /// Set printing or not sign at the beginning of a number for current scope
-#define SCOPE_ALWAYS_PUT_SIGN(LOGGER)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER_ALWAYS_PRINT_SIGN,LOGGER.alwaysPrintSign,true)
-  
-  /// Allows all ransk to print for current scope
-#define SCOPE_ALL_RANKS_CAN_PRINT(LOGGER)			\
-  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_CAN_PRINT,LOGGER.onlyMasterRankPrint,false)
   
   extern Logger runLog;
 }
