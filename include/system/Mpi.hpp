@@ -263,30 +263,22 @@ namespace SUNphi
     /// need something more sophisticated to deal with class
     /// containing data
     template <typename T>
-    DECLAUTO broadcast(T&& in,                 ///< Quantity to broadcast
-		       int root=MASTER_RANK)   ///< Rank from which to broadcast
+    T broadcast(T&& in,                 ///< Quantity to broadcast
+		int root=MASTER_RANK)   ///< Rank from which to broadcast
       const
     {
-      
-#ifdef USE_MPI
-      
       /// Result
       T out=
 	in;
       
+#ifdef USE_MPI
+      
       minimalLogger(runLog,"%p %d",&out,rank());
       MPI_CRASH_ON_ERROR(MPI_Bcast(&out,sizeof(T),MPI_CHAR,root,MPI_COMM_WORLD),"Broadcasting");
+#endif
       
       return
 	out;
-      
-#else
-      
-      return
-	in;
-      
-#endif
-      
     }
   };
   
