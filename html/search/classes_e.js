@@ -9,6 +9,7 @@ var searchData=
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20mpi_20_3e',['SingleInstance&lt; Mpi &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
+  ['singleinstance_3c_20truerandomgenerator_20_3e',['SingleInstance&lt; TrueRandomGenerator &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['sitmo',['Sitmo',['../d9/d59/classSUNphi_1_1Sitmo.html',1,'SUNphi']]],
   ['smet',['SmET',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20adder_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['SmET&lt; Adder&lt; _Refs... &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],

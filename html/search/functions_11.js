@@ -10,5 +10,6 @@ var searchData=
   ['timer',['Timer',['../d6/de9/classSUNphi_1_1Timer.html#aa73cf58f7c80b61730e4340e03efaeb4',1,'SUNphi::Timer']]],
   ['timings',['timings',['../dd/d2b/SUNphi_8cpp.html#ad3481e5243c3d2bac0d91bd64b9e32c9',1,'SUNphi']]],
   ['transpose',['transpose',['../d0/d6d/Transpose_8hpp.html#a5fdf51c53b55fee45e4d552444fddcfd',1,'SUNphi::transpose(Ts &amp;&amp;...smets)'],['../d0/d6d/Transpose_8hpp.html#a5515ad96eeeebf29f86dc7d60e566028',1,'SUNphi::transpose(T &amp;&amp;smet)']]],
-  ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html#ac07c1ab574aa62534a8285676bf340f9',1,'SUNphi::Transposer']]]
+  ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html#ac07c1ab574aa62534a8285676bf340f9',1,'SUNphi::Transposer']]],
+  ['truerandomgenerator',['TrueRandomGenerator',['../d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aff8b811510a629a33f70f57819ef4875',1,'SUNphi::TrueRandomGenerator']]]
 ];

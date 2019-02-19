@@ -167,6 +167,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af4bab2c25c5563a8cba8abd59d8ca7c1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1">allReduce</a> (const T &amp;in) const </td></tr>
 <tr class="memdesc:af4bab2c25c5563a8cba8abd59d8ca7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces among all MPI process. <br /></td></tr>
 <tr class="separator:af4bab2c25c5563a8cba8abd59d8ca7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738365b6b8d251d168c61e82684fb961"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a738365b6b8d251d168c61e82684fb961"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#a738365b6b8d251d168c61e82684fb961">broadcast</a> (T &amp;&amp;in, int root=<a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">MASTER_RANK</a>) const </td></tr>
+<tr class="separator:a738365b6b8d251d168c61e82684fb961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -188,6 +191,53 @@ Private Member Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">Mpi.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a738365b6b8d251d168c61e82684fb961"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::Mpi::broadcast </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>root</em> = <code><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">MASTER_RANK</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Broadcast among all MPI process</p>
+<p>This is a simple wrapper around the MPI_Bcast function, we need something more sophisticated to deal with class containing data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Quantity to broadcast </td></tr>
+    <tr><td class="paramname">root</td><td>Rank from which to broadcast </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html#l00266">266</a> of file <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">Mpi.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac423ccc74e978b39fb9cb794532ff3ff"></a>
 <div class="memitem">
 <div class="memproto">

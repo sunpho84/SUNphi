@@ -167,6 +167,7 @@ var annotated_dup =
       [ "ThreadPool", "dc/d0f/classSUNphi_1_1ThreadPool.html", "dc/d0f/classSUNphi_1_1ThreadPool" ],
       [ "Timer", "d6/de9/classSUNphi_1_1Timer.html", "d6/de9/classSUNphi_1_1Timer" ],
       [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
+      [ "TrueRandomGenerator", "d2/d95/classSUNphi_1_1TrueRandomGenerator.html", "d2/d95/classSUNphi_1_1TrueRandomGenerator" ],
       [ "TwinTensCompOf", "d7/d08/structSUNphi_1_1TwinTensCompOf.html", null ],
       [ "TwinTensCompOf< Col >", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4" ],
       [ "TwinTensCompOf< Spin >", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4" ],

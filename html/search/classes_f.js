@@ -21,6 +21,7 @@ var searchData=
   ['threadpool',['ThreadPool',['../dc/d0f/classSUNphi_1_1ThreadPool.html',1,'SUNphi']]],
   ['timer',['Timer',['../d6/de9/classSUNphi_1_1Timer.html',1,'SUNphi']]],
   ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html',1,'SUNphi']]],
+  ['truerandomgenerator',['TrueRandomGenerator',['../d2/d95/classSUNphi_1_1TrueRandomGenerator.html',1,'SUNphi']]],
   ['twintenscompof',['TwinTensCompOf',['../d7/d08/structSUNphi_1_1TwinTensCompOf.html',1,'SUNphi']]],
   ['twintenscompof_3c_20col_20_3e',['TwinTensCompOf&lt; Col &gt;',['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html',1,'SUNphi']]],
   ['twintenscompof_3c_20spin_20_3e',['TwinTensCompOf&lt; Spin &gt;',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html',1,'SUNphi']]]

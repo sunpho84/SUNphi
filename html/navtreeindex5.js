@@ -1,5 +1,13 @@
 var NAVTREEINDEX5 =
 {
+"da/d65/Add_8hpp.html#af62c74b68be10595991ad13414f76975":[3,0,2,9,0,4],
+"da/d65/Add_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,9,0,9],
+"da/d65/Add_8hpp_source.html":[3,0,2,9,0],
+"da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html":[2,0,0,124,2],
+"da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html#a7ec622419e561a4fa4737a3bb8bb44eb":[2,0,0,124,2,0],
+"da/d8e/Metaprogramming_8hpp.html":[3,0,2,21],
+"da/d8e/Metaprogramming_8hpp_source.html":[3,0,2,21],
+"da/db5/structSUNphi_1_1HasMember__ref1.html":[2,0,0,132],
 "da/db5/structSUNphi_1_1HasMember__ref1.html#a70b4432bd663912c24319b4319ec9bd5":[2,0,0,132,4],
 "da/db5/structSUNphi_1_1HasMember__ref1.html#abd5d9ff07e4a0f7ab8e9f32115c67537":[2,0,0,132,7],
 "da/db5/structSUNphi_1_1HasMember__ref1.html#ae60d4406e323010547063e09249ed7b0":[2,0,0,132,5],
@@ -155,9 +163,9 @@ var NAVTREEINDEX5 =
 "dc/d02/structSUNphi_1_1__IntsUpTo.html":[2,0,0,22],
 "dc/d02/structSUNphi_1_1__IntsUpTo.html#aaf993073cfc48ff9a5cf11d40d2efb29":[2,0,0,22,0],
 "dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0":[2,0,0,22,1],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html":[2,0,0,168],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058":[2,0,0,168,0],
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740":[2,0,0,168,1],
+"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html":[2,0,0,169],
+"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058":[2,0,0,169,0],
+"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740":[2,0,0,169,1],
 "dc/d0f/classSUNphi_1_1ThreadPool.html":[2,0,0,163],
 "dc/d0f/classSUNphi_1_1ThreadPool.html#a3064e7398497b7029516937ab7900ff3":[2,0,0,163,1],
 "dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2":[2,0,0,163,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX5 =
 "dc/d5d/classSUNphi_1_1MulAdder.html#aa4ace581676696869522f224f011a362":[2,0,0,144,6],
 "dc/d5d/classSUNphi_1_1MulAdder.html#aa545dc15ca80a30515150a5ee1112313":[2,0,0,144,3],
 "dc/d5d/classSUNphi_1_1MulAdder.html#aaa90c9aff2d53eaec94114d77b622b94":[2,0,0,144,1],
-"dc/d5d/classSUNphi_1_1MulAdder.html#aba9166e3f1b553d6364afaac9ef61d32":[2,0,0,144,22],
-"dc/d5d/classSUNphi_1_1MulAdder.html#abebb6b47a6657f0b56340cc4c5db131c":[2,0,0,144,4],
-"dc/d5d/classSUNphi_1_1MulAdder.html#ac2841f162e091c1ce1adb17aad8aed81":[2,0,0,144,13],
-"dc/d5d/classSUNphi_1_1MulAdder.html#ac8308bc9af695307bc1899f060d0a25d":[2,0,0,144,35],
-"dc/d5d/classSUNphi_1_1MulAdder.html#acb1f426e01f440a2b05a53d8ce84b6f0":[2,0,0,144,21],
-"dc/d5d/classSUNphi_1_1MulAdder.html#af534f9a021ee75bbf8bb5d09c90e26e4":[2,0,0,144,14],
-"dc/d5d/classSUNphi_1_1MulAdder.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,144,30],
-"dc/d6b/BaseSmET_8hpp.html":[3,0,2,9,3],
-"dc/d6b/BaseSmET_8hpp.html#a0203b7e5ee238f67359df47cdcb16b86":[3,0,2,9,3,59]
+"dc/d5d/classSUNphi_1_1MulAdder.html#aba9166e3f1b553d6364afaac9ef61d32":[2,0,0,144,22]
 };

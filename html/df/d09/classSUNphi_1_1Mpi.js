@@ -3,6 +3,7 @@ var classSUNphi_1_1Mpi =
     [ "Mpi", "df/d09/classSUNphi_1_1Mpi.html#a120ff923dfb29171e7afbe428007fc4e", null ],
     [ "~Mpi", "df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da", null ],
     [ "allReduce", "df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1", null ],
+    [ "broadcast", "df/d09/classSUNphi_1_1Mpi.html#a738365b6b8d251d168c61e82684fb961", null ],
     [ "crashOnError", "df/d09/classSUNphi_1_1Mpi.html#ac423ccc74e978b39fb9cb794532ff3ff", null ],
     [ "getNRanks", "df/d09/classSUNphi_1_1Mpi.html#a65f9852004134af5af685716854d4af6", null ],
     [ "getRank", "df/d09/classSUNphi_1_1Mpi.html#a79cbe656ef333beb324c09c24ac1f1af", null ],

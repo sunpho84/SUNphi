@@ -2,6 +2,7 @@ var searchData=
 [
   ['same_5ffund_5fas_5fref',['SAME_FUND_AS_REF',['../d2/d69/NnarySmET_8hpp.html#a02a293e0950fb7d86bc561238c395038',1,'NnarySmET.hpp']]],
   ['same_5ftk_5fas_5fref',['SAME_TK_AS_REF',['../d2/d69/NnarySmET_8hpp.html#a5de97755944e8a8cba5ba57bc37feff3',1,'NnarySmET.hpp']]],
+  ['scope_5fall_5franks_5fcan_5fprint',['SCOPE_ALL_RANKS_CAN_PRINT',['../d9/d11/Logger_8hpp.html#a08e253123537b182a24d93ee87671bf9',1,'Logger.hpp']]],
   ['scope_5falways_5fput_5fsign',['SCOPE_ALWAYS_PUT_SIGN',['../d9/d11/Logger_8hpp.html#a18493bdb144a0dcbb5763d22c722e40b',1,'Logger.hpp']]],
   ['scope_5findent',['SCOPE_INDENT',['../d9/d11/Logger_8hpp.html#aecc0d2846722c538df677fa14c79a3cf',1,'Logger.hpp']]],
   ['scope_5freal_5fprecision',['SCOPE_REAL_PRECISION',['../d9/d11/Logger_8hpp.html#a7e1a1a4d2ee1e7afa3d6943d5ccbbdb2',1,'Logger.hpp']]],

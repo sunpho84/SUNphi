@@ -29,8 +29,8 @@ var searchData=
   ['binarysmet_3c_20assigner_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['BinarySmET&lt; Assigner&lt; _Ref1, _Ref2 &gt; &gt;',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['bind',['bind',['../dc/de1/Bind_8hpp.html#a149981a35c9bfdd4bce95d3526bcde3e',1,'SUNphi']]],
   ['bind_2ehpp',['Bind.hpp',['../dc/de1/Bind_8hpp.html',1,'']]],
-  ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html',1,'SUNphi']]],
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html#a292fad679e538c338009b4ee1e954650',1,'SUNphi::Binder']]],
+  ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html',1,'SUNphi']]],
   ['binderinternaleval',['binderInternalEval',['../d6/db9/classSUNphi_1_1Binder.html#a51a9454d4d415055639fa28f2afd6655',1,'SUNphi::Binder']]],
   ['bitof',['bitOf',['../df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e',1,'SUNphi']]],
   ['bits_2ehpp',['Bits.hpp',['../df/d95/Bits_8hpp.html',1,'']]],
@@ -39,5 +39,6 @@ var searchData=
   ['boundpos',['boundPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#aa985444936a58e8f13cf08e7174406e4',1,'SUNphi::RelBinder']]],
   ['boundtopos',['boundToPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a4d485b2bd2abb5dc52a45c4b2bfc30d8',1,'SUNphi::RelBinder']]],
   ['boundtotype',['BoundToType',['../d5/d1c/classSUNphi_1_1RelBinder.html#a14bd9929c092d8396017ce7d868de1a5',1,'SUNphi::RelBinder']]],
-  ['boundtype',['BoundType',['../d5/d1c/classSUNphi_1_1RelBinder.html#ae0060cfd328495991431229cdab3db78',1,'SUNphi::RelBinder']]]
+  ['boundtype',['BoundType',['../d5/d1c/classSUNphi_1_1RelBinder.html#ae0060cfd328495991431229cdab3db78',1,'SUNphi::RelBinder']]],
+  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#a738365b6b8d251d168c61e82684fb961',1,'SUNphi::Mpi']]]
 ];
