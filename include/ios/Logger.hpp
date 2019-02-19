@@ -32,10 +32,21 @@
 namespace SUNphi
 {
   /// Write output to a file, using different level of indentation
-  class Logger
+  class Logger :
+    public File
   {
     /// Fake logger, printing to /dev/null
     static Logger fakeLogger;
+    
+    /// Access to the logger as if it was a file
+    const File& file()
+      const
+    {
+      return
+	static_cast<const File&>(*this);
+    }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(file);
     
     /// Single line in the logger
     class LoggerLine
@@ -79,28 +90,30 @@ namespace SUNphi
  	// Prepend with time
 	if(logger.prependTime)
 	  {
-	    SCOPE_REAL_PRECISION(logger.file,10);
+	    SCOPE_REAL_FORMAT_FIXED(logger);
+	    SCOPE_REAL_PRECISION(logger,10);
+	    SCOPE_ALWAYS_PRINT_ZERO(logger);
 	    rc+=
-	      (logger.file<<durationInSec(timings.currentMeasure())<<" s").getRc();
+	      (logger.file()<<durationInSec(timings.currentMeasure())<<" s").getRc();
 	  }
 	
 	// Prepend with rank
 	if(someOtherRankCouldBePrinting)
 	  rc+=
-	    (logger.file<<" Rank "<<mpi.rank()).getRc();
+	    (logger.file()<<" Rank "<<mpi.rank()).getRc();
 	
 	// Prepend with thread
 	if(someOtherThreadCouldBePrinting)
 	  rc+=
-	    (logger.file<<" Thread "<<threads.getThreadId()).getRc();
+	    (logger.file()<<" Thread "<<threads.getThreadId()).getRc();
 	
 	// Mark the margin
 	if(rc)
-	  logger.file<<":\t";
+	  logger.file()<<":\t";
 	
 	// Writes the given number of spaces
 	for(int i=0;i<logger.indentLev;i++)
-	  logger.file<<' ';
+	  logger.file()<<' ';
       }
       
       /// Construct
@@ -139,7 +152,7 @@ namespace SUNphi
       /// Ends the line
       void endLine()
       {
-	logger.file<<'\n';
+	logger.file()<<'\n';
       }
       
       /// Destroy (end the line)
@@ -170,12 +183,22 @@ namespace SUNphi
 	  }
       }
       
+      /// Prints after putting a space
+      template <typename T>               // Type of the obected to print
+      LoggerLine& operator*(T&& t)      ///< Object to be printed
+      {
+	logger.file()*forw<T>(t);
+	
+	return
+	  *this;
+      }
+      
       /// Catch-all print
       template <typename T,                     // Type of the quantity to print
 		typename=decltype(File{}<<T{})> // SFINAE needed to avoid ambiguous overload
       LoggerLine& operator<<(const T& t)      ///< Object to print
       {
-	logger.file<<t;
+	logger.file()<<t;
 	
 	return
 	  *this;
@@ -185,7 +208,7 @@ namespace SUNphi
       LoggerLine& printVariadicMessage(const char* format, ///< Format to print
 				       va_list ap)         ///< Variadic part
       {
-	logger.file.printVariadicMessage(format,ap);
+	logger.file().printVariadicMessage(format,ap);
 	
 	return
 	  *this;
@@ -219,6 +242,46 @@ namespace SUNphi
 	  *this;
       }
       
+      /// Prints a string, parsing newline
+      LoggerLine& operator<<(const char* str)
+      {
+	if(str==nullptr)
+	  logger.file()<<str;
+      else
+	{
+	  /// Pointer to the first char of the string
+	  const char* p=
+	    str;
+	  
+	  // Prints until finding end of string
+	  while(*p!='\0')
+	    {
+	      // starts a new line
+	      if(*p=='\n')
+		{
+		  endLine();
+		  startNewLine();
+		}
+	      else
+		// Prints the char
+		*this<<*p;
+	      
+	      // Increment the char
+	      p++;
+	    }
+	}
+	
+	return
+	  *this;
+      }
+      
+      /// Prints a c++ string
+      LoggerLine& operator<<(const std::string& str)
+      {
+	return
+	  *this<<str.c_str();
+      }
+      
     };
     
     /// Indentation level
@@ -242,18 +305,7 @@ namespace SUNphi
       mutex.unlock();
     }
     
-    /// File pointed by the logger
-    File file;
-    
   public:
-    
-    /// Reference to the real format
-    File::RealFormat &realFormat=
-      file.realFormat;
-    
-    /// Reference to the real precision
-    int& realPrecision=
-        file.realPrecision;
     
     /// Decide whether only master thread can write here
     bool onlyMasterThreadPrint{true};
@@ -304,7 +356,7 @@ namespace SUNphi
       :
       prependTime(prependTime)
     {
-      file.open(path,"w");
+      file().open(path,"w");
       
       // Cannot print, otherwise all rank would!
       //*this<<"Logger initialized";

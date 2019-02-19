@@ -25,9 +25,29 @@ namespace SUNphi
 #define SCOPE_REAL_PRECISION(STREAM,VAL)					\
   SET_FOR_CURRENT_SCOPE(STREAM_REAL_PRECISION,STREAM.realPrecision,VAL)
   
+  /// Set the format for current scope
+#define SCOPE_REAL_FORMAT(STREAM,VAL)					\
+  SET_FOR_CURRENT_SCOPE(STREAM_REAL_FORMAT,STREAM.realFormat,VAL)
+  
+  /// Set general for the current scope
+#define SCOPE_REAL_FORMAT_GENERAL(STREAM)					\
+  SET_FOR_CURRENT_SCOPE(STREAM_REAL_FORMAT_GENERAL,STREAM.realFormat,RealFormat::GENERAL)
+  
+  /// Set fixed for the current scope
+#define SCOPE_REAL_FORMAT_FIXED(STREAM)					\
+  SET_FOR_CURRENT_SCOPE(STREAM_REAL_FORMAT_FIXED,STREAM.realFormat,RealFormat::FIXED)
+  
+  /// Set engineer for the current scope
+#define SCOPE_REAL_FORMAT_ENGINEER(STREAM)					\
+  SET_FOR_CURRENT_SCOPE(STREAM_REAL_FORMAT_ENGINEER,STREAM.realFormat,RealFormat::ENGINEER)
+  
   /// Set printing or not sign at the beginning of a number for current scope
 #define SCOPE_ALWAYS_PUT_SIGN(STREAM)			\
   SET_FOR_CURRENT_SCOPE(STREAM_ALWAYS_PRINT_SIGN,STREAM.alwaysPrintSign,true)
+  
+  /// Set printing or not zero
+#define SCOPE_ALWAYS_PRINT_ZERO(STREAM)			\
+  SET_FOR_CURRENT_SCOPE(STREAM_ALWAYS_PRINT_ZERO,STREAM.alwaysPrintZero,true)
   
   /// Allows all ransk to print for current scope
 #define SCOPE_ALL_RANKS_CAN_PRINT(STREAM)			\
@@ -111,6 +131,9 @@ namespace SUNphi
     /// Flag to determine whether print always or not the sign
     bool alwaysPrintSign{false};
     
+    /// Flag to determine whether print always or not the zero
+    bool alwaysPrintZero{false};
+    
     /// Print mode for double/float
     enum class RealFormat{GENERAL=0,FIXED=1,ENGINEER=2};
     
@@ -165,12 +188,14 @@ namespace SUNphi
       ///
       /// The first component is signed or not
       /// The second component is the format
-      static constexpr char realFormatString[2][3][6]=
-	{{"%.*g","%.*f","%.*e"},
-	 {"%+.*g","%+.*f","%+.*e"}};
+      static constexpr char realFormatString[2][2][3][7]=
+	{{{"%.*g","%.*f","%.*e"},
+	  {"%0.*g","%0.*f","%0.*e"}},
+	 {{"%+.*g","%+.*f","%+.*e"},
+	  {"%+0.*g","%+0.*f","%+0.*e"}}};
       
       rc=
-	fprintf(file,realFormatString[alwaysPrintSign][(int)realFormat],realPrecision,d);
+	fprintf(file,realFormatString[alwaysPrintSign][alwaysPrintZero][(int)realFormat],realPrecision,d);
       
       return
 	*this;
@@ -198,28 +223,11 @@ namespace SUNphi
     /// Prints a string
     File& operator<<(const char* str)
     {
-      if(str==nullptr)
-	return
-	  *this<<"(null)";
-      else
-	{
-	  /// Pointer to the first char of the string
-	  const char* p=
-	    str;
-	  
-	  // Prints until finding end of string
-	  while(*p!='\0')
-	    {
-	      // Prints the char
-	      *this<<*p;
-	      
-	      // Increment the char
-	      p++;
-	    }
-	  
-	  return
-	    *this;
-	}
+      rc=
+	fprintf(file,"%s",(str==nullptr)?"(null)":str);
+      
+      return
+	*this;
     }
     
     /// Prints a c++ string
