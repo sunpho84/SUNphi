@@ -512,6 +512,10 @@ namespace SUNphi
 #define SCOPE_ALWAYS_PUT_SIGN(LOGGER)			\
   SET_FOR_CURRENT_SCOPE(LOGGER_ALWAYS_PRINT_SIGN,LOGGER.alwaysPrintSign,true)
   
+  /// Allows all ransk to print for current scope
+#define SCOPE_ALL_RANKS_CAN_PRINT(LOGGER)			\
+  SET_FOR_CURRENT_SCOPE(LOGGER_ALL_RANKS_CAN_PRINT,LOGGER.onlyMasterRankPrint,false)
+  
   extern Logger runLog;
 }
 
