@@ -256,6 +256,38 @@ namespace SUNphi
 #endif
       
     }
+    
+    /// Broadcast among all MPI process
+    ///
+    /// This is a simple wrapper around the MPI_Bcast function, we
+    /// need something more sophisticated to deal with class
+    /// containing data
+    template <typename T>
+    DECLAUTO broadcast(T&& in,                 ///< Quantity to broadcast
+		       int root=MASTER_RANK)   ///< Rank from which to broadcast
+      const
+    {
+      
+#ifdef USE_MPI
+      
+      /// Result
+      T out=
+	in;
+      
+      minimalLogger(runLog,"%p %d",&out,rank());
+      MPI_CRASH_ON_ERROR(MPI_Bcast(&out,sizeof(T),MPI_CHAR,root,MPI_COMM_WORLD),"Broadcasting");
+      
+      return
+	out;
+      
+#else
+      
+      return
+	in;
+      
+#endif
+      
+    }
   };
   
   /// Gloabl MPI
