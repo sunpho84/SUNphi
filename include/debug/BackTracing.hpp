@@ -29,7 +29,7 @@ namespace SUNphi
     const std::string address;
     
     /// Parse the string
-    BackTraceSymbol(const char* str) :
+    explicit BackTraceSymbol(const char* str) :
       compilUnit(substrBetweenPos(str,0,std::string(str).find('('))),
       symbol(substrBetween(str,'(','+')),
       offset(substrBetween(str,'+',')')),
