@@ -156,6 +156,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html">SUNphi::ConstrainAreIntegrals&lt; Args &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces the type to be integer-like.  <a href="../../d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dfd/structSUNphi_1_1CanPrint.html">SUNphi::CanPrint&lt; S, T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -222,6 +224,8 @@ Macros</h2></td></tr>
 <tr class="separator:a9f33da613c7ec375f2ceae55997e2ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ef22f5cfb3da749d24d242c1801cec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec">DEFINE_HAS_MEMBER</a>(TAG)</td></tr>
 <tr class="separator:af0ef22f5cfb3da749d24d242c1801cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa2058ed52013bcd7060509d667dbea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK</b>(CHECK_NAME, STRUCT_NAME,  OPERATOR)</td></tr>
+<tr class="separator:a1fa2058ed52013bcd7060509d667dbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -352,6 +356,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2f56717fe042f165d2ac201640f3898c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a2f56717fe042f165d2ac201640f3898c">SUNphi::areIntegrals&lt; T &gt;</a></td></tr>
 <tr class="memdesc:a2f56717fe042f165d2ac201640f3898c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies whether a single types is integer-like.  <a href="../../d0/d81/TypeTraits_8hpp.html#a2f56717fe042f165d2ac201640f3898c">More...</a><br /></td></tr>
 <tr class="separator:a2f56717fe042f165d2ac201640f3898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596acec6fec77d67693f05e82c964782"><td class="memTemplParams" colspan="2">template&lt;typename S , typename T &gt; </td></tr>
+<tr class="memitem:a596acec6fec77d67693f05e82c964782"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a596acec6fec77d67693f05e82c964782">SUNphi::canPrint</a> = CanPrint &lt;S,T&gt;::res</td></tr>
+<tr class="separator:a596acec6fec77d67693f05e82c964782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines convenient adaptation of the std type_traits library, and extensions useful for the expression handling. </p>
@@ -385,6 +392,41 @@ template&lt;typename T &gt; </td></tr>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
 <p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00463">463</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fa2058ed52013bcd7060509d667dbea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CHECK_NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STRUCT_NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">OPERATOR&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> S,                            \</div><div class="line">     typename <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>&gt;                            \</div><div class="line">struct STRUCT_NAME                          \</div><div class="line">{                                   \           \</div><div class="line">  template&lt;<span class="keyword">typename</span> U,                          \</div><div class="line">       typename V&gt;                          \</div><div class="line">  static <span class="keyword">auto</span> test(U*)-&gt;decltype(std::declval&lt;U&gt;()          \</div><div class="line">                 OPERATOR               \</div><div class="line">                 std::declval&lt;V&gt;());            \</div><div class="line">                                    \   \</div><div class="line">  template&lt;<span class="keyword">typename</span>,                            \</div><div class="line">       typename&gt;                            \</div><div class="line">  static <span class="keyword">auto</span> test(...)-&gt;std::false_type;               \</div><div class="line">                                    \                       \</div><div class="line">  static constexpr <span class="keywordtype">bool</span> res=                        \</div><div class="line">    not isSame&lt;std::false_type,decltype(test&lt;S,T&gt;(0))&gt;;         \</div><div class="line">};                                  \           \</div><div class="line">  template&lt;<span class="keyword">typename</span> S,                          \</div><div class="line">       typename <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>&gt;                          \</div><div class="line">  [[ maybe_unused ]]                            \</div><div class="line">  constexpr <span class="keywordtype">bool</span> CHECK_NAME=                        \</div><div class="line">    STRUCT_NAME&lt;S,T&gt;::res</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00588">588</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,6 +760,23 @@ template&lt;typename From , typename To &gt; </div>
 <p>Checks if a type can be cast into another one. </p>
 
 <p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00116">116</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a596acec6fec77d67693f05e82c964782"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::canPrint = CanPrint &lt;S,T&gt;::res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check that operator &lt;&lt; is implemented </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00618">618</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

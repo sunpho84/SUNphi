@@ -5,5 +5,5 @@ var searchData=
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html#a292fad679e538c338009b4ee1e954650',1,'SUNphi::Binder']]],
   ['binderinternaleval',['binderInternalEval',['../d6/db9/classSUNphi_1_1Binder.html#a51a9454d4d415055639fa28f2afd6655',1,'SUNphi::Binder']]],
   ['bitof',['bitOf',['../df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e',1,'SUNphi']]],
-  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#a738365b6b8d251d168c61e82684fb961',1,'SUNphi::Mpi']]]
+  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ad34acf5f50a4b00f6ac9e35cc0cc6f21',1,'SUNphi::Mpi']]]
 ];
