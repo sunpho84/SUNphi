@@ -4,6 +4,10 @@
 /// \file TrueRandomGenerator.hpp
 ///
 /// \brief Generate random numbers according to the true random device
+///
+/// This random generator should be used only once, to init the master
+/// random generator, when a "true" (non reproducible) random sequence
+/// is needed.
 
 #include <random>
 
