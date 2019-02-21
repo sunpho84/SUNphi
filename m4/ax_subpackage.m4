@@ -2,24 +2,9 @@
 
 AC_DEFUN([AX_SUBPACKAGE], [
 
-#introduce flags
-AC_ARG_WITH($1,
-	AS_HELP_STRING([--with-$1[=dir]], [Specify where to find $1]),
-	with_$1="${withval}"
-	CPPFLAGS="-I${with_$1}/include/ $CPPFLAGS"
-	LDFLAGS="-L${with_$1}/lib/ $LDFLAGS",
-	with_$1=no)
-AC_MSG_RESULT(with $1 ... ${with_$1})
+AX_ARG_WITH($1)
 
-#search for header
-$1_found_headers="none needed"
-for header in $2
-do
-	if test "$1_found_header" != "no"
-	then
-		AC_CHECK_HEADERS([$header],[$1_found_headers=yes],[$1_found_header=no])
-	fi
-done
+AX_SEARCH_HEADERS($1,$2)
 
 #search for library
 AX_SUBPACKAGE_OLD_LIBS=$LIBS

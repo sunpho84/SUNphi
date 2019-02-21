@@ -77,6 +77,9 @@ else
 fi
 AX_SUBPACKAGE(dwarf,libdwarf/dwarf.h,dwarf,dwarf_child,DWARF,$default_dwarf)
 
+# yaml-cpp library
+AX_SUBPACKAGE(yaml,yaml-cpp/yaml.h,yaml-cpp,YAML::,YAML)
+
 # Configure doxygen
 DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
 DX_PDF_FEATURE(OFF)
