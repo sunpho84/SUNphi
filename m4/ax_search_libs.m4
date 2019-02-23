@@ -12,8 +12,14 @@ for function in $3
 do
 	if test "$1_found_library" != "no" -a "$2" != "" -a  "$function" != ""
 	then
-		AC_SEARCH_LIBS([$function],[$2],[$1_found_library=yes],[$1_found_library=no])
-		libs_to_link="$(eval echo \$ac_cv_search_$function) $libs_to_link"
+		echo $3|grep -q :: && matching=$?
+		if test "$matching" == 0
+		then
+			AX_CXX_CHECK_LIB([$2],[$function],[$1_found_library=yes],[$1_found_library=no])
+		else
+			AC_SEARCH_LIBS([$function],[$2],[$1_found_library=yes],[$1_found_library=no])
+			libs_to_link="$(eval echo \$ac_cv_search_$function) $libs_to_link"
+		fi
 	fi
 done
 

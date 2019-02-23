@@ -28,11 +28,10 @@ then
 	   default=false
 	fi
 
-	AX_ARG_ENABLE($1,$default,$helpstring)
+	AX_ARG_ENABLE($1,$default)
 
 else
-
-	$enable_$1=yes
+	enable_$1=yes
 fi
 
 #check activability
