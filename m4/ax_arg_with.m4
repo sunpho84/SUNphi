@@ -1,6 +1,6 @@
 # usage: AX_ARG_WITH(package_name)
 
-#introduce flags
+# introduce flags
 AC_DEFUN([AX_ARG_WITH], [
 
 AC_ARG_WITH($1,
