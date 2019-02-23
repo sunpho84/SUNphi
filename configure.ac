@@ -24,7 +24,7 @@ AX_CXXFLAGS_WARN_ALL
 AM_SILENT_RULES([yes])
 
 # Search for pthread
-AX_SUBPACKAGE(threads,pthread.h,pthread,pthread_getconcurrency,THREADS)
+AX_SUBPACKAGE(threads,pthread.h,pthread,pthread_getconcurrency,THREADS,autouse)
 
 # Search automatically MPI for c++
 AC_LANG_PUSH([C++])
@@ -71,9 +71,9 @@ fi
 # Search for dwarf
 if test "$enable_debug" == "yes"
 then
-	default_dwarf=true
+	default_dwarf=autouse
 else
-	default_dwarf=false
+	default_dwarf=
 fi
 AX_SUBPACKAGE(dwarf,libdwarf/dwarf.h,dwarf,dwarf_child,DWARF,$default_dwarf)
 

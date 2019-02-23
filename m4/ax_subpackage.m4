@@ -1,4 +1,4 @@
-# usage: AX_SUBPACKAGE(package_name,header,libraries,functions,conditional_name,autouse)
+# usage: AX_SUBPACKAGE(package_name,header,libraries,functions,conditional_name,[autouse,mandatory])
 
 AC_DEFUN([AX_SUBPACKAGE], [
 
@@ -16,18 +16,24 @@ else
 	$1_found=no
 fi
 
-# set default value for activation
-if test "$6" == "" -o "$6" == true
+if test "$6" != "mandatory"
 then
-	auto=true
-	errsuff="(automatically enabled if found)"
-	default=${$1_found}
-else
-	auto=false
-	default=false
-fi
 
-AX_ARG_ENABLE($1,$default)
+	# set default value for activation
+	if test "$6" == "autouse"
+	then
+	   helpstring="(automatically enabled if found)"
+	   default=${$1_found}
+	else
+	   default=false
+	fi
+
+	AX_ARG_ENABLE($1,$default,$helpstring)
+
+else
+
+	$enable_$1=yes
+fi
 
 #check activability
 if test "$enable_$1" == "yes"
