@@ -251,10 +251,17 @@ namespace SUNphi
 				      Tuple<IntSeqGetAllButFirst<PosOfResTcsInRefTk>...>{},
 						CurPos{},ExtraDelim{}));
 	
+	/// Function to check whether the current component is not consecutive in all Refs
+	constexpr auto curNotConsecutiveHelper=[](const int prevPosInt,
+						  const int cur)
+	  {
+	    return
+	    (prevPosInt!=NOT_PRESENT) and (cur!=prevPosInt+1);
+	  };
+	
 	/// Check whether the current component is not consecutive in all Refs
 	constexpr bool curNotConsecutive=
-	  (((PrevPosInts!=NOT_PRESENT) and
-	    (PosOfResTcsInRefTk::first!=PrevPosInts+1)) || ...);
+	  (curNotConsecutiveHelper(PrevPosInts,PosOfResTcsInRefTk::first) || ...);
 	
 	/// Check whether the current component was not originally mergeable
 	constexpr bool originallyNotMergeable=
