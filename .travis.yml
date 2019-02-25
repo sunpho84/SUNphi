@@ -41,10 +41,12 @@ addons:
       - libyaml-cpp0.5v5
 
 script:
+  - ls -l /usr/lib/x86_64-linux-gnu/
   - bash config/bootstrap
   - mkdir build
   - cd build
   - ../configure $THREADS $MPI
+  - cat config.log
   - make
   - bin/checks
 
