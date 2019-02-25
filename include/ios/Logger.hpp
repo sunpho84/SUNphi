@@ -93,6 +93,7 @@ namespace SUNphi
 	    SCOPE_REAL_FORMAT_FIXED(logger);
 	    SCOPE_REAL_PRECISION(logger,10);
 	    SCOPE_ALWAYS_PRINT_ZERO(logger);
+	    SCOPE_NOT_ALWAYS_PUT_SIGN(logger);
 	    rc+=
 	      (logger.file()<<durationInSec(timings.currentMeasure())<<" s").getRc();
 	  }

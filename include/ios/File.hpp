@@ -41,9 +41,17 @@ namespace SUNphi
 #define SCOPE_REAL_FORMAT_ENGINEER(STREAM)					\
   SET_FOR_CURRENT_SCOPE(STREAM_REAL_FORMAT_ENGINEER,STREAM.realFormat,RealFormat::ENGINEER)
   
-  /// Set printing or not sign at the beginning of a number for current scope
+  /// Set printing always sign at the beginning of a number for current scope
 #define SCOPE_ALWAYS_PUT_SIGN(STREAM)			\
   SET_FOR_CURRENT_SCOPE(STREAM_ALWAYS_PRINT_SIGN,STREAM.alwaysPrintSign,true)
+  
+  /// Set not to print always sign at the beginning of a number for current scope
+#define SCOPE_NOT_ALWAYS_PUT_SIGN(STREAM)			\
+  SET_FOR_CURRENT_SCOPE(STREAM_NOT_ALWAYS_PRINT_SIGN,STREAM.alwaysPrintSign,false)
+  
+  /// Set printing or not zero
+#define SCOPE_ALWAYS_PRINT_ZERO(STREAM)			\
+  SET_FOR_CURRENT_SCOPE(STREAM_ALWAYS_PRINT_ZERO,STREAM.alwaysPrintZero,true)
   
   /// Set printing or not zero
 #define SCOPE_ALWAYS_PRINT_ZERO(STREAM)			\
