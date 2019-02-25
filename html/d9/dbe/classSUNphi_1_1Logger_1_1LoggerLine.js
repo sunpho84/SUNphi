@@ -6,7 +6,7 @@ var classSUNphi_1_1Logger_1_1LoggerLine =
     [ "~LoggerLine", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff24f1c1ec41656011d19f21c2fcf6ed", null ],
     [ "endLine", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af3044a29aa67cde6e3516058aea3e622", null ],
     [ "operator*", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#afb561525387a94ae97d76f84cb091809", null ],
-    [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a788d09d07b2442da6e7acac9bb944384", null ],
+    [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ab0a05739ffdba3e7f1e5062b61843a28", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#abaa5d06c6d4a5f94c26413de01306b05", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a30320774dfd5a3de46fca93805b87f63", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a21193840cef785c00d8b24695a392a12", null ],

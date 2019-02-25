@@ -145,9 +145,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:afb561525387a94ae97d76f84cb091809"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#afb561525387a94ae97d76f84cb091809">operator*</a> (T &amp;&amp;t)</td></tr>
 <tr class="memdesc:afb561525387a94ae97d76f84cb091809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints after putting a space.  <a href="#afb561525387a94ae97d76f84cb091809">More...</a><br /></td></tr>
 <tr class="separator:afb561525387a94ae97d76f84cb091809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a788d09d07b2442da6e7acac9bb944384"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr))&lt;&lt;(*static_cast&lt;RemRef&lt;T&gt;*&gt;(nullptr)))&gt; </td></tr>
-<tr class="memitem:a788d09d07b2442da6e7acac9bb944384"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a788d09d07b2442da6e7acac9bb944384">operator&lt;&lt;</a> (T &amp;&amp;t)</td></tr>
-<tr class="separator:a788d09d07b2442da6e7acac9bb944384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a05739ffdba3e7f1e5062b61843a28"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt;not canPrint&lt;LoggerLine,T&gt;&gt;, typename  = EnableIf&lt;canPrint&lt;File,T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ab0a05739ffdba3e7f1e5062b61843a28"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ab0a05739ffdba3e7f1e5062b61843a28">operator&lt;&lt;</a> (T &amp;&amp;t)</td></tr>
+<tr class="separator:ab0a05739ffdba3e7f1e5062b61843a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d9b2f80bb8cdbf371fdf90b57f5315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html">LoggerLine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a09d9b2f80bb8cdbf371fdf90b57f5315">printVariadicMessage</a> (const char *format, va_list ap)</td></tr>
 <tr class="memdesc:a09d9b2f80bb8cdbf371fdf90b57f5315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a C-style variadic message.  <a href="#a09d9b2f80bb8cdbf371fdf90b57f5315">More...</a><br /></td></tr>
 <tr class="separator:a09d9b2f80bb8cdbf371fdf90b57f5315"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,11 +248,11 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a788d09d07b2442da6e7acac9bb944384"></a>
+<a class="anchor" id="ab0a05739ffdba3e7f1e5062b61843a28"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr))&lt;&lt;(*static_cast&lt;RemRef&lt;T&gt;*&gt;(nullptr)))&gt; </div>
+template&lt;typename T , typename  = EnableIf&lt;not canPrint&lt;LoggerLine,T&gt;&gt;, typename  = EnableIf&lt;canPrint&lt;File,T&gt;&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -280,7 +280,7 @@ template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00202">202</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@ template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr
 <p>Prints crash information</p>
 <p>Then sets the flag <code>hasToCrash</code> to true, such that at destroy of the line, crash happens </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00237">237</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00238">238</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr
 <p>Prints a string, parsing newline. </p>
 <p>Pointer to the first char of the string </p>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00249">249</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00250">250</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ template&lt;typename T , typename  = decltype((*static_cast&lt;File*&gt;(nullptr
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00211">211</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d9/d11/Logger_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../d9/d11/Logger_8hpp_source.html">Logger.hpp</a>.</p>
 
 </div>
 </div>
