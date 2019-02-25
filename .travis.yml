@@ -21,7 +21,7 @@ env:
   - CC=gcc-8 CXX=g++-8   THREADS=--enable-threads  MPI=--disable-MPI DOXY=false
   - CC=gcc-8 CXX=g++-8   THREADS=--disable-threads MPI=--enable-MPI  DOXY=false
   - CC=gcc-8 CXX=g++-8   THREADS=--disable-threads MPI=--disable-MPI DOXY=false
-  
+
 # Install dependencies
 addons:
   apt:
@@ -37,6 +37,8 @@ addons:
       - libopenmpi-dev
       - clang
       - libclang1
+      - libyaml-cpp-dev
+      - libyaml-cpp0.5v5
 
 script:
   - bash config/bootstrap
@@ -45,7 +47,7 @@ script:
   - ../configure $THREADS $MPI
   - make
   - bin/checks
-  
+
 # Generate and deploy documentation
 after_success:
   - cd $TRAVIS_BUILD_DIR/build
