@@ -67,9 +67,9 @@ namespace SUNphi
   }
   
   /// Print a symbol to a stream
-  template <typename T>                            // Type of the stream
-  DECLAUTO operator<<(T&& os,                    ///< Stream
-		      const BackTraceSymbol& s)  ///< Symbol to print
+  template <typename T>                      // Type of the stream
+  T& operator<<(T&& os,                    ///< Stream
+		const BackTraceSymbol& s)  ///< Symbol to print
   {
     return
       os<<s.compilUnit<<

@@ -33,7 +33,7 @@ namespace SUNphi
 {
   /// Write output to a file, using different level of indentation
   class Logger :
-    public File
+    private File
   {
     /// Fake logger, printing to /dev/null
     static Logger fakeLogger;
@@ -197,9 +197,10 @@ namespace SUNphi
       ///
       /// The SFINAE is needed to avoid that the method is used when
       /// File does not know how to print
-      template <typename T,                             // Type of the quantity to print
-		typename=decltype((*static_cast<File*>(nullptr))<<(*static_cast<RemRef<T>*>(nullptr)))> // SFINAE needed to avoid ambiguous overload
-      LoggerLine& operator<<(T&& t)                     ///< Object to print
+      template <typename T,                                       // Type of the quantity to print
+		typename=EnableIf<not canPrint<LoggerLine,T>>,    // SFINAE needed to avoid ambiguous overload
+		typename=EnableIf<canPrint<File,T>>>              // SFINAE needed to avoid ambiguous overload
+      LoggerLine& operator<<(T&& t)                             ///< Object to print
       {
 	logger.file()<<forw<T>(t);
 	
@@ -310,6 +311,11 @@ namespace SUNphi
     
   public:
     
+    using File::alwaysPrintSign;
+    using File::alwaysPrintZero;
+    using File::realFormat;
+    using File::realPrecision;
+    
     /// Decide whether only master thread can write here
     bool onlyMasterThreadPrint{true};
     
@@ -337,15 +343,20 @@ namespace SUNphi
 	*this;
     }
     
-    /// Create a new line, and print on it
-    template <typename T,
-	      typename=decltype((*static_cast<LoggerLine*>(nullptr))<<(*static_cast<RemRef<T>*>(nullptr))), // SFINAE needed to avoid ambiguous overload
-	      typename=EnableIf<not canPrint<Logger,RemRef<T>>>>                                            // SFINAE to avoid ambiguous reimplementation
-    LoggerLine operator<<(T&& t)
+    LoggerLine operator()()
     {
       return
-	std::move(getNewLine()<<forw<T>(t));
+	*this;
     }
+    // /// Create a new line, and print on it
+    // template <typename T,
+    // 	      typename=EnableIf<canPrint<LoggerLine,T>>,            // SFINAE needed to avoid ambiguous overload
+    // 	      typename=EnableIf<not canPrint<Logger,RemRef<T>>>>    // SFINAE to avoid ambiguous reimplementation
+    // LoggerLine operator<<(T&& t)
+    // {
+    //   return
+    // 	std::move(getNewLine()<<forw<T>(t));
+    // }
     
     /// Print a C-style variadic message
     LoggerLine printVariadicMessage(const char* format, ///< Format to print

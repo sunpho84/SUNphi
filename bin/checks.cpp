@@ -9,7 +9,7 @@ using namespace SUNphi;
 
 /// Report that a test is passed
 #define TEST_PASSED \
-  runLog<<__PRETTY_FUNCTION__<<" passed!"
+  runLog()<<__PRETTY_FUNCTION__<<" passed!"
 
 /// Prints an IntSeq
 template <int...Ints>
@@ -715,7 +715,7 @@ void checkCombinatorial()
   
   for(auto i : c.getLast())
     {
-      runLog<<i;
+      runLog()<<i;
     }
   
   TEST_PASSED;
@@ -732,7 +732,7 @@ void checkSitmo()
   
   // Skip 8
   for(int i=0;i<8;i++)
-    runLog<<rng();
+    runLog()<<rng();
   
   /// Test the rng
   const uint32_t r=
@@ -776,11 +776,11 @@ void checkIsAliasing()
   auto a=wrap(Tens<TensKind<Compl>,double>{});
   auto b=wrap(wrap(Tens<TensKind<Compl>,double>{}));
   
-  runLog<< isSame<RemRef<decltype(a)>,RemRef<decltype(b)>> ;
-  runLog<<isSame<decltype(a),decltype(b)>;
-  runLog<<"t.isAliasing(t): "<<t.isAliasing(t.getStor());
-  runLog<<"t.isAliasing(u): "<<t.isAliasing(u.getStor());
-  runLog<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor());
+  runLog()<< isSame<RemRef<decltype(a)>,RemRef<decltype(b)>> ;
+  runLog()<<isSame<decltype(a),decltype(b)>;
+  runLog()<<"t.isAliasing(t): "<<t.isAliasing(t.getStor());
+  runLog()<<"t.isAliasing(u): "<<t.isAliasing(u.getStor());
+  runLog()<<"conj(t).isAliasing(t): "<<conj(t).isAliasing(t.getStor());
 }
 
 void checkBindComplicatedExpression()
@@ -797,7 +797,7 @@ void checkBindComplicatedExpression()
   using MyTens=Tens<MyTk,double>;
   
   //int a=MyTk::firstVectorizingComp<double>;
-  //runLog<<a;
+  //runLog()<<a;
   
   int vol=10;
   MyTens cicc(vol);
@@ -824,8 +824,8 @@ void checkBindComplicatedExpression()
   // // eval(binder1)=8.0;
   // printf("%d\n",cicc.getStor().nel);
   printf("ANNA %lg\n",binder1);
-  // runLog<<Spacetime::name();
-  // runLog<<Col::name();
+  // runLog()<<Spacetime::name();
+  // runLog()<<Col::name();
  }
 
 // void test_assigner()
@@ -841,7 +841,7 @@ void checkBindComplicatedExpression()
 //   MyTens1 cicc1;
 //   MyTens2 cicc2;
   
-//   runLog<<"cicc1 storage: "<<getStor(cicc1)._v;
+//   runLog()<<"cicc1 storage: "<<getStor(cicc1)._v;
   
 //   for(int icol=0;icol<NCOL;icol++)
 //     for(int ispin=0;ispin<NSPIN;ispin++)
@@ -866,9 +866,9 @@ void checkBindComplicatedExpression()
 //   // 	{
 //   // 	  double b=col(spin(reim(cicc2,icompl),ispin),icol);
 //   // 	  a+=b;
-//   // 	  runLog<<b;
+//   // 	  runLog()<<b;
 //   // 	}
-//   // runLog<<a;
+//   // runLog()<<a;
   
 //   // using MyTk1=TensKind<Col,Compl>;
 //   // using MyTens1=Tens<MyTk1,double>;
@@ -884,16 +884,16 @@ void checkBindComplicatedExpression()
 //   //     col(reim(cicc1,icompl),icol).eval()=
 //   // 	icompl;
   
-//   // runLog<<"/////////////////////////////////////////////////////////////////";
+//   // runLog()<<"/////////////////////////////////////////////////////////////////";
 //   // // for(int icol=0;icol<NCOL;icol++)
 //   // //   for(int icompl=0;icompl<NCOMPL;icompl++)
 //   // //     {
 //   // // 	col(reim(cicc2,icompl),icol).eval()=
 //   // // 	  col(reim(conj(cicc1),icompl),icol).eval();
-//   // // 	runLog<<col(reim(cicc2,icompl),icol).eval()<<
+//   // // 	runLog()<<col(reim(cicc2,icompl),icol).eval()<<
 //   // // 	  " "<<col(reim(cicc1,icompl),icol).eval();
 //   // //     }
-//   // // runLog<<"/////////////////////////////////////////////////////////////////";
+//   // // runLog()<<"/////////////////////////////////////////////////////////////////";
 
 //   // auto c1=conj(cicc1);
 //   // auto ass=assign(cicc2,c1);
@@ -901,7 +901,7 @@ void checkBindComplicatedExpression()
   
 //   // for(int icol=0;icol<NCOL;icol++)
 //   //   for(int icompl=0;icompl<NCOMPL;icompl++)
-//   //     runLog<<col(reim(cicc2,icompl),icol).eval()<<" "<<col(reim(cicc1,icompl),icol).eval();
+//   //     runLog()<<col(reim(cicc2,icompl),icol).eval()<<" "<<col(reim(cicc1,icompl),icol).eval();
   
 // }
 
@@ -994,23 +994,23 @@ void checkNnaryBuilder()
     
   //   auto b1=relBind<RwCol,CnCol>(c,[](int id){return id;});
   //   auto b2=relBind<CnCol,RwCol>(c,[](int id){return id;});
-  //   // runLog<<decltype(c)::Tk::name();
-  //   // runLog<<decltype(b1)::Tk::name();
-  //   // runLog<<decltype(b2)::Tk::name();
-  //   runLog<<c.eval(1,2,0,1)<< " "<<b1.eval(2,0,1)<<" "<<b2.eval(1,2,0);
+  //   // runLog()<<decltype(c)::Tk::name();
+  //   // runLog()<<decltype(b1)::Tk::name();
+  //   // runLog()<<decltype(b2)::Tk::name();
+  //   runLog()<<c.eval(1,2,0,1)<< " "<<b1.eval(2,0,1)<<" "<<b2.eval(1,2,0);
     
   //   auto bb1=relBind<Spin,Col>(b1,[](int id){return id+1;});
   //   auto bb2=relBind<Spin,Col>(b2,[](int id){return id+1;});
     
-  //   runLog<<c.eval(1,2,0,1)<< " "<<bb1.eval(0,1)<<" "<<bb2.eval(1,0);
+  //   runLog()<<c.eval(1,2,0,1)<< " "<<bb1.eval(0,1)<<" "<<bb2.eval(1,0);
     
-  //   runLog<<decltype(c.getMaximallyMergedCompsView())::Tk::name();
-  //   runLog<<" c: "<<decltype(c)::Tk::name();
-  //   runLog<<" bb2: "<<decltype(bb2)::Tk::name();
+  //   runLog()<<decltype(c.getMaximallyMergedCompsView())::Tk::name();
+  //   runLog()<<" c: "<<decltype(c)::Tk::name();
+  //   runLog()<<" bb2: "<<decltype(bb2)::Tk::name();
   //   // int o=decltype(b1)::ExtraDelims{};
   //   // int oo=decltype(b1)::PosOfResTcsInRefsTk{};
   //   // int p=decltype(b1)::MergeableComps{};
-  //   runLog<<decltype(b1.getMaximallyMergedCompsView())::Tk::name();
+  //   runLog()<<decltype(b1.getMaximallyMergedCompsView())::Tk::name();
   // }
   
   // //come trovare le componenti non twinnate? crea un IntSeq che dica
@@ -1022,7 +1022,7 @@ void checkNnaryBuilder()
     
   //   MyTens c;
     
-  //   runLog<<" "<<posOfType<RwCol,MyTk::Twinned::types>;
+  //   runLog()<<" "<<posOfType<RwCol,MyTk::Twinned::types>;
     
   //   STATIC_ASSERT_IS_BASE_OF(MyTens,decltype(+c));
   // }
@@ -1062,24 +1062,24 @@ void checkNnaryBuilder()
   // cicc.getMaximallyMergedCompsView()=1.0;
   
   // auto i=imag(conj(cnCol(spin(rwCol(-cicc,0),0),0)));
-  // runLog<<i;
+  // runLog()<<i;
   
-  // runLog<<"/////////////////////////////////////////////////////////////////";
+  // runLog()<<"/////////////////////////////////////////////////////////////////";
   
   // for(int irw_col=0;irw_col<NCOL;irw_col++)
   //   for(int ispin=0;ispin<NSPIN;ispin++)
   //     for(int icn_col=0;icn_col<NCOL;icn_col++)
   // 	for(int ri=0;ri<NCOMPL;ri++)
   // 	  {
-  // 	    runLog<<"------";
-  // 	    runLog<<&rwCol(reIm(cnCol(spin(cicc,
+  // 	    runLog()<<"------";
+  // 	    runLog()<<&rwCol(reIm(cnCol(spin(cicc,
   // 					 ispin),
   // 				  icn_col),
   // 			      ri),
   // 			 irw_col);
   // 	  }
   
-  // runLog<<"/////////////////////////////////////////////////////////////////";
+  // runLog()<<"/////////////////////////////////////////////////////////////////";
   
   // double a=0.0;
   // for(int irw_col=0;irw_col<NCOL;irw_col++)
@@ -1094,7 +1094,7 @@ void checkNnaryBuilder()
   // 	// 		    icn_col),
   // 	// 		   irw_col)));
   
-  // runLog<<a;
+  // runLog()<<a;
   
 
 /// Check the sum of two \c SmET
@@ -1142,7 +1142,7 @@ void checkSumOfTwoSmETs()
   
   d=(a+b).getMaximallyMergedCompsView();
   
-  runLog<<"d: "<<d.eval(1,1,1);
+  runLog()<<"d: "<<d.eval(1,1,1);
   
   //auto sum=a+b;
   // this was added here to show the maximally mergeable delims
@@ -1151,52 +1151,52 @@ void checkSumOfTwoSmETs()
   //int e=decltype(sum)::MergedDelims1<IntSeq<0,1,3,4>>{};
   
   
-  //runLog<<"Col: "<<c.compSize<RwCol>();
-  //runLog<<"Spin: "<<c.compSize<CnSpin>();
-  runLog<<"Tensor Kind of addendum 1: "<<decltype(a)::Tk::name();
+  //runLog()<<"Col: "<<c.compSize<RwCol>();
+  //runLog()<<"Spin: "<<c.compSize<CnSpin>();
+  runLog()<<"Tensor Kind of addendum 1: "<<decltype(a)::Tk::name();
   using M1=
     typename decltype(a)::MergeableComps;
-  runLog<<"Mergeability of addendum 1: "<<printIntSeq(M1{});
-  runLog<<"Tensor Kind of addendum 2: "<<decltype(b)::Tk::name();
+  runLog()<<"Mergeability of addendum 1: "<<printIntSeq(M1{});
+  runLog()<<"Tensor Kind of addendum 2: "<<decltype(b)::Tk::name();
   using M2=
     typename decltype(b)::MergeableComps;
-  runLog<<"Mergeability of addendum 2: "<<printIntSeq(M2{});
-  runLog<<"Tensor Kind: "<<decltype(a+b)::Tk::name();
+  runLog()<<"Mergeability of addendum 2: "<<printIntSeq(M2{});
+  runLog()<<"Tensor Kind: "<<decltype(a+b)::Tk::name();
   
-  runLog<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
-  runLog<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
+  runLog()<<"PosOf types 1 present: "<<printIntSeq(TupleElementType<0,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
+  runLog()<<"PosOf types 2 present: "<<printIntSeq(TupleElementType<1,decltype(a+b)::PosOfResTcsPresInRefsTk>{});
   
   // using P1=
   //   decltype(c)::posOfAddend1TcInResTk;
-  // runLog<<"PosOf types 1: "<<printIntSeq(P1{});
+  // runLog()<<"PosOf types 1: "<<printIntSeq(P1{});
   // using P2=
   //   decltype(c)::posOfAddend2TcInResTk;
-  // runLog<<"PosOf types 2: "<<printIntSeq(P2{});
+  // runLog()<<"PosOf types 2: "<<printIntSeq(P2{});
   
   // using P3=
   //   PairOfTensKindMergeability::template CompsMergeability<M1,M2,P1,P2>;
   
-  // runLog<<"Mergeability: "<<printIntSeq(P3{});
+  // runLog()<<"Mergeability: "<<printIntSeq(P3{});
   
   // using MDel=
   //   IntSeq<0,1,3,4>;
   
-  // runLog<<"Trying to merge with: "<<printIntSeq(MDel{});
+  // runLog()<<"Trying to merge with: "<<printIntSeq(MDel{});
   
   // using P4=
   //   decltype(c)::template MergedDelims1<MDel>;
   
-  // runLog<<"The first needs to be merged like this: "<<printIntSeq(P4{});
+  // runLog()<<"The first needs to be merged like this: "<<printIntSeq(P4{});
   
   TEST_PASSED;
 }
 
 int main()
 {
-  runLog<<"Timings: "<<timings.isStarted()<<" "<<timings.currentMeasure().count();
-  runLog<<"Timings: "<<timings["ciao"].isStarted()<<" "<<timings["ciao"].currentMeasure().count();
+  runLog()<<"Timings: "<<timings.isStarted()<<" "<<timings.currentMeasure().count();
+  runLog()<<"Timings: "<<timings["ciao"].isStarted()<<" "<<timings["ciao"].currentMeasure().count();
   
-  runLog<<"Anna\n";
+  runLog()<<"Anna\n";
   {
     SCOPE_INDENT(runLog);
     SCOPE_REAL_PRECISION(runLog,3);
@@ -1204,14 +1204,14 @@ int main()
       SCOPE_INDENT(runLog);
       SCOPE_ALWAYS_PUT_SIGN(runLog);
       SCOPE_REAL_PRECISION(runLog,10);
-      runLog<<1.23523524<<"\n";
+      runLog()<<1.23523524<<"\n";
     }
-    runLog<<1.23523524<<"\n";
+    runLog()<<1.23523524<<"\n";
     
-    runLog<<"Elena\n";
+    runLog()<<"Elena\n";
   }
   
-  runLog<<"Caterina\n";
+  runLog()<<"Caterina\n";
   
   checkSignUnsign();
   

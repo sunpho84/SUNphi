@@ -15,9 +15,9 @@ namespace SUNphi
 {
   void printBacktraceList()
   {
-    runLog<<"Backtracing...";
+    runLog()<<"Backtracing...";
     
     for(auto &p : getBackTraceList())
-      runLog<<p;
+      runLog()<<p;
   }
 }

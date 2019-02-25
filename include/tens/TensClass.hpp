@@ -182,7 +182,7 @@ namespace SUNphi
     QUALIFIER Fund& eval(const Comps&...comps) QUALIFIER  /*!< Component values                                     */ \
     {									\
       if(DEBUG_TENS_COMPONENTS)						\
-	((runLog<<"Components: "<<&v) * ... *comps);			\
+	((runLog()<<"Components: "<<&v) * ... *comps);			\
 									\
       return								\
 	v->eval(forw<const Comps>(comps)...);				\
