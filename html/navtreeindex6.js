@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,149,1],
+"dc/d2f/structSUNphi_1_1NnarySmET.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,149,2],
 "dc/d2f/structSUNphi_1_1NnarySmET.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,149,6],
 "dc/d2f/structSUNphi_1_1NnarySmET.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,149,3],
 "dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,149,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "dd/dca/classSUNphi_1_1Grid.html":[2,0,0,117],
 "dd/dca/classSUNphi_1_1Grid.html#a072a659b92ccf74423fc61f069002a6c":[2,0,0,117,1],
 "dd/dca/classSUNphi_1_1Grid.html#a160a49645ad23cb4e66912a145008f06":[2,0,0,117,3],
-"dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54":[2,0,0,117,15],
-"dd/dca/classSUNphi_1_1Grid.html#a1f5850895ea94cf20491e1833e03909d":[2,0,0,117,6],
-"dd/dca/classSUNphi_1_1Grid.html#a3bcde486ad4aeb49a4e65d8f9ceb7245":[2,0,0,117,13]
+"dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54":[2,0,0,117,15]
 };

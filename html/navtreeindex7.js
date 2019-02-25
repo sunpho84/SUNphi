@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"dd/dca/classSUNphi_1_1Grid.html#a1f5850895ea94cf20491e1833e03909d":[2,0,0,117,6],
+"dd/dca/classSUNphi_1_1Grid.html#a3bcde486ad4aeb49a4e65d8f9ceb7245":[2,0,0,117,13],
 "dd/dca/classSUNphi_1_1Grid.html#a3fb84f3cd20047db0cd2bddee52de4e7":[2,0,0,117,25],
 "dd/dca/classSUNphi_1_1Grid.html#a5f87ad4e7caf4507b612ab7163102e99":[2,0,0,117,23],
 "dd/dca/classSUNphi_1_1Grid.html#a73a43907a0c67cd7d40b28c6fddb9d9c":[2,0,0,117,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "df/dd6/structSUNphi_1_1HasMember__isStoring_1_1Check.html":[2,0,0,131,0],
 "df/dd7/structSUNphi_1_1__TwinCompOf_3_01RwSpin_01_4.html":[2,0,0,36],
 "df/dd7/structSUNphi_1_1__TwinCompOf_3_01RwSpin_01_4.html#a13f812a5d6bfa2fdfb1a634a3737381d":[2,0,0,36,0],
-"df/ddd/structSUNphi_1_1ConstrainAreMulAdders.html":[2,0,0,74],
-"df/ddf/structSUNphi_1_1BaseTransposer.html":[2,0,0,56],
-"df/de0/structSUNphi_1_1ConstrainIsTuple.html":[2,0,0,107]
+"df/ddd/structSUNphi_1_1ConstrainAreMulAdders.html":[2,0,0,74]
 };
