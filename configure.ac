@@ -78,7 +78,7 @@ fi
 AX_SUBPACKAGE(dwarf,libdwarf/dwarf.h,dwarf,dwarf_child,DWARF,$default_dwarf)
 
 # yaml-cpp library
-AX_SUBPACKAGE(yaml,yaml-cpp/yaml.h,yaml-cpp,YAML::,YAML)
+AX_SUBPACKAGE(yaml,yaml-cpp/yaml.h,yaml-cpp,YAML::,YAML,mandatory)
 
 # Configure doxygen
 DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
