@@ -16,6 +16,8 @@ do
 		if test "$matching" == 0
 		then
 			AX_CXX_CHECK_LIB([$2],[$function],[$1_found_library=yes],[$1_found_library=no])
+			LIBS="-lyaml-cpp $LIBS"
+			libs_to_link="-lyaml-cpp $libs_to_link"
 		else
 			AC_SEARCH_LIBS([$function],[$2],[$1_found_library=yes],[$1_found_library=no])
 			libs_to_link="$(eval echo \$ac_cv_search_$function) $libs_to_link"
