@@ -24,6 +24,7 @@
 #include <Physics.hpp>
 #include <Random.hpp>
 #include <SmET.hpp>
+#include <Serialize.hpp>
 #include <System.hpp>
 #include <Tens.hpp>
 #include <Threads.hpp>
