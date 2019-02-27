@@ -160,7 +160,7 @@ namespace SUNphi
     }
     
     /// Prints an integer
-    File& operator<<(const int& i) ///< Integer to write
+    File& operator<<(const int32_t& i) ///< Integer to write
     {
       rc=
 	fprintf(file,"%d",i);
@@ -170,7 +170,7 @@ namespace SUNphi
     }
     
     /// Prints an unsigned integer
-    File& operator<<(const uint& i) ///< Unsigned integer to write
+    File& operator<<(const uint32_t& i) ///< Unsigned integer to write
     {
       rc=
 	fprintf(file,"%u",i);
@@ -184,6 +184,16 @@ namespace SUNphi
     {
       rc=
 	fprintf(file,"%ld",l);
+      
+      return
+	*this;
+    }
+    
+    /// Prints a long unsigned integer
+    File& operator<<(const uint64_t& l) ///< Long unsigned integer to write
+    {
+      rc=
+	fprintf(file,"%lu",l);
       
       return
 	*this;
