@@ -68,28 +68,18 @@ namespace SUNphi
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
-    auto getSeri()
-    {
-      return
-	(~(*this)).getSeri();
-    }
-    
-    auto getSeri()
+    const auto getSeri()
       const
     {
       return
 	(~(*this)).getSeri();
     }
     
-    //PROVIDE_ALSO_NON_CONST_METHOD(getSeri);
+    PROVIDE_ALSO_NON_CONST_METHOD(getSeri);
     
     SerializableMap<T>()
     {
-      auto tmp=
-	std::get<0>(getSeri());
-      
-      std::get<0>(tmp)=
-	std::get<2>(tmp);
+      std::apply([](auto...s){((std::get<0>(s)=std::get<2>(s)) , ...);},(~(*this)).getSeri());
     }
     
   };
@@ -223,8 +213,12 @@ YAML::Node& operator<<(YAML::Node& node,
     static Node encode(const SerializableMap<T>& rhs)
     {
       Node node;
-      auto tmp=std::get<0>(const_cast<SerializableMap<T>&>(rhs).getSeri());
-      node[std::get<0>(tmp)]=std::get<2>(tmp);
+      
+      std::apply([&node](auto...s)
+		 {
+		   ((node[std::get<1>(s)]=std::get<0>(s)) , ...);
+		 },
+		 rhs.getSeri());
       
       return node;
     }
@@ -263,7 +257,7 @@ int main()
   
   Serializable<Test> test{"test",{}};
   
-  // test().a=11.0;
+  test().a=11.0;
   
   node<<test;
   
