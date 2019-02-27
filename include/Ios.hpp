@@ -8,7 +8,6 @@
 #include <ios/File.hpp>
 #include <ios/Logger.hpp>
 #include <ios/MinimalLogger.hpp>
-#include <ios/Serialize.hpp>
 #include <ios/TextColors.hpp>
 
 #endif
