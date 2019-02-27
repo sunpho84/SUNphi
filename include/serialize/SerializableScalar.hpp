@@ -86,7 +86,7 @@ namespace SUNphi
       name(name)
     {
       /// If the variable has default value, copy it
-      if constexpr(not isSame<Tdef,NoDefault>)
+      if constexpr(not isSame<RemoveCV<Tdef>,NoDefault>)
 	value=def;
     }
     

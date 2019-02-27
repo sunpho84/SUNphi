@@ -12,116 +12,41 @@
 using namespace std;
 using namespace SUNphi;
 
-#define PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(SPEC,...)	\
-								\
-    auto getSeri()						\
-      SPEC							\
-    {								\
-      return							\
-	serList(__VA_ARGS__);					\
-    }								\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-    
-#define DECLARE_SERIALIZABLE_MEMBERS(...)			\
-    PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(,__VA_ARGS__);	\
-    PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(const,__VA_ARGS__)	\
-    
+DEFINE_HAS_MEMBER(serializableMembers);
 
 namespace SUNphi
 {
-  template <typename T,
-	    typename Tdef>
-  auto ser(T&& t,
-	   const char* name,
-	   const Tdef& def)
-  {
-    return
-      make_tuple(std::ref(t),name,def);
-  }
   
-  template <typename Tp,
-	    typename T,
-	    typename Tdef,
-	    typename...Tail>
-  auto _serList(Tp&& tp,
-	       T&& t,
-	       const char* name,
-	       const Tdef& def,
-	       Tail&&...tail)
-  {
-    auto tmp=
-      std::tuple_cat(tp,make_tuple(ser(forw<T>(t),name,def)));
-    
-    if constexpr(sizeof...(tail)>0)
-		  {
-		    return
-		      _serList(tmp,forw<Tail>(tail)...);
-		  }
-    else
-      return
-	tmp;
-  }
+#define SERIALIZABLE_SCALAR(TYPE,		\
+			    NAME,		\
+			    DEFAULT)					\
+  SerializableScalar<TYPE,decltype(DEFAULT)> NAME{#NAME,DEFAULT}
   
-  template <typename...Args>
-  auto serList(Args&&...args)
-  {
-    std::tuple<> tmp;
-    
-    if constexpr(sizeof...(args)>0)
-		  return _serList(tmp,forw<Args>(args)...);
-    else
-      return
-	tmp;
-  }
-  
-  DEFINE_BASE_TYPE(SerializableMap);
-  
-  template <typename T>
-  class SerializableMap
-  {
-  public:
-    
-    PROVIDE_CRTP_CAST_OPERATOR(T);
-    
-    const auto getSeri()
-      const
-    {
-      return
-	(~(*this)).getSeri();
-    }
-    
-    PROVIDE_ALSO_NON_CONST_METHOD(getSeri);
-    
-    SerializableMap<T>()
-    {
-      forEach((~(*this)).getSeri(),[](auto s)
-		 {
-		   std::get<0>(s)=std::get<2>(s);
-		 });
-    }
-    
-  };
+#define SERIALIZABLE_MEMBERS(...)					\
+  decltype(std::forward_as_tuple(__VA_ARGS__)) serializableMembers{std::forward_as_tuple(__VA_ARGS__)}
   
   class Test
-    : public SerializableMap<Test>
-    , public BaseSerializableMap
   {
-rimuovi il tipo serializablemap e fai riconoscere il fatto che abbia membri serializzabili direttamente alla routine
   public:
-    double a;
-    double b;
     
-    DECLARE_SERIALIZABLE_MEMBERS(a,"a",10.0,
-				 b,"b",1);
+    SERIALIZABLE_SCALAR(double,a,10.0);
+    SERIALIZABLE_SCALAR(double,b,1);
+    
+    SERIALIZABLE_MEMBERS(a,b);
     
     Test()
     {
     }
   };
   
-  //class Test2
-  
-  
+  class Test2
+  {
+  public:
+    
+    SERIALIZABLE_SCALAR(Test,t,NO_DEFAULT);
+    
+    SERIALIZABLE_MEMBERS(t);
+  };
 }
 
 // namespace SUNphi
@@ -158,24 +83,27 @@ rimuovi il tipo serializablemap e fai riconoscere il fatto che abbia membri seri
 
 // Test test;
 
-//static_assert(isSerializable<SerializeWrapper<double>>,"The serializer is not such");
-
 namespace YAML
 {
-  template <typename T>
-  const auto& castToSerializableMap(const SerializableMap<T>& in)
-  {
-    return
-      in;
-  }
   
-  
-template <typename T>
+  template <typename T,
+	    typename Tdef>
 YAML::Node& operator<<(YAML::Node& node,
-		       const Serializable<T>& t)
+		       const SerializableScalar<T,Tdef>& t)
 {
-  if constexpr(isSerializableMap<T>)
-		node[t.name]=castToSerializableMap(t());
+  if constexpr(hasMember_serializableMembers<T>)
+    {
+      Node subNode;
+      
+      forEach(t().serializableMembers,
+	      [&subNode](auto s)
+	      {
+		subNode<<s;
+	      });
+      
+      node[t.name]=
+	subNode;
+    }
     else
       node[t.name]=t();
   
@@ -194,9 +122,9 @@ YAML::Node& operator<<(YAML::Node& node,
 // }
 
   template<typename T>
-  struct convert<Serializable<T>>
+  struct convert<SerializableScalar<T>>
   {
-    static Node encode(const Serializable<T>& rhs)
+    static Node encode(const SerializableScalar<T>& rhs)
     {
       Node node;
       node<<~rhs;
@@ -204,31 +132,7 @@ YAML::Node& operator<<(YAML::Node& node,
       return node;
     }
     
-    static bool decode(const Node& node,Serializable<T>& rhs)
-    {
-      node>>rhs.a;
-      
-      return true;
-    }
-  };
-  
-  template<typename T>
-  struct convert<SerializableMap<T>>
-  {
-    static Node encode(const SerializableMap<T>& rhs)
-    {
-      Node node;
-      
-      forEach(rhs.getSeri(),
-	      [&node](auto s)
-	      {
-		node[std::get<1>(s)]=std::get<0>(s);
-	      });
-      
-      return node;
-    }
-    
-    static bool decode(const Node& node,SerializableMap<T>& rhs)
+    static bool decode(const Node& node,SerializableScalar<T>& rhs)
     {
       node>>rhs.a;
       
@@ -260,11 +164,12 @@ int main()
   
   YAML::Node node;
   
-  Serializable<Test> test{"test",{}};
+  SerializableScalar<Test> test{"test",{}};
+  SerializableScalar<Test2> t2{"t2",NO_DEFAULT};
   
   test().a=11.0;
-  
-  node<<test;
+  runLog()<<test().a();
+  node<<t2;
   
   YAML::Emitter emitter;
   emitter<<node;
@@ -277,6 +182,9 @@ int main()
   // auto l=serList(d,"d",10.0,
   // 		 i,"i",10);
   // runLog()<<((&std::get<0>(std::get<0>(l)))!=&d);
+  
+  SerializableScalar<double> _aref("a",NO_DEFAULT);
+  
   
   return 0;
 }
