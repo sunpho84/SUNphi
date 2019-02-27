@@ -11,6 +11,7 @@
 #endif
 
 #include <type_traits>
+#include <utility>
 
 #include <metaprogramming/SwallowSemicolon.hpp>
 
@@ -568,13 +569,26 @@ namespace SUNphi
       sizeof(test<Derived>(nullptr))==sizeof(Yes);			\
   };									\
 									\
+  /*! Intemediate function to distinguish the non-class case */		\
+  template <typename Type>						\
+  [[ maybe_unused ]]							\
+  constexpr bool hasMember_ ## TAG ## Helper()				\
+  {									\
+    if constexpr(isClass<Type>)						\
+      return						                \
+	HasMember_ ## TAG<Type>::result;			        \
+    else								\
+      return								\
+	false;								\
+  }									\
+  									\
   /*! Detect if \c Type has member (variable or method) TAG          */ \
   /*!                                                                */	\
   /*! Uses SFINAE to induce ambiguity in the detection of the member */	\
   template <typename Type>						\
   [[ maybe_unused ]]							\
   constexpr bool hasMember_ ## TAG=					\
-    HasMember_ ## TAG<Type>::result;					\
+    hasMember_ ## TAG ## Helper<Type>();				\
   									\
   /*! \brief Class forcing T to have a member "TAG" defined */		\
   template <typename T>							\
