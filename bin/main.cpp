@@ -12,6 +12,21 @@
 using namespace std;
 using namespace SUNphi;
 
+#define PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(SPEC,...)	\
+								\
+    auto getSeri()						\
+      SPEC							\
+    {								\
+      return							\
+	serList(__VA_ARGS__);					\
+    }								\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+#define DECLARE_SERIALIZABLE_MEMBERS(...)			\
+    PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(,__VA_ARGS__);	\
+    PROVIDE_CONST_OR_NOT_SERIALIZABLE_LIST(const,__VA_ARGS__)	\
+    
+
 namespace SUNphi
 {
   template <typename T,
@@ -79,7 +94,10 @@ namespace SUNphi
     
     SerializableMap<T>()
     {
-      std::apply([](auto...s){((std::get<0>(s)=std::get<2>(s)) , ...);},(~(*this)).getSeri());
+      forEach((~(*this)).getSeri(),[](auto s)
+		 {
+		   std::get<0>(s)=std::get<2>(s);
+		 });
     }
     
   };
@@ -88,35 +106,22 @@ namespace SUNphi
     : public SerializableMap<Test>
     , public BaseSerializableMap
   {
+rimuovi il tipo serializablemap e fai riconoscere il fatto che abbia membri serializzabili direttamente alla routine
   public:
     double a;
+    double b;
     
-    auto getSeri()
-    {
-      return
-	serList(a,"a",10.0);
-    }
-    
-    auto getSeri()
-          const
-    {
-      return
-	serList(a,"a",10.0);
-    }
-    
-    //PROVIDE_ALSO_NON_CONST_METHOD(getSeri);
-    
-    // bool operator==(const Test& oth)
-    //   const
-    // {
-    //   return
-    //     getSeri()==oth.getSeri();
-    // }
+    DECLARE_SERIALIZABLE_MEMBERS(a,"a",10.0,
+				 b,"b",1);
     
     Test()
     {
     }
   };
+  
+  //class Test2
+  
+  
 }
 
 // namespace SUNphi
@@ -214,11 +219,11 @@ YAML::Node& operator<<(YAML::Node& node,
     {
       Node node;
       
-      std::apply([&node](auto...s)
-		 {
-		   ((node[std::get<1>(s)]=std::get<0>(s)) , ...);
-		 },
-		 rhs.getSeri());
+      forEach(rhs.getSeri(),
+	      [&node](auto s)
+	      {
+		node[std::get<1>(s)]=std::get<0>(s);
+	      });
       
       return node;
     }
