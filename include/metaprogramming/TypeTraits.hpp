@@ -644,6 +644,36 @@ struct STRUCT_NAME							\
     RefIf<isLvalue<T>,std::make_unsigned_t<RemRef<T>>>;
   
   /////////////////////////////////////////////////////////////////
+  
+  /// Provides a check returning whether the class is of a given kind
+#define DEFINE_IS_THE_TEMPLATED_CLASS(CLASS)				\
+  /*! Check if the class is a CLASS              */			\
+  /*!                                            */			\
+  /*! False case                                 */			\
+  template <typename T>							\
+  constexpr bool _is_ ## CLASS(const T*)				\
+  {									\
+    return								\
+      false;								\
+  }									\
+  									\
+  /*! Check if the class is a CLASS              */			\
+  /*!                                            */			\
+  /*! True case                                  */			\
+  template <typename...Ts>						\
+  constexpr bool _is_ ## CLASS(const CLASS<Ts...>*)			\
+  {									\
+    return								\
+      true;								\
+  }									\
+									\
+  /*! Check if the class is a CLASS               */			\
+  /*!                                            */			\
+  /*! Calls the internal implementation          */			\
+  template <typename T>							\
+  [[ maybe_unused ]]							\
+  constexpr bool is ## CLASS=						\
+    _is_ ## CLASS((T*)nullptr)
 }
 
 #endif

@@ -127,32 +127,6 @@ namespace SUNphi
   SerializableScalar<TYPE,decltype(DEFAULT)>				\
      NAME{#NAME,DEFAULT}
   
-  /// Check if the class is a SerializableScalar
-  ///
-  /// False case
-  template <typename T>
-  constexpr bool _isSerializableScalar(const T*)
-  {
-    return
-      false;
-  }
-  
-  /// Check if the class is a SerializableScalar
-  ///
-  /// True case
-  template <typename T,
-	    typename Tdef>
-  constexpr bool _isSerializableScalar(const SerializableScalar<T,Tdef>*)
-  {
-    return
-      true;
-  }
-  
-  /// Check if the class is a SerializableScalar
-  template <typename T>
-  [[ maybe_unused ]]
-  constexpr bool isSerializableScalar=
-    _isSerializableScalar((T*)nullptr);
+  DEFINE_IS_THE_TEMPLATED_CLASS(SerializableScalar);
 }
-
 #endif
