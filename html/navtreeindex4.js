@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"d7/d8a/File_8hpp.html#afef033a640345c0eecbfd7c42e85ba87":[3,0,2,3,0,4],
 "d7/d8a/File_8hpp_source.html":[3,0,2,3,0],
 "d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html":[2,0,0,14],
 "d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#a769aa30da880848d59f63d76f4dab4e0":[2,0,0,14,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a9c352c0983674e8d2e2f315a90a187cb":[2,0,0,144,0,14],
 "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ab0a05739ffdba3e7f1e5062b61843a28":[2,0,0,144,0,6],
 "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#abaa5d06c6d4a5f94c26413de01306b05":[2,0,0,144,0,7],
-"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af3044a29aa67cde6e3516058aea3e622":[2,0,0,144,0,4],
-"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af5cc88ba9650595db64c3b9aa80b071d":[2,0,0,144,0,13]
+"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af3044a29aa67cde6e3516058aea3e622":[2,0,0,144,0,4]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d2/d24/classSUNphi_1_1Conjer.html#a16798a8c0494dfad14e1eb40de110cde":[2,0,0,66,3],
 "d2/d24/classSUNphi_1_1Conjer.html#a1a3eb34e554912d674f31c17666ffb57":[2,0,0,66,32],
 "d2/d24/classSUNphi_1_1Conjer.html#a1a7032e6970356ee9cff083ad1e16b94":[2,0,0,66,17],
 "d2/d24/classSUNphi_1_1Conjer.html#a1d6ded1dcd22920fde3d904c29f61374":[2,0,0,66,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d3/da1/classSUNphi_1_1MasterRandomGenerator.html":[2,0,0,145],
 "d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a0b9816cf0cbc76a5d0ccdbe584661734":[2,0,0,145,2],
 "d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a32bc18985c224a48c54feb713d3fc9a7":[2,0,0,145,4],
-"d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a6f25c0fa58743f61a2cb5fa0fe0ff1b1":[2,0,0,145,3],
-"d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a9a8fd64eb1b85fd7393b12ec38acd81a":[2,0,0,145,1]
+"d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a6f25c0fa58743f61a2cb5fa0fe0ff1b1":[2,0,0,145,3]
 };

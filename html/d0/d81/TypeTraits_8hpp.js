@@ -18,6 +18,7 @@ var TypeTraits_8hpp =
     [ "DEFINE_BASE_TYPE", "d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276", null ],
     [ "DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK", "d0/d81/TypeTraits_8hpp.html#a1fa2058ed52013bcd7060509d667dbea", null ],
     [ "DEFINE_HAS_MEMBER", "d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec", null ],
+    [ "DEFINE_IS_THE_TEMPLATED_CLASS", "d0/d81/TypeTraits_8hpp.html#a85b74695efbabe9677ff565da5b59ae5", null ],
     [ "FORBID_CONSTRUCT_BY_COPY", "d0/d81/TypeTraits_8hpp.html#a3dfacd0e6094c8dc3eb28faff35c385b", null ],
     [ "LVALUE_REF", "d0/d81/TypeTraits_8hpp.html#ab2dcee42767f6bf5f377dd887ff75cf6", null ],
     [ "NON_CONST_QUALIF", "d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971", null ],

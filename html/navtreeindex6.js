@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899":[2,0,0,112,2],
 "db/de9/classSUNphi_1_1Crasher.html#aef8d04ecd5e39a6b0b4beb087e9013c6":[2,0,0,112,3],
 "db/de9/classSUNphi_1_1Crasher.html#afdadb9f221d67ba77ceaf23392b2a17f":[2,0,0,112,4],
 "dc/d02/structSUNphi_1_1__IntsUpTo.html":[2,0,0,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "dd/d09/structHasMember__serializableMembers_1_1Derived.html":[2,0,4,1],
 "dd/d09/structHasMember__serializableMembers_1_1Derived.html#a08945be869210ccce32033818791f17b":[2,0,4,1,0],
 "dd/d10/SpaceTime_8hpp.html":[3,0,2,7,2],
-"dd/d10/SpaceTime_8hpp.html#a4a9c193cd452ad7e0b5d38fca763c5cc":[3,0,2,7,2,2],
-"dd/d10/SpaceTime_8hpp.html#aa84901504c2f92deee364906be8fd6de":[3,0,2,7,2,3]
+"dd/d10/SpaceTime_8hpp.html#a4a9c193cd452ad7e0b5d38fca763c5cc":[3,0,2,7,2,2]
 };

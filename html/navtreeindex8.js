@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[1,0,0,1],
 "df/d09/classSUNphi_1_1Mpi.html":[2,0,0,146],
 "df/d09/classSUNphi_1_1Mpi.html#a120ff923dfb29171e7afbe428007fc4e":[2,0,0,146,0],
 "df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da":[2,0,0,146,1],
@@ -32,8 +33,8 @@ var NAVTREEINDEX8 =
 "df/d4a/classSUNphi_1_1BackTraceSymbol.html#aaca10fe8b22efc4353b62c11b3816e4d":[2,0,0,40,2],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,109],
 "df/d7a/LoopUnroll_8hpp_source.html":[3,0,2,6,2],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d95/Bits_8hpp.html":[3,0,2,15,1],
 "df/d95/Bits_8hpp.html#a7e078ec9e899cd7fc3b4ce6c1b9a5b9e":[3,0,2,15,1,1],
 "df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e":[3,0,2,15,1,0],
@@ -153,8 +154,8 @@ var NAVTREEINDEX8 =
 "functions_r.html":[2,3,0,16],
 "functions_s.html":[2,3,0,17],
 "functions_t.html":[2,3,0,18],
-"functions_type.html":[2,3,3,0],
 "functions_type.html":[2,3,3],
+"functions_type.html":[2,3,3,0],
 "functions_type_b.html":[2,3,3,1],
 "functions_type_c.html":[2,3,3,2],
 "functions_type_d.html":[2,3,3,3],
