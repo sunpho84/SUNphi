@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"dd/d10/SpaceTime_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7":[3,0,2,7,2,1],
+"dd/d10/SpaceTime_8hpp_source.html":[3,0,2,7,2],
+"dd/d15/Ranges_8hpp.html":[3,0,2,2,10],
+"dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e":[3,0,2,2,10,7],
 "dd/d15/Ranges_8hpp.html#a9174c8aa920707dd274742f3c6d9aa1b":[3,0,2,2,10,5],
 "dd/d15/Ranges_8hpp.html#a9e45b88714a7cb4253a1248fe5962f0d":[3,0,2,2,10,4],
 "dd/d15/Ranges_8hpp.html#ac6a4b17d20c20aa9fa3428f1233d6190":[3,0,2,2,10,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX7 =
 "de/dfd/structSUNphi_1_1CanPrint.html#aade6398b4a2086d2d7bfd8510a211789":[2,0,0,61,0],
 "de/dfd/structSUNphi_1_1CanPrint.html#ac0a42db2f4523c38419b33d57e9ef2dd":[2,0,0,61,1],
 "de/dff/structSUNphi_1_1__isTuple_3_01Tuple_3_01Tp_8_8_8_01_4_01_4.html":[2,0,0,26],
-"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[1,0,0,1],
-"df/d09/classSUNphi_1_1Mpi.html":[2,0,0,146],
-"df/d09/classSUNphi_1_1Mpi.html#a120ff923dfb29171e7afbe428007fc4e":[2,0,0,146,0],
-"df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da":[2,0,0,146,1],
-"df/d09/classSUNphi_1_1Mpi.html#a65f9852004134af5af685716854d4af6":[2,0,0,146,5]
+"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html":[1,0,0,1]
 };

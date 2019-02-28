@@ -43,9 +43,9 @@ var NAVTREEINDEX =
 "d5/d99/classSUNphi_1_1File.html#a22652f360e7c7843ccfd4efd79a54703",
 "d7/d8a/File_8hpp_source.html",
 "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#afb561525387a94ae97d76f84cb091809",
-"dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0",
-"dd/d15/Ranges_8hpp.html#a9174c8aa920707dd274742f3c6d9aa1b",
-"df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485"
+"db/de9/classSUNphi_1_1Crasher.html#aef8d04ecd5e39a6b0b4beb087e9013c6",
+"dd/d10/SpaceTime_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7",
+"df/d09/classSUNphi_1_1Mpi.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

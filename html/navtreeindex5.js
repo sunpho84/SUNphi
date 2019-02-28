@@ -214,8 +214,12 @@ var NAVTREEINDEX5 =
 "db/d33/Grid_8hpp.html#ae80082b2e607318ad8e682431f6c7a45":[3,0,2,4,0,13],
 "db/d33/Grid_8hpp_source.html":[3,0,2,4,0],
 "db/d33/SerializableScalar_8hpp.html":[3,0,2,9,0],
-"db/d33/SerializableScalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26":[3,0,2,9,0,5],
-"db/d33/SerializableScalar_8hpp.html#ab67115fae75d5cbcc3dba78ee12fcf82":[3,0,2,9,0,4],
+"db/d33/SerializableScalar_8hpp.html#a18519480525d4c6999ba6fbae9b74d95":[3,0,2,9,0,6],
+"db/d33/SerializableScalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26":[3,0,2,9,0,9],
+"db/d33/SerializableScalar_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8":[3,0,2,9,0,8],
+"db/d33/SerializableScalar_8hpp.html#a9cef4586312a3f0edd070d25de7ae706":[3,0,2,9,0,4],
+"db/d33/SerializableScalar_8hpp.html#ab67115fae75d5cbcc3dba78ee12fcf82":[3,0,2,9,0,5],
+"db/d33/SerializableScalar_8hpp.html#ae823bf7ae1af322d8b09dbe55e32496b":[3,0,2,9,0,7],
 "db/d33/SerializableScalar_8hpp_source.html":[3,0,2,9,0],
 "db/dbc/Thread_8hpp.html":[3,0,2,13,3],
 "db/dbc/Thread_8hpp.html#a03a4f901a8dbb985f457bdfdecbd787a":[3,0,2,13,3,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX5 =
 "db/de9/classSUNphi_1_1Crasher.html#aa294d6cc03fc82960aa3b2465226a327":[2,0,0,112,7],
 "db/de9/classSUNphi_1_1Crasher.html#acf85c25179a1dfe4eeb1dfe4144116b6":[2,0,0,112,8],
 "db/de9/classSUNphi_1_1Crasher.html#ad44b0324d0f8e3bb71d23461db3e84f7":[2,0,0,112,6],
-"db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899":[2,0,0,112,2],
-"db/de9/classSUNphi_1_1Crasher.html#aef8d04ecd5e39a6b0b4beb087e9013c6":[2,0,0,112,3],
-"db/de9/classSUNphi_1_1Crasher.html#afdadb9f221d67ba77ceaf23392b2a17f":[2,0,0,112,4],
-"dc/d02/structSUNphi_1_1__IntsUpTo.html":[2,0,0,22],
-"dc/d02/structSUNphi_1_1__IntsUpTo.html#aaf993073cfc48ff9a5cf11d40d2efb29":[2,0,0,22,0]
+"db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899":[2,0,0,112,2]
 };

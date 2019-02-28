@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"db/de9/classSUNphi_1_1Crasher.html#aef8d04ecd5e39a6b0b4beb087e9013c6":[2,0,0,112,3],
+"db/de9/classSUNphi_1_1Crasher.html#afdadb9f221d67ba77ceaf23392b2a17f":[2,0,0,112,4],
+"dc/d02/structSUNphi_1_1__IntsUpTo.html":[2,0,0,22],
+"dc/d02/structSUNphi_1_1__IntsUpTo.html#aaf993073cfc48ff9a5cf11d40d2efb29":[2,0,0,22,0],
 "dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0":[2,0,0,22,1],
 "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html":[2,0,0,178],
 "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058":[2,0,0,178,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "dd/d09/structHasMember__serializableMembers_1_1Derived.html#a08945be869210ccce32033818791f17b":[2,0,4,1,0],
 "dd/d10/SpaceTime_8hpp.html":[3,0,2,7,2],
 "dd/d10/SpaceTime_8hpp.html#a4a9c193cd452ad7e0b5d38fca763c5cc":[3,0,2,7,2,2],
-"dd/d10/SpaceTime_8hpp.html#aa84901504c2f92deee364906be8fd6de":[3,0,2,7,2,3],
-"dd/d10/SpaceTime_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7":[3,0,2,7,2,1],
-"dd/d10/SpaceTime_8hpp_source.html":[3,0,2,7,2],
-"dd/d15/Ranges_8hpp.html":[3,0,2,2,10],
-"dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e":[3,0,2,2,10,7]
+"dd/d10/SpaceTime_8hpp.html#aa84901504c2f92deee364906be8fd6de":[3,0,2,7,2,3]
 };
