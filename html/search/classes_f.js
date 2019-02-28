@@ -18,6 +18,8 @@ var searchData=
   ['tenskind',['TensKind',['../d8/df8/classSUNphi_1_1TensKind.html',1,'SUNphi']]],
   ['tensstor',['TensStor',['../d3/d22/classSUNphi_1_1TensStor.html',1,'SUNphi']]],
   ['tensstor_3c_20tk_2c_20fund_20_3e',['TensStor&lt; Tk, Fund &gt;',['../d3/d22/classSUNphi_1_1TensStor.html',1,'SUNphi']]],
+  ['test',['Test',['../dc/d39/classSUNphi_1_1Test.html',1,'SUNphi']]],
+  ['test2',['Test2',['../d9/d12/classSUNphi_1_1Test2.html',1,'SUNphi']]],
   ['threadpool',['ThreadPool',['../dc/d0f/classSUNphi_1_1ThreadPool.html',1,'SUNphi']]],
   ['timer',['Timer',['../d6/de9/classSUNphi_1_1Timer.html',1,'SUNphi']]],
   ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html',1,'SUNphi']]],

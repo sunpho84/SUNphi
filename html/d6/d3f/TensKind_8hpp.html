@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('d6/d3f/TensKind_8hpp.html','../../');}
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">TensKind.hpp File Reference</div>  </div>
@@ -213,13 +214,19 @@ template&lt;typename TkToSearch , typename... Tks&gt; </td></tr>
 <tr class="memdesc:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of all the present <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> of <code>TkToSearch</code> in the list of Tks. <br /></td></tr>
 <tr class="separator:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae33b6d16d34de84fe30019b69f821129"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:ae33b6d16d34de84fe30019b69f821129"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#ae33b6d16d34de84fe30019b69f821129">SUNphi::hasMember_compSizeHelper</a> ()</td></tr>
+<tr class="separator:ae33b6d16d34de84fe30019b69f821129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a1b32947a9ca09b133faf88e349ca42be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1b32947a9ca09b133faf88e349ca42be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a1b32947a9ca09b133faf88e349ca42be">SUNphi::isTensKind</a> = isBaseOf&lt;BaseTensKind ,T&gt;</td></tr>
 <tr class="separator:a1b32947a9ca09b133faf88e349ca42be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1">SUNphi::hasMember_compSize</a> = HasMember_compSize &lt;Type&gt;::result</td></tr>
+<tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1">SUNphi::hasMember_compSize</a> = hasMember_compSizeHelper&lt;Type&gt;()</td></tr>
 <tr class="separator:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8">SUNphi::isDynamic</a></td></tr>
@@ -360,6 +367,27 @@ template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_ae33b6d16d34de84fe30019b69f821129"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_compSizeHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="file_a286e1e8ac0e01b9ddd5f33cefceceec1"></a>
 <div class="memitem">
@@ -368,7 +396,7 @@ template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_compSize = HasMember_compSize &lt;Type&gt;::result</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_compSize = hasMember_compSizeHelper&lt;Type&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">

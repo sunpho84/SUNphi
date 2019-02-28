@@ -201,6 +201,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa84f57c85401a1900e42a253517fbe6e"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:aa84f57c85401a1900e42a253517fbe6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#aa84f57c85401a1900e42a253517fbe6e">SUNphi::hasMember_ref1Helper</a> ()</td></tr>
+<tr class="separator:aa84f57c85401a1900e42a253517fbe6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ea7da970fc5d79c192fd9089862312"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a64ea7da970fc5d79c192fd9089862312"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a64ea7da970fc5d79c192fd9089862312">SUNphi::hasMember_ref2Helper</a> ()</td></tr>
+<tr class="separator:a64ea7da970fc5d79c192fd9089862312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac13214af98b29fffc10ea38095b5b0b0"><td class="memTemplParams" colspan="2">template&lt;typename PrevPres  = AbsentInBoth, int ResPos = 0, int PrevPos1 = 0, int PrevPos2 = 0, int... MDel1, int... MDel2&gt; </td></tr>
 <tr class="memitem:ac13214af98b29fffc10ea38095b5b0b0"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html#ac13214af98b29fffc10ea38095b5b0b0">SUNphi::PairOfTensKindMergeability::_compsMergeability</a> (IntSeq&lt; MDel1... &gt; MD1, IntSeq&lt; MDel2... &gt; MD2, IntSeq&lt;&gt; P1, IntSeq&lt;&gt; P2)</td></tr>
 <tr class="separator:ac13214af98b29fffc10ea38095b5b0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,10 +220,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a51288383610f27f09988c10874db1abd"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a51288383610f27f09988c10874db1abd">SUNphi::isBinarySmET</a> = isBaseOf&lt;BaseBinarySmET ,T&gt;</td></tr>
 <tr class="separator:a51288383610f27f09988c10874db1abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3153be40f8067d7c916dcf0b637911c"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:aa3153be40f8067d7c916dcf0b637911c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c">SUNphi::hasMember_ref1</a> = HasMember_ref1 &lt;Type&gt;::result</td></tr>
+<tr class="memitem:aa3153be40f8067d7c916dcf0b637911c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c">SUNphi::hasMember_ref1</a> = hasMember_ref1Helper&lt;Type&gt;()</td></tr>
 <tr class="separator:aa3153be40f8067d7c916dcf0b637911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16755d1eb4f22997ed1507bbb940238b"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a16755d1eb4f22997ed1507bbb940238b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b">SUNphi::hasMember_ref2</a> = HasMember_ref2 &lt;Type&gt;::result</td></tr>
+<tr class="memitem:a16755d1eb4f22997ed1507bbb940238b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b">SUNphi::hasMember_ref2</a> = hasMember_ref2Helper&lt;Type&gt;()</td></tr>
 <tr class="separator:a16755d1eb4f22997ed1507bbb940238b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -348,7 +354,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a>(__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(ref1,__VA_ARGS__);       <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(ref2,__VA_ARGS__)</div><div class="ttc" id="BaseSmET_8hpp_html_af892daaf4b484ae98212388ee1bb658b"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b">STATIC_ASSERT_IS_SMET</a></div><div class="ttdeci">#define STATIC_ASSERT_IS_SMET(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00259">BaseSmET.hpp:259</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00495">TypeTraits.hpp:495</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00496">TypeTraits.hpp:496</a></div></div>
 </div><!-- fragment -->
 <p>Defines the check for a Binary SmET. </p>
 
@@ -391,6 +397,47 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_aa84f57c85401a1900e42a253517fbe6e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_ref1Helper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a64ea7da970fc5d79c192fd9089862312"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_ref2Helper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">BinarySmET.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="file_aa3153be40f8067d7c916dcf0b637911c"></a>
 <div class="memitem">
@@ -399,7 +446,7 @@ template&lt;typename T &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_ref1 = HasMember_ref1 &lt;Type&gt;::result</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_ref1 = hasMember_ref1Helper&lt;Type&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -417,7 +464,7 @@ template&lt;typename Type &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_ref2 = HasMember_ref2 &lt;Type&gt;::result</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_ref2 = hasMember_ref2Helper&lt;Type&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">

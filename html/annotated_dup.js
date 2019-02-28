@@ -151,6 +151,7 @@ var annotated_dup =
       [ "MulAdder", "dc/d5d/classSUNphi_1_1MulAdder.html", "dc/d5d/classSUNphi_1_1MulAdder" ],
       [ "Mutex", "d6/d3d/structSUNphi_1_1Mutex.html", "d6/d3d/structSUNphi_1_1Mutex" ],
       [ "NnarySmET", "dc/d2f/structSUNphi_1_1NnarySmET.html", "dc/d2f/structSUNphi_1_1NnarySmET" ],
+      [ "NoDefault", "d9/d2b/classSUNphi_1_1NoDefault.html", null ],
       [ "RelBinder", "d5/d1c/classSUNphi_1_1RelBinder.html", "d5/d1c/classSUNphi_1_1RelBinder" ],
       [ "RwCol", "d8/dc9/structSUNphi_1_1RwCol.html", "d8/dc9/structSUNphi_1_1RwCol" ],
       [ "RwSpin", "dd/ded/structSUNphi_1_1RwSpin.html", "dd/ded/structSUNphi_1_1RwSpin" ],
@@ -159,6 +160,9 @@ var annotated_dup =
       [ "ScopeDoer", "d2/db3/classSUNphi_1_1ScopeDoer.html", "d2/db3/classSUNphi_1_1ScopeDoer" ],
       [ "ScopeIndenter", "d3/d11/classSUNphi_1_1ScopeIndenter.html", "d3/d11/classSUNphi_1_1ScopeIndenter" ],
       [ "ScopeMutexLocker", "dd/db8/structSUNphi_1_1ScopeMutexLocker.html", null ],
+      [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", "dc/d2a/classSUNphi_1_1SerializableDefaultValue" ],
+      [ "SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4" ],
+      [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html", "d1/d97/classSUNphi_1_1SerializableScalar" ],
       [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ],
       [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html", "d9/d59/classSUNphi_1_1Sitmo" ],
       [ "SmET", "d1/d31/structSUNphi_1_1SmET.html", "d1/d31/structSUNphi_1_1SmET" ],
@@ -167,6 +171,8 @@ var annotated_dup =
       [ "TensComp", "d1/d96/structSUNphi_1_1TensComp.html", "d1/d96/structSUNphi_1_1TensComp" ],
       [ "TensKind", "d8/df8/classSUNphi_1_1TensKind.html", "d8/df8/classSUNphi_1_1TensKind" ],
       [ "TensStor", "d3/d22/classSUNphi_1_1TensStor.html", "d3/d22/classSUNphi_1_1TensStor" ],
+      [ "Test", "dc/d39/classSUNphi_1_1Test.html", "dc/d39/classSUNphi_1_1Test" ],
+      [ "Test2", "d9/d12/classSUNphi_1_1Test2.html", "d9/d12/classSUNphi_1_1Test2" ],
       [ "ThreadPool", "dc/d0f/classSUNphi_1_1ThreadPool.html", "dc/d0f/classSUNphi_1_1ThreadPool" ],
       [ "Timer", "d6/de9/classSUNphi_1_1Timer.html", "d6/de9/classSUNphi_1_1Timer" ],
       [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
@@ -178,5 +184,10 @@ var annotated_dup =
       [ "Vector", "df/dc0/classSUNphi_1_1Vector.html", "df/dc0/classSUNphi_1_1Vector" ],
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
     ] ],
-    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
+    [ "YAML", null, [
+      [ "convert< SerializableScalar< T > >", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4" ]
+    ] ],
+    [ "ConstrainHasMember_serializableMembers", "d7/d54/structConstrainHasMember__serializableMembers.html", null ],
+    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ],
+    [ "HasMember_serializableMembers", "dc/d5f/structHasMember__serializableMembers.html", "dc/d5f/structHasMember__serializableMembers" ]
 ];

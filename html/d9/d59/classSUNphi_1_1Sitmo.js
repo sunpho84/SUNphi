@@ -25,7 +25,7 @@ var classSUNphi_1_1Sitmo =
     [ "operator<<", "d9/d59/classSUNphi_1_1Sitmo.html#a6da491841b7b1e503212251ea022ba89", null ],
     [ "operator>>", "d9/d59/classSUNphi_1_1Sitmo.html#af60790b3a5c06020c78d1ebd3e1cb511", null ],
     [ "ciphered", "d9/d59/classSUNphi_1_1Sitmo.html#a7b4b6928927021fd96c2969dacb44608", null ],
-    [ "ciphered", "d9/d59/classSUNphi_1_1Sitmo.html#a9e10da2ffd69f16155961609830bfad9", null ],
+    [ "ciphered", "d9/d59/classSUNphi_1_1Sitmo.html#ad9cc6232f19c0d1d2f6dbbd11fd6aaa8", null ],
     [ "counter", "d9/d59/classSUNphi_1_1Sitmo.html#a330683023e4e96181eb9dff7a1eea513", null ],
     [ "encrypter", "d9/d59/classSUNphi_1_1Sitmo.html#a8d8b157fabc5122bd6548371c49a0fe3", null ],
     [ "iChunk", "d9/d59/classSUNphi_1_1Sitmo.html#a1488f6be4df4e5e78decdc093696e542", null ],

@@ -30,6 +30,7 @@ var TensKind_8hpp =
     [ "PosOfTcsOfTkInListOfTks", "d6/d3f/TensKind_8hpp.html#a20a22ae0ab9777758b1cc9dc50e85e33", null ],
     [ "PosOfTcsOfTkPresInListOfTks", "d6/d3f/TensKind_8hpp.html#a4fc6fe9266c126fdf3bfaa91cd394907", null ],
     [ "TensKindFromTuple", "d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4", null ],
+    [ "hasMember_compSizeHelper", "d6/d3f/TensKind_8hpp.html#ae33b6d16d34de84fe30019b69f821129", null ],
     [ "hasMember_compSize", "d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1", null ],
     [ "isDynamic", "d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8", null ],
     [ "isTensKind", "d6/d3f/TensKind_8hpp.html#a1b32947a9ca09b133faf88e349ca42be", null ]

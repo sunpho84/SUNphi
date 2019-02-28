@@ -18,7 +18,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Enumerations", "functions_enum.html", null ]
       ] ]
@@ -38,14 +38,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d2/d24/classSUNphi_1_1Conjer.html#a695131ecaef2370a1057c332ceac2238",
-"d3/da4/RelBind_8hpp.html#ad2eef232040ba16d5d27fdc243ce06f5",
-"d5/da6/IntSeqInsert_8hpp_source.html",
-"d7/dfb/structSUNphi_1_1ConstrainAreTensComps.html",
-"da/d00/IntListGetEl_8hpp.html",
-"dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c",
-"dd/dca/classSUNphi_1_1Grid.html#a1f5850895ea94cf20491e1833e03909d",
-"df/ddf/structSUNphi_1_1BaseTransposer.html"
+"d2/d24/classSUNphi_1_1Conjer.html#a1a3eb34e554912d674f31c17666ffb57",
+"d3/da1/classSUNphi_1_1MasterRandomGenerator.html#ab9ce27cc0e2a4b6860336c7616df7d26",
+"d5/d99/classSUNphi_1_1File.html#a22652f360e7c7843ccfd4efd79a54703",
+"d7/d8a/File_8hpp_source.html",
+"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#afb561525387a94ae97d76f84cb091809",
+"dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0",
+"dd/d15/Ranges_8hpp.html#a9174c8aa920707dd274742f3c6d9aa1b",
+"df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
