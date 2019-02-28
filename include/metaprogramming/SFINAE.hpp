@@ -57,7 +57,7 @@ namespace SUNphi
   typename...DummyTypes       /* Fake list of types                  */
   
   /// Provide empty list of args, used to unprioritize default version
-#define SFINAE_WORSEN_DEFAULT_VERSION_ARGS				\
+#define SFINAE_WORSEN_DEFAULT_VERSION_ARGS	\
   DummyTypes...     /*< Fake list of args */
   
   /// Check that no extra arg is passed
