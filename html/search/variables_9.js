@@ -35,7 +35,6 @@ var searchData=
   ['issame',['isSame',['../d0/d81/TypeTraits_8hpp.html#afc7db564dd647bc10933eb0a67248b8c',1,'SUNphi']]],
   ['issame_3c_20t_2c_20t_20_3e',['isSame&lt; T, T &gt;',['../d0/d81/TypeTraits_8hpp.html#a4e2ebf308cda3504417f00d9ce87c057',1,'SUNphi']]],
   ['isscalarwrapper',['isScalarWrapper',['../d9/d0c/ScalarWrap_8hpp.html#a1ea11c9e4ce27cbd63594eb23b0e0b9d',1,'SUNphi']]],
-  ['isserializablescalar',['isSerializableScalar',['../db/d33/SerializableScalar_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8',1,'SUNphi']]],
   ['isshiftingbc',['isShiftingBC',['../dd/dca/classSUNphi_1_1Grid.html#a96f3dfc963664309d6e01c8033658fbb',1,'SUNphi::Grid']]],
   ['issmet',['isSmET',['../dc/d6b/BaseSmET_8hpp.html#afdeaecae9c2d0a0e0ba908dd998a3663',1,'SUNphi']]],
   ['isstartedflag',['isStartedFlag',['../d6/de9/classSUNphi_1_1Timer.html#a116b5be176225ced556d6768214ac578',1,'SUNphi::Timer']]],

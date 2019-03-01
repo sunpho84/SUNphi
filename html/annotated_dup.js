@@ -100,6 +100,7 @@ var annotated_dup =
       [ "ConstrainHasMember_ref1", "d0/dd1/structSUNphi_1_1ConstrainHasMember__ref1.html", null ],
       [ "ConstrainHasMember_ref2", "d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html", null ],
       [ "ConstrainHasMember_refs", "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html", null ],
+      [ "ConstrainHasMember_serializableMembers", "d3/da9/structSUNphi_1_1ConstrainHasMember__serializableMembers.html", null ],
       [ "ConstrainHasMember_Tk", "d0/db5/structSUNphi_1_1ConstrainHasMember__Tk.html", null ],
       [ "ConstrainIsBaseOf", "d1/d4c/structSUNphi_1_1ConstrainIsBaseOf.html", "d1/d4c/structSUNphi_1_1ConstrainIsBaseOf" ],
       [ "ConstrainIsDynamic", "d4/de8/structSUNphi_1_1ConstrainIsDynamic.html", null ],
@@ -138,6 +139,7 @@ var annotated_dup =
       [ "HasMember_ref1", "da/db5/structSUNphi_1_1HasMember__ref1.html", "da/db5/structSUNphi_1_1HasMember__ref1" ],
       [ "HasMember_ref2", "d3/d14/structSUNphi_1_1HasMember__ref2.html", "d3/d14/structSUNphi_1_1HasMember__ref2" ],
       [ "HasMember_refs", "dd/dce/structSUNphi_1_1HasMember__refs.html", "dd/dce/structSUNphi_1_1HasMember__refs" ],
+      [ "HasMember_serializableMembers", "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html", "d1/dbb/structSUNphi_1_1HasMember__serializableMembers" ],
       [ "HasMember_Tk", "d7/d03/structSUNphi_1_1HasMember__Tk.html", "d7/d03/structSUNphi_1_1HasMember__Tk" ],
       [ "IncapsulatedString", "da/d56/structSUNphi_1_1IncapsulatedString.html", "da/d56/structSUNphi_1_1IncapsulatedString" ],
       [ "IntSeq", "da/def/structSUNphi_1_1IntSeq.html", "da/def/structSUNphi_1_1IntSeq" ],
@@ -187,7 +189,5 @@ var annotated_dup =
     [ "YAML", null, [
       [ "convert< SerializableScalar< T > >", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4" ]
     ] ],
-    [ "ConstrainHasMember_serializableMembers", "d7/d54/structConstrainHasMember__serializableMembers.html", null ],
-    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ],
-    [ "HasMember_serializableMembers", "dc/d5f/structHasMember__serializableMembers.html", "dc/d5f/structHasMember__serializableMembers" ]
+    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
 ];

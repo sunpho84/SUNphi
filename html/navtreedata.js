@@ -38,14 +38,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d2/d24/classSUNphi_1_1Conjer.html#a16798a8c0494dfad14e1eb40de110cde",
-"d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a9a8fd64eb1b85fd7393b12ec38acd81a",
-"d5/d99/classSUNphi_1_1File.html#a1e201885b341e4d45b173b5c3ab79265ac6e6dc18b53b4c2681394b9d8aefcec7",
-"d7/d8a/File_8hpp.html#afef033a640345c0eecbfd7c42e85ba87",
-"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af5cc88ba9650595db64c3b9aa80b071d",
-"db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899",
-"dd/d10/SpaceTime_8hpp.html#aa84901504c2f92deee364906be8fd6de",
-"df/d08/namespaceSUNphi_1_1PairOfTensKindMergeability.html"
+"d2/d24/classSUNphi_1_1Conjer.html",
+"d3/d99/structSUNphi_1_1HasMember__MergeableComps_1_1Derived.html#a210ea99755250764d9f2855c4ced4d8b",
+"d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0",
+"d7/d8a/File_8hpp.html#a5433bd5090f86be69946484ab657a26f",
+"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7b2c160c9431815af314ccd01960886f",
+"db/de9/classSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4",
+"dd/d10/SpaceTime_8hpp_source.html",
+"de/dff/structSUNphi_1_1__isTuple_3_01Tuple_3_01Tp_8_8_8_01_4_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

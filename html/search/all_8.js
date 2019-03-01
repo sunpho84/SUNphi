@@ -42,7 +42,7 @@ var searchData=
   ['hasmember_5frefs',['hasMember_refs',['../d2/d69/NnarySmET_8hpp.html#af213f39c8a5860f573b8ca502803c884',1,'SUNphi']]],
   ['hasmember_5frefs',['HasMember_refs',['../dd/dce/structSUNphi_1_1HasMember__refs.html',1,'SUNphi']]],
   ['hasmember_5frefshelper',['hasMember_refsHelper',['../d2/d69/NnarySmET_8hpp.html#a9bf9ca2af698fa50014dbcb1fb859cb1',1,'SUNphi']]],
-  ['hasmember_5fserializablemembers',['HasMember_serializableMembers',['../dc/d5f/structHasMember__serializableMembers.html',1,'']]],
+  ['hasmember_5fserializablemembers',['HasMember_serializableMembers',['../d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html',1,'SUNphi']]],
   ['hasmember_5ftk',['hasMember_Tk',['../dc/d6b/BaseSmET_8hpp.html#a31388ba85a984596f9d605934040682f',1,'SUNphi']]],
   ['hasmember_5ftk',['HasMember_Tk',['../d7/d03/structSUNphi_1_1HasMember__Tk.html',1,'SUNphi']]],
   ['hasmember_5ftkhelper',['hasMember_TkHelper',['../dc/d6b/BaseSmET_8hpp.html#a481a55a910b5b6e11ce2ca1e2cd97ba1',1,'SUNphi']]],

@@ -12,7 +12,7 @@ var searchData=
   ['scope_5freal_5fformat_5ffixed',['SCOPE_REAL_FORMAT_FIXED',['../d7/d8a/File_8hpp.html#a713b01e7ab9b87a01844e94b2e0add89',1,'File.hpp']]],
   ['scope_5freal_5fformat_5fgeneral',['SCOPE_REAL_FORMAT_GENERAL',['../d7/d8a/File_8hpp.html#a9b0cf7998a45a5c94b839fb6fc3dee17',1,'File.hpp']]],
   ['scope_5freal_5fprecision',['SCOPE_REAL_PRECISION',['../d7/d8a/File_8hpp.html#a5433bd5090f86be69946484ab657a26f',1,'File.hpp']]],
-  ['serializable_5fscalar',['SERIALIZABLE_SCALAR',['../db/d33/SerializableScalar_8hpp.html#a9cef4586312a3f0edd070d25de7ae706',1,'SerializableScalar.hpp']]],
+  ['serializable_5fmembers',['SERIALIZABLE_MEMBERS',['../db/dbb/Members_8hpp.html#a939542239988c43fe567055b415fb6ae',1,'Members.hpp']]],
   ['set_5ffor_5fcurrent_5fscope',['SET_FOR_CURRENT_SCOPE',['../d7/d8a/File_8hpp.html#a3f8f0ea1cf97b24c9bb6261c63ac6cda',1,'File.hpp']]],
   ['sfinae_5fon_5ftemplate_5farg',['SFINAE_ON_TEMPLATE_ARG',['../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1',1,'SFINAE.hpp']]],
   ['sfinae_5fworsen_5fdefault_5fversion_5fargs',['SFINAE_WORSEN_DEFAULT_VERSION_ARGS',['../d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5',1,'SFINAE.hpp']]],

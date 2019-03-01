@@ -13,6 +13,6 @@ var searchData=
   ['hasmember_5fref1',['HasMember_ref1',['../da/db5/structSUNphi_1_1HasMember__ref1.html',1,'SUNphi']]],
   ['hasmember_5fref2',['HasMember_ref2',['../d3/d14/structSUNphi_1_1HasMember__ref2.html',1,'SUNphi']]],
   ['hasmember_5frefs',['HasMember_refs',['../dd/dce/structSUNphi_1_1HasMember__refs.html',1,'SUNphi']]],
-  ['hasmember_5fserializablemembers',['HasMember_serializableMembers',['../dc/d5f/structHasMember__serializableMembers.html',1,'']]],
+  ['hasmember_5fserializablemembers',['HasMember_serializableMembers',['../d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html',1,'SUNphi']]],
   ['hasmember_5ftk',['HasMember_Tk',['../d7/d03/structSUNphi_1_1HasMember__Tk.html',1,'SUNphi']]]
 ];

@@ -23,7 +23,6 @@ var searchData=
   ['_5fintseqsslice',['_IntSeqsSlice',['../da/db7/IntSeqTranspose_8hpp.html#a324967003ba22523c741c7f804167943',1,'SUNphi']]],
   ['_5fintseqsslices',['_IntSeqsSlices',['../da/db7/IntSeqTranspose_8hpp.html#a64717ef227bf20611492f56742226593',1,'SUNphi']]],
   ['_5fintseqstranspose',['_IntSeqsTranspose',['../da/db7/IntSeqTranspose_8hpp.html#a2ea87757f3ac284e782ee3bb5a88f0ac',1,'SUNphi']]],
-  ['_5fis_5fserializablescalar',['_is_SerializableScalar',['../db/d33/SerializableScalar_8hpp.html#a78d79ac7aa06260954d22093703bfe3f',1,'SUNphi::_is_SerializableScalar(const T *)'],['../db/d33/SerializableScalar_8hpp.html#ab03ae21e7a99992ea26f481b72abac6f',1,'SUNphi::_is_SerializableScalar(const SerializableScalar&lt; Ts... &gt; *)']]],
   ['_5flasteq',['_lastEq',['../d3/dbe/IntListOrder_8hpp.html#a5b8fd92c9b36ddc12851f4fd1c09fcfc',1,'SUNphi']]],
   ['_5flastlarger',['_lastLarger',['../d3/dbe/IntListOrder_8hpp.html#ac64cb60c4cd5f2b0106dbf9534ec781f',1,'SUNphi']]],
   ['_5flastnon',['_lastNon',['../d3/dbe/IntListOrder_8hpp.html#a7d7e4c41371a685730eba04429d8512a',1,'SUNphi']]],
@@ -34,6 +33,7 @@ var searchData=
   ['_5fposoftype',['_posOfType',['../de/d2d/TupleOrder_8hpp.html#a9f60dd9c8c3a36f1ace90aa6d021d61a',1,'SUNphi::_posOfType(T, Tuple&lt;&gt;)'],['../de/d2d/TupleOrder_8hpp.html#acce3c95aefe2f639a99026d32a5c48f0',1,'SUNphi::_posOfType(T, Tuple&lt; Head, Tail... &gt;)']]],
   ['_5fposoftypes',['_posOfTypes',['../de/d2d/TupleOrder_8hpp.html#aa63b8d6f93b72ee4c5febdddfe9f111b',1,'SUNphi']]],
   ['_5frefevalbycompsname',['_refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#a3f5ed01aad92159a9e3c96cf87811f57',1,'SUNphi::NnarySmET::_refEvalByCompsName(IntSeq&lt; I &gt;, IntSeq&lt; Pos... &gt;, Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c',1,'SUNphi::NnarySmET::_refEvalByCompsName(Ts &amp;&amp;...ts)']]],
+  ['_5fserializablelist',['_serializableList',['../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc',1,'SUNphi']]],
   ['_5ftuplehastype',['_tupleHasType',['../d1/d31/TupleClass_8hpp.html#a2a233c81338f9003b6d59345bbea76ad',1,'SUNphi']]],
   ['_5ftuplehastypes',['_tupleHasTypes',['../d1/d31/TupleClass_8hpp.html#a5ddd6d103aa57654ee8b4c925802147b',1,'SUNphi']]]
 ];
