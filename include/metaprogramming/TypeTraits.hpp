@@ -673,7 +673,7 @@ struct STRUCT_NAME							\
   template <typename T>							\
   [[ maybe_unused ]]							\
   constexpr bool is ## CLASS=						\
-    _is_ ## CLASS((T*)nullptr)
+    _is_ ## CLASS((RemRef<T>*)nullptr)
 }
 
 #endif
