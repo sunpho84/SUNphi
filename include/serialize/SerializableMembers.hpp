@@ -28,6 +28,7 @@ namespace SUNphi
 #define SERIALIZABLE_MEMBERS(...)					\
   decltype(_serializableList(__VA_ARGS__))				\
   serializableMembers{_serializableList(__VA_ARGS__)}
+  
 }
 
 #endif

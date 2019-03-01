@@ -12,18 +12,8 @@
 using namespace std;
 using namespace SUNphi;
 
-DEFINE_HAS_MEMBER(serializableMembers);
-
 namespace SUNphi
 {
-  
-#define SERIALIZABLE_SCALAR(TYPE,		\
-			    NAME,		\
-			    DEFAULT)					\
-  SerializableScalar<TYPE,decltype(DEFAULT)> NAME{#NAME,DEFAULT}
-  
-#define SERIALIZABLE_MEMBERS(...)					\
-  decltype(std::forward_as_tuple(__VA_ARGS__)) serializableMembers{std::forward_as_tuple(__VA_ARGS__)}
   
   class Test
   {
@@ -43,9 +33,10 @@ namespace SUNphi
   {
   public:
     
-    SERIALIZABLE_SCALAR(Test,t,NO_DEFAULT);
+    SERIALIZABLE_SCALAR(Test,test,NO_DEFAULT);
+    SERIALIZABLE_SCALAR(std::string,ciccio,"ciaccio");
     
-    SERIALIZABLE_MEMBERS(t);
+    SERIALIZABLE_MEMBERS(test,ciccio);
   };
 }
 
@@ -83,17 +74,14 @@ namespace SUNphi
 
 // Test test;
 
-namespace YAML
-{
-  
-  template <typename T,
-	    typename Tdef>
+template <typename T,
+	  typename Tdef>
 YAML::Node& operator<<(YAML::Node& node,
 		       const SerializableScalar<T,Tdef>& t)
 {
   if constexpr(hasMember_serializableMembers<T>)
     {
-      Node subNode;
+      YAML::Node subNode;
       
       forEach(t().serializableMembers,
 	      [&subNode](auto s)
@@ -104,23 +92,26 @@ YAML::Node& operator<<(YAML::Node& node,
       node[t.name]=
 	subNode;
     }
-    else
-      node[t.name]=t();
+  else
+    node[t.name]=t();
   
   return node;
 }
 
 // template <typename T,
-// 	  typename=EnableIf<isSerializableMap<T>>>
-// YAML::Node& operator<<(YAML::Node& node,
-// 		       const T& t)
-// {
-//   if(not t.isDefault())
-//     node[t.name]<<static_cast<const SerializableMap<T>>(t());
+  // 	  typename=EnableIf<isSerializableMap<T>>>
+  // YAML::Node& operator<<(YAML::Node& node,
+  // 		       const T& t)
+  // {
+  //   if(not t.isDefault())
+  //     node[t.name]<<static_cast<const SerializableMap<T>>(t());
   
-//   return node;
-// }
-
+  //   return node;
+  // }
+  
+namespace YAML
+{
+  
   template<typename T>
   struct convert<SerializableScalar<T>>
   {
@@ -185,6 +176,7 @@ int main()
   
   SerializableScalar<double> _aref("a",NO_DEFAULT);
   
+  runLog()<<isSerializableScalar<SerializableScalar<double>>;
   
   return 0;
 }
