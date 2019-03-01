@@ -95,7 +95,7 @@ var searchData=
   ['someotherthreadcouldbeprinting',['someOtherThreadCouldBePrinting',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7b2c160c9431815af314ccd01960886f',1,'SUNphi::Logger::LoggerLine']]],
   ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
   ['spacetime_2ehpp',['SpaceTime.hpp',['../dd/d10/SpaceTime_8hpp.html',1,'']]],
-  ['spin',['Spin',['../d9/dfb/Spin_8hpp.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()'],['../d9/dfb/Spin_8hpp.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)']]],
+  ['spin',['spin',['../d9/dfb/Spin_8hpp.html#a23adbb8c4841cf214d7b7d5d47979972',1,'SUNphi::spin(T &amp;&amp;ref, const int id)'],['../d9/dfb/Spin_8hpp.html#abd9fe79407aaccb0a970eb3bafd31409',1,'SUNphi::Spin()']]],
   ['spin_2ehpp',['Spin.hpp',['../d9/dfb/Spin_8hpp.html',1,'']]],
   ['sqr',['sqr',['../d1/deb/Arithmetic_8hpp.html#a0eeddf88e05361ef8f44c0af72c11289',1,'SUNphi']]],
   ['start',['start',['../d6/de9/classSUNphi_1_1Timer.html#ad653c3c923202256623bf37d10559119',1,'SUNphi::Timer']]],
