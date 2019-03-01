@@ -23,6 +23,7 @@ var searchData=
   ['_5fintseqsslice',['_IntSeqsSlice',['../da/db7/IntSeqTranspose_8hpp.html#a324967003ba22523c741c7f804167943',1,'SUNphi']]],
   ['_5fintseqsslices',['_IntSeqsSlices',['../da/db7/IntSeqTranspose_8hpp.html#a64717ef227bf20611492f56742226593',1,'SUNphi']]],
   ['_5fintseqstranspose',['_IntSeqsTranspose',['../da/db7/IntSeqTranspose_8hpp.html#a2ea87757f3ac284e782ee3bb5a88f0ac',1,'SUNphi']]],
+  ['_5fis_5fserializablescalar',['_is_SerializableScalar',['../dd/d32/Scalar_8hpp.html#a78d79ac7aa06260954d22093703bfe3f',1,'SUNphi::_is_SerializableScalar(const T *)'],['../dd/d32/Scalar_8hpp.html#ab03ae21e7a99992ea26f481b72abac6f',1,'SUNphi::_is_SerializableScalar(const SerializableScalar&lt; Ts... &gt; *)']]],
   ['_5flasteq',['_lastEq',['../d3/dbe/IntListOrder_8hpp.html#a5b8fd92c9b36ddc12851f4fd1c09fcfc',1,'SUNphi']]],
   ['_5flastlarger',['_lastLarger',['../d3/dbe/IntListOrder_8hpp.html#ac64cb60c4cd5f2b0106dbf9534ec781f',1,'SUNphi']]],
   ['_5flastnon',['_lastNon',['../d3/dbe/IntListOrder_8hpp.html#a7d7e4c41371a685730eba04429d8512a',1,'SUNphi']]],

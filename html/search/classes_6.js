@@ -1,20 +1,12 @@
 var searchData=
 [
-  ['fallback',['Fallback',['../d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html',1,'SUNphi::HasMember_Fund']]],
-  ['fallback',['Fallback',['../d6/d7a/structSUNphi_1_1HasMember__isAliasing_1_1Fallback.html',1,'SUNphi::HasMember_isAliasing']]],
-  ['fallback',['Fallback',['../d6/dd6/structSUNphi_1_1HasMember__assertMergeableWith_1_1Fallback.html',1,'SUNphi::HasMember_assertMergeableWith']]],
-  ['fallback',['Fallback',['../d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html',1,'SUNphi::HasMember_isStoring']]],
-  ['fallback',['Fallback',['../dd/d43/structSUNphi_1_1HasMember__serializableMembers_1_1Fallback.html',1,'SUNphi::HasMember_serializableMembers']]],
-  ['fallback',['Fallback',['../d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html',1,'SUNphi::HasMember_Tk']]],
-  ['fallback',['Fallback',['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html',1,'SUNphi::HasMember_name']]],
-  ['fallback',['Fallback',['../d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html',1,'SUNphi::HasMember_ref2']]],
-  ['fallback',['Fallback',['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html',1,'SUNphi::HasMember_ref1']]],
-  ['fallback',['Fallback',['../da/d72/structSUNphi_1_1HasMember__eval_1_1Fallback.html',1,'SUNphi::HasMember_eval']]],
-  ['fallback',['Fallback',['../d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html',1,'SUNphi::HasMember_MergeableComps']]],
-  ['fallback',['Fallback',['../d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html',1,'SUNphi::HasMember_compSize']]],
-  ['fallback',['Fallback',['../dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html',1,'SUNphi::HasMember_refs']]],
-  ['fallback',['Fallback',['../d3/da2/structSUNphi_1_1HasMember__getMergedCompsView_1_1Fallback.html',1,'SUNphi::HasMember_getMergedCompsView']]],
-  ['fallback',['Fallback',['../d7/dea/structSUNphi_1_1HasMember__isAssignable_1_1Fallback.html',1,'SUNphi::HasMember_isAssignable']]],
-  ['file',['File',['../d5/d99/classSUNphi_1_1File.html',1,'SUNphi']]],
-  ['fuffa',['fuffa',['../de/da3/classfuffa.html',1,'']]]
+  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html',1,'SUNphi']]],
+  ['gridhashable',['GridHashable',['../dc/d35/classSUNphi_1_1GridHashable.html',1,'SUNphi']]],
+  ['gridhashable_3c_20grid_3c_20ndims_2c_20coord_2c_20idx_2c_20flags_20_3e_2c_20ndims_2c_20coord_2c_20idx_2c_20getflag_3c_20flags_2c_20gridflag_3a_3ahashed_20_3e_20_3e',['GridHashable&lt; Grid&lt; NDims, Coord, Idx, Flags &gt;, NDims, Coord, Idx, getFlag&lt; Flags, GridFlag::HASHED &gt; &gt;',['../dc/d35/classSUNphi_1_1GridHashable.html',1,'SUNphi']]],
+  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20false_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, false &gt;',['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html',1,'SUNphi']]],
+  ['gridhashable_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20true_20_3e',['GridHashable&lt; T, NDims, Coord, Idx, true &gt;',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html',1,'SUNphi']]],
+  ['gridshiftablebc',['GridShiftableBC',['../df/da9/classSUNphi_1_1GridShiftableBC.html',1,'SUNphi']]],
+  ['gridshiftablebc_3c_20grid_3c_20ndims_2c_20coord_2c_20idx_2c_20flags_20_3e_2c_20ndims_2c_20coord_2c_20idx_2c_20getflag_3c_20flags_2c_20gridflag_3a_3ashifted_5fbc_20_3e_20_3e',['GridShiftableBC&lt; Grid&lt; NDims, Coord, Idx, Flags &gt;, NDims, Coord, Idx, getFlag&lt; Flags, GridFlag::SHIFTED_BC &gt; &gt;',['../df/da9/classSUNphi_1_1GridShiftableBC.html',1,'SUNphi']]],
+  ['gridshiftablebc_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20false_20_3e',['GridShiftableBC&lt; T, NDims, Coord, Idx, false &gt;',['../d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html',1,'SUNphi']]],
+  ['gridshiftablebc_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20true_20_3e',['GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html',1,'SUNphi']]]
 ];

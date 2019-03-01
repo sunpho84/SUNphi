@@ -14,6 +14,7 @@ var searchData=
   ['hasmember_5fref1helper',['hasMember_ref1Helper',['../da/d5e/BinarySmET_8hpp.html#aa84f57c85401a1900e42a253517fbe6e',1,'SUNphi']]],
   ['hasmember_5fref2helper',['hasMember_ref2Helper',['../da/d5e/BinarySmET_8hpp.html#a64ea7da970fc5d79c192fd9089862312',1,'SUNphi']]],
   ['hasmember_5frefshelper',['hasMember_refsHelper',['../d2/d69/NnarySmET_8hpp.html#a9bf9ca2af698fa50014dbcb1fb859cb1',1,'SUNphi']]],
+  ['hasmember_5fserializablemembershelper',['hasMember_serializableMembersHelper',['../d3/db2/Base_8hpp.html#a6c85c8b387cf0bbcf437451da97e43cf',1,'SUNphi']]],
   ['hasmember_5ftkhelper',['hasMember_TkHelper',['../dc/d6b/BaseSmET_8hpp.html#a481a55a910b5b6e11ce2ca1e2cd97ba1',1,'SUNphi']]],
   ['hasrunningchildren',['hasRunningChildren',['../d6/de9/classSUNphi_1_1Timer.html#adf7d52103eb06dbfd9cd030c7d14b5dc',1,'SUNphi::Timer']]]
 ];

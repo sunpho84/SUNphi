@@ -4,6 +4,7 @@ var searchData=
   ['declare_5ftens_5fcomps_5fare_5ftwin',['DECLARE_TENS_COMPS_ARE_TWIN',['../d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14',1,'TwinsComp.hpp']]],
   ['declauto',['DECLAUTO',['../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0',1,'UniversalReferences.hpp']]],
   ['define_5fbase_5ftype',['DEFINE_BASE_TYPE',['../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276',1,'TypeTraits.hpp']]],
+  ['define_5fbinary_5foperator_5fimplementation_5fcheck',['DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK',['../d0/d81/TypeTraits_8hpp.html#a1fa2058ed52013bcd7060509d667dbea',1,'TypeTraits.hpp']]],
   ['define_5fgetter_5fwith_5fdefault',['DEFINE_GETTER_WITH_DEFAULT',['../dc/d6b/BaseSmET_8hpp.html#a4d007574a60ba5a69923d28beb0e6fa0',1,'BaseSmET.hpp']]],
   ['define_5fhas_5fmember',['DEFINE_HAS_MEMBER',['../d0/d81/TypeTraits_8hpp.html#af0ef22f5cfb3da749d24d242c1801cec',1,'TypeTraits.hpp']]],
   ['define_5fis_5fthe_5ftemplated_5fclass',['DEFINE_IS_THE_TEMPLATED_CLASS',['../d0/d81/TypeTraits_8hpp.html#a85b74695efbabe9677ff565da5b59ae5',1,'TypeTraits.hpp']]],

@@ -61,6 +61,7 @@ var searchData=
   ['transpose_2ehpp',['Transpose.hpp',['../d0/d6d/Transpose_8hpp.html',1,'']]],
   ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html',1,'SUNphi']]],
   ['transposer',['Transposer',['../d5/dd3/classSUNphi_1_1Transposer.html#ac07c1ab574aa62534a8285676bf340f9',1,'SUNphi::Transposer']]],
+  ['trivial_5fassign_5foverload',['TRIVIAL_ASSIGN_OVERLOAD',['../dd/d32/Scalar_8hpp.html#ab67115fae75d5cbcc3dba78ee12fcf82',1,'Scalar.hpp']]],
   ['truerandomgenerator',['TrueRandomGenerator',['../d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aff8b811510a629a33f70f57819ef4875',1,'SUNphi::TrueRandomGenerator::TrueRandomGenerator()'],['../d7/d05/TrueRandomGenerator_8hpp.html#a9c7bc8007b11140431020e8e6320a4c9',1,'SUNphi::trueRandomGenerator()']]],
   ['truerandomgenerator',['TrueRandomGenerator',['../d2/d95/classSUNphi_1_1TrueRandomGenerator.html',1,'SUNphi']]],
   ['truerandomgenerator_2ehpp',['TrueRandomGenerator.hpp',['../d7/d05/TrueRandomGenerator_8hpp.html',1,'']]],

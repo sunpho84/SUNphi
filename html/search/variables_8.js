@@ -15,6 +15,7 @@ var searchData=
   ['hasmember_5fref1',['hasMember_ref1',['../da/d5e/BinarySmET_8hpp.html#aa3153be40f8067d7c916dcf0b637911c',1,'SUNphi']]],
   ['hasmember_5fref2',['hasMember_ref2',['../da/d5e/BinarySmET_8hpp.html#a16755d1eb4f22997ed1507bbb940238b',1,'SUNphi']]],
   ['hasmember_5frefs',['hasMember_refs',['../d2/d69/NnarySmET_8hpp.html#af213f39c8a5860f573b8ca502803c884',1,'SUNphi']]],
+  ['hasmember_5fserializablemembers',['hasMember_serializableMembers',['../d3/db2/Base_8hpp.html#a6ac11b16b58ada4bd56cb49179e8235f',1,'SUNphi']]],
   ['hasmember_5ftk',['hasMember_Tk',['../dc/d6b/BaseSmET_8hpp.html#a31388ba85a984596f9d605934040682f',1,'SUNphi']]],
   ['hastocrash',['hasToCrash',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a9c352c0983674e8d2e2f315a90a187cb',1,'SUNphi::Logger::LoggerLine']]],
   ['hastoendline',['hasToEndLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4a8e7863f230e73555741a625c5cfb7f',1,'SUNphi::Logger::LoggerLine']]],

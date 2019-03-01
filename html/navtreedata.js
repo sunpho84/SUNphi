@@ -20,7 +20,8 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", "functions_type" ],
-        [ "Enumerations", "functions_enum.html", null ]
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -40,12 +41,12 @@ var NAVTREEINDEX =
 ".html",
 "d2/d24/classSUNphi_1_1Conjer.html",
 "d3/d99/structSUNphi_1_1HasMember__MergeableComps_1_1Derived.html#a210ea99755250764d9f2855c4ced4d8b",
-"d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0",
-"d7/d8a/File_8hpp.html#a5433bd5090f86be69946484ab657a26f",
-"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7b2c160c9431815af314ccd01960886f",
-"db/de9/classSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4",
-"dd/d10/SpaceTime_8hpp_source.html",
-"de/dff/structSUNphi_1_1__isTuple_3_01Tuple_3_01Tp_8_8_8_01_4_01_4.html"
+"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#ae29a38b5b9a7ff35e0798d43279090c3",
+"d7/d8a/File_8hpp.html#a15092e37416ed3fd4236bf58877e665a",
+"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff24f1c1ec41656011d19f21c2fcf6ed",
+"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html",
+"dd/d2b/SUNphi_8cpp.html#ad3481e5243c3d2bac0d91bd64b9e32c9",
+"df/d09/classSUNphi_1_1Mpi.html#a79cbe656ef333beb324c09c24ac1f1af"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

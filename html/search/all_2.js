@@ -7,6 +7,7 @@ var searchData=
   ['barrier',['Barrier',['../df/d49/structSUNphi_1_1Barrier.html#a83c1da0715c9d8cbc292f637d2ef947d',1,'SUNphi::Barrier']]],
   ['barrier_2ehpp',['Barrier.hpp',['../d2/d46/Barrier_8hpp.html',1,'']]],
   ['base',['Base',['../d3/da1/classSUNphi_1_1MasterRandomGenerator.html#ab9ce27cc0e2a4b6860336c7616df7d26',1,'SUNphi::MasterRandomGenerator']]],
+  ['base_2ehpp',['Base.hpp',['../d3/db2/Base_8hpp.html',1,'']]],
   ['baseadder',['BaseAdder',['../d6/d4b/structSUNphi_1_1BaseAdder.html',1,'SUNphi']]],
   ['baseassigner',['BaseAssigner',['../dd/d4a/structSUNphi_1_1BaseAssigner.html',1,'SUNphi']]],
   ['basebinarysmet',['BaseBinarySmET',['../d2/d98/structSUNphi_1_1BaseBinarySmET.html',1,'SUNphi']]],

@@ -3,8 +3,6 @@ var searchData=
   ['element',['element',['../da/def/structSUNphi_1_1IntSeq.html#a92a9fa6ac6fb87d2da6d604037cc7843',1,'SUNphi::IntSeq']]],
   ['enableif',['EnableIf',['../d0/d81/TypeTraits_8hpp.html#a36390d39df970fd50dd457210d0079f4',1,'SUNphi']]],
   ['encryptcounter',['encryptCounter',['../d9/d59/classSUNphi_1_1Sitmo.html#a8024913efb3328b0c330f5034e3ae722',1,'SUNphi::Sitmo']]],
-  ['encrypter',['encrypter',['../d9/d59/classSUNphi_1_1Sitmo.html#a8d8b157fabc5122bd6548371c49a0fe3',1,'SUNphi::Sitmo']]],
-  ['encrypter',['Encrypter',['../dc/d36/classSUNphi_1_1Encrypter.html',1,'SUNphi']]],
   ['encrypter_2ehpp',['Encrypter.hpp',['../d8/db1/Encrypter_8hpp.html',1,'']]],
   ['endline',['endLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af3044a29aa67cde6e3516058aea3e622',1,'SUNphi::Logger::LoggerLine']]],
   ['errno',['errNo',['../db/de9/classSUNphi_1_1Crasher.html#ad44b0324d0f8e3bb71d23461db3e84f7',1,'SUNphi::Crasher']]],
