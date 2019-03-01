@@ -1,14 +1,15 @@
 #ifndef _SERIALIZABLEMEMBERS_HPP
 #define _SERIALIZABLEMEMBERS_HPP
 
-/// \file SerializableMembers.hpp
+/// \file serialize/Members.hpp
 ///
 /// \brief Creates a list of a set of serializable scalars
 ///
 /// The list is a tuple, which can be added as a member to a class, to
 /// make the class itself serializable
 
-#include <serialize/SerializableScalar.hpp>
+#include <serialize/Base.hpp>
+#include <serialize/Scalar.hpp>
 #include <tuple/TupleClass.hpp>
 
 namespace SUNphi

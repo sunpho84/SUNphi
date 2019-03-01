@@ -5,8 +5,8 @@
 ///
 /// \brief Header file to define everything involving serialization
 
-#include <serialize/SerializableBase.hpp>
-#include <serialize/SerializableMembers.hpp>
-#include <serialize/SerializableScalar.hpp>
+#include <serialize/Base.hpp>
+#include <serialize/Members.hpp>
+#include <serialize/Scalar.hpp>
 
 #endif

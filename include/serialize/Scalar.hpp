@@ -1,7 +1,7 @@
 #ifndef _SERIALIZABLE_SCALAR_HPP
 #define _SERIALIZABLE_SCALAR_HPP
 
-/// \file SerializableScalar.hpp
+/// \file serializable/Scalar.hpp
 ///
 /// \brief Define a serializable scalar
 
@@ -12,7 +12,7 @@
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
-#include <serialize/SerializableBase.hpp>
+#include <serialize/Base.hpp>
 
 namespace SUNphi
 {
