@@ -12,6 +12,8 @@
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
+#include <serialize/SerializableBase.hpp>
+
 namespace SUNphi
 {
   /// Marks that the value has no default value
@@ -36,6 +38,7 @@ namespace SUNphi
     SerializableDefaultValue<T>(const T& def)
       : def(def)
     {
+      static_assert(not isSerializableClass<T>,"A serializable class has already its own defaults");
     }
   };
   
