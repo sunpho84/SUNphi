@@ -26,8 +26,10 @@ namespace SUNphi
     static constexpr int nSeeds=
       sizeof(_MasterRandomGenerator::state_size)/sizeof(uint32_t);
     
+    /// Seed state
     std::vector<uint32_t> _seeds{nSeeds};
     
+    /// Gives a constant access to the seeds
     const std::vector<uint32_t>& seeds=
       _seeds;
     

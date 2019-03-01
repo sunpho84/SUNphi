@@ -14,7 +14,7 @@ using namespace SUNphi;
 
 namespace SUNphi
 {
-  
+  /// Test1
   class Test
   {
   public:
@@ -29,6 +29,7 @@ namespace SUNphi
     }
   };
   
+  /// Test2
   class Test2
   {
   public:
@@ -79,7 +80,7 @@ template <typename T,
 YAML::Node& operator<<(YAML::Node& node,
 		       const SerializableScalar<T,Tdef>& t)
 {
-  if constexpr(hasMember_serializableMembers<T>)
+  if constexpr(isSerializableClass<T>)
     {
       YAML::Node subNode;
       
@@ -111,7 +112,7 @@ YAML::Node& operator<<(YAML::Node& node,
   
 namespace YAML
 {
-  
+  /// Serializable scalar conversion to YAML node
   template<typename T>
   struct convert<SerializableScalar<T>>
   {

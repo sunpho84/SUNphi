@@ -6,7 +6,7 @@
 /// \brief Topical header for random stuff
 ///
 
-#warning //#include <random/Encrypter.hpp>
+#include <random/Encrypter.hpp>
 
 #include <random/Sitmo.hpp>
 #include <random/TrueRandomGenerator.hpp>

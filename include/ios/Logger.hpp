@@ -344,6 +344,7 @@ namespace SUNphi
 	*this;
     }
     
+    /// Create a new line
     LoggerLine operator()()
     {
       return

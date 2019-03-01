@@ -87,9 +87,9 @@ namespace SUNphi
   public:
     
     /// Open a file, crashing if impossible
-    void open(const char* path,              /// Path to open
-	      const char* mode,              /// Mode used to open
-	      const bool crashIfFail=true)   /// Crash or not if failing
+    void open(const char* path,              ///< Path to open
+	      const char* mode,              ///< Mode used to open
+	      const bool crashIfFail=true)   ///< Crash or not if failing
     {
       // Check not open
       if(isOpen())

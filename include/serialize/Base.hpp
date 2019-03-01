@@ -1,7 +1,7 @@
-#ifndef _SERIALIZABLE_BASE_HPP
-#define _SERIALIZABLE_BASE_HPP
+#ifndef _SERIALIZE_BASE_HPP
+#define _SERIALIZE_BASE_HPP
 
-/// \file SerializableBase.hpp
+/// \file serialize/Base.hpp
 ///
 /// \brief Defines the basic serializable features
 

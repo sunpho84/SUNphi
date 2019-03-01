@@ -1,7 +1,7 @@
-#ifndef _SERIALIZABLE_SCALAR_HPP
-#define _SERIALIZABLE_SCALAR_HPP
+#ifndef _SERIALIZE_SCALAR_HPP
+#define _SERIALIZE_SCALAR_HPP
 
-/// \file serializable/Scalar.hpp
+/// \file serialize/Scalar.hpp
 ///
 /// \brief Define a serializable scalar
 
@@ -107,6 +107,7 @@ namespace SUNphi
     
     /// Used to overload assignment operators
 #define TRIVIAL_ASSIGN_OVERLOAD(OP)			\
+    /*! Provides the operator OP */						\
     template <typename O> /* Other operand typename */	\
     DECLAUTO operator OP (O&& oth)			\
     {							\
