@@ -73,7 +73,10 @@ namespace SUNphi
 		    forEach(t.serializableMembers,
 			    [&ser](auto s)
 			    {
-			      ser.node<<s;
+			      Serializer nested;
+			      nested<<s();
+			      
+			      ser.node=nested.node;
 			    });
       else
 	ser.node=t;
@@ -87,10 +90,13 @@ namespace SUNphi
     friend Serializer& operator<<(Serializer& ser,
 				  const SerializableScalar<T,TDef>& t)
     {
-      ser.node[t.name]<<t();
+      Serializer nested;
+      nested<<t();
+      
+      ser.node[t.name]=nested.node;
       
       return
-    ser;
+	ser;
     }
     
     std::string get()
