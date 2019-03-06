@@ -8,5 +8,6 @@
 #include <serialize/Base.hpp>
 #include <serialize/Members.hpp>
 #include <serialize/Scalar.hpp>
+#include <serialize/Serializer.hpp>
 
 #endif

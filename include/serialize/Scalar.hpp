@@ -21,9 +21,13 @@ namespace SUNphi
   {
   };
   
-  /// Used to mark the mandatoriety of the variable
+  /// Used to mark that no default value is provided
   [[ maybe_unused ]]
   static constexpr NoDefault NO_DEFAULT;
+  
+  /// Used to mark the mandatoriety of the variable
+  [[ maybe_unused ]]
+  static constexpr NoDefault MANDATORY;
   
   /// Provide a default value for a serializable reference
   template <typename T>
@@ -59,9 +63,9 @@ namespace SUNphi
   ///
   /// Provides name and default value
   template <typename T,
-	    typename Tdef=NoDefault>
+	    typename TDef=NoDefault>
   class SerializableScalar :
-    public SerializableDefaultValue<Tdef>
+    public SerializableDefaultValue<TDef>
   {
     /// Stored variable
     T value;
@@ -83,13 +87,15 @@ namespace SUNphi
     
     /// Creates a serializable scalar with default value
     SerializableScalar(const char* name,
-		       const Tdef& def)
+		       const TDef& def)
       :
-      SerializableDefaultValue<Tdef>(def),
+      SerializableDefaultValue<TDef>(def),
       name(name)
     {
+      static_assert((not isSerializableClass<T>) or isSame<RemoveCV<TDef>,NoDefault>,"A serializable class has his own default members");
+      
       /// If the variable has default value, copy it
-      if constexpr(not isSame<RemoveCV<Tdef>,NoDefault>)
+      if constexpr(not isSame<RemoveCV<TDef>,NoDefault>)
 	value=def;
     }
     
@@ -97,7 +103,7 @@ namespace SUNphi
     bool isDefault()
       const
     {
-      if constexpr(isSame<Tdef,NoDefault>)
+      if constexpr(isSame<TDef,NoDefault>)
 	return
 	  false;
       else
