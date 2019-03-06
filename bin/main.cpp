@@ -5,8 +5,6 @@
 
 #include <SUNphi.hpp>
 
-#include <yaml-cpp/yaml.h>
-
 #include <iostream>
 
 using namespace std;
@@ -75,30 +73,6 @@ namespace SUNphi
 
 // Test test;
 
-template <typename T,
-	  typename Tdef>
-YAML::Node& operator<<(YAML::Node& node,
-		       const SerializableScalar<T,Tdef>& t)
-{
-  if constexpr(isSerializableClass<T>)
-    {
-      YAML::Node subNode;
-      
-      forEach(t().serializableMembers,
-	      [&subNode](auto s)
-	      {
-		subNode<<s;
-	      });
-      
-      node[t.name]=
-	subNode;
-    }
-  else
-    node[t.name]=t();
-  
-  return node;
-}
-
 // template <typename T,
   // 	  typename=EnableIf<isSerializableMap<T>>>
   // YAML::Node& operator<<(YAML::Node& node,
@@ -110,28 +84,6 @@ YAML::Node& operator<<(YAML::Node& node,
   //   return node;
   // }
   
-namespace YAML
-{
-  /// Serializable scalar conversion to YAML node
-  template<typename T>
-  struct convert<SerializableScalar<T>>
-  {
-    static Node encode(const SerializableScalar<T>& rhs)
-    {
-      Node node;
-      node<<~rhs;
-      
-      return node;
-    }
-    
-    static bool decode(const Node& node,SerializableScalar<T>& rhs)
-    {
-      node>>rhs.a;
-      
-      return true;
-    }
-  };
-}
 
 int main()
 {
@@ -154,19 +106,17 @@ int main()
   // runLog()<<test.ser.mappedSize;
   // runLog()<<test.d;
   
-  YAML::Node node;
   
   SerializableScalar<Test> test{"test",{}};
   SerializableScalar<Test2> t2{"t2",NO_DEFAULT};
   
   test().a=11.0;
   runLog()<<test().a();
-  node<<t2;
+
+  Serializer ser;
+  ser<<t2;
   
-  YAML::Emitter emitter;
-  emitter<<node;
-  
-  runLog()<<emitter.c_str();
+  runLog()<<ser.get().c_str();
   
   // double d;
   // int i;
