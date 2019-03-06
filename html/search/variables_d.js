@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()'],['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../d1/d97/classSUNphi_1_1SerializableScalar.html#a85eb5fdcfae16c591e920cfc4dd55aaf',1,'SUNphi::SerializableScalar::name()']]],
+  ['name',['name',['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()'],['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../d1/d97/classSUNphi_1_1SerializableScalar.html#a0e55819138bf9d4bfe72a235c146c232',1,'SUNphi::SerializableScalar::name()']]],
   ['ncn_5fcol',['NCN_Col',['../d4/df5/SUN_8hpp.html#a37b64c0a12ba1ed70d40a9cd81b76d25',1,'SUNphi']]],
   ['ncn_5fspin',['NCN_Spin',['../d9/dfb/Spin_8hpp.html#a6da8f6f82d5819d1a6ed09ea9cf2b883',1,'SUNphi']]],
   ['ncol',['NCOL',['../d4/df5/SUN_8hpp.html#aeea08fdb768379f4f657584f4f0ab64d',1,'SUNphi']]],
@@ -20,6 +20,7 @@ var searchData=
   ['no_5fdefault',['NO_DEFAULT',['../dd/d32/Scalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26',1,'SUNphi']]],
   ['no_5ffather',['NO_FATHER',['../d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4',1,'SUNphi::Timer']]],
   ['nobj',['nObj',['../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382',1,'SUNphi::Combinatorial']]],
+  ['node',['node',['../d8/dd8/classSUNphi_1_1Serializer.html#a89a9cf4c68aa0ace537a9cfb3e7d1b87',1,'SUNphi::Serializer']]],
   ['noftypeintuple',['nOfTypeInTuple',['../d1/d31/TupleClass_8hpp.html#af877fd927f6e7f68c60742d9fd6eee75',1,'SUNphi']]],
   ['nonnull',['nonNull',['../d0/dde/structSUNphi_1_1__RangeSeq.html#ab81626ce8a7edcb1ea8e33a58ae8d799',1,'SUNphi::_RangeSeq']]],
   ['noridirs',['nOriDirs',['../dd/dca/classSUNphi_1_1Grid.html#ae2c76c9cfac92abb578dde9943ea6000',1,'SUNphi::Grid']]],

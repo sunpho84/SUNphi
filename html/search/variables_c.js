@@ -1,6 +1,7 @@
 var searchData=
 [
   ['makesurealiverisreferenced',['makeSureAliverIsReferenced',['../d2/d0a/Aliver_8hpp.html#ac9d94f5be3ce9e06d10056b98d9e36cf',1,'SUNphi']]],
+  ['mandatory',['MANDATORY',['../dd/d32/Scalar_8hpp.html#a808d5d4934f81fe8b47a30f5e2560938',1,'SUNphi']]],
   ['master_5frank',['MASTER_RANK',['../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0',1,'SUNphi::Mpi']]],
   ['masterthreadid',['masterThreadId',['../db/dbc/Thread_8hpp.html#a99c328c32a20973f102829b062182999',1,'SUNphi']]],
   ['max',['max',['../da/def/structSUNphi_1_1IntSeq.html#af9b370eb2608e777cce94847981ba5a3',1,'SUNphi::IntSeq::max()'],['../d9/d59/classSUNphi_1_1Sitmo.html#a3508ff2c2670efa2ef90199b957687c3',1,'SUNphi::Sitmo::max()']]],

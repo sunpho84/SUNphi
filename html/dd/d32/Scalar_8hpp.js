@@ -9,5 +9,6 @@ var Scalar_8hpp =
     [ "_is_SerializableScalar", "dd/d32/Scalar_8hpp.html#a78d79ac7aa06260954d22093703bfe3f", null ],
     [ "_is_SerializableScalar", "dd/d32/Scalar_8hpp.html#ab03ae21e7a99992ea26f481b72abac6f", null ],
     [ "isSerializableScalar", "dd/d32/Scalar_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8", null ],
+    [ "MANDATORY", "dd/d32/Scalar_8hpp.html#a808d5d4934f81fe8b47a30f5e2560938", null ],
     [ "NO_DEFAULT", "dd/d32/Scalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26", null ]
 ];

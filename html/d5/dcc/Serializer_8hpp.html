@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: YAML::convert&lt; SerializableScalar&lt; T &gt; &gt; Struct Template Reference</title>
+<title>SUNphi: include/serialize/Serializer.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -49,8 +49,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
-      <li><a href="../../files.html"><span>Files</span></a></li>
+      <li><a href="../../annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,10 +71,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="../../files.html"><span>File&#160;List</span></a></li>
+      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -89,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html','../../');});
+$(document).ready(function(){initNavTree('d5/dcc/Serializer_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -108,41 +106,47 @@ $(document).ready(function(){initNavTree('d3/dfb/structYAML_1_1convert_3_01Seria
 
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="../../dc/d28/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4-members.html">List of all members</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">YAML::convert&lt; SerializableScalar&lt; T &gt; &gt; Struct Template Reference</div>  </div>
+<div class="title">Serializer.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Serializable scalar conversion to YAML node.  
- <a href="../../d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html#details">More...</a></p>
+<p>Used to serialize quantities.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;yaml-cpp/yaml.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">serialize/Scalar.hpp</a>&gt;</code><br />
+</div>
+<p><a href="../../d5/dcc/Serializer_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0466c2d821c7255b83cb4bce22f10266"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0466c2d821c7255b83cb4bce22f10266"></a>
-static Node&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> (const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="separator:a0466c2d821c7255b83cb4bce22f10266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a026ac34c2bcde2b79f9b6254d2563f6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a026ac34c2bcde2b79f9b6254d2563f6c"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> (const Node &amp;node, <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T &gt; &amp;rhs)</td></tr>
-<tr class="separator:a026ac34c2bcde2b79f9b6254d2563f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html">YAML::convert&lt; enable_if_serializableClass&lt; TT&lt; Ts... &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializable scalar conversion to YAML node.  <a href="../../dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">SUNphi::Serializer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string the passed objects.  <a href="../../d8/dd8/classSUNphi_1_1Serializer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a001a37a88a3b69e177df88aa1e191e98"><td class="memTemplParams" colspan="2"><a class="anchor" id="a001a37a88a3b69e177df88aa1e191e98"></a>
+template&lt;typename T , typename  = EnableIf&lt;isSerializableClass&lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a001a37a88a3b69e177df88aa1e191e98"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>YAML::enable_if_serializableClass</b> = T</td></tr>
+<tr class="separator:a001a37a88a3b69e177df88aa1e191e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-struct YAML::convert&lt; SerializableScalar&lt; T &gt; &gt;</h3>
+<div class="textblock"><p>Used to serialize quantities. </p>
+<p>Incapsulates yaml access providing a stream operator </p>
 
-<p>Serializable scalar conversion to YAML node. </p>
-
-<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00117">117</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>bin/<a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a></li>
-</ul>
-</div><!-- contents -->
+<p>Definition in file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>YAML</b></li><li class="navelem"><a class="el" href="../../d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html">convert&lt; SerializableScalar&lt; T &gt; &gt;</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_d6dce8604daa6d974602991ede05feb6.html">serialize</a></li><li class="navelem"><a class="el" href="../../d5/dcc/Serializer_8hpp.html">Serializer.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

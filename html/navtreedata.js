@@ -41,12 +41,12 @@ var NAVTREEINDEX =
 ".html",
 "d2/d24/classSUNphi_1_1Conjer.html",
 "d3/d99/structSUNphi_1_1HasMember__MergeableComps_1_1Derived.html#a210ea99755250764d9f2855c4ced4d8b",
-"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#ae29a38b5b9a7ff35e0798d43279090c3",
+"d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d",
 "d7/d8a/File_8hpp.html#a15092e37416ed3fd4236bf58877e665a",
-"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff24f1c1ec41656011d19f21c2fcf6ed",
-"dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html",
-"dd/d2b/SUNphi_8cpp.html#ad3481e5243c3d2bac0d91bd64b9e32c9",
-"df/d09/classSUNphi_1_1Mpi.html#a79cbe656ef333beb324c09c24ac1f1af"
+"d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a9c352c0983674e8d2e2f315a90a187cb",
+"db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899",
+"dd/d15/Ranges_8hpp.html#ac6a4b17d20c20aa9fa3428f1233d6190",
+"de/dfd/structSUNphi_1_1CanPrint.html#a190681110db6c053a36e31ebd2c5f944"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

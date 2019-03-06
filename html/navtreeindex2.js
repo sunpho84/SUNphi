@@ -78,9 +78,6 @@ var NAVTREEINDEX2 =
 "d3/de8/structSUNphi_1_1__Conditional.html":[2,0,0,4],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html":[2,0,0,107],
 "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html#a3a382b9c828b202b2863778c3ecc7f56":[2,0,0,107,0],
-"d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html":[2,0,1,0],
-"d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html#a026ac34c2bcde2b79f9b6254d2563f6c":[2,0,1,0,0],
-"d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html#a0466c2d821c7255b83cb4bce22f10266":[2,0,1,0,1],
 "d4/d03/Utility_8hpp.html":[3,0,2,32],
 "d4/d03/Utility_8hpp_source.html":[3,0,2,32],
 "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html":[2,0,0,138,2],
@@ -126,8 +123,8 @@ var NAVTREEINDEX2 =
 "d4/d4b/structSUNphi_1_1IsAlwaysTrue.html#ae85228442cc21116609c264b3f4667c4":[2,0,0,141,0],
 "d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html":[2,0,0,134,0],
 "d4/d63/structSUNphi_1_1ConstrainHasMember__isAssignable.html":[2,0,0,92],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,169,2],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,169,2,0],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,170,2],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,170,2,0],
 "d4/d77/SFINAE_8hpp.html":[3,0,2,6,3],
 "d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5":[3,0,2,6,3,1],
 "d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1":[3,0,2,6,3,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX2 =
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#a62036115814b61e36c3699da76b23f8f":[2,0,0,0,0,5],
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#a843def315dd15705711c059c685be46c":[2,0,0,0,0,1],
 "d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aa7a59e642f782c5731ab75cc4d74d6de":[2,0,0,0,0,0],
-"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,0,0,2]
+"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,0,0,2],
+"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,0,0,6],
+"d5/d56/structSUNphi_1_1__RelBindInternalChecks_1_1Tc1.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,0,0,7],
+"d5/d8c/SwallowSemicolon_8hpp.html":[3,0,2,6,5]
 };

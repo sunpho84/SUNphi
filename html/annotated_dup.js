@@ -164,6 +164,7 @@ var annotated_dup =
       [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", "dc/d2a/classSUNphi_1_1SerializableDefaultValue" ],
       [ "SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4" ],
       [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html", "d1/d97/classSUNphi_1_1SerializableScalar" ],
+      [ "Serializer", "d8/dd8/classSUNphi_1_1Serializer.html", "d8/dd8/classSUNphi_1_1Serializer" ],
       [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ],
       [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html", "d9/d59/classSUNphi_1_1Sitmo" ],
       [ "SmET", "d1/d31/structSUNphi_1_1SmET.html", "d1/d31/structSUNphi_1_1SmET" ],
@@ -186,7 +187,7 @@ var annotated_dup =
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
     ] ],
     [ "YAML", null, [
-      [ "convert< SerializableScalar< T > >", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4.html", "d3/dfb/structYAML_1_1convert_3_01SerializableScalar_3_01T_01_4_01_4" ]
+      [ "convert< enable_if_serializableClass< TT< Ts... > > >", "dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", "dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4" ]
     ] ],
     [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
 ];

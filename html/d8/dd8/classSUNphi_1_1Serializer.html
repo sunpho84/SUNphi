@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: SUNphi::SerializableDefaultValue&lt; NoDefault &gt; Class Template Reference</title>
+<title>SUNphi: SUNphi::Serializer Class Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html','../../');});
+$(document).ready(function(){initNavTree('d8/dd8/classSUNphi_1_1Serializer.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -109,40 +109,60 @@ $(document).ready(function(){initNavTree('d7/dde/classSUNphi_1_1SerializableDefa
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="../../d1/ddf/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4-members.html">List of all members</a>  </div>
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="../../da/d44/classSUNphi_1_1Serializer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SUNphi::SerializableDefaultValue&lt; NoDefault &gt; Class Template Reference</div>  </div>
+<div class="title">SUNphi::Serializer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provide no default value for a serializable reference.  
- <a href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html#details">More...</a></p>
+<p>Convert to string the passed objects.  
+ <a href="../../d8/dd8/classSUNphi_1_1Serializer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a35e58b6227a568d2e6d9c7a526ef36f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35e58b6227a568d2e6d9c7a526ef36f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html#a35e58b6227a568d2e6d9c7a526ef36f1">SerializableDefaultValue</a> (const <a class="el" href="../../d9/d2b/classSUNphi_1_1NoDefault.html">NoDefault</a> &amp;)</td></tr>
-<tr class="memdesc:a35e58b6227a568d2e6d9c7a526ef36f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct doing nothing. <br /></td></tr>
-<tr class="separator:a35e58b6227a568d2e6d9c7a526ef36f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337ec666ad749ac084237934e13c412f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a337ec666ad749ac084237934e13c412f"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () const </td></tr>
+<tr class="separator:a337ec666ad749ac084237934e13c412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a89a9cf4c68aa0ace537a9cfb3e7d1b87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89a9cf4c68aa0ace537a9cfb3e7d1b87"></a>
+YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a89a9cf4c68aa0ace537a9cfb3e7d1b87">node</a></td></tr>
+<tr class="memdesc:a89a9cf4c68aa0ace537a9cfb3e7d1b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node used to store the serialized data. <br /></td></tr>
+<tr class="separator:a89a9cf4c68aa0ace537a9cfb3e7d1b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6201232dc8bd66bf70394ab3ff1759a2"></a>
+template&lt;typename T , typename TDef &gt; </td></tr>
+<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, TDef &gt; &amp;t)</td></tr>
+<tr class="separator:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
+template&lt;typename T , typename  = EnableIf&lt;not isSerializableScalar&lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
+<tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6201232dc8bd66bf70394ab3ff1759a2"></a>
+template&lt;typename T , typename TDef &gt; </td></tr>
+<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, TDef &gt; &amp;t)</td></tr>
+<tr class="separator:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;&gt;<br />
-class SUNphi::SerializableDefaultValue&lt; NoDefault &gt;</h3>
+<div class="textblock"><p>Convert to string the passed objects. </p>
 
-<p>Provide no default value for a serializable reference. </p>
-
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/serialize/<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a></li>
+<li>include/serialize/<a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>SUNphi</b></li><li class="navelem"><a class="el" href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html">SerializableDefaultValue&lt; NoDefault &gt;</a></li>
+    <li class="navelem"><b>SUNphi</b></li><li class="navelem"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
