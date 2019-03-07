@@ -9,42 +9,38 @@
 
 #include <yaml-cpp/yaml.h>
 
+#include <metaprogramming/SFINAE.hpp>
 #include <serialize/Scalar.hpp>
 
 namespace YAML
 {
   using namespace SUNphi;
   
-  template<typename T,
-	   typename=EnableIf<isSerializableClass<T>>>
-  using enable_if_serializableClass=
-    T;
-  
-  //   template<template<typename...> class TT, typename... Ts>
-  //   struct convert<enable_if_serializableScalar<TT<Ts...>>>
-  // { 
-  // };
-  
   /// Serializable scalar conversion to YAML node
-  template<template<typename...> class TT, typename... Ts>
-  struct convert<enable_if_serializableClass<TT<Ts...>>>
+  SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE
+  struct convert<SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(SerializableScalar)>
   {
-    using T=
-      TT<Ts...>;
+    SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE;
     
-    static Node encode(const SerializableScalar<T>& rhs)
+    /// Encode a SerializableScalar
+    static Node encode(const SerializableScalar<T>& rhs) ///< Input
     {
+      /// Output node
       Node node;
       node<<~rhs;
       
-      return node;
+      return
+	node;
     }
     
-    static bool decode(const Node& node,SerializableScalar<T>& rhs)
+    /// Decodes a SerializableScalar
+    static bool decode(const Node& node,             ///< Input node
+		       SerializableScalar<T>& rhs)   ///< Output
     {
       node>>rhs.a;
       
-      return true;
+      return
+	true;
     }
   };
 }
@@ -59,46 +55,38 @@ namespace SUNphi
     
   public:
     
-    template <typename T,
-	      typename TDef>
-    friend Serializer& operator<<(Serializer& ser,
-				  const SerializableScalar<T,TDef>& t);
-    
-    template <typename T,
-	      typename=EnableIf<not isSerializableScalar<T>>>
+    /// Output a serializable object to a serializer
+    template <typename T>
     friend Serializer& operator<<(Serializer& ser,
 				  const T& t)
     {
       if constexpr(isSerializableClass<T>)
-		    forEach(t.serializableMembers,
-			    [&ser](auto s)
-			    {
-			      Serializer nested;
-			      nested<<s();
-			      
-			      ser.node=nested.node;
-			    });
+	forEach(t.serializableMembers,
+		[&ser](auto s)
+		{
+		  Serializer nested;
+		  nested<<s();
+		  
+		  ser.node=
+		    nested.node;
+		});
       else
-	ser.node=t;
+	if constexpr(isSerializableScalar<T>)
+	  {
+	    Serializer nested;
+	    nested<<t();
+	    
+	    ser.node[t.name]=
+	      nested.node;
+	  }
+	else
+	  ser.node=t;
       
       return
 	ser;
     }
     
-    template <typename T,
-	      typename TDef>
-    friend Serializer& operator<<(Serializer& ser,
-				  const SerializableScalar<T,TDef>& t)
-    {
-      Serializer nested;
-      nested<<t();
-      
-      ser.node[t.name]=nested.node;
-      
-      return
-	ser;
-    }
-    
+    /// Returns the associated string
     std::string get()
       const
     {

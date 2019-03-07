@@ -17,6 +17,9 @@ namespace SUNphi
   [[ maybe_unused ]]
   constexpr bool isSerializableClass=
     hasMember_serializableMembers<T>;
+  
+  /// Provides an enabler on the specific case isSerializableClass
+  PROVIDE_ENABLE_IF_FOR_TYPE(SerializableClass);
 }
 
 #endif
