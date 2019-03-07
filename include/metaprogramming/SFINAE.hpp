@@ -66,10 +66,24 @@ namespace SUNphi
   
   //////////////////////////////////////////////////////////////////////
   
-  // Not sure that this is a good idea
-  // #define IF17(...)   if constexpr(__VA_ARGS__)
+  /// SFINAE for template class specialisation
+  ///
+  /// Follows the advice of https://stackoverflow.com/a/30991097 to
+  /// create a class providing the type itself on the basis of
+  /// deducing from a base class
+#define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE		       \
+  template<template<typename...> typename TT,			       \
+	   typename...Ts>
   
-  // #define ELSE17	 else
+  /// To be used as an argument of the specialization
+#define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(TYPE)	\
+  EnableIfIs ## TYPE<TT<Ts...>>
+  
+  /// Provides the type inside the specialized class
+#define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE	       \
+  /*! Type used as an argument of the template specialization */       \
+  using T=							       \
+      TT<Ts...>
 }
 
 #endif

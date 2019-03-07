@@ -455,6 +455,16 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Provides an EnableIf with the given name
+#define PROVIDE_ENABLE_IF_FOR_TYPE(TYPE)				\
+  /*! Provides the class itself if T is of the given type */		\
+  template<typename T,							\
+	   typename=EnableIf<is ## TYPE<T>>>				\
+  using EnableIfIs ## TYPE=						\
+    T
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Defines a "Base" identifier and checks for it
   ///
   /// Given a TYPE, defines another empty type prefixing its name with
@@ -469,6 +479,8 @@ namespace SUNphi
   [[ maybe_unused ]]							\
   constexpr bool is ## TYPE=						\
     isBaseOf<Base ## TYPE,T>;						\
+									\
+  PROVIDE_ENABLE_IF_FOR_TYPE(TYPE);					\
 									\
   /*! Class forcing T to inherits from \c Base ## TYPE */		\
   template<typename T>							\
@@ -654,7 +666,7 @@ namespace SUNphi
   /*!                                            */			\
   /*! False case                                 */			\
   template <typename T>							\
-  constexpr bool _is_ ## CLASS(const T*)				\
+  constexpr bool _is ## CLASS(const T*)					\
   {									\
     return								\
       false;								\
@@ -664,19 +676,21 @@ namespace SUNphi
   /*!                                            */			\
   /*! True case                                  */			\
   template <typename...Ts>						\
-  constexpr bool _is_ ## CLASS(const CLASS<Ts...>*)			\
+  constexpr bool _is ## CLASS(const CLASS<Ts...>*)			\
   {									\
     return								\
       true;								\
   }									\
 									\
-  /*! Check if the class is a CLASS               */			\
+  /*! Check if the class is a CLASS              */			\
   /*!                                            */			\
   /*! Calls the internal implementation          */			\
   template <typename T>							\
   [[ maybe_unused ]]							\
   constexpr bool is ## CLASS=						\
-    _is_ ## CLASS((RemRef<T>*)nullptr)
+     _is ## CLASS((RemRef<T>*)nullptr);                                 \
+									\
+  PROVIDE_ENABLE_IF_FOR_TYPE(CLASS)
 }
 
 #endif
