@@ -8,6 +8,7 @@ var RelBind_8hpp =
     [ "REL_BIND_PROTOTYPE", "d3/da4/RelBind_8hpp.html#a7eb315312e22dc9a9282f5e8c09daff1", null ],
     [ "ConstrainIsNotRelBinder", "d3/da4/RelBind_8hpp.html#a6a4019c0b7031e2eeb1bcae7b26125a9", null ],
     [ "ConstrainIsRelBinder", "d3/da4/RelBind_8hpp.html#a6d374e1f948e78a9a1e9d2f19ba7d65c", null ],
+    [ "EnableIfIsRelBinder", "d3/da4/RelBind_8hpp.html#acae60e3c6246d4c646cd990ece1e812b", null ],
     [ "T", "d3/da4/RelBind_8hpp.html#a313807a6977bf2f4234695f1655cf9e3", null ],
     [ "Tk", "d3/da4/RelBind_8hpp.html#abfc881e409b80ef0f9da6860c9ee22a4", null ],
     [ "maybeUnusedFD", "d3/da4/RelBind_8hpp.html#ad2eef232040ba16d5d27fdc243ce06f5", null ],

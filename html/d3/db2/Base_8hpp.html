@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('d3/db2/Base_8hpp.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -134,6 +135,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class forcing T to have a member "serializableMembers" defined.  <a href="../../d3/da9/structSUNphi_1_1ConstrainHasMember__serializableMembers.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac12317aa1d32280fa0e93d3d3aab271c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt;isSerializableClass &lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:ac12317aa1d32280fa0e93d3d3aab271c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/db2/Base_8hpp.html#ac12317aa1d32280fa0e93d3d3aab271c">SUNphi::EnableIfIsSerializableClass</a> = T</td></tr>
+<tr class="memdesc:ac12317aa1d32280fa0e93d3d3aab271c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an enabler on the specific case isSerializableClass.  <a href="../../d3/db2/Base_8hpp.html#ac12317aa1d32280fa0e93d3d3aab271c">More...</a><br /></td></tr>
+<tr class="separator:ac12317aa1d32280fa0e93d3d3aab271c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6c85c8b387cf0bbcf437451da97e43cf"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
@@ -154,7 +162,27 @@ Variables</h2></td></tr>
 <div class="textblock"><p>Defines the basic serializable features. </p>
 
 <p>Definition in file <a class="el" href="../../d3/db2/Base_8hpp_source.html">Base.hpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_ac12317aa1d32280fa0e93d3d3aab271c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = EnableIf&lt;isSerializableClass &lt;T&gt;&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/db2/Base_8hpp.html#ac12317aa1d32280fa0e93d3d3aab271c">SUNphi::EnableIfIsSerializableClass</a> = typedef T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides an enabler on the specific case isSerializableClass. </p>
+<p>Provides the class itself if T is of the given type </p>
+
+<p>Definition at line <a class="el" href="../../d3/db2/Base_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d3/db2/Base_8hpp_source.html">Base.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="file_a6c85c8b387cf0bbcf437451da97e43cf"></a>
 <div class="memitem">
 <div class="memproto">

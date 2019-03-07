@@ -219,6 +219,9 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a0147cab5da16a1c67f1f3ffb2d91889e">STATIC_ASSERT_ARE_INTEGRALS</a>(...)&#160;&#160;&#160;static_assert(areIntegrals&lt;__VA_ARGS__&gt;,&quot;Error, types are not all an integral&quot;)</td></tr>
 <tr class="memdesc:a0147cab5da16a1c67f1f3ffb2d91889e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static assert if the types T are not an integer-like. <br /></td></tr>
 <tr class="separator:a0147cab5da16a1c67f1f3ffb2d91889e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4974d735fdbc7662ba385df3522326"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">PROVIDE_ENABLE_IF_FOR_TYPE</a>(TYPE)</td></tr>
+<tr class="memdesc:a1c4974d735fdbc7662ba385df3522326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an EnableIf with the given name.  <a href="#a1c4974d735fdbc7662ba385df3522326">More...</a><br /></td></tr>
+<tr class="separator:a1c4974d735fdbc7662ba385df3522326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a299b799ebc40964ec602bf3e6bcca276"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276">DEFINE_BASE_TYPE</a>(TYPE, ...)</td></tr>
 <tr class="separator:a299b799ebc40964ec602bf3e6bcca276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f33da613c7ec375f2ceae55997e2ee1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a>(TAG, ...)&#160;&#160;&#160;static_assert(hasMember_ ## TAG&lt;__VA_ARGS__&gt;,&quot;Type does not have member &quot; #TAG) \</td></tr>
@@ -393,10 +396,11 @@ template&lt;typename T &gt; </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>Base ## TYPE __VA_ARGS__ {};                 \</div><div class="line">                                    \   \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  [[ maybe_unused ]]                            \</div><div class="line">  constexpr <span class="keywordtype">bool</span> is ## TYPE=                        \</div><div class="line">    isBaseOf&lt;Base ## TYPE,T&gt;;                       \</div><div class="line">                                    \       \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  using ConstrainIs ## TYPE=                        \</div><div class="line">    ConstrainIsBaseOf&lt;Base ## TYPE,T&gt;;                  \</div><div class="line">                                    \       \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  using ConstrainIsNot ## TYPE=                     \</div><div class="line">    ConstrainIsNotBaseOf&lt;Base ## TYPE,T&gt;;               \</div><div class="line">                                    \   \</div><div class="line">  template &lt;<span class="keyword">typename</span>...Args&gt;                        \</div><div class="line">  struct ConstrainAre ## TYPE ## s                  \</div><div class="line">  {                                 \</div><div class="line">    static_assert((is ## TYPE&lt;Args&gt; &amp;&amp; ...),                \</div><div class="line">          <span class="stringliteral">&quot;Error, types are not all &quot;</span> #TYPE);           \</div><div class="line">  }</div></div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>Base ## TYPE __VA_ARGS__ {};                 \</div><div class="line">                                    \   \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  [[ maybe_unused ]]                            \</div><div class="line">  constexpr <span class="keywordtype">bool</span> is ## TYPE=                        \</div><div class="line">    isBaseOf&lt;Base ## TYPE,T&gt;;                       <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">									\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">  PROVIDE_ENABLE_IF_FOR_TYPE</a>(TYPE);                 \</div><div class="line">                                    \       \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  using ConstrainIs ## TYPE=                        \</div><div class="line">    ConstrainIsBaseOf&lt;Base ## TYPE,T&gt;;                  \</div><div class="line">                                    \       \</div><div class="line">  template&lt;typename T&gt;                          \</div><div class="line">  using ConstrainIsNot ## TYPE=                     \</div><div class="line">    ConstrainIsNotBaseOf&lt;Base ## TYPE,T&gt;;               \</div><div class="line">                                    \   \</div><div class="line">  template &lt;<span class="keyword">typename</span>...Args&gt;                        \</div><div class="line">  struct ConstrainAre ## TYPE ## s                  \</div><div class="line">  {                                 \</div><div class="line">    static_assert((is ## TYPE&lt;Args&gt; &amp;&amp; ...),                \</div><div class="line">          <span class="stringliteral">&quot;Error, types are not all &quot;</span> #TYPE);           \</div><div class="line">  }</div><div class="ttc" id="TypeTraits_8hpp_html_a1c4974d735fdbc7662ba385df3522326"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">PROVIDE_ENABLE_IF_FOR_TYPE</a></div><div class="ttdeci">#define PROVIDE_ENABLE_IF_FOR_TYPE(TYPE)</div><div class="ttdoc">Provides an EnableIf with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00459">TypeTraits.hpp:459</a></div></div>
+</div><!-- fragment --><p>Defines a "Base" identifier and checks for it</p>
 <p>Given a TYPE, defines another empty type prefixing its name with "Base", and defines a check IsTYPE to probe wheter a certain type inherit from TYPE. All extra arguments can be used to specify inheritance from other classes </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00464">464</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00474">474</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +437,7 @@ template&lt;typename T &gt; </td></tr>
 </div><!-- fragment -->
 <p>Check that the binary operator exists. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00603">603</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00615">615</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -453,7 +457,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Define a member detecter named hasMember_TAG</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;DEFINE_HAS_MEMBER(ciccio);</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;struct fuffa</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;   int ciccio();</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;};</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;int main()</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  bool has=hasMember_ciccio(fuffa);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  return 0;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00517">517</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00529">529</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -470,11 +474,12 @@ template&lt;typename T &gt; </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">            \           \           \</div><div class="line">  template &lt;typename T&gt;                         \</div><div class="line">  constexpr <span class="keywordtype">bool</span> _is_ ## CLASS(<span class="keyword">const</span> <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>*)                \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      false;                                \</div><div class="line">  }                                 \</div><div class="line">                                    \           \           \           \</div><div class="line">  template &lt;<span class="keyword">typename</span>...Ts&gt;                      \</div><div class="line">  constexpr <span class="keywordtype">bool</span> _is_ ## CLASS(<span class="keyword">const</span> CLASS&lt;Ts...&gt;*)         \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      true;                             \</div><div class="line">  }                                 \</div><div class="line">                                    \           \           \           \</div><div class="line">  template &lt;typename T&gt;                         \</div><div class="line">  [[ maybe_unused ]]                            \</div><div class="line">  constexpr <span class="keywordtype">bool</span> is ## CLASS=                       \</div><div class="line">    _is_ ## CLASS((RemRef&lt;T&gt;*)<span class="keyword">nullptr</span>)</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">            \           \           \</div><div class="line">  template &lt;typename T&gt;                         \</div><div class="line">  constexpr <span class="keywordtype">bool</span> _is ## CLASS(<span class="keyword">const</span> <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>*)                 \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      false;                                \</div><div class="line">  }                                 \</div><div class="line">                                    \           \           \           \</div><div class="line">  template &lt;<span class="keyword">typename</span>...Ts&gt;                      \</div><div class="line">  constexpr <span class="keywordtype">bool</span> _is ## CLASS(<span class="keyword">const</span> CLASS&lt;Ts...&gt;*)          \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      true;                             \</div><div class="line">  }                                 \</div><div class="line">                                    \           \           \           \</div><div class="line">  template &lt;typename T&gt;                         \</div><div class="line">  [[ maybe_unused ]]                            \</div><div class="line">  constexpr <span class="keywordtype">bool</span> is ## CLASS=                       \</div><div class="line">     _is ## CLASS((RemRef&lt;T&gt;*)<span class="keyword">nullptr</span>);                                 <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">									\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">  PROVIDE_ENABLE_IF_FOR_TYPE</a>(CLASS)</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a1c4974d735fdbc7662ba385df3522326"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326">PROVIDE_ENABLE_IF_FOR_TYPE</a></div><div class="ttdeci">#define PROVIDE_ENABLE_IF_FOR_TYPE(TYPE)</div><div class="ttdoc">Provides an EnableIf with the given name. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00459">TypeTraits.hpp:459</a></div></div>
 </div><!-- fragment -->
 <p>Provides a check returning whether the class is of a given kind. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00652">652</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00664">664</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -521,6 +526,27 @@ template&lt;typename T &gt; </td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1c4974d735fdbc7662ba385df3522326"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROVIDE_ENABLE_IF_FOR_TYPE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">        \</div><div class="line">  template&lt;<span class="keyword">typename</span> <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>,                          \</div><div class="line">       typename=EnableIf&lt;is ## TYPE&lt;T&gt;&gt;&gt;                \</div><div class="line">  using EnableIfIs ## TYPE=                     <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">\</a></div><div class="line"><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">    T</a></div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+</div><!-- fragment -->
+<p>Provides an EnableIf with the given name. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00459">459</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9f33da613c7ec375f2ceae55997e2ee1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +573,7 @@ template&lt;typename T &gt; </td></tr>
 <p>Assert type T to have member TAG</p>
 <p>Note that you need to have defined DEFINE_HAS_MEMBER before </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00496">496</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00508">508</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +830,7 @@ template&lt;typename S , typename T &gt; </div>
 </div><div class="memdoc">
 <p>Check that operator &lt;&lt; is implemented </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00635">635</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00647">647</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

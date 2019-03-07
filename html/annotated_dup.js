@@ -187,7 +187,7 @@ var annotated_dup =
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
     ] ],
     [ "YAML", null, [
-      [ "convert< enable_if_serializableClass< TT< Ts... > > >", "dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", "dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4" ]
+      [ "convert< EnableIfIsSerializableScalar< TT< Ts... > > >", "d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", "d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4" ]
     ] ],
     [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
 ];

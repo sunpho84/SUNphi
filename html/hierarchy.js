@@ -277,7 +277,7 @@ var hierarchy =
     [ "SUNphi::ConstrainTupleHasNotType< T, TP, class >", "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html", null ],
     [ "SUNphi::ConstrainTupleHasType< T, TP, class >", "d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html", null ],
     [ "SUNphi::ConstrainTupleTypesAreAllDifferent< T, class >", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
-    [ "YAML::convert< enable_if_serializableClass< TT< Ts... > > >", "dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", null ],
+    [ "YAML::convert< EnableIfIsSerializableScalar< TT< Ts... > > >", "d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", null ],
     [ "SUNphi::Crasher", "db/de9/classSUNphi_1_1Crasher.html", null ],
     [ "SUNphi::CStringComparer", "d7/dcb/structSUNphi_1_1CStringComparer.html", null ],
     [ "SUNphi::HasMember_Tk< Type >::Fallback", "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html", [

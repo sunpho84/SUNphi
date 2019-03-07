@@ -71,7 +71,7 @@ var searchData=
   ['constraintuplehasnottype',['ConstrainTupleHasNotType',['../df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html',1,'SUNphi']]],
   ['constraintuplehastype',['ConstrainTupleHasType',['../d3/d4d/structSUNphi_1_1ConstrainTupleHasType.html',1,'SUNphi']]],
   ['constraintupletypesarealldifferent',['ConstrainTupleTypesAreAllDifferent',['../de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html',1,'SUNphi']]],
-  ['convert_3c_20enable_5fif_5fserializableclass_3c_20tt_3c_20ts_2e_2e_2e_20_3e_20_3e_20_3e',['convert&lt; enable_if_serializableClass&lt; TT&lt; Ts... &gt; &gt; &gt;',['../dc/da4/structYAML_1_1convert_3_01enable__if__serializableClass_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html',1,'YAML']]],
+  ['convert_3c_20enableifisserializablescalar_3c_20tt_3c_20ts_2e_2e_2e_20_3e_20_3e_20_3e',['convert&lt; EnableIfIsSerializableScalar&lt; TT&lt; Ts... &gt; &gt; &gt;',['../d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html',1,'YAML']]],
   ['crasher',['Crasher',['../db/de9/classSUNphi_1_1Crasher.html',1,'SUNphi']]],
   ['cstringcomparer',['CStringComparer',['../d7/dcb/structSUNphi_1_1CStringComparer.html',1,'SUNphi']]]
 ];

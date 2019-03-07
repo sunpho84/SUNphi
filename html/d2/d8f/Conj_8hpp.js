@@ -5,6 +5,7 @@ var Conj_8hpp =
     [ "Conjer", "d2/d24/classSUNphi_1_1Conjer.html", "d2/d24/classSUNphi_1_1Conjer" ],
     [ "ConstrainIsConjer", "d2/d8f/Conj_8hpp.html#ac3f60bca7754f192b8ac5ae06de36693", null ],
     [ "ConstrainIsNotConjer", "d2/d8f/Conj_8hpp.html#a4afc495baccaa2125e8d87194df28664", null ],
+    [ "EnableIfIsConjer", "d2/d8f/Conj_8hpp.html#a225661ea9bf5d2ae3f9c71cb2d8fd191", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#a381b663616baca11ca1606eab5ecb637", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#a3e19f4ffa189059c167b60fd22d8342d", null ],
     [ "conj", "d2/d8f/Conj_8hpp.html#aa8e94881e2711b5cb720d5839d7ecb34", null ],

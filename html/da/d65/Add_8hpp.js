@@ -5,6 +5,7 @@ var Add_8hpp =
     [ "Adder", "de/d58/classSUNphi_1_1Adder.html", "de/d58/classSUNphi_1_1Adder" ],
     [ "ConstrainIsAdder", "da/d65/Add_8hpp.html#a7861a33e6e18e86da33dbf3e492a629b", null ],
     [ "ConstrainIsNotAdder", "da/d65/Add_8hpp.html#af62c74b68be10595991ad13414f76975", null ],
+    [ "EnableIfIsAdder", "da/d65/Add_8hpp.html#ad135a9e9986160cfce8e1974dc59d393", null ],
     [ "MyT", "da/d65/Add_8hpp.html#a5fed21f6a353cc5d70bb127fe5bcc963", null ],
     [ "MyTc", "da/d65/Add_8hpp.html#ae238bc7ea8e64c38e24560b647d8e121", null ],
     [ "MyTk", "da/d65/Add_8hpp.html#a9aa88afc3b19d756d1f2fa57820c2149", null ],

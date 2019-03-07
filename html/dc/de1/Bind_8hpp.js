@@ -7,6 +7,7 @@ var Bind_8hpp =
     [ "DEFINE_NAMED_RW_OR_COL_BINDER", "dc/de1/Bind_8hpp.html#a039c2450684887ce0d2ba6ba7a08a562", null ],
     [ "ConstrainIsBinder", "dc/de1/Bind_8hpp.html#aee1f08c3429a08809917dfee2f962a97", null ],
     [ "ConstrainIsNotBinder", "dc/de1/Bind_8hpp.html#a05f22ac629fb941d46721c8a5a574b0d", null ],
+    [ "EnableIfIsBinder", "dc/de1/Bind_8hpp.html#a39489313923f7696ecc9297000ff5a05", null ],
     [ "bind", "dc/de1/Bind_8hpp.html#a149981a35c9bfdd4bce95d3526bcde3e", null ],
     [ "isBinder", "dc/de1/Bind_8hpp.html#a89b430ea7899ab76eb45b47ea636df1d", null ]
 ];

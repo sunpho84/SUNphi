@@ -10,6 +10,7 @@ var IntSeq_8hpp =
     [ "ConstrainIsOrderedUniqueIntSeq", "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq.html", "d3/dfa/structSUNphi_1_1ConstrainIsOrderedUniqueIntSeq" ],
     [ "ConstrainIsIntSeq", "dd/df8/IntSeq_8hpp.html#ad83e07565c46761a5d55dce9c28f4847", null ],
     [ "ConstrainIsNotIntSeq", "dd/df8/IntSeq_8hpp.html#a21d53087dc15a7dc058af1e2f4fc43cf", null ],
+    [ "EnableIfIsIntSeq", "dd/df8/IntSeq_8hpp.html#aa2dac5fbe51c307cfbd677f2db56dac0", null ],
     [ "intSeq", "dd/df8/IntSeq_8hpp.html#a1ee2a99d78b5ccbb4ed4d3e7b034d659", null ],
     [ "isIntSeq", "dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d", null ],
     [ "isOrderedIntSeq", "dd/df8/IntSeq_8hpp.html#a302d28a5e97d3f2dafd2064ed7d1ff02", null ],

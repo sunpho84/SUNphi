@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['decode',['decode',['../d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html#a5af03f868dd377bad45f4ac2b88c3b1f',1,'YAML::convert&lt; EnableIfIsSerializableScalar&lt; TT&lt; Ts... &gt; &gt; &gt;']]],
   ['demangle',['demangle',['../d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83',1,'SUNphi']]],
   ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90',1,'SUNphi::Grid']]],
   ['dir',['dir',['../de/dda/Dir_8hpp.html#ae2e5d0c42dbe9855d3b20935ca39145c',1,'SUNphi']]],

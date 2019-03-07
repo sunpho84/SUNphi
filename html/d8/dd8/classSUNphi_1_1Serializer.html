@@ -125,7 +125,8 @@ $(document).ready(function(){initNavTree('d8/dd8/classSUNphi_1_1Serializer.html'
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a337ec666ad749ac084237934e13c412f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a337ec666ad749ac084237934e13c412f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () const </td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a337ec666ad749ac084237934e13c412f">get</a> () const </td></tr>
+<tr class="memdesc:a337ec666ad749ac084237934e13c412f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the associated string. <br /></td></tr>
 <tr class="separator:a337ec666ad749ac084237934e13c412f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -137,23 +138,16 @@ YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6201232dc8bd66bf70394ab3ff1759a2"></a>
-template&lt;typename T , typename TDef &gt; </td></tr>
-<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, TDef &gt; &amp;t)</td></tr>
-<tr class="separator:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
-template&lt;typename T , typename  = EnableIf&lt;not isSerializableScalar&lt;T&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
-<tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6201232dc8bd66bf70394ab3ff1759a2"></a>
-template&lt;typename T , typename TDef &gt; </td></tr>
-<tr class="memitem:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, TDef &gt; &amp;t)</td></tr>
-<tr class="separator:a6201232dc8bd66bf70394ab3ff1759a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b5e1035b9fe925faf703086dfe4833"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae7b5e1035b9fe925faf703086dfe4833"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae7b5e1035b9fe925faf703086dfe4833"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#ae7b5e1035b9fe925faf703086dfe4833">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
+<tr class="memdesc:ae7b5e1035b9fe925faf703086dfe4833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable object to a serializer. <br /></td></tr>
+<tr class="separator:ae7b5e1035b9fe925faf703086dfe4833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convert to string the passed objects. </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/serialize/<a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a></li>
 </ul>

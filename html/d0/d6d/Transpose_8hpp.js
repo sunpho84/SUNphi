@@ -5,6 +5,7 @@ var Transpose_8hpp =
     [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],
     [ "ConstrainIsNotTransposer", "d0/d6d/Transpose_8hpp.html#a540579f49a8e6d2b372313bf06089cd3", null ],
     [ "ConstrainIsTransposer", "d0/d6d/Transpose_8hpp.html#a13652618685a3f8c6f07753e30fd3199", null ],
+    [ "EnableIfIsTransposer", "d0/d6d/Transpose_8hpp.html#a4cd5ee0d1b94555778133f55b26e9f67", null ],
     [ "assign", "d0/d6d/Transpose_8hpp.html#afde6f5de64de3abb2035ab4b14d70b19", null ],
     [ "neverInstantiatedFunction", "d0/d6d/Transpose_8hpp.html#afb071e5c750597f2ed9d00fbba26f938", null ],
     [ "transpose", "d0/d6d/Transpose_8hpp.html#a5fdf51c53b55fee45e4d552444fddcfd", null ],
