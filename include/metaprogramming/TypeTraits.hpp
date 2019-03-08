@@ -463,9 +463,10 @@ namespace SUNphi
 			      ...)					\
   /*! Provides the class itself if T satisfies the condition */		\
   template <typename T,							\
+	    typename Ret=void,						\
 	    typename=EnableIf<__VA_ARGS__>>				\
   using EnableIfIs ## TYPE=						\
-    T
+    Ret
   
   /// Provides an EnableIf with the given name if isTYPE exists
 #define PROVIDE_ENABLE_IF_FOR_IS_TYPE(TYPE)				\

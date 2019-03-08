@@ -104,8 +104,8 @@ namespace SUNphi
   /// \endcode
   ///
 #define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE		       \
-  template<template<typename...> typename TT,			       \
-	   typename...Ts>
+  template <template<typename...> typename TT,			       \
+	    typename...Ts>
   
   /// To be used as an argument of the specialization
 #define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(TYPE)	\
