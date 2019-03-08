@@ -68,9 +68,41 @@ namespace SUNphi
   
   /// SFINAE for template class specialisation
   ///
+  /// Mechanism to allow the usage of SFINAE to allow a class specialization.
   /// Follows the advice of https://stackoverflow.com/a/30991097 to
-  /// create a class providing the type itself on the basis of
-  /// deducing from a base class
+  /// create a class providing the type itself
+  ///
+  /// Example:
+  ///
+  /// \code
+  ///
+  /// Class which needs to be explicitly specialized with SFINAE
+  /// template <typename T>
+  /// class SpecializableClass
+  /// {
+  /// };
+  ///
+  /// /// Dummy type to be used to specialize the class
+  /// class SpecializingArg
+  /// {
+  /// };
+  ///
+  /// PROVIDE_ENABLE_IF_FOR_TYPE(SpecializingArg);
+  ///
+  /// /// Specializes the class SpecializableClass
+  /// SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE
+  /// class SpecializableClass<SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(SpecializingArg)>
+  ///  {
+  ///    SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE;
+  ///
+  ///    /// To show explicit usage of T
+  ///    SpecializableClass<T>()
+  ///    {
+  ///    }
+  ///  };
+  ///
+  /// \endcode
+  ///
 #define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE		       \
   template<template<typename...> typename TT,			       \
 	   typename...Ts>

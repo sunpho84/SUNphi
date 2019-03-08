@@ -455,13 +455,27 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
-  /// Provides an EnableIf with the given name
-#define PROVIDE_ENABLE_IF_FOR_TYPE(TYPE)				\
-  /*! Provides the class itself if T is of the given type */		\
-  template<typename T,							\
-	   typename=EnableIf<is ## TYPE<T>>>				\
+  /// Provides an EnableIf with the given name for a certain condition
+  ///
+  /// Must be declared with deduced type to void template parameters
+  /// that cannot be deduced
+#define PROVIDE_ENABLE_IF_FOR(TYPE,					\
+			      ...)					\
+  /*! Provides the class itself if T satisfies the condition */		\
+  template <typename T,							\
+	    typename=EnableIf<__VA_ARGS__>>				\
   using EnableIfIs ## TYPE=						\
     T
+  
+  /// Provides an EnableIf with the given name if isTYPE exists
+#define PROVIDE_ENABLE_IF_FOR_IS_TYPE(TYPE)				\
+  /*! Provides the class itself if T is of the given type */		\
+  PROVIDE_ENABLE_IF_FOR(TYPE,is ## TYPE<T>)
+  
+  /// Provides an EnableIf with the given type
+#define PROVIDE_ENABLE_IF_FOR_TYPE(TYPE)				\
+  /*! Provides the class itself if T is of the given type */		\
+  PROVIDE_ENABLE_IF_FOR(TYPE,isSame<T,TYPE>)
   
   /////////////////////////////////////////////////////////////////
   
@@ -475,20 +489,20 @@ namespace SUNphi
   struct Base ## TYPE __VA_ARGS__ {};					\
 									\
   /*! Expression which is true if T inherits from \c Base ## TYPE */	\
-  template<typename T>							\
+  template <typename T>							\
   [[ maybe_unused ]]							\
   constexpr bool is ## TYPE=						\
     isBaseOf<Base ## TYPE,T>;						\
 									\
-  PROVIDE_ENABLE_IF_FOR_TYPE(TYPE);					\
+  PROVIDE_ENABLE_IF_FOR_IS_TYPE(TYPE);					\
 									\
   /*! Class forcing T to inherits from \c Base ## TYPE */		\
-  template<typename T>							\
+  template <typename T>							\
   using ConstrainIs ## TYPE=						\
     ConstrainIsBaseOf<Base ## TYPE,T>;					\
 									\
   /*! Class forcing T not to inherits from \c Base ## TYPE */		\
-  template<typename T>							\
+  template <typename T>							\
   using ConstrainIsNot ## TYPE=						\
     ConstrainIsNotBaseOf<Base ## TYPE,T>;				\
 									\
@@ -616,20 +630,20 @@ namespace SUNphi
 						    STRUCT_NAME,	\
 						    OPERATOR)		\
   /*! Structure used to check if the operator is implemented */		\
-  template<typename S,							\
-	 typename T>							\
+  template <typename S,							\
+	    typename T>							\
   struct STRUCT_NAME							\
   {									\
     /*! Path followed when the operator is implemented */		\
-    template<typename U,						\
-	     typename V>						\
+    template <typename U,						\
+	      typename V>						\
       static auto test(U*)->decltype(std::declval<U>()			\
 				     OPERATOR				\
 				     std::declval<V>());		\
     									\
     /*! Default case in which the binary operation cannot be performed */ \
-    template<typename,							\
-	     typename>							\
+    template <typename,							\
+	      typename>							\
       static auto test(...)->std::false_type;				\
     									\
     /*! Result of the check */						\
@@ -638,8 +652,8 @@ namespace SUNphi
   };									\
   									\
   /*! Check that operator OPERATOR is implemented */			\
-  template<typename S,							\
-	   typename T>							\
+  template <typename S,							\
+	    typename T>							\
   [[ maybe_unused ]]							\
   constexpr bool CHECK_NAME=						\
     STRUCT_NAME<S,T>::res
@@ -690,7 +704,7 @@ namespace SUNphi
   constexpr bool is ## CLASS=						\
      _is ## CLASS((RemRef<T>*)nullptr);                                 \
 									\
-  PROVIDE_ENABLE_IF_FOR_TYPE(CLASS)
+  PROVIDE_ENABLE_IF_FOR_IS_TYPE(CLASS)
 }
 
 #endif

@@ -19,7 +19,7 @@ namespace SUNphi
     hasMember_serializableMembers<T>;
   
   /// Provides an enabler on the specific case isSerializableClass
-  PROVIDE_ENABLE_IF_FOR_TYPE(SerializableClass);
+  PROVIDE_ENABLE_IF_FOR_IS_TYPE(SerializableClass);
 }
 
 #endif
