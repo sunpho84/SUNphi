@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a9f3a4767fd88beeaa5294bac23638ffa":[2,0,0,156,3],
+"d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html":[2,0,0,98],
 "d7/d1e/structSUNphi_1_1ConstrainHasMember__name.html":[2,0,0,95],
 "d7/d61/UnaryPlus_8hpp.html":[3,0,2,10,14],
 "d7/d61/UnaryPlus_8hpp.html#a165c9c89862d50b23b2f3d674a14aa89":[3,0,2,10,14,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "d9/d67/structSUNphi_1_1BaseNnarySmET.html":[2,0,0,49],
 "d9/d77/Filter_8hpp.html":[3,0,2,14,0],
 "d9/d77/Filter_8hpp.html#a732dd7fc5ab30528272c05ec74b03fa3":[3,0,2,14,0,7],
-"d9/d77/Filter_8hpp.html#ac3f6250bba03a221a43a990bfb8d5e09":[3,0,2,14,0,8],
-"d9/d77/Filter_8hpp_source.html":[3,0,2,14,0],
-"d9/d8f/structSUNphi_1_1ConstrainAreIntegrals.html":[2,0,0,72]
+"d9/d77/Filter_8hpp.html#ac3f6250bba03a221a43a990bfb8d5e09":[3,0,2,14,0,8]
 };

@@ -24,6 +24,8 @@ var TypeTraits_8hpp =
     [ "NON_CONST_QUALIF", "d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971", null ],
     [ "NON_REF", "d0/d81/TypeTraits_8hpp.html#ac65c1874e9a350e39d2bc81b1496bdbf", null ],
     [ "PROVIDE_ALSO_NON_CONST_METHOD", "d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be", null ],
+    [ "PROVIDE_ENABLE_IF_FOR", "d0/d81/TypeTraits_8hpp.html#a50600a1583e7fdcb867f8b2708ac6e77", null ],
+    [ "PROVIDE_ENABLE_IF_FOR_IS_TYPE", "d0/d81/TypeTraits_8hpp.html#a3805621571899a3cccc4f1a6904af31a", null ],
     [ "PROVIDE_ENABLE_IF_FOR_TYPE", "d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326", null ],
     [ "RVALUE_REF", "d0/d81/TypeTraits_8hpp.html#a1ad2bab3a59f777bdd42b868c4f0e67f", null ],
     [ "STATIC_ASSERT_ARE_INTEGRALS", "d0/d81/TypeTraits_8hpp.html#a0147cab5da16a1c67f1f3ffb2d91889e", null ],

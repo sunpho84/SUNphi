@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"d2/d0a/Aliver_8hpp.html#ac9d94f5be3ce9e06d10056b98d9e36cf":[3,0,2,15,0,2],
+"d2/d0a/Aliver_8hpp.html#aefb3bd85afa3e1418572d526cbe3021d":[3,0,2,15,0,0],
 "d2/d0a/Aliver_8hpp_source.html":[3,0,2,15,0],
 "d2/d0b/classSUNphi_1_1ConstrainAreSame.html":[2,0,0,77],
 "d2/d10/structSUNphi_1_1ConstrainAreNnarySmETs.html":[2,0,0,75],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d3/d78/classSUNphi_1_1Logger.html#af1cd0856935846bfbb3455ef85084614":[2,0,0,145,30],
 "d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92":[2,0,0,145,28],
 "d3/d7f/structSUNphi_1_1BaseScalarWrapper.html":[2,0,0,51],
-"d3/d89/TwinsComp_8hpp.html":[3,0,2,12,5],
-"d3/d89/TwinsComp_8hpp.html#a23542ce407b448938ad631f0c6a51efb":[3,0,2,12,5,6],
-"d3/d89/TwinsComp_8hpp.html#a381d1ffbd57db6af9be204d499582fcb":[3,0,2,12,5,3]
+"d3/d89/TwinsComp_8hpp.html":[3,0,2,12,5]
 };

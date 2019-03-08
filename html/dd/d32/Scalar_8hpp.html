@@ -149,7 +149,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:acab15571a0515abc5de07d31e80fe4e2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt;isSerializableScalar &lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:acab15571a0515abc5de07d31e80fe4e2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isSerializableScalar &lt;T&gt; &gt;&gt; </td></tr>
 <tr class="memitem:acab15571a0515abc5de07d31e80fe4e2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#acab15571a0515abc5de07d31e80fe4e2">SUNphi::EnableIfIsSerializableScalar</a> = T</td></tr>
 <tr class="separator:acab15571a0515abc5de07d31e80fe4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -243,14 +243,15 @@ static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt;isSerializableScalar &lt;T&gt;&gt;&gt; </div>
+template&lt;typename T , typename  = EnableIf&lt; isSerializableScalar &lt;T&gt; &gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="../../dd/d32/Scalar_8hpp.html#acab15571a0515abc5de07d31e80fe4e2">SUNphi::EnableIfIsSerializableScalar</a> = typedef T</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Provides the class itself if T is of the given type </p>
+<p>Provides the class itself if T is of the given type</p>
+<p>Provides the class itself if T satisfies the condition </p>
 
 <p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 

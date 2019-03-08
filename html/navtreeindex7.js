@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"dd/d03/classSUNphi_1_1UMinuser.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,181,27],
+"dd/d03/classSUNphi_1_1UMinuser.html#a85cebf6cfba5169083ff2f57b9ee1834":[2,0,0,181,4],
 "dd/d03/classSUNphi_1_1UMinuser.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,181,17],
 "dd/d03/classSUNphi_1_1UMinuser.html#a8c309d1995166ecd2318b36445fde18d":[2,0,0,181,32],
 "dd/d03/classSUNphi_1_1UMinuser.html#aa2287cce4e9a36248fcd846cec76b0dd":[2,0,0,181,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html#a746c2c9a288b9fe84d132dfb1c4d63d7":[2,0,0,2,1],
 "de/da3/classfuffa.html":[2,0,2],
 "de/da3/classfuffa.html#ac3815f1c5a714dee575b904f413c0400":[2,0,2,0],
-"de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html":[2,0,0,134,1],
-"de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html#a009c37939d7dbf806853dd4c7c1ab8c4":[2,0,0,134,1,0],
-"de/daf/Containers_8hpp.html":[3,0,2,16]
+"de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html":[2,0,0,134,1]
 };

@@ -37,6 +37,8 @@ var searchData=
   ['provide_5fconst_5for_5fnot_5fdefault_5fevaluator',['PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR',['../d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad',1,'Assign.hpp']]],
   ['provide_5fcoords',['PROVIDE_COORDS',['../db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5',1,'Grid.hpp']]],
   ['provide_5fcrtp_5fcast_5foperator',['PROVIDE_CRTP_CAST_OPERATOR',['../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882',1,'CRTP.hpp']]],
+  ['provide_5fenable_5fif_5ffor',['PROVIDE_ENABLE_IF_FOR',['../d0/d81/TypeTraits_8hpp.html#a50600a1583e7fdcb867f8b2708ac6e77',1,'TypeTraits.hpp']]],
+  ['provide_5fenable_5fif_5ffor_5fis_5ftype',['PROVIDE_ENABLE_IF_FOR_IS_TYPE',['../d0/d81/TypeTraits_8hpp.html#a3805621571899a3cccc4f1a6904af31a',1,'TypeTraits.hpp']]],
   ['provide_5fenable_5fif_5ffor_5ftype',['PROVIDE_ENABLE_IF_FOR_TYPE',['../d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326',1,'TypeTraits.hpp']]],
   ['provide_5feval',['PROVIDE_EVAL',['../d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b',1,'TensStor.hpp']]],
   ['provide_5fevaluator',['PROVIDE_EVALUATOR',['../dc/d8f/TensClass_8hpp.html#a7b21a5e6af9395b200dc28b5dfb4d789',1,'TensClass.hpp']]],
