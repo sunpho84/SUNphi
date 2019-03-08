@@ -58,6 +58,10 @@ namespace SUNphi
     }
   };
   
+  /// Class to detect and define SerializableScalar
+  class BaseSerializableScalar
+  {
+  };
   
   /// Class wrapping a class to provide scalar node for the serializer
   ///
@@ -65,6 +69,7 @@ namespace SUNphi
   template <typename T,
 	    typename TDef=NoDefault>
   class SerializableScalar :
+    public BaseSerializableScalar,
     public SerializableDefaultValue<TDef>
   {
     /// Stored variable

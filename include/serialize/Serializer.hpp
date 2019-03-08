@@ -17,11 +17,10 @@ namespace YAML
   using namespace SUNphi;
   
   /// Serializable scalar conversion to YAML node
-  SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE
-  struct convert<SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(SerializableScalar)>
+  template <typename T>
+  struct convert<T,
+		 EnableIfIsSerializableScalar<T>>
   {
-    SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE;
-    
     /// Encode a SerializableScalar
     static Node encode(const SerializableScalar<T>& rhs) ///< Input
     {
@@ -36,6 +35,33 @@ namespace YAML
     /// Decodes a SerializableScalar
     static bool decode(const Node& node,             ///< Input node
 		       SerializableScalar<T>& rhs)   ///< Output
+    {
+      node>>rhs.a;
+      
+      return
+	true;
+    }
+  };
+
+  /// Serializable class conversion to YAML node
+  template <typename T>
+  struct convert<T,
+		 EnableIfIsSerializableClass<T,BaseSerializableClass>>
+  {
+    /// Encode a SerializableClass
+    static Node encode(const T& rhs) ///< Input
+    {
+      /// Output node
+      Node node;
+      node<<~rhs;
+      
+      return
+	node;
+    }
+    
+    /// Decodes a SerializableClass
+    static bool decode(const Node& node,             ///< Input node
+		       const T& rhs)                 ///< Output
     {
       node>>rhs.a;
       
