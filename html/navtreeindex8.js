@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"de/d58/classSUNphi_1_1Adder.html#aa170d3b22757663cfae22f7ae8c00ca5":[2,0,0,37,1],
 "de/d58/classSUNphi_1_1Adder.html#aa89cc81ce2e373cfbf782c433b519a92":[2,0,0,37,4],
 "de/d58/classSUNphi_1_1Adder.html#adc261ef12d9f8487f7c13b9e205fd2e4":[2,0,0,37,20],
 "de/d58/classSUNphi_1_1Adder.html#ae402d88baf215f7ed5ac39379c9fa876":[2,0,0,37,0],
@@ -159,8 +160,8 @@ var NAVTREEINDEX8 =
 "functions_e.html":[2,3,0,5],
 "functions_enum.html":[2,3,4],
 "functions_f.html":[2,3,0,6],
-"functions_func.html":[2,3,1,0],
 "functions_func.html":[2,3,1],
+"functions_func.html":[2,3,1,0],
 "functions_func_0x7e.html":[2,3,1,21],
 "functions_func_a.html":[2,3,1,1],
 "functions_func_b.html":[2,3,1,2],
@@ -195,8 +196,8 @@ var NAVTREEINDEX8 =
 "functions_rela.html":[2,3,5],
 "functions_s.html":[2,3,0,17],
 "functions_t.html":[2,3,0,18],
-"functions_type.html":[2,3,3],
 "functions_type.html":[2,3,3,0],
+"functions_type.html":[2,3,3],
 "functions_type_b.html":[2,3,3,1],
 "functions_type_c.html":[2,3,3,2],
 "functions_type_d.html":[2,3,3,3],
@@ -214,8 +215,8 @@ var NAVTREEINDEX8 =
 "functions_type_y.html":[2,3,3,15],
 "functions_u.html":[2,3,0,19],
 "functions_v.html":[2,3,0,20],
-"functions_vars.html":[2,3,2,0],
 "functions_vars.html":[2,3,2],
+"functions_vars.html":[2,3,2,0],
 "functions_vars_a.html":[2,3,2,1],
 "functions_vars_b.html":[2,3,2,2],
 "functions_vars_c.html":[2,3,2,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "namespacemembers_func.html":[1,1,1],
 "namespacemembers_type.html":[1,1,3],
 "namespacemembers_vars.html":[1,1,2],
-"namespaces.html":[1,0],
-"pages.html":[]
+"namespaces.html":[1,0]
 };

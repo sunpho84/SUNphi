@@ -397,7 +397,7 @@ var hierarchy =
     [ "SUNphi::SerializableDefaultValue< TDef >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
       [ "SUNphi::SerializableScalar< T, TDef >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Serializer", "d8/dd8/classSUNphi_1_1Serializer.html", null ],
+    [ "SUNphi::Serializer< Ref >", "d8/dd8/classSUNphi_1_1Serializer.html", null ],
     [ "SUNphi::SingleInstance< T >", "db/d2f/classSUNphi_1_1SingleInstance.html", null ],
     [ "SUNphi::SingleInstance< Aliver >", "db/d2f/classSUNphi_1_1SingleInstance.html", [
       [ "SUNphi::Aliver", "df/df6/classSUNphi_1_1Aliver.html", null ]

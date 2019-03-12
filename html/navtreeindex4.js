@@ -150,13 +150,14 @@ var NAVTREEINDEX4 =
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html":[2,0,0,8],
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html#ae49e3f4866a57740c2180ce944c47895":[2,0,0,8,0],
 "d8/dd8/classSUNphi_1_1Serializer.html":[2,0,0,165],
-"d8/dd8/classSUNphi_1_1Serializer.html#a0085b8f23a4fab21d8abdbd30cf90be7":[2,0,0,165,6],
-"d8/dd8/classSUNphi_1_1Serializer.html#a337ec666ad749ac084237934e13c412f":[2,0,0,165,1],
-"d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,165,2],
 "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,165,3],
 "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,165,4],
-"d8/dd8/classSUNphi_1_1Serializer.html#a89a9cf4c68aa0ace537a9cfb3e7d1b87":[2,0,0,165,5],
-"d8/dd8/classSUNphi_1_1Serializer.html#a9b8f4e6e75b17e384ecdfcde3461df23":[2,0,0,165,0],
+"d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,165,5],
+"d8/dd8/classSUNphi_1_1Serializer.html#a686343edd0276597ee81873bd07aaee4":[2,0,0,165,6],
+"d8/dd8/classSUNphi_1_1Serializer.html#a83deafc3cc99bb51537348ff3139750f":[2,0,0,165,7],
+"d8/dd8/classSUNphi_1_1Serializer.html#a892eeb937a18195d58f3908c627490d4":[2,0,0,165,0],
+"d8/dd8/classSUNphi_1_1Serializer.html#a9e6a2a15d75e638b80682415942ace96":[2,0,0,165,1],
+"d8/dd8/classSUNphi_1_1Serializer.html#aa6a9c31f02776df76264c42d7b0bd87c":[2,0,0,165,2],
 "d8/de3/structSUNphi_1_1ConstrainAreConjers.html":[2,0,0,72],
 "d8/de8/Compl_8hpp.html":[3,0,2,7,0],
 "d8/de8/Compl_8hpp.html#a345eb23d93feb680882e8663c469512d":[3,0,2,7,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d9/d59/classSUNphi_1_1Sitmo.html#ad9f59655f5105c8b7f428fc15b0b928b":[2,0,0,167,10],
 "d9/d59/classSUNphi_1_1Sitmo.html#ada6109918f60efb5f44d81753ec80474":[2,0,0,167,9],
 "d9/d59/classSUNphi_1_1Sitmo.html#ae5917fa9a7fc84a5020a1ccc8bd11ee7":[2,0,0,167,18],
-"d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e":[2,0,0,167,11],
-"d9/d59/classSUNphi_1_1Sitmo.html#af60790b3a5c06020c78d1ebd3e1cb511":[2,0,0,167,13]
+"d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e":[2,0,0,167,11]
 };

@@ -9,7 +9,7 @@ var searchData=
   ['seed',['seed',['../d9/d59/classSUNphi_1_1Sitmo.html#ada6109918f60efb5f44d81753ec80474',1,'SUNphi::Sitmo']]],
   ['serializabledefaultvalue',['SerializableDefaultValue',['../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html#acbc424a3d394b124ae130a54c086ffae',1,'SUNphi::SerializableDefaultValue::SerializableDefaultValue()'],['../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html#a35e58b6227a568d2e6d9c7a526ef36f1',1,'SUNphi::SerializableDefaultValue&lt; NoDefault &gt;::SerializableDefaultValue()']]],
   ['serializablescalar',['SerializableScalar',['../d1/d97/classSUNphi_1_1SerializableScalar.html#a8220aa53055bec9166295d721a64063a',1,'SUNphi::SerializableScalar']]],
-  ['serializer',['Serializer',['../d8/dd8/classSUNphi_1_1Serializer.html#a9b8f4e6e75b17e384ecdfcde3461df23',1,'SUNphi::Serializer']]],
+  ['serializer',['Serializer',['../d8/dd8/classSUNphi_1_1Serializer.html#a892eeb937a18195d58f3908c627490d4',1,'SUNphi::Serializer::Serializer(const bool &amp;onlyNonDef=false)'],['../d8/dd8/classSUNphi_1_1Serializer.html#a9e6a2a15d75e638b80682415942ace96',1,'SUNphi::Serializer::Serializer(YAML::Node &amp;node, const bool &amp;onlyNonDef=false)']]],
   ['set_5fcounter',['set_counter',['../d9/d59/classSUNphi_1_1Sitmo.html#ad9f59655f5105c8b7f428fc15b0b928b',1,'SUNphi::Sitmo']]],
   ['setkey',['setKey',['../d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e',1,'SUNphi::Sitmo']]],
   ['setshiftbc',['setShiftBC',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;']]],
