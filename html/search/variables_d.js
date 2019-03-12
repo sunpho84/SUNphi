@@ -20,7 +20,7 @@ var searchData=
   ['no_5fdefault',['NO_DEFAULT',['../dd/d32/Scalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26',1,'SUNphi']]],
   ['no_5ffather',['NO_FATHER',['../d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4',1,'SUNphi::Timer']]],
   ['nobj',['nObj',['../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382',1,'SUNphi::Combinatorial']]],
-  ['node',['node',['../d8/dd8/classSUNphi_1_1Serializer.html#a89a9cf4c68aa0ace537a9cfb3e7d1b87',1,'SUNphi::Serializer']]],
+  ['node',['node',['../dc/d7b/classSUNphi_1_1DeSerializer.html#a73656dac8702eeaf2bc8fbb43da888ac',1,'SUNphi::DeSerializer::node()'],['../d8/dd8/classSUNphi_1_1Serializer.html#a89a9cf4c68aa0ace537a9cfb3e7d1b87',1,'SUNphi::Serializer::node()']]],
   ['noftypeintuple',['nOfTypeInTuple',['../d1/d31/TupleClass_8hpp.html#af877fd927f6e7f68c60742d9fd6eee75',1,'SUNphi']]],
   ['nonnull',['nonNull',['../d0/dde/structSUNphi_1_1__RangeSeq.html#ab81626ce8a7edcb1ea8e33a58ae8d799',1,'SUNphi::_RangeSeq']]],
   ['noridirs',['nOriDirs',['../dd/dca/classSUNphi_1_1Grid.html#ae2c76c9cfac92abb578dde9943ea6000',1,'SUNphi::Grid']]],

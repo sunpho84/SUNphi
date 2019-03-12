@@ -149,22 +149,22 @@ Friends</h2></td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
 template&lt;typename T , TypeIf&lt;(not(isSerializableClass&lt; T &gt; or isSerializableScalar&lt; T &gt;)), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
-<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable object to a serializer. <br /></td></tr>
+<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a non-serializable object. <br /></td></tr>
+<tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
+<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable scalar.  <a href="#a54cc7139a105d0e1d35408629d480904">More...</a><br /></td></tr>
 <tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
 template&lt;typename T , TypeIf&lt;(isSerializableClass&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
-<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable object to a serializer. <br /></td></tr>
-<tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
-<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable object to a serializer.  <a href="#a54cc7139a105d0e1d35408629d480904">More...</a><br /></td></tr>
+<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable class. <br /></td></tr>
 <tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convert to string the passed objects. </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 </div><h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
 <div class="memitem">
@@ -200,10 +200,10 @@ template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt
 </table>
 </div><div class="memdoc">
 
-<p>Output a serializable object to a serializer. </p>
+<p>Output a serializable scalar. </p>
 <p>Creates the nested serializer </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00064">64</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 
 </div>
 </div>

@@ -4,5 +4,5 @@ var searchData=
   ['oldval',['oldVal',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a65b9a1d2ee7c43f8b7b3fa4435a3d653',1,'SUNphi::ScopeChangeVar']]],
   ['onlymasterrankprint',['onlyMasterRankPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45137bf23da7dda483b2f3dd5d5d411e',1,'SUNphi::Logger']]],
   ['onlymasterthreadprint',['onlyMasterThreadPrint',['../d3/d78/classSUNphi_1_1Logger.html#a45192a3a4e73fce6d894b4d3932b5e0e',1,'SUNphi::Logger']]],
-  ['onlynondef',['onlyNonDef',['../d8/dd8/classSUNphi_1_1Serializer.html#a0085b8f23a4fab21d8abdbd30cf90be7',1,'SUNphi::Serializer']]]
+  ['onlynondef',['onlyNonDef',['../dc/d7b/classSUNphi_1_1DeSerializer.html#ad3af083c72d8f2959ee60445c1a51bfa',1,'SUNphi::DeSerializer::onlyNonDef()'],['../d8/dd8/classSUNphi_1_1Serializer.html#a0085b8f23a4fab21d8abdbd30cf90be7',1,'SUNphi::Serializer::onlyNonDef()']]]
 ];
