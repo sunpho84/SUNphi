@@ -108,17 +108,24 @@ namespace SUNphi
     bool isDefault()
       const
     {
-      if constexpr(isSame<TDef,NoDefault>)
+      // If reference is a serializable class, check itself
+      if constexpr(isSerializableClass<T>)
 	return
-	  false;
+	  value.isDefault();
       else
-	return
-	  value==this->def;
+	// If object has no default, false
+	if constexpr(isSame<TDef,NoDefault>)
+	  return
+	    false;
+	else
+	  // If reference is not a serializable class, check default
+	  return
+	    value==this->def;
     }
     
     /// Used to overload assignment operators
 #define TRIVIAL_ASSIGN_OVERLOAD(OP)			\
-    /*! Provides the operator OP */						\
+    /*! Provides the operator OP */			\
     template <typename O> /* Other operand typename */	\
     DECLAUTO operator OP (O&& oth)			\
     {							\
