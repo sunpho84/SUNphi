@@ -148,9 +148,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa2dac5fbe51c307cfbd677f2db56dac0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isIntSeq &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:aa2dac5fbe51c307cfbd677f2db56dac0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df8/IntSeq_8hpp.html#aa2dac5fbe51c307cfbd677f2db56dac0">SUNphi::EnableIfIsIntSeq</a> = T</td></tr>
-<tr class="separator:aa2dac5fbe51c307cfbd677f2db56dac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f0d23901957f136e410462b881422c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a29f0d23901957f136e410462b881422c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df8/IntSeq_8hpp.html#a29f0d23901957f136e410462b881422c">SUNphi::EnableIfIsIntSeq</a> = EnableIf&lt; isIntSeq&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a29f0d23901957f136e410462b881422c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad83e07565c46761a5d55dce9c28f4847"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad83e07565c46761a5d55dce9c28f4847"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/df8/IntSeq_8hpp.html#ad83e07565c46761a5d55dce9c28f4847">SUNphi::ConstrainIsIntSeq</a> = ConstrainIsBaseOf&lt; BaseIntSeq,T &gt;</td></tr>
 <tr class="separator:ad83e07565c46761a5d55dce9c28f4847"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,14 +213,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_aa2dac5fbe51c307cfbd677f2db56dac0"></a>
+<a class="anchor" id="file_a29f0d23901957f136e410462b881422c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isIntSeq &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dd/df8/IntSeq_8hpp.html#aa2dac5fbe51c307cfbd677f2db56dac0">SUNphi::EnableIfIsIntSeq</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../dd/df8/IntSeq_8hpp.html#a29f0d23901957f136e410462b881422c">SUNphi::EnableIfIsIntSeq</a> = typedef EnableIf&lt; isIntSeq &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

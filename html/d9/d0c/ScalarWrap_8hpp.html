@@ -133,9 +133,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a38b2e657d312302a767a37ef6992a6e8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isScalarWrapper &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a38b2e657d312302a767a37ef6992a6e8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d0c/ScalarWrap_8hpp.html#a38b2e657d312302a767a37ef6992a6e8">SUNphi::EnableIfIsScalarWrapper</a> = T</td></tr>
-<tr class="separator:a38b2e657d312302a767a37ef6992a6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa973c17a0f5143e92a2b3b071e8e0b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:abfa973c17a0f5143e92a2b3b071e8e0b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d0c/ScalarWrap_8hpp.html#abfa973c17a0f5143e92a2b3b071e8e0b">SUNphi::EnableIfIsScalarWrapper</a> = EnableIf&lt; isScalarWrapper&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:abfa973c17a0f5143e92a2b3b071e8e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac89726639ffca028caca348aba4953a6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac89726639ffca028caca348aba4953a6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d0c/ScalarWrap_8hpp.html#ac89726639ffca028caca348aba4953a6">SUNphi::ConstrainIsScalarWrapper</a> = ConstrainIsBaseOf&lt; BaseScalarWrapper,T &gt;</td></tr>
 <tr class="separator:ac89726639ffca028caca348aba4953a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,14 +199,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a38b2e657d312302a767a37ef6992a6e8"></a>
+<a class="anchor" id="file_abfa973c17a0f5143e92a2b3b071e8e0b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isScalarWrapper &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d9/d0c/ScalarWrap_8hpp.html#a38b2e657d312302a767a37ef6992a6e8">SUNphi::EnableIfIsScalarWrapper</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../d9/d0c/ScalarWrap_8hpp.html#abfa973c17a0f5143e92a2b3b071e8e0b">SUNphi::EnableIfIsScalarWrapper</a> = typedef EnableIf&lt; isScalarWrapper &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

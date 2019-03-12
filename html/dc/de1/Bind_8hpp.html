@@ -149,9 +149,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a39489313923f7696ecc9297000ff5a05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isBinder &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a39489313923f7696ecc9297000ff5a05"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a39489313923f7696ecc9297000ff5a05">SUNphi::EnableIfIsBinder</a> = T</td></tr>
-<tr class="separator:a39489313923f7696ecc9297000ff5a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb2172ecc4d86b4d06a703ccd1978f6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a3fb2172ecc4d86b4d06a703ccd1978f6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#a3fb2172ecc4d86b4d06a703ccd1978f6">SUNphi::EnableIfIsBinder</a> = EnableIf&lt; isBinder&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a3fb2172ecc4d86b4d06a703ccd1978f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1f08c3429a08809917dfee2f962a97"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aee1f08c3429a08809917dfee2f962a97"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/de1/Bind_8hpp.html#aee1f08c3429a08809917dfee2f962a97">SUNphi::ConstrainIsBinder</a> = ConstrainIsBaseOf&lt; BaseBinder,T &gt;</td></tr>
 <tr class="separator:aee1f08c3429a08809917dfee2f962a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,14 +274,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a39489313923f7696ecc9297000ff5a05"></a>
+<a class="anchor" id="file_a3fb2172ecc4d86b4d06a703ccd1978f6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isBinder &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dc/de1/Bind_8hpp.html#a39489313923f7696ecc9297000ff5a05">SUNphi::EnableIfIsBinder</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../dc/de1/Bind_8hpp.html#a3fb2172ecc4d86b4d06a703ccd1978f6">SUNphi::EnableIfIsBinder</a> = typedef EnableIf&lt; isBinder &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -185,9 +185,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a469fd26ef0c0a8d81975017e024b304a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isBinarySmET &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a469fd26ef0c0a8d81975017e024b304a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a469fd26ef0c0a8d81975017e024b304a">SUNphi::EnableIfIsBinarySmET</a> = T</td></tr>
-<tr class="separator:a469fd26ef0c0a8d81975017e024b304a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc883abaa75b09f4c2e200260b278187"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:acc883abaa75b09f4c2e200260b278187"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#acc883abaa75b09f4c2e200260b278187">SUNphi::EnableIfIsBinarySmET</a> = EnableIf&lt; isBinarySmET&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:acc883abaa75b09f4c2e200260b278187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f18e555330c9c49c8aead5591d4d66f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8f18e555330c9c49c8aead5591d4d66f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a8f18e555330c9c49c8aead5591d4d66f">SUNphi::ConstrainIsBinarySmET</a> = ConstrainIsBaseOf&lt; BaseBinarySmET,T &gt;</td></tr>
 <tr class="separator:a8f18e555330c9c49c8aead5591d4d66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,14 +400,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a469fd26ef0c0a8d81975017e024b304a"></a>
+<a class="anchor" id="file_acc883abaa75b09f4c2e200260b278187"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isBinarySmET &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../da/d5e/BinarySmET_8hpp.html#a469fd26ef0c0a8d81975017e024b304a">SUNphi::EnableIfIsBinarySmET</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../da/d5e/BinarySmET_8hpp.html#acc883abaa75b09f4c2e200260b278187">SUNphi::EnableIfIsBinarySmET</a> = typedef EnableIf&lt; isBinarySmET &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

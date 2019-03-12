@@ -155,9 +155,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:acae60e3c6246d4c646cd990ece1e812b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isRelBinder &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:acae60e3c6246d4c646cd990ece1e812b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/da4/RelBind_8hpp.html#acae60e3c6246d4c646cd990ece1e812b">SUNphi::EnableIfIsRelBinder</a> = T</td></tr>
-<tr class="separator:acae60e3c6246d4c646cd990ece1e812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1a63c9476476fb25fe01317db73dbe"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:acc1a63c9476476fb25fe01317db73dbe"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/da4/RelBind_8hpp.html#acc1a63c9476476fb25fe01317db73dbe">SUNphi::EnableIfIsRelBinder</a> = EnableIf&lt; isRelBinder&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:acc1a63c9476476fb25fe01317db73dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d374e1f948e78a9a1e9d2f19ba7d65c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a6d374e1f948e78a9a1e9d2f19ba7d65c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/da4/RelBind_8hpp.html#a6d374e1f948e78a9a1e9d2f19ba7d65c">SUNphi::ConstrainIsRelBinder</a> = ConstrainIsBaseOf&lt; BaseRelBinder,T &gt;</td></tr>
 <tr class="separator:a6d374e1f948e78a9a1e9d2f19ba7d65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,14 +261,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_acae60e3c6246d4c646cd990ece1e812b"></a>
+<a class="anchor" id="file_acc1a63c9476476fb25fe01317db73dbe"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isRelBinder &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d3/da4/RelBind_8hpp.html#acae60e3c6246d4c646cd990ece1e812b">SUNphi::EnableIfIsRelBinder</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../d3/da4/RelBind_8hpp.html#acc1a63c9476476fb25fe01317db73dbe">SUNphi::EnableIfIsRelBinder</a> = typedef EnableIf&lt; isRelBinder &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -145,9 +145,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af37312b5695b4b097b08666bfa133830"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isAssigner &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:af37312b5695b4b097b08666bfa133830"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#af37312b5695b4b097b08666bfa133830">SUNphi::EnableIfIsAssigner</a> = T</td></tr>
-<tr class="separator:af37312b5695b4b097b08666bfa133830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c2f2f3b3f624835dbc946fa7682e3a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a29c2f2f3b3f624835dbc946fa7682e3a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#a29c2f2f3b3f624835dbc946fa7682e3a">SUNphi::EnableIfIsAssigner</a> = EnableIf&lt; isAssigner&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a29c2f2f3b3f624835dbc946fa7682e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7856fbb60a94cf98179f23f59c5ddfe"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aa7856fbb60a94cf98179f23f59c5ddfe"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#aa7856fbb60a94cf98179f23f59c5ddfe">SUNphi::ConstrainIsAssigner</a> = ConstrainIsBaseOf&lt; BaseAssigner,T &gt;</td></tr>
 <tr class="separator:aa7856fbb60a94cf98179f23f59c5ddfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,14 +242,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_af37312b5695b4b097b08666bfa133830"></a>
+<a class="anchor" id="file_a29c2f2f3b3f624835dbc946fa7682e3a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isAssigner &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d1/d9b/Assign_8hpp.html#af37312b5695b4b097b08666bfa133830">SUNphi::EnableIfIsAssigner</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../d1/d9b/Assign_8hpp.html#a29c2f2f3b3f624835dbc946fa7682e3a">SUNphi::EnableIfIsAssigner</a> = typedef EnableIf&lt; isAssigner &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

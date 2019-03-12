@@ -147,9 +147,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa188a0dd0c1bec7b0b0afb33386e16c9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isTens &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:aa188a0dd0c1bec7b0b0afb33386e16c9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d8f/TensClass_8hpp.html#aa188a0dd0c1bec7b0b0afb33386e16c9">SUNphi::EnableIfIsTens</a> = T</td></tr>
-<tr class="separator:aa188a0dd0c1bec7b0b0afb33386e16c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10764603f7003a12c3bcd526e00a1ce"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:ab10764603f7003a12c3bcd526e00a1ce"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d8f/TensClass_8hpp.html#ab10764603f7003a12c3bcd526e00a1ce">SUNphi::EnableIfIsTens</a> = EnableIf&lt; isTens&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:ab10764603f7003a12c3bcd526e00a1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a166cff0921d5dfd963f04caee8301f84"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a166cff0921d5dfd963f04caee8301f84"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d8f/TensClass_8hpp.html#a166cff0921d5dfd963f04caee8301f84">SUNphi::ConstrainIsTens</a> = ConstrainIsBaseOf&lt; BaseTens,T &gt;</td></tr>
 <tr class="separator:a166cff0921d5dfd963f04caee8301f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,14 +238,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_aa188a0dd0c1bec7b0b0afb33386e16c9"></a>
+<a class="anchor" id="file_ab10764603f7003a12c3bcd526e00a1ce"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isTens &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dc/d8f/TensClass_8hpp.html#aa188a0dd0c1bec7b0b0afb33386e16c9">SUNphi::EnableIfIsTens</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../dc/d8f/TensClass_8hpp.html#ab10764603f7003a12c3bcd526e00a1ce">SUNphi::EnableIfIsTens</a> = typedef EnableIf&lt; isTens &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

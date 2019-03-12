@@ -136,9 +136,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad135a9e9986160cfce8e1974dc59d393"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isAdder &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:ad135a9e9986160cfce8e1974dc59d393"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d65/Add_8hpp.html#ad135a9e9986160cfce8e1974dc59d393">SUNphi::EnableIfIsAdder</a> = T</td></tr>
-<tr class="separator:ad135a9e9986160cfce8e1974dc59d393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a8d5185557a7cd9524ff30488f8101"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a58a8d5185557a7cd9524ff30488f8101"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d65/Add_8hpp.html#a58a8d5185557a7cd9524ff30488f8101">SUNphi::EnableIfIsAdder</a> = EnableIf&lt; isAdder&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a58a8d5185557a7cd9524ff30488f8101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861a33e6e18e86da33dbf3e492a629b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7861a33e6e18e86da33dbf3e492a629b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d65/Add_8hpp.html#a7861a33e6e18e86da33dbf3e492a629b">SUNphi::ConstrainIsAdder</a> = ConstrainIsBaseOf&lt; BaseAdder,T &gt;</td></tr>
 <tr class="separator:a7861a33e6e18e86da33dbf3e492a629b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -215,14 +215,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_ad135a9e9986160cfce8e1974dc59d393"></a>
+<a class="anchor" id="file_a58a8d5185557a7cd9524ff30488f8101"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isAdder &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../da/d65/Add_8hpp.html#ad135a9e9986160cfce8e1974dc59d393">SUNphi::EnableIfIsAdder</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../da/d65/Add_8hpp.html#a58a8d5185557a7cd9524ff30488f8101">SUNphi::EnableIfIsAdder</a> = typedef EnableIf&lt; isAdder &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

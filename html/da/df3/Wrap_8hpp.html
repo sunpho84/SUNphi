@@ -135,9 +135,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a3e71d738c96015a0d8f99a5a754fb519"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isWrapper &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a3e71d738c96015a0d8f99a5a754fb519"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/df3/Wrap_8hpp.html#a3e71d738c96015a0d8f99a5a754fb519">SUNphi::EnableIfIsWrapper</a> = T</td></tr>
-<tr class="separator:a3e71d738c96015a0d8f99a5a754fb519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f2194c956d5dc8de2a1e3b866ab65c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a05f2194c956d5dc8de2a1e3b866ab65c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/df3/Wrap_8hpp.html#a05f2194c956d5dc8de2a1e3b866ab65c">SUNphi::EnableIfIsWrapper</a> = EnableIf&lt; isWrapper&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a05f2194c956d5dc8de2a1e3b866ab65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c14e3b023dad944878fd4bf47aae45"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a37c14e3b023dad944878fd4bf47aae45"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/df3/Wrap_8hpp.html#a37c14e3b023dad944878fd4bf47aae45">SUNphi::ConstrainIsWrapper</a> = ConstrainIsBaseOf&lt; BaseWrapper,T &gt;</td></tr>
 <tr class="separator:a37c14e3b023dad944878fd4bf47aae45"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,14 +202,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a3e71d738c96015a0d8f99a5a754fb519"></a>
+<a class="anchor" id="file_a05f2194c956d5dc8de2a1e3b866ab65c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isWrapper &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../da/df3/Wrap_8hpp.html#a3e71d738c96015a0d8f99a5a754fb519">SUNphi::EnableIfIsWrapper</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../da/df3/Wrap_8hpp.html#a05f2194c956d5dc8de2a1e3b866ab65c">SUNphi::EnableIfIsWrapper</a> = typedef EnableIf&lt; isWrapper &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

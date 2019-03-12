@@ -221,9 +221,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a0da8ee207a6c819892ee8b0d4b8ab372"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isNnarySmET &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a0da8ee207a6c819892ee8b0d4b8ab372"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a0da8ee207a6c819892ee8b0d4b8ab372">SUNphi::EnableIfIsNnarySmET</a> = T</td></tr>
-<tr class="separator:a0da8ee207a6c819892ee8b0d4b8ab372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9475bc95db0361e0706a07d1db1ac34e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a9475bc95db0361e0706a07d1db1ac34e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a9475bc95db0361e0706a07d1db1ac34e">SUNphi::EnableIfIsNnarySmET</a> = EnableIf&lt; isNnarySmET&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a9475bc95db0361e0706a07d1db1ac34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2041f6c6d6c50223b68b2445cf1fc818"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2041f6c6d6c50223b68b2445cf1fc818"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a2041f6c6d6c50223b68b2445cf1fc818">SUNphi::ConstrainIsNnarySmET</a> = ConstrainIsBaseOf&lt; BaseNnarySmET,T &gt;</td></tr>
 <tr class="separator:a2041f6c6d6c50223b68b2445cf1fc818"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -794,14 +794,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a0da8ee207a6c819892ee8b0d4b8ab372"></a>
+<a class="anchor" id="file_a9475bc95db0361e0706a07d1db1ac34e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isNnarySmET &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a0da8ee207a6c819892ee8b0d4b8ab372">SUNphi::EnableIfIsNnarySmET</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../d2/d69/NnarySmET_8hpp.html#a9475bc95db0361e0706a07d1db1ac34e">SUNphi::EnableIfIsNnarySmET</a> = typedef EnableIf&lt; isNnarySmET &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

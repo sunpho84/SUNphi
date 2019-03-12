@@ -137,9 +137,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a225661ea9bf5d2ae3f9c71cb2d8fd191"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isConjer &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:a225661ea9bf5d2ae3f9c71cb2d8fd191"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d8f/Conj_8hpp.html#a225661ea9bf5d2ae3f9c71cb2d8fd191">SUNphi::EnableIfIsConjer</a> = T</td></tr>
-<tr class="separator:a225661ea9bf5d2ae3f9c71cb2d8fd191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609d7afc76d28b509108771e99b0e72a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a609d7afc76d28b509108771e99b0e72a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d8f/Conj_8hpp.html#a609d7afc76d28b509108771e99b0e72a">SUNphi::EnableIfIsConjer</a> = EnableIf&lt; isConjer&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a609d7afc76d28b509108771e99b0e72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3f60bca7754f192b8ac5ae06de36693"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ac3f60bca7754f192b8ac5ae06de36693"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d8f/Conj_8hpp.html#ac3f60bca7754f192b8ac5ae06de36693">SUNphi::ConstrainIsConjer</a> = ConstrainIsBaseOf&lt; BaseConjer,T &gt;</td></tr>
 <tr class="separator:ac3f60bca7754f192b8ac5ae06de36693"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,14 +207,14 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="file_a225661ea9bf5d2ae3f9c71cb2d8fd191"></a>
+<a class="anchor" id="file_a609d7afc76d28b509108771e99b0e72a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isConjer &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d2/d8f/Conj_8hpp.html#a225661ea9bf5d2ae3f9c71cb2d8fd191">SUNphi::EnableIfIsConjer</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../d2/d8f/Conj_8hpp.html#a609d7afc76d28b509108771e99b0e72a">SUNphi::EnableIfIsConjer</a> = typedef EnableIf&lt; isConjer &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -135,6 +135,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html">SUNphi::SerializableDefaultValue&lt; NoDefault &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide no default value for a serializable reference.  <a href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d2b/classSUNphi_1_1BaseSerializableScalar.html">SUNphi::BaseSerializableScalar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to detect and define <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>.  <a href="../../df/d2b/classSUNphi_1_1BaseSerializableScalar.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SUNphi::SerializableScalar&lt; T, TDef &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -149,9 +152,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:acab15571a0515abc5de07d31e80fe4e2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIf&lt; isSerializableScalar &lt;T&gt; &gt;&gt; </td></tr>
-<tr class="memitem:acab15571a0515abc5de07d31e80fe4e2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#acab15571a0515abc5de07d31e80fe4e2">SUNphi::EnableIfIsSerializableScalar</a> = T</td></tr>
-<tr class="separator:acab15571a0515abc5de07d31e80fe4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22744e1376ccc4da22df48329899e440"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
+<tr class="memitem:a22744e1376ccc4da22df48329899e440"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a22744e1376ccc4da22df48329899e440">SUNphi::EnableIfIsSerializableScalar</a> = EnableIf&lt; isSerializableScalar&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="separator:a22744e1376ccc4da22df48329899e440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -213,7 +216,7 @@ static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a
 <b>Value:</b><div class="fragment"><div class="line">SerializableScalar&lt;TYPE,decltype(DEFAULT)&gt;              \</div><div class="line">     NAME{#NAME,DEFAULT}</div></div><!-- fragment -->
 <p>Create a serializable scalar. </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00134">134</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00146">146</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,30 +233,30 @@ static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                        \</div><div class="line">    template &lt;typename O&gt; <span class="comment">/* Other operand typename */</span>  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">    DECLAUTO</a> <span class="keyword">operator</span> OP (O&amp;&amp; oth)          \</div><div class="line">    {                           \</div><div class="line">      return value OP                   \</div><div class="line">    oth;                        \</div><div class="line">     }</div><div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">            \</div><div class="line">    template &lt;typename O&gt; <span class="comment">/* Other operand typename */</span>  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">    DECLAUTO</a> <span class="keyword">operator</span> OP (O&amp;&amp; oth)          \</div><div class="line">    {                           \</div><div class="line">      return value OP                   \</div><div class="line">    oth;                        \</div><div class="line">     }</div><div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p>Used to overload assignment operators. </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00127">127</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="file_acab15571a0515abc5de07d31e80fe4e2"></a>
+<a class="anchor" id="file_a22744e1376ccc4da22df48329899e440"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename  = EnableIf&lt; isSerializableScalar &lt;T&gt; &gt;&gt; </div>
+template&lt;typename T , typename Ret  = void&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../dd/d32/Scalar_8hpp.html#acab15571a0515abc5de07d31e80fe4e2">SUNphi::EnableIfIsSerializableScalar</a> = typedef T</td>
+          <td class="memname">using <a class="el" href="../../dd/d32/Scalar_8hpp.html#a22744e1376ccc4da22df48329899e440">SUNphi::EnableIfIsSerializableScalar</a> = typedef EnableIf&lt; isSerializableScalar &lt;T&gt; ,Ret&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -276,7 +279,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
 <p>False case </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +301,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
 <p>True case </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -317,7 +320,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
 <p>Calls the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>

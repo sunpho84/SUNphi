@@ -53,6 +53,7 @@ var annotated_dup =
       [ "BaseNnarySmET", "d9/d67/structSUNphi_1_1BaseNnarySmET.html", null ],
       [ "BaseRelBinder", "da/d10/structSUNphi_1_1BaseRelBinder.html", null ],
       [ "BaseScalarWrapper", "d3/d7f/structSUNphi_1_1BaseScalarWrapper.html", null ],
+      [ "BaseSerializableScalar", "df/d2b/classSUNphi_1_1BaseSerializableScalar.html", null ],
       [ "BaseSmET", "d3/d5c/structSUNphi_1_1BaseSmET.html", null ],
       [ "BaseTens", "dc/dd0/structSUNphi_1_1BaseTens.html", null ],
       [ "BaseTensComp", "d1/d0d/structSUNphi_1_1BaseTensComp.html", null ],
@@ -185,9 +186,6 @@ var annotated_dup =
       [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
       [ "Vector", "df/dc0/classSUNphi_1_1Vector.html", "df/dc0/classSUNphi_1_1Vector" ],
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
-    ] ],
-    [ "YAML", null, [
-      [ "convert< EnableIfIsSerializableScalar< TT< Ts... > > >", "d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4.html", "d6/dbc/structYAML_1_1convert_3_01EnableIfIsSerializableScalar_3_01TT_3_01Ts_8_8_8_01_4_01_4_01_4" ]
     ] ],
     [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
 ];
