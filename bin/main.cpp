@@ -67,10 +67,18 @@ int main()
   // test().a=11.0;
   // runLog()<<test().a();
   
-  Serializer ser(true);
+  Serializer ser;
   ser<<t2;
   
+  DeSerializer deSer(ser.get().c_str());
+  
+  deSer>>t2;
+  
+  Serializer ser2;
+  ser2<<t2;
+  
   runLog()<<ser.get().c_str();
+  runLog()<<ser2.get().c_str();
   
   // double d;
   // int i;

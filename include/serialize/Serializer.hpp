@@ -5,14 +5,13 @@
 ///
 /// \brief Used to serialize quantities
 ///
-/// Incapsulates yaml access providing a stream operator
+/// Incapsulates yaml access providing an output stream operator
 
 #include <yaml-cpp/yaml.h>
 
 #include <metaprogramming/SFINAE.hpp>
 #include <serialize/Scalar.hpp>
 
-#include <iostream>
 namespace SUNphi
 {
   /// Convert to string the passed objects
@@ -26,14 +25,12 @@ namespace SUNphi
     
   public:
     
-    /// Output a serializable object to a serializer
+    /// Output a non-serializable object
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(not (isSerializableClass<T> or isSerializableScalar<T>))>
     friend Serializer& operator<<(Serializer& ser,
 				  const T& t)
     {
-            std::cout<<"nothing"<<std::endl;
-
       ser.node=
 	t;
       
@@ -41,7 +38,28 @@ namespace SUNphi
 	ser;
     }
     
-    /// Output a serializable object to a serializer
+    /// Output a serializable scalar
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isSerializableScalar<T>)>
+    friend Serializer& operator<<(Serializer& ser,
+				  const T& t)
+    {
+      if(not (ser.onlyNonDef and t.isDefault()))
+	{
+	  /// Creates the nested serializer
+	  Serializer nested(ser.onlyNonDef);
+	  nested<<
+	    t();
+	  
+	  ser.node[t.name]=
+	    nested.node;
+	}
+      
+      return
+	ser;
+    }
+    
+    /// Output a serializable class
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(isSerializableClass<T>)>
     friend Serializer& operator<<(Serializer& ser,
@@ -53,29 +71,6 @@ namespace SUNphi
 		ser<<
 		  s;
 	      });
-      
-      return
-	ser;
-    }
-    
-    /// Output a serializable object to a serializer
-    template <typename T,
-	      SFINAE_ON_TEMPLATE_ARG(isSerializableScalar<T>)>
-    friend Serializer& operator<<(Serializer& ser,
-				  const T& t)
-    {
-      if(not (ser.onlyNonDef and t.isDefault()))
-	{
-	  std::cout<<"scalar "<<t.name<<" "<<ser.onlyNonDef<<" "<<t.isDefault()<<std::endl;
-      
-	  /// Creates the nested serializer
-	  Serializer nested(ser.onlyNonDef);
-	  nested<<
-	    t();
-	  
-	  ser.node[t.name]=
-	    nested.node;
-	}
       
       return
 	ser;

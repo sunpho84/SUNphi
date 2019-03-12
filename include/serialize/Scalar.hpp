@@ -104,6 +104,10 @@ namespace SUNphi
 	value=def;
     }
     
+    /// Store whether the class has a default
+    static constexpr bool hasDefault=
+      not isSame<TDef,NoDefault>;
+    
     /// Check if the value is default or not
     bool isDefault()
       const
@@ -114,7 +118,7 @@ namespace SUNphi
 	  value.isDefault();
       else
 	// If object has no default, false
-	if constexpr(isSame<TDef,NoDefault>)
+	if constexpr(not hasDefault)
 	  return
 	    false;
 	else

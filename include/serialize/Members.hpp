@@ -25,11 +25,23 @@ namespace SUNphi
       std::forward_as_tuple(ts...);
   }
   
+  /// Helper function to determine if all passed value have a default
+  template <typename...Ts>
+  static constexpr bool _hasDefault(const Tuple<Ts...>*)
+  {
+    return
+      (RemRef<Ts>::hasDefault && ...);
+  }
+  
   /// Defines a list of serializable members
 #define SERIALIZABLE_MEMBERS(...)					\
   decltype(_serializableList(__VA_ARGS__))				\
   serializableMembers{_serializableList(__VA_ARGS__)};			\
 									\
+  /*! Determine whether all members had a default value*/		\
+  static constexpr bool hasDefault=					\
+    _hasDefault((RemRef<decltype(serializableMembers)>*)nullptr);	\
+  									\
   /*! Iterates on all elements checking defaultness */			\
   bool const isDefault()						\
     const								\
