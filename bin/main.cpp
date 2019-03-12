@@ -39,52 +39,6 @@ namespace SUNphi
   };
 }
 
-// namespace SUNphi
-// {
-//   DEFINE_HAS_MEMBER(serialRead);
-// }
-
-// template <typename...Ts>
-// class SerializingList
-//   : public Tuple<Ts...>
-// {
-// public:
-//   size_t mappedSize=
-//     (sizeof(RemRef<Ts>) + ...);
-// };
-
-// template <typename...Ts,
-// 	  typename=EnableIf<(isSerializable<Ts> && ...)>>
-// auto serializingList(Ts&&...ts)
-// {
-//   return
-//     SerializingList<Ts...>{{ts...}};
-// }
-
-// class Test
-// {
-// public:
-//   Serializable<double> d{"d",0.0};
-//   Serializable<int> i{"i",0};
-//   int j;
-  
-//   decltype(serializingList(d,i)) ser{serializingList(d,i)};
-// };
-
-// Test test;
-
-// template <typename T,
-  // 	  typename=EnableIf<isSerializableMap<T>>>
-  // YAML::Node& operator<<(YAML::Node& node,
-  // 		       const T& t)
-  // {
-  //   if(not t.isDefault())
-  //     node[t.name]<<static_cast<const SerializableMap<T>>(t());
-  
-  //   return node;
-  // }
-  
-
 int main()
 {
   // Serializable<double> ciccio("ciccio",10.0);
@@ -107,13 +61,13 @@ int main()
   // runLog()<<test.d;
   
   
-  SerializableScalar<Test> test{"test",{}};
+  // SerializableScalar<Test> test{"test",{}};
   SerializableScalar<Test2> t2{"t2",NO_DEFAULT};
   
-  test().a=11.0;
-  runLog()<<test().a();
-
-  Serializer ser;
+  // test().a=11.0;
+  // runLog()<<test().a();
+  
+  Serializer ser(true);
   ser<<t2;
   
   runLog()<<ser.get().c_str();
@@ -125,9 +79,9 @@ int main()
   // 		 i,"i",10);
   // runLog()<<((&std::get<0>(std::get<0>(l)))!=&d);
   
-  SerializableScalar<double> _aref("a",NO_DEFAULT);
+  // SerializableScalar<double> _aref("a",NO_DEFAULT);
   
-  runLog()<<isSerializableScalar<SerializableScalar<double>>;
+  // runLog()<<isSerializableScalar<SerializableScalar<double>>;
   
   return 0;
 }
