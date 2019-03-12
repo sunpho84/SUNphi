@@ -14,7 +14,7 @@ var searchData=
   ['_5ffundthroughrepresentativefunction',['_fundThroughRepresentativeFunction',['../de/d58/classSUNphi_1_1Adder.html#a0761dee24b2df6f7b4251e19cc4c5875',1,'SUNphi::Adder::_fundThroughRepresentativeFunction()'],['../d5/dd3/classSUNphi_1_1Transposer.html#ad1a5d4a98783a5e231405d4946de531f',1,'SUNphi::Transposer::_fundThroughRepresentativeFunction()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a2a662c212b8be3b822897e9bd2e5aefe',1,'SUNphi::MulAdder::_fundThroughRepresentativeFunction()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a3564a907f7fd329a541967473fc7ecb4',1,'SUNphi::UMinuser::_fundThroughRepresentativeFunction()'],['../d1/d77/classSUNphi_1_1Wrapper.html#af4a501e6b907026165e6c60919c5f037',1,'SUNphi::Wrapper::_fundThroughRepresentativeFunction()']]],
   ['_5fgetintoflist',['_getIntOfList',['../da/d00/IntListGetEl_8hpp.html#ad3ad0ad4b8c4ec01f0212c9780c93edb',1,'SUNphi']]],
   ['_5fgetisstoring',['_getisStoring',['../dc/d6b/BaseSmET_8hpp.html#a7f2ec40203b2082165a1f350aa6eb364',1,'SUNphi']]],
-  ['_5fhasdefault',['_hasDefault',['../db/dbb/Members_8hpp.html#a4bb7571a7bb26f939ea1e8d680520c91',1,'SUNphi']]],
+  ['_5fhasdefault',['_hasDefault',['../d1/d39/classSUNphi_1_1SerializableClass.html#aba228041b267b9c44619b22bd3acc35f',1,'SUNphi::SerializableClass::_hasDefault(const Tuple&lt; Ts... &gt; *)'],['../d1/d39/classSUNphi_1_1SerializableClass.html#aa90226217508ec65d37516f3ab229de0',1,'SUNphi::SerializableClass::_hasDefault()']]],
   ['_5fhmul',['_hMul',['../d5/d3e/IntListOperations_8hpp.html#a8773624a8f4b3b92bc9bb1ef7df27761',1,'SUNphi']]],
   ['_5fhsum',['_hSum',['../d5/d3e/IntListOperations_8hpp.html#a03669b5d05778a442a0ba261ccdc9b10',1,'SUNphi']]],
   ['_5finserttruetwinnedposoftuple',['_InsertTrueTwinnedPosOfTuple',['../d3/d89/TwinsComp_8hpp.html#a23542ce407b448938ad631f0c6a51efb',1,'SUNphi']]],
@@ -35,7 +35,7 @@ var searchData=
   ['_5fposoftype',['_posOfType',['../de/d2d/TupleOrder_8hpp.html#a9f60dd9c8c3a36f1ace90aa6d021d61a',1,'SUNphi::_posOfType(T, Tuple&lt;&gt;)'],['../de/d2d/TupleOrder_8hpp.html#acce3c95aefe2f639a99026d32a5c48f0',1,'SUNphi::_posOfType(T, Tuple&lt; Head, Tail... &gt;)']]],
   ['_5fposoftypes',['_posOfTypes',['../de/d2d/TupleOrder_8hpp.html#aa63b8d6f93b72ee4c5febdddfe9f111b',1,'SUNphi']]],
   ['_5frefevalbycompsname',['_refEvalByCompsName',['../dc/d2f/structSUNphi_1_1NnarySmET.html#a3f5ed01aad92159a9e3c96cf87811f57',1,'SUNphi::NnarySmET::_refEvalByCompsName(IntSeq&lt; I &gt;, IntSeq&lt; Pos... &gt;, Tp &amp;&amp;targs) const '],['../dc/d2f/structSUNphi_1_1NnarySmET.html#a6751965c1c2a68bbad6aae8f1856903c',1,'SUNphi::NnarySmET::_refEvalByCompsName(Ts &amp;&amp;...ts)']]],
-  ['_5fserializablelist',['_serializableList',['../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc',1,'SUNphi']]],
+  ['_5fserializablemembers',['_serializableMembers',['../db/dbb/Members_8hpp.html#a2a1659fe55efea2d2bab0459d85c8f5e',1,'SUNphi']]],
   ['_5ftuplehastype',['_tupleHasType',['../d1/d31/TupleClass_8hpp.html#a2a233c81338f9003b6d59345bbea76ad',1,'SUNphi']]],
   ['_5ftuplehastypes',['_tupleHasTypes',['../d1/d31/TupleClass_8hpp.html#a5ddd6d103aa57654ee8b4c925802147b',1,'SUNphi']]]
 ];

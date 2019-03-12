@@ -1,5 +1,12 @@
 var NAVTREEINDEX2 =
 {
+"d3/d78/classSUNphi_1_1Logger.html#ad1ec3f422383e10287901c9a88327fe0":[2,0,0,147,26],
+"d3/d78/classSUNphi_1_1Logger.html#ad5fa5f770d807007c1162774cdb19459":[2,0,0,147,18],
+"d3/d78/classSUNphi_1_1Logger.html#ad7d75aba05cb909c51f33de509c7b572":[2,0,0,147,3],
+"d3/d78/classSUNphi_1_1Logger.html#af1cd0856935846bfbb3455ef85084614":[2,0,0,147,30],
+"d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92":[2,0,0,147,28],
+"d3/d7f/structSUNphi_1_1BaseScalarWrapper.html":[2,0,0,51],
+"d3/d89/TwinsComp_8hpp.html":[3,0,2,12,5],
 "d3/d89/TwinsComp_8hpp.html#a23542ce407b448938ad631f0c6a51efb":[3,0,2,12,5,6],
 "d3/d89/TwinsComp_8hpp.html#a381d1ffbd57db6af9be204d499582fcb":[3,0,2,12,5,3],
 "d3/d89/TwinsComp_8hpp.html#a4692578508fbbf9aff7ed592deef12cf":[3,0,2,12,5,7],
@@ -135,8 +142,8 @@ var NAVTREEINDEX2 =
 "d4/d4b/structSUNphi_1_1IsAlwaysTrue.html#ae85228442cc21116609c264b3f4667c4":[2,0,0,143,0],
 "d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html":[2,0,0,136,0],
 "d4/d63/structSUNphi_1_1ConstrainHasMember__isAssignable.html":[2,0,0,93],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,172,2],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,172,2,0],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,173,2],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,173,2,0],
 "d4/d77/SFINAE_8hpp.html":[3,0,2,6,3],
 "d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5":[3,0,2,6,3,4],
 "d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1":[3,0,2,6,3,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX2 =
 "d5/d3e/IntListOperations_8hpp.html":[3,0,2,2,1],
 "d5/d3e/IntListOperations_8hpp.html#a03669b5d05778a442a0ba261ccdc9b10":[3,0,2,2,1,2],
 "d5/d3e/IntListOperations_8hpp.html#a08e4ecccf0f9751e631c2660e41e088d":[3,0,2,2,1,6],
-"d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6":[3,0,2,2,1,0],
-"d5/d3e/IntListOperations_8hpp.html#a2b3b303cf89d070aa497b7f282da375e":[3,0,2,2,1,8],
-"d5/d3e/IntListOperations_8hpp.html#a8773624a8f4b3b92bc9bb1ef7df27761":[3,0,2,2,1,1],
-"d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284":[3,0,2,2,1,4],
-"d5/d3e/IntListOperations_8hpp.html#a9bcedb4b0596b7e77f6f0620b3e944c4":[3,0,2,2,1,10],
-"d5/d3e/IntListOperations_8hpp.html#abcdfe80aefc0be41af4d9f99539fa7bc":[3,0,2,2,1,3],
-"d5/d3e/IntListOperations_8hpp.html#ad3de581d6d86339683d44a88c0ddeba9":[3,0,2,2,1,7],
-"d5/d3e/IntListOperations_8hpp.html#ad672c67c71c13820a0dcd0b12b88b438":[3,0,2,2,1,5]
+"d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6":[3,0,2,2,1,0]
 };

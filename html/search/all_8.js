@@ -2,7 +2,7 @@ var searchData=
 [
   ['half',['half',['../dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0',1,'SUNphi::_IntsUpTo']]],
   ['haschildren',['hasChildren',['../d6/de9/classSUNphi_1_1Timer.html#a7c9d620b3f0572c976b5cc1c8b7c55e8',1,'SUNphi::Timer']]],
-  ['hasdefault',['hasDefault',['../d1/d97/classSUNphi_1_1SerializableScalar.html#ae4c60672a313db365ac91dd80de9086a',1,'SUNphi::SerializableScalar::hasDefault()'],['../dc/d39/classSUNphi_1_1Test.html#adf30ba6aee07259c28de1f5dac433f9c',1,'SUNphi::Test::hasDefault()'],['../d9/d12/classSUNphi_1_1Test2.html#a67b074613fed43f8f48820826a08908c',1,'SUNphi::Test2::hasDefault()']]],
+  ['hasdefault',['hasDefault',['../d1/d97/classSUNphi_1_1SerializableScalar.html#ae4c60672a313db365ac91dd80de9086a',1,'SUNphi::SerializableScalar::hasDefault()'],['../d1/d39/classSUNphi_1_1SerializableClass.html#a6f2a81d655f5fa07f7e959b653a10afe',1,'SUNphi::SerializableClass::hasDefault()']]],
   ['hashingtag',['hashingTag',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a6dfd480bf35dff157d9b179e90ade494',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::hashingTag()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1f0cfa01012443c7c8937620e5c585f1',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::hashingTag()']]],
   ['hasmember_5fassertmergeablewith',['HasMember_assertMergeableWith',['../d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html',1,'SUNphi']]],
   ['hasmember_5fassertmergeablewith',['hasMember_assertMergeableWith',['../dc/d6b/BaseSmET_8hpp.html#aae9bc0ae600b50d77d6300e7b4905e82',1,'SUNphi']]],

@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('db/dbb/Members_8hpp.html','../../');})
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -115,12 +116,18 @@ $(document).ready(function(){initNavTree('db/dbb/Members_8hpp.html','../../');})
 
 <p>Creates a list of a set of serializable scalars.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d3/db2/Base_8hpp_source.html">serialize/Base.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d4/dba/CRTP_8hpp_source.html">metaprogramming/CRTP.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/db2/Base_8hpp_source.html">serialize/Base.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">serialize/Scalar.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">tuple/TupleClass.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../db/dbb/Members_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a939542239988c43fe567055b415fb6ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a939542239988c43fe567055b415fb6ae">SERIALIZABLE_MEMBERS</a>(...)</td></tr>
@@ -129,15 +136,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7cb2b050a7b079d14940c05bd7b4bbdc"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a7cb2b050a7b079d14940c05bd7b4bbdc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc">SUNphi::_serializableList</a> (Ts &amp;&amp;...ts)</td></tr>
-<tr class="memdesc:a7cb2b050a7b079d14940c05bd7b4bbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create the serializable members.  <a href="../../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc">More...</a><br /></td></tr>
-<tr class="separator:a7cb2b050a7b079d14940c05bd7b4bbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb7571a7bb26f939ea1e8d680520c91"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4bb7571a7bb26f939ea1e8d680520c91"></a>
-template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a4bb7571a7bb26f939ea1e8d680520c91"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a4bb7571a7bb26f939ea1e8d680520c91">SUNphi::_hasDefault</a> (const Tuple&lt; Ts... &gt; *)</td></tr>
-<tr class="memdesc:a4bb7571a7bb26f939ea1e8d680520c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to determine if all passed value have a default. <br /></td></tr>
-<tr class="separator:a4bb7571a7bb26f939ea1e8d680520c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a2a1659fe55efea2d2bab0459d85c8f5e">SUNphi::_serializableMembers</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="memdesc:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create the serializable members.  <a href="../../db/dbb/Members_8hpp.html#a2a1659fe55efea2d2bab0459d85c8f5e">More...</a><br /></td></tr>
+<tr class="separator:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates a list of a set of serializable scalars. </p>
@@ -158,24 +160,23 @@ template&lt;typename... Ts&gt; </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">decltype(<a class="code" href="../../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc">_serializableList</a>(__VA_ARGS__))                \</div><div class="line">  serializableMembers{<a class="code" href="../../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc">_serializableList</a>(__VA_ARGS__)};          \</div><div class="line">                                    \       \</div><div class="line">  static constexpr <span class="keywordtype">bool</span> hasDefault=                 \</div><div class="line">    _hasDefault((RemRef&lt;decltype(serializableMembers)&gt;*)<span class="keyword">nullptr</span>);   \</div><div class="line">                                    \           \</div><div class="line">  bool <span class="keyword">const</span> isDefault()                        \</div><div class="line">    const                               \</div><div class="line">  {                                 \                       \</div><div class="line">    bool is=                                \</div><div class="line">      true;                             \</div><div class="line">                                        \</div><div class="line">    forEach(this-&gt;serializableMembers,                  \</div><div class="line">        [&amp;is](<span class="keyword">auto</span> s)                       \</div><div class="line">        {                               \</div><div class="line">          is&amp;=                          \</div><div class="line">        s.isDefault();                      \</div><div class="line">        });                             \</div><div class="line">                                        \</div><div class="line">    return                              \</div><div class="line">      is;                               \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
-<div class="ttc" id="Members_8hpp_html_a7cb2b050a7b079d14940c05bd7b4bbdc"><div class="ttname"><a href="../../db/dbb/Members_8hpp.html#a7cb2b050a7b079d14940c05bd7b4bbdc">SUNphi::_serializableList</a></div><div class="ttdeci">auto _serializableList(Ts &amp;&amp;...ts)</div><div class="ttdoc">Helper function to create the serializable members. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbb/Members_8hpp_source.html#l00019">Members.hpp:19</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">auto</span> serializableMembers()                      \</div><div class="line">    const                               \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      std::forward_as_tuple(__VA_ARGS__);               \</div><div class="line">  }                                     <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  									\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  PROVIDE_ALSO_NON_CONST_METHOD</a>(serializableMembers)</div><div class="ttc" id="TypeTraits_8hpp_html_a504c20383cbaeb6ae41596d0cda0c3be"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a></div><div class="ttdeci">#define PROVIDE_ALSO_NON_CONST_METHOD(NAME)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00337">TypeTraits.hpp:337</a></div></div>
 </div><!-- fragment -->
 <p>Defines a list of serializable members. </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_a7cb2b050a7b079d14940c05bd7b4bbdc"></a>
+<a class="anchor" id="file_a2a1659fe55efea2d2bab0459d85c8f5e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename... Ts&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto SUNphi::_serializableList </td>
+          <td class="memname">auto SUNphi::_serializableMembers </td>
           <td>(</td>
           <td class="paramtype">Ts &amp;&amp;...&#160;</td>
           <td class="paramname"><em>ts</em></td><td>)</td>
@@ -187,7 +188,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Helper function to create the serializable members. </p>
 <p>Check that all arguments are <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a> </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
