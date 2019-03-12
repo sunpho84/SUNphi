@@ -80,7 +80,7 @@ namespace SUNphi
     friend const DeSerializer& operator>>(const DeSerializer& deSer,
 					  T& t)
     {
-      forEach(t.serializableMembers,
+      forEach(t.serializableMembers(),
 	      [&deSer](auto s)
 	      {
 		deSer>>

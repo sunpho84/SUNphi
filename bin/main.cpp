@@ -13,7 +13,8 @@ using namespace SUNphi;
 namespace SUNphi
 {
   /// Test1
-  class Test
+  class Test :
+    public SerializableClass<Test>
   {
   public:
     
@@ -28,7 +29,8 @@ namespace SUNphi
   };
   
   /// Test2
-  class Test2
+  class Test2 :
+    public SerializableClass<Test2>
   {
   public:
     

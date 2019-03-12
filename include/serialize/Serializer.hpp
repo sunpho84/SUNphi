@@ -67,7 +67,7 @@ namespace SUNphi
     friend Serializer& operator<<(Serializer& ser,
 				  const T& t)
     {
-      forEach(t.serializableMembers,
+      forEach(t.serializableMembers(),
 	      [&ser](auto s)
 	      {
 		ser<<
