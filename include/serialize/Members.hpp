@@ -28,8 +28,27 @@ namespace SUNphi
   /// Defines a list of serializable members
 #define SERIALIZABLE_MEMBERS(...)					\
   decltype(_serializableList(__VA_ARGS__))				\
-  serializableMembers{_serializableList(__VA_ARGS__)}
-  
+  serializableMembers{_serializableList(__VA_ARGS__)};			\
+									\
+  /*! Iterates on all elements checking defaultness */			\
+  bool const isDefault()						\
+    const								\
+  {									\
+    /*! Returned value */						\
+    bool is=								\
+      true;								\
+    									\
+    forEach(this->serializableMembers,					\
+	    [&is](auto s)						\
+	    {								\
+	      is&=							\
+		s.isDefault();						\
+	    });								\
+    									\
+    return								\
+      is;								\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
 }
 
 #endif
