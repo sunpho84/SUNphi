@@ -15,10 +15,11 @@
 namespace SUNphi
 {
   /// Convert to string the passed objects
+  template <bool Ref=false>
   class Serializer
   {
     /// Node used to store the serialized data
-    YAML::Node node;
+    RefIf<Ref,YAML::Node> node;
     
     /// Writes everything or the default only
     const bool onlyNonDef{false};
@@ -46,13 +47,14 @@ namespace SUNphi
     {
       if(not (ser.onlyNonDef and t.isDefault()))
 	{
-	  /// Creates the nested serializer
-	  Serializer nested(ser.onlyNonDef);
+	  /// Creates the node
+	  auto rc=
+	    ser.node[t.name];
+	  
+	  /// Creates the nested serializer, and fills it
+	  Serializer<true> nested(rc,ser.onlyNonDef);
 	  nested<<
 	    t();
-	  
-	  ser.node[t.name]=
-	    nested.node;
 	}
       
       return
@@ -80,6 +82,7 @@ namespace SUNphi
     std::string get()
       const
     {
+      /// Emits the string
       YAML::Emitter emitter;
       emitter<<
 	node;
@@ -90,6 +93,14 @@ namespace SUNphi
     
     /// Creates a serializer
     Serializer(const bool& onlyNonDef=false) :
+      onlyNonDef(onlyNonDef)
+    {
+    }
+    
+    /// Creates a serializer
+    Serializer(YAML::Node& node,
+	       const bool& onlyNonDef=false) :
+      node(node),
       onlyNonDef(onlyNonDef)
     {
     }
