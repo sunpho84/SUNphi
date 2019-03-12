@@ -109,7 +109,7 @@ namespace SUNphi
   
   /// To be used as an argument of the specialization
 #define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(TYPE)	\
-  EnableIfIs ## TYPE<TT<Ts...>>
+  EnableIfIs ## TYPE<TT<Ts...>,TT<Ts...>>
   
   /// Provides the type inside the specialized class
 #define SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE	       \
