@@ -26,6 +26,7 @@ namespace SUNphi
       std::forward_as_tuple(ts...);
   }
   
+  /// Class providing access to a list of serializable scalar members
   template <typename T>
   class SerializableClass
   {
