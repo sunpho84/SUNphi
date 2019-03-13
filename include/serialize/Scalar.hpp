@@ -13,6 +13,7 @@
 #include <metaprogramming/UniversalReferences.hpp>
 
 #include <serialize/Base.hpp>
+#include <serialize/BinSize.hpp>
 
 namespace SUNphi
 {
@@ -58,18 +59,12 @@ namespace SUNphi
     }
   };
   
-  /// Class to detect and define SerializableScalar
-  class BaseSerializableScalar
-  {
-  };
-  
   /// Class wrapping a class to provide scalar node for the serializer
   ///
   /// Provides name and default value
   template <typename T,
 	    typename TDef=NoDefault>
   class SerializableScalar :
-    public BaseSerializableScalar,
     public SerializableDefaultValue<TDef>
   {
     /// Stored variable
@@ -125,6 +120,22 @@ namespace SUNphi
 	  // If reference is not a serializable class, check default
 	  return
 	    value==this->def;
+    }
+    
+    /// Returns the binary size
+    size_t binSize()
+      const
+    {
+      if constexpr(std::is_trivially_copyable_v<T>)
+	return
+	  sizeof(value);
+      else
+	if constexpr(hasMember_binSize<T>)
+	  return
+	    value.binSize();
+	else
+	  return
+	    SUNphi::binSize(value);
     }
     
     /// Used to overload assignment operators

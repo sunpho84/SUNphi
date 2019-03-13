@@ -81,7 +81,7 @@ namespace SUNphi
 					  T& t)
     {
       forEach(t.serializableMembers(),
-	      [&deSer](auto s)
+	      [&deSer](auto& s)
 	      {
 		deSer>>
 		  s;

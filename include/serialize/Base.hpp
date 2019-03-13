@@ -18,7 +18,8 @@ namespace SUNphi
   constexpr bool isSerializableClass=
     hasMember_serializableMembers<T>;
   
-  class BaseSerializableClass;
+  // Check existence of binSize method
+  DEFINE_HAS_MEMBER(binSize);
   
   /// Provides an enabler on the specific case isSerializableClass
   PROVIDE_ENABLE_IF_FOR_IS_TYPE(SerializableClass);

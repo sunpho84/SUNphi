@@ -71,22 +71,46 @@ namespace SUNphi
 	is;
     }
     
+    /// Iterates on all elements summing their size
+    size_t const binSize()
+      const
+    {
+      /// Returned value
+      size_t size=
+	0;
+      
+      forEach((~(*this)).serializableMembers(),
+	    [&size](auto s)
+	    {
+	      size+=
+		s.binSize();
+	    });
+      
+      return
+	size;
+    }
+    
     /// Determine whether all members had a default value
     static constexpr bool hasDefault=
       _hasDefault();
   };
   
-  /// Defines a list of serializable members
-#define SERIALIZABLE_MEMBERS(...)					\
+  /// Provides the class embedding with a serializableMemebers method
+#define CONST_OR_NOT_SERIALIZABLE_MEMBERS(CONST,			\
+					  ...)				\
+  /*! Gets the reference to the serializable members */			\
   auto serializableMembers()						\
-    const								\
+    CONST								\
   {									\
     return								\
       std::forward_as_tuple(__VA_ARGS__);				\
   } 									\
-  									\
-  PROVIDE_ALSO_NON_CONST_METHOD(serializableMembers)
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
+  /// Defines a list of serializable members
+#define SERIALIZABLE_MEMBERS(...)					\
+  CONST_OR_NOT_SERIALIZABLE_MEMBERS(     , __VA_ARGS__);		\
+  CONST_OR_NOT_SERIALIZABLE_MEMBERS(const, __VA_ARGS__)
 }
 
 #endif
