@@ -72,28 +72,24 @@ namespace SUNphi
 	is;
     }
     
-    /// Iterates on all elements summing their size
-    size_t const binSize()
-      const
-    {
-      /// Returned value
-      size_t size=
-	0;
-      
-      forEach((~(*this)).serializableMembers(),
-	    [&size](auto s)
-	    {
-	      size+=
-		s.binSize();
-	    });
-      
-      return
-	size;
-    }
-    
     /// Determine whether all members had a default value
     static constexpr bool hasDefault=
       _hasDefault();
+    
+    /// Iterates on all members to binarize
+    friend Binarizer& operator<<(Binarizer& out,                     ///< Output
+				 const SerializableClass<T>& in)     ///< Input
+    {
+      forEach((~in).serializableMembers(),
+	    [&out](auto s)
+	    {
+	      out<<
+		s;
+	    });
+      
+      return
+	out;
+    }
   };
   
   /// Provides the class embedding with a serializableMemebers method

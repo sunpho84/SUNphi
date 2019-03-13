@@ -82,7 +82,7 @@ int main()
   runLog()<<ser.get().c_str();
   runLog()<<ser2.get().c_str();
   
-  runLog()<<t2.binSize();
+  runLog()<<t2.binarize().size();
   
   // double d;
   // int i;

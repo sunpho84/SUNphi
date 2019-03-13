@@ -13,7 +13,7 @@
 #include <metaprogramming/UniversalReferences.hpp>
 
 #include <serialize/Base.hpp>
-#include <serialize/BinSize.hpp>
+#include <serialize/Binarize.hpp>
 
 namespace SUNphi
 {
@@ -122,20 +122,24 @@ namespace SUNphi
 	    value==this->def;
     }
     
-    /// Returns the binary size
-    size_t binSize()
+    /// Binarize a SerializableScalar
+    friend Binarizer& operator<<(Binarizer& out,                   ///< Output
+				 const SerializableScalar& in)     ///< Input
+    {
+      return
+	out<<in();
+    }
+    
+    /// Creates the binarized version
+    Binarizer binarize()
       const
     {
-      if constexpr(std::is_trivially_copyable_v<T>)
-	return
-	  sizeof(value);
-      else
-	if constexpr(hasMember_binSize<T>)
-	  return
-	    value.binSize();
-	else
-	  return
-	    SUNphi::binSize(value);
+      /// Output binarizer
+      Binarizer out;
+      
+      return
+	out<<
+	*this;
     }
     
     /// Used to overload assignment operators
