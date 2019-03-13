@@ -7,6 +7,8 @@
 ///
 /// http://en.cppreference.com/w/cpp/language/sfinae
 
+#include <metaprogramming/TypeTraits.hpp>
+
 namespace SUNphi
 {
   /// Provides a SFINAE to be used in template par list
