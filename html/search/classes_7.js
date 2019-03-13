@@ -1,6 +1,7 @@
 var searchData=
 [
   ['hasmember_5fassertmergeablewith',['HasMember_assertMergeableWith',['../d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html',1,'SUNphi']]],
+  ['hasmember_5fbinsize',['HasMember_binSize',['../df/d85/structSUNphi_1_1HasMember__binSize.html',1,'SUNphi']]],
   ['hasmember_5fcompsize',['HasMember_compSize',['../de/d50/structSUNphi_1_1HasMember__compSize.html',1,'SUNphi']]],
   ['hasmember_5feval',['HasMember_eval',['../d8/dfe/structSUNphi_1_1HasMember__eval.html',1,'SUNphi']]],
   ['hasmember_5ffund',['HasMember_Fund',['../d2/d5d/structSUNphi_1_1HasMember__Fund.html',1,'SUNphi']]],

@@ -3,7 +3,6 @@ var Scalar_8hpp =
     [ "NoDefault", "d9/d2b/classSUNphi_1_1NoDefault.html", null ],
     [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", "dc/d2a/classSUNphi_1_1SerializableDefaultValue" ],
     [ "SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4" ],
-    [ "BaseSerializableScalar", "df/d2b/classSUNphi_1_1BaseSerializableScalar.html", null ],
     [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html", "d1/d97/classSUNphi_1_1SerializableScalar" ],
     [ "SERIALIZABLE_SCALAR", "dd/d32/Scalar_8hpp.html#a9cef4586312a3f0edd070d25de7ae706", null ],
     [ "TRIVIAL_ASSIGN_OVERLOAD", "dd/d32/Scalar_8hpp.html#ab67115fae75d5cbcc3dba78ee12fcf82", null ],

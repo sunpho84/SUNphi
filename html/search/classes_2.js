@@ -12,7 +12,6 @@ var searchData=
   ['basennarysmet',['BaseNnarySmET',['../d9/d67/structSUNphi_1_1BaseNnarySmET.html',1,'SUNphi']]],
   ['baserelbinder',['BaseRelBinder',['../da/d10/structSUNphi_1_1BaseRelBinder.html',1,'SUNphi']]],
   ['basescalarwrapper',['BaseScalarWrapper',['../d3/d7f/structSUNphi_1_1BaseScalarWrapper.html',1,'SUNphi']]],
-  ['baseserializablescalar',['BaseSerializableScalar',['../df/d2b/classSUNphi_1_1BaseSerializableScalar.html',1,'SUNphi']]],
   ['basesmet',['BaseSmET',['../d3/d5c/structSUNphi_1_1BaseSmET.html',1,'SUNphi']]],
   ['basetens',['BaseTens',['../dc/dd0/structSUNphi_1_1BaseTens.html',1,'SUNphi']]],
   ['basetenscomp',['BaseTensComp',['../d1/d0d/structSUNphi_1_1BaseTensComp.html',1,'SUNphi']]],

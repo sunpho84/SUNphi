@@ -2,6 +2,7 @@ var searchData=
 [
   ['haschildren',['hasChildren',['../d6/de9/classSUNphi_1_1Timer.html#a7c9d620b3f0572c976b5cc1c8b7c55e8',1,'SUNphi::Timer']]],
   ['hasmember_5fassertmergeablewithhelper',['hasMember_assertMergeableWithHelper',['../dc/d6b/BaseSmET_8hpp.html#a2cb0ad5865a3082472008324987c1656',1,'SUNphi']]],
+  ['hasmember_5fbinsizehelper',['hasMember_binSizeHelper',['../d3/db2/Base_8hpp.html#a467ed483ac46ae65af08f795224b4447',1,'SUNphi']]],
   ['hasmember_5fcompsizehelper',['hasMember_compSizeHelper',['../d6/d3f/TensKind_8hpp.html#ae33b6d16d34de84fe30019b69f821129',1,'SUNphi']]],
   ['hasmember_5fevalhelper',['hasMember_evalHelper',['../dc/d6b/BaseSmET_8hpp.html#a945749dd1f8584412074817136351c86',1,'SUNphi']]],
   ['hasmember_5ffundhelper',['hasMember_FundHelper',['../dc/d6b/BaseSmET_8hpp.html#a973f6cec5c6d031d727f4440d1b5bba3',1,'SUNphi']]],

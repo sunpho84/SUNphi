@@ -125,8 +125,7 @@ Inheritance diagram for SUNphi::SerializableScalar&lt; T, TDef &gt;:</div>
  <div class="center">
   <img src="../../d1/d97/classSUNphi_1_1SerializableScalar.png" usemap="#SUNphi::SerializableScalar_3C_20T_2C_20TDef_20_3E_map" alt=""/>
   <map id="SUNphi::SerializableScalar_3C_20T_2C_20TDef_20_3E_map" name="SUNphi::SerializableScalar&lt; T, TDef &gt;_map">
-<area href="../../df/d2b/classSUNphi_1_1BaseSerializableScalar.html" title="Class to detect and define SerializableScalar. " alt="SUNphi::BaseSerializableScalar" shape="rect" coords="0,0,250,24"/>
-<area href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html" alt="SUNphi::SerializableDefaultValue&lt; TDef &gt;" shape="rect" coords="260,0,510,24"/>
+<area href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html" alt="SUNphi::SerializableDefaultValue&lt; TDef &gt;" shape="rect" coords="0,0,250,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -146,6 +145,10 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a85e130ebf738b3e5a714ad65d8fb1897">isDefault</a> () const </td></tr>
 <tr class="memdesc:a85e130ebf738b3e5a714ad65d8fb1897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is default or not. <br /></td></tr>
 <tr class="separator:a85e130ebf738b3e5a714ad65d8fb1897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1e92b4e12857989f57bba0745b0b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf1e92b4e12857989f57bba0745b0b3e"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#adf1e92b4e12857989f57bba0745b0b3e">binSize</a> () const </td></tr>
+<tr class="memdesc:adf1e92b4e12857989f57bba0745b0b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the binary size. <br /></td></tr>
+<tr class="separator:adf1e92b4e12857989f57bba0745b0b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13a264c6231bbbb40389fc73d62b47f7"><td class="memTemplParams" colspan="2">template&lt;typename O &gt; </td></tr>
 <tr class="memitem:a13a264c6231bbbb40389fc73d62b47f7"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a13a264c6231bbbb40389fc73d62b47f7">operator=</a> (O &amp;&amp;oth)</td></tr>
 <tr class="separator:a13a264c6231bbbb40389fc73d62b47f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +200,7 @@ class SUNphi::SerializableScalar&lt; T, TDef &gt;</h3>
 <p>Class wrapping a class to provide scalar node for the serializer</p>
 <p>Provides name and default value </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00067">67</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8220aa53055bec9166295d721a64063a"></a>
 <div class="memitem">
@@ -236,7 +239,7 @@ template&lt;typename T, typename TDef = NoDefault&gt; </div>
 <p>Creates a serializable scalar with default value. </p>
 <p>If the variable has default value, copy it </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00094">94</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00089">89</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +277,7 @@ template&lt;typename... Ts&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00083">83</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +308,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator *= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00143">143</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +339,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator += </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +370,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator -= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00142">142</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -398,7 +401,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator /= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -429,7 +432,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator = </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -456,7 +459,7 @@ template&lt;typename T, typename TDef = NoDefault&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      not isSame&lt;TDef,NoDefault&gt;</div></div><!-- fragment -->
 <p>Store whether the class has a default. </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00103">103</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>

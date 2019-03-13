@@ -130,6 +130,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(CONST, ...)</td></tr>
+<tr class="memdesc:a67b7f198fd48e5f3d48723133e3fdaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the class embedding with a serializableMemebers method.  <a href="#a67b7f198fd48e5f3d48723133e3fdaae">More...</a><br /></td></tr>
+<tr class="separator:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a939542239988c43fe567055b415fb6ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/Members_8hpp.html#a939542239988c43fe567055b415fb6ae">SERIALIZABLE_MEMBERS</a>(...)</td></tr>
 <tr class="memdesc:a939542239988c43fe567055b415fb6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of serializable members.  <a href="#a939542239988c43fe567055b415fb6ae">More...</a><br /></td></tr>
 <tr class="separator:a939542239988c43fe567055b415fb6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +150,37 @@ Functions</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a67b7f198fd48e5f3d48723133e3fdaae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONST_OR_NOT_SERIALIZABLE_MEMBERS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CONST, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">            \</div><div class="line">  auto serializableMembers()                        \</div><div class="line">    CONST                               \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      std::forward_as_tuple(__VA_ARGS__);               \</div><div class="line">  }                                     <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+</div><!-- fragment -->
+<p>Provides the class embedding with a serializableMemebers method. </p>
+
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00099">99</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a939542239988c43fe567055b415fb6ae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -160,11 +194,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">auto</span> serializableMembers()                      \</div><div class="line">    const                               \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      std::forward_as_tuple(__VA_ARGS__);               \</div><div class="line">  }                                     <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  									\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">  PROVIDE_ALSO_NON_CONST_METHOD</a>(serializableMembers)</div><div class="ttc" id="TypeTraits_8hpp_html_a504c20383cbaeb6ae41596d0cda0c3be"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be">PROVIDE_ALSO_NON_CONST_METHOD</a></div><div class="ttdeci">#define PROVIDE_ALSO_NON_CONST_METHOD(NAME)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00337">TypeTraits.hpp:337</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(     , __VA_ARGS__);      <a class="code" href="../../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">\</a></div><div class="line"><a class="code" href="../../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">  CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(<span class="keyword">const</span>, __VA_ARGS__)</div><div class="ttc" id="Members_8hpp_html_a67b7f198fd48e5f3d48723133e3fdaae"><div class="ttname"><a href="../../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a></div><div class="ttdeci">#define CONST_OR_NOT_SERIALIZABLE_MEMBERS(CONST,...)</div><div class="ttdoc">Provides the class embedding with a serializableMemebers method. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbb/Members_8hpp_source.html#l00099">Members.hpp:99</a></div></div>
 </div><!-- fragment -->
 <p>Defines a list of serializable members. </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,7 @@
 var classSUNphi_1_1SerializableScalar =
 [
     [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html#a8220aa53055bec9166295d721a64063a", null ],
+    [ "binSize", "d1/d97/classSUNphi_1_1SerializableScalar.html#adf1e92b4e12857989f57bba0745b0b3e", null ],
     [ "isDefault", "d1/d97/classSUNphi_1_1SerializableScalar.html#a85e130ebf738b3e5a714ad65d8fb1897", null ],
     [ "operator()", "d1/d97/classSUNphi_1_1SerializableScalar.html#aee26655181a3c5284c7bcef39f2d490f", null ],
     [ "operator()", "d1/d97/classSUNphi_1_1SerializableScalar.html#a3d01c04250a9e8a79bb448623cdd4f09", null ],

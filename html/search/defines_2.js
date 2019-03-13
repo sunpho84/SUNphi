@@ -6,6 +6,7 @@ var searchData=
   ['concat3',['CONCAT3',['../db/d18/Macros_8hpp.html#a0a22adb9a059331081a444d782b9077d',1,'Macros.hpp']]],
   ['config_5fflags',['CONFIG_FLAGS',['../dd/d2b/SUNphi_8cpp.html#a01fb41133660d75b17c52f463c461a22',1,'SUNphi.cpp']]],
   ['config_5ftime',['CONFIG_TIME',['../dd/d2b/SUNphi_8cpp.html#aba38f0c926fb820677b5373f7b2e3c81',1,'SUNphi.cpp']]],
+  ['const_5for_5fnot_5fserializable_5fmembers',['CONST_OR_NOT_SERIALIZABLE_MEMBERS',['../db/dbb/Members_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae',1,'Members.hpp']]],
   ['const_5fqualif',['CONST_QUALIF',['../d0/d81/TypeTraits_8hpp.html#ac4c107a563349af358447aaee9573240',1,'TypeTraits.hpp']]],
   ['crash',['CRASH',['../db/dd7/Crash_8hpp.html#a5a24df9755c49775ec259b3c7021df0e',1,'Crash.hpp']]],
   ['crtp_5fcast',['CRTP_CAST',['../d4/dba/CRTP_8hpp.html#a096469fcc98d6dce86a93de07c24840f',1,'CRTP.hpp']]]
