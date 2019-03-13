@@ -1,7 +1,7 @@
 var classSUNphi_1_1SerializableScalar =
 [
     [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html#a8220aa53055bec9166295d721a64063a", null ],
-    [ "binSize", "d1/d97/classSUNphi_1_1SerializableScalar.html#adf1e92b4e12857989f57bba0745b0b3e", null ],
+    [ "binarize", "d1/d97/classSUNphi_1_1SerializableScalar.html#a5a1f90764d390209d6715beb77d48595", null ],
     [ "isDefault", "d1/d97/classSUNphi_1_1SerializableScalar.html#a85e130ebf738b3e5a714ad65d8fb1897", null ],
     [ "operator()", "d1/d97/classSUNphi_1_1SerializableScalar.html#aee26655181a3c5284c7bcef39f2d490f", null ],
     [ "operator()", "d1/d97/classSUNphi_1_1SerializableScalar.html#a3d01c04250a9e8a79bb448623cdd4f09", null ],
@@ -10,6 +10,7 @@ var classSUNphi_1_1SerializableScalar =
     [ "operator-=", "d1/d97/classSUNphi_1_1SerializableScalar.html#a063f159756cd9f1126ac7b238458ac2c", null ],
     [ "operator/=", "d1/d97/classSUNphi_1_1SerializableScalar.html#a73708aaf8d74280d9e2f3d845c633d00", null ],
     [ "operator=", "d1/d97/classSUNphi_1_1SerializableScalar.html#a13a264c6231bbbb40389fc73d62b47f7", null ],
+    [ "operator<<", "d1/d97/classSUNphi_1_1SerializableScalar.html#a5e55196e6af99fb026d13072066bfe1e", null ],
     [ "def", "d1/d97/classSUNphi_1_1SerializableScalar.html#a189e6a59dcb25d26e2548016e981d9e2", null ],
     [ "hasDefault", "d1/d97/classSUNphi_1_1SerializableScalar.html#ae4c60672a313db365ac91dd80de9086a", null ],
     [ "name", "d1/d97/classSUNphi_1_1SerializableScalar.html#a0e55819138bf9d4bfe72a235c146c232", null ],

@@ -60,6 +60,7 @@ var annotated_dup =
       [ "BaseTransposer", "df/ddf/structSUNphi_1_1BaseTransposer.html", null ],
       [ "BaseUMinuser", "d8/df3/structSUNphi_1_1BaseUMinuser.html", null ],
       [ "BaseWrapper", "d8/da7/structSUNphi_1_1BaseWrapper.html", null ],
+      [ "Binarizer", "d2/d66/classSUNphi_1_1Binarizer.html", "d2/d66/classSUNphi_1_1Binarizer" ],
       [ "BinarySmET", "d4/d8b/structSUNphi_1_1BinarySmET.html", "d4/d8b/structSUNphi_1_1BinarySmET" ],
       [ "Binder", "d6/db9/classSUNphi_1_1Binder.html", "d6/db9/classSUNphi_1_1Binder" ],
       [ "CanPrint", "de/dfd/structSUNphi_1_1CanPrint.html", "de/dfd/structSUNphi_1_1CanPrint" ],

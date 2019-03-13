@@ -39,15 +39,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html",
-"d3/d78/classSUNphi_1_1Logger.html#ac595c1ebbfb6f0f7ba444aed32475fbc",
-"d5/d3d/structSUNphi_1_1__EnableIf.html",
-"d6/de9/classSUNphi_1_1Timer.html#aed07057571666da1aed3f8567194c17ca3f984c8cc53f309d593ea25e4d809c20",
-"d9/d59/classSUNphi_1_1Sitmo.html#a1488f6be4df4e5e78decdc093696e542",
-"db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb",
-"dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html",
-"de/d58/classSUNphi_1_1Adder.html#a1d6ded1dcd22920fde3d904c29f61374",
-"functions_vars_e.html"
+"d1/de1/structSUNphi_1_1ConstrainAreSmETs.html",
+"d3/d78/classSUNphi_1_1Logger.html#a4ea3543a0f8eb43438c76c3c367fa74b",
+"d5/d1c/classSUNphi_1_1RelBinder.html#acacb6e638665aeacc940dd42ea910fad",
+"d6/de9/classSUNphi_1_1Timer.html#a94f62d7f3d4bf068ca3937352acd8b00",
+"d9/d12/classSUNphi_1_1Test2.html#aa78496e3d65aa150f1260523fb64bb8d",
+"db/d2e/OptimizationDiagnostic_8hpp.html",
+"dc/dbf/structSUNphi_1_1__IntSeqFirstN.html#aff806f3956e924c92d90b523196fc78a",
+"de/d58/classSUNphi_1_1Adder.html#a061ebda0fd517c37bb8d9638acb54a6d",
+"functions_type_y.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

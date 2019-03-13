@@ -1,6 +1,7 @@
 var searchData=
 [
   ['provide_5falso_5fnon_5fconst_5fmethod',['PROVIDE_ALSO_NON_CONST_METHOD',['../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be',1,'TypeTraits.hpp']]],
+  ['provide_5fbegin_5fend',['PROVIDE_BEGIN_END',['../d2/df0/Binarize_8hpp.html#aa352562a9784899e7c13543c4cbecf3a',1,'Binarize.hpp']]],
   ['provide_5fbinary_5fsmet_5frefs',['PROVIDE_BINARY_SMET_REFS',['../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79',1,'BinarySmET.hpp']]],
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],
   ['provide_5fcall_5foperator',['PROVIDE_CALL_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879',1,'BaseSmET.hpp']]],

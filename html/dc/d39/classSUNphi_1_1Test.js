@@ -1,7 +1,6 @@
 var classSUNphi_1_1Test =
 [
     [ "Test", "dc/d39/classSUNphi_1_1Test.html#a1197e9aae7a73ea4f6f189d6c09f2952", null ],
-    [ "binSize", "dc/d39/classSUNphi_1_1Test.html#a8bdb00dca1d105396133d77393f3d52e", null ],
     [ "isDefault", "dc/d39/classSUNphi_1_1Test.html#aa78496e3d65aa150f1260523fb64bb8d", null ],
     [ "serializableMembers", "dc/d39/classSUNphi_1_1Test.html#aff40e13e54c97732a9680d9205dd4ad3", null ],
     [ "serializableMembers", "dc/d39/classSUNphi_1_1Test.html#a4a49caaae7cabdf3fc11385dbe1989df", null ],

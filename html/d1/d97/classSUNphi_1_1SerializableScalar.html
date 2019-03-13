@@ -112,6 +112,7 @@ $(document).ready(function(){initNavTree('d1/d97/classSUNphi_1_1SerializableScal
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="../../db/d31/classSUNphi_1_1SerializableScalar-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::SerializableScalar&lt; T, TDef &gt; Class Template Reference</div>  </div>
@@ -145,10 +146,9 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a85e130ebf738b3e5a714ad65d8fb1897">isDefault</a> () const </td></tr>
 <tr class="memdesc:a85e130ebf738b3e5a714ad65d8fb1897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is default or not. <br /></td></tr>
 <tr class="separator:a85e130ebf738b3e5a714ad65d8fb1897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1e92b4e12857989f57bba0745b0b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf1e92b4e12857989f57bba0745b0b3e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#adf1e92b4e12857989f57bba0745b0b3e">binSize</a> () const </td></tr>
-<tr class="memdesc:adf1e92b4e12857989f57bba0745b0b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the binary size. <br /></td></tr>
-<tr class="separator:adf1e92b4e12857989f57bba0745b0b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1f90764d390209d6715beb77d48595"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a5a1f90764d390209d6715beb77d48595">binarize</a> () const </td></tr>
+<tr class="memdesc:a5a1f90764d390209d6715beb77d48595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the binarized version.  <a href="#a5a1f90764d390209d6715beb77d48595">More...</a><br /></td></tr>
+<tr class="separator:a5a1f90764d390209d6715beb77d48595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13a264c6231bbbb40389fc73d62b47f7"><td class="memTemplParams" colspan="2">template&lt;typename O &gt; </td></tr>
 <tr class="memitem:a13a264c6231bbbb40389fc73d62b47f7"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a13a264c6231bbbb40389fc73d62b47f7">operator=</a> (O &amp;&amp;oth)</td></tr>
 <tr class="separator:a13a264c6231bbbb40389fc73d62b47f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,10 +167,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="..
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a52fffe1442351444dc110df6bc1475ee"><td class="memItemLeft" ><a class="anchor" id="a52fffe1442351444dc110df6bc1475ee"></a>
+<tr class="memitem:a07e3cadd822e2b766d131a024753335d"><td class="memItemLeft" ><a class="anchor" id="a07e3cadd822e2b766d131a024753335d"></a>
 class {</td></tr>
-<tr class="memitem:a52fffe1442351444dc110df6bc1475ee"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a52fffe1442351444dc110df6bc1475ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e3cadd822e2b766d131a024753335d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a07e3cadd822e2b766d131a024753335d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e55819138bf9d4bfe72a235c146c232"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e55819138bf9d4bfe72a235c146c232"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a0e55819138bf9d4bfe72a235c146c232">name</a></td></tr>
 <tr class="memdesc:a0e55819138bf9d4bfe72a235c146c232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name used to refer. <br /></td></tr>
@@ -192,6 +192,12 @@ Private Attributes</h2></td></tr>
 T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a0ed8c86fee280b59a83f9978b702b4a3">value</a></td></tr>
 <tr class="memdesc:a0ed8c86fee280b59a83f9978b702b4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stored variable. <br /></td></tr>
 <tr class="separator:a0ed8c86fee280b59a83f9978b702b4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a5e55196e6af99fb026d13072066bfe1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a5e55196e6af99fb026d13072066bfe1e">operator&lt;&lt;</a> (<a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;out, const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a> &amp;in)</td></tr>
+<tr class="memdesc:a5e55196e6af99fb026d13072066bfe1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binarize a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>.  <a href="#a5e55196e6af99fb026d13072066bfe1e">More...</a><br /></td></tr>
+<tr class="separator:a5e55196e6af99fb026d13072066bfe1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, typename TDef = NoDefault&gt;<br />
@@ -244,6 +250,36 @@ template&lt;typename T, typename TDef = NoDefault&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5a1f90764d390209d6715beb77d48595"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TDef = NoDefault&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SUNphi::SerializableScalar</a>&lt; T, TDef &gt;::binarize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the binarized version. </p>
+<p>Output binarizer </p>
+
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00134">134</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3d01c04250a9e8a79bb448623cdd4f09"></a>
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +344,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator *= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00158">158</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -339,7 +375,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator += </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +406,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator -= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +437,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator /= </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00159">159</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -432,7 +468,55 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Provides the operator = </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="a5e55196e6af99fb026d13072066bfe1e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TDef = NoDefault&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, TDef &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Binarize a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output </td></tr>
+    <tr><td class="paramname">in</td><td>Input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>

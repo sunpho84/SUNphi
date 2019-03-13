@@ -4,7 +4,7 @@ var searchData=
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
   ['pool_2ehpp',['Pool.hpp',['../df/d0f/Pool_8hpp.html',1,'']]],
-  ['pos',['Pos',['../d4/d3d/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_01_4_01_4.html#a49a98bc1860a18b7051d9c1fe13d1ce0',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List... &gt; &gt;::Pos()'],['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder::pos()']]],
+  ['pos',['pos',['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder::pos()'],['../d4/d3d/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_01_4_01_4.html#a49a98bc1860a18b7051d9c1fe13d1ce0',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List... &gt; &gt;::Pos()']]],
   ['pos_5ft',['Pos_t',['../de/d58/classSUNphi_1_1Adder.html#a4dde56f09aa7f3a174b89cc532adbdd6',1,'SUNphi::Adder::Pos_t()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641',1,'SUNphi::MulAdder::Pos_t()']]],
   ['position_2ehpp',['Position.hpp',['../dc/d58/Position_8hpp.html',1,'']]],
   ['posofcompl',['posOfCompl',['../d2/d24/classSUNphi_1_1Conjer.html#a5a744623c20b396fe872611e64eafb1d',1,'SUNphi::Conjer']]],
@@ -31,6 +31,7 @@ var searchData=
   ['printversioncontacts',['printVersionContacts',['../df/df6/classSUNphi_1_1Aliver.html#a4902a324a2cf7ba3b63c8c84ab098bbe',1,'SUNphi::Aliver']]],
   ['productorial',['productorial',['../df/dc0/classSUNphi_1_1Vector.html#a17781892c3dbe68eba33c7c6290eef85',1,'SUNphi::Vector::productorial(const UnsignedSize beg, const UnsignedSize end) const '],['../df/dc0/classSUNphi_1_1Vector.html#ab579d50cf7444f1a57d607894f88325f',1,'SUNphi::Vector::productorial(const UnsignedSize beg=0) const ']]],
   ['provide_5falso_5fnon_5fconst_5fmethod',['PROVIDE_ALSO_NON_CONST_METHOD',['../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be',1,'TypeTraits.hpp']]],
+  ['provide_5fbegin_5fend',['PROVIDE_BEGIN_END',['../d2/df0/Binarize_8hpp.html#aa352562a9784899e7c13543c4cbecf3a',1,'Binarize.hpp']]],
   ['provide_5fbinary_5fsmet_5frefs',['PROVIDE_BINARY_SMET_REFS',['../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79',1,'BinarySmET.hpp']]],
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],
   ['provide_5fcall_5foperator',['PROVIDE_CALL_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879',1,'BaseSmET.hpp']]],
@@ -61,5 +62,6 @@ var searchData=
   ['provide_5fsimple_5fnnary_5fcomp_5fsize',['PROVIDE_SIMPLE_NNARY_COMP_SIZE',['../d2/d69/NnarySmET_8hpp.html#a63fb035fcf22a1d3b2a18969f070eeaf',1,'NnarySmET.hpp']]],
   ['provide_5fsmet_5fassignement_5foperator',['PROVIDE_SMET_ASSIGNEMENT_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a3a7842df4daae14f086e6349fb8a2ab7',1,'BaseSmET.hpp']]],
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],
-  ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]]
+  ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]],
+  ['pushback',['pushBack',['../d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802',1,'SUNphi::Binarizer']]]
 ];

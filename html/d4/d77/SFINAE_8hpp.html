@@ -114,7 +114,8 @@ $(document).ready(function(){initNavTree('d4/d77/SFINAE_8hpp.html','../../');});
 
 <p>Defines macros to enable or disable template instantiation.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
+</div>
 <p><a href="../../d4/d77/SFINAE_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -162,7 +163,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <p>Provides a SFINAE to be used in template par list</p>
 <p>This follows <a href="https://stackoverflow.com/questions/32636275/sfinae-with-variadic-templates">https://stackoverflow.com/questions/32636275/sfinae-with-variadic-templates</a> as in this example </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;template &lt;typename D,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;          SFINAE_ON_TEMPLATE_ARG(IsSame&lt;D,int&gt;)&gt;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;void foo(D i) {} // fails if D is not int</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
 
 </div>
 </div>
@@ -179,7 +180,7 @@ Macros</h2></td></tr>
 <p>Mechanism to allow the usage of SFINAE to allow a class specialization. Follows the advice of <a href="https://stackoverflow.com/a/30991097">https://stackoverflow.com/a/30991097</a> to create a class providing the type itself</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;Class which needs to be explicitly specialized with SFINAE</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;template &lt;typename T&gt;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;class SpecializableClass</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;};</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;/// Dummy type to be used to specialize the class</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;class SpecializingArg</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;PROVIDE_ENABLE_IF_FOR_TYPE(SpecializingArg);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;/// Specializes the class SpecializableClass</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PREAMBLE</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;class SpecializableClass&lt;SFINAE_TEMPLATE_CLASS_SPECIALIZATION_ARG(SpecializingArg)&gt;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   SFINAE_TEMPLATE_CLASS_SPECIALIZATION_PROVIDE_TYPE;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   /// To show explicit usage of T</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   SpecializableClass&lt;T&gt;()</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; };</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00106">106</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
 
 </div>
 </div>
@@ -196,7 +197,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides the type inside the specialized class. </p>
 
-<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00115">115</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
 
 </div>
 </div>
@@ -212,7 +213,7 @@ Macros</h2></td></tr>
 <p>Provides template par list to unprioritize default SFINAE</p>
 <p>Use as last argument of a function overloaded by a other implementations using SFINAE to detect the proper version to be used. This has to be used in conjunction with the other macros SFINAE_WORSEN_DEFAULT_VERSION_ARGS and SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK as in this example</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;template &lt;typename T,</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;          SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS&gt;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;int tell(T a,SFINAE_WORSEN_DEFAULT_VERSION_ARGS)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  return 1;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;template &lt;typename T,</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;          std::enable_if_t&lt;sizeof(T)==4,void*&gt; =nullptr&gt;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;decltype(auto) tell(T&amp;&amp; a)</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  return a+1;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;int main()</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   tell(1); //returns 2</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   return 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">SFINAE.hpp</a>.</p>
 
 </div>
 </div>

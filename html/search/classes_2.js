@@ -19,6 +19,7 @@ var searchData=
   ['basetransposer',['BaseTransposer',['../df/ddf/structSUNphi_1_1BaseTransposer.html',1,'SUNphi']]],
   ['baseuminuser',['BaseUMinuser',['../d8/df3/structSUNphi_1_1BaseUMinuser.html',1,'SUNphi']]],
   ['basewrapper',['BaseWrapper',['../d8/da7/structSUNphi_1_1BaseWrapper.html',1,'SUNphi']]],
+  ['binarizer',['Binarizer',['../d2/d66/classSUNphi_1_1Binarizer.html',1,'SUNphi']]],
   ['binarysmet',['BinarySmET',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['binarysmet_3c_20assigner_3c_20_5fref1_2c_20_5fref2_20_3e_20_3e',['BinarySmET&lt; Assigner&lt; _Ref1, _Ref2 &gt; &gt;',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html',1,'SUNphi']]]
