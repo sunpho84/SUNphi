@@ -3,6 +3,7 @@ var searchData=
   ['scalar_2ehpp',['Scalar.hpp',['../dd/d32/Scalar_8hpp.html',1,'']]],
   ['scalarwrap_2ehpp',['ScalarWrap.hpp',['../d9/d0c/ScalarWrap_8hpp.html',1,'']]],
   ['scopedoer_2ehpp',['ScopeDoer.hpp',['../de/d6a/ScopeDoer_8hpp.html',1,'']]],
+  ['serializable_2ehpp',['Serializable.hpp',['../d0/d15/Serializable_8hpp.html',1,'']]],
   ['serialize_2ehpp',['Serialize.hpp',['../dc/d1a/Serialize_8hpp.html',1,'']]],
   ['serializer_2ehpp',['Serializer.hpp',['../d5/dcc/Serializer_8hpp.html',1,'']]],
   ['sfinae_2ehpp',['SFINAE.hpp',['../d4/d77/SFINAE_8hpp.html',1,'']]],

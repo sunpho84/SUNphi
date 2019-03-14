@@ -130,7 +130,8 @@ Inheritance diagram for SUNphi::SerializableClass&lt; T &gt;:</div>
  <div class="center">
   <img src="../../d1/d39/classSUNphi_1_1SerializableClass.png" usemap="#SUNphi::SerializableClass_3C_20T_20_3E_map" alt=""/>
   <map id="SUNphi::SerializableClass_3C_20T_20_3E_map" name="SUNphi::SerializableClass&lt; T &gt;_map">
-<area href="../../d7/da6/classSUNphi_1_1Binarizable.html" alt="SUNphi::Binarizable&lt; SerializableClass&lt; T &gt; &gt;" shape="rect" coords="0,0,275,24"/>
+<area href="../../dd/d5c/classSUNphi_1_1Serializable.html" alt="SUNphi::Serializable&lt; SerializableClass&lt; T &gt; &gt;" shape="rect" coords="0,0,278,24"/>
+<area href="../../d7/da6/classSUNphi_1_1Binarizable.html" alt="SUNphi::Binarizable&lt; SerializableClass&lt; T &gt; &gt;" shape="rect" coords="288,0,566,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -139,6 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa78496e3d65aa150f1260523fb64bb8d"><td class="memItemLeft" align="right" valign="top">bool const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#aa78496e3d65aa150f1260523fb64bb8d">isDefault</a> () const </td></tr>
 <tr class="memdesc:aa78496e3d65aa150f1260523fb64bb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates on all elements checking defaultness.  <a href="#aa78496e3d65aa150f1260523fb64bb8d">More...</a><br /></td></tr>
 <tr class="separator:aa78496e3d65aa150f1260523fb64bb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a8fb9ff4f87a0021aa36bd7407e75ecd8">serialize</a> () const</td></tr>
+<tr class="memdesc:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the string.  <a href="#a8fb9ff4f87a0021aa36bd7407e75ecd8">More...</a><br /></td></tr>
+<tr class="separator:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#a3fd6a639a7a112d8bdceb4f13f45ac11">binarize</a> () const</td></tr>
 <tr class="memdesc:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the binarized version.  <a href="#a3fd6a639a7a112d8bdceb4f13f45ac11">More...</a><br /></td></tr>
 <tr class="separator:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,10 +177,10 @@ template&lt;typename... Ts&gt; </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a63b8d01be8e9c882bd493973d8fd5fcd"><td class="memItemLeft" ><a class="anchor" id="a63b8d01be8e9c882bd493973d8fd5fcd"></a>
+<tr class="memitem:acd1274ccab8ea703f8ddaa8f62eecd44"><td class="memItemLeft" ><a class="anchor" id="acd1274ccab8ea703f8ddaa8f62eecd44"></a>
 class {</td></tr>
-<tr class="memitem:a63b8d01be8e9c882bd493973d8fd5fcd"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a63b8d01be8e9c882bd493973d8fd5fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1274ccab8ea703f8ddaa8f62eecd44"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:acd1274ccab8ea703f8ddaa8f62eecd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -221,7 +225,7 @@ template&lt;typename T&gt; </div>
 <p>1st-order helper function to determine if all passed value have a default </p>
 <p>Type of the tuple collecting the referred members </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
@@ -279,35 +283,7 @@ template&lt;typename T&gt; </div>
 <p>Iterates on all elements checking defaultness. </p>
 <p>Returned value </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae42b3328de0ad6084034318c5b2acf1e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T&amp; <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass</a>&lt; T &gt;::operator~ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Cast operator to class <code>T</code> </p>
-
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
@@ -335,7 +311,61 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <p>Constant cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00034">34</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae42b3328de0ad6084034318c5b2acf1e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass</a>&lt; T &gt;::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Cast operator to class <code>T</code> </p>
+
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fb9ff4f87a0021aa36bd7407e75ecd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable</a>&lt; <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SerializableClass</a>&lt; T &gt;  &gt;::serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the string. </p>
+<p>Creates a string out of a serializable. </p>
 
 </div>
 </div>
@@ -383,7 +413,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00081">81</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00082">82</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
@@ -430,7 +460,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00097">97</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +487,7 @@ template&lt;typename T&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <a class="code" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#aa90226217508ec65d37516f3ab229de0">_hasDefault</a>()</div></div><!-- fragment -->
 <p>Determine whether all members had a default value. </p>
 
-<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/dbb/Members_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../db/dbb/Members_8hpp_source.html">Members.hpp</a>.</p>
 
 </div>
 </div>

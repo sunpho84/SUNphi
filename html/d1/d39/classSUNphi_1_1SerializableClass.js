@@ -5,8 +5,9 @@ var classSUNphi_1_1SerializableClass =
     [ "binarize", "d1/d39/classSUNphi_1_1SerializableClass.html#a3fd6a639a7a112d8bdceb4f13f45ac11", null ],
     [ "deBinarize", "d1/d39/classSUNphi_1_1SerializableClass.html#abc1ab4d82983fd7508b8a46b8d24ee8a", null ],
     [ "isDefault", "d1/d39/classSUNphi_1_1SerializableClass.html#aa78496e3d65aa150f1260523fb64bb8d", null ],
-    [ "operator~", "d1/d39/classSUNphi_1_1SerializableClass.html#ae42b3328de0ad6084034318c5b2acf1e", null ],
     [ "operator~", "d1/d39/classSUNphi_1_1SerializableClass.html#a66b07b306e85d9d075dfbcdd22680a9c", null ],
+    [ "operator~", "d1/d39/classSUNphi_1_1SerializableClass.html#ae42b3328de0ad6084034318c5b2acf1e", null ],
+    [ "serialize", "d1/d39/classSUNphi_1_1SerializableClass.html#a8fb9ff4f87a0021aa36bd7407e75ecd8", null ],
     [ "operator<<", "d1/d39/classSUNphi_1_1SerializableClass.html#a32fd04745aea6b7e2d17503b4416d039", null ],
     [ "operator>>", "d1/d39/classSUNphi_1_1SerializableClass.html#ae83a95667e8a4e68bba64985d70b50d3", null ],
     [ "hasDefault", "d1/d39/classSUNphi_1_1SerializableClass.html#a6f2a81d655f5fa07f7e959b653a10afe", null ]

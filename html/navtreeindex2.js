@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"d3/d78/classSUNphi_1_1Logger.html":[2,0,0,150],
+"d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43":[2,0,0,150,6],
+"d3/d78/classSUNphi_1_1Logger.html#a144bd23775889591cc4ad07f1f0cda7d":[2,0,0,150,9],
+"d3/d78/classSUNphi_1_1Logger.html#a17fb5c9ba1b9f68683c5c736663f84bd":[2,0,0,150,16],
 "d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265":[2,0,0,150,1],
 "d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265a874c43b50a3e67846cc79ef44c4d681e":[2,0,0,150,1,2],
 "d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265ab61773b9b3968a9988d765d728985862":[2,0,0,150,1,0],
@@ -174,8 +178,8 @@ var NAVTREEINDEX2 =
 "d4/d4b/structSUNphi_1_1IsAlwaysTrue.html#ae85228442cc21116609c264b3f4667c4":[2,0,0,146,0],
 "d4/d59/structSUNphi_1_1HasMember__ref1_1_1Check.html":[2,0,0,139,0],
 "d4/d63/structSUNphi_1_1ConstrainHasMember__isAssignable.html":[2,0,0,95],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,176,2],
-"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,176,2,0],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html":[2,0,0,177,2],
+"d4/d67/structSUNphi_1_1TensKind_1_1__firstVectorizingComp.html#a06cfd36b9b2d15626e6c65ac84525cb9":[2,0,0,177,2,0],
 "d4/d77/SFINAE_8hpp.html":[3,0,2,6,3],
 "d4/d77/SFINAE_8hpp.html#a138ea6f0ae91a1aec99666877d1693f5":[3,0,2,6,3,4],
 "d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1":[3,0,2,6,3,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "d5/d1c/classSUNphi_1_1RelBinder.html#a4b46ea85ccd68848ca76d967b1f07222":[2,0,0,157,28],
 "d5/d1c/classSUNphi_1_1RelBinder.html#a4d485b2bd2abb5dc52a45c4b2bfc30d8":[2,0,0,157,38],
 "d5/d1c/classSUNphi_1_1RelBinder.html#a5682dc94da00a19ad90bd310288cc7d8":[2,0,0,157,3],
-"d5/d1c/classSUNphi_1_1RelBinder.html#a58574374382c36ad3a09f45debf05a62":[2,0,0,157,9],
-"d5/d1c/classSUNphi_1_1RelBinder.html#a61f8b42471bdaafa058e9b34235cbb2e":[2,0,0,157,43],
-"d5/d1c/classSUNphi_1_1RelBinder.html#a65bf9603498bbb68f2887d5198fc44f6":[2,0,0,157,6],
-"d5/d1c/classSUNphi_1_1RelBinder.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,157,16],
-"d5/d1c/classSUNphi_1_1RelBinder.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,157,21]
+"d5/d1c/classSUNphi_1_1RelBinder.html#a58574374382c36ad3a09f45debf05a62":[2,0,0,157,9]
 };

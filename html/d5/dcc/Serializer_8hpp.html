@@ -106,7 +106,8 @@ $(document).ready(function(){initNavTree('d5/dcc/Serializer_8hpp.html','../../')
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Serializer.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -116,7 +117,9 @@ $(document).ready(function(){initNavTree('d5/dcc/Serializer_8hpp.html','../../')
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;yaml-cpp/yaml.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/db2/Base_8hpp_source.html">serialize/Base.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">serialize/Scalar.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d0/d15/Serializable_8hpp_source.html">serialize/Serializable.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d5/dcc/Serializer_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -125,6 +128,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">SUNphi::Serializer&lt; Ref &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string the passed objects.  <a href="../../d8/dd8/classSUNphi_1_1Serializer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acfeab7d96d9f79dba44a1cc1bf74d48e"><td class="memTemplParams" colspan="2"><a class="anchor" id="acfeab7d96d9f79dba44a1cc1bf74d48e"></a>
+template&lt;typename S , typename T &gt; </td></tr>
+<tr class="memitem:acfeab7d96d9f79dba44a1cc1bf74d48e"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/dcc/Serializer_8hpp.html#acfeab7d96d9f79dba44a1cc1bf74d48e">SUNphi::operator&lt;&lt;</a> (S &amp;&amp;stream, const Serializable&lt; T &gt; &amp;ser)</td></tr>
+<tr class="memdesc:acfeab7d96d9f79dba44a1cc1bf74d48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream operator using serialize method. <br /></td></tr>
+<tr class="separator:acfeab7d96d9f79dba44a1cc1bf74d48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used to serialize quantities. </p>

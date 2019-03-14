@@ -166,6 +166,7 @@ var annotated_dup =
       [ "ScopeDoer", "d2/db3/classSUNphi_1_1ScopeDoer.html", "d2/db3/classSUNphi_1_1ScopeDoer" ],
       [ "ScopeIndenter", "d3/d11/classSUNphi_1_1ScopeIndenter.html", "d3/d11/classSUNphi_1_1ScopeIndenter" ],
       [ "ScopeMutexLocker", "dd/db8/structSUNphi_1_1ScopeMutexLocker.html", null ],
+      [ "Serializable", "dd/d5c/classSUNphi_1_1Serializable.html", "dd/d5c/classSUNphi_1_1Serializable" ],
       [ "SerializableClass", "d1/d39/classSUNphi_1_1SerializableClass.html", "d1/d39/classSUNphi_1_1SerializableClass" ],
       [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", "dc/d2a/classSUNphi_1_1SerializableDefaultValue" ],
       [ "SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4" ],
