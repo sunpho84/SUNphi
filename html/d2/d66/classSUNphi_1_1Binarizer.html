@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('d2/d66/classSUNphi_1_1Binarizer.html',
 </div><!--header-->
 <div class="contents">
 
-<p>Class to convert objects to binary.  
+<p>Class to convert objects to and from binary.  
  <a href="../../d2/d66/classSUNphi_1_1Binarizer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>&gt;</code></p>
@@ -142,9 +142,25 @@ template&lt;typename T , TypeIf&lt;(std::is_trivially_copyable_v&lt; T &gt;), vo
 <tr class="memitem:a2d1434168854fa7e2c6daf46cab9e4c6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a2d1434168854fa7e2c6daf46cab9e4c6">operator&lt;&lt;</a> (const T &amp;rhs)</td></tr>
 <tr class="memdesc:a2d1434168854fa7e2c6daf46cab9e4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write on the binarizer. <br /></td></tr>
 <tr class="separator:a2d1434168854fa7e2c6daf46cab9e4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ed34785dc4099351fc640df3ba3cff"><td class="memTemplParams" colspan="2"><a class="anchor" id="a48ed34785dc4099351fc640df3ba3cff"></a>
+template&lt;typename T , TypeIf&lt;(std::is_trivially_copyable_v&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a48ed34785dc4099351fc640df3ba3cff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a48ed34785dc4099351fc640df3ba3cff">operator&gt;&gt;</a> (T &amp;rhs)</td></tr>
+<tr class="memdesc:a48ed34785dc4099351fc640df3ba3cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from the binarizer. <br /></td></tr>
+<tr class="separator:a48ed34785dc4099351fc640df3ba3cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfcd914108567d3e32e3d18932e15bdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#acfcd914108567d3e32e3d18932e15bdb">operator&lt;&lt;</a> (const std::string &amp;in)</td></tr>
 <tr class="memdesc:acfcd914108567d3e32e3d18932e15bdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binarize a string.  <a href="#acfcd914108567d3e32e3d18932e15bdb">More...</a><br /></td></tr>
 <tr class="separator:acfcd914108567d3e32e3d18932e15bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae2541487800f098be866df7275b1dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a0ae2541487800f098be866df7275b1dd">operator&gt;&gt;</a> (std::string &amp;rhs)</td></tr>
+<tr class="memdesc:a0ae2541487800f098be866df7275b1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DeBinarize a string.  <a href="#a0ae2541487800f098be866df7275b1dd">More...</a><br /></td></tr>
+<tr class="separator:a0ae2541487800f098be866df7275b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f22c3e0601f3d8f6d1a8d3bc64eed06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f22c3e0601f3d8f6d1a8d3bc64eed06"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a8f22c3e0601f3d8f6d1a8d3bc64eed06">restartReading</a> ()</td></tr>
+<tr class="memdesc:a8f22c3e0601f3d8f6d1a8d3bc64eed06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart from head. <br /></td></tr>
+<tr class="separator:a8f22c3e0601f3d8f6d1a8d3bc64eed06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae696b825421f3c10df78bfca35367a95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae696b825421f3c10df78bfca35367a95"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#ae696b825421f3c10df78bfca35367a95">clear</a> ()</td></tr>
+<tr class="memdesc:ae696b825421f3c10df78bfca35367a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart to write. <br /></td></tr>
+<tr class="separator:ae696b825421f3c10df78bfca35367a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -162,6 +178,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a5c4239a61640ebe2398d09c800fb6802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802">pushBack</a> (const void *data, const size_t &amp;<a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a5070a05d0f6a57bfa795de362c47ff9e">size</a>)</td></tr>
 <tr class="memdesc:a5c4239a61640ebe2398d09c800fb6802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push data on the back.  <a href="#a5c4239a61640ebe2398d09c800fb6802">More...</a><br /></td></tr>
 <tr class="separator:a5c4239a61640ebe2398d09c800fb6802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0ae8cb12a8090584d90aee2eb36c74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a5a0ae8cb12a8090584d90aee2eb36c74">readAdvancing</a> (void *out, const size_t &amp;<a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a5070a05d0f6a57bfa795de362c47ff9e">size</a>)</td></tr>
+<tr class="memdesc:a5a0ae8cb12a8090584d90aee2eb36c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push data on the back.  <a href="#a5a0ae8cb12a8090584d90aee2eb36c74">More...</a><br /></td></tr>
+<tr class="separator:a5a0ae8cb12a8090584d90aee2eb36c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -169,11 +188,15 @@ Private Attributes</h2></td></tr>
 std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#ab2511ba72b981863ad37e2e3c8c16301">buf</a></td></tr>
 <tr class="memdesc:ab2511ba72b981863ad37e2e3c8c16301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer. <br /></td></tr>
 <tr class="separator:ab2511ba72b981863ad37e2e3c8c16301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e966c282201c9a7c7913ea7140bcf7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40e966c282201c9a7c7913ea7140bcf7"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html#a40e966c282201c9a7c7913ea7140bcf7">readPos</a> {0}</td></tr>
+<tr class="memdesc:a40e966c282201c9a7c7913ea7140bcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reading position. <br /></td></tr>
+<tr class="separator:a40e966c282201c9a7c7913ea7140bcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class to convert objects to binary. </p>
+<div class="textblock"><p>Class to convert objects to and from binary. </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aec49d99e4283a1bce788adf778d6840f"></a>
 <div class="memitem">
@@ -197,7 +220,7 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div><div class="memdoc">
 <p>Pointer to the beginning of the buffer </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -223,7 +246,7 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div><div class="memdoc">
 <p>Pointer to the beginning of the buffer </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +272,7 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div><div class="memdoc">
 <p>Pointer to the end of the buffer </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +298,7 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div><div class="memdoc">
 <p>Pointer to the end of the buffer </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,6 +325,7 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
 </div><div class="memdoc">
 
 <p>Binarize a string. </p>
+<p>It is important to store the terminator </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>Input </td></tr>
@@ -309,7 +333,42 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0ae2541487800f098be866df7275b1dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&amp; SUNphi::Binarizer::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DeBinarize a string. </p>
+<p>Null terminated string </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>Output </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00116">116</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -354,7 +413,52 @@ std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a0ae8cb12a8090584d90aee2eb36c74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&amp; SUNphi::Binarizer::readAdvancing </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Push data on the back. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Data to be filled </td></tr>
+    <tr><td class="paramname">size</td><td>Data size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>

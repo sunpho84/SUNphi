@@ -2,6 +2,7 @@ var searchData=
 [
   ['rangeseq',['rangeSeq',['../dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi']]],
   ['rc',['rc',['../d5/d99/classSUNphi_1_1File.html#a99d947e611d2b6fb4d58babc1cb04c3b',1,'SUNphi::File']]],
+  ['readpos',['readPos',['../d2/d66/classSUNphi_1_1Binarizer.html#a40e966c282201c9a7c7913ea7140bcf7',1,'SUNphi::Binarizer']]],
   ['real_5fpart_5fid',['REAL_PART_ID',['../d8/de8/Compl_8hpp.html#a345eb23d93feb680882e8663c469512d',1,'SUNphi']]],
   ['realformat',['realFormat',['../d5/d99/classSUNphi_1_1File.html#aa0883738c01276b36bce51f934f96bb5',1,'SUNphi::File']]],
   ['reallyprint',['reallyPrint',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4da1216d6bd679561364dac89cb6b463',1,'SUNphi::Logger::LoggerLine']]],

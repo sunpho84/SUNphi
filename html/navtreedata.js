@@ -39,15 +39,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d1/de1/structSUNphi_1_1ConstrainAreSmETs.html",
-"d3/d78/classSUNphi_1_1Logger.html#a4ea3543a0f8eb43438c76c3c367fa74b",
-"d5/d1c/classSUNphi_1_1RelBinder.html#acacb6e638665aeacc940dd42ea910fad",
-"d6/de9/classSUNphi_1_1Timer.html#a94f62d7f3d4bf068ca3937352acd8b00",
-"d9/d12/classSUNphi_1_1Test2.html#aa78496e3d65aa150f1260523fb64bb8d",
-"db/d2e/OptimizationDiagnostic_8hpp.html",
-"dc/dbf/structSUNphi_1_1__IntSeqFirstN.html#aff806f3956e924c92d90b523196fc78a",
-"de/d58/classSUNphi_1_1Adder.html#a061ebda0fd517c37bb8d9638acb54a6d",
-"functions_type_y.html"
+"d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a1fcd64b6b8e866e3f27da57b42d1dc53",
+"d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265ab61773b9b3968a9988d765d728985862",
+"d5/d1c/classSUNphi_1_1RelBinder.html#a7dd1f26fe442d88b47dea11b09ba849f",
+"d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4",
+"d9/d0c/ScalarWrap_8hpp.html#aa845595f412e422943bd9bf7df9b12ab",
+"db/d12/classSUNphi_1_1ScalarWrapper.html#aa2e8dcbc29e1a66ecd5b96a5a3c44d75",
+"dc/d8f/TensClass_8hpp.html",
+"de/d33/classSUNphi_1_1Combinatorial.html#a4378a6636e517eac8bca8b2a24dc2041",
+"functions_r.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

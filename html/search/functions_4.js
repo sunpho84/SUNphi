@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['debinarize',['deBinarize',['../d7/da6/classSUNphi_1_1Binarizable.html#abc1ab4d82983fd7508b8a46b8d24ee8a',1,'SUNphi::Binarizable']]],
   ['demangle',['demangle',['../d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83',1,'SUNphi']]],
   ['deserializer',['DeSerializer',['../dc/d7b/classSUNphi_1_1DeSerializer.html#a3248420d2cb1a6eac7a7ff0bb403644e',1,'SUNphi::DeSerializer::DeSerializer(const std::string &amp;str, const bool &amp;onlyNonDef=false)'],['../dc/d7b/classSUNphi_1_1DeSerializer.html#a9a87139b004c30a0cf032ff9beb53385',1,'SUNphi::DeSerializer::DeSerializer(const YAML::Node &amp;node, const bool &amp;onlyNonDef=false)']]],
   ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90',1,'SUNphi::Grid']]],
