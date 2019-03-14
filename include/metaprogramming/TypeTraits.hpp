@@ -117,6 +117,12 @@ namespace SUNphi
   static constexpr bool canBeConverted=
     std::is_convertible_v<From,To>;
   
+  /// Checks if an object can be trivially copied
+  template <typename T> // Type to check
+  [[ maybe_unused ]]
+  static constexpr bool isTriviallyCopyable=
+    std::is_trivially_copyable_v<T>;
+  
   /////////////////////////////////////////////////////////////////
   
   /// Checks if two types are the same
