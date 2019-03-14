@@ -95,6 +95,7 @@ var searchData=
   ['istenscomp',['isTensComp',['../d7/d7a/TensComp_8hpp.html#a8a8255a4f3205cc207c0327e179685e1',1,'SUNphi']]],
   ['istenskind',['isTensKind',['../d6/d3f/TensKind_8hpp.html#a1b32947a9ca09b133faf88e349ca42be',1,'SUNphi']]],
   ['istransposer',['isTransposer',['../d0/d6d/Transpose_8hpp.html#ac2bde1b5ffe667e227bd09f840384021',1,'SUNphi']]],
+  ['istriviallycopyable',['isTriviallyCopyable',['../d0/d81/TypeTraits_8hpp.html#a1456093270e5eab792ae6cfe8799061d',1,'SUNphi']]],
   ['istuple',['isTuple',['../d1/d31/TupleClass_8hpp.html#af957e3aa36c0c3d5ac12a52ab1547027',1,'SUNphi']]],
   ['isuminuser',['isUMinuser',['../d2/dad/UnaryMinus_8hpp.html#a22e1516be70080cc9154838f179d721f',1,'SUNphi']]],
   ['isvalidcompmerge',['isValidCompMerge',['../d8/df8/classSUNphi_1_1TensKind.html#a428b037577568e928eb1d325b1ee4337',1,'SUNphi::TensKind']]],

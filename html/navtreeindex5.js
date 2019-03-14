@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"d9/d0c/ScalarWrap_8hpp.html":[3,0,2,10,11],
+"d9/d0c/ScalarWrap_8hpp.html#a1ea11c9e4ce27cbd63594eb23b0e0b9d":[3,0,2,10,11,9],
 "d9/d0c/ScalarWrap_8hpp.html#aa845595f412e422943bd9bf7df9b12ab":[3,0,2,10,11,3],
 "d9/d0c/ScalarWrap_8hpp.html#aba3b615897c6d44ea2d390c598a46d66":[3,0,2,10,11,8],
 "d9/d0c/ScalarWrap_8hpp.html#abfa973c17a0f5143e92a2b3b071e8e0b":[3,0,2,10,11,5],
@@ -37,7 +39,6 @@ var NAVTREEINDEX5 =
 "d9/d59/classSUNphi_1_1Sitmo.html#a6da491841b7b1e503212251ea022ba89":[2,0,0,171,12],
 "d9/d59/classSUNphi_1_1Sitmo.html#a7104a59c2cd8cc98be7d403231467419":[2,0,0,171,4],
 "d9/d59/classSUNphi_1_1Sitmo.html#a7af9a41c4fab1c778e18090149f664ab":[2,0,0,171,0],
-"d9/d59/classSUNphi_1_1Sitmo.html#a7b4b6928927021fd96c2969dacb44608":[2,0,0,171,14],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8024913efb3328b0c330f5034e3ae722":[2,0,0,171,3],
 "d9/d59/classSUNphi_1_1Sitmo.html#a8090e33b087bad1992849a8e50fefc2f":[2,0,0,171,7],
 "d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a":[2,0,0,171,1],
@@ -46,6 +47,7 @@ var NAVTREEINDEX5 =
 "d9/d59/classSUNphi_1_1Sitmo.html#ad9f59655f5105c8b7f428fc15b0b928b":[2,0,0,171,10],
 "d9/d59/classSUNphi_1_1Sitmo.html#ada6109918f60efb5f44d81753ec80474":[2,0,0,171,9],
 "d9/d59/classSUNphi_1_1Sitmo.html#ae5917fa9a7fc84a5020a1ccc8bd11ee7":[2,0,0,171,18],
+"d9/d59/classSUNphi_1_1Sitmo.html#ae893834f6c080a9f10396d7d47e04240":[2,0,0,171,14],
 "d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e":[2,0,0,171,11],
 "d9/d59/classSUNphi_1_1Sitmo.html#af60790b3a5c06020c78d1ebd3e1cb511":[2,0,0,171,13],
 "d9/d67/structSUNphi_1_1BaseNnarySmET.html":[2,0,0,49],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "db/d12/classSUNphi_1_1ScalarWrapper.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,160,13],
 "db/d12/classSUNphi_1_1ScalarWrapper.html#a6e34458973aaa74b2e99f8a3e9ae8293":[2,0,0,160,30],
 "db/d12/classSUNphi_1_1ScalarWrapper.html#a7ca2fcd1c8ee9826d5073bfcfdf5161e":[2,0,0,160,15],
-"db/d12/classSUNphi_1_1ScalarWrapper.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,160,23],
-"db/d12/classSUNphi_1_1ScalarWrapper.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,160,14],
-"db/d12/classSUNphi_1_1ScalarWrapper.html#a9555b862251cf9ac6b44ba51d410e62c":[2,0,0,160,18]
+"db/d12/classSUNphi_1_1ScalarWrapper.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,160,23]
 };

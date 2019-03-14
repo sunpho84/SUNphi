@@ -41,6 +41,7 @@ var NAVTREEINDEX0 =
 "d0/d81/TypeTraits_8hpp.html#a046e6058a8f86ab1b1925e2c2219c98f":[3,0,2,6,6,32],
 "d0/d81/TypeTraits_8hpp.html#a0599cb789276721d74cf627d5afb69d6":[3,0,2,6,6,50],
 "d0/d81/TypeTraits_8hpp.html#a130705d0bff33be66e7706f70ab50bff":[3,0,2,6,6,45],
+"d0/d81/TypeTraits_8hpp.html#a1456093270e5eab792ae6cfe8799061d":[3,0,2,6,6,68],
 "d0/d81/TypeTraits_8hpp.html#a1ad2bab3a59f777bdd42b868c4f0e67f":[3,0,2,6,6,27],
 "d0/d81/TypeTraits_8hpp.html#a1c4974d735fdbc7662ba385df3522326":[3,0,2,6,6,26],
 "d0/d81/TypeTraits_8hpp.html#a1d3772a973a3d548ebb77945ff881e6b":[3,0,2,6,6,47],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "d1/d9b/Assign_8hpp.html#aa7856fbb60a94cf98179f23f59c5ddfe":[3,0,2,10,2,4],
 "d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad":[3,0,2,10,2,3],
 "d1/d9b/Assign_8hpp_source.html":[3,0,2,10,2],
-"d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html":[2,0,0,142],
-"d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a1ea8a6e7249c4ebdb93dec44b29a90d7":[2,0,0,142,4]
+"d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html":[2,0,0,142]
 };

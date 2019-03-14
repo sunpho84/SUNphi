@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"d5/d1c/classSUNphi_1_1RelBinder.html#a6f0c894d0eb4186da2ef1c2ca8254d42":[2,0,0,157,42],
+"d5/d1c/classSUNphi_1_1RelBinder.html#a7564b94de2e11f60b0e681c0f3f49246":[2,0,0,157,26],
 "d5/d1c/classSUNphi_1_1RelBinder.html#a7dd1f26fe442d88b47dea11b09ba849f":[2,0,0,157,19],
 "d5/d1c/classSUNphi_1_1RelBinder.html#a7ebb541dcf762d82be10aba9cdc56051":[2,0,0,157,5],
 "d5/d1c/classSUNphi_1_1RelBinder.html#a8236bf435ac2125d31cadc98a79fff10":[2,0,0,157,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2ab4fb3c69349d00aa17b9eac75c701a7c":[2,0,0,181,2,1],
 "d6/de9/classSUNphi_1_1Timer.html#a116b5be176225ced556d6768214ac578":[2,0,0,181,21],
 "d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a":[2,0,0,181,4],
-"d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2":[2,0,0,181,16],
-"d6/de9/classSUNphi_1_1Timer.html#a373c8895ca3f3a2de54dad0d90451832":[2,0,0,181,8],
-"d6/de9/classSUNphi_1_1Timer.html#a42da6568f44e8b8a1379627cf1a01ffb":[2,0,0,181,23]
+"d6/de9/classSUNphi_1_1Timer.html#a210bb6d40c9e6c21404a9ddae1eabaf2":[2,0,0,181,16]
 };

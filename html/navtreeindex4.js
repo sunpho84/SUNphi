@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"d6/de9/classSUNphi_1_1Timer.html#a373c8895ca3f3a2de54dad0d90451832":[2,0,0,181,8],
+"d6/de9/classSUNphi_1_1Timer.html#a42da6568f44e8b8a1379627cf1a01ffb":[2,0,0,181,23],
 "d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4":[2,0,0,181,27],
 "d6/de9/classSUNphi_1_1Timer.html#a68decdbd91c803736fd4e9a54bb283a7":[2,0,0,181,22],
 "d6/de9/classSUNphi_1_1Timer.html#a6e0cff1240972c71327056a5cd6be3b2":[2,0,0,181,20],
@@ -194,9 +196,9 @@ var NAVTREEINDEX4 =
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html":[2,0,0,8],
 "d8/dd7/structSUNphi_1_1__EnableIf_3_01true_00_01T_01_4.html#ae49e3f4866a57740c2180ce944c47895":[2,0,0,8,0],
 "d8/dd8/classSUNphi_1_1Serializer.html":[2,0,0,169],
-"d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,169,3],
 "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,169,4],
 "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,169,5],
+"d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904":[2,0,0,169,3],
 "d8/dd8/classSUNphi_1_1Serializer.html#a686343edd0276597ee81873bd07aaee4":[2,0,0,169,6],
 "d8/dd8/classSUNphi_1_1Serializer.html#a83deafc3cc99bb51537348ff3139750f":[2,0,0,169,7],
 "d8/dd8/classSUNphi_1_1Serializer.html#a892eeb937a18195d58f3908c627490d4":[2,0,0,169,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "d8/dfe/structSUNphi_1_1HasMember__eval.html#a27f4860a1bb37d047fa12c81e5b48bd1":[2,0,0,131,4],
 "d8/dfe/structSUNphi_1_1HasMember__eval.html#a423efc6d1ee0cd26575803a37d4c2189":[2,0,0,131,6],
 "d8/dfe/structSUNphi_1_1HasMember__eval.html#a64f2103496081bb9a72947fac3634253":[2,0,0,131,5],
-"d9/d02/structSUNphi_1_1ConstrainHasMember__isAliasing.html":[2,0,0,94],
-"d9/d0c/ScalarWrap_8hpp.html":[3,0,2,10,11],
-"d9/d0c/ScalarWrap_8hpp.html#a1ea11c9e4ce27cbd63594eb23b0e0b9d":[3,0,2,10,11,9]
+"d9/d02/structSUNphi_1_1ConstrainHasMember__isAliasing.html":[2,0,0,94]
 };

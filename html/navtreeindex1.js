@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a1ea8a6e7249c4ebdb93dec44b29a90d7":[2,0,0,142,4],
 "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a1fcd64b6b8e866e3f27da57b42d1dc53":[2,0,0,142,5],
 "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a55b0cc5cf8c4c548850a4111725ba717":[2,0,0,142,7],
 "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#abcdac53d4cadcceb6df4880b5c7bcafd":[2,0,0,142,6],
@@ -159,9 +160,10 @@ var NAVTREEINDEX1 =
 "d2/d8f/Conj_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,10,6,9],
 "d2/d8f/Conj_8hpp_source.html":[3,0,2,10,6],
 "d2/d95/classSUNphi_1_1TrueRandomGenerator.html":[2,0,0,183],
-"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#a43821254f8917b3cc6696998441a0f6c":[2,0,0,183,2],
-"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aee663bce2f3cbfebbd6b089448f7501d":[2,0,0,183,1],
-"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aff8b811510a629a33f70f57819ef4875":[2,0,0,183,0],
+"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#a43821254f8917b3cc6696998441a0f6c":[2,0,0,183,3],
+"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aee663bce2f3cbfebbd6b089448f7501d":[2,0,0,183,2],
+"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aeed227ee999f9cdbee22c2e06f80ac07":[2,0,0,183,0],
+"d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aff8b811510a629a33f70f57819ef4875":[2,0,0,183,1],
 "d2/d98/structSUNphi_1_1BaseBinarySmET.html":[2,0,0,44],
 "d2/d9d/structSUNphi_1_1TensKind_1_1__Merged.html":[2,0,0,176,3],
 "d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html":[2,0,0,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d3/d78/classSUNphi_1_1Logger.html":[2,0,0,150],
 "d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43":[2,0,0,150,6],
 "d3/d78/classSUNphi_1_1Logger.html#a144bd23775889591cc4ad07f1f0cda7d":[2,0,0,150,9],
-"d3/d78/classSUNphi_1_1Logger.html#a17fb5c9ba1b9f68683c5c736663f84bd":[2,0,0,150,16],
-"d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265":[2,0,0,150,1],
-"d3/d78/classSUNphi_1_1Logger.html#a1e201885b341e4d45b173b5c3ab79265a874c43b50a3e67846cc79ef44c4d681e":[2,0,0,150,1,2]
+"d3/d78/classSUNphi_1_1Logger.html#a17fb5c9ba1b9f68683c5c736663f84bd":[2,0,0,150,16]
 };

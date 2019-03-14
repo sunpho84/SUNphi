@@ -56,6 +56,6 @@ var searchData=
   ['boundtopos',['boundToPos',['../d5/d1c/classSUNphi_1_1RelBinder.html#a4d485b2bd2abb5dc52a45c4b2bfc30d8',1,'SUNphi::RelBinder']]],
   ['boundtotype',['BoundToType',['../d5/d1c/classSUNphi_1_1RelBinder.html#a14bd9929c092d8396017ce7d868de1a5',1,'SUNphi::RelBinder']]],
   ['boundtype',['BoundType',['../d5/d1c/classSUNphi_1_1RelBinder.html#ae0060cfd328495991431229cdab3db78',1,'SUNphi::RelBinder']]],
-  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ad34acf5f50a4b00f6ac9e35cc0cc6f21',1,'SUNphi::Mpi']]],
+  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ab55fffb524901724a3cdfc579576833c',1,'SUNphi::Mpi::broadcast(T *x, const size_t &amp;size, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a1e61a5b33e1025cf13d50eb4b7ac64e1',1,'SUNphi::Mpi::broadcast(T &amp;x, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a86f6042b58b9e2c202ff02690d3e0ca6',1,'SUNphi::Mpi::broadcast(Binarizable&lt; T &gt; &amp;val, int root=MASTER_RANK) const ']]],
   ['buf',['buf',['../d2/d66/classSUNphi_1_1Binarizer.html#ab2511ba72b981863ad37e2e3c8c16301',1,'SUNphi::Binarizer']]]
 ];

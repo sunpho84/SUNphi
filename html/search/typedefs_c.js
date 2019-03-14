@@ -11,5 +11,6 @@ var searchData=
   ['removecv',['RemoveCV',['../d0/d81/TypeTraits_8hpp.html#a309c8f787f444f852361c4c5ca5cfe87',1,'SUNphi']]],
   ['remref',['RemRef',['../d0/d81/TypeTraits_8hpp.html#ab290633402c10ad172b0fc891efec90a',1,'SUNphi']]],
   ['res',['Res',['../dd/dae/classSUNphi_1_1__FilterVariadicList_3_01F_00_01IntSeq_3_01P_8_8_8_01_4_00_01T_8_8_8_01_4.html#a57f813d082ad801ef84a3f4fe632d395',1,'SUNphi::_FilterVariadicList&lt; F, IntSeq&lt; P... &gt;, T... &gt;']]],
+  ['resulttype',['ResultType',['../d2/d95/classSUNphi_1_1TrueRandomGenerator.html#aeed227ee999f9cdbee22c2e06f80ac07',1,'SUNphi::TrueRandomGenerator']]],
   ['rw',['Rw',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740',1,'SUNphi::TwinTensCompOf&lt; Spin &gt;::Rw()'],['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html#ab8eb572fc9bc9674a77042e1a5b8e66f',1,'SUNphi::TwinTensCompOf&lt; Col &gt;::Rw()']]]
 ];

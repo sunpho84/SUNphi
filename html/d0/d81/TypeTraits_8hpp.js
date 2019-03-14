@@ -67,5 +67,6 @@ var TypeTraits_8hpp =
     [ "isLvalue", "d0/d81/TypeTraits_8hpp.html#a31cbd161e017ef6fd57019e099d59ce4", null ],
     [ "isRvalue", "d0/d81/TypeTraits_8hpp.html#a1eb85031c83b699bc6b54c6a864b1af2", null ],
     [ "isSame", "d0/d81/TypeTraits_8hpp.html#afc7db564dd647bc10933eb0a67248b8c", null ],
-    [ "isSame< T, T >", "d0/d81/TypeTraits_8hpp.html#a4e2ebf308cda3504417f00d9ce87c057", null ]
+    [ "isSame< T, T >", "d0/d81/TypeTraits_8hpp.html#a4e2ebf308cda3504417f00d9ce87c057", null ],
+    [ "isTriviallyCopyable", "d0/d81/TypeTraits_8hpp.html#a1456093270e5eab792ae6cfe8799061d", null ]
 ];

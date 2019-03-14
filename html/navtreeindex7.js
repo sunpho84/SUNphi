@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"dc/d88/Tuple_8hpp.html":[3,0,2,31],
+"dc/d88/Tuple_8hpp_source.html":[3,0,2,31],
 "dc/d8f/TensClass_8hpp.html":[3,0,2,12,1],
 "dc/d8f/TensClass_8hpp.html#a166cff0921d5dfd963f04caee8301f84":[3,0,2,12,1,6],
 "dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed":[3,0,2,12,1,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "de/d2d/TupleOrder_8hpp.html#abc7e2f156d73be4e7b75c0b2f13d06d9":[3,0,2,14,3,1],
 "de/d2d/TupleOrder_8hpp.html#acce3c95aefe2f639a99026d32a5c48f0":[3,0,2,14,3,3],
 "de/d2d/TupleOrder_8hpp.html#ae5c8d825e6c25b7bcba64a7820bd8dd7":[3,0,2,14,3,6],
-"de/d2d/TupleOrder_8hpp_source.html":[3,0,2,14,3],
-"de/d33/classSUNphi_1_1Combinatorial.html":[2,0,0,66],
-"de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db":[2,0,0,66,9]
+"de/d2d/TupleOrder_8hpp_source.html":[3,0,2,14,3]
 };
