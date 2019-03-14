@@ -29,6 +29,7 @@ namespace SUNphi
   /// Class providing access to a list of serializable scalar members
   template <typename T>
   class SerializableClass :
+    public Serializable<SerializableClass<T>>,
     public Binarizable<SerializableClass<T>>
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);

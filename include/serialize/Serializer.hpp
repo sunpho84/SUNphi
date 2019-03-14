@@ -10,7 +10,9 @@
 #include <yaml-cpp/yaml.h>
 
 #include <metaprogramming/SFINAE.hpp>
+#include <serialize/Base.hpp>
 #include <serialize/Scalar.hpp>
+#include <serialize/Serializable.hpp>
 
 namespace SUNphi
 {
@@ -105,6 +107,33 @@ namespace SUNphi
     {
     }
   };
+  
+  /// Creates a string out of a serializable
+  template <typename T>
+  std::string Serializable<T>::serialize()
+      const
+  {
+    /// Serializer used to create the string
+    Serializer ser;
+    
+    ser<<
+      (~(*this));
+    
+    return
+      ser.get();
+  }
+  
+  /// Stream operator using serialize method
+  template <typename S,
+	    typename T>
+  S& operator<<(S&& stream,
+		const Serializable<T>& ser)
+    {
+      return
+	stream<<
+	  ser.serialize();
+    }
+  
 }
 
 #endif

@@ -11,5 +11,6 @@
 #include <serialize/Members.hpp>
 #include <serialize/Scalar.hpp>
 #include <serialize/Serializer.hpp>
+#include <serialize/Serializable.hpp>
 
 #endif

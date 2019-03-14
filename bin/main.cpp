@@ -79,21 +79,20 @@ int main()
   Serializer ser2;
   ser2<<t2;
   
-  runLog()<<ser.get().c_str();
-  runLog()<<ser2.get().c_str();
+  runLog()<<t2;
+  
+  // Binarizer bin=t2.binarize();
+  // runLog()<<bin.size();
 
-  Binarizer bin=t2.binarize();
-  runLog()<<bin.size();
+  // t2().ciccio="scompigliato";
+  // t2().test().a=1235;
+  // ser2<<t2;
+  // runLog()<<ser2.get();
 
-  t2().ciccio="scompigliato";
-  t2().test().a=1235;
-  ser2<<t2;
-  runLog()<<ser2.get();
-
-	    t2.deBinarize(bin);
-  Serializer ser3;
-  ser3<<t2;
-  runLog()<<ser3.get();
+  // 	    t2.deBinarize(bin);
+  // Serializer ser3;
+  // ser3<<t2;
+  // runLog()<<ser3.get();
   
   
   // double d;

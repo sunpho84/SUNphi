@@ -11,9 +11,9 @@
 
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
-
 #include <serialize/Base.hpp>
 #include <serialize/Binarize.hpp>
+#include <serialize/Serializable.hpp>
 
 namespace SUNphi
 {
@@ -66,6 +66,7 @@ namespace SUNphi
 	    typename TDef=NoDefault>
   class SerializableScalar :
     public SerializableDefaultValue<TDef>,
+    public Serializable<SerializableScalar<T,TDef>>,
     public Binarizable<SerializableScalar<T,TDef>>
   {
     /// Stored variable
