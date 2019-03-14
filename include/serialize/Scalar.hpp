@@ -65,7 +65,8 @@ namespace SUNphi
   template <typename T,
 	    typename TDef=NoDefault>
   class SerializableScalar :
-    public SerializableDefaultValue<TDef>
+    public SerializableDefaultValue<TDef>,
+    public Binarizable<SerializableScalar<T,TDef>>
   {
     /// Stored variable
     T value;
@@ -130,16 +131,12 @@ namespace SUNphi
 	out<<in();
     }
     
-    /// Creates the binarized version
-    Binarizer binarize()
-      const
+    /// DeBinarize a SerializableScalar
+    friend Binarizer& operator>>(Binarizer& in,                    ///< Input
+				 SerializableScalar& out)          ///< Output
     {
-      /// Output binarizer
-      Binarizer out;
-      
       return
-	out<<
-	*this;
+	in>>out();
     }
     
     /// Used to overload assignment operators

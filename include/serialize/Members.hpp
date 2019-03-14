@@ -28,7 +28,8 @@ namespace SUNphi
   
   /// Class providing access to a list of serializable scalar members
   template <typename T>
-  class SerializableClass
+  class SerializableClass :
+    public Binarizable<SerializableClass<T>>
   {
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
@@ -90,6 +91,22 @@ namespace SUNphi
       return
 	out;
     }
+    
+    /// Iterates on all members to debinarize
+    friend Binarizer& operator>>(Binarizer& in,                   ///< Input
+			         SerializableClass<T>& out)       ///< Output
+    {
+      forEach((~out).serializableMembers(),
+	    [&in](auto& s)
+	    {
+	      in>>
+		s;
+	    });
+      
+      return
+	in;
+    }
+    
   };
   
   /// Provides the class embedding with a serializableMemebers method

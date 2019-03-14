@@ -5,6 +5,7 @@
 ///
 /// \brief Defines the basic serializable features
 
+#include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi
