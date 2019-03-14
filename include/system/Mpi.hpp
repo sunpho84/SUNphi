@@ -15,7 +15,9 @@
 #endif
 
 #include <ios/MinimalLogger.hpp>
+#include <metaprogramming/TypeTraits.hpp>
 #include <system/Timer.hpp>
+#include <serialize/Binarize.hpp>
 #include <utility/SingleInstance.hpp>
 #include <Threads.hpp>
 
@@ -259,26 +261,49 @@ namespace SUNphi
     
     /// Broadcast among all MPI process
     ///
-    /// This is a simple wrapper around the MPI_Bcast function, we
-    /// need something more sophisticated to deal with class
-    /// containing data
-    template <typename T>
-    T broadcast(T&& in,                 ///< Quantity to broadcast
-		int root=MASTER_RANK)   ///< Rank from which to broadcast
+    /// This is a simple wrapper around the MPI_Bcast function
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isTriviallyCopyable<T>)>
+    void broadcast(T* x,                   ///< Quantity to broadcast
+		   const size_t& size,     ///< Size of the quantity to broadcast
+		   int root=MASTER_RANK)   ///< Rank from which to broadcast
       const
     {
-      /// Result
-      T out=
-	in;
+#ifdef USE_MPI
+      minimalLogger(runLog,"%p %d",x,rank());
+      MPI_CRASH_ON_ERROR(MPI_Bcast(x,size,MPI_CHAR,root,MPI_COMM_WORLD),"Broadcasting");
+#endif
+    }
+    
+    /// Broadcast among all MPI process
+    ///
+    /// Accepts trivially copyable structures
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isTriviallyCopyable<T>)>
+    void broadcast(T& x,                   ///< Quantity to broadcast
+		   int root=MASTER_RANK)   ///< Rank from which to broadcast
+      const
+    {
+      broadcast(&x,sizeof(T),root);
+    }
+    
+    /// Broadcast among all MPI process
+    ///
+    /// Accepts all binarizable classes
+    template <typename T>
+    void broadcast(Binarizable<T>& val,    ///< Quantity to broadcast
+		   int root=MASTER_RANK)   ///< Rank from which to broadcast
+      const
+    {
       
 #ifdef USE_MPI
+      Binarizer bin=
+	val.binarize();
       
-      minimalLogger(runLog,"%p %d",&out,rank());
-      MPI_CRASH_ON_ERROR(MPI_Bcast(&out,sizeof(T),MPI_CHAR,root,MPI_COMM_WORLD),"Broadcasting");
+      broadcast(&*bin.begin(),bin.size(),root);
+      
+      val.deBinarize(bin);
 #endif
-      
-      return
-	out;
     }
   };
   

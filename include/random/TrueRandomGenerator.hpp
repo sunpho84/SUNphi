@@ -27,6 +27,10 @@ namespace SUNphi
     /// Rank of which the result is returning
     int returningRank;
     
+    /// Type returned
+    using ResultType=
+      std::random_device::result_type;
+    
   public:
     
     /// Creates specifying the rank to be used for returning
@@ -38,9 +42,16 @@ namespace SUNphi
     /// Returns the inner generated value
     auto operator()()
     {
+      /// Draw the value on every node
+      ResultType val=
+	static_cast<std::random_device*>(this)->operator()();
+      
+      // Broadcast from the preferred node
+      if(returningRank!=Mpi::ALL_RANKS)
+	mpi.broadcast(val,returningRank);
+      
       return
-	mpi.broadcast(static_cast<std::random_device*>(this)->operator()(),
-		      returningRank);
+	val;
     }
   };
   
