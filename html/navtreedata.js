@@ -5,10 +5,11 @@ var NAVTREE =
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -38,16 +39,16 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html",
-"d1/d9b/Assign_8hpp.html#aa7856fbb60a94cf98179f23f59c5ddfe",
-"d3/d78/classSUNphi_1_1Logger.html",
-"d5/d1c/classSUNphi_1_1RelBinder.html#a61f8b42471bdaafa058e9b34235cbb2e",
-"d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2a825e354aa875a5da77d0b491f51f5235",
-"d8/dfe/structSUNphi_1_1HasMember__eval.html#a27ca989cf45db49a89175498308de763",
-"db/d12/classSUNphi_1_1ScalarWrapper.html#a516cfe78362c452bc1e856110127cb81",
-"dc/d7b/classSUNphi_1_1DeSerializer.html#a00f9b134ca2e721850e19be181a7d8a2",
-"de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html",
-"functions_func_r.html"
+"annotated.html",
+"d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad",
+"d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43",
+"d5/d1c/classSUNphi_1_1RelBinder.html#a58574374382c36ad3a09f45debf05a62",
+"d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2",
+"d8/dfe/structSUNphi_1_1HasMember__eval.html",
+"db/d12/classSUNphi_1_1ScalarWrapper.html#a219f27c3923fb56e22f9c949f24330b4",
+"dc/d6b/BaseSmET_8hpp.html#aca323ed86d861a56548b358e8d9be815",
+"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11a",
+"functions_func_b.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

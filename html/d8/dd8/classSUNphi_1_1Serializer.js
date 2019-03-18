@@ -6,6 +6,7 @@ var classSUNphi_1_1Serializer =
     [ "operator<<", "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904", null ],
     [ "operator<<", "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904", null ],
     [ "operator<<", "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904", null ],
+    [ "operator<<", "d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904", null ],
     [ "node", "d8/dd8/classSUNphi_1_1Serializer.html#a686343edd0276597ee81873bd07aaee4", null ],
     [ "onlyNonDef", "d8/dd8/classSUNphi_1_1Serializer.html#a83deafc3cc99bb51537348ff3139750f", null ]
 ];

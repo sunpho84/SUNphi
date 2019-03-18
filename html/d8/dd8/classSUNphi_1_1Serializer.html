@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a686343edd0276597ee81873bd07aaee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a686343edd0276597ee81873bd07aaee4"></a>
-<a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a33e4c00d89c1c9afc8435f3f85b207b1">RefIf</a>&lt; Ref, YAML::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a686343edd0276597ee81873bd07aaee4">node</a></td></tr>
+<a class="el" href="../../d3/dd7/namespaceSUNphi.html#a33e4c00d89c1c9afc8435f3f85b207b1">RefIf</a>&lt; Ref, YAML::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a686343edd0276597ee81873bd07aaee4">node</a></td></tr>
 <tr class="memdesc:a686343edd0276597ee81873bd07aaee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node used to store the serialized data. <br /></td></tr>
 <tr class="separator:a686343edd0276597ee81873bd07aaee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83deafc3cc99bb51537348ff3139750f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83deafc3cc99bb51537348ff3139750f"></a>
@@ -150,13 +150,17 @@ const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
-template&lt;typename T , TypeIf&lt;(not(isSerializableClass&lt; T &gt; or isSerializableScalar&lt; T &gt;)), void * &gt;  = nullptr&gt; </td></tr>
+template&lt;typename T , TypeIf&lt;(not(isSerializableClass&lt; T &gt; or isSerializableScalar&lt; T &gt; or isSerializableSequence&lt; T &gt;)), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
 <tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a non-serializable object. <br /></td></tr>
 <tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
 <tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable scalar.  <a href="#a54cc7139a105d0e1d35408629d480904">More...</a><br /></td></tr>
+<tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isSerializableSequence&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html#a54cc7139a105d0e1d35408629d480904">operator&lt;&lt;</a> (<a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a> &amp;ser, const T &amp;t)</td></tr>
+<tr class="memdesc:a54cc7139a105d0e1d35408629d480904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a serializable sequence.  <a href="#a54cc7139a105d0e1d35408629d480904">More...</a><br /></td></tr>
 <tr class="separator:a54cc7139a105d0e1d35408629d480904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54cc7139a105d0e1d35408629d480904"><td class="memTemplParams" colspan="2"><a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
 template&lt;typename T , TypeIf&lt;(isSerializableClass&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
@@ -170,7 +174,7 @@ class SUNphi::Serializer&lt; Ref &gt;</h3>
 
 <p>Convert to string the passed objects. </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa6a9c31f02776df76264c42d7b0bd87c"></a>
 <div class="memitem">
@@ -198,7 +202,7 @@ template&lt;bool Ref = false&gt; </div>
 <p>Returns the associated string. </p>
 <p>Emits the string </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00108">108</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +247,51 @@ template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt
 <p>Creates the node</p>
 <p>Creates the nested serializer, and fills it </p>
 
-<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00047">47</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54cc7139a105d0e1d35408629d480904"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool Ref = false&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , TypeIf&lt;(isSerializableSequence&lt; T &gt;), void * &gt;  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a>&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a>&lt; Ref &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output a serializable sequence. </p>
+<p>Creates the node</p>
+<p>Creates the nested serializer, and fills it </p>
+
+<p>Definition at line <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d5/dcc/Serializer_8hpp_source.html">Serializer.hpp</a>.</p>
 
 </div>
 </div>
@@ -255,7 +303,7 @@ template&lt;typename T , TypeIf&lt;(isSerializableScalar&lt; T &gt;), void * &gt
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>SUNphi</b></li><li class="navelem"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a></li>
+    <li class="navelem"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></li><li class="navelem"><a class="el" href="../../d8/dd8/classSUNphi_1_1Serializer.html">Serializer</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

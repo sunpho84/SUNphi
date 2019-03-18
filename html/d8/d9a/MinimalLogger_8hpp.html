@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('d8/d9a/MinimalLogger_8hpp.html','../..
 
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MinimalLogger.hpp File Reference</div>  </div>
@@ -117,9 +118,15 @@ $(document).ready(function(){initNavTree('d8/d9a/MinimalLogger_8hpp.html','../..
 
 <p><a href="../../d8/d9a/MinimalLogger_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
+<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9a/MinimalLogger_8hpp.html#a983825154c3b066e753ad3641bd04fe1">SUNphi::minimalLogger</a> (Logger &amp;logger, const char *format,...)</td></tr>
+<tr class="memitem:a983825154c3b066e753ad3641bd04fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a983825154c3b066e753ad3641bd04fe1">SUNphi::minimalLogger</a> (Logger &amp;logger, const char *format,...)</td></tr>
 <tr class="separator:a983825154c3b066e753ad3641bd04fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -127,53 +134,7 @@ Functions</h2></td></tr>
 <p>This file can be included in place of <a class="el" href="../../d9/d11/Logger_8hpp.html" title="Header file to define a logger wrapping FILE*. ">Logger.hpp</a>, in case the former cannot be included due to missing requirements, e.g. in presence of routine from which the actual logger depends, such as threads or MPI. The actual logger is called in the cpp file </p>
 
 <p>Definition in file <a class="el" href="../../d8/d9a/MinimalLogger_8hpp_source.html">MinimalLogger.hpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_a983825154c3b066e753ad3641bd04fe1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SUNphi::minimalLogger </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html">Logger</a> &amp;&#160;</td>
-          <td class="paramname"><em>logger</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Wraps the actual logger through the old-style C variadic function</p>
-<p>We cannot use variadic template version here, as the logger cannot be called directly here, since "Logger.hpp" is expected </p>
-<p>Starts the variadic arguments</p>
-<p>Starts the variadic arguments </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logger</td><td><a class="el" href="../../d3/d78/classSUNphi_1_1Logger.html" title="Write output to a file, using different level of indentation. ">Logger</a> to be used </td></tr>
-    <tr><td class="paramname">format</td><td>Formatting string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/d2b/SUNphi_8cpp_source.html">SUNphi.cpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

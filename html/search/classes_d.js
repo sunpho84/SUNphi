@@ -29,6 +29,7 @@ var searchData=
   ['serializablescalar_3c_20double_2c_20decltype_2810_2e0_29_3e',['SerializableScalar&lt; double, decltype(10.0)&gt;',['../d1/d97/classSUNphi_1_1SerializableScalar.html',1,'SUNphi']]],
   ['serializablescalar_3c_20std_3a_3astring_2c_20decltype_28_22ciaccio_22_29_3e',['SerializableScalar&lt; std::string, decltype(&quot;ciaccio&quot;)&gt;',['../d1/d97/classSUNphi_1_1SerializableScalar.html',1,'SUNphi']]],
   ['serializablescalar_3c_20sunphi_3a_3atest_2c_20decltype_28no_5fdefault_29_3e',['SerializableScalar&lt; SUNphi::Test, decltype(NO_DEFAULT)&gt;',['../d1/d97/classSUNphi_1_1SerializableScalar.html',1,'SUNphi']]],
+  ['serializablesequence',['SerializableSequence',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['serializer',['Serializer',['../d8/dd8/classSUNphi_1_1Serializer.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],

@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('dd/d32/Scalar_8hpp.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -120,24 +121,21 @@ $(document).ready(function(){initNavTree('dd/d32/Scalar_8hpp.html','../../');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d3/db2/Base_8hpp_source.html">serialize/Base.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/df0/Binarize_8hpp_source.html">serialize/Binarize.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../da/def/Default_8hpp_source.html">serialize/Default.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/d15/Serializable_8hpp_source.html">serialize/Serializable.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../dd/d32/Scalar_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2b/classSUNphi_1_1NoDefault.html">SUNphi::NoDefault</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks that the value has no default value.  <a href="../../d9/d2b/classSUNphi_1_1NoDefault.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html">SUNphi::SerializableDefaultValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a default value for a serializable reference.  <a href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html">SUNphi::SerializableDefaultValue&lt; NoDefault &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide no default value for a serializable reference.  <a href="../../d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SUNphi::SerializableScalar&lt; T, TDef &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
+<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -152,30 +150,22 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a22744e1376ccc4da22df48329899e440"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
-<tr class="memitem:a22744e1376ccc4da22df48329899e440"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a22744e1376ccc4da22df48329899e440">SUNphi::EnableIfIsSerializableScalar</a> = EnableIf&lt; isSerializableScalar&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="memitem:a22744e1376ccc4da22df48329899e440"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a22744e1376ccc4da22df48329899e440">SUNphi::EnableIfIsSerializableScalar</a> = EnableIf&lt; isSerializableScalar&lt; T &gt;,Ret &gt;</td></tr>
 <tr class="separator:a22744e1376ccc4da22df48329899e440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a18519480525d4c6999ba6fbae9b74d95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a18519480525d4c6999ba6fbae9b74d95"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a18519480525d4c6999ba6fbae9b74d95">SUNphi::_isSerializableScalar</a> (const T *)</td></tr>
+<tr class="memitem:a18519480525d4c6999ba6fbae9b74d95"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a18519480525d4c6999ba6fbae9b74d95">SUNphi::_isSerializableScalar</a> (const T *)</td></tr>
 <tr class="separator:a18519480525d4c6999ba6fbae9b74d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dad73501f6624f35419ddb134d011be"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
-<tr class="memitem:a1dad73501f6624f35419ddb134d011be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a1dad73501f6624f35419ddb134d011be">SUNphi::_isSerializableScalar</a> (const SerializableScalar&lt; Ts... &gt; *)</td></tr>
+<tr class="memitem:a1dad73501f6624f35419ddb134d011be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1dad73501f6624f35419ddb134d011be">SUNphi::_isSerializableScalar</a> (const SerializableScalar&lt; Ts... &gt; *)</td></tr>
 <tr class="separator:a1dad73501f6624f35419ddb134d011be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a34694b80ec637e9f63defff23e4f5a26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34694b80ec637e9f63defff23e4f5a26"></a>
-static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a34694b80ec637e9f63defff23e4f5a26">SUNphi::NO_DEFAULT</a></td></tr>
-<tr class="memdesc:a34694b80ec637e9f63defff23e4f5a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark that no default value is provided. <br /></td></tr>
-<tr class="separator:a34694b80ec637e9f63defff23e4f5a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a808d5d4934f81fe8b47a30f5e2560938"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a808d5d4934f81fe8b47a30f5e2560938"></a>
-static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a808d5d4934f81fe8b47a30f5e2560938">SUNphi::MANDATORY</a></td></tr>
-<tr class="memdesc:a808d5d4934f81fe8b47a30f5e2560938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark the mandatoriety of the variable. <br /></td></tr>
-<tr class="separator:a808d5d4934f81fe8b47a30f5e2560938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d32/Scalar_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8">SUNphi::isSerializableScalar</a> = _isSerializableScalar ((RemRef&lt;T&gt;*)nullptr)</td></tr>
+<tr class="memitem:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a6ee72ac4141adbbabbf24066dd751eb8">SUNphi::isSerializableScalar</a> = _isSerializableScalar ((RemRef&lt;T&gt;*)nullptr)</td></tr>
 <tr class="separator:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -215,7 +205,7 @@ static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a
 <b>Value:</b><div class="fragment"><div class="line">SerializableScalar&lt;TYPE,decltype(DEFAULT)&gt;              \</div><div class="line">     NAME{#NAME,DEFAULT}</div></div><!-- fragment -->
 <p>Create a serializable scalar. </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00163">163</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,90 +226,7 @@ static constexpr NoDefault&#160;</td><td class="memItemRight" valign="bottom"><a
 </div><!-- fragment -->
 <p>Used to overload assignment operators. </p>
 
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00144">144</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="file_a22744e1376ccc4da22df48329899e440"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename Ret  = void&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="../../dd/d32/Scalar_8hpp.html#a22744e1376ccc4da22df48329899e440">SUNphi::EnableIfIsSerializableScalar</a> = typedef EnableIf&lt; isSerializableScalar &lt;T&gt; ,Ret&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Provides the class itself if T is of the given type</p>
-<p>Provides the class itself if T satisfies the condition </p>
-
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_a18519480525d4c6999ba6fbae9b74d95"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool SUNphi::_isSerializableScalar </td>
-          <td>(</td>
-          <td class="paramtype">const T *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
-<p>False case </p>
-
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="file_a1dad73501f6624f35419ddb134d011be"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Ts&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool SUNphi::_isSerializableScalar </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; Ts... &gt; *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
-<p>True case </p>
-
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="file_a6ee72ac4141adbbabbf24066dd751eb8"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool SUNphi::isSerializableScalar = _isSerializableScalar ((RemRef&lt;T&gt;*)nullptr)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Check if the class is a <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
-<p>Calls the internal implementation </p>
-
-<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00169">169</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dd/d32/Scalar_8hpp_source.html#l00102">102</a> of file <a class="el" href="../../dd/d32/Scalar_8hpp_source.html">Scalar.hpp</a>.</p>
 
 </div>
 </div>
