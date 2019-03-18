@@ -64,7 +64,7 @@ int main()
   
   
   // SerializableScalar<Test> test{"test",{}};
-  SerializableScalar<Test2> t2{"t2",NO_DEFAULT};
+  SERIALIZABLE_SCALAR(Test2,t2,NO_DEFAULT);
   
   // test().a=11.0;
   // runLog()<<test().a();

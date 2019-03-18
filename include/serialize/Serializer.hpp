@@ -12,6 +12,7 @@
 #include <metaprogramming/SFINAE.hpp>
 #include <serialize/Base.hpp>
 #include <serialize/Scalar.hpp>
+#include <serialize/Sequence.hpp>
 #include <serialize/Serializable.hpp>
 
 namespace SUNphi
@@ -30,7 +31,7 @@ namespace SUNphi
     
     /// Output a non-serializable object
     template <typename T,
-	      SFINAE_ON_TEMPLATE_ARG(not (isSerializableClass<T> or isSerializableScalar<T>))>
+	      SFINAE_ON_TEMPLATE_ARG(not (isSerializableClass<T> or isSerializableScalar<T> or isSerializableSequence<T>))>
     friend Serializer& operator<<(Serializer& ser,
 				  const T& t)
     {
@@ -57,6 +58,29 @@ namespace SUNphi
 	  Serializer<true> nested(rc,ser.onlyNonDef);
 	  nested<<
 	    t();
+	}
+      
+      return
+	ser;
+    }
+    
+    /// Output a serializable sequence
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isSerializableSequence<T>)>
+    friend Serializer& operator<<(Serializer& ser,
+				  const T& t)
+    {
+      if(not (ser.onlyNonDef and t.isDefault()))
+	{
+	  /// Creates the node
+	  auto rc=
+	    ser.node[t.name];
+	  
+	  /// Creates the nested serializer, and fills it
+	  Serializer<true> nested(rc,ser.onlyNonDef);
+	  for(auto& ti : t)
+	    nested<<
+	    ti;
 	}
       
       return
