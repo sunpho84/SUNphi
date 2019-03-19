@@ -3,7 +3,7 @@ var searchData=
   ['random_2ehpp',['Random.hpp',['../dd/d6e/Random_8hpp.html',1,'']]],
   ['range',['Range',['../d2/d37/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_01_4_00_01IntSeq_3_01IGroups_8_8_8_01_4_01_4.html#a222d0d7e9ca68eecbb45b87eae6074b5',1,'SUNphi::TensKind::_Merged&lt; IntSeq&lt; IDelims... &gt;, IntSeq&lt; IGroups... &gt; &gt;']]],
   ['ranges_2ehpp',['Ranges.hpp',['../dd/d15/Ranges_8hpp.html',1,'']]],
-  ['rangeseq',['rangeSeq',['../d3/dd7/namespaceSUNphi.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi::rangeSeq()'],['../d3/dd7/namespaceSUNphi.html#ac6a4b17d20c20aa9fa3428f1233d6190',1,'SUNphi::RangeSeq()']]],
+  ['rangeseq',['RangeSeq',['../d3/dd7/namespaceSUNphi.html#ac6a4b17d20c20aa9fa3428f1233d6190',1,'SUNphi::RangeSeq()'],['../d3/dd7/namespaceSUNphi.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi::rangeSeq()']]],
   ['rank',['rank',['../df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485',1,'SUNphi::Mpi']]],
   ['rc',['rc',['../d5/d99/classSUNphi_1_1File.html#a99d947e611d2b6fb4d58babc1cb04c3b',1,'SUNphi::File']]],
   ['readadvancing',['readAdvancing',['../d2/d66/classSUNphi_1_1Binarizer.html#a5a0ae8cb12a8090584d90aee2eb36c74',1,'SUNphi::Binarizer']]],
