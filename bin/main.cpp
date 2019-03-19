@@ -17,11 +17,18 @@ namespace SUNphi
     public SerializableClass<Test>
   {
   public:
+    using E=std::pair<double,double>;
+    using F=std::vector<double>;
+    //decltype(_serializableScalar(static_cast<E*>(nullptr),"a",10.0,20.0)) a{"a",10.0,20.0};
+
+    SerializableScalar<E> a{"a",{10.0,'c'}};
     
-    SERIALIZABLE_SCALAR(double,a,10.0);
-    SERIALIZABLE_SCALAR(double,b,1);
+    //SERIALIZABLE_SCALAR(F,c,{10,20});
+    //SERIALIZABLE_VECTOR(double,v,10);
+    SerializableScalar<double> b{"b",1};
     
-    SERIALIZABLE_MEMBERS(a,b);
+    SERIALIZABLE_MEMBERS(a,// v,
+			 b);
     
     Test()
     {
@@ -34,8 +41,8 @@ namespace SUNphi
   {
   public:
     
-    SERIALIZABLE_SCALAR(Test,test,NO_DEFAULT);
-    SERIALIZABLE_SCALAR(std::string,ciccio,"ciaccio");
+    SerializableScalar<Test,NO_DEFAULT> test{"test"};
+    SerializableScalar<std::string> ciccio{"ciccio","ciaccio"};
     
     SERIALIZABLE_MEMBERS(test,ciccio);
   };
@@ -64,7 +71,7 @@ int main()
   
   
   // SerializableScalar<Test> test{"test",{}};
-  SERIALIZABLE_SCALAR(Test2,t2,NO_DEFAULT);
+  SerializableScalar<Test2,NO_DEFAULT> t2{"t2"};
   
   // test().a=11.0;
   // runLog()<<test().a();

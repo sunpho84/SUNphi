@@ -10,22 +10,23 @@
 
 namespace SUNphi
 {
-  /// Marks that the value has no default value
-  class NoDefault
-  {
-  };
-  
   /// Used to mark that no default value is provided
   [[ maybe_unused ]]
-  static constexpr NoDefault NO_DEFAULT;
+  static constexpr bool NO_DEFAULT=
+    false;
   
   /// Used to mark the mandatoriety of the variable
   [[ maybe_unused ]]
-  static constexpr NoDefault MANDATORY;
+  constexpr bool MANDATORY=
+    false;
+  
+  template <typename T,
+	    bool>
+  class SerializableDefaultValue;
   
   /// Provide a default value for a serializable reference
   template <typename T>
-  class SerializableDefaultValue
+  class SerializableDefaultValue<T,true>
   {
   public:
     
@@ -33,21 +34,22 @@ namespace SUNphi
     const T def;
     
     /// Store the default value
-    SerializableDefaultValue<T>(const T& def)
-      : def(def)
+    template <typename...TDef>
+    SerializableDefaultValue(TDef&&...def)
+      : def(forw<TDef>(def)...)
     {
       static_assert(not isSerializableClass<T>,"A serializable class has already its own defaults");
     }
   };
   
   /// Provide no default value for a serializable reference
-  template <>
-  class SerializableDefaultValue<NoDefault>
+  template <typename T>
+  class SerializableDefaultValue<T,false>
   {
   public:
     
     /// Construct doing nothing
-    SerializableDefaultValue<NoDefault>(const NoDefault&)
+    SerializableDefaultValue(const T&)
     {
     }
   };

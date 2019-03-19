@@ -21,11 +21,11 @@ namespace SUNphi
   ///
   /// Provides name and default value
   template <typename T,
-	    typename TDef=NoDefault>
+	    bool HasDefault=true>
   class SerializableScalar :
-    public SerializableDefaultValue<TDef>,
-    public Serializable<SerializableScalar<T,TDef>>,
-    public Binarizable<SerializableScalar<T,TDef>>
+    public SerializableDefaultValue<T,HasDefault>,
+    public Serializable<SerializableScalar<T,HasDefault>>,
+    public Binarizable<SerializableScalar<T,HasDefault>>
   {
     /// Stored variable
     T value;
@@ -47,21 +47,29 @@ namespace SUNphi
     
     /// Creates a serializable scalar with default value
     SerializableScalar(const char* name,
-		       const TDef& def)
+		       const T& def={})
       :
-      SerializableDefaultValue<TDef>(def),
+      SerializableDefaultValue<T,HasDefault>(def),
       name(name)
     {
-      static_assert((not isSerializableClass<T>) or isSame<RemoveCV<TDef>,NoDefault>,"A serializable class has his own default members");
+      static_assert((not isSerializableClass<T>) or (not hasDefault),"A serializable class has his own default members");
       
       /// If the variable has default value, copy it
-      if constexpr(not isSame<RemoveCV<TDef>,NoDefault>)
-	value=def;
+      if constexpr(hasDefault)
+	value=this->def;
     }
+    
+    // SerializableScalar(const char* name,
+    // 		       NoDefault)
+    //   :
+    //   SerializableDefaultValue<T,const NoDefault>(NO_DEFAULT),
+    //   name(name)
+    // {
+    // }
     
     /// Store whether the class has a default
     static constexpr bool hasDefault=
-      not isSame<TDef,NoDefault>;
+      HasDefault;
     
     /// Check if the value is default or not
     bool isDefault()
@@ -117,14 +125,22 @@ namespace SUNphi
 #undef TRIVIAL_ASSIGN_OVERLOAD
   };
   
-  /// Create a serializable scalar
-#define SERIALIZABLE_SCALAR(TYPE,					\
-			    NAME,					\
-			    DEFAULT)					\
-  SerializableScalar<TYPE,decltype(DEFAULT)>				\
-     NAME{#NAME,DEFAULT}
+  /// Trait to recognize a class as a serializable scalar
+  ///
+  /// False case
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isSerializableScalar=
+    false;
   
-  DEFINE_IS_THE_TEMPLATED_CLASS(SerializableScalar);
+  /// Trait to recognize a class as a serializable scalar
+  ///
+  /// True case
+  template <typename T,
+	    bool B,
+	    template <typename,bool> typename C>
+  constexpr bool isSerializableScalar<C<T,B>> =
+    true;
 }
 
 #endif
