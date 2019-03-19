@@ -10,6 +10,5 @@ var searchData=
   ['nnarysmet_3c_20tens_3c_20tk_2c_20fund_20_3e_20_3e',['NnarySmET&lt; Tens&lt; TK, FUND &gt; &gt;',['../dc/d2f/structSUNphi_1_1NnarySmET.html',1,'SUNphi']]],
   ['nnarysmet_3c_20transposer_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['NnarySmET&lt; Transposer&lt; _Refs... &gt; &gt;',['../dc/d2f/structSUNphi_1_1NnarySmET.html',1,'SUNphi']]],
   ['nnarysmet_3c_20uminuser_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['NnarySmET&lt; UMinuser&lt; _Refs... &gt; &gt;',['../dc/d2f/structSUNphi_1_1NnarySmET.html',1,'SUNphi']]],
-  ['nnarysmet_3c_20wrapper_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['NnarySmET&lt; Wrapper&lt; _Refs... &gt; &gt;',['../dc/d2f/structSUNphi_1_1NnarySmET.html',1,'SUNphi']]],
-  ['nodefault',['NoDefault',['../d9/d2b/classSUNphi_1_1NoDefault.html',1,'SUNphi']]]
+  ['nnarysmet_3c_20wrapper_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['NnarySmET&lt; Wrapper&lt; _Refs... &gt; &gt;',['../dc/d2f/structSUNphi_1_1NnarySmET.html',1,'SUNphi']]]
 ];

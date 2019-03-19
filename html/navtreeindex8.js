@@ -1,10 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11a":[3,0,2,3,3,0],
-"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa08d0012388564e95c3b4a7407cf04965":[3,0,2,3,3,0,0],
-"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa1b3e1ee9bff86431dea6b181365ba65f":[3,0,2,3,3,0,4],
-"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa344dd8cd533280795b9db82ef0c92749":[3,0,2,3,3,0,6],
-"de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa3c551f0d1a06b4f852d1832daed357bf":[3,0,2,3,3,0,7],
 "de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa493cacf6f6a2ae4798b319b8b9ba9488":[3,0,2,3,3,0,3],
 "de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa5b39c8b553c821e7cddc6da64b5bd2ee":[3,0,2,3,3,0,8],
 "de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11aa9de0e5dd94e861317e74964bed179fa0":[3,0,2,3,3,0,2],
@@ -92,6 +87,9 @@ var NAVTREEINDEX8 =
 "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html#a746c2c9a288b9fe84d132dfb1c4d63d7":[2,0,0,2,1],
 "de/da3/classfuffa.html":[2,0,1],
 "de/da3/classfuffa.html#ac3815f1c5a714dee575b904f413c0400":[2,0,1,0],
+"de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html":[2,0,0,168],
+"de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#a2302ce16a3f7c14dc51b42f0d460caf9":[2,0,0,168,1],
+"de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#a2d0e52a5141512e1748d731a73a2ff4e":[2,0,0,168,0],
 "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html":[2,0,0,139,1],
 "de/dae/structSUNphi_1_1HasMember__ref1_1_1Derived.html#a009c37939d7dbf806853dd4c7c1ab8c4":[2,0,0,139,1,0],
 "de/daf/Containers_8hpp.html":[3,0,2,16],
@@ -156,8 +154,8 @@ var NAVTREEINDEX8 =
 "df/d4a/classSUNphi_1_1BackTraceSymbol.html#aaca10fe8b22efc4353b62c11b3816e4d":[2,0,0,40,2],
 "df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html":[2,0,0,113],
 "df/d7a/LoopUnroll_8hpp_source.html":[3,0,2,6,2],
-"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[1,0,0,0],
+"df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html":[2,0,0,0],
 "df/d85/structSUNphi_1_1HasMember__binSize.html":[2,0,0,129],
 "df/d85/structSUNphi_1_1HasMember__binSize.html#a38dbe300e862a24ce137d52d3fe9937c":[2,0,0,129,6],
 "df/d85/structSUNphi_1_1HasMember__binSize.html#a42247416d3375f53813878ea9b0ee734":[2,0,0,129,5],
@@ -246,8 +244,10 @@ var NAVTREEINDEX8 =
 "functions_e.html":[2,3,0,5],
 "functions_enum.html":[2,3,4],
 "functions_f.html":[2,3,0,6],
-"functions_func.html":[2,3,1,0],
 "functions_func.html":[2,3,1],
+"functions_func.html":[2,3,1,0],
 "functions_func_0x7e.html":[2,3,1,21],
-"functions_func_a.html":[2,3,1,1]
+"functions_func_a.html":[2,3,1,1],
+"functions_func_b.html":[2,3,1,2],
+"functions_func_c.html":[2,3,1,3]
 };

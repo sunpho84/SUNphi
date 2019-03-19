@@ -37,6 +37,7 @@ var searchData=
   ['isscalarwrapper',['isScalarWrapper',['../d3/dd7/namespaceSUNphi.html#a1ea11c9e4ce27cbd63594eb23b0e0b9d',1,'SUNphi']]],
   ['isserializableclass',['isSerializableClass',['../d3/dd7/namespaceSUNphi.html#ad1993c830c7b75d0ba840624b34eb4bc',1,'SUNphi']]],
   ['isserializablescalar',['isSerializableScalar',['../d3/dd7/namespaceSUNphi.html#a6ee72ac4141adbbabbf24066dd751eb8',1,'SUNphi']]],
+  ['isserializablescalar_3c_20c_3c_20t_2c_20b_20_3e_20_3e',['isSerializableScalar&lt; C&lt; T, B &gt; &gt;',['../d3/dd7/namespaceSUNphi.html#a537af41d690040569c89a985b4c0808c',1,'SUNphi']]],
   ['isserializablesequence',['isSerializableSequence',['../d3/dd7/namespaceSUNphi.html#a85e04feeefa86c7c31fcfa54bd11f6f4',1,'SUNphi']]],
   ['isshiftingbc',['isShiftingBC',['../dd/dca/classSUNphi_1_1Grid.html#a96f3dfc963664309d6e01c8033658fbb',1,'SUNphi::Grid']]],
   ['issmet',['isSmET',['../d3/dd7/namespaceSUNphi.html#afdeaecae9c2d0a0e0ba908dd998a3663',1,'SUNphi']]],

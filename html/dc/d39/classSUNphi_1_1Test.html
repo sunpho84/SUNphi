@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('dc/d39/classSUNphi_1_1Test.html','../.
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
@@ -131,6 +132,15 @@ Inheritance diagram for SUNphi::Test:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af66eb8a40bdfd8b5023937ff0357af13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af66eb8a40bdfd8b5023937ff0357af13"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>E</b> = std::pair&lt; double, double &gt;</td></tr>
+<tr class="separator:af66eb8a40bdfd8b5023937ff0357af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24d6fee83595b2333ef51dc8154369a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24d6fee83595b2333ef51dc8154369a4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>F</b> = std::vector&lt; double &gt;</td></tr>
+<tr class="separator:a24d6fee83595b2333ef51dc8154369a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aff40e13e54c97732a9680d9205dd4ad3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d39/classSUNphi_1_1Test.html#aff40e13e54c97732a9680d9205dd4ad3">serializableMembers</a> ()</td></tr>
@@ -153,12 +163,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4f84417e858d7fdcf60781f7c4f669ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f84417e858d7fdcf60781f7c4f669ed"></a>
-<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; double,decltype(10.0)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a</b> {&quot;a&quot;, 10.0 }</td></tr>
-<tr class="separator:a4f84417e858d7fdcf60781f7c4f669ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad03c5f7d77048688a4a7800285c41710"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad03c5f7d77048688a4a7800285c41710"></a>
-<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; double,decltype(1)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>b</b> {&quot;b&quot;, 1 }</td></tr>
-<tr class="separator:ad03c5f7d77048688a4a7800285c41710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d7db9c54a9960735e6797394154b2b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d7db9c54a9960735e6797394154b2b2"></a>
+<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; E &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>a</b> {&quot;a&quot;,{10.0,'c'}}</td></tr>
+<tr class="separator:a7d7db9c54a9960735e6797394154b2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60974cc49abc55f27af3da7ee02cefb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60974cc49abc55f27af3da7ee02cefb0"></a>
+<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>b</b> {&quot;b&quot;,1}</td></tr>
+<tr class="separator:a60974cc49abc55f27af3da7ee02cefb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63bf166680080ae33fdddec8dec0e9df"><td class="memItemLeft" ><a class="anchor" id="a63bf166680080ae33fdddec8dec0e9df"></a>
 class {</td></tr>
 <tr class="memitem:a63bf166680080ae33fdddec8dec0e9df"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
@@ -258,7 +268,7 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a clas
 </div><div class="memdoc">
 <p>Gets the reference to the serializable members </p>
 
-<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -284,7 +294,7 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a clas
 </div><div class="memdoc">
 <p>Gets the reference to the serializable members </p>
 
-<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/d0a/main_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

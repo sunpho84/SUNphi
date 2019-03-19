@@ -2,7 +2,7 @@ var searchData=
 [
   ['macros_2ehpp',['Macros.hpp',['../db/d18/Macros_8hpp.html',1,'']]],
   ['makesurealiverisreferenced',['makeSureAliverIsReferenced',['../d3/dd7/namespaceSUNphi.html#ac9d94f5be3ce9e06d10056b98d9e36cf',1,'SUNphi']]],
-  ['mandatory',['MANDATORY',['../d3/dd7/namespaceSUNphi.html#a808d5d4934f81fe8b47a30f5e2560938',1,'SUNphi']]],
+  ['mandatory',['MANDATORY',['../d3/dd7/namespaceSUNphi.html#ada577c9a6dd661325e493d731b78b1ce',1,'SUNphi']]],
   ['map_2ehpp',['Map.hpp',['../dc/dbe/Map_8hpp.html',1,'']]],
   ['mapwithcstrkey',['MapWithCStrKey',['../d3/dd7/namespaceSUNphi.html#aeb2ffa5de9b0bed5c12962cb78b9051b',1,'SUNphi']]],
   ['master_5frank',['MASTER_RANK',['../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0',1,'SUNphi::Mpi']]],

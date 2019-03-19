@@ -13,7 +13,6 @@ var searchData=
   ['enableifisrelbinder',['EnableIfIsRelBinder',['../d3/dd7/namespaceSUNphi.html#acc1a63c9476476fb25fe01317db73dbe',1,'SUNphi']]],
   ['enableifisscalarwrapper',['EnableIfIsScalarWrapper',['../d3/dd7/namespaceSUNphi.html#abfa973c17a0f5143e92a2b3b071e8e0b',1,'SUNphi']]],
   ['enableifisserializableclass',['EnableIfIsSerializableClass',['../d3/dd7/namespaceSUNphi.html#afa016ed11745c99213bb98d80af08a4a',1,'SUNphi']]],
-  ['enableifisserializablescalar',['EnableIfIsSerializableScalar',['../d3/dd7/namespaceSUNphi.html#a22744e1376ccc4da22df48329899e440',1,'SUNphi']]],
   ['enableifisserializablesequence',['EnableIfIsSerializableSequence',['../d3/dd7/namespaceSUNphi.html#ae4edd888340146820dab71b9725bab17',1,'SUNphi']]],
   ['enableifissmet',['EnableIfIsSmET',['../d3/dd7/namespaceSUNphi.html#a17b8601b8fc36c94aebb3d12301bccee',1,'SUNphi']]],
   ['enableifistens',['EnableIfIsTens',['../d3/dd7/namespaceSUNphi.html#ab10764603f7003a12c3bcd526e00a1ce',1,'SUNphi']]],

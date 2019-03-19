@@ -6,7 +6,7 @@ var searchData=
   ['debug_5fthreads',['DEBUG_THREADS',['../db/dbc/Thread_8hpp.html#a03a4f901a8dbb985f457bdfdecbd787a',1,'Thread.hpp']]],
   ['declare_5ftens_5fcomps_5fare_5ftwin',['DECLARE_TENS_COMPS_ARE_TWIN',['../d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14',1,'TwinsComp.hpp']]],
   ['declauto',['DECLAUTO',['../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0',1,'UniversalReferences.hpp']]],
-  ['def',['def',['../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html#a189e6a59dcb25d26e2548016e981d9e2',1,'SUNphi::SerializableDefaultValue::def()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#adb553a9f77990d159f62585b0bc98eee',1,'SUNphi::SerializableSequence::def()']]],
+  ['def',['def',['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#a2302ce16a3f7c14dc51b42f0d460caf9',1,'SUNphi::SerializableDefaultValue&lt; T, true &gt;::def()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#adb553a9f77990d159f62585b0bc98eee',1,'SUNphi::SerializableSequence::def()']]],
   ['default_2ehpp',['Default.hpp',['../da/def/Default_8hpp.html',1,'']]],
   ['define_5fbase_5ftype',['DEFINE_BASE_TYPE',['../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276',1,'TypeTraits.hpp']]],
   ['define_5fbinary_5foperator_5fimplementation_5fcheck',['DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK',['../d0/d81/TypeTraits_8hpp.html#a1fa2058ed52013bcd7060509d667dbea',1,'TypeTraits.hpp']]],

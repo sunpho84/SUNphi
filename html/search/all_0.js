@@ -61,7 +61,6 @@ var searchData=
   ['_5fintsupto',['_IntsUpTo',['../dc/d02/structSUNphi_1_1__IntsUpTo.html',1,'SUNphi']]],
   ['_5fintsupto_3c_200_20_3e',['_IntsUpTo&lt; 0 &gt;',['../de/d18/structSUNphi_1_1__IntsUpTo_3_010_01_4.html',1,'SUNphi']]],
   ['_5fintsupto_3c_201_20_3e',['_IntsUpTo&lt; 1 &gt;',['../d2/da7/structSUNphi_1_1__IntsUpTo_3_011_01_4.html',1,'SUNphi']]],
-  ['_5fisserializablescalar',['_isSerializableScalar',['../d3/dd7/namespaceSUNphi.html#a18519480525d4c6999ba6fbae9b74d95',1,'SUNphi::_isSerializableScalar(const T *)'],['../d3/dd7/namespaceSUNphi.html#a1dad73501f6624f35419ddb134d011be',1,'SUNphi::_isSerializableScalar(const SerializableScalar&lt; Ts... &gt; *)']]],
   ['_5fisserializablesequence',['_isSerializableSequence',['../d3/dd7/namespaceSUNphi.html#a4321a05a7b31b21823b32f315d1ac6be',1,'SUNphi::_isSerializableSequence(const T *)'],['../d3/dd7/namespaceSUNphi.html#aeafa07337e5ab2b66721f99cf1e4beee',1,'SUNphi::_isSerializableSequence(const SerializableSequence&lt; Ts... &gt; *)']]],
   ['_5fistuple',['_isTuple',['../d3/d6f/structSUNphi_1_1__isTuple.html',1,'SUNphi']]],
   ['_5fistuple_3c_20tuple_3c_20tp_2e_2e_2e_20_3e_20_3e',['_isTuple&lt; Tuple&lt; Tp... &gt; &gt;',['../de/dff/structSUNphi_1_1__isTuple_3_01Tuple_3_01Tp_8_8_8_01_4_01_4.html',1,'SUNphi']]],

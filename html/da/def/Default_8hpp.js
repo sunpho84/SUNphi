@@ -1,8 +1,8 @@
 var Default_8hpp =
 [
-    [ "NoDefault", "d9/d2b/classSUNphi_1_1NoDefault.html", null ],
-    [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", "dc/d2a/classSUNphi_1_1SerializableDefaultValue" ],
-    [ "SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4" ],
-    [ "MANDATORY", "da/def/Default_8hpp.html#a808d5d4934f81fe8b47a30f5e2560938", null ],
-    [ "NO_DEFAULT", "da/def/Default_8hpp.html#a34694b80ec637e9f63defff23e4f5a26", null ]
+    [ "SerializableDefaultValue", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", null ],
+    [ "SerializableDefaultValue< T, true >", "de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html", "de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4" ],
+    [ "SerializableDefaultValue< T, false >", "d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html", "d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4" ],
+    [ "MANDATORY", "da/def/Default_8hpp.html#ada577c9a6dd661325e493d731b78b1ce", null ],
+    [ "NO_DEFAULT", "da/def/Default_8hpp.html#ab94857858448e5e5c543b7330ac7f24c", null ]
 ];

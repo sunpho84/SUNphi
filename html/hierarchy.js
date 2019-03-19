@@ -206,20 +206,20 @@ var hierarchy =
         [ "SUNphi::Test2", "d9/d12/classSUNphi_1_1Test2.html", null ]
       ] ]
     ] ],
-    [ "SUNphi::Binarizable< SerializableScalar< double, decltype(1) > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(1)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Binarizable< SerializableScalar< double, true > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
+      [ "SUNphi::SerializableScalar< double >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Binarizable< SerializableScalar< double, decltype(10.0) > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(10.0)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Binarizable< SerializableScalar< E, true > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
+      [ "SUNphi::SerializableScalar< E >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Binarizable< SerializableScalar< std::string, decltype(\"ciaccio\") > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
-      [ "SUNphi::SerializableScalar< std::string, decltype(\"ciaccio\")>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Binarizable< SerializableScalar< std::string, true > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
+      [ "SUNphi::SerializableScalar< std::string >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Binarizable< SerializableScalar< SUNphi::Test, decltype(NO_DEFAULT) > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
-      [ "SUNphi::SerializableScalar< SUNphi::Test, decltype(NO_DEFAULT)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Binarizable< SerializableScalar< SUNphi::Test, HasDefault > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
+      [ "SUNphi::SerializableScalar< SUNphi::Test, NO_DEFAULT >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Binarizable< SerializableScalar< T, TDef > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
-      [ "SUNphi::SerializableScalar< T, TDef >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Binarizable< SerializableScalar< T, HasDefault > >", "d7/da6/classSUNphi_1_1Binarizable.html", [
+      [ "SUNphi::SerializableScalar< T, HasDefault >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
     [ "SUNphi::Binarizer", "d2/d66/classSUNphi_1_1Binarizer.html", null ],
     [ "SUNphi::CanPrint< S, T >", "de/dfd/structSUNphi_1_1CanPrint.html", null ],
@@ -401,7 +401,6 @@ var hierarchy =
     [ "SUNphi::IsPresent< I >", "dd/de6/structSUNphi_1_1IsPresent.html", null ],
     [ "SUNphi::Logger::LoggerLine", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html", null ],
     [ "SUNphi::Mutex", "d6/d3d/structSUNphi_1_1Mutex.html", null ],
-    [ "SUNphi::NoDefault", "d9/d2b/classSUNphi_1_1NoDefault.html", null ],
     [ "random_device", null, [
       [ "SUNphi::TrueRandomGenerator", "d2/d95/classSUNphi_1_1TrueRandomGenerator.html", null ]
     ] ],
@@ -422,38 +421,39 @@ var hierarchy =
     [ "SUNphi::Serializable< SerializableClass< Test2 > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
       [ "SUNphi::SerializableClass< Test2 >", "d1/d39/classSUNphi_1_1SerializableClass.html", null ]
     ] ],
-    [ "SUNphi::Serializable< SerializableScalar< double, decltype(1) > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(1)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Serializable< SerializableScalar< double, true > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
+      [ "SUNphi::SerializableScalar< double >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Serializable< SerializableScalar< double, decltype(10.0) > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(10.0)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Serializable< SerializableScalar< E, true > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
+      [ "SUNphi::SerializableScalar< E >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Serializable< SerializableScalar< std::string, decltype(\"ciaccio\") > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
-      [ "SUNphi::SerializableScalar< std::string, decltype(\"ciaccio\")>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Serializable< SerializableScalar< std::string, true > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
+      [ "SUNphi::SerializableScalar< std::string >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Serializable< SerializableScalar< SUNphi::Test, decltype(NO_DEFAULT) > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
-      [ "SUNphi::SerializableScalar< SUNphi::Test, decltype(NO_DEFAULT)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Serializable< SerializableScalar< SUNphi::Test, HasDefault > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
+      [ "SUNphi::SerializableScalar< SUNphi::Test, NO_DEFAULT >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::Serializable< SerializableScalar< T, TDef > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
-      [ "SUNphi::SerializableScalar< T, TDef >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::Serializable< SerializableScalar< T, HasDefault > >", "dd/d5c/classSUNphi_1_1Serializable.html", [
+      [ "SUNphi::SerializableScalar< T, HasDefault >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::SerializableDefaultValue< T >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", null ],
-    [ "SUNphi::SerializableDefaultValue< decltype(\"ciaccio\") >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
-      [ "SUNphi::SerializableScalar< std::string, decltype(\"ciaccio\")>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::SerializableDefaultValue< T, bool >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", null ],
+    [ "SUNphi::SerializableDefaultValue< double, true >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
+      [ "SUNphi::SerializableScalar< double >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::SerializableDefaultValue< decltype(1) >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(1)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::SerializableDefaultValue< E, true >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
+      [ "SUNphi::SerializableScalar< E >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::SerializableDefaultValue< decltype(10.0) >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
-      [ "SUNphi::SerializableScalar< double, decltype(10.0)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::SerializableDefaultValue< std::string, true >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
+      [ "SUNphi::SerializableScalar< std::string >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::SerializableDefaultValue< decltype(NO_DEFAULT) >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
-      [ "SUNphi::SerializableScalar< SUNphi::Test, decltype(NO_DEFAULT)>", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::SerializableDefaultValue< SUNphi::Test, HasDefault >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
+      [ "SUNphi::SerializableScalar< SUNphi::Test, NO_DEFAULT >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
-    [ "SUNphi::SerializableDefaultValue< NoDefault >", "d7/dde/classSUNphi_1_1SerializableDefaultValue_3_01NoDefault_01_4.html", null ],
-    [ "SUNphi::SerializableDefaultValue< TDef >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
-      [ "SUNphi::SerializableScalar< T, TDef >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
+    [ "SUNphi::SerializableDefaultValue< T, false >", "d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html", null ],
+    [ "SUNphi::SerializableDefaultValue< T, HasDefault >", "dc/d2a/classSUNphi_1_1SerializableDefaultValue.html", [
+      [ "SUNphi::SerializableScalar< T, HasDefault >", "d1/d97/classSUNphi_1_1SerializableScalar.html", null ]
     ] ],
+    [ "SUNphi::SerializableDefaultValue< T, true >", "de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html", null ],
     [ "SUNphi::Serializer< Ref >", "d8/dd8/classSUNphi_1_1Serializer.html", null ],
     [ "SUNphi::SingleInstance< T >", "db/d2f/classSUNphi_1_1SingleInstance.html", null ],
     [ "SUNphi::SingleInstance< Aliver >", "db/d2f/classSUNphi_1_1SingleInstance.html", [
