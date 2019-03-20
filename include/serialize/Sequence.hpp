@@ -1,7 +1,7 @@
 #ifndef _SERIALIZE_SEQUENCE_HPP
 #define _SERIALIZE_SEQUENCE_HPP
 
-/// \filename serialize/Sequence.hpp
+/// \file serialize/Sequence.hpp
 ///
 /// \brief Container mapping a sequence
 ///

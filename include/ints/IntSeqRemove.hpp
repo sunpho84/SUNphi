@@ -1,5 +1,8 @@
 #ifndef _INTSEQREMOVE_HPP
 #define _INTSEQREMOVE_HPP
+
+/// \file IntSeqRemove.hpp
+
 #include <ints/IntListOrder.hpp>
 #include <ints/IntSeq.hpp>
 #include <metaprogramming/UniversalReferences.hpp>

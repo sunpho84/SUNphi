@@ -1,6 +1,8 @@
 #ifndef _INTSEQINSERT_HPP
 #define _INTSEQINSERT_HPP
 
+/// \file IntSeqInsert.hpp
+
 #include <ints/IntListOrder.hpp>
 #include <ints/IntSeq.hpp>
 #include <ints/Ranges.hpp>

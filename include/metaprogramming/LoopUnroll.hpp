@@ -1,6 +1,10 @@
 #ifndef _LOOP_UNROLL_HPP
 #define _LOOP_UNROLL_HPP
 
+/// \file LoopUnroll.hpp
+///
+/// \brief Unroll iteratively a loop
+
 #include <metaprogramming/Inline.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
@@ -14,7 +18,7 @@ namespace SUNphi
 	    typename F,                            // Type of the function
 	    typename...Args>                       // Types of the arguments to pass
   ALWAYS_INLINE void loopUnroll(F f,             ///< Function to cal
-			       Args&&...args)    ///< Arguments to pass
+				Args&&...args)   ///< Arguments to pass
   {
     /// Current value
     constexpr int cur=
@@ -29,7 +33,7 @@ namespace SUNphi
     
     // Iterates on the loop
     if constexpr(next<max)
-		  loopUnroll<next,max,F,Args...>(f,forw<Args>(args)...);
+      loopUnroll<next,max,F,Args...>(f,forw<Args>(args)...);
   }
 }
 

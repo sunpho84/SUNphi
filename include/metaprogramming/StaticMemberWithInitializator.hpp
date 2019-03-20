@@ -1,6 +1,10 @@
 #ifndef _STATIC_MEMBER_WITH_INITIALIZATOR_HPP
 #define _STATIC_MEMBER_WITH_INITIALIZATOR_HPP
 
+/// \file StaticMemberWithInitializator.hpp
+///
+/// \brief Provides a static member with an initalizator
+
 #include <metaprogramming/SwallowSemicolon.hpp>
 
 /// Provides a static member with an initalizator
