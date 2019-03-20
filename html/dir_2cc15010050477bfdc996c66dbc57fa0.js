@@ -6,8 +6,8 @@ var dir_2cc15010050477bfdc996c66dbc57fa0 =
     [ "IntSeq.hpp", "dd/df8/IntSeq_8hpp.html", "dd/df8/IntSeq_8hpp" ],
     [ "IntSeqCat.hpp", "d7/dea/IntSeqCat_8hpp.html", "d7/dea/IntSeqCat_8hpp" ],
     [ "IntSeqGetEl.hpp", "d9/ddd/IntSeqGetEl_8hpp.html", "d9/ddd/IntSeqGetEl_8hpp" ],
-    [ "IntSeqInsert.hpp", "d5/da6/IntSeqInsert_8hpp_source.html", null ],
-    [ "IntSeqRemove.hpp", "d3/db7/IntSeqRemove_8hpp_source.html", null ],
+    [ "IntSeqInsert.hpp", "d5/da6/IntSeqInsert_8hpp.html", "d5/da6/IntSeqInsert_8hpp" ],
+    [ "IntSeqRemove.hpp", "d3/db7/IntSeqRemove_8hpp.html", "d3/db7/IntSeqRemove_8hpp" ],
     [ "IntSeqSplit.hpp", "d4/d96/IntSeqSplit_8hpp.html", "d4/d96/IntSeqSplit_8hpp" ],
     [ "IntSeqTranspose.hpp", "da/db7/IntSeqTranspose_8hpp.html", "da/db7/IntSeqTranspose_8hpp" ],
     [ "Ranges.hpp", "dd/d15/Ranges_8hpp.html", "dd/d15/Ranges_8hpp" ]

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
-  ['printbacktracelist',['printBacktraceList',['../d3/dd7/namespaceSUNphi.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
+  ['printbacktracelist',['printBacktraceList',['../d3/dbc/BackTracing_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
   ['printbailout',['printBailout',['../df/df6/classSUNphi_1_1Aliver.html#ad4469a6555e11dfb2a8031a9698cff4e',1,'SUNphi::Aliver']]],
   ['printbanner',['printBanner',['../df/df6/classSUNphi_1_1Aliver.html#afb0918d628d2032e1481c711d428c733',1,'SUNphi::Aliver']]],
   ['printconfigurepars',['printConfigurePars',['../df/df6/classSUNphi_1_1Aliver.html#a3269b85b8523ff32a7db149eec2d9823',1,'SUNphi::Aliver']]],

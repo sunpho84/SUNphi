@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('d2/d74/Indexer_8hpp.html','../../');})
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Indexer.hpp File Reference</div>  </div>
@@ -129,23 +128,68 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html">SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab6b5f93577a2b54eabec888e3107de08"><td class="memTemplParams" colspan="2">template&lt;class TK , size_t NDynamic, class... Args&gt; </td></tr>
-<tr class="memitem:ab6b5f93577a2b54eabec888e3107de08"><td class="memTemplItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab6b5f93577a2b54eabec888e3107de08">SUNphi::index</a> (const DynSizes&lt; NDynamic &gt; &amp;dynSizes, const Args &amp;...args)</td></tr>
+<tr class="memitem:ab6b5f93577a2b54eabec888e3107de08"><td class="memTemplItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d74/Indexer_8hpp.html#ab6b5f93577a2b54eabec888e3107de08">SUNphi::index</a> (const DynSizes&lt; NDynamic &gt; &amp;dynSizes, const Args &amp;...args)</td></tr>
 <tr class="separator:ab6b5f93577a2b54eabec888e3107de08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the definition of an indexer. </p>
 
 <p>Definition in file <a class="el" href="../../d2/d74/Indexer_8hpp_source.html">Indexer.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_ab6b5f93577a2b54eabec888e3107de08"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TK , size_t NDynamic, class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr int SUNphi::index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3">DynSizes</a>&lt; NDynamic &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dynSizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Args &amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Index function for a <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></p>
+<p>Wraps the call to the Indexer class method The index is built in this way. Let us assume three component case</p>
+<div class="fragment"><div class="line">a+Na*(b+Nb*c)</div></div><!-- fragment --><p>this is changed into a more homogeneous</p>
+<div class="fragment"><div class="line">a+Na*(b+Nb*(c+Nc*0))</div></div><!-- fragment --><p>so that every component needs to perform the following operation</p>
+<div class="fragment"><div class="line">i+N*ext</div></div><!-- fragment --><p>where <code>ext</code> is the result of the calculation for the outer component. Starting from 0, the calculation ends when no more component is present (terminating case). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dynSizes</td><td>Sizes of the dynamical components </td></tr>
+    <tr><td class="paramname">args</td><td>Components index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/d74/Indexer_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d2/d74/Indexer_8hpp_source.html">Indexer.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

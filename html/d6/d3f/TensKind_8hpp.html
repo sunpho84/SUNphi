@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('d6/d3f/TensKind_8hpp.html','../../');}
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -120,7 +119,7 @@ $(document).ready(function(){initNavTree('d6/d3f/TensKind_8hpp.html','../../');}
 <p>Defines the Tensor Kind.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
-<code>#include &lt;ints/IntSeqInsert.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d5/da6/IntSeqInsert_8hpp_source.html">ints/IntSeqInsert.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d7/d7a/TensComp_8hpp_source.html">tens/TensComp.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">tens/TwinsComp.hpp</a>&gt;</code><br />
@@ -184,12 +183,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html">SUNphi::_BlendTensKinds&lt; Head1, Head2, Tail... &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:af8f0a6094d2399b278968074a80869bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#af8f0a6094d2399b278968074a80869bd">STATIC_ASSERT_IS_DYNAMIC</a>(TC)&#160;&#160;&#160;static_assert(isDynamic&lt;TC&gt;,&quot;Error, Tens Comp is not dynamic&quot;)</td></tr>
@@ -198,49 +191,49 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a25c7721afd2b3e3b7599f481ca341ef3"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
-<tr class="memitem:a25c7721afd2b3e3b7599f481ca341ef3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a25c7721afd2b3e3b7599f481ca341ef3">SUNphi::DynSizes</a> = std::array&lt; int, N &gt;</td></tr>
+<tr class="memitem:a25c7721afd2b3e3b7599f481ca341ef3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3">SUNphi::DynSizes</a> = std::array&lt; int, N &gt;</td></tr>
 <tr class="separator:a25c7721afd2b3e3b7599f481ca341ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a35c10f4499f81dbe0a3b403612b45e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Ret  = void&gt; </td></tr>
-<tr class="memitem:a0a35c10f4499f81dbe0a3b403612b45e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0a35c10f4499f81dbe0a3b403612b45e">SUNphi::EnableIfIsTensKind</a> = EnableIf&lt; isTensKind&lt; T &gt;,Ret &gt;</td></tr>
+<tr class="memitem:a0a35c10f4499f81dbe0a3b403612b45e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a0a35c10f4499f81dbe0a3b403612b45e">SUNphi::EnableIfIsTensKind</a> = EnableIf&lt; isTensKind&lt; T &gt;,Ret &gt;</td></tr>
 <tr class="separator:a0a35c10f4499f81dbe0a3b403612b45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a190d865f5836e550f52ed114b1c6fd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3a190d865f5836e550f52ed114b1c6fd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a3a190d865f5836e550f52ed114b1c6fd">SUNphi::ConstrainIsTensKind</a> = ConstrainIsBaseOf&lt; BaseTensKind,T &gt;</td></tr>
+<tr class="memitem:a3a190d865f5836e550f52ed114b1c6fd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a3a190d865f5836e550f52ed114b1c6fd">SUNphi::ConstrainIsTensKind</a> = ConstrainIsBaseOf&lt; BaseTensKind,T &gt;</td></tr>
 <tr class="separator:a3a190d865f5836e550f52ed114b1c6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e57542305113ba73607b064da7507af"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4e57542305113ba73607b064da7507af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4e57542305113ba73607b064da7507af">SUNphi::ConstrainIsNotTensKind</a> = ConstrainIsNotBaseOf&lt; BaseTensKind,T &gt;</td></tr>
+<tr class="memitem:a4e57542305113ba73607b064da7507af"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a4e57542305113ba73607b064da7507af">SUNphi::ConstrainIsNotTensKind</a> = ConstrainIsNotBaseOf&lt; BaseTensKind,T &gt;</td></tr>
 <tr class="separator:a4e57542305113ba73607b064da7507af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7fe05433acf51384df7df9e237994e4"><td class="memTemplParams" colspan="2">template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </td></tr>
-<tr class="memitem:af7fe05433acf51384df7df9e237994e4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#af7fe05433acf51384df7df9e237994e4">SUNphi::TensKindFromTuple</a> = typename _TensKindFromTuple&lt; TP &gt;::type</td></tr>
+<tr class="memitem:af7fe05433acf51384df7df9e237994e4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4">SUNphi::TensKindFromTuple</a> = typename _TensKindFromTuple&lt; TP &gt;::type</td></tr>
 <tr class="separator:af7fe05433acf51384df7df9e237994e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ab367cb8e85a4a5c88c22f4be1ac037d8">SUNphi::BlendTensKinds</a> = typename _BlendTensKinds&lt; Args... &gt;::type</td></tr>
+<tr class="memitem:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#ab367cb8e85a4a5c88c22f4be1ac037d8">SUNphi::BlendTensKinds</a> = typename _BlendTensKinds&lt; Args... &gt;::type</td></tr>
 <tr class="separator:ab367cb8e85a4a5c88c22f4be1ac037d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memTemplParams" colspan="2">template&lt;typename TkToSearch , typename... Tks&gt; </td></tr>
-<tr class="memitem:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a20a22ae0ab9777758b1cc9dc50e85e33">SUNphi::PosOfTcsOfTkInListOfTks</a> = Tuple&lt; PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;... &gt;</td></tr>
+<tr class="memitem:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a20a22ae0ab9777758b1cc9dc50e85e33">SUNphi::PosOfTcsOfTkInListOfTks</a> = Tuple&lt; PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;... &gt;</td></tr>
 <tr class="separator:a20a22ae0ab9777758b1cc9dc50e85e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4fc6fe9266c126fdf3bfaa91cd394907"></a>
 template&lt;typename TkToSearch , typename... Tks&gt; </td></tr>
-<tr class="memitem:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4fc6fe9266c126fdf3bfaa91cd394907">SUNphi::PosOfTcsOfTkPresInListOfTks</a> = Tuple&lt; FilterVariadicClassPos&lt; IsPresent, PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;&gt;... &gt;</td></tr>
+<tr class="memitem:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a4fc6fe9266c126fdf3bfaa91cd394907">SUNphi::PosOfTcsOfTkPresInListOfTks</a> = Tuple&lt; FilterVariadicClassPos&lt; IsPresent, PosOfTypesNotAsserting&lt; typename TkToSearch::types, typename Tks::types &gt;&gt;... &gt;</td></tr>
 <tr class="memdesc:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position of all the present <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> of <code>TkToSearch</code> in the list of Tks. <br /></td></tr>
 <tr class="separator:a4fc6fe9266c126fdf3bfaa91cd394907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae33b6d16d34de84fe30019b69f821129"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:ae33b6d16d34de84fe30019b69f821129"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae33b6d16d34de84fe30019b69f821129">SUNphi::hasMember_compSizeHelper</a> ()</td></tr>
+<tr class="memitem:ae33b6d16d34de84fe30019b69f821129"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#ae33b6d16d34de84fe30019b69f821129">SUNphi::hasMember_compSizeHelper</a> ()</td></tr>
 <tr class="separator:ae33b6d16d34de84fe30019b69f821129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a1b32947a9ca09b133faf88e349ca42be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1b32947a9ca09b133faf88e349ca42be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a1b32947a9ca09b133faf88e349ca42be">SUNphi::isTensKind</a> = isBaseOf&lt;BaseTensKind ,T&gt;</td></tr>
+<tr class="memitem:a1b32947a9ca09b133faf88e349ca42be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a1b32947a9ca09b133faf88e349ca42be">SUNphi::isTensKind</a> = isBaseOf&lt;BaseTensKind ,T&gt;</td></tr>
 <tr class="separator:a1b32947a9ca09b133faf88e349ca42be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a286e1e8ac0e01b9ddd5f33cefceceec1">SUNphi::hasMember_compSize</a> = hasMember_compSizeHelper&lt;Type&gt;()</td></tr>
+<tr class="memitem:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a286e1e8ac0e01b9ddd5f33cefceceec1">SUNphi::hasMember_compSize</a> = hasMember_compSizeHelper&lt;Type&gt;()</td></tr>
 <tr class="separator:a286e1e8ac0e01b9ddd5f33cefceceec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">SUNphi::isDynamic</a></td></tr>
-<tr class="memdesc:a37ad57be7a76d0f6b77f00819f404dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is a dynamic component.  <a href="../../d3/dd7/namespaceSUNphi.html#a37ad57be7a76d0f6b77f00819f404dc8">More...</a><br /></td></tr>
+<tr class="memitem:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8">SUNphi::isDynamic</a></td></tr>
+<tr class="memdesc:a37ad57be7a76d0f6b77f00819f404dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether T is a dynamic component.  <a href="../../d6/d3f/TensKind_8hpp.html#a37ad57be7a76d0f6b77f00819f404dc8">More...</a><br /></td></tr>
 <tr class="separator:a37ad57be7a76d0f6b77f00819f404dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -265,6 +258,216 @@ Variables</h2></td></tr>
 <p>Defines a TensKind type from a Tuple type Static assert if TC is not dynamic </p>
 
 <p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00066">66</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_ab367cb8e85a4a5c88c22f4be1ac037d8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#ab367cb8e85a4a5c88c22f4be1ac037d8">SUNphi::BlendTensKinds</a> = typedef typename _BlendTensKinds&lt;Args...&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Blend an arbitrary number of <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> </p>
+<p>Gives visibility to the internal implementation </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00465">465</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a4e57542305113ba73607b064da7507af"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a4e57542305113ba73607b064da7507af">SUNphi::ConstrainIsNotTensKind</a> = typedef ConstrainIsNotBaseOf&lt;BaseTensKind ,T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class forcing T not to inherits from <code><a class="el" href="../../d4/dca/structSUNphi_1_1BaseTensKind.html" title="Defines the BaseTensKind type traits. ">BaseTensKind</a></code> </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a3a190d865f5836e550f52ed114b1c6fd"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a3a190d865f5836e550f52ed114b1c6fd">SUNphi::ConstrainIsTensKind</a> = typedef ConstrainIsBaseOf&lt;BaseTensKind ,T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Class forcing T to inherits from <code><a class="el" href="../../d4/dca/structSUNphi_1_1BaseTensKind.html" title="Defines the BaseTensKind type traits. ">BaseTensKind</a></code> </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a25c7721afd2b3e3b7599f481ca341ef3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a25c7721afd2b3e3b7599f481ca341ef3">SUNphi::DynSizes</a> = typedef std::array&lt;int,N&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+<p>Dynamic sizes of a <a class="el" href="../../d8/d1c/classSUNphi_1_1Tens.html">Tens</a></p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">Todo:</a></b></dt><dd>the array must be replaced with a tuple, whose types must be deduced when instatiating the struct, such that int or long int or whatever is appropriately used! </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a0a35c10f4499f81dbe0a3b403612b45e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Ret  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a0a35c10f4499f81dbe0a3b403612b45e">SUNphi::EnableIfIsTensKind</a> = typedef EnableIf&lt; isTensKind &lt;T&gt; ,Ret&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Provides the class itself if T is of the given type</p>
+<p>Provides the class itself if T satisfies the condition </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a20a22ae0ab9777758b1cc9dc50e85e33"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TkToSearch , typename... Tks&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#a20a22ae0ab9777758b1cc9dc50e85e33">SUNphi::PosOfTcsOfTkInListOfTks</a> = typedef Tuple&lt;PosOfTypesNotAsserting&lt;typename TkToSearch::types,typename Tks::types&gt;...&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Position of all the <code><a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a></code> of <code>TkToSearch</code> in the list of Tks</p>
+<p>NOT_PRESENT is inserted in the absent positions </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00473">473</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_af7fe05433acf51384df7df9e237994e4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TP , class  = ConstrainIsTuple&lt;TP&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d6/d3f/TensKind_8hpp.html#af7fe05433acf51384df7df9e237994e4">SUNphi::TensKindFromTuple</a> = typedef typename _TensKindFromTuple&lt;TP&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Defines a variadic type <code><a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a></code> taking the same types of a <code>Tuple</code> </p>
+<p>Gives visibility to the internal implementation </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_ae33b6d16d34de84fe30019b69f821129"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_compSizeHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="file_a286e1e8ac0e01b9ddd5f33cefceceec1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_compSize = hasMember_compSizeHelper&lt;Type&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Detect if <code>Type</code> has member (variable or method) compSize</p>
+<p>Uses SFINAE to induce ambiguity in the detection of the member </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00056">56</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a37ad57be7a76d0f6b77f00819f404dc8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isDynamic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    T::isDynamic</div></div><!-- fragment -->
+<p>Returns whether T is a dynamic component. </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a1b32947a9ca09b133faf88e349ca42be"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isTensKind = isBaseOf&lt;BaseTensKind ,T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Expression which is true if T inherits from <code><a class="el" href="../../d4/dca/structSUNphi_1_1BaseTensKind.html" title="Defines the BaseTensKind type traits. ">BaseTensKind</a></code> </p>
+
+<p>Definition at line <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">TensKind.hpp</a>.</p>
 
 </div>
 </div>

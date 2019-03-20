@@ -1,5 +1,14 @@
 var NAVTREEINDEX1 =
 {
+"d1/d97/classSUNphi_1_1SerializableScalar.html#adfba747bd29da5695e1b0759e719743a":[2,0,0,169,16],
+"d1/d97/classSUNphi_1_1SerializableScalar.html#aed47908e9b01212061807b0d4e0ce380":[2,0,0,169,4],
+"d1/d9b/Assign_8hpp.html":[3,0,2,10,2],
+"d1/d9b/Assign_8hpp.html#a29c2f2f3b3f624835dbc946fa7682e3a":[3,0,2,10,2,6],
+"d1/d9b/Assign_8hpp.html#a4ab78f7bdb1d3f82730f043cd1c459ef":[3,0,2,10,2,5],
+"d1/d9b/Assign_8hpp.html#a7e33298a641280ad0ae8452af47ec6e2":[3,0,2,10,2,8],
+"d1/d9b/Assign_8hpp.html#aa3235642bedbaf4675b54936e87e2318":[3,0,2,10,2,7],
+"d1/d9b/Assign_8hpp.html#aa7856fbb60a94cf98179f23f59c5ddfe":[3,0,2,10,2,4],
+"d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad":[3,0,2,10,2,3],
 "d1/d9b/Assign_8hpp_source.html":[3,0,2,10,2],
 "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html":[2,0,0,142],
 "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html#a1ea8a6e7249c4ebdb93dec44b29a90d7":[2,0,0,142,4],
@@ -130,8 +139,8 @@ var NAVTREEINDEX1 =
 "d2/d69/NnarySmET_8hpp.html#ad378640872660b64ac332626a34f7e28":[3,0,2,10,8,13],
 "d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89":[3,0,2,10,8,19],
 "d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe":[3,0,2,10,8,14],
-"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,30],
 "d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,31],
+"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,30],
 "d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062":[3,0,2,10,8,22],
 "d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a":[3,0,2,10,8,18],
 "d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1":[3,0,2,10,8,29],
@@ -240,14 +249,5 @@ var NAVTREEINDEX1 =
 "d3/d59/structSUNphi_1_1HasMember__name.html#a305c28d92850e17f36118b70561b9b44":[2,0,0,138,5],
 "d3/d59/structSUNphi_1_1HasMember__name.html#a5ab291ab5f5fbb217cbfc04b4b8b5e57":[2,0,0,138,3],
 "d3/d59/structSUNphi_1_1HasMember__name.html#a70dd4509b7510b50971ff341dae67975":[2,0,0,138,7],
-"d3/d59/structSUNphi_1_1HasMember__name.html#ac1cd806217ef0c276b8596d2547e67c5":[2,0,0,138,4],
-"d3/d59/structSUNphi_1_1HasMember__name.html#ac6d7ef80ac49f647b741938602a5f483":[2,0,0,138,6],
-"d3/d5c/structSUNphi_1_1BaseSmET.html":[2,0,0,52],
-"d3/d6f/structSUNphi_1_1__isTuple.html":[2,0,0,25],
-"d3/d78/Reference_8hpp.html":[3,0,2,10,9],
-"d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df":[3,0,2,10,9,0],
-"d3/d78/Reference_8hpp.html#ad8f92a75222b2a9d6b46120c17ac4e57":[3,0,2,10,9,1],
-"d3/d78/Reference_8hpp_source.html":[3,0,2,10,9],
-"d3/d78/classSUNphi_1_1Logger.html":[2,0,0,150],
-"d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43":[2,0,0,150,6]
+"d3/d59/structSUNphi_1_1HasMember__name.html#ac1cd806217ef0c276b8596d2547e67c5":[2,0,0,138,4]
 };

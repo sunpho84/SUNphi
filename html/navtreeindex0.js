@@ -1,9 +1,18 @@
 var NAVTREEINDEX0 =
 {
+".html":[1,0,0],
+".html":[2,0,0],
 "annotated.html":[2,0],
 "classes.html":[2,1],
 "d0/d06/structSUNphi_1_1HasMember__isAssignable_1_1Derived.html":[2,0,0,135,1],
 "d0/d06/structSUNphi_1_1HasMember__isAssignable_1_1Derived.html#a841bfa5d64510c6341a5d7f25073fb06":[2,0,0,135,1,0],
+"d0/d11/Sequence_8hpp.html":[3,0,2,9,6],
+"d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae":[3,0,2,9,6,1],
+"d0/d11/Sequence_8hpp.html#a4321a05a7b31b21823b32f315d1ac6be":[3,0,2,9,6,4],
+"d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8":[3,0,2,9,6,2],
+"d0/d11/Sequence_8hpp.html#a85e04feeefa86c7c31fcfa54bd11f6f4":[3,0,2,9,6,6],
+"d0/d11/Sequence_8hpp.html#ae4edd888340146820dab71b9725bab17":[3,0,2,9,6,3],
+"d0/d11/Sequence_8hpp.html#aeafa07337e5ab2b66721f99cf1e4beee":[3,0,2,9,6,5],
 "d0/d11/Sequence_8hpp_source.html":[3,0,2,9,6],
 "d0/d15/Serializable_8hpp.html":[3,0,2,9,7],
 "d0/d15/Serializable_8hpp_source.html":[3,0,2,9,7],
@@ -240,14 +249,5 @@ var NAVTREEINDEX0 =
 "d1/d97/classSUNphi_1_1SerializableScalar.html#ac6c47ada5fbf627c80ade22e5a640f34":[2,0,0,169,8],
 "d1/d97/classSUNphi_1_1SerializableScalar.html#ad330224f1cb23cfb25de825308d6d355":[2,0,0,169,6],
 "d1/d97/classSUNphi_1_1SerializableScalar.html#ad544f3e8e0ed4d35de6e08ae1614d4b9":[2,0,0,169,3],
-"d1/d97/classSUNphi_1_1SerializableScalar.html#ad84c094583fafe57760a1d70d08e4dda":[2,0,0,169,10],
-"d1/d97/classSUNphi_1_1SerializableScalar.html#adfba747bd29da5695e1b0759e719743a":[2,0,0,169,16],
-"d1/d97/classSUNphi_1_1SerializableScalar.html#aed47908e9b01212061807b0d4e0ce380":[2,0,0,169,4],
-"d1/d9b/Assign_8hpp.html":[3,0,2,10,2],
-"d1/d9b/Assign_8hpp.html#a29c2f2f3b3f624835dbc946fa7682e3a":[3,0,2,10,2,6],
-"d1/d9b/Assign_8hpp.html#a4ab78f7bdb1d3f82730f043cd1c459ef":[3,0,2,10,2,5],
-"d1/d9b/Assign_8hpp.html#a7e33298a641280ad0ae8452af47ec6e2":[3,0,2,10,2,8],
-"d1/d9b/Assign_8hpp.html#aa3235642bedbaf4675b54936e87e2318":[3,0,2,10,2,7],
-"d1/d9b/Assign_8hpp.html#aa7856fbb60a94cf98179f23f59c5ddfe":[3,0,2,10,2,4],
-"d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad":[3,0,2,10,2,3]
+"d1/d97/classSUNphi_1_1SerializableScalar.html#ad84c094583fafe57760a1d70d08e4dda":[2,0,0,169,10]
 };

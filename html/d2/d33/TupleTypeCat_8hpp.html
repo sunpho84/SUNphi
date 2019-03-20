@@ -106,7 +106,6 @@ $(document).ready(function(){initNavTree('d2/d33/TupleTypeCat_8hpp.html','../../
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">TupleTypeCat.hpp File Reference</div>  </div>
@@ -119,23 +118,36 @@ $(document).ready(function(){initNavTree('d2/d33/TupleTypeCat_8hpp.html','../../
 </div>
 <p><a href="../../d2/d33/TupleTypeCat_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aaa2eb9b96050ad18ba1bf5d84cd0080d"><td class="memTemplParams" colspan="2">template&lt;class... Tp&gt; </td></tr>
-<tr class="memitem:aaa2eb9b96050ad18ba1bf5d84cd0080d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">SUNphi::TupleTypeCatT</a> = decltype(tuple_cat(TupleWrap&lt; Tp &gt;{}...))</td></tr>
+<tr class="memitem:aaa2eb9b96050ad18ba1bf5d84cd0080d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d33/TupleTypeCat_8hpp.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">SUNphi::TupleTypeCatT</a> = decltype(tuple_cat(TupleWrap&lt; Tp &gt;{}...))</td></tr>
 <tr class="separator:aaa2eb9b96050ad18ba1bf5d84cd0080d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used to detect the type of catting a number of Tuple. </p>
 
 <p>Definition in file <a class="el" href="../../d2/d33/TupleTypeCat_8hpp_source.html">TupleTypeCat.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_aaa2eb9b96050ad18ba1bf5d84cd0080d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... Tp&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d33/TupleTypeCat_8hpp.html#aaa2eb9b96050ad18ba1bf5d84cd0080d">SUNphi::TupleTypeCatT</a> = typedef decltype(tuple_cat(TupleWrap&lt;Tp&gt;{}...))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define a <code>tuple</code> catting all tuple parameter types, and plain types of all parameters</p>
+<p>Creates a <code>tuple</code> from all passed parameters. If an argument is a tuple, consider its parameter types. Otherwise consider the type itself.</p>
+<p>Example: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> Tuple&lt;int,double&gt; <a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a>;</div><div class="line">TupleTypeCatT&lt;T,T&gt; test1;    <span class="comment">// Tuple&lt;int,double,int,double&gt;</span></div><div class="line">TupleTypeCatT&lt;T,char&gt; test2; <span class="comment">// Tuple&lt;int,double,char&gt;</span></div></div><!-- fragment --> 
+<p>Definition at line <a class="el" href="../../d2/d33/TupleTypeCat_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d2/d33/TupleTypeCat_8hpp_source.html">TupleTypeCat.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

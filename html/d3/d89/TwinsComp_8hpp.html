@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('d3/d89/TwinsComp_8hpp.html','../../');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -119,7 +118,7 @@ $(document).ready(function(){initNavTree('d3/d89/TwinsComp_8hpp.html','../../');
 
 <p>Header file to define twins TensComp.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;ints/IntSeqInsert.hpp&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d5/da6/IntSeqInsert_8hpp_source.html">ints/IntSeqInsert.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d7/d7a/TensComp_8hpp_source.html">tens/TensComp.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">smet/BaseSmET.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d1/d31/TupleClass_8hpp_source.html">tuple/TupleClass.hpp</a>&gt;</code><br />
@@ -135,12 +134,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/structSUNphi_1_1TwinTensCompOf.html">SUNphi::TwinTensCompOf&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac775d245e45bbce66b04ac6843e1fd14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14">DECLARE_TENS_COMPS_ARE_TWIN</a>(T1,  T2)</td></tr>
@@ -151,28 +144,28 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa6fdac81aaa3fb07cea15eb49af57bb8"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa6fdac81aaa3fb07cea15eb49af57bb8"></a>
 template&lt;class T , class  = ConstrainIsTensComp&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:aa6fdac81aaa3fb07cea15eb49af57bb8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#aa6fdac81aaa3fb07cea15eb49af57bb8">SUNphi::TwinCompOf</a> = typename _TwinCompOf&lt; T &gt;::type</td></tr>
+<tr class="memitem:aa6fdac81aaa3fb07cea15eb49af57bb8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#aa6fdac81aaa3fb07cea15eb49af57bb8">SUNphi::TwinCompOf</a> = typename _TwinCompOf&lt; T &gt;::type</td></tr>
 <tr class="memdesc:aa6fdac81aaa3fb07cea15eb49af57bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the twin component of a given <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a>. <br /></td></tr>
 <tr class="separator:aa6fdac81aaa3fb07cea15eb49af57bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a381d1ffbd57db6af9be204d499582fcb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a381d1ffbd57db6af9be204d499582fcb"></a>
 template&lt;typename Tc , typename SMET , typename  = ConstrainIsTensComp&lt;Tc&gt;, typename  = ConstrainIsSmET&lt;SMET&gt;, typename TK  = typename Unqualified&lt;SMET&gt;::Tk, typename TK_TYPES  = typename TK::types, bool Has = tupleHasType&lt;Tc,TK_TYPES&gt;&gt; </td></tr>
-<tr class="memitem:a381d1ffbd57db6af9be204d499582fcb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a381d1ffbd57db6af9be204d499582fcb">SUNphi::CompOrTwinned</a> = Conditional&lt; Has, Tc, TwinCompOf&lt; Tc &gt;&gt;</td></tr>
+<tr class="memitem:a381d1ffbd57db6af9be204d499582fcb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#a381d1ffbd57db6af9be204d499582fcb">SUNphi::CompOrTwinned</a> = Conditional&lt; Has, Tc, TwinCompOf&lt; Tc &gt;&gt;</td></tr>
 <tr class="memdesc:a381d1ffbd57db6af9be204d499582fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> TC is not present in the <a class="el" href="../../d8/df8/classSUNphi_1_1TensKind.html">TensKind</a> of SMET, returns the twin. <br /></td></tr>
 <tr class="separator:a381d1ffbd57db6af9be204d499582fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplParams" colspan="2">template&lt;typename Is , typename Tp &gt; </td></tr>
-<tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#afe2b4376fdd1cfa02460b88b5bbe852a">SUNphi::InsertTrueTwinnedPosOfTuple</a> = decltype(_InsertTrueTwinnedPosOfTuple&lt; 0 &gt;(Is{}, Tp{}))</td></tr>
+<tr class="memitem:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#afe2b4376fdd1cfa02460b88b5bbe852a">SUNphi::InsertTrueTwinnedPosOfTuple</a> = decltype(_InsertTrueTwinnedPosOfTuple&lt; 0 &gt;(Is{}, Tp{}))</td></tr>
 <tr class="separator:afe2b4376fdd1cfa02460b88b5bbe852a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a23542ce407b448938ad631f0c6a51efb"><td class="memTemplParams" colspan="2">template&lt;int Pos, int... Ints, typename... T&gt; </td></tr>
-<tr class="memitem:a23542ce407b448938ad631f0c6a51efb"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a23542ce407b448938ad631f0c6a51efb">SUNphi::_InsertTrueTwinnedPosOfTuple</a> (IntSeq&lt; Ints... &gt; in, Tuple&lt; T... &gt; types)</td></tr>
+<tr class="memitem:a23542ce407b448938ad631f0c6a51efb"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#a23542ce407b448938ad631f0c6a51efb">SUNphi::_InsertTrueTwinnedPosOfTuple</a> (IntSeq&lt; Ints... &gt; in, Tuple&lt; T... &gt; types)</td></tr>
 <tr class="separator:a23542ce407b448938ad631f0c6a51efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a4692578508fbbf9aff7ed592deef12cf"><td class="memTemplParams" colspan="2">template&lt;class T , class  = ConstrainIsTensComp&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a4692578508fbbf9aff7ed592deef12cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a4692578508fbbf9aff7ed592deef12cf">SUNphi::hasTwin</a></td></tr>
+<tr class="memitem:a4692578508fbbf9aff7ed592deef12cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d89/TwinsComp_8hpp.html#a4692578508fbbf9aff7ed592deef12cf">SUNphi::hasTwin</a></td></tr>
 <tr class="separator:a4692578508fbbf9aff7ed592deef12cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -209,6 +202,84 @@ Variables</h2></td></tr>
 <p>Declare a pair of TensComp twins one of the other. </p>
 
 <p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_afe2b4376fdd1cfa02460b88b5bbe852a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Is , typename Tp &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/d89/TwinsComp_8hpp.html#afe2b4376fdd1cfa02460b88b5bbe852a">SUNphi::InsertTrueTwinnedPosOfTuple</a> = typedef decltype(_InsertTrueTwinnedPosOfTuple&lt;0&gt;(Is{},Tp{}))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert in the <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> the position of all true twinned types</p>
+<p>A true twinned type is a type for which the twin is different from itself, and is present in the list </p>
+
+<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00151">151</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a23542ce407b448938ad631f0c6a51efb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Pos, int... Ints, typename... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) SUNphi::_InsertTrueTwinnedPosOfTuple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a>&lt; Ints... &gt;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d31/TupleClass_8hpp.html#ae8bd2374a8eb13af54ead4b5e2e8558c">Tuple</a>&lt; T... &gt;&#160;</td>
+          <td class="paramname"><em>types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert in the <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> the position of all true twinned types</p>
+<p>Internal implementation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> </td></tr>
+    <tr><td class="paramname">types</td><td>Input types </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="file_a4692578508fbbf9aff7ed592deef12cf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class  = ConstrainIsTensComp&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasTwin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="keyword">false</span></div></div><!-- fragment --><p>Determine if the <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a> has a twin</p>
+<p>Default for a generic <a class="el" href="../../d1/d96/structSUNphi_1_1TensComp.html">TensComp</a>: false </p>
+
+<p>Definition at line <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html#l00027">27</a> of file <a class="el" href="../../d3/d89/TwinsComp_8hpp_source.html">TwinsComp.hpp</a>.</p>
 
 </div>
 </div>

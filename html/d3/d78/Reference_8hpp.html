@@ -106,7 +106,6 @@ $(document).ready(function(){initNavTree('d3/d78/Reference_8hpp.html','../../');
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
@@ -120,12 +119,6 @@ $(document).ready(function(){initNavTree('d3/d78/Reference_8hpp.html','../../');
 </div>
 <p><a href="../../d3/d78/Reference_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a5d649e7888c0e097f62cfbab810753df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df">PROVIDE_SMET_REF</a>(NUM)</td></tr>
@@ -135,7 +128,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ad8f92a75222b2a9d6b46120c17ac4e57"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = ConstrainIsSmET&lt;T&gt;, bool IsStoring = Unqualified&lt;T&gt;::isStoring, bool IsLvalue = isLvalue&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:ad8f92a75222b2a9d6b46120c17ac4e57"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ad8f92a75222b2a9d6b46120c17ac4e57">SUNphi::Reference</a> = RefIf&lt; IsStoring and IsLvalue, RemRef&lt; T &gt;&gt;</td></tr>
+<tr class="memitem:ad8f92a75222b2a9d6b46120c17ac4e57"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/d78/Reference_8hpp.html#ad8f92a75222b2a9d6b46120c17ac4e57">SUNphi::Reference</a> = RefIf&lt; IsStoring and IsLvalue, RemRef&lt; T &gt;&gt;</td></tr>
 <tr class="separator:ad8f92a75222b2a9d6b46120c17ac4e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -161,6 +154,25 @@ Typedefs</h2></td></tr>
 <p>Provide the reference to the object. </p>
 
 <p>Definition at line <a class="el" href="../../d3/d78/Reference_8hpp_source.html#l00029">29</a> of file <a class="el" href="../../d3/d78/Reference_8hpp_source.html">Reference.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_ad8f92a75222b2a9d6b46120c17ac4e57"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename  = ConstrainIsSmET&lt;T&gt;, bool IsStoring = Unqualified&lt;T&gt;::isStoring, bool IsLvalue = isLvalue&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/d78/Reference_8hpp.html#ad8f92a75222b2a9d6b46120c17ac4e57">SUNphi::Reference</a> = typedef RefIf&lt;IsStoring and IsLvalue,RemRef&lt;T&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reference to T or new type, depending on wheter the class isStoring</p>
+<p>Const qualifier is passed throughout </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">Todo:</a></b></dt><dd>add functionality as in Eigen </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d3/d78/Reference_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d3/d78/Reference_8hpp_source.html">Reference.hpp</a>.</p>
 
 </div>
 </div>

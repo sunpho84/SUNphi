@@ -107,7 +107,6 @@ $(document).ready(function(){initNavTree('d4/d96/IntSeqSplit_8hpp.html','../../'
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">IntSeqSplit.hpp File Reference</div>  </div>
@@ -129,20 +128,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d71/structSUNphi_1_1__IntSeqFilter_3_01IntSeq_3_01Ints_8_8_8_01_4_00_01IntSeq_3_01Ids_8_8_8_01_4_01_4.html">SUNphi::_IntSeqFilter&lt; IntSeq&lt; Ints... &gt;, IntSeq&lt; Ids... &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a0a9b8c90e309f5bde54d2b81863a5177"><td class="memTemplParams" colspan="2">template&lt;int N, typename ISeq , typename  = EnableIf&lt;isIntSeq&lt;ISeq&gt;&gt;&gt; </td></tr>
-<tr class="memitem:a0a9b8c90e309f5bde54d2b81863a5177"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#a0a9b8c90e309f5bde54d2b81863a5177">SUNphi::IntSeqFirstN</a> = typename _IntSeqFirstN&lt; N, ISeq &gt;::type</td></tr>
+<tr class="memitem:a0a9b8c90e309f5bde54d2b81863a5177"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d96/IntSeqSplit_8hpp.html#a0a9b8c90e309f5bde54d2b81863a5177">SUNphi::IntSeqFirstN</a> = typename _IntSeqFirstN&lt; N, ISeq &gt;::type</td></tr>
 <tr class="separator:a0a9b8c90e309f5bde54d2b81863a5177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60031ca05f637ebafadef8570b5d931"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae60031ca05f637ebafadef8570b5d931"></a>
 template&lt;typename Is , typename Fi &gt; </td></tr>
-<tr class="memitem:ae60031ca05f637ebafadef8570b5d931"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html#ae60031ca05f637ebafadef8570b5d931">SUNphi::IntSeqFilter</a> = typename _IntSeqFilter&lt; Is, Fi &gt;::type</td></tr>
+<tr class="memitem:ae60031ca05f637ebafadef8570b5d931"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d96/IntSeqSplit_8hpp.html#ae60031ca05f637ebafadef8570b5d931">SUNphi::IntSeqFilter</a> = typename _IntSeqFilter&lt; Is, Fi &gt;::type</td></tr>
 <tr class="memdesc:ae60031ca05f637ebafadef8570b5d931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter an <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a> according to another one. <br /></td></tr>
 <tr class="separator:ae60031ca05f637ebafadef8570b5d931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -150,7 +143,26 @@ template&lt;typename Is , typename Fi &gt; </td></tr>
 <div class="textblock"><p>Take portions of integer sequences. </p>
 
 <p>Definition in file <a class="el" href="../../d4/d96/IntSeqSplit_8hpp_source.html">IntSeqSplit.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="file_a0a9b8c90e309f5bde54d2b81863a5177"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N, typename ISeq , typename  = EnableIf&lt;isIntSeq&lt;ISeq&gt;&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d4/d96/IntSeqSplit_8hpp.html#a0a9b8c90e309f5bde54d2b81863a5177">SUNphi::IntSeqFirstN</a> = typedef typename _IntSeqFirstN&lt;N,ISeq&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the first N components of an <a class="el" href="../../da/def/structSUNphi_1_1IntSeq.html">IntSeq</a></p>
+<p>Gives visibility to internal implementation </p>
+
+<p>Definition at line <a class="el" href="../../d4/d96/IntSeqSplit_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d4/d96/IntSeqSplit_8hpp_source.html">IntSeqSplit.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

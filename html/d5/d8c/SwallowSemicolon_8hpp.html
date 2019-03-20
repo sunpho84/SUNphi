@@ -106,7 +106,6 @@ $(document).ready(function(){initNavTree('d5/d8c/SwallowSemicolon_8hpp.html','..
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">SwallowSemicolon.hpp File Reference</div>  </div>
@@ -118,12 +117,6 @@ $(document).ready(function(){initNavTree('d5/d8c/SwallowSemicolon_8hpp.html','..
 
 <p><a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:d3/dd7/namespaceSUNphi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dd7/namespaceSUNphi.html">SUNphi</a></td></tr>
-<tr class="memdesc:d3/dd7/namespaceSUNphi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container mapping a sequence. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:af78aafc0cd716f679c6879a0fba48da0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a>&#160;&#160;&#160;class {}</td></tr>
@@ -161,7 +154,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  void <a class="code" href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a>()</div><div class="ttc" id="namespaceSUNphi_html_afb071e5c750597f2ed9d00fbba26f938"><div class="ttname"><a href="../../d3/dd7/namespaceSUNphi.html#afb071e5c750597f2ed9d00fbba26f938">SUNphi::neverInstantiatedFunction</a></div><div class="ttdeci">void neverInstantiatedFunction()</div></div>
+<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  void <a class="code" href="../../da/d65/Add_8hpp.html#afb071e5c750597f2ed9d00fbba26f938">neverInstantiatedFunction</a>()</div><div class="ttc" id="Add_8hpp_html_afb071e5c750597f2ed9d00fbba26f938"><div class="ttname"><a href="../../da/d65/Add_8hpp.html#afb071e5c750597f2ed9d00fbba26f938">SUNphi::neverInstantiatedFunction</a></div><div class="ttdeci">void neverInstantiatedFunction()</div></div>
 </div><!-- fragment --><p>Eat a dangling semicolon at global scope</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#define DEFINE_FOOER(TYPE,NAME)          \</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;TYPE NAME()                      \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{                            \</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;doing something...                   \</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}                            \</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;DEFINE_FOER(int,ciccio);</div></div><!-- fragment --> 
