@@ -37,11 +37,9 @@ addons:
       - libopenmpi-dev
       - clang
       - libclang1
-      - libyaml-cpp-dev
-      - libyaml-cpp0.5v5
 
 script:
-  - ls -l /usr/lib/x86_64-linux-gnu/
+  - bash config/install_yaml_cpp.sh
   - bash config/bootstrap
   - mkdir build
   - cd build
