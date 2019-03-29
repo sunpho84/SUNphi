@@ -106,30 +106,420 @@ $(document).ready(function(){initNavTree('d0/d15/Serializable_8hpp.html','../../
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Serializable.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides a class with serializability features via CRTP.  
+<p>Provides a class with serializability features.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;yaml-cpp/yaml.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d4/dba/CRTP_8hpp_source.html">metaprogramming/CRTP.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d0/d15/Serializable_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides serialization features to a class.  <a href="../../d1/d39/classSUNphi_1_1SerializableClass.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html">SUNphi::HasMember_serializableMembers&lt; Type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d43/structSUNphi_1_1HasMember__serializableMembers_1_1Fallback.html">SUNphi::HasMember_serializableMembers&lt; Type &gt;::Fallback</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d07/structSUNphi_1_1HasMember__serializableMembers_1_1Derived.html">SUNphi::HasMember_serializableMembers&lt; Type &gt;::Derived</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d54/structSUNphi_1_1HasMember__serializableMembers_1_1Check.html">SUNphi::HasMember_serializableMembers&lt; Type &gt;::Check&lt; U, U &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/da9/structSUNphi_1_1ConstrainHasMember__serializableMembers.html">SUNphi::ConstrainHasMember_serializableMembers&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class forcing T to have a member "serializableMembers" defined.  <a href="../../d3/da9/structSUNphi_1_1ConstrainHasMember__serializableMembers.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html">SUNphi::SerializableDefaultValue&lt; T, bool &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html">SUNphi::SerializableDefaultValue&lt; T, true &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a default value for a serializable reference.  <a href="../../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html">SUNphi::SerializableDefaultValue&lt; T, false &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide no default value for a serializable reference.  <a href="../../d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable&lt; T, HasDefault, isScalar, isMap, isTupleLike, isVectorlike &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a class with serializability features via CRTP.  <a href="../../dd/d5c/classSUNphi_1_1Serializable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d8b/structSUNphi_1_1HasMember__serialize.html">SUNphi::HasMember_serialize&lt; Type &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d25/structSUNphi_1_1HasMember__serialize_1_1Fallback.html">SUNphi::HasMember_serialize&lt; Type &gt;::Fallback</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc6/structSUNphi_1_1HasMember__serialize_1_1Derived.html">SUNphi::HasMember_serialize&lt; Type &gt;::Derived</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/db5/structSUNphi_1_1HasMember__serialize_1_1Check.html">SUNphi::HasMember_serialize&lt; Type &gt;::Check&lt; U, U &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da7/structSUNphi_1_1ConstrainHasMember__serialize.html">SUNphi::ConstrainHasMember_serialize&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class forcing T to have a member "serialize" defined.  <a href="../../db/da7/structSUNphi_1_1ConstrainHasMember__serialize.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html">YAML::convert&lt; T, EnableIf&lt; hasMember_serialize&lt; T &gt; &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converter for any type providing member serialize.  <a href="../../d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(CONST, ...)</td></tr>
+<tr class="memdesc:a67b7f198fd48e5f3d48723133e3fdaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the class embedding with a serializableMemebers method.  <a href="#a67b7f198fd48e5f3d48723133e3fdaae">More...</a><br /></td></tr>
+<tr class="separator:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94165597a60a99b1fd425a2bfb2a7710"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a94165597a60a99b1fd425a2bfb2a7710">SERIALIZABLE_CLASS</a>(T)</td></tr>
+<tr class="memdesc:a94165597a60a99b1fd425a2bfb2a7710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to define a serializable class.  <a href="#a94165597a60a99b1fd425a2bfb2a7710">More...</a><br /></td></tr>
+<tr class="separator:a94165597a60a99b1fd425a2bfb2a7710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939542239988c43fe567055b415fb6ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a939542239988c43fe567055b415fb6ae">SERIALIZABLE_MEMBERS</a>(...)</td></tr>
+<tr class="memdesc:a939542239988c43fe567055b415fb6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of serializable members.  <a href="#a939542239988c43fe567055b415fb6ae">More...</a><br /></td></tr>
+<tr class="separator:a939542239988c43fe567055b415fb6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a2a1659fe55efea2d2bab0459d85c8f5e">SUNphi::_serializableMembers</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="memdesc:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to create the serializable members.  <a href="../../d0/d15/Serializable_8hpp.html#a2a1659fe55efea2d2bab0459d85c8f5e">More...</a><br /></td></tr>
+<tr class="separator:a2a1659fe55efea2d2bab0459d85c8f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c85c8b387cf0bbcf437451da97e43cf"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a6c85c8b387cf0bbcf437451da97e43cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a6c85c8b387cf0bbcf437451da97e43cf">SUNphi::hasMember_serializableMembersHelper</a> ()</td></tr>
+<tr class="separator:a6c85c8b387cf0bbcf437451da97e43cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5331096776736ddfdffb7450b28862"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a7d5331096776736ddfdffb7450b28862"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a7d5331096776736ddfdffb7450b28862">SUNphi::hasMember_serializeHelper</a> ()</td></tr>
+<tr class="separator:a7d5331096776736ddfdffb7450b28862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1c25b985a663d7ea708f92b35f1501"><td class="memTemplParams" colspan="2">template&lt;typename S , typename T , TypeIf&lt;(not canPrint&lt; S, T &gt;), void * &gt;  = nullptr, TypeIf&lt;(hasMember_serialize&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9c1c25b985a663d7ea708f92b35f1501"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a9c1c25b985a663d7ea708f92b35f1501">SUNphi::operator&lt;&lt;</a> (S &amp;&amp;stream, const T &amp;ser)</td></tr>
+<tr class="memdesc:a9c1c25b985a663d7ea708f92b35f1501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to an output.  <a href="../../d0/d15/Serializable_8hpp.html#a9c1c25b985a663d7ea708f92b35f1501">More...</a><br /></td></tr>
+<tr class="separator:a9c1c25b985a663d7ea708f92b35f1501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8">SUNphi::isSerializableScalar</a></td></tr>
+<tr class="memdesc:a6ee72ac4141adbbabbf24066dd751eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the type is a serializable scalar.  <a href="../../d0/d15/Serializable_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8">More...</a><br /></td></tr>
+<tr class="separator:a6ee72ac4141adbbabbf24066dd751eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac11b16b58ada4bd56cb49179e8235f"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a6ac11b16b58ada4bd56cb49179e8235f"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a6ac11b16b58ada4bd56cb49179e8235f">SUNphi::hasMember_serializableMembers</a> = hasMember_serializableMembersHelper&lt;Type&gt;()</td></tr>
+<tr class="separator:a6ac11b16b58ada4bd56cb49179e8235f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700626d2d30f2e6fa958fb3d8d2ae107"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a700626d2d30f2e6fa958fb3d8d2ae107"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a700626d2d30f2e6fa958fb3d8d2ae107">SUNphi::isSerializableMap</a></td></tr>
+<tr class="memdesc:a700626d2d30f2e6fa958fb3d8d2ae107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the class is a serializable map.  <a href="../../d0/d15/Serializable_8hpp.html#a700626d2d30f2e6fa958fb3d8d2ae107">More...</a><br /></td></tr>
+<tr class="separator:a700626d2d30f2e6fa958fb3d8d2ae107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94857858448e5e5c543b7330ac7f24c"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#ab94857858448e5e5c543b7330ac7f24c">SUNphi::NO_DEFAULT</a></td></tr>
+<tr class="memdesc:ab94857858448e5e5c543b7330ac7f24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark that no default value is provided.  <a href="../../d0/d15/Serializable_8hpp.html#ab94857858448e5e5c543b7330ac7f24c">More...</a><br /></td></tr>
+<tr class="separator:ab94857858448e5e5c543b7330ac7f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada577c9a6dd661325e493d731b78b1ce"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#ada577c9a6dd661325e493d731b78b1ce">SUNphi::MANDATORY</a></td></tr>
+<tr class="memdesc:ada577c9a6dd661325e493d731b78b1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark the mandatoriety of the variable.  <a href="../../d0/d15/Serializable_8hpp.html#ada577c9a6dd661325e493d731b78b1ce">More...</a><br /></td></tr>
+<tr class="separator:ada577c9a6dd661325e493d731b78b1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1918a99cb7e03415c822aa0a1432f1"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
+<tr class="memitem:a0f1918a99cb7e03415c822aa0a1432f1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#a0f1918a99cb7e03415c822aa0a1432f1">SUNphi::hasMember_serialize</a> = hasMember_serializeHelper&lt;Type&gt;()</td></tr>
+<tr class="separator:a0f1918a99cb7e03415c822aa0a1432f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides a class with serializability features via CRTP. </p>
+<div class="textblock"><p>Provides a class with serializability features. </p>
+<p>The value mapped can be of three types:</p>
+<ul>
+<li>a scalar, of a trivially copyable kind</li>
+<li>a map, namely a class with a "serializableMembers" member</li>
+<li>a sequence, namely a tuple-like or vector-like container </li>
+</ul>
 
 <p>Definition in file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a67b7f198fd48e5f3d48723133e3fdaae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONST_OR_NOT_SERIALIZABLE_MEMBERS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CONST, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">            \</div><div class="line">  auto serializableMembers()                        \</div><div class="line">    CONST                               \</div><div class="line">  {                                 \</div><div class="line">    return                              \</div><div class="line">      std::forward_as_tuple(__VA_ARGS__);               \</div><div class="line">  }                                     <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+</div><!-- fragment -->
+<p>Provides the class embedding with a serializableMemebers method. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00048">48</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94165597a60a99b1fd425a2bfb2a7710"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALIZABLE_CLASS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a> :                   \</div><div class="line">    <span class="keyword">public</span> SerializableClass&lt;T&gt;</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+</div><!-- fragment -->
+<p>Shortcut to define a serializable class. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a939542239988c43fe567055b415fb6ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERIALIZABLE_MEMBERS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../d0/d15/Serializable_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(     , __VA_ARGS__);      <a class="code" href="../../d0/d15/Serializable_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">\</a></div><div class="line"><a class="code" href="../../d0/d15/Serializable_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">  CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(<span class="keyword">const</span>, __VA_ARGS__);</div><div class="ttc" id="Serializable_8hpp_html_a67b7f198fd48e5f3d48723133e3fdaae"><div class="ttname"><a href="../../d0/d15/Serializable_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a></div><div class="ttdeci">#define CONST_OR_NOT_SERIALIZABLE_MEMBERS(CONST,...)</div><div class="ttdoc">Provides the class embedding with a serializableMemebers method. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d15/Serializable_8hpp_source.html#l00048">Serializable.hpp:48</a></div></div>
+</div><!-- fragment -->
+<p>Defines a list of serializable members. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00123">123</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a2a1659fe55efea2d2bab0459d85c8f5e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto SUNphi::_serializableMembers </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function to create the serializable members. </p>
+<p>Check that all arguments are <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
+<p>Check that all arguments are <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a></p>
+<p>Check that all arguments are <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a> </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00038">38</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a6c85c8b387cf0bbcf437451da97e43cf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_serializableMembersHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a7d5331096776736ddfdffb7450b28862"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_serializeHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intemediate function to distinguish the non-class case </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00289">289</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a9c1c25b985a663d7ea708f92b35f1501"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S , typename T , TypeIf&lt;(not canPrint&lt; S, T &gt;), void * &gt;  = nullptr, TypeIf&lt;(hasMember_serialize&lt; T &gt;), void * &gt;  = nullptr&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">S&amp; SUNphi::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">S &amp;&amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>ser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stream to an output. </p>
+<p>Converter to string </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00296">296</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="file_a6ac11b16b58ada4bd56cb49179e8235f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_serializableMembers = hasMember_serializableMembersHelper&lt;Type&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Detect if <code>Type</code> has member (variable or method) serializableMembers</p>
+<p>Uses SFINAE to induce ambiguity in the detection of the member </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a0f1918a99cb7e03415c822aa0a1432f1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::hasMember_serialize = hasMember_serializeHelper&lt;Type&gt;()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Detect if <code>Type</code> has member (variable or method) serialize</p>
+<p>Uses SFINAE to induce ambiguity in the detection of the member </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00289">289</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a700626d2d30f2e6fa958fb3d8d2ae107"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isSerializableMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    hasMember_serializableMembers&lt;T&gt;</div></div><!-- fragment -->
+<p>Check if the class is a serializable map. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a6ee72ac4141adbbabbf24066dd751eb8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::isSerializableScalar</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    std::is_trivially_copyable_v&lt;T&gt;</div></div><!-- fragment -->
+<p>Check if the type is a serializable scalar. </p>
+<p>Trait to recognize a class as a serializable scalar</p>
+<p>False case </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_ada577c9a6dd661325e493d731b78b1ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::MANDATORY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="keyword">false</span></div></div><!-- fragment -->
+<p>Used to mark the mandatoriety of the variable. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_ab94857858448e5e5c543b7330ac7f24c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool SUNphi::NO_DEFAULT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="keyword">false</span></div></div><!-- fragment -->
+<p>Used to mark that no default value is provided. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00136">136</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

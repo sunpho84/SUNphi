@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('d1/d97/classSUNphi_1_1SerializableScal
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
@@ -126,12 +127,20 @@ Inheritance diagram for SUNphi::SerializableScalar&lt; T, HasDefault &gt;:</div>
  <div class="center">
   <img src="../../d1/d97/classSUNphi_1_1SerializableScalar.png" usemap="#SUNphi::SerializableScalar_3C_20T_2C_20HasDefault_20_3E_map" alt=""/>
   <map id="SUNphi::SerializableScalar_3C_20T_2C_20HasDefault_20_3E_map" name="SUNphi::SerializableScalar&lt; T, HasDefault &gt;_map">
-<area href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html" alt="SUNphi::SerializableDefaultValue&lt; T, HasDefault &gt;" shape="rect" coords="0,0,355,24"/>
-<area href="../../dd/d5c/classSUNphi_1_1Serializable.html" alt="SUNphi::Serializable&lt; SerializableScalar&lt; T, HasDefault &gt; &gt;" shape="rect" coords="365,0,720,24"/>
-<area href="../../d7/da6/classSUNphi_1_1Binarizable.html" alt="SUNphi::Binarizable&lt; SerializableScalar&lt; T, HasDefault &gt; &gt;" shape="rect" coords="730,0,1085,24"/>
+<area href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html" alt="SUNphi::SerializableDefaultValue&lt; T, HasDefault &gt;" shape="rect" coords="0,56,459,80"/>
+<area href="../../dd/d5c/classSUNphi_1_1Serializable.html" alt="SUNphi::Serializable&lt; SerializableScalar&lt; T, HasDefault &gt; &gt;" shape="rect" coords="469,56,928,80"/>
+<area href="../../d7/da6/classSUNphi_1_1Binarizable.html" alt="SUNphi::Binarizable&lt; SerializableScalar&lt; T, HasDefault &gt; &gt;" shape="rect" coords="938,56,1397,80"/>
+<area href="../../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html" alt="SUNphi::SerializableDefaultValue&lt; SerializableScalar&lt; T, HasDefault &gt;, true &gt;" shape="rect" coords="469,0,928,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a36ea017eda36a8ed0a51b83cd433fba5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36ea017eda36a8ed0a51b83cd433fba5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a36ea017eda36a8ed0a51b83cd433fba5">Type</a> = <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt;</td></tr>
+<tr class="memdesc:a36ea017eda36a8ed0a51b83cd433fba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapped type. <br /></td></tr>
+<tr class="separator:a36ea017eda36a8ed0a51b83cd433fba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aed47908e9b01212061807b0d4e0ce380"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed47908e9b01212061807b0d4e0ce380"></a>
@@ -163,8 +172,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:ac4de1825c32d4118aa35857aa420b647"><td class="memTemplParams" colspan="2">template&lt;typename O &gt; </td></tr>
 <tr class="memitem:ac4de1825c32d4118aa35857aa420b647"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#ac4de1825c32d4118aa35857aa420b647">operator/=</a> (O &amp;&amp;oth)</td></tr>
 <tr class="separator:ac4de1825c32d4118aa35857aa420b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a8fb9ff4f87a0021aa36bd7407e75ecd8">serialize</a> () const</td></tr>
-<tr class="memdesc:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the string.  <a href="#a8fb9ff4f87a0021aa36bd7407e75ecd8">More...</a><br /></td></tr>
+<tr class="memitem:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a8fb9ff4f87a0021aa36bd7407e75ecd8">serialize</a> () const</td></tr>
+<tr class="memdesc:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a YAML node.  <a href="#a8fb9ff4f87a0021aa36bd7407e75ecd8">More...</a><br /></td></tr>
 <tr class="separator:a8fb9ff4f87a0021aa36bd7407e75ecd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#a3fd6a639a7a112d8bdceb4f13f45ac11">binarize</a> () const</td></tr>
 <tr class="memdesc:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the binarized version.  <a href="#a3fd6a639a7a112d8bdceb4f13f45ac11">More...</a><br /></td></tr>
@@ -176,14 +185,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a7d51acbc311571c9ede9dbfedb6c3f67"><td class="memItemLeft" ><a class="anchor" id="a7d51acbc311571c9ede9dbfedb6c3f67"></a>
+<tr class="memitem:afa093699c45797385bae64179a725dfa"><td class="memItemLeft" ><a class="anchor" id="afa093699c45797385bae64179a725dfa"></a>
 class {</td></tr>
-<tr class="memitem:a7d51acbc311571c9ede9dbfedb6c3f67"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a7d51acbc311571c9ede9dbfedb6c3f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa093699c45797385bae64179a725dfa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:afa093699c45797385bae64179a725dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a957e71ebd92fded9235d69c31fdb6e09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a957e71ebd92fded9235d69c31fdb6e09"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html#a957e71ebd92fded9235d69c31fdb6e09">name</a></td></tr>
 <tr class="memdesc:a957e71ebd92fded9235d69c31fdb6e09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name used to refer. <br /></td></tr>
 <tr class="separator:a957e71ebd92fded9235d69c31fdb6e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6701fcf93bab7a13bc5a1901296a42"><td class="memItemLeft" ><a class="anchor" id="a5a6701fcf93bab7a13bc5a1901296a42"></a>
+class {</td></tr>
+<tr class="memitem:a5a6701fcf93bab7a13bc5a1901296a42"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a5a6701fcf93bab7a13bc5a1901296a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -220,7 +233,7 @@ class SUNphi::SerializableScalar&lt; T, HasDefault &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -290,7 +303,7 @@ template&lt;typename T, bool HasDefault = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename... Ts&gt; </div>
 <table class="mlabels">
@@ -327,7 +340,7 @@ template&lt;typename... Ts&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -358,7 +371,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -389,7 +402,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -420,7 +433,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -451,7 +464,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -486,7 +499,7 @@ template&lt;typename O &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable</a>&lt; <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt;  &gt;::serialize </td>
+          <td class="memname">YAML::Node <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable</a>&lt; <a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt; , true , SUNphi::isSerializableScalar&lt;<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt; &gt; , isSerializableMap&lt;<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt; &gt; , SUNphi::isTupleLike&lt;<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt; &gt; , SUNphi::isVectorLike&lt;<a class="el" href="../../d1/d97/classSUNphi_1_1SerializableScalar.html">SerializableScalar</a>&lt; T, HasDefault &gt; &gt;  &gt;::serialize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -494,13 +507,16 @@ template&lt;typename O &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates the string. </p>
+<p>Returns a YAML node. </p>
 <p>Creates a string out of a serializable. </p>
+<p>Returned node </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00265">265</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -509,7 +525,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -556,7 +572,7 @@ template&lt;typename T, bool HasDefault = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -604,7 +620,7 @@ template&lt;typename T, bool HasDefault = true&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, bool HasDefault = true&gt; </div>
+template&lt;typename T , bool HasDefault = true&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

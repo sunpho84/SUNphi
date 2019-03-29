@@ -1,5 +1,6 @@
 var classSUNphi_1_1SerializableScalar =
 [
+    [ "Type", "d1/d97/classSUNphi_1_1SerializableScalar.html#a36ea017eda36a8ed0a51b83cd433fba5", null ],
     [ "SerializableScalar", "d1/d97/classSUNphi_1_1SerializableScalar.html#a47d6af245624812006dd72e0207789e9", null ],
     [ "binarize", "d1/d97/classSUNphi_1_1SerializableScalar.html#a3fd6a639a7a112d8bdceb4f13f45ac11", null ],
     [ "deBinarize", "d1/d97/classSUNphi_1_1SerializableScalar.html#abc1ab4d82983fd7508b8a46b8d24ee8a", null ],

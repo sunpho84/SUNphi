@@ -14,6 +14,5 @@ var Base_8hpp =
     [ "hasMember_binSizeHelper", "d3/db2/Base_8hpp.html#a467ed483ac46ae65af08f795224b4447", null ],
     [ "hasMember_serializableMembersHelper", "d3/db2/Base_8hpp.html#a6c85c8b387cf0bbcf437451da97e43cf", null ],
     [ "hasMember_binSize", "d3/db2/Base_8hpp.html#a4cd2268921a4d67ad08e56a16fe2492a", null ],
-    [ "hasMember_serializableMembers", "d3/db2/Base_8hpp.html#a6ac11b16b58ada4bd56cb49179e8235f", null ],
     [ "isSerializableClass", "d3/db2/Base_8hpp.html#ad1993c830c7b75d0ba840624b34eb4bc", null ]
 ];

@@ -2,6 +2,9 @@ var annotated_dup =
 [
     [ "SUNphi", null, [
       [ "_RelBindInternalChecks", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html", "df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks" ],
+      [ "internal", null, [
+        [ "FallTrhough", "d1/d97/classSUNphi_1_1internal_1_1FallTrhough.html", null ]
+      ] ],
       [ "_BlendTensKinds", "de/d12/structSUNphi_1_1__BlendTensKinds.html", null ],
       [ "_BlendTensKinds< Head1, Head2, Tail... >", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4" ],
       [ "_BlendTensKinds< Tk >", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4.html", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4" ],
@@ -90,8 +93,10 @@ var annotated_dup =
       [ "ConstrainAreUMinusers", "d3/dde/structSUNphi_1_1ConstrainAreUMinusers.html", null ],
       [ "ConstrainAreWrappers", "d6/dbc/structSUNphi_1_1ConstrainAreWrappers.html", null ],
       [ "ConstrainHasMember_assertMergeableWith", "d5/df6/structSUNphi_1_1ConstrainHasMember__assertMergeableWith.html", null ],
+      [ "ConstrainHasMember_begin", "d7/dba/structSUNphi_1_1ConstrainHasMember__begin.html", null ],
       [ "ConstrainHasMember_binSize", "dc/d55/structSUNphi_1_1ConstrainHasMember__binSize.html", null ],
       [ "ConstrainHasMember_compSize", "df/de8/structSUNphi_1_1ConstrainHasMember__compSize.html", null ],
+      [ "ConstrainHasMember_end", "d5/dc1/structSUNphi_1_1ConstrainHasMember__end.html", null ],
       [ "ConstrainHasMember_eval", "dc/d20/structSUNphi_1_1ConstrainHasMember__eval.html", null ],
       [ "ConstrainHasMember_Fund", "d8/d7d/structSUNphi_1_1ConstrainHasMember__Fund.html", null ],
       [ "ConstrainHasMember_getMergedCompsView", "d5/d33/structSUNphi_1_1ConstrainHasMember__getMergedCompsView.html", null ],
@@ -103,7 +108,10 @@ var annotated_dup =
       [ "ConstrainHasMember_ref1", "d0/dd1/structSUNphi_1_1ConstrainHasMember__ref1.html", null ],
       [ "ConstrainHasMember_ref2", "d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html", null ],
       [ "ConstrainHasMember_refs", "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html", null ],
+      [ "ConstrainHasMember_resize", "d0/da0/structSUNphi_1_1ConstrainHasMember__resize.html", null ],
       [ "ConstrainHasMember_serializableMembers", "d3/da9/structSUNphi_1_1ConstrainHasMember__serializableMembers.html", null ],
+      [ "ConstrainHasMember_serialize", "db/da7/structSUNphi_1_1ConstrainHasMember__serialize.html", null ],
+      [ "ConstrainHasMember_size", "d4/d84/structSUNphi_1_1ConstrainHasMember__size.html", null ],
       [ "ConstrainHasMember_Tk", "d0/db5/structSUNphi_1_1ConstrainHasMember__Tk.html", null ],
       [ "ConstrainIsBaseOf", "d1/d4c/structSUNphi_1_1ConstrainIsBaseOf.html", "d1/d4c/structSUNphi_1_1ConstrainIsBaseOf" ],
       [ "ConstrainIsDynamic", "d4/de8/structSUNphi_1_1ConstrainIsDynamic.html", null ],
@@ -130,8 +138,10 @@ var annotated_dup =
       [ "GridShiftableBC< T, NDims, Coord, Idx, false >", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4" ],
       [ "GridShiftableBC< T, NDims, Coord, Idx, true >", "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html", "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4" ],
       [ "HasMember_assertMergeableWith", "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith.html", "d5/de5/structSUNphi_1_1HasMember__assertMergeableWith" ],
+      [ "HasMember_begin", "d9/d0c/structSUNphi_1_1HasMember__begin.html", "d9/d0c/structSUNphi_1_1HasMember__begin" ],
       [ "HasMember_binSize", "df/d85/structSUNphi_1_1HasMember__binSize.html", "df/d85/structSUNphi_1_1HasMember__binSize" ],
       [ "HasMember_compSize", "de/d50/structSUNphi_1_1HasMember__compSize.html", "de/d50/structSUNphi_1_1HasMember__compSize" ],
+      [ "HasMember_end", "d9/ddf/structSUNphi_1_1HasMember__end.html", "d9/ddf/structSUNphi_1_1HasMember__end" ],
       [ "HasMember_eval", "d8/dfe/structSUNphi_1_1HasMember__eval.html", "d8/dfe/structSUNphi_1_1HasMember__eval" ],
       [ "HasMember_Fund", "d2/d5d/structSUNphi_1_1HasMember__Fund.html", "d2/d5d/structSUNphi_1_1HasMember__Fund" ],
       [ "HasMember_getMergedCompsView", "d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView.html", "d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView" ],
@@ -143,7 +153,10 @@ var annotated_dup =
       [ "HasMember_ref1", "da/db5/structSUNphi_1_1HasMember__ref1.html", "da/db5/structSUNphi_1_1HasMember__ref1" ],
       [ "HasMember_ref2", "d3/d14/structSUNphi_1_1HasMember__ref2.html", "d3/d14/structSUNphi_1_1HasMember__ref2" ],
       [ "HasMember_refs", "dd/dce/structSUNphi_1_1HasMember__refs.html", "dd/dce/structSUNphi_1_1HasMember__refs" ],
+      [ "HasMember_resize", "db/d7f/structSUNphi_1_1HasMember__resize.html", "db/d7f/structSUNphi_1_1HasMember__resize" ],
       [ "HasMember_serializableMembers", "d1/dbb/structSUNphi_1_1HasMember__serializableMembers.html", "d1/dbb/structSUNphi_1_1HasMember__serializableMembers" ],
+      [ "HasMember_serialize", "d1/d8b/structSUNphi_1_1HasMember__serialize.html", "d1/d8b/structSUNphi_1_1HasMember__serialize" ],
+      [ "HasMember_size", "d4/d2b/structSUNphi_1_1HasMember__size.html", "d4/d2b/structSUNphi_1_1HasMember__size" ],
       [ "HasMember_Tk", "d7/d03/structSUNphi_1_1HasMember__Tk.html", "d7/d03/structSUNphi_1_1HasMember__Tk" ],
       [ "IncapsulatedString", "da/d56/structSUNphi_1_1IncapsulatedString.html", "da/d56/structSUNphi_1_1IncapsulatedString" ],
       [ "IntSeq", "da/def/structSUNphi_1_1IntSeq.html", "da/def/structSUNphi_1_1IntSeq" ],
@@ -193,6 +206,9 @@ var annotated_dup =
       [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
       [ "Vector", "df/dc0/classSUNphi_1_1Vector.html", "df/dc0/classSUNphi_1_1Vector" ],
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
+    ] ],
+    [ "YAML", null, [
+      [ "convert< T, EnableIf< hasMember_serialize< T > > >", "d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html", "d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4" ]
     ] ],
     [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
 ];

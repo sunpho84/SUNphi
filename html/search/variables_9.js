@@ -36,7 +36,8 @@ var searchData=
   ['issame_3c_20t_2c_20t_20_3e',['isSame&lt; T, T &gt;',['../d0/d81/TypeTraits_8hpp.html#a4e2ebf308cda3504417f00d9ce87c057',1,'SUNphi']]],
   ['isscalarwrapper',['isScalarWrapper',['../d9/d0c/ScalarWrap_8hpp.html#a1ea11c9e4ce27cbd63594eb23b0e0b9d',1,'SUNphi']]],
   ['isserializableclass',['isSerializableClass',['../d3/db2/Base_8hpp.html#ad1993c830c7b75d0ba840624b34eb4bc',1,'SUNphi']]],
-  ['isserializablescalar',['isSerializableScalar',['../dd/d32/Scalar_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8',1,'SUNphi']]],
+  ['isserializablemap',['isSerializableMap',['../d0/d15/Serializable_8hpp.html#a700626d2d30f2e6fa958fb3d8d2ae107',1,'SUNphi']]],
+  ['isserializablescalar',['isSerializableScalar',['../d0/d15/Serializable_8hpp.html#a6ee72ac4141adbbabbf24066dd751eb8',1,'SUNphi']]],
   ['isserializablescalar_3c_20c_3c_20t_2c_20b_20_3e_20_3e',['isSerializableScalar&lt; C&lt; T, B &gt; &gt;',['../dd/d32/Scalar_8hpp.html#a537af41d690040569c89a985b4c0808c',1,'SUNphi']]],
   ['isserializablesequence',['isSerializableSequence',['../d0/d11/Sequence_8hpp.html#a85e04feeefa86c7c31fcfa54bd11f6f4',1,'SUNphi']]],
   ['isshiftingbc',['isShiftingBC',['../dd/dca/classSUNphi_1_1Grid.html#a96f3dfc963664309d6e01c8033658fbb',1,'SUNphi::Grid']]],
@@ -51,8 +52,10 @@ var searchData=
   ['istransposer',['isTransposer',['../d0/d6d/Transpose_8hpp.html#ac2bde1b5ffe667e227bd09f840384021',1,'SUNphi']]],
   ['istriviallycopyable',['isTriviallyCopyable',['../d0/d81/TypeTraits_8hpp.html#a1456093270e5eab792ae6cfe8799061d',1,'SUNphi']]],
   ['istuple',['isTuple',['../d1/d31/TupleClass_8hpp.html#af957e3aa36c0c3d5ac12a52ab1547027',1,'SUNphi']]],
+  ['istuplelike',['isTupleLike',['../d0/d81/TypeTraits_8hpp.html#aea1513a8b6e86c99e51f9c4c8666df28',1,'SUNphi']]],
   ['isuminuser',['isUMinuser',['../d2/dad/UnaryMinus_8hpp.html#a22e1516be70080cc9154838f179d721f',1,'SUNphi']]],
   ['isvalidcompmerge',['isValidCompMerge',['../d8/df8/classSUNphi_1_1TensKind.html#a428b037577568e928eb1d325b1ee4337',1,'SUNphi::TensKind']]],
   ['isvectorizable',['isVectorizable',['../d1/d96/structSUNphi_1_1TensComp.html#a62036115814b61e36c3699da76b23f8f',1,'SUNphi::TensComp']]],
+  ['isvectorlike',['isVectorLike',['../d0/d81/TypeTraits_8hpp.html#a600050e50a7bfb870c6fdd4aebf46cc2',1,'SUNphi']]],
   ['iswrapper',['isWrapper',['../da/df3/Wrap_8hpp.html#ae1b278db616fc529bdb31d98a9741747',1,'SUNphi']]]
 ];
