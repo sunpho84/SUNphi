@@ -162,7 +162,7 @@ var searchData=
   ['crashonerror',['crashOnError',['../df/d09/classSUNphi_1_1Mpi.html#ac423ccc74e978b39fb9cb794532ff3ff',1,'SUNphi::Mpi']]],
   ['created',['created',['../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d',1,'SUNphi::TensStor']]],
   ['crtp_2ehpp',['CRTP.hpp',['../d4/dba/CRTP_8hpp.html',1,'']]],
-  ['crtp_5fcast',['CRTP_CAST',['../d4/dba/CRTP_8hpp.html#a096469fcc98d6dce86a93de07c24840f',1,'CRTP.hpp']]],
+  ['crtp_5fthis',['CRTP_THIS',['../d4/dba/CRTP_8hpp.html#a68082647627071fee369d4da4b495a37',1,'CRTP.hpp']]],
   ['cstring',['cString',['../d8/d32/String_8hpp.html#a9bef329ab1e417fc38ce15db59027624',1,'SUNphi::cString(const char *in)'],['../d8/d32/String_8hpp.html#a209d82c3897d63fd48add4ada6abb8ce',1,'SUNphi::cString(const std::string &amp;in)']]],
   ['cstringcomparer',['CStringComparer',['../d7/dcb/structSUNphi_1_1CStringComparer.html',1,'SUNphi']]],
   ['cumulativemeasure',['cumulativeMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a8730f74ff7d2d34611c44f4a00c610da',1,'SUNphi::Timer']]],
