@@ -10,7 +10,11 @@ mkdir build
 
 pushd build
 
-cmake .. -DYAML_CPP_BUILD_TESTS=no -DYAML_CPP_BUILD_TOOLS=no
+cmake \
+    .. \
+    -DYAML_CPP_BUILD_TESTS=no \
+    -DYAML_CPP_BUILD_TOOLS=no \
+    -DCMAKE_INSTALL_PREFIX:PATH=$HOME
 
 make
 
