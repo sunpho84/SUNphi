@@ -711,6 +711,54 @@ namespace SUNphi
      _is ## CLASS((RemRef<T>*)nullptr);                                 \
 									\
   PROVIDE_ENABLE_IF_FOR_IS_TYPE(CLASS)
+  
+  /////////////////////////////////////////////////////////////////
+  
+  DEFINE_HAS_MEMBER(begin);
+  DEFINE_HAS_MEMBER(size);
+  DEFINE_HAS_MEMBER(resize);
+  DEFINE_HAS_MEMBER(end);
+  
+  /// Check if the class T is vector-like
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isVectorLike=
+    hasMember_begin<T> and
+    hasMember_end<T> and
+    hasMember_resize<T> and
+    hasMember_size<T>;
+  
+  namespace internal
+  {
+    /// Class returned from fall-through methods
+    class FallTrhough
+    {
+    };
+    
+    /// Default getter
+    template <int,
+	      typename T>
+    FallTrhough get(T)
+    {
+    };
+  }
+  
+  /// Check if the class T can be get
+  template <typename T>
+  constexpr bool canBeGet()
+  {
+    using namespace std;
+    using namespace internal;
+    
+    return
+      not isSame<RemRef<decltype(get<0>(*static_cast<T*>(nullptr)))>,FallTrhough>;
+  }
+  
+  /// Check if the class T is tuple-like
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isTupleLike=
+    canBeGet<T>();
 }
 
 #endif
