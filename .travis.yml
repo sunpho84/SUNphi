@@ -43,7 +43,7 @@ script:
   - bash config/bootstrap
   - mkdir build
   - cd build
-  - ../configure $THREADS $MPI
+  - ../configure $THREADS $MPI --with-yaml=$HOME
   - cat config.log
   - make
   - bin/checks
