@@ -2,7 +2,7 @@
 
 pushd /tmp
 
-git clone git@github.com:sunpho84/yaml-cpp.git
+git clone https://github.com/sunpho84/yaml-cpp.git
 
 pushd yaml-cpp
 
