@@ -56,7 +56,8 @@ namespace SUNphi
       
       /// If the variable has default value, copy it
       if constexpr(hasDefault)
-	value=this->def;
+	value=
+	  this->def;
     }
     
     // SerializableScalar(const char* name,

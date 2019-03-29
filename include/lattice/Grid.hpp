@@ -98,7 +98,7 @@ namespace SUNphi
     {
       /// Proxy volume
       const Idx volume=
-	CRTP_CAST.volume();
+	CRTP_THIS.volume();
       
       // Check hashability
       const auto& maxHashability=
@@ -110,7 +110,7 @@ namespace SUNphi
       tb.resize(volume);
       
       // Fill the table
-      CRTP_CAST.forAllPoints([&](Idx i)
+      CRTP_THIS.forAllPoints([&](Idx i)
 			     {
 			       tb[i]=
 				 f(i);
@@ -124,7 +124,7 @@ namespace SUNphi
 			  [&](Idx i)
 			  {
 			    return
-			      CRTP_CAST.computeCoordsOfPoint(i);
+			      CRTP_THIS.computeCoordsOfPoint(i);
 			  });
     }
     
@@ -138,10 +138,10 @@ namespace SUNphi
 			    Neigh out;
 			    
 			    // Loop on all oriented direction
-			    CRTP_CAST.forAllOriDirs([&](int oriDir)
+			    CRTP_THIS.forAllOriDirs([&](int oriDir)
 						    {
 						      out[oriDir]=
-							CRTP_CAST.computeNeighOfPoint(i,oriDir);
+							CRTP_THIS.computeNeighOfPoint(i,oriDir);
 						    });
 			    
 			    return out;
@@ -164,7 +164,7 @@ namespace SUNphi
     /// Get the coords of given point
     const Coords& coordsOfPoint(Idx i) const
     {
-      CRTP_CAST.assertPointIsInRange(i);
+      CRTP_THIS.assertPointIsInRange(i);
       
       return coordsOfPointsHashTable[i];
     }
@@ -173,8 +173,8 @@ namespace SUNphi
     Idx neighOfPoint(const Idx i,
 		     const int oriDir) const
     {
-      CRTP_CAST.assertPointIsInRange(i);
-      CRTP_CAST.assertOriDirIsInRange(oriDir);
+      CRTP_THIS.assertPointIsInRange(i);
+      CRTP_THIS.assertOriDirIsInRange(oriDir);
       
       return neighsOfPointsHashTable[i][oriDir];
     }
@@ -208,14 +208,14 @@ namespace SUNphi
     /// Get the coords of given point, computing it
     Coords coordsOfPoint(Idx i) const
     {
-      return CRTP_CAST.computeCoordsOfPoint(i);
+      return CRTP_THIS.computeCoordsOfPoint(i);
     }
     
     /// Return the neighbor in the given oriented dir, computing it
     Idx neighOfPoint(const Idx i,
 		     const int oriDir) const
     {
-      return CRTP_CAST.computeNeighOfPoint(i,oriDir);
+      return CRTP_THIS.computeNeighOfPoint(i,oriDir);
     }
     
     /// Fill all the HashTables (dummy version)
@@ -280,14 +280,14 @@ namespace SUNphi
 	dir;
       
       // Set shift at BC
-      CRTP_CAST.forAllDims([&](int mu)
+      CRTP_THIS.forAllDims([&](int mu)
 			   {
 			     _shiftOfBC[mu]=
-			       safeModulo(shift[mu],CRTP_CAST.side(mu));
+			       safeModulo(shift[mu],CRTP_THIS.side(mu));
 			   });
       
       /// Trigger hashtables rebuild
-      CRTP_CAST.fillHashTables();
+      CRTP_THIS.fillHashTables();
     }
     
     /// Gets the shifting face
@@ -322,7 +322,7 @@ namespace SUNphi
 	  
 	  /// Returned value
 	  const Coord out=
-	    safeModulo(rawMuDest,CRTP_CAST.side(perpDir));
+	    safeModulo(rawMuDest,CRTP_THIS.side(perpDir));
 	  
 	  return out;
 	}

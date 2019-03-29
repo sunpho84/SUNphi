@@ -28,7 +28,7 @@ namespace SUNphi
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
   /// Access to the inheriting class
-#define CRTP_CAST \
+#define CRTP_THIS \
   (~*this)
 }
 
