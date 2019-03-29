@@ -2,7 +2,7 @@
 
 pushd /tmp
 
-git clone https://github.com/sunpho84/yaml-cpp.git
+git clone https://github.com/sunpho84/yaml-cpp.git --depth=1
 
 pushd yaml-cpp
 
@@ -10,7 +10,7 @@ mkdir build
 
 pushd build
 
-cmake ..
+cmake .. -DYAML_CPP_BUILD_TESTS=no -DYAML_CPP_BUILD_TOOLS=no
 
 make
 
