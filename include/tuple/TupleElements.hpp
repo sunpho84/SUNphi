@@ -51,7 +51,7 @@ namespace SUNphi
   template <size_t I=0,
 	    typename T,
 	    typename F,
-	    typename=EnableIf<isTuple<T>>>
+	    typename=EnableIf<isTupleLike<T>>>
   void forEach(T&& t, ///< \c Tuple to act upon
 	       F&& f) ///< \c Function iterating on the \c Tuple
   {
@@ -73,7 +73,8 @@ namespace SUNphi
   DECLAUTO getIndexed(const IntSeq<Ints...>&,
 		      Tp&& tp)
   {
-    return std::make_tuple(std::get<Ints>(forw<Tp>(tp))...);
+    return
+      std::make_tuple(std::get<Ints>(forw<Tp>(tp))...);
   }
   
   /// Gets the head of a \c Tuple
@@ -84,7 +85,8 @@ namespace SUNphi
 	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
   DECLAUTO getHead(Tp&& tp)     ///< Tuple from which to extract
   {
-    return getIndexed(IntsUpTo<N>{},forw<Tp>(tp));
+    return
+      getIndexed(IntsUpTo<N>{},forw<Tp>(tp));
   }
   
   /// Gets the tail of a \c Tuple
@@ -95,10 +97,16 @@ namespace SUNphi
 	    SFINAE_ON_TEMPLATE_ARG(isTuple<Tp>)>
   DECLAUTO getTail(const Tp&& tp)     ///< Tuple from which to extract
   {
-    constexpr int size=tupleSize<Tp>;  // Number of elements in the tuple
-    constexpr int offset=size-N;  // Beginning of returned part
+    /// Number of elements in the tuple
+    constexpr int size=
+      tupleSize<Tp>;
     
-    return getIndexed(RangeSeq<offset,1,size>{},forw<Tp>(tp));
+    /// Beginning of returned part
+    constexpr int offset=
+      size-N;
+    
+    return
+      getIndexed(RangeSeq<offset,1,size>{},forw<Tp>(tp));
   }
   
   /// Returns all elements of a \c Tuple but the N-th one

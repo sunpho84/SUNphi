@@ -68,8 +68,7 @@ namespace SUNphi
   /////////////////////////////////////////////////////////////////
   
   /// Total number of elements in a \c Tuple
-  template <typename T,
-	    typename=EnableIf<isTuple<T>>>
+  template <typename T>
   [[maybe_unused]]
   constexpr int tupleSize=
     std::tuple_size<Unqualified<T>>::value;
