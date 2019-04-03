@@ -39,15 +39,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d1/d77/classSUNphi_1_1Wrapper.html#af4a501e6b907026165e6c60919c5f037",
-"d2/df0/Binarize_8hpp.html#aa352562a9784899e7c13543c4cbecf3a",
-"d4/d63/structSUNphi_1_1ConstrainHasMember__isAssignable.html",
-"d6/d3d/structSUNphi_1_1Mutex.html#a4b94701f3873a79416fb695caec1cec8",
-"d8/d4a/structSUNphi_1_1ConstrainNTypes.html",
-"da/d14/structSUNphi_1_1Spacetime.html#acd7ae650b1638f5e1d2ceae4449c11c5",
-"dc/d21/TupleElements_8hpp_source.html",
-"dd/d2b/SUNphi_8cpp.html#a983825154c3b066e753ad3641bd04fe1",
-"de/dee/structSUNphi_1_1Compl.html"
+"d1/d97/Factorize_8hpp.html#ac728c27faf9b21f9472930644b10f103",
+"d3/d22/classSUNphi_1_1TensStor.html#afca99a5d40cb47ab2a5889439a3eee77",
+"d4/dca/structSUNphi_1_1BaseTensKind.html",
+"d6/d9e/structSUNphi_1_1TensKind_1_1ConstrainIsValidCompMerge.html",
+"d8/dc9/structSUNphi_1_1RwCol.html#aff07721fd4455f1b9859c166766f8e7c",
+"da/db7/IntSeqTranspose_8hpp.html",
+"dc/d58/Position_8hpp_source.html",
+"dd/d8a/structSUNphi_1_1HasMember__isAssignable.html",
+"df/d75/structSUNphi_1_1ConstrainTupleHasNotType.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

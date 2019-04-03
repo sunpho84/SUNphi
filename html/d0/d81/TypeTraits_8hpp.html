@@ -441,16 +441,16 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a596acec6fec77d67693f05e82c964782"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a596acec6fec77d67693f05e82c964782">SUNphi::canPrint</a> = CanPrint &lt;S,T&gt;::res</td></tr>
 <tr class="separator:a596acec6fec77d67693f05e82c964782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d9467528c04545e919cb5ae003dbbc"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a46d9467528c04545e919cb5ae003dbbc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a46d9467528c04545e919cb5ae003dbbc">SUNphi::hasMember_begin</a> = hasMember_beginHelper&lt;Type&gt;()</td></tr>
+<tr class="memitem:a46d9467528c04545e919cb5ae003dbbc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a46d9467528c04545e919cb5ae003dbbc">SUNphi::hasMember_begin</a> = hasMember_beginHelper&lt;RemRef&lt;Type&gt;&gt;()</td></tr>
 <tr class="separator:a46d9467528c04545e919cb5ae003dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad07f927df8a985814e5b46d9c6a879c4"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:ad07f927df8a985814e5b46d9c6a879c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#ad07f927df8a985814e5b46d9c6a879c4">SUNphi::hasMember_size</a> = hasMember_sizeHelper&lt;Type&gt;()</td></tr>
+<tr class="memitem:ad07f927df8a985814e5b46d9c6a879c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#ad07f927df8a985814e5b46d9c6a879c4">SUNphi::hasMember_size</a> = hasMember_sizeHelper&lt;RemRef&lt;Type&gt;&gt;()</td></tr>
 <tr class="separator:ad07f927df8a985814e5b46d9c6a879c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17328abbb81d9ef8d79b89754c842ba8"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:a17328abbb81d9ef8d79b89754c842ba8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a17328abbb81d9ef8d79b89754c842ba8">SUNphi::hasMember_resize</a> = hasMember_resizeHelper&lt;Type&gt;()</td></tr>
+<tr class="memitem:a17328abbb81d9ef8d79b89754c842ba8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a17328abbb81d9ef8d79b89754c842ba8">SUNphi::hasMember_resize</a> = hasMember_resizeHelper&lt;RemRef&lt;Type&gt;&gt;()</td></tr>
 <tr class="separator:a17328abbb81d9ef8d79b89754c842ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70926cb175a6ea4f4676ad68d942a66"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
-<tr class="memitem:ab70926cb175a6ea4f4676ad68d942a66"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#ab70926cb175a6ea4f4676ad68d942a66">SUNphi::hasMember_end</a> = hasMember_endHelper&lt;Type&gt;()</td></tr>
+<tr class="memitem:ab70926cb175a6ea4f4676ad68d942a66"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#ab70926cb175a6ea4f4676ad68d942a66">SUNphi::hasMember_end</a> = hasMember_endHelper&lt;RemRef&lt;Type&gt;&gt;()</td></tr>
 <tr class="separator:ab70926cb175a6ea4f4676ad68d942a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600050e50a7bfb870c6fdd4aebf46cc2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a600050e50a7bfb870c6fdd4aebf46cc2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a600050e50a7bfb870c6fdd4aebf46cc2">SUNphi::isVectorLike</a></td></tr>
@@ -1071,7 +1071,7 @@ template&lt;typename S , typename T &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_begin = hasMember_beginHelper&lt;Type&gt;()</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_begin = hasMember_beginHelper&lt;RemRef&lt;Type&gt;&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1089,7 +1089,7 @@ template&lt;typename Type &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_end = hasMember_endHelper&lt;Type&gt;()</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_end = hasMember_endHelper&lt;RemRef&lt;Type&gt;&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1107,7 +1107,7 @@ template&lt;typename Type &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_resize = hasMember_resizeHelper&lt;Type&gt;()</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_resize = hasMember_resizeHelper&lt;RemRef&lt;Type&gt;&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1125,7 +1125,7 @@ template&lt;typename Type &gt; </div>
 template&lt;typename Type &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool SUNphi::hasMember_size = hasMember_sizeHelper&lt;Type&gt;()</td>
+          <td class="memname">constexpr bool SUNphi::hasMember_size = hasMember_sizeHelper&lt;RemRef&lt;Type&gt;&gt;()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1345,7 +1345,7 @@ template&lt;typename T &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    canBeGet&lt;T&gt;()</div></div><!-- fragment -->
 <p>Check if the class T is tuple-like. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00760">760</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html#l00761">761</a> of file <a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">TypeTraits.hpp</a>.</p>
 
 </div>
 </div>

@@ -173,9 +173,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1e61a5b33e1025cf13d50eb4b7ac64e1"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isTriviallyCopyable&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a1e61a5b33e1025cf13d50eb4b7ac64e1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#a1e61a5b33e1025cf13d50eb4b7ac64e1">broadcast</a> (T &amp;x, int root=<a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">MASTER_RANK</a>) const </td></tr>
 <tr class="separator:a1e61a5b33e1025cf13d50eb4b7ac64e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f6042b58b9e2c202ff02690d3e0ca6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a86f6042b58b9e2c202ff02690d3e0ca6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#a86f6042b58b9e2c202ff02690d3e0ca6">broadcast</a> (<a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">Binarizable</a>&lt; T &gt; &amp;val, int root=<a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">MASTER_RANK</a>) const </td></tr>
-<tr class="separator:a86f6042b58b9e2c202ff02690d3e0ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf23436f0631c9b6825a9380d5a39f3"><td class="memTemplParams" colspan="2">template&lt;typename T , TypeIf&lt;(isBinarizable&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8bf23436f0631c9b6825a9380d5a39f3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#a8bf23436f0631c9b6825a9380d5a39f3">broadcast</a> (T &amp;&amp;val, int root=<a class="el" href="../../df/d09/classSUNphi_1_1Mpi.html#adeb52a681717c5989dc0f37127648ea0">MASTER_RANK</a>) const </td></tr>
+<tr class="separator:a8bf23436f0631c9b6825a9380d5a39f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -298,11 +298,11 @@ template&lt;typename T , TypeIf&lt;(isTriviallyCopyable&lt; T &gt;), void * &gt;
 
 </div>
 </div>
-<a class="anchor" id="a86f6042b58b9e2c202ff02690d3e0ca6"></a>
+<a class="anchor" id="a8bf23436f0631c9b6825a9380d5a39f3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , TypeIf&lt;(isBinarizable&lt; T &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -310,7 +310,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void SUNphi::Mpi::broadcast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">Binarizable</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
@@ -341,7 +341,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html#l00294">294</a> of file <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">Mpi.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html#l00295">295</a> of file <a class="el" href="../../d8/d6a/Mpi_8hpp_source.html">Mpi.hpp</a>.</p>
 
 </div>
 </div>

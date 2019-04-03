@@ -109,38 +109,35 @@ $(document).ready(function(){initNavTree('d7/da6/classSUNphi_1_1Binarizable.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d1/d73/classSUNphi_1_1Binarizable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::Binarizable&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides methods binarize through CRTP.  
+<p>Add binarizable functionality via CRTP.  
  <a href="../../d7/da6/classSUNphi_1_1Binarizable.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#a3fd6a639a7a112d8bdceb4f13f45ac11">binarize</a> () const </td></tr>
-<tr class="memdesc:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the binarized version.  <a href="#a3fd6a639a7a112d8bdceb4f13f45ac11">More...</a><br /></td></tr>
-<tr class="separator:a3fd6a639a7a112d8bdceb4f13f45ac11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1ab4d82983fd7508b8a46b8d24ee8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc1ab4d82983fd7508b8a46b8d24ee8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#abc1ab4d82983fd7508b8a46b8d24ee8a">deBinarize</a> (<a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;deb)</td></tr>
-<tr class="memdesc:abc1ab4d82983fd7508b8a46b8d24ee8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill from a binarized version. <br /></td></tr>
-<tr class="separator:abc1ab4d82983fd7508b8a46b8d24ee8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
 <tr class="memitem:acf5bd414e24a48b307c24973e267b9a7"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#acf5bd414e24a48b307c24973e267b9a7">operator~</a> ()</td></tr>
 <tr class="separator:acf5bd414e24a48b307c24973e267b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8cd33726a714fe7251bada83bc0b3be"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#ad8cd33726a714fe7251bada83bc0b3be">operator~</a> () const </td></tr>
 <tr class="separator:ad8cd33726a714fe7251bada83bc0b3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6656f95d65d21642a4beccecba141c52"><td class="memTemplParams" colspan="2">template&lt;typename B  = Binarizer&gt; </td></tr>
+<tr class="memitem:a6656f95d65d21642a4beccecba141c52"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#a6656f95d65d21642a4beccecba141c52">binarize</a> (B &amp;&amp;out={}) const </td></tr>
+<tr class="memdesc:a6656f95d65d21642a4beccecba141c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binarize a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Provides a class with serializability features via CRTP. ">Serializable</a>.  <a href="#a6656f95d65d21642a4beccecba141c52">More...</a><br /></td></tr>
+<tr class="separator:a6656f95d65d21642a4beccecba141c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f771abcc9cc33cc19f52631c0c26e9"><td class="memTemplParams" colspan="2">template&lt;typename B  = Binarizer&gt; </td></tr>
+<tr class="memitem:a57f771abcc9cc33cc19f52631c0c26e9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html#a57f771abcc9cc33cc19f52631c0c26e9">deBinarize</a> (B &amp;&amp;in)</td></tr>
+<tr class="memdesc:a57f771abcc9cc33cc19f52631c0c26e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">DeBinarize a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Provides a class with serializability features via CRTP. ">Serializable</a>.  <a href="#a57f771abcc9cc33cc19f52631c0c26e9">More...</a><br /></td></tr>
+<tr class="separator:a57f771abcc9cc33cc19f52631c0c26e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
 <tr class="memitem:ab4290b4f6168e5de81a063fcaad2faf4"><td class="memItemLeft" ><a class="anchor" id="ab4290b4f6168e5de81a063fcaad2faf4"></a>
 class {</td></tr>
 <tr class="memitem:ab4290b4f6168e5de81a063fcaad2faf4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
@@ -150,23 +147,26 @@ class {</td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class SUNphi::Binarizable&lt; T &gt;</h3>
 
-<p>Provides methods binarize through CRTP. </p>
+<p>Add binarizable functionality via CRTP. </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00147">147</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00242">242</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3fd6a639a7a112d8bdceb4f13f45ac11"></a>
+<a class="anchor" id="a6656f95d65d21642a4beccecba141c52"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename B  = Binarizer&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a> <a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">SUNphi::Binarizable</a>&lt; T &gt;::binarize </td>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&amp; <a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">SUNphi::Binarizable</a>&lt; T &gt;::binarize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">B &amp;&amp;&#160;</td>
+          <td class="paramname"><em>out</em> = <code>{}</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -177,10 +177,53 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Creates the binarized version. </p>
-<p>Output binarizer </p>
+<p>Binarize a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Provides a class with serializability features via CRTP. ">Serializable</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00250">250</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57f771abcc9cc33cc19f52631c0c26e9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename B  = Binarizer&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d66/classSUNphi_1_1Binarizer.html">Binarizer</a>&amp; <a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">SUNphi::Binarizable</a>&lt; T &gt;::deBinarize </td>
+          <td>(</td>
+          <td class="paramtype">B &amp;&amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DeBinarize a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Provides a class with serializability features via CRTP. ">Serializable</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00259">259</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,13 +245,13 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00246">246</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,13 +273,13 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Constant cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00149">149</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00246">246</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>

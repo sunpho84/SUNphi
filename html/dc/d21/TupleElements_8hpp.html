@@ -130,7 +130,7 @@ Functions</h2></td></tr>
 <tr class="memitem:abe00a5f3b8ae90e5cf6febab8b08e16c"><td class="memTemplParams" colspan="2">template&lt;class Tg , class T &gt; </td></tr>
 <tr class="memitem:abe00a5f3b8ae90e5cf6febab8b08e16c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Tg &amp;&amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c">SUNphi::get</a> (T &amp;&amp;t)</td></tr>
 <tr class="separator:abe00a5f3b8ae90e5cf6febab8b08e16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTuple&lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplParams" colspan="2">template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTupleLike&lt;T&gt;&gt;&gt; </td></tr>
 <tr class="memitem:a64e78927e6b14005d3a43ac2a861264e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d21/TupleElements_8hpp.html#a64e78927e6b14005d3a43ac2a861264e">SUNphi::forEach</a> (T &amp;&amp;t, F &amp;&amp;f)</td></tr>
 <tr class="separator:a64e78927e6b14005d3a43ac2a861264e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d2142e790ed3b9205f0777cf1745cc7"><td class="memTemplParams" colspan="2">template&lt;typename Tp , int... Ints&gt; </td></tr>
@@ -158,7 +158,7 @@ Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTuple&lt;T&gt;&gt;&gt; </div>
+template&lt;size_t I = 0, typename T , typename F , typename  = EnableIf&lt;isTupleLike&lt;T&gt;&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void SUNphi::forEach </td>
@@ -264,7 +264,7 @@ template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  =
 <p>Returns all elements of a <code>Tuple</code> but the N-th one</p>
 <p>Takes the list of component according to an index containing the first [0,N) and (N,Sizeof...(Tuple))</p>
 <p>Example: </p><div class="fragment"><div class="line">Tuple&lt;int,double,char&gt; e;</div><div class="line"><span class="keyword">auto</span> GetAllBut&lt;1&gt;(e); <span class="comment">// Tuple&lt;int,char&gt;</span></div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00117">117</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ template&lt;typename Tg , typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * 
 <p>Returns all elements of a <code>Tuple</code> but the type T</p>
 <p>First search the component, then call <code>GetAllBut</code> with the found position as a parameter</p>
 <p>Example: </p><div class="fragment"><div class="line">Tuple&lt;int,double,char&gt; e;</div><div class="line"><span class="keyword">auto</span> GetAllBut&lt;double&gt;(e); <span class="comment">// Tuple&lt;int,char&gt;</span></div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00135">135</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00143">143</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -314,7 +314,7 @@ template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  =
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,6 +367,8 @@ template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  =
 </div><div class="memdoc">
 <p>Gets the tail of a <code>Tuple</code> </p>
 <p>Return a <code>Tuple</code> containg the last N elements of a tuple </p>
+<p>Number of elements in the tuple</p>
+<p>Beginning of returned part </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tp</td><td>Tuple from which to extract </td></tr>
@@ -374,7 +376,7 @@ template&lt;int N, typename Tp , TypeIf&lt;(isTuple&lt; Tp &gt;), void * &gt;  =
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html#l00098">98</a> of file <a class="el" href="../../dc/d21/TupleElements_8hpp_source.html">TupleElements.hpp</a>.</p>
 
 </div>
 </div>

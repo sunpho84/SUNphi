@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['get',['get',['../d8/dd8/classSUNphi_1_1Serializer.html#aa6a9c31f02776df76264c42d7b0bd87c',1,'SUNphi::Serializer::get()'],['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
+  ['get',['get',['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getacter',['getActer',['../df/dc0/classSUNphi_1_1Vector.html#a2f3886703a75ed136611f43bd008d7e0',1,'SUNphi::Vector']]],
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],

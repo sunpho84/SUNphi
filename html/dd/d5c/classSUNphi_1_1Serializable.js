@@ -1,15 +1,17 @@
 var classSUNphi_1_1Serializable =
 [
-    [ "Type", "dd/d5c/classSUNphi_1_1Serializable.html#a36ea017eda36a8ed0a51b83cd433fba5", null ],
-    [ "Serializable", "dd/d5c/classSUNphi_1_1Serializable.html#aaae655de1d5aeac0be3ef5e21b33273a", null ],
-    [ "isDefault", "dd/d5c/classSUNphi_1_1Serializable.html#a85ecd529d0590ceecc20b1560882e727", null ],
-    [ "operator()", "dd/d5c/classSUNphi_1_1Serializable.html#a4a26f3a49293bd42c1016b9a0ed2d360", null ],
-    [ "operator()", "dd/d5c/classSUNphi_1_1Serializable.html#a340139c79936c0a2b828b2b0b8ca05fa", null ],
-    [ "operator=", "dd/d5c/classSUNphi_1_1Serializable.html#a126d19d27ce7af5174044cf7eaf22d40", null ],
-    [ "operator~", "dd/d5c/classSUNphi_1_1Serializable.html#af7617ff3fb57a3f588476a5474139eb5", null ],
-    [ "operator~", "dd/d5c/classSUNphi_1_1Serializable.html#a8b080d30aac9b64f8522d3ebe43a6847", null ],
-    [ "serialize", "dd/d5c/classSUNphi_1_1Serializable.html#a8fb9ff4f87a0021aa36bd7407e75ecd8", null ],
-    [ "hasDefault", "dd/d5c/classSUNphi_1_1Serializable.html#a40cda2bb260eb29265bd795f7f350b85", null ],
-    [ "name", "dd/d5c/classSUNphi_1_1Serializable.html#a5f49bfc672ba87a22ef0c316069b7c06", null ],
-    [ "value", "dd/d5c/classSUNphi_1_1Serializable.html#ab83e72072d78a63b9e6450b9af10b0ba", null ]
+    [ "Type", "dd/d5c/classSUNphi_1_1Serializable.html#a33a2e550a406b6a256c6c2cc050fa9a2", null ],
+    [ "Serializable", "dd/d5c/classSUNphi_1_1Serializable.html#a78e309719e56f64d65bc5f7075b9aab2", null ],
+    [ "binarize", "dd/d5c/classSUNphi_1_1Serializable.html#a6656f95d65d21642a4beccecba141c52", null ],
+    [ "deBinarize", "dd/d5c/classSUNphi_1_1Serializable.html#a57f771abcc9cc33cc19f52631c0c26e9", null ],
+    [ "isDefault", "dd/d5c/classSUNphi_1_1Serializable.html#a49636af04160795fd84a55d17e410689", null ],
+    [ "operator()", "dd/d5c/classSUNphi_1_1Serializable.html#a26e0a208de84591ad514490a8d255e5b", null ],
+    [ "operator()", "dd/d5c/classSUNphi_1_1Serializable.html#a636ca356daf5a63a9fdbc5d58d86b549", null ],
+    [ "operator=", "dd/d5c/classSUNphi_1_1Serializable.html#a15821627d2da321f09368c704f48787c", null ],
+    [ "operator~", "dd/d5c/classSUNphi_1_1Serializable.html#a205b0fff52f0ac161b928538f1d1a202", null ],
+    [ "operator~", "dd/d5c/classSUNphi_1_1Serializable.html#a7445b680f3c4b7312fbfbcf0de53ce25", null ],
+    [ "serialize", "dd/d5c/classSUNphi_1_1Serializable.html#af82e5799513bb74c9cb2276b97aa51ad", null ],
+    [ "hasDefault", "dd/d5c/classSUNphi_1_1Serializable.html#a9bab2f69315c86c892a9afe644c8d99d", null ],
+    [ "name", "dd/d5c/classSUNphi_1_1Serializable.html#acda1f67291aeb140bfc7f7a54b098521", null ],
+    [ "value", "dd/d5c/classSUNphi_1_1Serializable.html#abb485ef13e793d57cef709e18204c9b1", null ]
 ];

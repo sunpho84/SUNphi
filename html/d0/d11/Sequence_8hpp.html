@@ -120,13 +120,14 @@ $(document).ready(function(){initNavTree('d0/d11/Sequence_8hpp.html','../../');}
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d2/df0/Binarize_8hpp_source.html">serialize/Binarize.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../da/def/Default_8hpp_source.html">serialize/Default.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d0/d11/Sequence_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SUNphi::SerializableSequence&lt; S, TDef &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SUNphi::SerializableSequence&lt; S &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -135,7 +136,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable sequence.  <a href="#a1eb41e7c81c3ac9ac776d29aa138f2ae">More...</a><br /></td></tr>
 <tr class="separator:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d343d8c2a7f461e0712e142d39c0ea8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8">SERIALIZABLE_VECTOR</a>(TYPE, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae">SERIALIZABLE_SEQUENCE</a>(Vector&lt;TYPE&gt;,NAME,__VA_ARGS__)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8">SERIALIZABLE_VECTOR</a>(TYPE, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae">SERIALIZABLE_SEQUENCE</a>(std::vector&lt;TYPE&gt;,NAME,__VA_ARGS__)</td></tr>
 <tr class="memdesc:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable vector. <br /></td></tr>
 <tr class="separator:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -198,7 +199,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">SerializableSequence&lt;CONTAINER&gt;                 \</div><div class="line">     NAME{#NAME,__VA_ARGS__}</div></div><!-- fragment -->
 <p>Create a serializable sequence. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00057">57</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00079">79</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +218,7 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +241,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>False case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>True case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +282,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>Calls the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00069">69</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>

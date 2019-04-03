@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['get',['get',['../d8/dd8/classSUNphi_1_1Serializer.html#aa6a9c31f02776df76264c42d7b0bd87c',1,'SUNphi::Serializer::get()'],['../d0/d81/TypeTraits_8hpp.html#a353ff120044ca6e0c3abe289e0630990',1,'SUNphi::internal::get()'],['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
+  ['get',['get',['../d0/d81/TypeTraits_8hpp.html#a353ff120044ca6e0c3abe289e0630990',1,'SUNphi::internal::get()'],['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getacter',['getActer',['../df/dc0/classSUNphi_1_1Vector.html#a2f3886703a75ed136611f43bd008d7e0',1,'SUNphi::Vector']]],
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
@@ -32,8 +32,8 @@ var searchData=
   ['gettail',['getTail',['../dc/d21/TupleElements_8hpp.html#a73969b2e282453e65ed9666b1dea3c4c',1,'SUNphi']]],
   ['getthreadid',['getThreadId',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2',1,'SUNphi::ThreadPool']]],
   ['gettruecondition',['getTrueCondition',['../df/dc0/classSUNphi_1_1Vector.html#a621bc927519a5c64369d738ee07cb521',1,'SUNphi::Vector']]],
-  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]],
   ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html',1,'SUNphi']]],
+  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]],
   ['grid_2ehpp',['Grid.hpp',['../db/d33/Grid_8hpp.html',1,'']]],
   ['grid_5fdebug',['GRID_DEBUG',['../db/d33/Grid_8hpp.html#a562b8131f1b0d66fdf0f3a1b36100517',1,'Grid.hpp']]],
   ['grid_5fdefault_5fflags',['GRID_DEFAULT_FLAGS',['../db/d33/Grid_8hpp.html#a144e2dc7a4def3e0b1810716a1c39717',1,'SUNphi']]],

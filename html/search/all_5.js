@@ -12,7 +12,6 @@ var searchData=
   ['enableifisnnarysmet',['EnableIfIsNnarySmET',['../d2/d69/NnarySmET_8hpp.html#a9475bc95db0361e0706a07d1db1ac34e',1,'SUNphi']]],
   ['enableifisrelbinder',['EnableIfIsRelBinder',['../d3/da4/RelBind_8hpp.html#acc1a63c9476476fb25fe01317db73dbe',1,'SUNphi']]],
   ['enableifisscalarwrapper',['EnableIfIsScalarWrapper',['../d9/d0c/ScalarWrap_8hpp.html#abfa973c17a0f5143e92a2b3b071e8e0b',1,'SUNphi']]],
-  ['enableifisserializableclass',['EnableIfIsSerializableClass',['../d3/db2/Base_8hpp.html#afa016ed11745c99213bb98d80af08a4a',1,'SUNphi']]],
   ['enableifisserializablesequence',['EnableIfIsSerializableSequence',['../d0/d11/Sequence_8hpp.html#ae4edd888340146820dab71b9725bab17',1,'SUNphi']]],
   ['enableifissmet',['EnableIfIsSmET',['../dc/d6b/BaseSmET_8hpp.html#a17b8601b8fc36c94aebb3d12301bccee',1,'SUNphi']]],
   ['enableifistens',['EnableIfIsTens',['../dc/d8f/TensClass_8hpp.html#ab10764603f7003a12c3bcd526e00a1ce',1,'SUNphi']]],
