@@ -198,6 +198,7 @@ var NAVTREEINDEX7 =
 "dd/d2b/SUNphi_8cpp.html#aefb3bd85afa3e1418572d526cbe3021d":[3,0,3,1,3],
 "dd/d2b/SUNphi_8cpp_source.html":[3,0,3,1],
 "dd/d32/Scalar_8hpp.html":[3,0,2,9,4],
+"dd/d32/Scalar_8hpp.html#a39f2946c0268bfec22e42a2ddd6ce205":[3,0,2,9,4,1],
 "dd/d32/Scalar_8hpp_source.html":[3,0,2,9,4],
 "dd/d43/structSUNphi_1_1HasMember__serializableMembers_1_1Fallback.html":[2,0,0,152,2],
 "dd/d43/structSUNphi_1_1HasMember__serializableMembers_1_1Fallback.html#a194daba3dd5029c1268d447c40f5edbb":[2,0,0,152,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html":[2,0,0,0,1],
 "dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a09b6f7867601df69acd66db08973d01c":[2,0,0,0,1,1],
 "dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a184b55c1c6edab8deb0340485991e897":[2,0,0,0,1,3],
-"dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a592ed1584d6f2c9b31f15e8876bc2193":[2,0,0,0,1,4],
-"dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a62036115814b61e36c3699da76b23f8f":[2,0,0,0,1,5]
+"dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a592ed1584d6f2c9b31f15e8876bc2193":[2,0,0,0,1,4]
 };

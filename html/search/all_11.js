@@ -39,6 +39,7 @@ var searchData=
   ['serializable_3c_20std_3a_3astring_20_3e',['Serializable&lt; std::string &gt;',['../dd/d5c/classSUNphi_1_1Serializable.html',1,'SUNphi']]],
   ['serializable_3c_20sunphi_3a_3atest_2c_20no_5fdefault_20_3e',['Serializable&lt; SUNphi::Test, NO_DEFAULT &gt;',['../dd/d5c/classSUNphi_1_1Serializable.html',1,'SUNphi']]],
   ['serializable_5fclass',['SERIALIZABLE_CLASS',['../df/dd4/serialize_2Map_8hpp.html#a94165597a60a99b1fd425a2bfb2a7710',1,'Map.hpp']]],
+  ['serializable_5fscalar',['SERIALIZABLE_SCALAR',['../dd/d32/Scalar_8hpp.html#a39f2946c0268bfec22e42a2ddd6ce205',1,'Scalar.hpp']]],
   ['serializable_5fsequence',['SERIALIZABLE_SEQUENCE',['../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae',1,'Sequence.hpp']]],
   ['serializable_5fvector',['SERIALIZABLE_VECTOR',['../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8',1,'Sequence.hpp']]],
   ['serializableclass',['SerializableClass',['../d1/d39/classSUNphi_1_1SerializableClass.html',1,'SUNphi']]],
