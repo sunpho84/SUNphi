@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/serialize/DeSerializer.hpp File Reference</title>
+<title>SUNphi: include/containers/Map.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d3/dc8/DeSerializer_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('d1/d66/containers_2Map_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -106,40 +106,45 @@ $(document).ready(function(){initNavTree('d3/dc8/DeSerializer_8hpp.html','../../
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">DeSerializer.hpp File Reference</div>  </div>
+<div class="title">Map.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Used to deserialize quantities.  
+<p>Provides a map with char key.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;yaml-cpp/yaml.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../db/dd7/Crash_8hpp_source.html">debug/Crash.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dd/d32/Scalar_8hpp_source.html">serialize/Scalar.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d0/d11/Sequence_8hpp_source.html">serialize/Sequence.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 </div>
-<p><a href="../../d3/dc8/DeSerializer_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="../../d1/d66/containers_2Map_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d7b/classSUNphi_1_1DeSerializer.html">SUNphi::DeSerializer&lt; Ref &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert to string the passed objects.  <a href="../../dc/d7b/classSUNphi_1_1DeSerializer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcb/structSUNphi_1_1CStringComparer.html">SUNphi::CStringComparer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object incapsulating the comparison operator between two c strings.  <a href="../../d7/dcb/structSUNphi_1_1CStringComparer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aeb2ffa5de9b0bed5c12962cb78b9051b"><td class="memTemplParams" colspan="2"><a class="anchor" id="aeb2ffa5de9b0bed5c12962cb78b9051b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aeb2ffa5de9b0bed5c12962cb78b9051b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d66/containers_2Map_8hpp.html#aeb2ffa5de9b0bed5c12962cb78b9051b">SUNphi::MapWithCStrKey</a> = std::map&lt; const char *, T, CStringComparer &gt;</td></tr>
+<tr class="memdesc:aeb2ffa5de9b0bed5c12962cb78b9051b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map which can be safely used with a c-string. <br /></td></tr>
+<tr class="separator:aeb2ffa5de9b0bed5c12962cb78b9051b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Used to deserialize quantities. </p>
-<p>Incapsulates yaml access providing an input stream operator </p>
+<div class="textblock"><p>Provides a map with char key. </p>
+<p>Be careful, use it only with static key! The key is actually a const char*: the pointing string is not copied, so it must be accessible for the whole time needed </p>
 
-<p>Definition in file <a class="el" href="../../d3/dc8/DeSerializer_8hpp_source.html">DeSerializer.hpp</a>.</p>
+<p>Definition in file <a class="el" href="../../d1/d66/containers_2Map_8hpp_source.html">Map.hpp</a>.</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_d6dce8604daa6d974602991ede05feb6.html">serialize</a></li><li class="navelem"><a class="el" href="../../d3/dc8/DeSerializer_8hpp.html">DeSerializer.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_c35e9bb330ad51bde60aaf7a3563beec.html">containers</a></li><li class="navelem"><a class="el" href="../../d1/d66/containers_2Map_8hpp.html">Map.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
