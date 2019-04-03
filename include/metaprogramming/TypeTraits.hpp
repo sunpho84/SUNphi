@@ -620,7 +620,7 @@ namespace SUNphi
   template <typename Type>						\
   [[ maybe_unused ]]							\
   constexpr bool hasMember_ ## TAG=					\
-    hasMember_ ## TAG ## Helper<Type>();				\
+    hasMember_ ## TAG ## Helper<RemRef<Type>>();			\
   									\
   /*! \brief Class forcing T to have a member "TAG" defined */		\
   template <typename T>							\
@@ -740,6 +740,7 @@ namespace SUNphi
 	      typename T>
     FallTrhough get(T)
     {
+      return {};
     };
   }
   
@@ -751,7 +752,7 @@ namespace SUNphi
     using namespace internal;
     
     return
-      not isSame<RemRef<decltype(get<0>(*static_cast<T*>(nullptr)))>,FallTrhough>;
+      not isSame<RemRef<decltype(get<0>(*static_cast<RemRef<T>*>(nullptr)))>,FallTrhough>;
   }
   
   /// Check if the class T is tuple-like
