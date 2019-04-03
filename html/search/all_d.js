@@ -48,6 +48,7 @@ var searchData=
   ['no_5fextra_5fmerge_5fdelims',['NO_EXTRA_MERGE_DELIMS',['../d2/d69/NnarySmET_8hpp.html#a442f0539beee2a0a9507b921d751ec93',1,'NnarySmET.hpp']]],
   ['no_5ffather',['NO_FATHER',['../d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4',1,'SUNphi::Timer']]],
   ['nobj',['nObj',['../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382',1,'SUNphi::Combinatorial']]],
+  ['node',['node',['../dc/d7b/classSUNphi_1_1DeSerializer.html#a73656dac8702eeaf2bc8fbb43da888ac',1,'SUNphi::DeSerializer']]],
   ['noftypeintuple',['nOfTypeInTuple',['../d1/d31/TupleClass_8hpp.html#af877fd927f6e7f68c60742d9fd6eee75',1,'SUNphi']]],
   ['non_5fconst_5fqualif',['NON_CONST_QUALIF',['../d0/d81/TypeTraits_8hpp.html#afb28fedb0dca45e29b16214940c42971',1,'TypeTraits.hpp']]],
   ['non_5fref',['NON_REF',['../d0/d81/TypeTraits_8hpp.html#ac65c1874e9a350e39d2bc81b1496bdbf',1,'TypeTraits.hpp']]],

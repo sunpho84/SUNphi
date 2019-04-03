@@ -128,6 +128,7 @@ var annotated_dup =
       [ "ConstrainTupleTypesAreAllDifferent", "de/d1a/structSUNphi_1_1ConstrainTupleTypesAreAllDifferent.html", null ],
       [ "Crasher", "db/de9/classSUNphi_1_1Crasher.html", "db/de9/classSUNphi_1_1Crasher" ],
       [ "CStringComparer", "d7/dcb/structSUNphi_1_1CStringComparer.html", "d7/dcb/structSUNphi_1_1CStringComparer" ],
+      [ "DeSerializer", "dc/d7b/classSUNphi_1_1DeSerializer.html", "dc/d7b/classSUNphi_1_1DeSerializer" ],
       [ "Dir", "da/dff/structSUNphi_1_1Dir.html", "da/dff/structSUNphi_1_1Dir" ],
       [ "File", "d5/d99/classSUNphi_1_1File.html", "d5/d99/classSUNphi_1_1File" ],
       [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],
