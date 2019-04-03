@@ -4,7 +4,6 @@ var searchData=
   ['decode',['decode',['../d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html#a424191a16d752f1fc8b7aa8057280c70',1,'YAML::convert&lt; T, EnableIf&lt; hasMember_serialize&lt; T &gt; &gt; &gt;']]],
   ['demangle',['demangle',['../d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83',1,'SUNphi']]],
   ['deserialize',['deSerialize',['../d1/d39/classSUNphi_1_1SerializableClass.html#af192d55378fe3fb86ebf203ee689b131',1,'SUNphi::SerializableClass']]],
-  ['deserializer',['DeSerializer',['../dc/d7b/classSUNphi_1_1DeSerializer.html#a3248420d2cb1a6eac7a7ff0bb403644e',1,'SUNphi::DeSerializer::DeSerializer(const std::string &amp;str, const bool &amp;onlyNonDef=false)'],['../dc/d7b/classSUNphi_1_1DeSerializer.html#a9a87139b004c30a0cf032ff9beb53385',1,'SUNphi::DeSerializer::DeSerializer(const YAML::Node &amp;node, const bool &amp;onlyNonDef=false)']]],
   ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90',1,'SUNphi::Grid']]],
   ['dir',['dir',['../de/dda/Dir_8hpp.html#ae2e5d0c42dbe9855d3b20935ca39145c',1,'SUNphi']]],
   ['discard',['discard',['../d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb',1,'SUNphi::Sitmo']]],
