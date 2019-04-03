@@ -195,33 +195,6 @@ namespace SUNphi
 	readAdvancing(&rhs[0],size);
     }
     
-    // /// Binarize a string
-    // Binarizer& binarize(const std::string& in)     ///< Input
-    // {
-    //   /// It is important to store the terminator
-    //   const size_t nullTerminatedSize=
-    // 	in.size()+1;
-      
-    //   this->binarize(nullTerminatedSize);
-      
-    //   return
-    // 	this->pushBack(&in[0],nullTerminatedSize);
-    // }
-    
-    // /// DeBinarize a string
-    // Binarizer& deBinarize(std::string& rhs)     ///< Output
-    // {
-    //   /// Null terminated string
-    //   size_t nullTerminatedSize;
-      
-    //   this->deBinarize(nullTerminatedSize);
-      
-    //   rhs.resize(nullTerminatedSize-1);
-      
-    //   return
-    // 	readAdvancing(&rhs[0],nullTerminatedSize);
-    // }
-    
     /// Restart from head
     void restartReading()
     {

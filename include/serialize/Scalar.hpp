@@ -127,6 +127,10 @@ namespace SUNphi
 	  *this;
     }
   };
+  
+  /// Defines a serializable scalar
+#define SERIALIZABLE_SCALAR(TYPE,NAME,...)	\
+  Serializable<TYPE> NAME{#NAME,__VA_ARGS__}
 }
 
 #endif

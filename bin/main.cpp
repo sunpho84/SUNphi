@@ -16,15 +16,15 @@ namespace SUNphi
   SERIALIZABLE_CLASS(Test)
   {
   public:
-    using E=std::pair<double,double>;
+    using E=std::pair<std::string,std::string>;
     using F=std::vector<double>;
     //decltype(_serializableScalar(static_cast<E*>(nullptr),"a",10.0,20.0)) a{"a",10.0,20.0};
     
-    Serializable<E> a{"a",{10.0,'c'}};
+    SERIALIZABLE_SCALAR(E,a,{"fi","se"});
     
     //SERIALIZABLE_SCALAR(F,c,{10,20});
     SERIALIZABLE_VECTOR(double,v,10);
-    Serializable<double> b{"b",1};
+    SERIALIZABLE_SCALAR(double,b,1);
     
     LIST_SERIALIZABLE_MEMBERS(a,v,b);
     
@@ -65,16 +65,28 @@ int main()
   test1.ciccio()=
     "first";
   
+  runLog()<<"Txt";
+  
   test2.deSerialize(test1.serialize());
   
-  runLog()<<test2;
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<test2;
+  }
   
-  test1.ciccio()=
-     "second";
+  // test1.ciccio()=
+  //    "second";
   
   test2.deBinarize(test1.binarize());
   
-  runLog()<<test2;
+  runLog()<<"Bin";
+  
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<test2;
+  }
+  
+  // runLog()<<(void*)&(test1.test().a().first[0])<<" "<<(void*)&(test2.test().a().first[0]);
   
   // // (*static_cast<Logger::LoggerLine*>(nullptr))<<(*static_cast<RemRef<SerializeWrapper<double>>*>(nullptr));
   // ciccio=10.0;
