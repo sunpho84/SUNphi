@@ -1,7 +1,7 @@
-#ifndef _MAP_HPP
-#define _MAP_HPP
+#ifndef _CONTAINERS_MAP_HPP
+#define _CONTAINERS_MAP_HPP
 
-/// \file Map.hpp
+/// \file containers/Map.hpp
 ///
 /// \brief Provides a map with char key
 ///
