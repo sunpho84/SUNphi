@@ -5,6 +5,9 @@
 ///
 /// \brief Header file to define everything involving serialization
 
-#include <serialize/Serializable.hpp>
+#include <serialize/Base.hpp>
+#include <serialize/Binarize.hpp>
+#include <serialize/Map.hpp>
+#include <serialize/Sequence.hpp>
 
 #endif

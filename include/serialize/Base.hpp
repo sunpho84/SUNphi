@@ -3,27 +3,84 @@
 
 /// \file serialize/Base.hpp
 ///
-/// \brief Defines the basic serializable features
+/// \brief Defines the basic serializable feature
+///
+/// The value mapped can be of three types:
+///
+/// - a scalar, of a trivially copyable kind
+/// - a map, namely a class with a "serializableMembers" member
+/// - a sequence, namely a tuple-like or vector-like container
+
+
+#include <yaml-cpp/yaml.h>
 
 #include <metaprogramming/CRTP.hpp>
+#include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/TypeTraits.hpp>
 
 namespace SUNphi
 {
-  // Check existence of serializableMembers member
-  DEFINE_HAS_MEMBER(serializableMembers);
-  
-  /// Check whether the class is serializable
+  /// Check if the type is a serializable scalar
   template <typename T>
   [[ maybe_unused ]]
-  constexpr bool isSerializableClass=
+  constexpr bool isSerializableScalar=
+    std::is_trivially_copyable_v<T>;
+  
+  DEFINE_HAS_MEMBER(serializableMembers);
+  
+  /// Check if the class is a serializable map
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isSerializableMap=
     hasMember_serializableMembers<T>;
   
-  // Check existence of binSize method
-  DEFINE_HAS_MEMBER(binSize);
+  DEFINE_HAS_MEMBER(serialize);
   
-  /// Provides an enabler on the specific case isSerializableClass
-  PROVIDE_ENABLE_IF_FOR_IS_TYPE(SerializableClass);
+  /// Stream to an output
+  template <typename S,
+	    typename T,
+	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,T>),
+	    SFINAE_ON_TEMPLATE_ARG(hasMember_serialize<T>)>
+  S& operator<<(S&& stream,
+		const T& ser)
+  {
+    /// Converter to string
+    YAML::Emitter emitter;
+    emitter<<
+      ser.serialize();
+    
+    stream<<
+      emitter.c_str();
+    
+    return
+      stream;
+  }
+}
+
+namespace YAML
+{
+  using namespace SUNphi;
+  
+  /// Converter for any type providing member serialize
+  template<typename T>
+  struct convert<T,EnableIf<hasMember_serialize<T>>>
+  {
+    /// Encode into a node
+    static Node encode(const T& rhs)
+    {
+      return
+	rhs.serialize();
+    }
+    
+    /// Decode from a node
+    static bool decode(const Node& node,
+		       T& rhs)
+    {
+      // node>>rhs.a;
+      
+      return true;
+    }
+  };
 }
 
 #endif

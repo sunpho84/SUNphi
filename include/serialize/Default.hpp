@@ -20,6 +20,9 @@ namespace SUNphi
   constexpr bool MANDATORY=
     false;
   
+  /// Provide a default value for a serializable reference
+  ///
+  /// Forward declaration
   template <typename T,
 	    bool>
   class SerializableDefaultValue;
@@ -38,7 +41,6 @@ namespace SUNphi
     SerializableDefaultValue(TDef&&...def)
       : def(forw<TDef>(def)...)
     {
-      static_assert(not isSerializableClass<T>,"A serializable class has already its own defaults");
     }
   };
   

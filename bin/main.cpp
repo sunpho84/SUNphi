@@ -23,11 +23,10 @@ namespace SUNphi
     Serializable<E> a{"a",{10.0,'c'}};
     
     //SERIALIZABLE_SCALAR(F,c,{10,20});
-    //SERIALIZABLE_VECTOR(double,v,10);
+    SERIALIZABLE_VECTOR(double,v,10);
     Serializable<double> b{"b",1};
     
-    SERIALIZABLE_MEMBERS(a,// v,
-			 b);
+    LIST_SERIALIZABLE_MEMBERS(a,v,b);
     
     // Test& operator=(const Test& oth)
     // {
@@ -51,9 +50,9 @@ namespace SUNphi
     Serializable<Test,NO_DEFAULT> test{"test"};
     Serializable<std::string> ciccio{"ciccio","ciaccio"};
     
-    Serializable<std::vector<Test>> v{"v",std::vector<Test>(10)};
+    //Serializable<std::vector<Test>> v{"v",std::vector<Test>(10)};
     //SerializableScalar<Test,NO_DEFAULT> v{"v"};
-    SERIALIZABLE_MEMBERS(test,ciccio,v);
+    LIST_SERIALIZABLE_MEMBERS(test,ciccio);//,v);
   };
 }
 
@@ -63,7 +62,17 @@ int main()
   
   //test1.v().resize(1);
   
+  test1.ciccio()=
+    "first";
+  
   test2.deSerialize(test1.serialize());
+  
+  runLog()<<test2;
+  
+  test1.ciccio()=
+     "second";
+  
+  test2.deBinarize(test1.binarize());
   
   runLog()<<test2;
   

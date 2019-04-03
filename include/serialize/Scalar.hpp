@@ -9,28 +9,37 @@
  #include <config.hpp>
 #endif
 
+#include <yaml-cpp/yaml.h>
+
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
+#include <serialize/Base.hpp>
 #include <serialize/Binarize.hpp>
 #include <serialize/Default.hpp>
-#include <serialize/Serializable.hpp>
 
 namespace SUNphi
 {
-  /// Class wrapping a class to provide scalar node for the serializer
-  ///
-  /// Provides name and default value
+  /// Provides a class with serializability features via CRTP
   template <typename T,
-	    bool HasDefault=true>
-  class SerializableScalar :
-    public SerializableDefaultValue<T,HasDefault>,
-    public Serializable<SerializableScalar<T,HasDefault>>,
-    public Binarizable<SerializableScalar<T,HasDefault>>
+	    bool HasDefault=true,
+	    bool isScalar=SUNphi::isSerializableScalar<T>,
+	    bool isMap=isSerializableMap<T>,
+	    bool isTupleLike=SUNphi::isTupleLike<T>,
+	    bool isVectorLike=SUNphi::isVectorLike<T>>
+  class Serializable
+    : public SerializableDefaultValue<T,HasDefault>
+    , public Binarizable<Serializable<T,HasDefault,isScalar,isMap,isTupleLike,isVectorLike>>
   {
+    PROVIDE_CRTP_CAST_OPERATOR(T);
+    
     /// Stored variable
     T value;
     
   public:
+    
+    /// Mapped type
+    using Type=
+      T;
     
     /// Access the value
     const T& operator()()
@@ -45,28 +54,18 @@ namespace SUNphi
     /// Name used to refer
     const char* name;
     
-    /// Creates a serializable scalar with default value
-    SerializableScalar(const char* name,
-		       const T& def={})
+    /// Creates a serializable with default value
+    explicit Serializable(const char* name, ///< Name to be used
+			  const T& def={})  ///< Default, if passed
       :
       SerializableDefaultValue<T,HasDefault>(def),
       name(name)
     {
-      static_assert((not isSerializableClass<T>) or (not hasDefault),"A serializable class has his own default members");
+      static_assert((not isMap) or (not HasDefault),"A serializable class has his own default members");
       
-      /// If the variable has default value, copy it
-      if constexpr(hasDefault)
-	value=
-	  this->def;
+      value=
+	def;
     }
-    
-    // SerializableScalar(const char* name,
-    // 		       NoDefault)
-    //   :
-    //   SerializableDefaultValue<T,const NoDefault>(NO_DEFAULT),
-    //   name(name)
-    // {
-    // }
     
     /// Store whether the class has a default
     static constexpr bool hasDefault=
@@ -76,10 +75,23 @@ namespace SUNphi
     bool isDefault()
       const
     {
-      // If reference is a serializable class, check itself
-      if constexpr(isSerializableClass<T>)
-	return
-	  value.isDefault();
+      // If reference is a serializable class (map), check itself
+      if constexpr(isMap)
+	{
+	  /// Returned value
+	  bool is=
+	    true;
+	  
+	  forEach(value.serializableMembers(),
+	    [&is](auto s)
+	    {
+	      is&=
+		s.isDefault();
+	    });
+	  
+	  return
+	    is;
+	}
       else
 	// If object has no default, false
 	if constexpr(not hasDefault)
@@ -91,57 +103,30 @@ namespace SUNphi
 	    value==this->def;
     }
     
-    /// Binarize a SerializableScalar
-    friend Binarizer& operator<<(Binarizer& out,                   ///< Output
-				 const SerializableScalar& in)     ///< Input
+    /// Returns a YAML node
+    YAML::Node serialize()
+      const
     {
+      /// Returned node
+      YAML::Node node;
+      
+      node[name]=
+	value;
+      
       return
-	out<<in();
+	node;
     }
     
-    /// DeBinarize a SerializableScalar
-    friend Binarizer& operator>>(Binarizer& in,                    ///< Input
-				 SerializableScalar& out)          ///< Output
+    /// Copy assignment operator
+    Serializable& operator=(const Serializable& oth)
     {
-      return
-	in>>out();
+      value=
+ 	oth.value;
+	
+	return
+	  *this;
     }
-    
-    /// Used to overload assignment operators
-#define TRIVIAL_ASSIGN_OVERLOAD(OP)			\
-    /*! Provides the operator OP */			\
-    template <typename O> /* Other operand typename */	\
-    DECLAUTO operator OP (O&& oth)			\
-    {							\
-      return value OP					\
- 	oth;						\
-     }
-    
-    TRIVIAL_ASSIGN_OVERLOAD(=);
-    TRIVIAL_ASSIGN_OVERLOAD(+=);
-    TRIVIAL_ASSIGN_OVERLOAD(-=);
-    TRIVIAL_ASSIGN_OVERLOAD(*=);
-    TRIVIAL_ASSIGN_OVERLOAD(/=);
-    
-#undef TRIVIAL_ASSIGN_OVERLOAD
   };
-  
-  /// Trait to recognize a class as a serializable scalar
-  ///
-  /// False case
-  template <typename T>
-  [[ maybe_unused ]]
-  constexpr bool isSerializableScalar=
-    false;
-  
-  /// Trait to recognize a class as a serializable scalar
-  ///
-  /// True case
-  template <typename T,
-	    bool B,
-	    template <typename,bool> typename C>
-  constexpr bool isSerializableScalar<C<T,B>> =
-    true;
 }
 
 #endif

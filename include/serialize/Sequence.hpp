@@ -11,6 +11,7 @@
 #include <cstddef>
 
 #include <metaprogramming/TypeTraits.hpp>
+#include <serialize/Binarize.hpp>
 #include <serialize/Default.hpp>
 
 namespace SUNphi
@@ -18,10 +19,10 @@ namespace SUNphi
   /// Class providing sequence node for the serializer
   ///
   /// Provides name and default value
-  template <typename S,
-	    typename...TDef>
-  class SerializableSequence :
-    public S
+  template <typename S>
+  class SerializableSequence
+    : public S
+    , public Binarizable<SerializableSequence<S>>
   {
     /// Fundamental type
     using T=
@@ -44,12 +45,33 @@ namespace SUNphi
     }
     
     /// Creates a serializable vector with name
+    template <typename...TDef>
     SerializableSequence(const char* name,      ///< Name of the sequence
 			 TDef&&...def)          ///< Initializer
       : S(forw<TDef>(def)...)
       , name(name)
       , def(forw<TDef>(def)...)
     {
+    }
+    
+    /// Access the value
+    const S& operator()()
+      const
+    {
+      return
+	static_cast<const S&>(*this);
+    }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(operator());
+    
+    /// Copy assignment operator
+    SerializableSequence& operator=(const SerializableSequence& oth)
+    {
+      (*this)()=
+ 	(oth)();
+	
+	return
+	  *this;
     }
   };
   
@@ -64,7 +86,7 @@ namespace SUNphi
 #define SERIALIZABLE_VECTOR(TYPE,					\
 			    NAME,					\
 			    ...)					\
-  SERIALIZABLE_SEQUENCE(Vector<TYPE>,NAME,__VA_ARGS__)
+  SERIALIZABLE_SEQUENCE(std::vector<TYPE>,NAME,__VA_ARGS__)
   
   DEFINE_IS_THE_TEMPLATED_CLASS(SerializableSequence);
 }

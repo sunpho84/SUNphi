@@ -12,8 +12,19 @@
 #include <metaprogramming/CRTP.hpp>
 #include <metaprogramming/SFINAE.hpp>
 
+#include <ios/MinimalLogger.hpp>
+
 namespace SUNphi
 {
+  DEFINE_HAS_MEMBER(binarize);
+  DEFINE_HAS_MEMBER(deBinarize);
+  
+  /// Determine whether a type is serializable
+  template <typename T>
+  [[ maybe_unused ]]
+  constexpr bool isBinarizable=
+    hasMember_binarize<T> and hasMember_deBinarize<T>;
+  
   /// Class to convert objects to and from binary
   class Binarizer
   {
@@ -80,10 +91,28 @@ namespace SUNphi
     
 #undef PROVIDE_BEGIN_END
     
+    /// Write on the binarizer, if the type has a member binarize
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(hasMember_binarize<T>)>
+    Binarizer& binarize(const T& rhs)
+    {
+      return
+	rhs.binarize(*this);
+    }
+    
+    /// Read from the binarizer, if the type has a member deBinarize
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(hasMember_deBinarize<T>)>
+    Binarizer& deBinarize(T& rhs)
+    {
+      return
+	rhs.deBinarize(*this);
+    }
+    
     /// Write on the binarizer
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(std::is_trivially_copyable_v<T>)>
-    Binarizer& operator<<(const T& rhs)
+    Binarizer& binarize(const T& rhs)
     {
       return
 	pushBack(&rhs,sizeof(T));
@@ -92,40 +121,106 @@ namespace SUNphi
     /// Read from the binarizer
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(std::is_trivially_copyable_v<T>)>
-    Binarizer& operator>>(T& rhs)
+    Binarizer& deBinarize(T& rhs)
     {
       return
 	readAdvancing(&rhs,sizeof(T));
     }
     
-    /// Binarize a string
-    Binarizer& operator<<(const std::string& in)     ///< Input
+    /// Binarize a tuple-like
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isTupleLike<T>)>
+    Binarizer& binarize(T&& in)     ///< Input
     {
-      /// It is important to store the terminator
-      const size_t nullTerminatedSize=
-	in.size()+1;
-      
-      (*this)<<
-	nullTerminatedSize;
+       forEach(in,
+	      [this](auto& s)
+	      {
+		this->binarize(s);
+	      });
       
       return
-	this->pushBack(&in[0],nullTerminatedSize);
+	*this;
     }
     
-    /// DeBinarize a string
-    Binarizer& operator>>(std::string& rhs)     ///< Output
+    /// DeBinarize a tuple-like
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isTupleLike<T>)>
+    Binarizer& deBinarize(T&& rhs)     ///< Output
     {
-      /// Null terminated string
-      size_t nullTerminatedSize;
-      
-      (*this)>>
-	nullTerminatedSize;
-      
-      rhs.resize(nullTerminatedSize-1);
+      forEach(rhs,
+	      [this](auto& s)
+	      {
+		this->deBinarize(s);
+	      });
       
       return
-	readAdvancing(&rhs[0],nullTerminatedSize);
+	*this;
     }
+    
+    /// Binarize a vector-like
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isVectorLike<T>)>
+    Binarizer& binarize(T&& in)     ///< Input
+    {
+      /// Number of elements
+      const size_t nel=
+	in.size();
+      
+      /// Size of the vector
+      const size_t size=
+	nel*sizeof(&in[0]);
+      
+      this->binarize(size);
+      
+      return
+	this->pushBack(&in[0],size);
+    }
+    
+    /// DeBinarize a vector-like
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isVectorLike<T>)>
+    Binarizer& deBinarize(T&& rhs)     ///< Output
+    {
+      /// Size of the vector
+      size_t size;
+      this->deBinarize(size);
+      
+      /// Number of elements
+      const size_t nel=
+	size/sizeof(&rhs[0]);
+      
+      rhs.resize(nel);
+      
+      return
+	readAdvancing(&rhs[0],size);
+    }
+    
+    // /// Binarize a string
+    // Binarizer& binarize(const std::string& in)     ///< Input
+    // {
+    //   /// It is important to store the terminator
+    //   const size_t nullTerminatedSize=
+    // 	in.size()+1;
+      
+    //   this->binarize(nullTerminatedSize);
+      
+    //   return
+    // 	this->pushBack(&in[0],nullTerminatedSize);
+    // }
+    
+    // /// DeBinarize a string
+    // Binarizer& deBinarize(std::string& rhs)     ///< Output
+    // {
+    //   /// Null terminated string
+    //   size_t nullTerminatedSize;
+      
+    //   this->deBinarize(nullTerminatedSize);
+      
+    //   rhs.resize(nullTerminatedSize-1);
+      
+    //   return
+    // 	readAdvancing(&rhs[0],nullTerminatedSize);
+    // }
     
     /// Restart from head
     void restartReading()
@@ -142,31 +237,29 @@ namespace SUNphi
     }
   };
   
-  /// Provides methods binarize through CRTP
+  /// Add binarizable functionality via CRTP
   template <typename T>
   class Binarizable
   {
-    PROVIDE_CRTP_CAST_OPERATOR(T);
-    
   public:
     
-    /// Creates the binarized version
-    Binarizer binarize()
+    PROVIDE_CRTP_CAST_OPERATOR(T);
+    
+    /// Binarize a Serializable
+    template <typename B=Binarizer>
+    Binarizer& binarize(B&& out={})             ///< Output
       const
     {
-      /// Output binarizer
-      Binarizer out;
-      
       return
-	out<<
-	~(*this);
+	out.binarize(CRTP_THIS());
     }
     
-    /// Fill from a binarized version
-    void deBinarize(Binarizer& deb)
+    /// DeBinarize a Serializable
+    template <typename B=Binarizer>
+    Binarizer& deBinarize(B&& in)               ///< Input
     {
-      deb>>
-	~(*this);
+      return
+	in.deBinarize(CRTP_THIS());
     }
   };
 }
