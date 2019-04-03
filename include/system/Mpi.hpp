@@ -290,8 +290,9 @@ namespace SUNphi
     /// Broadcast among all MPI process
     ///
     /// Accepts all binarizable classes
-    template <typename T>
-    void broadcast(Binarizable<T>& val,    ///< Quantity to broadcast
+    template <typename T,
+	      SFINAE_ON_TEMPLATE_ARG(isBinarizable<T>)>
+    void broadcast(T&& val,                ///< Quantity to broadcast
 		   int root=MASTER_RANK)   ///< Rank from which to broadcast
       const
     {
