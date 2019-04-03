@@ -1,7 +1,6 @@
 var searchData=
 [
   ['macros_2ehpp',['Macros.hpp',['../db/d18/Macros_8hpp.html',1,'']]],
-  ['map_2ehpp',['Map.hpp',['../d1/d66/containers_2Map_8hpp.html',1,'']]],
   ['map_2ehpp',['Map.hpp',['../df/dd4/serialize_2Map_8hpp.html',1,'']]],
   ['masterrandomgenerator_2ehpp',['MasterRandomGenerator.hpp',['../df/d29/MasterRandomGenerator_8hpp.html',1,'']]],
   ['math_2ehpp',['Math.hpp',['../d8/df1/Math_8hpp.html',1,'']]],
