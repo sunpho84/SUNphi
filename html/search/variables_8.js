@@ -1,7 +1,7 @@
 var searchData=
 [
   ['half',['half',['../dc/d02/structSUNphi_1_1__IntsUpTo.html#ac63e78f59cba8080fa85ddf5ed53c4d0',1,'SUNphi::_IntsUpTo']]],
-  ['hasdefault',['hasDefault',['../dd/d5c/classSUNphi_1_1Serializable.html#a9bab2f69315c86c892a9afe644c8d99d',1,'SUNphi::Serializable']]],
+  ['hasdefault',['hasDefault',['../da/dd6/classSUNphi_1_1SerializableSequence.html#a61c123e737de866f8a8c281ba716f0f5',1,'SUNphi::SerializableSequence']]],
   ['hashingtag',['hashingTag',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a6dfd480bf35dff157d9b179e90ade494',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;::hashingTag()'],['../dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1f0cfa01012443c7c8937620e5c585f1',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, false &gt;::hashingTag()']]],
   ['hasmember_5fassertmergeablewith',['hasMember_assertMergeableWith',['../dc/d6b/BaseSmET_8hpp.html#aae9bc0ae600b50d77d6300e7b4905e82',1,'SUNphi']]],
   ['hasmember_5fbegin',['hasMember_begin',['../d0/d81/TypeTraits_8hpp.html#a46d9467528c04545e919cb5ae003dbbc',1,'SUNphi']]],
@@ -14,6 +14,7 @@ var searchData=
   ['hasmember_5fgetmergedcompsview',['hasMember_getMergedCompsView',['../dc/d6b/BaseSmET_8hpp.html#a3fa6a1b35e4ab4ae10e5f94251cf51be',1,'SUNphi']]],
   ['hasmember_5fisaliasing',['hasMember_isAliasing',['../dc/d6b/BaseSmET_8hpp.html#a1fed8297fba675c11b81b1f642589db5',1,'SUNphi']]],
   ['hasmember_5fisassignable',['hasMember_isAssignable',['../dc/d6b/BaseSmET_8hpp.html#adcf4c7356e247b24603cea4425702143',1,'SUNphi']]],
+  ['hasmember_5fisdefault',['hasMember_isDefault',['../da/def/Default_8hpp.html#a5b897d9012a0d25d0d52f0ecbd915982',1,'SUNphi']]],
   ['hasmember_5fisstoring',['hasMember_isStoring',['../dc/d6b/BaseSmET_8hpp.html#a0b67eec99595f3afd38b1a8fc8b740b5',1,'SUNphi']]],
   ['hasmember_5fmergeablecomps',['hasMember_MergeableComps',['../dc/d6b/BaseSmET_8hpp.html#a49a64ecc853b0499d52474ba566814f4',1,'SUNphi']]],
   ['hasmember_5fname',['hasMember_name',['../dc/d6b/BaseSmET_8hpp.html#a7b41c1d7e76416564e69cb6d86a76cf1',1,'SUNphi']]],

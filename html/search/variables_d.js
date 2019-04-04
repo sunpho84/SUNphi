@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()'],['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../dd/d5c/classSUNphi_1_1Serializable.html#acda1f67291aeb140bfc7f7a54b098521',1,'SUNphi::Serializable::name()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a00a1486c987dd6311c32b0d531234622',1,'SUNphi::SerializableSequence::name()']]],
+  ['name',['name',['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()'],['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../dd/d5c/classSUNphi_1_1Serializable.html#a8f6d3a7f1ef6afb62d416e18088367d5',1,'SUNphi::Serializable::name()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a00a1486c987dd6311c32b0d531234622',1,'SUNphi::SerializableSequence::name()']]],
   ['ncn_5fcol',['NCN_Col',['../d4/df5/SUN_8hpp.html#a37b64c0a12ba1ed70d40a9cd81b76d25',1,'SUNphi']]],
   ['ncn_5fspin',['NCN_Spin',['../d9/dfb/Spin_8hpp.html#a6da8f6f82d5819d1a6ed09ea9cf2b883',1,'SUNphi']]],
   ['ncol',['NCOL',['../d4/df5/SUN_8hpp.html#aeea08fdb768379f4f657584f4f0ab64d',1,'SUNphi']]],

@@ -110,7 +110,9 @@ $(document).ready(function(){initNavTree('da/dd6/classSUNphi_1_1SerializableSequ
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../da/ddd/classSUNphi_1_1SerializableSequence-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::SerializableSequence&lt; S &gt; Class Template Reference</div>  </div>
@@ -134,6 +136,10 @@ Public Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a010be92c8eca0ab232e31e202d592b08">isDefault</a> () const </td></tr>
 <tr class="memdesc:a010be92c8eca0ab232e31e202d592b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the container is default. <br /></td></tr>
 <tr class="separator:a010be92c8eca0ab232e31e202d592b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acb7797e28819be059d6258e1b02e71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7acb7797e28819be059d6258e1b02e71"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a7acb7797e28819be059d6258e1b02e71">putToDefault</a> ()</td></tr>
+<tr class="memdesc:a7acb7797e28819be059d6258e1b02e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put to default value. <br /></td></tr>
+<tr class="separator:a7acb7797e28819be059d6258e1b02e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1aac07d9bf4231beea0d99cbb0951d4"><td class="memTemplParams" colspan="2">template&lt;typename... TDef&gt; </td></tr>
 <tr class="memitem:ac1aac07d9bf4231beea0d99cbb0951d4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#ac1aac07d9bf4231beea0d99cbb0951d4">SerializableSequence</a> (const char *<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a00a1486c987dd6311c32b0d531234622">name</a>, TDef &amp;&amp;...<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#af7f7236957688d158e81a4328184f11b">def</a>)</td></tr>
 <tr class="memdesc:ac1aac07d9bf4231beea0d99cbb0951d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a serializable vector with name.  <a href="#ac1aac07d9bf4231beea0d99cbb0951d4">More...</a><br /></td></tr>
@@ -145,6 +151,12 @@ const S &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:af68e241d3062f3634997fa9985941f58"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
 <tr class="memitem:af68e241d3062f3634997fa9985941f58"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#af68e241d3062f3634997fa9985941f58">operator()</a> (Ts &amp;&amp;...ts)</td></tr>
 <tr class="separator:af68e241d3062f3634997fa9985941f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f3f7fa3efaf94e3f1815e1b456e847"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#ae0f3f7fa3efaf94e3f1815e1b456e847">serialize</a> (YAML::Node &amp;node, const bool &amp;onlyNonDefault=false) const </td></tr>
+<tr class="memdesc:ae0f3f7fa3efaf94e3f1815e1b456e847"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a YAML node after serializing to it.  <a href="#ae0f3f7fa3efaf94e3f1815e1b456e847">More...</a><br /></td></tr>
+<tr class="separator:ae0f3f7fa3efaf94e3f1815e1b456e847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9989dd3958f3cadb97a3ac4bbe1cc181"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a9989dd3958f3cadb97a3ac4bbe1cc181">serialize</a> (const bool &amp;onlyNonDefault=false) const </td></tr>
+<tr class="memdesc:a9989dd3958f3cadb97a3ac4bbe1cc181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a YAML node.  <a href="#a9989dd3958f3cadb97a3ac4bbe1cc181">More...</a><br /></td></tr>
+<tr class="separator:a9989dd3958f3cadb97a3ac4bbe1cc181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1211b74251c1dabb01b5d3f41e590efc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1211b74251c1dabb01b5d3f41e590efc"></a>
 <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a1211b74251c1dabb01b5d3f41e590efc">operator=</a> (const <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a> &amp;oth)</td></tr>
 <tr class="memdesc:a1211b74251c1dabb01b5d3f41e590efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator. <br /></td></tr>
@@ -179,12 +191,25 @@ class {</td></tr>
 <tr class="memitem:ab4290b4f6168e5de81a063fcaad2faf4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:ab4290b4f6168e5de81a063fcaad2faf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a61c123e737de866f8a8c281ba716f0f5"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a61c123e737de866f8a8c281ba716f0f5">hasDefault</a></td></tr>
+<tr class="memdesc:a61c123e737de866f8a8c281ba716f0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">We always have a default.  <a href="#a61c123e737de866f8a8c281ba716f0f5">More...</a><br /></td></tr>
+<tr class="separator:a61c123e737de866f8a8c281ba716f0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a325dec07988c33b1656cdba7e03315cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a325dec07988c33b1656cdba7e03315cc"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a325dec07988c33b1656cdba7e03315cc">T</a> = decltype(S{}[0])</td></tr>
-<tr class="memdesc:a325dec07988c33b1656cdba7e03315cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fundamental type. <br /></td></tr>
-<tr class="separator:a325dec07988c33b1656cdba7e03315cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bba8dc8b1b0a82fdda009f6fbc64328"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a9bba8dc8b1b0a82fdda009f6fbc64328">T</a> = decltype(<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1">_mappedTypeHelper</a>())</td></tr>
+<tr class="memdesc:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fundamental type. <br /></td></tr>
+<tr class="separator:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a4ee863182a67b64dbc95350054aa53b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee863182a67b64dbc95350054aa53b1"></a>
+static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1">_mappedTypeHelper</a> ()</td></tr>
+<tr class="memdesc:a4ee863182a67b64dbc95350054aa53b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to determine the mapped type. <br /></td></tr>
+<tr class="separator:a4ee863182a67b64dbc95350054aa53b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename S&gt;<br />
@@ -193,7 +218,7 @@ class SUNphi::SerializableSequence&lt; S &gt;</h3>
 <p>Class providing sequence node for the serializer</p>
 <p>Provides name and default value </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00024">24</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac1aac07d9bf4231beea0d99cbb0951d4"></a>
 <div class="memitem">
@@ -240,7 +265,7 @@ template&lt;typename... TDef&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00072">72</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -346,7 +371,33 @@ template&lt;typename... Ts&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8cd33726a714fe7251bada83bc0b3be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; S &gt; &amp; <a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">SUNphi::Binarizable</a>&lt; <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; S &gt;  &gt;::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constant cast operator to class <code>T</code> </p>
+
+<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
 
 </div>
 </div>
@@ -376,29 +427,102 @@ template&lt;typename... Ts&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad8cd33726a714fe7251bada83bc0b3be"></a>
+<a class="anchor" id="ae0f3f7fa3efaf94e3f1815e1b456e847"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename S&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; S &gt; &amp; <a class="el" href="../../d7/da6/classSUNphi_1_1Binarizable.html">SUNphi::Binarizable</a>&lt; <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; S &gt;  &gt;::operator~ </td>
+          <td class="memname">YAML::Node <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SUNphi::SerializableSequence</a>&lt; S &gt;::serialize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>onlyNonDefault</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a YAML node after serializing to it. </p>
+<p>Create the subnode </p>
+
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00091">91</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9989dd3958f3cadb97a3ac4bbe1cc181"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">YAML::Node <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SUNphi::SerializableSequence</a>&lt; S &gt;::serialize </td>
+          <td>(</td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>onlyNonDefault</em> = <code>false</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constant cast operator to class <code>T</code> </p>
 
-<p>Definition at line <a class="el" href="../../d2/df0/Binarize_8hpp_source.html#l00219">219</a> of file <a class="el" href="../../d2/df0/Binarize_8hpp_source.html">Binarize.hpp</a>.</p>
+<p>Returns a YAML node. </p>
+<p>Returned value </p>
+
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a61c123e737de866f8a8c281ba716f0f5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename S&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SUNphi::SerializableSequence</a>&lt; S &gt;::hasDefault</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <span class="keyword">true</span></div></div><!-- fragment -->
+<p>We always have a default. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>

@@ -11,6 +11,7 @@ var searchData=
   ['hasmember_5fgetmergedcompsview',['HasMember_getMergedCompsView',['../d3/d4e/structSUNphi_1_1HasMember__getMergedCompsView.html',1,'SUNphi']]],
   ['hasmember_5fisaliasing',['HasMember_isAliasing',['../db/dc6/structSUNphi_1_1HasMember__isAliasing.html',1,'SUNphi']]],
   ['hasmember_5fisassignable',['HasMember_isAssignable',['../dd/d8a/structSUNphi_1_1HasMember__isAssignable.html',1,'SUNphi']]],
+  ['hasmember_5fisdefault',['HasMember_isDefault',['../db/d94/structSUNphi_1_1HasMember__isDefault.html',1,'SUNphi']]],
   ['hasmember_5fisstoring',['HasMember_isStoring',['../d6/d8a/structSUNphi_1_1HasMember__isStoring.html',1,'SUNphi']]],
   ['hasmember_5fmergeablecomps',['HasMember_MergeableComps',['../d0/db2/structSUNphi_1_1HasMember__MergeableComps.html',1,'SUNphi']]],
   ['hasmember_5fname',['HasMember_name',['../d3/d59/structSUNphi_1_1HasMember__name.html',1,'SUNphi']]],

@@ -39,15 +39,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c",
-"d3/d22/classSUNphi_1_1TensStor.html#adeb4773c826b3618084574a9ad8d37dc",
-"d4/dca/structSUNphi_1_1BaseTensKind.html",
-"d6/d9e/structSUNphi_1_1TensKind_1_1ConstrainIsValidCompMerge.html",
-"d8/dc9/structSUNphi_1_1RwCol.html#aff07721fd4455f1b9859c166766f8e7c",
-"da/db7/IntSeqTranspose_8hpp.html",
-"dc/d58/Position_8hpp_source.html",
-"dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#a62036115814b61e36c3699da76b23f8f",
-"df/d7a/LoopUnroll_8hpp_source.html"
+"d1/d8b/structSUNphi_1_1HasMember__serialize.html#ae6ed4a32c0c46c716fcac3ee798fce5a",
+"d3/d22/classSUNphi_1_1TensStor.html#a71921f76c6bbb123ad45e91b2d2d129e",
+"d4/d8f/structSUNphi_1_1HasMember__isAssignable_1_1Check.html",
+"d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html",
+"d8/dbf/Timer_8hpp.html#a4adb91524f90419ac449be36db370b54",
+"da/d65/Add_8hpp.html#a7861a33e6e18e86da33dbf3e492a629b",
+"dc/d2f/structSUNphi_1_1NnarySmET.html#a302bf10f8751e25cd44cf91bf0a0b988",
+"dd/d5c/classSUNphi_1_1Serializable.html#a0f7cca45791f229d9cf563d57d657bda",
+"df/d09/classSUNphi_1_1Mpi.html#a6cb768d901b2a958061444e4abe89485"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

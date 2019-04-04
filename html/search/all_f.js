@@ -64,5 +64,6 @@ var searchData=
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],
   ['provide_5fstatic_5fmember_5fwith_5finitializator',['PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR',['../de/d4a/StaticMemberWithInitializator_8hpp.html#a24de0a6aac394ff9725aaac35fcb66ee',1,'StaticMemberWithInitializator.hpp']]],
   ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]],
-  ['pushback',['pushBack',['../d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802',1,'SUNphi::Binarizer']]]
+  ['pushback',['pushBack',['../d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802',1,'SUNphi::Binarizer']]],
+  ['puttodefault',['putToDefault',['../d1/d39/classSUNphi_1_1SerializableClass.html#a9c48ee3b6ccfe69fb99e289fc5cf0dc7',1,'SUNphi::SerializableClass::putToDefault()'],['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#ab52ba6ca8a07a767c9efebe183ff92be',1,'SUNphi::SerializableDefaultValue&lt; T, true &gt;::putToDefault()'],['../d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html#adc366b98fb715d4b1d056727d882956f',1,'SUNphi::SerializableDefaultValue&lt; T, false &gt;::putToDefault()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a7acb7797e28819be059d6258e1b02e71',1,'SUNphi::SerializableSequence::putToDefault()']]]
 ];
