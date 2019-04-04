@@ -20,11 +20,9 @@
 
 namespace SUNphi
 {
-  /// Check if the type is a serializable scalar
+  /// Forward definition of serializable
   template <typename T>
-  [[ maybe_unused ]]
-  constexpr bool isSerializableScalar=
-    std::is_trivially_copyable_v<T>;
+  class Serializable;
   
   DEFINE_HAS_MEMBER(serializableMembers);
   
@@ -36,7 +34,23 @@ namespace SUNphi
   
   DEFINE_HAS_MEMBER(serialize);
   
-  /// Stream to an output
+  /// Stream to an output a YAML node
+  template <typename S,
+	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,YAML::Node>)>
+  S& operator<<(S&& stream,
+		const YAML::Node& node)
+  {
+    /// Converter to string
+    YAML::Emitter emitter;
+    emitter<<node;
+    
+    stream<<
+      emitter.c_str();
+    
+    return
+      stream;
+  }
+  /// Stream to an output anything with a \c serialize member
   template <typename S,
 	    typename T,
 	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,T>),
@@ -44,13 +58,8 @@ namespace SUNphi
   S& operator<<(S&& stream,
 		const T& ser)
   {
-    /// Converter to string
-    YAML::Emitter emitter;
-    emitter<<
-      ser.serialize();
-    
     stream<<
-      emitter.c_str();
+      ser.serialize();
     
     return
       stream;
@@ -76,9 +85,10 @@ namespace YAML
     static bool decode(const Node& node,
 		       T& rhs)
     {
-      // node>>rhs.a;
+      rhs.deSerialize(node);
       
-      return true;
+      return
+	true;
     }
   };
 }

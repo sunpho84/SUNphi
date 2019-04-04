@@ -16,17 +16,18 @@ namespace SUNphi
   SERIALIZABLE_CLASS(Test)
   {
   public:
-    using E=std::pair<std::string,std::string>;
+    using P=std::pair<std::string,std::string>;
     using F=std::vector<double>;
     //decltype(_serializableScalar(static_cast<E*>(nullptr),"a",10.0,20.0)) a{"a",10.0,20.0};
     
-    SERIALIZABLE_SCALAR(E,a,{"fi","se"});
+    //SERIALIZABLE_SEQUENCE(P,a,{"fi","se"});
     
     //SERIALIZABLE_SCALAR(F,c,{10,20});
     SERIALIZABLE_VECTOR(double,v,10);
-    SERIALIZABLE_SCALAR(double,b,1);
+    SERIALIZABLE_SCALAR(double,b,1.0);
     
-    LIST_SERIALIZABLE_MEMBERS(a,v,b);
+    LIST_SERIALIZABLE_MEMBERS(// a,
+			      v,b);
     
     // Test& operator=(const Test& oth)
     // {
@@ -47,7 +48,7 @@ namespace SUNphi
   {
   public:
     
-    Serializable<Test,NO_DEFAULT> test{"test"};
+    Serializable<Test> test{"test"};
     Serializable<std::string> ciccio{"ciccio","ciaccio"};
     
     //Serializable<std::vector<Test>> v{"v",std::vector<Test>(10)};
@@ -62,12 +63,32 @@ int main()
   
   //test1.v().resize(1);
   
+  runLog()<<"Txt";
+  runLog()<<"Full:";
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<test1;
+  }
+  runLog()<<"test1 isDefault: "<<test1.isDefault();
+  
+  runLog()<<"NonDef:";
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<test1.serialize(ONLY_NON_DEFAULT);
+  }
+  
   test1.ciccio()=
     "first";
   
-  runLog()<<"Txt";
+  runLog()<<"test1 isDefault: "<<test1.isDefault();
   
-  test2.deSerialize(test1.serialize());
+  runLog()<<"NonDef:";
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<test1.serialize(ONLY_NON_DEFAULT);
+  }
+  
+  test2.deSerialize(test1.serialize(ONLY_NON_DEFAULT));
   
   {
     SCOPE_INDENT(runLog);

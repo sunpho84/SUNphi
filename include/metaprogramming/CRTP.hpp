@@ -17,7 +17,8 @@ namespace SUNphi
   /*! Cast operator to class \c CLASS*/			\
   CLASS& operator~()					\
   {							\
-    return *static_cast<CLASS*>(this);			\
+    return						\
+      *static_cast<CLASS*>(this);			\
   }							\
   							\
   /*! Constant cast operator to class \c CLASS */	\

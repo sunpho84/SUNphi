@@ -12,7 +12,7 @@
 
 #include <metaprogramming/CRTP.hpp>
 #include <serialize/Base.hpp>
-#include <serialize/Scalar.hpp>
+#include <serialize/Serializable.hpp>
 #include <tuple/TupleClass.hpp>
 
 #include <ios/Logger.hpp>
@@ -24,7 +24,7 @@ namespace SUNphi
   auto _serializableMembers(Ts&&...ts)
   {
     /// Check that all arguments are SerializableScalar
-    static_assert((isSerializableScalar<Ts> && ...),"All arguments need to be SerializableScalar");
+    static_assert((isSerializable<Ts> && ...),"All arguments need to be Serializable");
     
     return
       std::forward_as_tuple(ts...);
@@ -50,22 +50,59 @@ namespace SUNphi
     
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
+    /// Check if the class is default
+    bool isDefault()
+      const
+    {
+      /// Default value
+      bool def=
+	true;
+      
+      forEach(CRTP_THIS.serializableMembers(),
+	      [&def](auto& s)
+	      {
+		def&=
+		  s.isDefault();
+	      });
+      
+      return
+	def;
+    }
+    
     /// Convert to YAML node
-    YAML::Node serialize()
+    YAML::Node serialize(YAML::Node& node,                 ///< Resulting node
+			 const bool& onlyNonDefault=false) ///< Prints only non-default
+      const
+    {
+      forEach(CRTP_THIS.serializableMembers(),
+	      [&node,&onlyNonDefault](auto& s)
+	      {
+		s.serialize(node,onlyNonDefault);
+	      });
+      
+      return
+	node;
+    }
+    
+    /// Convert to YAML node
+    YAML::Node serialize(const bool& onlyNonDefault=false) ///< Prints only non-default
       const
     {
       /// Resulting node
       YAML::Node node;
       
-      forEach(CRTP_THIS.serializableMembers(),
-	      [&node](auto& s)
-	      {
-		node[s.name]=
-		  s();
-	      });
-      
       return
-	node;
+	serialize(node,onlyNonDefault);
+    }
+    
+    /// Put the class to the default value
+    void putToDefault()
+    {
+      forEach(CRTP_THIS.serializableMembers(),
+	      [](auto& s)
+	      {
+		s.putToDefault();
+	      });
     }
     
     /// Convert from a YAML node
@@ -84,15 +121,14 @@ namespace SUNphi
 		runLog()<<"Searching for "<<s.name<<" in node of tag "<<node.Tag();
 		
 		if(not node[s.name])
-		  {
-		    YAML::Emitter e;
-		    e<<node;
-		    CRASH<<"Unable to find "<<s.name<<", was: \n"<<e.c_str();
-		  }
+		  s.putToDefault();
 		else
-		  runLog()<<"Found "<<s.name;
-		s()=
-		  node[s.name].template as<R>();
+		  {
+		    runLog()<<"Found "<<s.name;
+		    
+		    s()=
+		      node[s.name].template as<R>();
+		  }
 	      });
       
       return

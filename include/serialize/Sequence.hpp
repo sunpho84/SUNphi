@@ -13,6 +13,7 @@
 #include <metaprogramming/TypeTraits.hpp>
 #include <serialize/Binarize.hpp>
 #include <serialize/Default.hpp>
+#include <tuple/TupleElements.hpp>
 
 namespace SUNphi
 {
@@ -24,9 +25,20 @@ namespace SUNphi
     : public S
     , public Binarizable<SerializableSequence<S>>
   {
+    /// Helper to determine the mapped type
+    static auto _mappedTypeHelper()
+    {
+      if constexpr(isTupleLike<S>)
+	return
+	  get<0>(S{});
+      else
+	return
+	  S{}[0];
+    }
+    
     /// Fundamental type
     using T=
-      decltype(S{}[0]);
+      decltype(_mappedTypeHelper());
     
   public:
     
@@ -42,6 +54,17 @@ namespace SUNphi
     {
       return
 	static_cast<S>(*this)==def;
+    }
+    
+    /// We always have a default
+    static constexpr bool hasDefault=
+      true;
+    
+    /// Put to default value
+    void putToDefault()
+    {
+      static_cast<S>(*this)=
+	def;
     }
     
     /// Creates a serializable vector with name
@@ -63,6 +86,47 @@ namespace SUNphi
     }
     
     PROVIDE_ALSO_NON_CONST_METHOD(operator());
+    
+    /// Returns a YAML node after serializing to it
+    YAML::Node serialize(YAML::Node& node,
+			 const bool& onlyNonDefault=false)
+      const
+    {
+      /// Create the subnode
+      YAML::Node subNode=
+	node[name];
+      
+      if constexpr(isTupleLike<S>)
+	forEach(static_cast<S>(*this),[&subNode,&onlyNonDefault](auto&& s)
+		{
+		  if constexpr(hasMember_serialize<S>)
+		    subNode.push_back(s.serialize(onlyNonDefault));
+		  else
+		    subNode.push_back(s);
+		});
+      else
+	for(auto& s: static_cast<S>(*this))
+	  {
+	    if constexpr(hasMember_serialize<S>)
+	      subNode.push_back(s.serialize(onlyNonDefault));
+	    else
+	      subNode.push_back(s);
+	  }
+	
+      return
+	node;
+    }
+    
+    /// Returns a YAML node
+    YAML::Node serialize(const bool& onlyNonDefault=false)
+      const
+    {
+      /// Returned value
+      YAML::Node node;
+      
+      return
+	serialize(node,onlyNonDefault);
+    }
     
     /// Copy assignment operator
     SerializableSequence& operator=(const SerializableSequence& oth)

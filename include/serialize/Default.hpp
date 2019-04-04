@@ -1,5 +1,5 @@
-#ifndef _DEFAULT_HPP
-#define _DEFAULT_HPP
+#ifndef _SERIALIZE_DEFAULT_HPP
+#define _SERIALIZE_DEFAULT_HPP
 
 /// \file serialize/Default.hpp
 ///
@@ -10,6 +10,8 @@
 
 namespace SUNphi
 {
+  DEFINE_HAS_MEMBER(isDefault);
+  
   /// Used to mark that no default value is provided
   [[ maybe_unused ]]
   static constexpr bool NO_DEFAULT=
@@ -19,6 +21,11 @@ namespace SUNphi
   [[ maybe_unused ]]
   constexpr bool MANDATORY=
     false;
+  
+  /// Mark to print only non-default
+  [[ maybe_unused ]]
+  constexpr bool ONLY_NON_DEFAULT=
+    true;
   
   /// Provide a default value for a serializable reference
   ///
@@ -31,6 +38,7 @@ namespace SUNphi
   template <typename T>
   class SerializableDefaultValue<T,true>
   {
+    
   public:
     
     /// Default value stored
@@ -42,6 +50,13 @@ namespace SUNphi
       : def(forw<TDef>(def)...)
     {
     }
+    
+    /// Put to default
+    void putToDefault()
+    {
+      (*static_cast<Serializable<T>*>(this))()=
+	def;
+    }
   };
   
   /// Provide no default value for a serializable reference
@@ -51,8 +66,15 @@ namespace SUNphi
   public:
     
     /// Construct doing nothing
-    SerializableDefaultValue(const T&)
+    SerializableDefaultValue(const T={})
     {
+    }
+    
+    /// Put to default
+    void putToDefault()
+    {
+      (*static_cast<Serializable<T>*>(this))()=
+	T{};
     }
   };
 }
