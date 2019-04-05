@@ -133,10 +133,8 @@ namespace SUNphi
       if(not node[name])
 	this->putToDefault();
       else
-	{
-	  static_cast<S>(*this)=
-	    node[name].template as<S>();
-	}
+	(*this)()=
+	  node[name].template as<S>();
       
       return
 	true;
