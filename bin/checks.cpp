@@ -763,6 +763,69 @@ void checkSitmo()
   TEST_PASSED;
 }
 
+/// Check the serialization features
+void checkSerializer()
+{
+  /// SubTestClass to be incapsulated inside the main TestClass
+  DEFINE_SERIALIZABLE_CLASS(SubTestClass)
+  {
+  public:
+    SERIALIZABLE_PAIR(std::string,std::string,p,std::pair<std::string,std::string>{"fi","se"});
+    
+    SERIALIZABLE_VECTOR(double,v,3);
+    SERIALIZABLE_SCALAR(double,b,1.0);
+    
+    LIST_SERIALIZABLE_MEMBERS(p,v,b);
+  };
+  
+  /// TestClass to be serialized
+  DEFINE_SERIALIZABLE_CLASS(TestClass)
+  {
+  public:
+    
+    SERIALIZABLE_CLASS(SubTestClass,subTestClass);
+    SERIALIZABLE_SCALAR(std::string,ciccio,"pasticcio");
+    
+    LIST_SERIALIZABLE_MEMBERS(subTestClass,ciccio);
+  };
+  
+  SERIALIZABLE_SCALAR_WITH_TAG(TestClass,test1,"testClass");
+  SERIALIZABLE_SCALAR_WITH_TAG(TestClass,test2,"testClass");
+  SERIALIZABLE_SCALAR_WITH_TAG(TestClass,test3,"testClass");
+  
+  test1().subTestClass().b=
+    345235.1413;
+  
+  test1().subTestClass().v[2]=
+    4;
+  
+  test1().subTestClass().p.first=
+    "primo";
+  
+  test1().ciccio=
+    "pasticcissimo";
+  
+  test2.deSerialize(test1.serialize(ONLY_NON_DEFAULT));
+  
+  test3.deBinarize(test1.binarize());
+  
+#define CHECK(A)							\
+  if(test1().A!=test2().A)						\
+    CRASH<<"Expected "<<test1().A<<" for " #A ", obtained in serialized: "<<test2().A<<"\n"<<test1.serialize(ONLY_NON_DEFAULT)<<"\n\n"<<test2; \
+									\
+  if(test1().A!=test3().A)						\
+    CRASH<<"Expected "<<test1().A<<" for " #A ", obtained in binarized: "<<test3().A<<"\n"<<test1<<"\n\n"<<test3;
+  
+  CHECK(subTestClass().b);
+  CHECK(subTestClass().v[2]);
+  CHECK(subTestClass().p.first);
+  CHECK(ciccio());
+  
+#undef CHECK
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1257,6 +1320,8 @@ int main()
   checkMPIallReduce();
   
   checkSitmo();
+  
+  checkSerializer();
   
   return 0;
 }
