@@ -41,9 +41,12 @@
 #define NAME4(X,Y,W,Z)				\
   NAME2(X,NAME3(Y,W,Z))
 
-/// Provides all binary operaotr through a simple macro
+/// Provides assignment through a simple macro
+#define PROVIDE_ASSIGNMENT_OPERATOR(PROVIDER)	\
+  PROVIDER(=)					\
+  
+/// Provides all binary operators through a simple macro
 #define PROVIDE_ALL_BINARY_OPERATORS(PROVIDER)	\
-  PROVIDER(=);					\
   PROVIDER(+=);					\
   PROVIDER(-=);					\
   PROVIDER(*=);					\
