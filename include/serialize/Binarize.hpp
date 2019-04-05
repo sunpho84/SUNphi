@@ -130,9 +130,9 @@ namespace SUNphi
     /// Binarize a tuple-like
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(isTupleLike<T>)>
-    Binarizer& binarize(T&& in)     ///< Input
+    Binarizer& binarize(T&& rhs)     ///< Input
     {
-       forEach(in,
+       forEach(rhs,
 	      [this](auto& s)
 	      {
 		this->binarize(s);
@@ -160,20 +160,16 @@ namespace SUNphi
     /// Binarize a vector-like
     template <typename T,
 	      SFINAE_ON_TEMPLATE_ARG(isVectorLike<T>)>
-    Binarizer& binarize(T&& in)     ///< Input
+    Binarizer& binarize(T&& rhs)     ///< Input
     {
       /// Number of elements
       const size_t nel=
-	in.size();
+	rhs.size();
       
-      /// Size of the vector
-      const size_t size=
-	nel*sizeof(&in[0]);
+      this->binarize(nel);
       
-      this->binarize(size);
-      
-      return
-	this->pushBack(&in[0],size);
+      for(int iel=0;iel<nel;iel++)
+	this->deBinarize(rhs[iel]);
     }
     
     /// DeBinarize a vector-like
@@ -181,18 +177,18 @@ namespace SUNphi
 	      SFINAE_ON_TEMPLATE_ARG(isVectorLike<T>)>
     Binarizer& deBinarize(T&& rhs)     ///< Output
     {
-      /// Size of the vector
-      size_t size;
-      this->deBinarize(size);
-      
       /// Number of elements
-      const size_t nel=
-	size/sizeof(&rhs[0]);
+      size_t nel;
+      
+      this->deBinarize(nel);
       
       rhs.resize(nel);
       
+      for(int iel=0;iel<nel;iel++)
+	this->deBinarize(rhs[iel]);
+      
       return
-	readAdvancing(&rhs[0],size);
+	*this;
     }
     
     /// Restart from head
@@ -229,10 +225,10 @@ namespace SUNphi
     
     /// DeBinarize a Serializable
     template <typename B=Binarizer>
-    Binarizer& deBinarize(B&& in)               ///< Input
+    Binarizer& deBinarize(B&& rhs)               ///< Input
     {
       return
-	in.deBinarize(CRTP_THIS());
+	rhs.deBinarize(CRTP_THIS());
     }
   };
 }
