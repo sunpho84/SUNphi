@@ -169,7 +169,10 @@ namespace SUNphi
       this->binarize(nel);
       
       for(int iel=0;iel<nel;iel++)
-	this->deBinarize(rhs[iel]);
+	this->binarize(rhs[iel]);
+      
+      return
+	*this;
     }
     
     /// DeBinarize a vector-like
