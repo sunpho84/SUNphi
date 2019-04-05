@@ -25,6 +25,7 @@ var searchData=
   ['binarizable_3c_20serializable_3c_20sunphi_3a_3atest_20_3e_20_3e',['Binarizable&lt; Serializable&lt; SUNphi::Test &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizable_3c_20serializable_3c_20t_20_3e_20_3e',['Binarizable&lt; Serializable&lt; T &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizable_3c_20serializablesequence_3c_20s_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; S &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
+  ['binarizable_3c_20serializablesequence_3c_20std_3a_3apair_3c_20std_3a_3astring_2c_20std_3a_3astring_20_3e_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; std::pair&lt; std::string, std::string &gt; &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizable_3c_20serializablesequence_3c_20std_3a_3avector_3c_20double_20_3e_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; std::vector&lt; double &gt; &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizer',['Binarizer',['../d2/d66/classSUNphi_1_1Binarizer.html',1,'SUNphi']]],
   ['binarysmet',['BinarySmET',['../d4/d8b/structSUNphi_1_1BinarySmET.html',1,'SUNphi']]],

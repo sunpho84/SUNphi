@@ -18,7 +18,6 @@ var searchData=
   ['nmeasures',['nMeasures',['../d6/de9/classSUNphi_1_1Timer.html#a7c9b8d31306d7d7cae0369f57482f6c6',1,'SUNphi::Timer']]],
   ['nntc1',['NNTC1',['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a3aeb01b547f4f8c3df2691bdb61c1bc2',1,'SUNphi::_RelBindInternalChecks']]],
   ['nntc2',['NNTC2',['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a2d7817e3790c9af0baec029cf6c6eddf',1,'SUNphi::_RelBindInternalChecks']]],
-  ['no_5fdefault',['NO_DEFAULT',['../da/def/Default_8hpp.html#ab94857858448e5e5c543b7330ac7f24c',1,'SUNphi']]],
   ['no_5ffather',['NO_FATHER',['../d6/de9/classSUNphi_1_1Timer.html#a5621cda515b1f6aa2166fe1dab631ca4',1,'SUNphi::Timer']]],
   ['nobj',['nObj',['../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382',1,'SUNphi::Combinatorial']]],
   ['noftypeintuple',['nOfTypeInTuple',['../d1/d31/TupleClass_8hpp.html#af877fd927f6e7f68c60742d9fd6eee75',1,'SUNphi']]],

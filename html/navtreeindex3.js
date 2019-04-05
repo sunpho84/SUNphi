@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"d4/d8b/structSUNphi_1_1BinarySmET.html#a4b46ea85ccd68848ca76d967b1f07222":[2,0,0,62,1],
+"d4/d8b/structSUNphi_1_1BinarySmET.html#ae428c0589b26060d587c69a498085fb4":[2,0,0,62,3],
 "d4/d8f/structSUNphi_1_1HasMember__isAssignable_1_1Check.html":[2,0,0,145,0],
 "d4/d96/IntSeqSplit_8hpp.html":[3,0,2,2,8],
 "d4/d96/IntSeqSplit_8hpp.html#a0a9b8c90e309f5bde54d2b81863a5177":[3,0,2,2,8,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "d6/d43/structSUNphi_1_1ConstrainAreAssigners.html":[2,0,0,71],
 "d6/d4b/structSUNphi_1_1BaseAdder.html":[2,0,0,43],
 "d6/d4d/structSUNphi_1_1__Conditional_3_01false_00_01T_00_01F_01_4.html":[2,0,0,6],
-"d6/d4d/structSUNphi_1_1__Conditional_3_01false_00_01T_00_01F_01_4.html#a92b0a496d7c53a531fa809bd3d95c30d":[2,0,0,6,0],
-"d6/d59/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_01_4_01_4.html":[2,0,0,32],
-"d6/d59/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_01_4_01_4.html#a3c6776cf66c4888a7e6d7ab07b641b70":[2,0,0,32,0]
+"d6/d4d/structSUNphi_1_1__Conditional_3_01false_00_01T_00_01F_01_4.html#a92b0a496d7c53a531fa809bd3d95c30d":[2,0,0,6,0]
 };

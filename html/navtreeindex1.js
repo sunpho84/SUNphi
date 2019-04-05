@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"d1/d8b/structSUNphi_1_1HasMember__serialize.html#a618364c140a9e54c198471fb260fcd6b":[2,0,0,155,4],
+"d1/d8b/structSUNphi_1_1HasMember__serialize.html#aa5cd6b27bb3e6f443969b9f799641274":[2,0,0,155,6],
 "d1/d8b/structSUNphi_1_1HasMember__serialize.html#ae6ed4a32c0c46c716fcac3ee798fce5a":[2,0,0,155,5],
 "d1/d96/structSUNphi_1_1TensComp.html":[2,0,0,189],
 "d1/d96/structSUNphi_1_1TensComp.html#a184b55c1c6edab8deb0340485991e897":[2,0,0,189,2],
@@ -124,13 +126,13 @@ var NAVTREEINDEX1 =
 "d2/d66/classSUNphi_1_1Binarizer.html":[2,0,0,61],
 "d2/d66/classSUNphi_1_1Binarizer.html#a1ed109da257188a58ea323c384dd76b3":[2,0,0,61,10],
 "d2/d66/classSUNphi_1_1Binarizer.html#a1ed109da257188a58ea323c384dd76b3":[2,0,0,61,9],
-"d2/d66/classSUNphi_1_1Binarizer.html#a2e78e17719130e628753bac6e33a35ad":[2,0,0,61,4],
-"d2/d66/classSUNphi_1_1Binarizer.html#a2e78e17719130e628753bac6e33a35ad":[2,0,0,61,5],
 "d2/d66/classSUNphi_1_1Binarizer.html#a30d0b41bdd3795f02d330d8918589be5":[2,0,0,61,1],
 "d2/d66/classSUNphi_1_1Binarizer.html#a40e966c282201c9a7c7913ea7140bcf7":[2,0,0,61,18],
 "d2/d66/classSUNphi_1_1Binarizer.html#a5070a05d0f6a57bfa795de362c47ff9e":[2,0,0,61,16],
 "d2/d66/classSUNphi_1_1Binarizer.html#a5a0ae8cb12a8090584d90aee2eb36c74":[2,0,0,61,14],
 "d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802":[2,0,0,61,13],
+"d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672":[2,0,0,61,4],
+"d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672":[2,0,0,61,5],
 "d2/d66/classSUNphi_1_1Binarizer.html#a8f22c3e0601f3d8f6d1a8d3bc64eed06":[2,0,0,61,15],
 "d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81":[2,0,0,61,2],
 "d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81":[2,0,0,61,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "d3/d22/classSUNphi_1_1TensStor.html":[2,0,0,191],
 "d3/d22/classSUNphi_1_1TensStor.html#a0b8fb7206d7da3d9197da0c1a245fbc6":[2,0,0,191,10],
 "d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca":[2,0,0,191,6],
-"d3/d22/classSUNphi_1_1TensStor.html#a488595727e74e95b9821a5469907832d":[2,0,0,191,4],
-"d3/d22/classSUNphi_1_1TensStor.html#a490600eebc864f10f297a66c14713ad0":[2,0,0,191,8],
-"d3/d22/classSUNphi_1_1TensStor.html#a536cfdc4f0c4942f7abcb7dd2fa170a7":[2,0,0,191,13]
+"d3/d22/classSUNphi_1_1TensStor.html#a488595727e74e95b9821a5469907832d":[2,0,0,191,4]
 };

@@ -13,6 +13,7 @@ var searchData=
   ['scope_5freal_5fformat_5fgeneral',['SCOPE_REAL_FORMAT_GENERAL',['../d7/d8a/File_8hpp.html#a9b0cf7998a45a5c94b839fb6fc3dee17',1,'File.hpp']]],
   ['scope_5freal_5fprecision',['SCOPE_REAL_PRECISION',['../d7/d8a/File_8hpp.html#a5433bd5090f86be69946484ab657a26f',1,'File.hpp']]],
   ['serializable_5fclass',['SERIALIZABLE_CLASS',['../df/dd4/serialize_2Map_8hpp.html#a94165597a60a99b1fd425a2bfb2a7710',1,'Map.hpp']]],
+  ['serializable_5fpair',['SERIALIZABLE_PAIR',['../d0/d11/Sequence_8hpp.html#a76a3de6cdb8101bae41e99338e0ec0d2',1,'Sequence.hpp']]],
   ['serializable_5fscalar',['SERIALIZABLE_SCALAR',['../dd/d32/Scalar_8hpp.html#a39f2946c0268bfec22e42a2ddd6ce205',1,'Scalar.hpp']]],
   ['serializable_5fsequence',['SERIALIZABLE_SEQUENCE',['../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae',1,'Sequence.hpp']]],
   ['serializable_5fvector',['SERIALIZABLE_VECTOR',['../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8',1,'Sequence.hpp']]],

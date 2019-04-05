@@ -20,6 +20,7 @@ var searchData=
   ['serializabledefaultvalue_3c_20t_2c_20not_20isserializablemap_3c_20t_20_3e_20_3e',['SerializableDefaultValue&lt; T, not isSerializableMap&lt; T &gt; &gt;',['../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html',1,'SUNphi']]],
   ['serializabledefaultvalue_3c_20t_2c_20true_20_3e',['SerializableDefaultValue&lt; T, true &gt;',['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html',1,'SUNphi']]],
   ['serializablesequence',['SerializableSequence',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
+  ['serializablesequence_3c_20std_3a_3apair_3c_20std_3a_3astring_2c_20std_3a_3astring_20_3e_20_3e',['SerializableSequence&lt; std::pair&lt; std::string, std::string &gt; &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['serializablesequence_3c_20std_3a_3avector_3c_20double_20_3e_20_3e',['SerializableSequence&lt; std::vector&lt; double &gt; &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],

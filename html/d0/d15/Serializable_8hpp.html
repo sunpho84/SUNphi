@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('d0/d15/Serializable_8hpp.html','../../
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -123,6 +124,7 @@ $(document).ready(function(){initNavTree('d0/d15/Serializable_8hpp.html','../../
 <code>#include &lt;<a class="el" href="../../d3/db2/Base_8hpp_source.html">serialize/Base.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/df0/Binarize_8hpp_source.html">serialize/Binarize.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../da/def/Default_8hpp_source.html">serialize/Default.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../db/d18/Macros_8hpp_source.html">utility/Macros.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d0/d15/Serializable_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -131,6 +133,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html">SUNphi::Serializable&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward definition of serializable.  <a href="../../dd/d5c/classSUNphi_1_1Serializable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad22ec35c2a9fe942c2034ea8d66df1f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/Serializable_8hpp.html#ad22ec35c2a9fe942c2034ea8d66df1f4">PROVIDE_SIMPLE_BINARY_OPERATOR</a>(OP)</td></tr>
+<tr class="memdesc:ad22ec35c2a9fe942c2034ea8d66df1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a simple binary binary operator.  <a href="#ad22ec35c2a9fe942c2034ea8d66df1f4">More...</a><br /></td></tr>
+<tr class="separator:ad22ec35c2a9fe942c2034ea8d66df1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -157,7 +165,30 @@ Variables</h2></td></tr>
 <div class="textblock"><p>Define a serializable quantity. </p>
 
 <p>Definition in file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ad22ec35c2a9fe942c2034ea8d66df1f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROVIDE_SIMPLE_BINARY_OPERATOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">OP</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">    template &lt;typename O&gt;           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">    DECLAUTO</a> <span class="keyword">operator</span> OP (<span class="keyword">const</span> O&amp; oth)     \</div><div class="line">    {                       \</div><div class="line">      return                    \</div><div class="line">    value OP oth;               \</div><div class="line">    }                       <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment -->
+<p>Provide a simple binary binary operator. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="file_aac2043342a01129966c733dae9824511"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +203,7 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00162">162</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +226,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Forward definition of serializable. ">Serializable</a></p>
 <p>False case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00162">162</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +248,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Check if the class is a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Forward definition of serializable. ">Serializable</a></p>
 <p>True case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00162">162</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +267,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html" title="Forward definition of serializable. ">Serializable</a></p>
 <p>Calls the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00162">162</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>

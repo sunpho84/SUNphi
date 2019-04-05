@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"d6/d59/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_01_4_01_4.html":[2,0,0,32],
+"d6/d59/structSUNphi_1_1__TupleWrap_3_01Tuple_3_01T_8_8_8_01_4_01_4.html#a3c6776cf66c4888a7e6d7ab07b641b70":[2,0,0,32,0],
 "d6/d5e/structSUNphi_1_1ConstrainHasMember__ref2.html":[2,0,0,105],
 "d6/d62/structSUNphi_1_1ConstrainAreTransposers.html":[2,0,0,86],
 "d6/d67/structSUNphi_1_1ConstrainIsNotBaseOf.html":[2,0,0,116],
@@ -155,8 +157,8 @@ var NAVTREEINDEX4 =
 "d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#af19dceab415432b7bf004f6230f37d84":[2,0,0,15,1],
 "d7/da3/classSUNphi_1_1TensKind_1_1__BlendWithTypes.html":[2,0,0,190,0],
 "d7/da6/classSUNphi_1_1Binarizable.html":[2,0,0,60],
-"d7/da6/classSUNphi_1_1Binarizable.html#a57f771abcc9cc33cc19f52631c0c26e9":[2,0,0,60,1],
 "d7/da6/classSUNphi_1_1Binarizable.html#a6656f95d65d21642a4beccecba141c52":[2,0,0,60,0],
+"d7/da6/classSUNphi_1_1Binarizable.html#a7e44d2fe52873ef55d1b7709feded45c":[2,0,0,60,1],
 "d7/da6/classSUNphi_1_1Binarizable.html#acf5bd414e24a48b307c24973e267b9a7":[2,0,0,60,2],
 "d7/da6/classSUNphi_1_1Binarizable.html#ad8cd33726a714fe7251bada83bc0b3be":[2,0,0,60,3],
 "d7/da6/structSUNphi_1_1__Indexer.html":[2,0,0,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "d8/db1/Encrypter_8hpp_source.html":[3,0,2,8,0],
 "d8/dbf/Timer_8hpp.html":[3,0,2,11,3],
 "d8/dbf/Timer_8hpp.html#a0d0b428ec19c927d7b85b1a7e9723c1f":[3,0,2,11,3,7],
-"d8/dbf/Timer_8hpp.html#a2fece34f264789a6ac9b0c85667d4dbc":[3,0,2,11,3,2],
-"d8/dbf/Timer_8hpp.html#a36ac6aa363ae9cd6d705e551e037a56e":[3,0,2,11,3,6],
-"d8/dbf/Timer_8hpp.html#a38e5c40dcbca7b595dcdb47e5da2ebb8":[3,0,2,11,3,4]
+"d8/dbf/Timer_8hpp.html#a2fece34f264789a6ac9b0c85667d4dbc":[3,0,2,11,3,2]
 };
