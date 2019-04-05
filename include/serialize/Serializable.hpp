@@ -112,6 +112,21 @@ namespace SUNphi
 	serialize(node,onlyNonDefault);
     }
     
+    /// Convert from a YAML node
+    bool deSerialize(const YAML::Node& node) ///< Node from which to convert
+    {
+      if(not node[name])
+	this->putToDefault();
+      else
+	{
+	  value=
+	    node[name].template as<T>();
+	}
+      
+      return
+	true;
+    }
+    
     /// Provide a simple binary binary operator
 #define PROVIDE_SIMPLE_BINARY_OPERATOR(OP)	\
     /*! Assignment operator               */	\
