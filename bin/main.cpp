@@ -16,18 +16,13 @@ namespace SUNphi
   SERIALIZABLE_CLASS(Test)
   {
   public:
-    using P=std::pair<std::string,std::string>;
-    using F=std::vector<double>;
-    //decltype(_serializableScalar(static_cast<E*>(nullptr),"a",10.0,20.0)) a{"a",10.0,20.0};
-    
-    //SERIALIZABLE_SEQUENCE(P,a,{"fi","se"});
+    SERIALIZABLE_PAIR(std::string,std::string,p,std::pair<std::string,std::string>{"fi","se"});
     
     //SERIALIZABLE_SCALAR(F,c,{10,20});
     SERIALIZABLE_VECTOR(double,v,10);
     SERIALIZABLE_SCALAR(double,b,1.0);
     
-    LIST_SERIALIZABLE_MEMBERS(// a,
-			      v,b);
+    LIST_SERIALIZABLE_MEMBERS(p,v,b);
     
     // Test& operator=(const Test& oth)
     // {
@@ -57,55 +52,65 @@ namespace SUNphi
   };
 }
 
+namespace uno
+{
+  SERIALIZABLE_SCALAR(Test2,test);
+}
+
+namespace due
+{
+  SERIALIZABLE_SCALAR(Test2,test);
+}
+
 int main()
 {
-  Test2 test1,test2;
-  
   //test1.v().resize(1);
   
   runLog()<<"Txt";
   runLog()<<"Full:";
   {
     SCOPE_INDENT(runLog);
-    runLog()<<test1;
+    runLog()<<uno::test;
   }
-  runLog()<<"test1 isDefault: "<<test1.isDefault();
+  runLog()<<"NonDef:";
+  {
+    SCOPE_INDENT(runLog);
+    runLog()<<uno::test.serialize(ONLY_NON_DEFAULT);
+  }
+  
+  uno::test().test().b=
+    345235.1413;
+  
+  uno::test().test().v[2]=
+    4;
+  
+  uno::test().test().p.first=
+    "primo";
   
   runLog()<<"NonDef:";
   {
     SCOPE_INDENT(runLog);
-    runLog()<<test1.serialize(ONLY_NON_DEFAULT);
+    runLog()<<uno::test.serialize(ONLY_NON_DEFAULT);
   }
   
-  test1.ciccio()=
-    "first";
-  
-  runLog()<<"test1 isDefault: "<<test1.isDefault();
-  
-  runLog()<<"NonDef:";
-  {
-    SCOPE_INDENT(runLog);
-    runLog()<<test1.serialize(ONLY_NON_DEFAULT);
-  }
-  
-  test2.deSerialize(test1.serialize(ONLY_NON_DEFAULT));
+  due::test.deSerialize(uno::test.serialize(ONLY_NON_DEFAULT));
   
   {
     SCOPE_INDENT(runLog);
-    runLog()<<test2;
+    runLog()<<due::test;
   }
   
   // test1.ciccio()=
   //    "second";
   
-  test2.deBinarize(test1.binarize());
+  //test2.deBinarize(test1.binarize());
   
-  runLog()<<"Bin";
+  // runLog()<<"Bin";
   
-  {
-    SCOPE_INDENT(runLog);
-    runLog()<<test2;
-  }
+  // {
+  //   SCOPE_INDENT(runLog);
+  //   runLog()<<test2;
+  // }
   
   // runLog()<<(void*)&(test1.test().a().first[0])<<" "<<(void*)&(test2.test().a().first[0]);
   
