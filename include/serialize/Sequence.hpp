@@ -166,6 +166,14 @@ namespace SUNphi
 			    ...)					\
   SERIALIZABLE_SEQUENCE(std::vector<TYPE>,NAME,__VA_ARGS__)
   
+  /// Create a serializable pair
+#define SERIALIZABLE_PAIR(TYPE1,					\
+			  TYPE2,					\
+			  NAME,						\
+			  ...)						\
+  SerializableSequence<std::pair<TYPE1,TYPE2>>				\
+    NAME{#NAME,__VA_ARGS__}
+  
   DEFINE_IS_THE_TEMPLATED_CLASS(SerializableSequence);
 }
 
