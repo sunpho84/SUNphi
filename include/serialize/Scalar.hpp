@@ -11,9 +11,13 @@
 
 namespace SUNphi
 {
-  /// Defines a serializable scalar
+  /// Defines a serializable scalar with an explicit tag
+#define SERIALIZABLE_SCALAR_WITH_TAG(TYPE,NAME,TAG,...)	\
+  Serializable<TYPE> NAME{TAG,__VA_ARGS__}
+  
+  /// Defines a serializable scalar with the same tag of the variable name
 #define SERIALIZABLE_SCALAR(TYPE,NAME,...)	\
-  Serializable<TYPE> NAME{#NAME,__VA_ARGS__}
+  SERIALIZABLE_SCALAR_WITH_TAG(TYPE,NAME,#NAME,__VA_ARGS__)
 }
 
 #endif
