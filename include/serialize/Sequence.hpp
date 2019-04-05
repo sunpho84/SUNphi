@@ -69,7 +69,7 @@ namespace SUNphi
 			 TDef&&...def)          ///< Initializer
       : S(forw<TDef>(def)...)
       , name(name)
-      , def(forw<TDef>(def)...)
+      , def(static_cast<S>(*this))
     {
     }
     
