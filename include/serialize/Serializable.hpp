@@ -136,6 +136,12 @@ namespace SUNphi
 	return
 	  *this;
     }
+    
+    operator T&()
+    {
+      return
+	value;
+    }
   };
   
   DEFINE_IS_THE_TEMPLATED_CLASS(Serializable);
