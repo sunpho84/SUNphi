@@ -88,27 +88,30 @@ namespace SUNphi
 			 const bool& onlyNonDefault=false)
       const
     {
-      /// Create the subnode
-      YAML::Node subNode=
-	node[name];
+      if(not (onlyNonDefault and isDefault()))
+	{
+	  /// Create the subnode
+	  YAML::Node subNode=
+	    node[name];
+	  
+	  if constexpr(isTupleLike<S>)
+	    forEach(static_cast<S>(*this),[&](auto&& s)
+		    {
+		      if constexpr(hasMember_serialize<S>)
+			subNode.push_back(s.serialize(onlyNonDefault));
+		      else
+			subNode.push_back(s);
+		    });
+	  else
+	    for(auto& s: static_cast<S>(*this))
+	      {
+		if constexpr(hasMember_serialize<S>)
+		  subNode.push_back(s.serialize(onlyNonDefault));
+		else
+		  subNode.push_back(s);
+	      }
+	}
       
-      if constexpr(isTupleLike<S>)
-	forEach(static_cast<S>(*this),[&subNode,&onlyNonDefault](auto&& s)
-		{
-		  if constexpr(hasMember_serialize<S>)
-		    subNode.push_back(s.serialize(onlyNonDefault));
-		  else
-		    subNode.push_back(s);
-		});
-      else
-	for(auto& s: static_cast<S>(*this))
-	  {
-	    if constexpr(hasMember_serialize<S>)
-	      subNode.push_back(s.serialize(onlyNonDefault));
-	    else
-	      subNode.push_back(s);
-	  }
-	
       return
 	node;
     }
@@ -122,6 +125,21 @@ namespace SUNphi
       
       return
 	serialize(node,onlyNonDefault);
+    }
+    
+    /// Convert from a YAML node
+    bool deSerialize(const YAML::Node& node) ///< Node from which to convert
+    {
+      if(not node[name])
+	this->putToDefault();
+      else
+	{
+	  static_cast<S>(*this)=
+	    node[name].template as<S>();
+	}
+      
+      return
+	true;
     }
     
     /// Copy assignment operator

@@ -114,21 +114,7 @@ namespace SUNphi
       forEach(CRTP_THIS.serializableMembers(),
 	      [&node](auto& s)
 	      {
-		/// Resulting type
-		using R=
-		  RemRef<decltype(s())>;
-		
-		runLog()<<"Searching for "<<s.name<<" in node of tag "<<node.Tag();
-		
-		if(not node[s.name])
-		  s.putToDefault();
-		else
-		  {
-		    runLog()<<"Found "<<s.name;
-		    
-		    s()=
-		      node[s.name].template as<R>();
-		  }
+		s.deSerialize(node);
 	      });
       
       return
