@@ -168,7 +168,7 @@ namespace SUNphi
       
       this->binarize(nel);
       
-      for(int iel=0;iel<nel;iel++)
+      for(size_t iel=0;iel<nel;iel++)
 	this->binarize(rhs[iel]);
       
       return
@@ -187,7 +187,7 @@ namespace SUNphi
       
       rhs.resize(nel);
       
-      for(int iel=0;iel<nel;iel++)
+      for(size_t iel=0;iel<nel;iel++)
 	this->deBinarize(rhs[iel]);
       
       return
