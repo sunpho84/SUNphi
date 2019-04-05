@@ -12,16 +12,6 @@ namespace SUNphi
 {
   DEFINE_HAS_MEMBER(isDefault);
   
-  /// Used to mark that no default value is provided
-  [[ maybe_unused ]]
-  static constexpr bool NO_DEFAULT=
-    false;
-  
-  /// Used to mark the mandatoriety of the variable
-  [[ maybe_unused ]]
-  constexpr bool MANDATORY=
-    false;
-  
   /// Mark to print only non-default
   [[ maybe_unused ]]
   constexpr bool ONLY_NON_DEFAULT=

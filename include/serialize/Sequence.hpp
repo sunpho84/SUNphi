@@ -56,10 +56,6 @@ namespace SUNphi
 	static_cast<S>(*this)==def;
     }
     
-    /// We always have a default
-    static constexpr bool hasDefault=
-      true;
-    
     /// Put to default value
     void putToDefault()
     {
