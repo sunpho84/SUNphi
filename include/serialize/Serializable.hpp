@@ -127,18 +127,42 @@ namespace SUNphi
 	true;
     }
     
-    /// Provide a simple binary binary operator
-#define PROVIDE_SIMPLE_BINARY_OPERATOR(OP)	\
-    /*! Assignment operator               */	\
-    template <typename O>			\
-    DECLAUTO operator OP (const O& oth)		\
-    {						\
-      return					\
-	value OP oth;				\
-    }						\
+    /// Provide a simple friend binary operator
+#define PROVIDE_SIMPLE_FRIEND_BINARY_OPERATOR(OP)	\
+    /*! Assignment operator               */		\
+    template <typename O>				\
+    DECLAUTO friend operator OP (O& first,			\
+				 const Serializable& second)	\
+    {							\
+      return						\
+	first OP second.value;				\
+    }							\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    /// Provide a simple binary operator
+#define PROVIDE_SIMPLE_BINARY_OPERATOR(OP)			\
+    /*! Assignment operator               */			\
+    template <typename O,					\
+	      SFINAE_ON_TEMPLATE_ARG(not isSame<O,Serializable>)>	\
+    DECLAUTO operator OP (const O& oth)				\
+    {								\
+      return							\
+	value OP oth;						\
+    }								\
     SWALLOW_SEMICOLON_AT_CLASS_SCOPE
     
     PROVIDE_ALL_BINARY_OPERATORS(PROVIDE_SIMPLE_BINARY_OPERATOR);
+    PROVIDE_ALL_BINARY_OPERATORS(PROVIDE_SIMPLE_FRIEND_BINARY_OPERATOR);
+    
+    /// Assignment operator
+    ///
+    /// Need to stay on his own
+    template <typename O>
+    DECLAUTO operator=(const O& oth)
+    {
+      return
+	value=oth;
+    }
     
 #undef PROVIDE_SIMPLE_BINARY_OPERATOR
     
@@ -152,7 +176,16 @@ namespace SUNphi
 	  *this;
     }
     
+    /// Cast to base value
     operator T&()
+    {
+      return
+	value;
+    }
+    
+    /// Cast to base value, const version
+    operator const T&()
+      const
     {
       return
 	value;
