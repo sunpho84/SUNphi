@@ -1,6 +1,7 @@
 var classSUNphi_1_1SerializableClass =
 [
     [ "binarize", "d1/d39/classSUNphi_1_1SerializableClass.html#ad9fa9f449cd39cc8f4a398c1c0be06d5", null ],
+    [ "checkNoSpuriousSubNodes", "d1/d39/classSUNphi_1_1SerializableClass.html#afdd21411a65982510939841b958b8430", null ],
     [ "deBinarize", "d1/d39/classSUNphi_1_1SerializableClass.html#a8043ce1b090cbc76e1bb4ecb63a79b03", null ],
     [ "deSerialize", "d1/d39/classSUNphi_1_1SerializableClass.html#af192d55378fe3fb86ebf203ee689b131", null ],
     [ "isDefault", "d1/d39/classSUNphi_1_1SerializableClass.html#ac38174ece3d16b2035384ffa32adbe0e", null ],

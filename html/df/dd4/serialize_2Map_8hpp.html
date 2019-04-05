@@ -136,9 +136,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd4/serialize_2Map_8hpp.html#a67b7f198fd48e5f3d48723133e3fdaae">CONST_OR_NOT_SERIALIZABLE_MEMBERS</a>(CONST, ...)</td></tr>
 <tr class="memdesc:a67b7f198fd48e5f3d48723133e3fdaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the class embedding with a serializableMemebers method.  <a href="#a67b7f198fd48e5f3d48723133e3fdaae">More...</a><br /></td></tr>
 <tr class="separator:a67b7f198fd48e5f3d48723133e3fdaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94165597a60a99b1fd425a2bfb2a7710"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd4/serialize_2Map_8hpp.html#a94165597a60a99b1fd425a2bfb2a7710">SERIALIZABLE_CLASS</a>(T)</td></tr>
-<tr class="memdesc:a94165597a60a99b1fd425a2bfb2a7710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to define a serializable class.  <a href="#a94165597a60a99b1fd425a2bfb2a7710">More...</a><br /></td></tr>
-<tr class="separator:a94165597a60a99b1fd425a2bfb2a7710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf31fcb422858fa7b9c30db77c33799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd4/serialize_2Map_8hpp.html#aadf31fcb422858fa7b9c30db77c33799">DEFINE_SERIALIZABLE_CLASS</a>(T)</td></tr>
+<tr class="memdesc:aadf31fcb422858fa7b9c30db77c33799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut to define a serializable class.  <a href="#aadf31fcb422858fa7b9c30db77c33799">More...</a><br /></td></tr>
+<tr class="separator:aadf31fcb422858fa7b9c30db77c33799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4595675c73c1c03acf4bd204b5f6b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade4595675c73c1c03acf4bd204b5f6b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd4/serialize_2Map_8hpp.html#ade4595675c73c1c03acf4bd204b5f6b3">SERIALIZABLE_CLASS</a>(TYPE,  NAME)&#160;&#160;&#160;Serializable&lt;TYPE&gt; NAME{#NAME}</td></tr>
+<tr class="memdesc:ade4595675c73c1c03acf4bd204b5f6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a serializable class. <br /></td></tr>
+<tr class="separator:ade4595675c73c1c03acf4bd204b5f6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66189641da21b477a8eb1bfc644e9781"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dd4/serialize_2Map_8hpp.html#a66189641da21b477a8eb1bfc644e9781">LIST_SERIALIZABLE_MEMBERS</a>(...)</td></tr>
 <tr class="memdesc:a66189641da21b477a8eb1bfc644e9781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of serializable members.  <a href="#a66189641da21b477a8eb1bfc644e9781">More...</a><br /></td></tr>
 <tr class="separator:a66189641da21b477a8eb1bfc644e9781"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +191,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aadf31fcb422858fa7b9c30db77c33799"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFINE_SERIALIZABLE_CLASS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a> :                   \</div><div class="line">    <span class="keyword">public</span> SerializableClass&lt;T&gt;</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
+</div><!-- fragment -->
+<p>Shortcut to define a serializable class. </p>
+
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a66189641da21b477a8eb1bfc644e9781"></a>
 <div class="memitem">
 <div class="memproto">
@@ -204,28 +229,7 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p>Defines a list of serializable members. </p>
 
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00160">160</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a94165597a60a99b1fd425a2bfb2a7710"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SERIALIZABLE_CLASS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">T</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">T</a> :                   \</div><div class="line">    <span class="keyword">public</span> SerializableClass&lt;T&gt;</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_a313807a6977bf2f4234695f1655cf9e3"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#a313807a6977bf2f4234695f1655cf9e3">SUNphi::_RelBindInternalChecks::T</a></div><div class="ttdeci">Tens&lt; Tk, double &gt; T</div><div class="ttdoc">Tensor class of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00262">RelBind.hpp:262</a></div></div>
-</div><!-- fragment -->
-<p>Shortcut to define a serializable class. </p>
-
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00204">204</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
 
 </div>
 </div>

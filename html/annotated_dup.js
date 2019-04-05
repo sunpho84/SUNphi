@@ -195,8 +195,6 @@ var annotated_dup =
       [ "TensComp", "d1/d96/structSUNphi_1_1TensComp.html", "d1/d96/structSUNphi_1_1TensComp" ],
       [ "TensKind", "d8/df8/classSUNphi_1_1TensKind.html", "d8/df8/classSUNphi_1_1TensKind" ],
       [ "TensStor", "d3/d22/classSUNphi_1_1TensStor.html", "d3/d22/classSUNphi_1_1TensStor" ],
-      [ "Test", "dc/d39/classSUNphi_1_1Test.html", "dc/d39/classSUNphi_1_1Test" ],
-      [ "Test2", "d9/d12/classSUNphi_1_1Test2.html", "d9/d12/classSUNphi_1_1Test2" ],
       [ "ThreadPool", "dc/d0f/classSUNphi_1_1ThreadPool.html", "dc/d0f/classSUNphi_1_1ThreadPool" ],
       [ "Timer", "d6/de9/classSUNphi_1_1Timer.html", "d6/de9/classSUNphi_1_1Timer" ],
       [ "Transposer", "d5/dd3/classSUNphi_1_1Transposer.html", "d5/dd3/classSUNphi_1_1Transposer" ],

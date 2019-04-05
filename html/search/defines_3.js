@@ -13,6 +13,7 @@ var searchData=
   ['define_5frw_5fcn_5ftens_5fcomp',['DEFINE_RW_CN_TENS_COMP',['../d7/d7a/TensComp_8hpp.html#a560360eb0a1d4e22e6b05ac65cf1b64d',1,'TensComp.hpp']]],
   ['define_5fsearch',['DEFINE_SEARCH',['../d3/dbe/IntListOrder_8hpp.html#a96ce02f4cf0607c494f1068c89d3573f',1,'IntListOrder.hpp']]],
   ['define_5fsearch_5fmin_5for_5fmax',['DEFINE_SEARCH_MIN_OR_MAX',['../d5/d3e/IntListOperations_8hpp.html#a29fc479a22a59b2222aa94cd69c966a6',1,'IntListOperations.hpp']]],
+  ['define_5fserializable_5fclass',['DEFINE_SERIALIZABLE_CLASS',['../df/dd4/serialize_2Map_8hpp.html#aadf31fcb422858fa7b9c30db77c33799',1,'Map.hpp']]],
   ['define_5ftens_5fcomp',['DEFINE_TENS_COMP',['../d7/d7a/TensComp_8hpp.html#aaee12692b92eb4e29e596a4ed9063f7c',1,'TensComp.hpp']]],
   ['define_5ftens_5fcomp_5fclass',['DEFINE_TENS_COMP_CLASS',['../d7/d7a/TensComp_8hpp.html#a99b52d06ddddcb6ae964caff5f4badd3',1,'TensComp.hpp']]],
   ['define_5fvariadic_5ftype_5ffrom_5ftuple',['DEFINE_VARIADIC_TYPE_FROM_TUPLE',['../d1/d31/TupleClass_8hpp.html#ae18357ded3a54def80d5411704e94df0',1,'TupleClass.hpp']]]

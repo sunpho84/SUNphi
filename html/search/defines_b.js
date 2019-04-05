@@ -2,6 +2,7 @@ var searchData=
 [
   ['provide_5fall_5fbinary_5foperators',['PROVIDE_ALL_BINARY_OPERATORS',['../db/d18/Macros_8hpp.html#a7c1b53502f568a1757c2ab0161e192c6',1,'Macros.hpp']]],
   ['provide_5falso_5fnon_5fconst_5fmethod',['PROVIDE_ALSO_NON_CONST_METHOD',['../d0/d81/TypeTraits_8hpp.html#a504c20383cbaeb6ae41596d0cda0c3be',1,'TypeTraits.hpp']]],
+  ['provide_5fassignment_5foperator',['PROVIDE_ASSIGNMENT_OPERATOR',['../db/d18/Macros_8hpp.html#a96b2d96ea963c47259792344a1a9a07e',1,'Macros.hpp']]],
   ['provide_5fbegin_5fend',['PROVIDE_BEGIN_END',['../d2/df0/Binarize_8hpp.html#aa352562a9784899e7c13543c4cbecf3a',1,'Binarize.hpp']]],
   ['provide_5fbinary_5fsmet_5frefs',['PROVIDE_BINARY_SMET_REFS',['../da/d5e/BinarySmET_8hpp.html#ac8e6cc044e11f7663a65c932b6106e79',1,'BinarySmET.hpp']]],
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],
@@ -31,6 +32,7 @@ var searchData=
   ['provide_5fpos_5fof_5fres_5ftcs_5fin_5frefs',['PROVIDE_POS_OF_RES_TCS_IN_REFS',['../d2/d69/NnarySmET_8hpp.html#abb8e3bccf2caed5b8914e60e6bbc8ec6',1,'NnarySmET.hpp']]],
   ['provide_5fpos_5fof_5ftcs_5fin_5fres_5ftk_5fand_5fmerged_5fdelims_5ffor_5fref',['PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF',['../dc/d6b/BaseSmET_8hpp.html#affb9e8f2147ceaa44da52542b01c7683',1,'BaseSmET.hpp']]],
   ['provide_5fsimple_5fbinary_5foperator',['PROVIDE_SIMPLE_BINARY_OPERATOR',['../d0/d15/Serializable_8hpp.html#ad22ec35c2a9fe942c2034ea8d66df1f4',1,'Serializable.hpp']]],
+  ['provide_5fsimple_5ffriend_5fbinary_5foperator',['PROVIDE_SIMPLE_FRIEND_BINARY_OPERATOR',['../d0/d15/Serializable_8hpp.html#afcf9b4e213c4998b79aebc84f1042405',1,'Serializable.hpp']]],
   ['provide_5fsimple_5fnnary_5fcomp_5fsize',['PROVIDE_SIMPLE_NNARY_COMP_SIZE',['../d2/d69/NnarySmET_8hpp.html#a63fb035fcf22a1d3b2a18969f070eeaf',1,'NnarySmET.hpp']]],
   ['provide_5fsmet_5fassignement_5foperator',['PROVIDE_SMET_ASSIGNEMENT_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a3a7842df4daae14f086e6349fb8a2ab7',1,'BaseSmET.hpp']]],
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],

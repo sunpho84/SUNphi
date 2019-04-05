@@ -3,6 +3,7 @@ var searchData=
   ['canbefactorofsimdvector',['canBeFactorOfSIMDVector',['../d0/d24/SIMD_8hpp.html#aaea3412d741b6e8789dc707f3c554b50',1,'SUNphi']]],
   ['canbeget',['canBeGet',['../d0/d81/TypeTraits_8hpp.html#acc287481ee5ba55b4fadb87da259edac',1,'SUNphi']]],
   ['canbesizeofsimdvector',['canBeSizeOfSIMDVector',['../d0/d24/SIMD_8hpp.html#a51a19a9535fb9c3814c5cc55ece63f8f',1,'SUNphi']]],
+  ['checknospurioussubnodes',['checkNoSpuriousSubNodes',['../d1/d39/classSUNphi_1_1SerializableClass.html#afdd21411a65982510939841b958b8430',1,'SUNphi::SerializableClass']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
   ['clear',['clear',['../d2/d66/classSUNphi_1_1Binarizer.html#ae696b825421f3c10df78bfca35367a95',1,'SUNphi::Binarizer']]],
   ['close',['close',['../d5/d99/classSUNphi_1_1File.html#ad7d75aba05cb909c51f33de509c7b572',1,'SUNphi::File']]],

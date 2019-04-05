@@ -140,6 +140,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#a9c48ee3b6ccfe69fb99e289fc5cf0dc7">putToDefault</a> ()</td></tr>
 <tr class="memdesc:a9c48ee3b6ccfe69fb99e289fc5cf0dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put the class to the default value. <br /></td></tr>
 <tr class="separator:a9c48ee3b6ccfe69fb99e289fc5cf0dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd21411a65982510939841b958b8430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#afdd21411a65982510939841b958b8430">checkNoSpuriousSubNodes</a> (const YAML::Node &amp;node)</td></tr>
+<tr class="memdesc:afdd21411a65982510939841b958b8430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that no spurious subnodes are contained.  <a href="#afdd21411a65982510939841b958b8430">More...</a><br /></td></tr>
+<tr class="separator:afdd21411a65982510939841b958b8430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af192d55378fe3fb86ebf203ee689b131"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#af192d55378fe3fb86ebf203ee689b131">deSerialize</a> (const YAML::Node &amp;node)</td></tr>
 <tr class="memdesc:af192d55378fe3fb86ebf203ee689b131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from a YAML node.  <a href="#af192d55378fe3fb86ebf203ee689b131">More...</a><br /></td></tr>
 <tr class="separator:af192d55378fe3fb86ebf203ee689b131"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +174,7 @@ class SUNphi::SerializableClass&lt; T &gt;</h3>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename B  = Binarizer&gt; </div>
 <table class="mlabels">
@@ -201,7 +204,46 @@ template&lt;typename B  = Binarizer&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00126">126</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00166">166</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afdd21411a65982510939841b958b8430"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass</a>&lt; T &gt;::checkNoSpuriousSubNodes </td>
+          <td>(</td>
+          <td class="paramtype">const YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check that no spurious subnodes are contained. </p>
+<p>Spurious list</p>
+<p>Mark found or not</p>
+<p>Expected name </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Node to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +251,7 @@ template&lt;typename B  = Binarizer&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename B  = Binarizer&gt; </div>
 <table class="mlabels">
@@ -239,7 +281,7 @@ template&lt;typename B  = Binarizer&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00181">181</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
 
 </div>
 </div>
@@ -247,7 +289,7 @@ template&lt;typename B  = Binarizer&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -275,7 +317,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00109">109</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00147">147</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +325,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -313,7 +355,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -341,7 +383,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -369,7 +411,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -416,7 +458,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

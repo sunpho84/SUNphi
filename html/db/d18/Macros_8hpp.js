@@ -7,5 +7,6 @@ var Macros_8hpp =
     [ "NAME2", "db/d18/Macros_8hpp.html#ac70b472800724a4a60166f92cea1c6c8", null ],
     [ "NAME3", "db/d18/Macros_8hpp.html#a14646c9db4f0ec6e1749f85fbe510ba2", null ],
     [ "NAME4", "db/d18/Macros_8hpp.html#a9b87b5f87269df7806a65ffd37008083", null ],
-    [ "PROVIDE_ALL_BINARY_OPERATORS", "db/d18/Macros_8hpp.html#a7c1b53502f568a1757c2ab0161e192c6", null ]
+    [ "PROVIDE_ALL_BINARY_OPERATORS", "db/d18/Macros_8hpp.html#a7c1b53502f568a1757c2ab0161e192c6", null ],
+    [ "PROVIDE_ASSIGNMENT_OPERATOR", "db/d18/Macros_8hpp.html#a96b2d96ea963c47259792344a1a9a07e", null ]
 ];
