@@ -16,6 +16,7 @@
 #include <serialize/Base.hpp>
 #include <serialize/Binarize.hpp>
 #include <serialize/Default.hpp>
+#include <utility/Macros.hpp>
 
 namespace SUNphi
 {
@@ -110,6 +111,21 @@ namespace SUNphi
       return
 	serialize(node,onlyNonDefault);
     }
+    
+    /// Provide a simple binary binary operator
+#define PROVIDE_SIMPLE_BINARY_OPERATOR(OP)	\
+    /*! Assignment operator               */	\
+    template <typename O>			\
+    DECLAUTO operator OP (const O& oth)		\
+    {						\
+      return					\
+	value OP oth;				\
+    }						\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    PROVIDE_ALL_BINARY_OPERATORS(PROVIDE_SIMPLE_BINARY_OPERATOR);
+    
+#undef PROVIDE_SIMPLE_BINARY_OPERATOR
     
     /// Copy assignment operator
     Serializable& operator=(const Serializable& oth)
