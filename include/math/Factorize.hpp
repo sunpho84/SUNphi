@@ -5,7 +5,7 @@
 ///
 /// \brief Factorizes a number with a simple algorithm
 
-#include <debug/Crash.hpp>
+#include <ios/Logger.hpp>
 
 #include <vector>
 
