@@ -105,6 +105,44 @@ namespace SUNphi
 	      });
     }
     
+    /// Check that no spurious subnodes are contained
+    void checkNoSpuriousSubNodes(const YAML::Node& node) ///< Node to be checked
+    {
+      /// Spurious list
+      std::string spurious;
+      
+      for(auto& subNode : node)
+	{
+	  /// Mark found or not
+	  bool found=
+	    false;
+	  
+	  /// Expected name
+	  const std::string name=
+	    subNode.first.as<std::string>();
+	  
+	  forEach(CRTP_THIS.serializableMembers(),
+		  [name,&found](auto& s)
+		  {
+		    found|=
+		      s.name==name;
+		  });
+	  
+	  if(not found)
+	    {
+	      if(spurious.size())
+		spurious+=
+		  ", ";
+	      
+	      spurious+=
+		name;
+	    }
+	}
+      
+      if(spurious.size())
+	CRASH<<"Spurious tags: "<<spurious;
+    }
+    
     /// Convert from a YAML node
     bool deSerialize(const YAML::Node& node) ///< Node from which to convert
     {
@@ -116,6 +154,8 @@ namespace SUNphi
 	      {
 		s.deSerialize(node);
 	      });
+      
+      checkNoSpuriousSubNodes(node);
       
       return
 	true;
@@ -152,9 +192,13 @@ namespace SUNphi
   };
   
   /// Shortcut to define a serializable class
-#define SERIALIZABLE_CLASS(T)			\
+#define DEFINE_SERIALIZABLE_CLASS(T)		\
   class T :					\
     public SerializableClass<T>
+  
+  /// Defines a serializable class
+#define SERIALIZABLE_CLASS(TYPE,NAME)		\
+  Serializable<TYPE> NAME{#NAME}
   
   /// Defines a list of serializable members
 #define LIST_SERIALIZABLE_MEMBERS(...)					\
