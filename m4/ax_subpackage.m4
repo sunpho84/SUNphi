@@ -28,7 +28,7 @@ then
 	   default=false
 	fi
 
-	AX_ARG_ENABLE($1,$default)
+	AX_SIMPLE_ENABLE($1,$default)
 
 else
 	enable_$1=yes
