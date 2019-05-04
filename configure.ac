@@ -20,6 +20,9 @@ AX_CXX_COMPILE_STDCXX(17,noext,mandatory)
 # Activate all warnings
 AX_CXXFLAGS_WARN_ALL
 
+# Check all x86 features supported
+AX_CHECK_X86_FEATURES
+
 # Silent automake
 AM_SILENT_RULES([yes])
 
