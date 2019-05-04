@@ -91,6 +91,9 @@ DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
  
+# Enable SIMD Mersenne-twister
+AX_SIMPLE_ENABLE([SIMD-Mersenne-twister],[$support_sse2],[Enable SSE2 for Mersenne twister])
+
 # Result of conf to screen
 AC_MSG_RESULT([
 --------------------------------------------------
