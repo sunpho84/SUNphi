@@ -34,13 +34,15 @@
 #   Copyright (c) 2015 Paul Norman <penorman@mac.com>
 #   Copyright (c) 2015 Moritz Klammler <moritz@klammler.eu>
 #   Copyright (c) 2016, 2018 Krzesimir Nowak <qdlacz@gmail.com>
+#   Copyright (c) 2019 Enji Cooper <yaneurabeya@gmail.com>
+#   Copyright (c) 2019 Francesco Sanfilippo <fr.sanfilippo@gmail.com>
 #
 #   Copying and distribution of this file, with or without modification, are
 #   permitted in any medium without royalty provided the copyright notice
 #   and this notice are preserved.  This file is offered as-is, without any
 #   warranty.
 
-#serial 10
+#serial 11
 
 dnl  This macro is based on the code from the AX_CXX_COMPILE_STDCXX_11 macro
 dnl  (serial version number 13).
@@ -68,14 +70,14 @@ AC_DEFUN([AX_CXX_COMPILE_STDCXX], [dnl
       cachevar=AS_TR_SH([ax_cv_cxx_compile_cxx$1_$switch])
       AC_CACHE_CHECK(whether $CXX supports C++$1 features with $switch,
                      $cachevar,
-        [ac_save_CXX="$CXX"
-         CXX="$CXX $switch"
+        [ac_save_CPPFLAGS="$CPPFLAGS"
+         CPPFLAGS="$CPPFLAGS $switch"
          AC_COMPILE_IFELSE([AC_LANG_SOURCE([_AX_CXX_COMPILE_STDCXX_testbody_$1])],
           [eval $cachevar=yes],
           [eval $cachevar=no])
-         CXX="$ac_save_CXX"])
+         CPPFLAGS="$ac_save_CPPFLAGS"])
       if eval test x\$$cachevar = xyes; then
-        CXX="$CXX $switch"
+        CPPFLAGS="$CPPFLAGS $switch"
         if test -n "$CXXCPP" ; then
           CXXCPP="$CXXCPP $switch"
         fi
@@ -95,14 +97,14 @@ AC_DEFUN([AX_CXX_COMPILE_STDCXX], [dnl
         cachevar=AS_TR_SH([ax_cv_cxx_compile_cxx$1_$switch])
         AC_CACHE_CHECK(whether $CXX supports C++$1 features with $switch,
                        $cachevar,
-          [ac_save_CXX="$CXX"
-           CXX="$CXX $switch"
+          [ac_save_CPPFLAGS="$CPPFLAGS"
+           CPPFLAGS="$CPPFLAGS $switch"
            AC_COMPILE_IFELSE([AC_LANG_SOURCE([_AX_CXX_COMPILE_STDCXX_testbody_$1])],
             [eval $cachevar=yes],
             [eval $cachevar=no])
-           CXX="$ac_save_CXX"])
+           CPPFLAGS="$ac_save_CPPFLAGS"])
         if eval test x\$$cachevar = xyes; then
-          CXX="$CXX $switch"
+          CPPFLAGS="$CPPFLAGS $switch"
           if test -n "$CXXCPP" ; then
             CXXCPP="$CXXCPP $switch"
           fi
@@ -189,11 +191,13 @@ namespace cxx11
 
     struct Base
     {
+      virtual ~Base() {}
       virtual void f() {}
     };
 
     struct Derived : public Base
     {
+      virtual ~Derived() override {}
       virtual void f() override {}
     };
 
