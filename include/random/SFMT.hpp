@@ -57,8 +57,11 @@ namespace SUNphi
     /// 128-bit data structure
     union w128_t
     {
+      /// Inner access
       uint32_t u[4];
+      
 #ifdef USE_SSE2
+      /// Packed access
       __m128i si;
 #endif
     };
