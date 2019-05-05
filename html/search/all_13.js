@@ -1,8 +1,9 @@
 var searchData=
 [
+  ['u',['u',['../d2/d7c/unionSUNphi_1_1SFMTRandomGen_1_1w128__t.html#abbe96c58fb0c62179523c171de0eae3f',1,'SUNphi::SFMTRandomGen::w128_t']]],
   ['uminus',['uMinus',['../d2/dad/UnaryMinus_8hpp.html#a4cc1b72bbd095a42cf57c334b8ba67f3',1,'SUNphi::uMinus(Ts &amp;&amp;...smets)'],['../d2/dad/UnaryMinus_8hpp.html#aac1168c9468bb07a3f41508a9ba13222',1,'SUNphi::uMinus(T &amp;&amp;smet)']]],
-  ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html#a4ffefaac5c4ec1b123cd34ba991b3077',1,'SUNphi::UMinuser']]],
   ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html',1,'SUNphi']]],
+  ['uminuser',['UMinuser',['../dd/d03/classSUNphi_1_1UMinuser.html#a4ffefaac5c4ec1b123cd34ba991b3077',1,'SUNphi::UMinuser']]],
   ['unaryminus_2ehpp',['UnaryMinus.hpp',['../d2/dad/UnaryMinus_8hpp.html',1,'']]],
   ['unaryplus_2ehpp',['UnaryPlus.hpp',['../d7/d61/UnaryPlus_8hpp.html',1,'']]],
   ['unarysmet_2ehpp',['UnarySmET.hpp',['../d4/dbe/UnarySmET_8hpp.html',1,'']]],

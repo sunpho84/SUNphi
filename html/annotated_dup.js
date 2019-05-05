@@ -187,6 +187,7 @@ var annotated_dup =
       [ "SerializableDefaultValue< T, false >", "d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html", "d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4" ],
       [ "SerializableDefaultValue< T, true >", "de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html", "de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4" ],
       [ "SerializableSequence", "da/dd6/classSUNphi_1_1SerializableSequence.html", "da/dd6/classSUNphi_1_1SerializableSequence" ],
+      [ "SFMTRandomGen", "d7/d04/classSUNphi_1_1SFMTRandomGen.html", "d7/d04/classSUNphi_1_1SFMTRandomGen" ],
       [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ],
       [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html", "d9/d59/classSUNphi_1_1Sitmo" ],
       [ "SmET", "d1/d31/structSUNphi_1_1SmET.html", "d1/d31/structSUNphi_1_1SmET" ],

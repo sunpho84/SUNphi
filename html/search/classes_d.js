@@ -12,6 +12,7 @@ var searchData=
   ['serializabledefaultvalue_3c_20t_2c_20not_20isserializablemap_3c_20t_20_3e_20_3e',['SerializableDefaultValue&lt; T, not isSerializableMap&lt; T &gt; &gt;',['../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html',1,'SUNphi']]],
   ['serializabledefaultvalue_3c_20t_2c_20true_20_3e',['SerializableDefaultValue&lt; T, true &gt;',['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html',1,'SUNphi']]],
   ['serializablesequence',['SerializableSequence',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
+  ['sfmtrandomgen',['SFMTRandomGen',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],

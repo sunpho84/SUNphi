@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['textcolor',['TextColor',['../de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11a',1,'SUNphi']]]
+  ['started',['Started',['../d6/de9/classSUNphi_1_1Timer.html#a085396d943aa02f7ad9c79d1e4909bd2',1,'SUNphi::Timer']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['random_2ehpp',['Random.hpp',['../dd/d6e/Random_8hpp.html',1,'']]],
+  ['randomizeall',['randomizeAll',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#aa9b25c5e4b58be596de8f1bf0db315f2',1,'SUNphi::SFMTRandomGen']]],
   ['range',['Range',['../d2/d37/structSUNphi_1_1TensKind_1_1__Merged_3_01IntSeq_3_01IDelims_8_8_8_01_4_00_01IntSeq_3_01IGroups_8_8_8_01_4_01_4.html#a222d0d7e9ca68eecbb45b87eae6074b5',1,'SUNphi::TensKind::_Merged&lt; IntSeq&lt; IDelims... &gt;, IntSeq&lt; IGroups... &gt; &gt;']]],
   ['ranges_2ehpp',['Ranges.hpp',['../dd/d15/Ranges_8hpp.html',1,'']]],
   ['rangeseq',['rangeSeq',['../dd/d15/Ranges_8hpp.html#a326249163f03337f7d6cbda5441e407e',1,'SUNphi::rangeSeq()'],['../dd/d15/Ranges_8hpp.html#ac6a4b17d20c20aa9fa3428f1233d6190',1,'SUNphi::RangeSeq()']]],
@@ -14,8 +15,9 @@ var searchData=
   ['reallyprint',['reallyPrint',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4da1216d6bd679561364dac89cb6b463',1,'SUNphi::Logger::LoggerLine']]],
   ['realmerge',['realMerge',['../d9/de9/structSUNphi_1_1TensKind_1_1TensCompsListMerged_3_01IntSeq_3_01IComps_8_8_8_01_4_01_4.html#a31d6754327035663743b8e50ee67c43a',1,'SUNphi::TensKind::TensCompsListMerged&lt; IntSeq&lt; IComps... &gt; &gt;']]],
   ['realprecision',['realPrecision',['../d5/d99/classSUNphi_1_1File.html#a3bf38562fceef72d9fb69d7d67139439',1,'SUNphi::File']]],
+  ['recursion',['recursion',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#af9a93b86be29aff718f67aa837d554c8',1,'SUNphi::SFMTRandomGen']]],
   ['ref',['ref',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a9f3a4767fd88beeaa5294bac23638ffa',1,'SUNphi::ScopeChangeVar::ref()'],['../d6/db9/classSUNphi_1_1Binder.html#a86c67448be258d5d7ff6a184f2aa5679',1,'SUNphi::Binder::Ref()'],['../de/d58/classSUNphi_1_1Adder.html#a061ebda0fd517c37bb8d9638acb54a6d',1,'SUNphi::Adder::Ref()'],['../d2/d24/classSUNphi_1_1Conjer.html#a9216ed28bd9e24c8ea75a0adf86f045c',1,'SUNphi::Conjer::Ref()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a1d01727aa7796b77bf2b571b560f11b4',1,'SUNphi::Transposer::Ref()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#a4622f17260e30ca3c0a73666dc4a9acc',1,'SUNphi::ScalarWrapper::Ref()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a7ba6a0131dd32cfac9555eb0499cba81',1,'SUNphi::MulAdder::Ref()'],['../d5/d1c/classSUNphi_1_1RelBinder.html#ac7802a063cf1ff5ca33983f0ddd5d5c7',1,'SUNphi::RelBinder::Ref()'],['../dd/d03/classSUNphi_1_1UMinuser.html#ada5d3ad0522b2678651e77587bef1ad3',1,'SUNphi::UMinuser::Ref()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a4c5fd27b098caaa30840743c103f9222',1,'SUNphi::Wrapper::Ref()']]],
-  ['ref1',['ref1',['../d4/d4b/classSUNphi_1_1Assigner.html#a724f800bd61caf39f61dbd60a531d471',1,'SUNphi::Assigner::ref1()'],['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html#a009c37939d7dbf806853dd4c7c1ab8c4',1,'SUNphi::HasMember_ref1::Fallback::ref1()'],['../d4/d4b/classSUNphi_1_1Assigner.html#a723ef0f1ea4032b6b99dfc7659449d17',1,'SUNphi::Assigner::Ref1()']]],
+  ['ref1',['Ref1',['../d4/d4b/classSUNphi_1_1Assigner.html#a723ef0f1ea4032b6b99dfc7659449d17',1,'SUNphi::Assigner::Ref1()'],['../d4/d4b/classSUNphi_1_1Assigner.html#a724f800bd61caf39f61dbd60a531d471',1,'SUNphi::Assigner::ref1()'],['../d1/d61/structSUNphi_1_1HasMember__ref1_1_1Fallback.html#a009c37939d7dbf806853dd4c7c1ab8c4',1,'SUNphi::HasMember_ref1::Fallback::ref1()']]],
   ['ref2',['ref2',['../d4/d4b/classSUNphi_1_1Assigner.html#a3bffcb80f0065eff53ef4a7e9e06923b',1,'SUNphi::Assigner::ref2()'],['../d0/dd2/structSUNphi_1_1HasMember__ref2_1_1Fallback.html#a7284d6654072657b06c06e1895af70aa',1,'SUNphi::HasMember_ref2::Fallback::ref2()'],['../d4/d4b/classSUNphi_1_1Assigner.html#aa72ff6049df73f14eed40690014e2efe',1,'SUNphi::Assigner::Ref2()']]],
   ['reference',['Reference',['../d3/d78/Reference_8hpp.html#ad8f92a75222b2a9d6b46120c17ac4e57',1,'SUNphi']]],
   ['reference_2ehpp',['Reference.hpp',['../d3/d78/Reference_8hpp.html',1,'']]],
@@ -26,8 +28,8 @@ var searchData=
   ['rel_5fbind_5fprototype',['REL_BIND_PROTOTYPE',['../d3/da4/RelBind_8hpp.html#a7eb315312e22dc9a9282f5e8c09daff1',1,'RelBind.hpp']]],
   ['relbind',['relBind',['../d3/da4/RelBind_8hpp.html#aac5f594cb28b895f5662c7a16df3c045',1,'SUNphi']]],
   ['relbind_2ehpp',['RelBind.hpp',['../d3/da4/RelBind_8hpp.html',1,'']]],
-  ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#ad1676cfd4fa1a1f9ced5e59def2cc4f3',1,'SUNphi::RelBinder']]],
   ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html',1,'SUNphi']]],
+  ['relbinder',['RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#ad1676cfd4fa1a1f9ced5e59def2cc4f3',1,'SUNphi::RelBinder']]],
   ['relbinderinternaleval',['relBinderInternalEval',['../d5/d1c/classSUNphi_1_1RelBinder.html#a2d416cf08e0f9a822f953e572faa3522',1,'SUNphi::RelBinder::relBinderInternalEval(IntSeq&lt; Head... &gt;, IntSeq&lt; Tail... &gt;, const Id &amp;id, const Tuple&lt; Args... &gt; &amp;targs) const '],['../d5/d1c/classSUNphi_1_1RelBinder.html#ab3562e0701a755316118db9fcbb60896',1,'SUNphi::RelBinder::relBinderInternalEval(Ts &amp;&amp;...ts)']]],
   ['releaseexclusiveaccess',['releaseExclusiveAccess',['../d3/d78/classSUNphi_1_1Logger.html#a4e7bdd634fa659492aea777cae51663d',1,'SUNphi::Logger']]],
   ['remflags',['remFlags',['../d0/d45/Flags_8hpp.html#ab1eacab043f0652e76b48006a7d89fe2',1,'SUNphi']]],
@@ -49,6 +51,6 @@ var searchData=
   ['rw',['Rw',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740',1,'SUNphi::TwinTensCompOf&lt; Spin &gt;::Rw()'],['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html#ab8eb572fc9bc9674a77042e1a5b8e66f',1,'SUNphi::TwinTensCompOf&lt; Col &gt;::Rw()']]],
   ['rwcol',['RwCol',['../d8/dc9/structSUNphi_1_1RwCol.html',1,'SUNphi']]],
   ['rwcol',['rwCol',['../d4/df5/SUN_8hpp.html#a35370ddf1fda4f823c41fddfebcb98c8',1,'SUNphi']]],
-  ['rwspin',['RwSpin',['../dd/ded/structSUNphi_1_1RwSpin.html',1,'SUNphi']]],
-  ['rwspin',['rwSpin',['../d9/dfb/Spin_8hpp.html#af5dcac73f81177737932be5439d41ce8',1,'SUNphi']]]
+  ['rwspin',['rwSpin',['../d9/dfb/Spin_8hpp.html#af5dcac73f81177737932be5439d41ce8',1,'SUNphi']]],
+  ['rwspin',['RwSpin',['../dd/ded/structSUNphi_1_1RwSpin.html',1,'SUNphi']]]
 ];
