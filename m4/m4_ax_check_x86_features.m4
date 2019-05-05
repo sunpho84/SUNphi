@@ -77,6 +77,7 @@ AC_DEFUN([AX_CHECK_X86_FEATURES],
 		AC_MSG_ERROR(["Cannot enable ax_x86_feature, not supported by the compiler!"])
 	fi
 	
+	AC_DEFINE(AS_TR_CPP(USE_[]ax_x86_feature),1,Enable ax_x86_feature)
 	CPPFLAGS="$CPPFLAGS -m[]ax_x86_feature"
      fi
   ])
