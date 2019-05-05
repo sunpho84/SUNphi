@@ -71,6 +71,18 @@ then
 	fi
 fi
 
+# Enable SIMD Mersenne-twister
+AX_SIMPLE_ENABLE([SIMD-Mersenne-twister],[$support_sse2],[Enable SSE2 for Mersenne twister])
+if test "$enable_SIMD_Mersenne_twister" == "yes"
+then
+	if test "$enable_sse2" == "no"
+	then
+		AC_MSG_ERROR(["Cannot enable SIMD Mersenne-twister, SSE2 not enabled"])
+	fi
+
+	AC_DEFINE([USE_SIMD_MERSENNE_TWISTER],1,[Enable SIMD Mersenne twister])
+fi
+
 # Search for dwarf
 if test "$enable_debug" == "yes"
 then
@@ -91,9 +103,6 @@ DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
  
-# Enable SIMD Mersenne-twister
-AX_SIMPLE_ENABLE([SIMD-Mersenne-twister],[$support_sse2],[Enable SSE2 for Mersenne twister])
-
 # Result of conf to screen
 AC_MSG_RESULT([
 --------------------------------------------------
