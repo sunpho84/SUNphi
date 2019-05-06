@@ -28,11 +28,26 @@
 #include <smet/Bind.hpp>
 #include <smet/Reference.hpp>
 #include <smet/ScalarWrap.hpp>
-#include <tens/TensClass.hpp>
-#include <tens/TensKind.hpp>
 
 namespace SUNphi
 {
+  /// Defines the assignement operator, calling assign
+#define PROVIDE_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the NnarySmET */) \
+  /*! Assign from another object */					\
+  template <typename Oth>             	/* Other type  */		\
+  DECLAUTO operator=(Oth&& oth)	        /*!< Other object */		\
+  {									\
+    if(0)								\
+      {									\
+	using namespace std;						\
+	cout<<"Operator=, triggering assignement to "<<this<<" of "<<&oth<<endl; \
+      }									\
+    assign(*this,forw<Oth>(oth));					\
+									\
+    return *this;							\
+  }									\
+  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  
   // Base type to qualify as an \c Assigner
   DEFINE_BASE_TYPE(Assigner);
   

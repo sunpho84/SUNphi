@@ -294,23 +294,6 @@ namespace SUNphi
 #undef PROVIDE_CALL_OPERATOR
   };
   
-  /// Defines the assignement operator, calling assign
-#define PROVIDE_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the NnarySmET */) \
-  /*! Assign from another object */					\
-  template <typename Oth>             	/* Other type  */		\
-  DECLAUTO operator=(Oth&& oth)	        /*!< Other object */		\
-  {									\
-    if(0)								\
-      {									\
-	using namespace std;						\
-	cout<<"Operator=, triggering assignement to "<<this<<" of "<<&oth<<endl; \
-      }									\
-    assign(*this,forw<Oth>(oth));					\
-									\
-    return *this;							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
-  
   /// Defines a simple way to swap an SmET from rhs to lhs
   ///
   /// \todo why can't we make only const & on rhs?
