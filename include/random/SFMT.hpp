@@ -52,6 +52,7 @@
 
 namespace SUNphi
 {
+  /// SIMD Fast Mersenne Twister
   class SFMTRandomGen
   {
     /// 128-bit data structure
