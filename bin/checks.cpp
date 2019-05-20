@@ -760,7 +760,7 @@ void checkSitmo()
   // if(r2!=expR)
   //   CRASH<<"Expected "<<expR<<" obtained "<<r2;
   
-  runLog()<<"WARNING NO SITMO CHECKED!!!!!";
+  WARNING<<"NO SITMO CHECKED!!!!!";
   
   TEST_PASSED;
 }

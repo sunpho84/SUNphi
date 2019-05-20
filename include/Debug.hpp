@@ -10,5 +10,6 @@
 #include <debug/Demangle.hpp>
 #include <debug/MinimalCrash.hpp>
 #include <debug/OptimizationDiagnostic.hpp>
+#include <debug/Warning.hpp>
 
 #endif
