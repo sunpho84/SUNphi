@@ -37,27 +37,23 @@
 
 namespace SUNphi
 {
-  /// Class to encrypt data
-  DEFINE_SERIALIZABLE_CLASS(SitmoEncrypter)
+  namespace Sitmo
   {
     /// Type of the key
     using Key=
       std::array<uint64_t,5>;
     
-    /// Key to encrypt
-    SERIALIZABLE_SEQUENCE(Key,key);
-    
-  public:
-    
-    LIST_SERIALIZABLE_MEMBERS(key);
+    /// Encrypted word
+    using Word=
+      std::array<uint64_t,4>;
     
     /// Encrypts the input
-    std::array<uint64_t,4> operator()(std::array<uint64_t,4> x) ///< Input to encrypt
-      const
+    inline Word encrypt(const Key& key,  ///< Key to encrypt
+			Word x)          ///< Input to encrypt
     {
-      loopUnroll<0,5>([&x,this](const int j)
+      loopUnroll<0,5>([&x,&key](const int j)
   		      {
-  			loopUnroll<0,2>([j,&x,this](const int i)
+  			loopUnroll<0,2>([j,&x,&key](const int i)
   					{
   					  constexpr uint64_t mk[2][2]=
   					    {{14,16},{25,33}};
@@ -70,9 +66,9 @@ namespace SUNphi
   					    mk[j%2][i];
 					  
   					  x1+=
-  					    key()[(2*i+1+j)%5]+((i==1)?j:0);
+  					    key[(2*i+1+j)%5]+((i==1)?j:0);
   					  x0+=
-  					    x1+key()[(2*i+j)%5];
+  					    x1+key[(2*i+j)%5];
   					  x1=
   					    (x1<<rx)|(x1>>(64-rx));
   					  x1^=
@@ -111,17 +107,23 @@ namespace SUNphi
   	x;
     }
     
-    /// Sets the key
-    void setKey(const std::array<uint64_t,5>& extKey)
+    /// Build a key from a word
+    Key buildKey(const Word& word)
     {
+      /// Output
+      Key key;
+      
       // Copy the first 4
       for(int i=0;i<4;i++)
-  	key()[i]=
-  	  extKey[i];
+       key[i]=
+  	  word[i];
       
       // Set the fifth
-      key()[4]=
-  	0x1BD11BDAA9FC1A22^key()[0]^key()[1]^key()[2]^key()[3];
+      key[4]=
+  	0x1BD11BDAA9FC1A22^key[0]^key[1]^key[2]^key[3];
+      
+      return
+	key;
     }
   };
 }
