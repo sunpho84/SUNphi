@@ -724,41 +724,43 @@ void checkCombinatorial()
 /// Test the sitmo random generator
 void checkSitmo()
 {
-  /// Create a random number generator
-  Sitmo rng;
+  // /// Create a random number generator
+  // Sitmo rng;
   
-  // seed
-  rng.seed(100);
+  // // seed
+  // rng.seed(100);
   
-  // Skip 8
-  for(int i=0;i<8;i++)
-    runLog()<<rng();
+  // // Skip 8
+  // for(int i=0;i<8;i++)
+  //   runLog()<<rng();
   
-  /// Test the rng
-  const uint32_t r=
-    rng();
+  // /// Test the rng
+  // const uint32_t r=
+  //   rng();
   
-  /// Expected result
-  constexpr uint32_t expR=
-    2770169712;
+  // /// Expected result
+  // constexpr uint32_t expR=
+  //   2770169712;
   
-  if(r!=expR)
-    CRASH<<"Expected "<<expR<<" obtained "<<r;
+  // if(r!=expR)
+  //   CRASH<<"Expected "<<expR<<" obtained "<<r;
   
-  /////////////////////////////////////////////////////////////////
+  // /////////////////////////////////////////////////////////////////
   
-  // Seed again
-  rng.seed(100);
+  // // Seed again
+  // rng.seed(100);
   
-  // Skip 8
-  rng.discard(8);
+  // // Skip 8
+  // rng.discard(8);
   
-  /// Test the rng again
-  const uint32_t r2=
-    rng();
+  // /// Test the rng again
+  // const uint32_t r2=
+  //   rng();
   
-  if(r2!=expR)
-    CRASH<<"Expected "<<expR<<" obtained "<<r2;
+  // if(r2!=expR)
+  //   CRASH<<"Expected "<<expR<<" obtained "<<r2;
+  
+  CRASH<<"";
   
   TEST_PASSED;
 }
