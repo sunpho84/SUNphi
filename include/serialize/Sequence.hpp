@@ -151,26 +151,48 @@ namespace SUNphi
     }
   };
   
+  /// Create a serializable sequence with a given tag
+#define SERIALIZABLE_SEQUENCE_WITH_TAG(CONTAINER,			\
+				       NAME,				\
+				       TAG,				\
+				       ...)				\
+  SerializableSequence<CONTAINER>					\
+     NAME{TAG,__VA_ARGS__}
+  
   /// Create a serializable sequence
 #define SERIALIZABLE_SEQUENCE(CONTAINER,				\
 			      NAME,					\
 			      ...)					\
-  SerializableSequence<CONTAINER>					\
-     NAME{#NAME,__VA_ARGS__}
+  SERIALIZABLE_SEQUENCE_WITH_TAG(CONTAINER,NAME,#NAME,__VA_ARGS__)
+  
+  /// Create a serializable vector with a given tag
+#define SERIALIZABLE_VECTOR_WITH_TAG(TYPE,				\
+				     NAME,				\
+				     TAG,				\
+				     ...)				\
+  SERIALIZABLE_SEQUENCE_WITH_TAG(std::vector<TYPE>,NAME,TAG,__VA_ARGS__)
   
   /// Create a serializable vector
 #define SERIALIZABLE_VECTOR(TYPE,					\
 			    NAME,					\
 			    ...)					\
-  SERIALIZABLE_SEQUENCE(std::vector<TYPE>,NAME,__VA_ARGS__)
+  SERIALIZABLE_VECTOR_WITH_TAG(TYPE,NAME,#NAME,__VA_ARGS__)
+  
+  /// Create a serializable pair with a given tag
+#define SERIALIZABLE_PAIR_WITH_TAG(TYPE1,				\
+				   TYPE2,				\
+				   NAME,				\
+				   TAG,					\
+				   ...)					\
+  SerializableSequence<std::pair<TYPE1,TYPE2>>				\
+    NAME{TAG,__VA_ARGS__}
   
   /// Create a serializable pair
 #define SERIALIZABLE_PAIR(TYPE1,					\
 			  TYPE2,					\
 			  NAME,						\
 			  ...)						\
-  SerializableSequence<std::pair<TYPE1,TYPE2>>				\
-    NAME{#NAME,__VA_ARGS__}
+  SERIALIZABLE_PAIR_WITH_TAG(TYPE1,TYPE2,NAME,#NAME,__VA_ARGS__)
   
   DEFINE_IS_THE_TEMPLATED_CLASS(SerializableSequence);
 }
