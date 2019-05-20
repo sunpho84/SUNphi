@@ -7,10 +7,9 @@
 ///
 /// This random generator is expected to be used few times, so we
 /// don't care using a slow one not supporting big skip
-///
-/// \todo Implement the skipping version
 
 #include <random/TrueRandomGenerator.hpp>
+#include <Serialize.hpp>
 
 namespace SUNphi
 {
@@ -20,17 +19,18 @@ namespace SUNphi
   
   /// Master random generator
   class MasterRandomGenerator :
-    _MasterRandomGenerator
+    public SerializableClass<MasterRandomGenerator>,
+    public _MasterRandomGenerator
   {
     /// Number of seeds needed to initialize the state
     static constexpr int nSeeds=
-      sizeof(_MasterRandomGenerator::state_size)/sizeof(uint32_t);
+      _MasterRandomGenerator::state_size;
     
     /// Seed state
-    std::vector<uint32_t> _seeds{nSeeds};
+    SERIALIZABLE_VECTOR_WITH_TAG(uint64_t,_seeds,"Seeds",nSeeds);
     
-    /// Gives a constant access to the seeds
-    const std::vector<uint32_t>& seeds=
+    /// Constant access to the seeds
+    const std::vector<uint64_t>& seeds=
       _seeds;
     
     /// Base random generator
@@ -39,10 +39,30 @@ namespace SUNphi
     
   public:
     
+    LIST_SERIALIZABLE_MEMBERS(_seeds);
+    
+    /// Reset the number generator to the initial state
+    void reset()
+    {
+      // Prepares a seed sequence to initialize
+      std::seed_seq dseeds(seeds.begin(),seeds.end());
+      
+      this->seed(dseeds);
+    }
+    
+    /// Skip n elements
+    void skip(const int n)
+    {
+      for(int i=0;i<n;i++)
+	(*this)();
+    }
+    
+    /// Fills _seeds using the true random generator
     MasterRandomGenerator()
     {
       std::generate(_seeds.begin(),_seeds.end(),std::ref(trueRandomGenerator));
-      std::seed_seq dseeds(seeds.begin(),seeds.end());
+      
+      reset();
     }
   };
 }
