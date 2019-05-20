@@ -45,7 +45,7 @@ namespace SUNphi
       std::array<uint64_t,5>;
     
     /// Key to encrypt
-    SERIALIZABLE_SCALAR(Key,key);
+    SERIALIZABLE_SEQUENCE(Key,key);
     
   public:
     
