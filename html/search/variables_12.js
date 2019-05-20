@@ -2,8 +2,10 @@ var searchData=
 [
   ['tenscompslisttotmaxknownsubmultiple',['tensCompsListTotMaxKnownSubMultiple',['../d8/df8/classSUNphi_1_1TensKind.html#a171d70377c8c527dca8927b9fffcfab6',1,'SUNphi::TensKind']]],
   ['tenscompslisttotsize',['tensCompsListTotSize',['../d8/df8/classSUNphi_1_1TensKind.html#aa840722888788a06df58634e15443d36',1,'SUNphi::TensKind']]],
-  ['text_5fchange_5fcolor_5fhead',['TEXT_CHANGE_COLOR_HEAD',['../de/d19/TextColors_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7',1,'SUNphi']]],
-  ['text_5fchange_5fcolor_5ftail',['TEXT_CHANGE_COLOR_TAIL',['../de/d19/TextColors_8hpp.html#a22849d59de4e186614d3516b924a97d8',1,'SUNphi']]],
+  ['text_5fchange_5fcolor_5fhead',['TEXT_CHANGE_COLOR_HEAD',['../de/d96/TextFormat_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7',1,'SUNphi']]],
+  ['text_5fchange_5fcolor_5ftail',['TEXT_CHANGE_COLOR_TAIL',['../de/d96/TextFormat_8hpp.html#a22849d59de4e186614d3516b924a97d8',1,'SUNphi']]],
+  ['text_5fchange_5fstyle_5fhead',['TEXT_CHANGE_STYLE_HEAD',['../de/d96/TextFormat_8hpp.html#a1779f185c5f6a5ba5bb2043b2de99559',1,'SUNphi']]],
+  ['text_5fchange_5fstyle_5ftail',['TEXT_CHANGE_STYLE_TAIL',['../de/d96/TextFormat_8hpp.html#ad2ee96b9444d176e5d95a4df879ae08c',1,'SUNphi']]],
   ['thisdynamic',['thisDynamic',['../d7/d8b/structSUNphi_1_1__Indexer_3_01IDyn_00_01TensKind_3_01H_00_01Oth_8_8_8_01_4_01_4.html#a769aa30da880848d59f63d76f4dab4e0',1,'SUNphi::_Indexer&lt; IDyn, TensKind&lt; H, Oth... &gt; &gt;']]],
   ['threads',['threads',['../df/d0f/Pool_8hpp.html#a3b3a08e7eff1fd2940aadfd20f53d171',1,'SUNphi']]],
   ['timings',['timings',['../d8/dbf/Timer_8hpp.html#a4adb91524f90419ac449be36db370b54',1,'SUNphi']]],

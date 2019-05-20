@@ -10,5 +10,6 @@ var searchData=
   ['state',['state',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#a7067d7a4d32b6e6e180066615c8e4e2e',1,'SUNphi::SFMTRandomGen::state()'],['../d9/d59/classSUNphi_1_1Sitmo.html#a608372c236f1bbe48dde30baa7708cec',1,'SUNphi::Sitmo::state()']]],
   ['str',['str',['../da/d56/structSUNphi_1_1IncapsulatedString.html#a8a52c6c2310b782f3f310f8898044635',1,'SUNphi::IncapsulatedString']]],
   ['stride',['stride',['../d0/dde/structSUNphi_1_1__RangeSeq.html#af51cdb18c4c7d2da07f14807e77a89da',1,'SUNphi::_RangeSeq']]],
+  ['stylechanged',['styleChanged',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aaceef73630cf8a26251536f635eb1b86',1,'SUNphi::Logger::LoggerLine']]],
   ['symbol',['symbol',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html#a3d519d9569769b3b1b6920f9cd3275c4',1,'SUNphi::BackTraceSymbol']]]
 ];

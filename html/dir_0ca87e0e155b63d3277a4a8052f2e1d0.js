@@ -5,5 +5,6 @@ var dir_0ca87e0e155b63d3277a4a8052f2e1d0 =
     [ "Demangle.hpp", "d2/df5/Demangle_8hpp.html", "d2/df5/Demangle_8hpp" ],
     [ "Dwarf.hpp", "d1/d89/Dwarf_8hpp.html", null ],
     [ "MinimalCrash.hpp", "d5/dcd/MinimalCrash_8hpp.html", "d5/dcd/MinimalCrash_8hpp" ],
-    [ "OptimizationDiagnostic.hpp", "db/d2e/OptimizationDiagnostic_8hpp.html", "db/d2e/OptimizationDiagnostic_8hpp" ]
+    [ "OptimizationDiagnostic.hpp", "db/d2e/OptimizationDiagnostic_8hpp.html", "db/d2e/OptimizationDiagnostic_8hpp" ],
+    [ "Warning.hpp", "db/dcc/Warning_8hpp.html", "db/dcc/Warning_8hpp" ]
 ];

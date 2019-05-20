@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/ios/TextColors.hpp File Reference</title>
+<title>SUNphi: include/ios/TextFormat.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('de/d19/TextColors_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('de/d96/TextFormat_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -109,18 +109,18 @@ $(document).ready(function(){initNavTree('de/d19/TextColors_8hpp.html','../../')
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">TextColors.hpp File Reference</div>  </div>
+<div class="title">TextFormat.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Define colors to print on the terminal.  
+<p>Define format to print on the terminal.  
 <a href="#details">More...</a></p>
 
-<p><a href="../../de/d19/TextColors_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="../../de/d96/TextFormat_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a0c3a9f132137f70f400bcae5207ac11a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c3a9f132137f70f400bcae5207ac11a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d19/TextColors_8hpp.html#a0c3a9f132137f70f400bcae5207ac11a">SUNphi::TextColor</a> : char { <br />
+<tr class="memitem:a0c3a9f132137f70f400bcae5207ac11a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c3a9f132137f70f400bcae5207ac11a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#a0c3a9f132137f70f400bcae5207ac11a">SUNphi::TextColor</a> : char { <br />
 &#160;&#160;<b>BLACK</b> ='0', 
 <b>RED</b> ='1', 
 <b>GREEN</b> ='2', 
@@ -136,21 +136,43 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a0c3a9f132137f70f400bcae5207ac11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the various supported colors. <br /></td></tr>
 </td></tr>
 <tr class="separator:a0c3a9f132137f70f400bcae5207ac11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4851ff07ada51ad4484fbbff7d38e84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4851ff07ada51ad4484fbbff7d38e84"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#ae4851ff07ada51ad4484fbbff7d38e84">SUNphi::TextStyle</a> : char { <br />
+&#160;&#160;<b>RESET</b> ='0', 
+<b>BOLD</b> ='1', 
+<b>DIM</b> ='2', 
+<b>ITALIC</b> ='3', 
+<br />
+&#160;&#160;<b>UNDERLINE</b> ='4', 
+<b>BLINK</b> ='5', 
+<b>REVERSE</b> ='7', 
+<b>HIDDEN</b> ='8', 
+<br />
+&#160;&#160;<b>STRIKETHROUGH</b> ='9'
+<br />
+ }<tr class="memdesc:ae4851ff07ada51ad4484fbbff7d38e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifier of the various supported styles. <br /></td></tr>
+</td></tr>
+<tr class="separator:ae4851ff07ada51ad4484fbbff7d38e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d19/TextColors_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7">SUNphi::TEXT_CHANGE_COLOR_HEAD</a> []</td></tr>
-<tr class="memdesc:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">First part of the string whcih change color.  <a href="../../de/d19/TextColors_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7">More...</a><br /></td></tr>
+<tr class="memitem:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7">SUNphi::TEXT_CHANGE_COLOR_HEAD</a> []</td></tr>
+<tr class="memdesc:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">First part of the string which change color.  <a href="../../de/d96/TextFormat_8hpp.html#aec8d7af4a21676b1c9f9519ae99c76c7">More...</a><br /></td></tr>
 <tr class="separator:aec8d7af4a21676b1c9f9519ae99c76c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22849d59de4e186614d3516b924a97d8"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d19/TextColors_8hpp.html#a22849d59de4e186614d3516b924a97d8">SUNphi::TEXT_CHANGE_COLOR_TAIL</a> []</td></tr>
-<tr class="memdesc:a22849d59de4e186614d3516b924a97d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last part of the string whcih change color.  <a href="../../de/d19/TextColors_8hpp.html#a22849d59de4e186614d3516b924a97d8">More...</a><br /></td></tr>
+<tr class="memitem:a22849d59de4e186614d3516b924a97d8"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#a22849d59de4e186614d3516b924a97d8">SUNphi::TEXT_CHANGE_COLOR_TAIL</a> []</td></tr>
+<tr class="memdesc:a22849d59de4e186614d3516b924a97d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last part of the string whcih change color.  <a href="../../de/d96/TextFormat_8hpp.html#a22849d59de4e186614d3516b924a97d8">More...</a><br /></td></tr>
 <tr class="separator:a22849d59de4e186614d3516b924a97d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1779f185c5f6a5ba5bb2043b2de99559"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#a1779f185c5f6a5ba5bb2043b2de99559">SUNphi::TEXT_CHANGE_STYLE_HEAD</a> []</td></tr>
+<tr class="memdesc:a1779f185c5f6a5ba5bb2043b2de99559"><td class="mdescLeft">&#160;</td><td class="mdescRight">First part of the string which change style.  <a href="../../de/d96/TextFormat_8hpp.html#a1779f185c5f6a5ba5bb2043b2de99559">More...</a><br /></td></tr>
+<tr class="separator:a1779f185c5f6a5ba5bb2043b2de99559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ee96b9444d176e5d95a4df879ae08c"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d96/TextFormat_8hpp.html#ad2ee96b9444d176e5d95a4df879ae08c">SUNphi::TEXT_CHANGE_STYLE_TAIL</a> []</td></tr>
+<tr class="memdesc:ad2ee96b9444d176e5d95a4df879ae08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last part of the string whcih change style.  <a href="../../de/d96/TextFormat_8hpp.html#ad2ee96b9444d176e5d95a4df879ae08c">More...</a><br /></td></tr>
+<tr class="separator:ad2ee96b9444d176e5d95a4df879ae08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Define colors to print on the terminal. </p>
+<div class="textblock"><p>Define format to print on the terminal. </p>
 <p>See <a href="https://www.growingwiththeweb.com/2015/05/colours-in-gnome-terminal.html">https://www.growingwiththeweb.com/2015/05/colours-in-gnome-terminal.html</a> </p>
 
-<p>Definition in file <a class="el" href="../../de/d19/TextColors_8hpp_source.html">TextColors.hpp</a>.</p>
+<p>Definition in file <a class="el" href="../../de/d96/TextFormat_8hpp_source.html">TextFormat.hpp</a>.</p>
 </div><h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="file_aec8d7af4a21676b1c9f9519ae99c76c7"></a>
 <div class="memitem">
@@ -170,9 +192,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;\x1b[3&quot;</span></div></div><!-- fragment -->
-<p>First part of the string whcih change color. </p>
+<p>First part of the string which change color. </p>
 
-<p>Definition at line <a class="el" href="../../de/d19/TextColors_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../de/d19/TextColors_8hpp_source.html">TextColors.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d96/TextFormat_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../de/d96/TextFormat_8hpp_source.html">TextFormat.hpp</a>.</p>
 
 </div>
 </div>
@@ -196,7 +218,55 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;m&quot;</span></div></div><!-- fragment -->
 <p>Last part of the string whcih change color. </p>
 
-<p>Definition at line <a class="el" href="../../de/d19/TextColors_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d19/TextColors_8hpp_source.html">TextColors.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d96/TextFormat_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d96/TextFormat_8hpp_source.html">TextFormat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a1779f185c5f6a5ba5bb2043b2de99559"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char SUNphi::TEXT_CHANGE_STYLE_HEAD[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;\x1b[&quot;</span></div></div><!-- fragment -->
+<p>First part of the string which change style. </p>
+
+<p>Definition at line <a class="el" href="../../de/d96/TextFormat_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../de/d96/TextFormat_8hpp_source.html">TextFormat.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_ad2ee96b9444d176e5d95a4df879ae08c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char SUNphi::TEXT_CHANGE_STYLE_TAIL[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;m&quot;</span></div></div><!-- fragment -->
+<p>Last part of the string whcih change style. </p>
+
+<p>Definition at line <a class="el" href="../../de/d96/TextFormat_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../de/d96/TextFormat_8hpp_source.html">TextFormat.hpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +275,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_c34bc3bbd9d9cc4e9f6dcfcd5b425f2b.html">ios</a></li><li class="navelem"><a class="el" href="../../de/d19/TextColors_8hpp.html">TextColors.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_c34bc3bbd9d9cc4e9f6dcfcd5b425f2b.html">ios</a></li><li class="navelem"><a class="el" href="../../de/d96/TextFormat_8hpp.html">TextFormat.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

@@ -8,6 +8,7 @@ var classSUNphi_1_1Logger_1_1LoggerLine =
     [ "operator*", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#afb561525387a94ae97d76f84cb091809", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ab0a05739ffdba3e7f1e5062b61843a28", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#abaa5d06c6d4a5f94c26413de01306b05", null ],
+    [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#ab4316b67a63fc21da08d2927d480fb01", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a30320774dfd5a3de46fca93805b87f63", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a21193840cef785c00d8b24695a392a12", null ],
     [ "operator<<", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a657cd4ea68563b2ce81dc865fc1ba5a1", null ],
@@ -20,5 +21,6 @@ var classSUNphi_1_1Logger_1_1LoggerLine =
     [ "logger", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a5ec7dccf14d62520b7b014d34f9ac35e", null ],
     [ "reallyPrint", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a4da1216d6bd679561364dac89cb6b463", null ],
     [ "someOtherRankCouldBePrinting", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a29d7b5107ca2919a6340597c9421b585", null ],
-    [ "someOtherThreadCouldBePrinting", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7b2c160c9431815af314ccd01960886f", null ]
+    [ "someOtherThreadCouldBePrinting", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#a7b2c160c9431815af314ccd01960886f", null ],
+    [ "styleChanged", "d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aaceef73630cf8a26251536f635eb1b86", null ]
 ];

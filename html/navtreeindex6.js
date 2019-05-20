@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"da/d14/structSUNphi_1_1Spacetime.html#a62036115814b61e36c3699da76b23f8f":[2,0,0,189,5],
+"da/d14/structSUNphi_1_1Spacetime.html#aa7a59e642f782c5731ab75cc4d74d6de":[2,0,0,189,0],
 "da/d14/structSUNphi_1_1Spacetime.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc":[2,0,0,189,2],
 "da/d14/structSUNphi_1_1Spacetime.html#acd7ae650b1638f5e1d2ceae4449c11c5":[2,0,0,189,1],
 "da/d14/structSUNphi_1_1Spacetime.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,189,6],
@@ -218,6 +220,9 @@ var NAVTREEINDEX6 =
 "db/dc6/structSUNphi_1_1HasMember__isAliasing.html#aa00de6f65c171a8e0a9bc5a40c276e1f":[2,0,0,145,6],
 "db/dc6/structSUNphi_1_1HasMember__isAliasing.html#ac9ddce3bea4bb364bad84adc0f46ab3d":[2,0,0,145,5],
 "db/dc6/structSUNphi_1_1HasMember__isAliasing.html#ae32515df2f7ac64a1073ae094ddf0c8e":[2,0,0,145,4],
+"db/dcc/Warning_8hpp.html":[3,0,2,1,6],
+"db/dcc/Warning_8hpp.html#a5cb439d9f933fde4cf23caa370c030e7":[3,0,2,1,6,0],
+"db/dcc/Warning_8hpp_source.html":[3,0,2,1,6],
 "db/dd6/structSUNphi_1_1__TwinCompOf_3_01CnSpin_01_4.html":[2,0,0,36],
 "db/dd6/structSUNphi_1_1__TwinCompOf_3_01CnSpin_01_4.html#a9ce1754b57145c2259af6c9d581130c7":[2,0,0,36,0],
 "db/dd7/Crash_8hpp.html":[3,0,2,1,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX6 =
 "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html":[2,0,0,200],
 "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a4454d2da82c5f86f81fb9a58eb74f058":[2,0,0,200,0],
 "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740":[2,0,0,200,1],
-"dc/d0f/classSUNphi_1_1ThreadPool.html":[2,0,0,194],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a3064e7398497b7029516937ab7900ff3":[2,0,0,194,1],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2":[2,0,0,194,4],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a36bf02245f197dfe42ccd43441ba7175":[2,0,0,194,2],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a3764c64514006caf8e78c9e8ab8850f5":[2,0,0,194,3],
-"dc/d0f/classSUNphi_1_1ThreadPool.html#a46bbee95bdc8054104549d368dd4a5f0":[2,0,0,194,8]
+"dc/d0f/classSUNphi_1_1ThreadPool.html":[2,0,0,194]
 };
