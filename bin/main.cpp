@@ -14,6 +14,7 @@ int main()
 {
   Sitmo::Rng rng;
   
+  rng.seed(trueRandomGenerator);
   
   //enc.setKey({235425});
   runLog()<<rng.serialize();
