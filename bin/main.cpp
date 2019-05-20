@@ -12,6 +12,19 @@ using namespace SUNphi;
 
 int main()
 {
+  Sitmo::Rng rng;
+  
+  
+  //enc.setKey({235425});
+  runLog()<<rng.serialize();
+  
+  MasterRandomGenerator mrg;
+  
+  runLog()<<mrg.serialize();
+  std::ostringstream os;
+  os<<*static_cast<_MasterRandomGenerator*>(&mrg);
+  runLog()<<os.str()<<" "<<_MasterRandomGenerator::word_size;
+  
   //test2.deBinarize(test1.binarize());
   
   // runLog()<<"Bin";
