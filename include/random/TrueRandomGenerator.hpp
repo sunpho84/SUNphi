@@ -27,11 +27,11 @@ namespace SUNphi
     /// Rank of which the result is returning
     int returningRank;
     
+  public:
+    
     /// Type returned
     using ResultType=
       std::random_device::result_type;
-    
-  public:
     
     /// Creates specifying the rank to be used for returning
     TrueRandomGenerator(int returningRank=Mpi::MASTER_RANK)
