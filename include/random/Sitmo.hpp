@@ -133,8 +133,8 @@ namespace SUNphi
       0xFFFFFFFF;
     
     /// Copy constructor
-    Sitmo(const Sitmo& oth) ///< Other engine
-    =default;
+    Sitmo(const Sitmo& oth) =///< Other engine
+      default;
     
     /// Construct from a seed
     Sitmo(const uint32_t& s=0)
