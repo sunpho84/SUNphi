@@ -133,15 +133,27 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae">SERIALIZABLE_SEQUENCE</a>(CONTAINER, NAME, ...)</td></tr>
-<tr class="memdesc:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable sequence.  <a href="#a1eb41e7c81c3ac9ac776d29aa138f2ae">More...</a><br /></td></tr>
+<tr class="memitem:af7c30f61ecd196dfb292b08cf30ad549"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#af7c30f61ecd196dfb292b08cf30ad549">SERIALIZABLE_SEQUENCE_WITH_TAG</a>(CONTAINER, NAME, TAG, ...)</td></tr>
+<tr class="memdesc:af7c30f61ecd196dfb292b08cf30ad549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable sequence with a given tag.  <a href="#af7c30f61ecd196dfb292b08cf30ad549">More...</a><br /></td></tr>
+<tr class="separator:af7c30f61ecd196dfb292b08cf30ad549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb41e7c81c3ac9ac776d29aa138f2ae"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae">SERIALIZABLE_SEQUENCE</a>(CONTAINER, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#af7c30f61ecd196dfb292b08cf30ad549">SERIALIZABLE_SEQUENCE_WITH_TAG</a>(CONTAINER,NAME,#NAME,__VA_ARGS__)</td></tr>
+<tr class="memdesc:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable sequence. <br /></td></tr>
 <tr class="separator:a1eb41e7c81c3ac9ac776d29aa138f2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3d03ea581e8219b0e37ca5f20997c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec3d03ea581e8219b0e37ca5f20997c6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#aec3d03ea581e8219b0e37ca5f20997c6">SERIALIZABLE_VECTOR_WITH_TAG</a>(TYPE, NAME, TAG, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#af7c30f61ecd196dfb292b08cf30ad549">SERIALIZABLE_SEQUENCE_WITH_TAG</a>(std::vector&lt;TYPE&gt;,NAME,TAG,__VA_ARGS__)</td></tr>
+<tr class="memdesc:aec3d03ea581e8219b0e37ca5f20997c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable vector with a given tag. <br /></td></tr>
+<tr class="separator:aec3d03ea581e8219b0e37ca5f20997c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d343d8c2a7f461e0712e142d39c0ea8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8">SERIALIZABLE_VECTOR</a>(TYPE, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#a1eb41e7c81c3ac9ac776d29aa138f2ae">SERIALIZABLE_SEQUENCE</a>(std::vector&lt;TYPE&gt;,NAME,__VA_ARGS__)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a7d343d8c2a7f461e0712e142d39c0ea8">SERIALIZABLE_VECTOR</a>(TYPE, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#aec3d03ea581e8219b0e37ca5f20997c6">SERIALIZABLE_VECTOR_WITH_TAG</a>(TYPE,NAME,#NAME,__VA_ARGS__)</td></tr>
 <tr class="memdesc:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable vector. <br /></td></tr>
 <tr class="separator:a7d343d8c2a7f461e0712e142d39c0ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76a3de6cdb8101bae41e99338e0ec0d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a76a3de6cdb8101bae41e99338e0ec0d2">SERIALIZABLE_PAIR</a>(TYPE1, TYPE2, NAME, ...)</td></tr>
-<tr class="memdesc:a76a3de6cdb8101bae41e99338e0ec0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable pair.  <a href="#a76a3de6cdb8101bae41e99338e0ec0d2">More...</a><br /></td></tr>
+<tr class="memitem:a570e852fd003f84fd93a46b84acf6f00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a570e852fd003f84fd93a46b84acf6f00">SERIALIZABLE_PAIR_WITH_TAG</a>(TYPE1, TYPE2, NAME, TAG, ...)</td></tr>
+<tr class="memdesc:a570e852fd003f84fd93a46b84acf6f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable pair with a given tag.  <a href="#a570e852fd003f84fd93a46b84acf6f00">More...</a><br /></td></tr>
+<tr class="separator:a570e852fd003f84fd93a46b84acf6f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a3de6cdb8101bae41e99338e0ec0d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76a3de6cdb8101bae41e99338e0ec0d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d11/Sequence_8hpp.html#a76a3de6cdb8101bae41e99338e0ec0d2">SERIALIZABLE_PAIR</a>(TYPE1, TYPE2, NAME, ...)&#160;&#160;&#160;<a class="el" href="../../d0/d11/Sequence_8hpp.html#a570e852fd003f84fd93a46b84acf6f00">SERIALIZABLE_PAIR_WITH_TAG</a>(TYPE1,TYPE2,NAME,#NAME,__VA_ARGS__)</td></tr>
+<tr class="memdesc:a76a3de6cdb8101bae41e99338e0ec0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a serializable pair. <br /></td></tr>
 <tr class="separator:a76a3de6cdb8101bae41e99338e0ec0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -171,12 +183,12 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a76a3de6cdb8101bae41e99338e0ec0d2"></a>
+<a class="anchor" id="a570e852fd003f84fd93a46b84acf6f00"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SERIALIZABLE_PAIR</td>
+          <td class="memname">#define SERIALIZABLE_PAIR_WITH_TAG</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">TYPE1, </td>
@@ -197,6 +209,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">TAG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
@@ -206,19 +224,19 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">SerializableSequence&lt;std::pair&lt;TYPE1,TYPE2&gt;&gt;                \</div><div class="line">    NAME{#NAME,__VA_ARGS__}</div></div><!-- fragment -->
-<p>Create a serializable pair. </p>
+<b>Value:</b><div class="fragment"><div class="line">SerializableSequence&lt;std::pair&lt;TYPE1,TYPE2&gt;&gt;                \</div><div class="line">    NAME{TAG,__VA_ARGS__}</div></div><!-- fragment -->
+<p>Create a serializable pair with a given tag. </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00168">168</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00182">182</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1eb41e7c81c3ac9ac776d29aa138f2ae"></a>
+<a class="anchor" id="af7c30f61ecd196dfb292b08cf30ad549"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SERIALIZABLE_SEQUENCE</td>
+          <td class="memname">#define SERIALIZABLE_SEQUENCE_WITH_TAG</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">CONTAINER, </td>
@@ -233,6 +251,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">TAG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em>&#160;</td>
         </tr>
         <tr>
@@ -242,8 +266,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">SerializableSequence&lt;CONTAINER&gt;                 \</div><div class="line">     NAME{#NAME,__VA_ARGS__}</div></div><!-- fragment -->
-<p>Create a serializable sequence. </p>
+<b>Value:</b><div class="fragment"><div class="line">SerializableSequence&lt;CONTAINER&gt;                 \</div><div class="line">     NAME{TAG,__VA_ARGS__}</div></div><!-- fragment -->
+<p>Create a serializable sequence with a given tag. </p>
 
 <p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
@@ -264,7 +288,7 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -287,7 +311,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>False case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +333,7 @@ template&lt;typename... Ts&gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>True case </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +352,7 @@ template&lt;typename T &gt; </div>
 <p>Check if the class is a <a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a></p>
 <p>Calls the internal implementation </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00175">175</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00197">197</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>

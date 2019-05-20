@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['masterrandomgenerator',['MasterRandomGenerator',['../d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a9a8fd64eb1b85fd7393b12ec38acd81a',1,'SUNphi::MasterRandomGenerator']]],
   ['maybeunused',['maybeUnused',['../db/dde/Unused_8hpp.html#a49d7da8c222e83ae8d42bb4ca6b7d2ea',1,'Unused.hpp']]],
   ['maybeunusedfd',['maybeUnusedFD',['../d8/de8/Compl_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7',1,'SUNphi::maybeUnusedFD()'],['../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#ad2eef232040ba16d5d27fdc243ce06f5',1,'SUNphi::_RelBindInternalChecks::maybeUnusedFD()']]],
   ['mergedcomps',['mergedComps',['../d3/d22/classSUNphi_1_1TensStor.html#a536cfdc4f0c4942f7abcb7dd2fa170a7',1,'SUNphi::TensStor']]],

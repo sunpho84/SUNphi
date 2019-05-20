@@ -5,6 +5,9 @@ var annotated_dup =
       [ "internal", null, [
         [ "FallTrhough", "d1/d97/classSUNphi_1_1internal_1_1FallTrhough.html", null ]
       ] ],
+      [ "Sitmo", null, [
+        [ "Rng", "dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html", "dd/d92/classSUNphi_1_1Sitmo_1_1Rng" ]
+      ] ],
       [ "_BlendTensKinds", "de/d12/structSUNphi_1_1__BlendTensKinds.html", null ],
       [ "_BlendTensKinds< Head1, Head2, Tail... >", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4.html", "de/d83/structSUNphi_1_1__BlendTensKinds_3_01Head1_00_01Head2_00_01Tail_8_8_8_01_4" ],
       [ "_BlendTensKinds< Tk >", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4.html", "df/dc7/structSUNphi_1_1__BlendTensKinds_3_01Tk_01_4" ],

@@ -105,6 +105,8 @@ $(document).ready(function(){initNavTree('d8/db1/Encrypter_8hpp.html','../../');
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Encrypter.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -115,9 +117,20 @@ $(document).ready(function(){initNavTree('d8/db1/Encrypter_8hpp.html','../../');
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../dc/d1a/Serialize_8hpp_source.html">Serialize.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../df/d7a/LoopUnroll_8hpp_source.html">metaprogramming/LoopUnroll.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d8/db1/Encrypter_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3f50ab9c45a41c9ac3b5a024bea4d45a"><td class="memItemLeft" align="right" valign="top">Word&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db1/Encrypter_8hpp.html#a3f50ab9c45a41c9ac3b5a024bea4d45a">SUNphi::Sitmo::encrypt</a> (const Key &amp;key, Word x)</td></tr>
+<tr class="memdesc:a3f50ab9c45a41c9ac3b5a024bea4d45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypts the input.  <a href="../../d8/db1/Encrypter_8hpp.html#a3f50ab9c45a41c9ac3b5a024bea4d45a">More...</a><br /></td></tr>
+<tr class="separator:a3f50ab9c45a41c9ac3b5a024bea4d45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7e8264ba45d4964dee5d2d6408fd3d"><td class="memItemLeft" align="right" valign="top">Key&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/db1/Encrypter_8hpp.html#a1d7e8264ba45d4964dee5d2d6408fd3d">SUNphi::Sitmo::buildKey</a> (const Word &amp;word)</td></tr>
+<tr class="memdesc:a1d7e8264ba45d4964dee5d2d6408fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a key from a word.  <a href="../../d8/db1/Encrypter_8hpp.html#a1d7e8264ba45d4964dee5d2d6408fd3d">More...</a><br /></td></tr>
+<tr class="separator:a1d7e8264ba45d4964dee5d2d6408fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements the SITMO random number generator. </p>
 <p>Copyright (c) 2012-2016 M.A. (Thijs) van den Berg, <a href="http://sitmo.com/">http://sitmo.com/</a></p>
@@ -127,7 +140,82 @@ $(document).ready(function(){initNavTree('d8/db1/Encrypter_8hpp.html','../../');
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
 
 <p>Definition in file <a class="el" href="../../d8/db1/Encrypter_8hpp_source.html">Encrypter.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a1d7e8264ba45d4964dee5d2d6408fd3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Key SUNphi::Sitmo::buildKey </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a3c65fe07410555f7bdff1502307c4823">Word</a> &amp;&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build a key from a word. </p>
+<p>Output </p>
+
+<p>Definition at line <a class="el" href="../../d8/db1/Encrypter_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d8/db1/Encrypter_8hpp_source.html">Encrypter.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a3f50ab9c45a41c9ac3b5a024bea4d45a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Word SUNphi::Sitmo::encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a27496980ca58399179e685a53382ac1d">Key</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a3c65fe07410555f7bdff1502307c4823">Word</a>&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encrypts the input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Key to encrypt </td></tr>
+    <tr><td class="paramname">x</td><td>Input to encrypt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d8/db1/Encrypter_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d8/db1/Encrypter_8hpp_source.html">Encrypter.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

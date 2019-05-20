@@ -7,5 +7,6 @@ var searchData=
   ['binder',['Binder',['../d6/db9/classSUNphi_1_1Binder.html#a292fad679e538c338009b4ee1e954650',1,'SUNphi::Binder']]],
   ['binderinternaleval',['binderInternalEval',['../d6/db9/classSUNphi_1_1Binder.html#a51a9454d4d415055639fa28f2afd6655',1,'SUNphi::Binder']]],
   ['bitof',['bitOf',['../df/d95/Bits_8hpp.html#a81cb061982d71eed06caa20d73bef24e',1,'SUNphi']]],
-  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ab55fffb524901724a3cdfc579576833c',1,'SUNphi::Mpi::broadcast(T *x, const size_t &amp;size, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a1e61a5b33e1025cf13d50eb4b7ac64e1',1,'SUNphi::Mpi::broadcast(T &amp;x, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a8bf23436f0631c9b6825a9380d5a39f3',1,'SUNphi::Mpi::broadcast(T &amp;&amp;val, int root=MASTER_RANK) const ']]]
+  ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ab55fffb524901724a3cdfc579576833c',1,'SUNphi::Mpi::broadcast(T *x, const size_t &amp;size, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a1e61a5b33e1025cf13d50eb4b7ac64e1',1,'SUNphi::Mpi::broadcast(T &amp;x, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a8bf23436f0631c9b6825a9380d5a39f3',1,'SUNphi::Mpi::broadcast(T &amp;&amp;val, int root=MASTER_RANK) const ']]],
+  ['buildkey',['buildKey',['../d8/db1/Encrypter_8hpp.html#a1d7e8264ba45d4964dee5d2d6408fd3d',1,'SUNphi::Sitmo']]]
 ];

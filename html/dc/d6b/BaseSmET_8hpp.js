@@ -68,7 +68,6 @@ var BaseSmET_8hpp =
     [ "PROVIDE_MERGEABLE_COMPS", "dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd", null ],
     [ "PROVIDE_MERGEABLE_COMPS_MARKING_ONE_AS_NON_MERGEABLE", "dc/d6b/BaseSmET_8hpp.html#a0967a494ce6416d595dbe85bc009df81", null ],
     [ "PROVIDE_POS_OF_TCS_IN_RES_TK_AND_MERGED_DELIMS_FOR_REF", "dc/d6b/BaseSmET_8hpp.html#affb9e8f2147ceaa44da52542b01c7683", null ],
-    [ "PROVIDE_SMET_ASSIGNEMENT_OPERATOR", "dc/d6b/BaseSmET_8hpp.html#a3a7842df4daae14f086e6349fb8a2ab7", null ],
     [ "PROVIDE_TK", "dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76", null ],
     [ "SMET_GOES_ON_LHS", "dc/d6b/BaseSmET_8hpp.html#aeaa6b7fa1b5cbb1bde2130876ab150be", null ],
     [ "STATIC_ASSERT_IS_SMET", "dc/d6b/BaseSmET_8hpp.html#af892daaf4b484ae98212388ee1bb658b", null ],

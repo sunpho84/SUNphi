@@ -122,6 +122,7 @@ $(document).ready(function(){initNavTree('dc/d8f/TensClass_8hpp.html','../../');
 <code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">tens/TensKind.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d1/d7a/TensStor_8hpp_source.html">tens/TensStor.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d1/d9b/Assign_8hpp_source.html">smet/Assign.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">smet/NnarySmET.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../dc/d8f/TensClass_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -195,11 +196,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"> \</div><div class="line">    template &lt;<span class="keyword">class</span>...Comps,                              <span class="comment">/* Component types                                        */</span> \</div><div class="line">          class=ConstrainAreIntegrals&lt;Comps...&gt;,      <span class="comment">/* Force the components to be integer-like                */</span> \</div><div class="line">          class=ConstrainNTypes&lt;Tk::nTypes,Comps...&gt;&gt; <span class="comment">/* Constrain the component to be in the same number of Tk */</span> \</div><div class="line">    QUALIFIER Fund&amp; eval(<span class="keyword">const</span> Comps&amp;...comps) QUALIFIER   \</div><div class="line">    {                                   \</div><div class="line">      if(<a class="code" href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a>)                     \</div><div class="line">    ((<a class="code" href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">runLog</a>()&lt;&lt;<span class="stringliteral">&quot;Components: &quot;</span>&lt;&lt;&amp;v) * ... *comps);          \</div><div class="line">                                    \</div><div class="line">      return                                \</div><div class="line">    v-&gt;eval(forw&lt;const Comps&gt;(comps)...);               \</div><div class="line">    }                                   <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="Logger_8hpp_html_a19393a3bdd006493fb56d5af4118a1d4"><div class="ttname"><a href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">SUNphi::runLog</a></div><div class="ttdeci">Logger runLog</div><div class="ttdoc">Global logger. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/MinimalLogger_8hpp_source.html#l00015">MinimalLogger.hpp:15</a></div></div>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
-<div class="ttc" id="TensClass_8hpp_html_a22dc080000bca54b7cc61def5e2ae9ce"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a></div><div class="ttdeci">#define DEBUG_TENS_COMPONENTS</div><div class="ttdoc">Enable or not printing the components. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00173">TensClass.hpp:173</a></div></div>
+<div class="ttc" id="TensClass_8hpp_html_a22dc080000bca54b7cc61def5e2ae9ce"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a></div><div class="ttdeci">#define DEBUG_TENS_COMPONENTS</div><div class="ttdoc">Enable or not printing the components. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00174">TensClass.hpp:174</a></div></div>
 </div><!-- fragment -->
 <p>Provides either the const or non-const evaluator. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00177">177</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00178">178</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -217,7 +218,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T not to inherits from <code><a class="el" href="../../dc/dd0/structSUNphi_1_1BaseTens.html">BaseTens</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -234,7 +235,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T to inherits from <code><a class="el" href="../../dc/dd0/structSUNphi_1_1BaseTens.html">BaseTens</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +253,7 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,7 +366,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Expression which is true if T inherits from <code><a class="el" href="../../dc/dd0/structSUNphi_1_1BaseTens.html">BaseTens</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>

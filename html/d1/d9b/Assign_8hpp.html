@@ -118,12 +118,10 @@ $(document).ready(function(){initNavTree('d1/d9b/Assign_8hpp.html','../../');});
 
 <p>Defines a class which assigns rhs SmET to lhs one.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">smet/BinarySmET.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dc/de1/Bind_8hpp_source.html">smet/Bind.hpp</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../da/d5e/BinarySmET_8hpp_source.html">smet/BinarySmET.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d3/d78/Reference_8hpp_source.html">smet/Reference.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d9/d0c/ScalarWrap_8hpp_source.html">smet/ScalarWrap.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">tens/TensClass.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="../../d6/d3f/TensKind_8hpp_source.html">tens/TensKind.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../d1/d9b/Assign_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -139,6 +137,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a3a7842df4daae14f086e6349fb8a2ab7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#a3a7842df4daae14f086e6349fb8a2ab7">PROVIDE_SMET_ASSIGNEMENT_OPERATOR</a>(UNARY_SMET)</td></tr>
+<tr class="memdesc:a3a7842df4daae14f086e6349fb8a2ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the assignement operator, calling assign.  <a href="#a3a7842df4daae14f086e6349fb8a2ab7">More...</a><br /></td></tr>
+<tr class="separator:a3a7842df4daae14f086e6349fb8a2ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad">PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR</a>(QUALIFIER)</td></tr>
 <tr class="memdesc:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides either the const or non-const evaluator.  <a href="#ac676f53d30c2e27ebc3df2a25081e1ad">More...</a><br /></td></tr>
 <tr class="separator:ac676f53d30c2e27ebc3df2a25081e1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +204,31 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides either the const or non-const evaluator. </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00096">96</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a7842df4daae14f086e6349fb8a2ab7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROVIDE_SMET_ASSIGNEMENT_OPERATOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">UNARY_SMET</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  template &lt;typename Oth&gt;               <span class="comment">/* Other type  */</span>       <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> operator=(Oth&amp;&amp; oth)                 \</div><div class="line">  {                                 \</div><div class="line">    if(0)                               \</div><div class="line">      {                                 \</div><div class="line">    using <span class="keyword">namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;                        \</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Operator=, triggering assignement to &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;<span class="stringliteral">&quot; of &quot;</span>&lt;&lt;&amp;oth&lt;&lt;endl; \</div><div class="line">      }                                 \</div><div class="line">    assign(*<span class="keyword">this</span>,forw&lt;Oth&gt;(oth));                   \</div><div class="line">                                    \</div><div class="line">    return *<span class="keyword">this</span>;                           \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+</div><!-- fragment -->
+<p>Defines the assignement operator, calling assign. </p>
+<p>&lt; Name of the NnarySmET </p>
+
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00035">35</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +246,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T to inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -238,7 +263,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T not to inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +281,7 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -302,7 +327,7 @@ template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqu
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00124">124</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +345,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Expression which is true if T inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>

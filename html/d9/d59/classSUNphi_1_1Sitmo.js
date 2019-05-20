@@ -1,6 +1,8 @@
 var classSUNphi_1_1Sitmo =
 [
-    [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html#a7af9a41c4fab1c778e18090149f664ab", null ],
+    [ "Key", "d9/d59/classSUNphi_1_1Sitmo.html#a27496980ca58399179e685a53382ac1d", null ],
+    [ "Word", "d9/d59/classSUNphi_1_1Sitmo.html#a3c65fe07410555f7bdff1502307c4823", null ],
+    [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html#a9adb3a0093cf3e51d3703489cf0f5920", null ],
     [ "Sitmo", "d9/d59/classSUNphi_1_1Sitmo.html#ac1a547074f0da1782646e90740276e6a", null ],
     [ "discard", "d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb", null ],
     [ "encryptCounter", "d9/d59/classSUNphi_1_1Sitmo.html#a8024913efb3328b0c330f5034e3ae722", null ],
@@ -14,7 +16,7 @@ var classSUNphi_1_1Sitmo =
     [ "setKey", "d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e", null ],
     [ "operator<<", "d9/d59/classSUNphi_1_1Sitmo.html#a6da491841b7b1e503212251ea022ba89", null ],
     [ "operator>>", "d9/d59/classSUNphi_1_1Sitmo.html#af60790b3a5c06020c78d1ebd3e1cb511", null ],
-    [ "ciphered", "d9/d59/classSUNphi_1_1Sitmo.html#ae893834f6c080a9f10396d7d47e04240", null ],
+    [ "ciphered", "d9/d59/classSUNphi_1_1Sitmo.html#ac837c44ee45111ee52a584b131765aa6", null ],
     [ "iChunk", "d9/d59/classSUNphi_1_1Sitmo.html#a1488f6be4df4e5e78decdc093696e542", null ],
     [ "key", "d9/d59/classSUNphi_1_1Sitmo.html#a219187dafedde8f2598b9a131dba5ff6", null ],
     [ "max", "d9/d59/classSUNphi_1_1Sitmo.html#a3508ff2c2670efa2ef90199b957687c3", null ],

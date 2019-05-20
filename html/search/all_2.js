@@ -30,6 +30,9 @@ var searchData=
   ['binarizable',['Binarizable',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizable_3c_20serializable_3c_20t_20_3e_20_3e',['Binarizable&lt; Serializable&lt; T &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarizable_3c_20serializablesequence_3c_20s_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; S &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
+  ['binarizable_3c_20serializablesequence_3c_20std_3a_3avector_3c_20uint64_5ft_20_3e_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; std::vector&lt; uint64_t &gt; &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
+  ['binarizable_3c_20serializablesequence_3c_20sunphi_3a_3asitmo_3a_3akey_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; SUNphi::Sitmo::Key &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
+  ['binarizable_3c_20serializablesequence_3c_20sunphi_3a_3asitmo_3a_3aword_20_3e_20_3e',['Binarizable&lt; SerializableSequence&lt; SUNphi::Sitmo::Word &gt; &gt;',['../d7/da6/classSUNphi_1_1Binarizable.html',1,'SUNphi']]],
   ['binarize',['binarize',['../d9/d60/structSUNphi_1_1HasMember__binarize_1_1Fallback.html#a1632b88ae4906ea3abe0edfd2374eae4',1,'SUNphi::HasMember_binarize::Fallback::binarize()'],['../d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81',1,'SUNphi::Binarizer::binarize(const T &amp;rhs)'],['../d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81',1,'SUNphi::Binarizer::binarize(const T &amp;rhs)'],['../d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672',1,'SUNphi::Binarizer::binarize(T &amp;&amp;rhs)'],['../d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672',1,'SUNphi::Binarizer::binarize(T &amp;&amp;rhs)'],['../d7/da6/classSUNphi_1_1Binarizable.html#a6656f95d65d21642a4beccecba141c52',1,'SUNphi::Binarizable::binarize()'],['../d1/d39/classSUNphi_1_1SerializableClass.html#ad9fa9f449cd39cc8f4a398c1c0be06d5',1,'SUNphi::SerializableClass::binarize()']]],
   ['binarize_2ehpp',['Binarize.hpp',['../d2/df0/Binarize_8hpp.html',1,'']]],
   ['binarizer',['Binarizer',['../d2/d66/classSUNphi_1_1Binarizer.html',1,'SUNphi']]],
@@ -50,5 +53,6 @@ var searchData=
   ['boundtotype',['BoundToType',['../d5/d1c/classSUNphi_1_1RelBinder.html#a14bd9929c092d8396017ce7d868de1a5',1,'SUNphi::RelBinder']]],
   ['boundtype',['BoundType',['../d5/d1c/classSUNphi_1_1RelBinder.html#ae0060cfd328495991431229cdab3db78',1,'SUNphi::RelBinder']]],
   ['broadcast',['broadcast',['../df/d09/classSUNphi_1_1Mpi.html#ab55fffb524901724a3cdfc579576833c',1,'SUNphi::Mpi::broadcast(T *x, const size_t &amp;size, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a1e61a5b33e1025cf13d50eb4b7ac64e1',1,'SUNphi::Mpi::broadcast(T &amp;x, int root=MASTER_RANK) const '],['../df/d09/classSUNphi_1_1Mpi.html#a8bf23436f0631c9b6825a9380d5a39f3',1,'SUNphi::Mpi::broadcast(T &amp;&amp;val, int root=MASTER_RANK) const ']]],
-  ['buf',['buf',['../d2/d66/classSUNphi_1_1Binarizer.html#ab2511ba72b981863ad37e2e3c8c16301',1,'SUNphi::Binarizer']]]
+  ['buf',['buf',['../d2/d66/classSUNphi_1_1Binarizer.html#ab2511ba72b981863ad37e2e3c8c16301',1,'SUNphi::Binarizer']]],
+  ['buildkey',['buildKey',['../d8/db1/Encrypter_8hpp.html#a1d7e8264ba45d4964dee5d2d6408fd3d',1,'SUNphi::Sitmo']]]
 ];
