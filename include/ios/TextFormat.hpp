@@ -34,7 +34,7 @@ namespace SUNphi
   /// First part of the string which change style
   [[ maybe_unused ]]
   static constexpr char TEXT_CHANGE_STYLE_HEAD[]=
-    "\x1b[1";
+    "\x1b[";
   
   /// Last part of the string whcih change style
   [[ maybe_unused ]]
@@ -51,7 +51,6 @@ namespace SUNphi
 			       REVERSE='7',
 			       HIDDEN='8',
 			       STRIKETHROUGH='9'};
-  
 }
 
 #endif

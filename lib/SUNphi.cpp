@@ -15,7 +15,7 @@
 #include <debug/Crash.hpp>
 #include <ios/Logger.hpp>
 #include <ios/MinimalLogger.hpp>
-#include <ios/TextColors.hpp>
+#include <ios/TextFormat.hpp>
 #include <random/TrueRandomGenerator.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>

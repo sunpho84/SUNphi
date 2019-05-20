@@ -23,7 +23,7 @@
 #include <debug/BackTracing.hpp>
 #include <debug/Crash.hpp>
 #include <ios/File.hpp>
-#include <ios/TextColors.hpp>
+#include <ios/TextFormat.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
 #include <utility/Macros.hpp>
@@ -59,6 +59,9 @@ namespace SUNphi
       
       /// Mark that the color has changed in this line
       bool colorChanged;
+      
+      /// Mark that the style has changed in this line
+      bool styleChanged;
       
       /// Check whether should actually print or not
       const bool reallyPrint;
@@ -122,6 +125,7 @@ namespace SUNphi
 	: hasToEndLine(true),
 	  hasToCrash(false),
 	  colorChanged(false),
+	  styleChanged(false),
 	  reallyPrint((threads.isMasterThread() or not logger.onlyMasterThreadPrint) and (mpi.isMasterRank() or not logger.onlyMasterRankPrint)),
 	  someOtherRankCouldBePrinting(mpi.nRanks()!=1 and not logger.onlyMasterRankPrint),
 	  someOtherThreadCouldBePrinting(threads.nActiveThreads()!=1 and not logger.onlyMasterThreadPrint),
@@ -140,6 +144,7 @@ namespace SUNphi
       	: hasToEndLine(true),
       	  hasToCrash(oth.hasToCrash),
 	  colorChanged(oth.colorChanged),
+	  styleChanged(oth.styleChanged),
 	  reallyPrint(oth.reallyPrint),
 	  someOtherRankCouldBePrinting(oth.someOtherRankCouldBePrinting),
 	  someOtherThreadCouldBePrinting(oth.someOtherThreadCouldBePrinting),
@@ -169,6 +174,10 @@ namespace SUNphi
 	    // Reset color
 	    if(colorChanged)
 	      *this<<TextColor::DEFAULT;
+	    
+	    // Reset style
+	    if(styleChanged)
+	      *this<<TextStyle::RESET;
 	    
 	    // Ends the line
 	    endLine();
@@ -230,6 +239,19 @@ namespace SUNphi
 	    TEXT_CHANGE_COLOR_HEAD<<
 	    static_cast<char>(c)<<
 	    TEXT_CHANGE_COLOR_TAIL;
+      }
+      
+      /// Changes the style of the line
+      LoggerLine& operator<<(const TextStyle& c)
+      {
+	styleChanged=
+	  true;
+	
+	return
+	  *this<<
+	    TEXT_CHANGE_STYLE_HEAD<<
+	    static_cast<char>(c)<<
+	    TEXT_CHANGE_STYLE_TAIL;
       }
       
       /// Prints crash information
