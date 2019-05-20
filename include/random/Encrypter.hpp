@@ -108,7 +108,7 @@ namespace SUNphi
     }
     
     /// Build a key from a word
-    Key buildKey(const Word& word)
+    inline Key buildKey(const Word& word)
     {
       /// Output
       Key key;
