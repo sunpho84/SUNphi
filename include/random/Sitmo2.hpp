@@ -43,10 +43,43 @@ namespace SUNphi
       
     public:
       
+      /// Type returned
+      using ResultType=
+	uint32_t;
+      
       LIST_SERIALIZABLE_MEMBERS(key,state);
+      
+      /// Put a seed from a random generator
+      template <typename F>
+      void seed(F& f)
+      {
+	/// Result type of the callabale generator
+	using FRes=
+	  typename F::ResultType;
+	
+	/// Number of calls to be issued to fill the stste
+	constexpr int nCall=
+	  sizeof(Word)/sizeof(FRes);
+	
+	union
+	{
+	  /// Partial key
+	  Word partKey;
+	  
+	  /// Access to the key in a way which allows to fill with the generator
+	  FRes rawKey[nCall];
+	};
+	
+	/// Fill the key
+	for(int i=0;i<nCall;i++)
+	  rawKey[i]=
+	    f();
+	
+	key()=
+	  buildKey(partKey);
+      }
     };
   }
 }
 
 #endif
-  
