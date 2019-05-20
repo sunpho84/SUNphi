@@ -24,8 +24,8 @@
 /// - The execution of the assigner is dispatched to the thread pool.
 ///
 
+#include <ios/Logger.hpp>
 #include <smet/BinarySmET.hpp>
-#include <smet/Bind.hpp>
 #include <smet/Reference.hpp>
 #include <smet/ScalarWrap.hpp>
 

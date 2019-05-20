@@ -9,6 +9,7 @@
 #include <metaprogramming/SFINAE.hpp>
 #include <tens/TensKind.hpp>
 #include <tens/TensStor.hpp>
+#include <smet/Assign.hpp>
 #include <smet/NnarySmET.hpp>
 
 namespace SUNphi
@@ -195,7 +196,6 @@ namespace SUNphi
 #undef PROVIDE_EVALUATOR
     
     PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Tens);
-    
   };
   
   // Check that a test \c Tens is a \c NnarySmET
