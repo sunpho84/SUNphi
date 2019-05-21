@@ -42,13 +42,12 @@ namespace SUNphi
     }
   };
   
-  /// Deduction guide for ScopeDoer
-  template <typename FBegin,
-	    typename FEnd>
-  ScopeDoer(FBegin fBegin,
-	    FEnd fEnd)
-    -> ScopeDoer<FBegin,FEnd>;
-  
+  // /// Deduction guide for ScopeDoer
+  // template <typename FBegin,
+  // 	    typename FEnd>
+  // ScopeDoer(FBegin fBegin,
+  // 	    FEnd fEnd)
+  //   -> ScopeDoer<FBegin,FEnd>;
   
   /// Change the variable for the object scope
   template <typename T>
