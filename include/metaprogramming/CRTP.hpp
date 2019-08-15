@@ -24,7 +24,8 @@ namespace SUNphi
   /*! Constant cast operator to class \c CLASS */	\
   const CLASS& operator~() const			\
   {							\
-    return *static_cast<const CLASS*>(this);		\
+    return						\
+      *static_cast<const CLASS*>(this);			\
   }							\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
