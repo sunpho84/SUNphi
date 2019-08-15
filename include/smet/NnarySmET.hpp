@@ -196,7 +196,7 @@ namespace SUNphi
   
   /// Get the same assignability of a given ref
 #define AS_ASSIGNABLE_AS_REF(ID)					\
-  IS_ASSIGNABLE_ATTRIBUTE(/*! As assignable as ref ID */,Ref<ID>::isAssignable)
+  IS_ASSIGNABLE_ATTRIBUTE(/*! As assignable as ref ID */,Unqualified<Ref<ID>>::isAssignable)
   
   /// Get the same \c TensKind of a given ref
 #define SAME_TK_AS_REF(ID)			\

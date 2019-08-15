@@ -99,6 +99,7 @@ namespace SUNphi
     
     // Attributes
     NOT_STORING;
+    
     AS_ASSIGNABLE_AS_REF(0);
     
     FORWARD_IS_ALIASING_TO_REFS;

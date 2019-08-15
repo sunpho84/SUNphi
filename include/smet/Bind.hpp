@@ -182,6 +182,8 @@ namespace SUNphi
     
     // PROVIDE_ALSO_NON_CONST_METHOD(eval);
     
+    AS_ASSIGNABLE_AS_REF(0);
+    
     PROVIDE_SMET_ASSIGNEMENT_OPERATOR(Binder);
     
     /// Constructor taking a universal reference and the id

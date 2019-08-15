@@ -44,7 +44,8 @@ namespace SUNphi
       }									\
     assign(*this,forw<Oth>(oth));					\
 									\
-    return *this;							\
+    return								\
+      *this;								\
   }									\
   SWALLOW_SEMICOLON_AT_CLASS_SCOPE
   
@@ -133,7 +134,7 @@ namespace SUNphi
   /// \c Rhs can be a \c SmET or not, in which case it is wrapped into a Scalar
   template <typename Lhs, 	    // Type of the l.h.s \c SmET
 	    typename Rhs, 	    // Type of the r.h.s
-	    SFINAE_ON_TEMPLATE_ARG(isSmET<Lhs> and
+	    SFINAE_ON_TEMPLATE_ARG(isSmET<Unqualified<Lhs>> and
 				   Unqualified<Lhs>::isAssignable),
 	    SFINAE_WORSEN_DEFAULT_VERSION_TEMPLATE_PARS>
   void assign(Lhs&& lhs,             ///< Left hand side, \c SmET to act upon
