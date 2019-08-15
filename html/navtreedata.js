@@ -48,7 +48,7 @@ var NAVTREEINDEX =
 "dc/d0f/classSUNphi_1_1ThreadPool.html#a3064e7398497b7029516937ab7900ff3",
 "dd/d2b/SUNphi_8cpp.html#aefb3bd85afa3e1418572d526cbe3021d",
 "de/d58/classSUNphi_1_1Adder.html#a8236bf435ac2125d31cadc98a79fff10",
-"functions_type.html"
+"functions_type_b.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

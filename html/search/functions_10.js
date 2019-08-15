@@ -4,7 +4,7 @@ var searchData=
   ['scalarwrap',['scalarWrap',['../d9/d0c/ScalarWrap_8hpp.html#ac29e72f1eef40b76deea3931727a6091',1,'SUNphi::scalarWrap(Ts &amp;&amp;...smets)'],['../d9/d0c/ScalarWrap_8hpp.html#aba3b615897c6d44ea2d390c598a46d66',1,'SUNphi::scalarWrap(D &amp;&amp;smet)']]],
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html#aa462c7702af041273deda75d42a069c4',1,'SUNphi::ScalarWrapper']]],
   ['scopechangevar',['ScopeChangeVar',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a7053354884d27eff3c483fc302016fe3',1,'SUNphi::ScopeChangeVar::ScopeChangeVar()'],['../de/d6a/ScopeDoer_8hpp.html#a24376a565f23eb8535c38c528ab49996',1,'SUNphi::ScopeChangeVar()']]],
-  ['scopedoer',['ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a51192951f63e3e4c0bc66671e4285144',1,'SUNphi::ScopeDoer::ScopeDoer()'],['../de/d6a/ScopeDoer_8hpp.html#a89c1cd368ce7661e7493b3452da633f0',1,'SUNphi::ScopeDoer()']]],
+  ['scopedoer',['ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a51192951f63e3e4c0bc66671e4285144',1,'SUNphi::ScopeDoer']]],
   ['scopeindenter',['ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#aff0dc8f2d51cae1546a249300387e605',1,'SUNphi::ScopeIndenter']]],
   ['seed',['seed',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#a119815a1615292086ebdf88a96301460',1,'SUNphi::SFMTRandomGen::seed()'],['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#ae715bbb029f50285ef3b272a38b280d7',1,'SUNphi::Sitmo::Rng::seed()'],['../d9/d59/classSUNphi_1_1Sitmo.html#ada6109918f60efb5f44d81753ec80474',1,'SUNphi::Sitmo::seed()']]],
   ['serializable',['Serializable',['../dd/d5c/classSUNphi_1_1Serializable.html#a03dec2804c67fc8ac71015619a33df62',1,'SUNphi::Serializable']]],
