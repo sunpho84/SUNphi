@@ -158,9 +158,9 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa3235642bedbaf4675b54936e87e2318"><td class="memTemplParams" colspan="2">template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqualified&lt; Lhs &gt;::isAssignable), void * &gt;  = nullptr, typename... DummyTypes&gt; </td></tr>
-<tr class="memitem:aa3235642bedbaf4675b54936e87e2318"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#aa3235642bedbaf4675b54936e87e2318">SUNphi::assign</a> (Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)</td></tr>
-<tr class="separator:aa3235642bedbaf4675b54936e87e2318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0df41a952400f51a5e936770034b147"><td class="memTemplParams" colspan="2">template&lt;typename Lhs , typename Rhs &gt; </td></tr>
+<tr class="memitem:ac0df41a952400f51a5e936770034b147"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147">SUNphi::assign</a> (Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)</td></tr>
+<tr class="separator:ac0df41a952400f51a5e936770034b147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -204,7 +204,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides either the const or non-const evaluator. </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00112">112</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -221,7 +221,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  template &lt;typename Oth&gt;               <span class="comment">/* Other type  */</span>       <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> operator=(Oth&amp;&amp; oth)                 \</div><div class="line">  {                                 \</div><div class="line">    if(0)                               \</div><div class="line">      {                                 \</div><div class="line">    using <span class="keyword">namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;                        \</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Operator=, triggering assignement to &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;<span class="stringliteral">&quot; of &quot;</span>&lt;&lt;&amp;oth&lt;&lt;endl; \</div><div class="line">      }                                 \</div><div class="line">    assign(*<span class="keyword">this</span>,forw&lt;Oth&gt;(oth));                   \</div><div class="line">                                    \</div><div class="line">    return *<span class="keyword">this</span>;                           \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
+<b>Value:</b><div class="fragment"><div class="line">                    \</div><div class="line">  template &lt;typename Oth&gt;               <span class="comment">/* Other type  */</span>       <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> operator=(Oth&amp;&amp; oth)                 \</div><div class="line">  {                                 \</div><div class="line">    if(0)                               \</div><div class="line">      {                                 \</div><div class="line">    using <span class="keyword">namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;                        \</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Operator=, triggering assignement to &quot;</span>&lt;&lt;<span class="keyword">this</span>&lt;&lt;<span class="stringliteral">&quot; of &quot;</span>&lt;&lt;&amp;oth&lt;&lt;endl; \</div><div class="line">      }                                 \</div><div class="line">    assign(*<span class="keyword">this</span>,forw&lt;Oth&gt;(oth));                   \</div><div class="line">                                    \</div><div class="line">    return                              \</div><div class="line">      *<span class="keyword">this</span>;                                \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
 <div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
@@ -246,7 +246,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T to inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Class forcing T not to inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -281,16 +281,16 @@ template&lt;typename T , typename Ret  = void&gt; </div>
 <p>Provides the class itself if T is of the given type</p>
 <p>Provides the class itself if T satisfies the condition </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_aa3235642bedbaf4675b54936e87e2318"></a>
+<a class="anchor" id="file_ac0df41a952400f51a5e936770034b147"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqualified&lt; Lhs &gt;::isAssignable), void * &gt;  = nullptr, typename... DummyTypes&gt; </div>
+template&lt;typename Lhs , typename Rhs &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void SUNphi::assign </td>
@@ -327,7 +327,7 @@ template&lt;typename Lhs , typename Rhs , TypeIf&lt;(isSmET&lt; Lhs &gt; andUnqu
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +345,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Expression which is true if T inherits from <code><a class="el" href="../../dd/d4a/structSUNphi_1_1BaseAssigner.html">BaseAssigner</a></code> </p>
 
-<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d9b/Assign_8hpp_source.html#l00053">53</a> of file <a class="el" href="../../d1/d9b/Assign_8hpp_source.html">Assign.hpp</a>.</p>
 
 </div>
 </div>

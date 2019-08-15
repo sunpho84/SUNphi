@@ -273,8 +273,8 @@ class {</td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a7dc84a875fc25ee09d513d952642c9cb"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html#a7dc84a875fc25ee09d513d952642c9cb">isStoring</a> = false</td></tr>
 <tr class="separator:a7dc84a875fc25ee09d513d952642c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a094477d325d23dae12af9ff25e7de6b0"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html#a094477d325d23dae12af9ff25e7de6b0">isAssignable</a></td></tr>
-<tr class="separator:a094477d325d23dae12af9ff25e7de6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db47d38301c83bd9458ca376f28b241"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html#a0db47d38301c83bd9458ca376f28b241">isAssignable</a> = <a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a265d16e4d44bac1a54f236b14192f3f0">Unqualified</a>&lt;<a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html#a86c67448be258d5d7ff6a184f2aa5679">Ref</a>&lt; 0 &gt;&gt;::isAssignable</td></tr>
+<tr class="separator:a0db47d38301c83bd9458ca376f28b241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -505,7 +505,7 @@ template&lt;typename SMET , typename  = EnableIf&lt;isSame&lt;Unqualified&lt;SME
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00192">192</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00194">194</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1040,7 @@ template&lt;typename Oth &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00187">187</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>
@@ -1156,27 +1156,29 @@ template&lt;typename Oth &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a094477d325d23dae12af9ff25e7de6b0"></a>
+<a class="anchor" id="a0db47d38301c83bd9458ca376f28b241"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename TG , typename... _Refs&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="../../dc/d2f/structSUNphi_1_1NnarySmET.html">SUNphi::NnarySmET</a>&lt; <a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html">Binder</a>&lt; TG, _Refs... &gt;  &gt;::isAssignable</td>
+          <td class="memname">constexpr bool <a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html">SUNphi::Binder</a>&lt; TG, _Refs &gt;::isAssignable = <a class="el" href="../../d0/d81/TypeTraits_8hpp.html#a265d16e4d44bac1a54f236b14192f3f0">Unqualified</a>&lt;<a class="el" href="../../d6/db9/classSUNphi_1_1Binder.html#a86c67448be258d5d7ff6a184f2aa5679">Ref</a>&lt; 0 &gt;&gt;::isAssignable</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether this <code>SmET</code> can be the left hand of an assignement</p>
-<p>This SmET can never be lhs </p>
+<p>Returns whether this <code><a class="el" href="../../d1/d31/structSUNphi_1_1SmET.html" title="Smart Expression Templates. ">SmET</a></code> can be the left hand of an assignement</p>
+<p>As assignable as ref 0 </p>
 
-<p>Definition at line <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html#l00044">44</a> of file <a class="el" href="../../d2/d69/NnarySmET_8hpp_source.html">NnarySmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/de1/Bind_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../dc/de1/Bind_8hpp_source.html">Bind.hpp</a>.</p>
 
 </div>
 </div>

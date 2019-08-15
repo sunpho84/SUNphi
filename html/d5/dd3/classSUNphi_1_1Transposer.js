@@ -32,7 +32,7 @@ var classSUNphi_1_1Transposer =
     [ "refEvalByCompsName", "d5/dd3/classSUNphi_1_1Transposer.html#a15da6f3c9613c0d5475c90e7a48c3c72", null ],
     [ "refEvalByCompsName", "d5/dd3/classSUNphi_1_1Transposer.html#afa3fc6cfc6c8bfa110266c728c2d6d54", null ],
     [ "representativeFunction", "d5/dd3/classSUNphi_1_1Transposer.html#a65d6441339afd9a95178aaedb81ad1c2", null ],
-    [ "isAssignable", "d5/dd3/classSUNphi_1_1Transposer.html#a094477d325d23dae12af9ff25e7de6b0", null ],
+    [ "isAssignable", "d5/dd3/classSUNphi_1_1Transposer.html#ad13333723a71ada5435606c8ff2a21ff", null ],
     [ "isStoring", "d5/dd3/classSUNphi_1_1Transposer.html#a7298f8998c6ff9e47281ca22ea33ac79", null ],
     [ "NSmET", "d5/dd3/classSUNphi_1_1Transposer.html#a30e427c7ee5fe45cb616d7d2e91d0ec3", null ],
     [ "refs", "d5/dd3/classSUNphi_1_1Transposer.html#ab11a9dcd9d8857f68331746cbd23b930", null ]

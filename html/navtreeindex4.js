@@ -50,7 +50,7 @@ var NAVTREEINDEX4 =
 "d6/db9/classSUNphi_1_1Binder.html":[2,0,0,64],
 "d6/db9/classSUNphi_1_1Binder.html#a045dcc260d77d1f343ce94e04a72417c":[2,0,0,64,0],
 "d6/db9/classSUNphi_1_1Binder.html#a06b3b5d023fedfd2d911c7ad35aa4c42":[2,0,0,64,37],
-"d6/db9/classSUNphi_1_1Binder.html#a094477d325d23dae12af9ff25e7de6b0":[2,0,0,64,33],
+"d6/db9/classSUNphi_1_1Binder.html#a0db47d38301c83bd9458ca376f28b241":[2,0,0,64,33],
 "d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708":[2,0,0,64,36],
 "d6/db9/classSUNphi_1_1Binder.html#a15da6f3c9613c0d5475c90e7a48c3c72":[2,0,0,64,30],
 "d6/db9/classSUNphi_1_1Binder.html#a1a58e4fbd7ec559a802aa92e8d70e3e3":[2,0,0,64,5],
