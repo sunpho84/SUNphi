@@ -11,7 +11,7 @@ namespace SUNphi
 {
   /// Initialize the crasher
 #define CRASH							\
-  runLog()<<Crasher(__FILE__,__LINE__,__PRETTY_FUNCTION__)
+  SUNphi::runLog()<<SUNphi::Crasher(__FILE__,__LINE__,__PRETTY_FUNCTION__)
   
   /// Keep all the information to crash
   class Crasher
