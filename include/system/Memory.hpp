@@ -9,6 +9,7 @@
 #include <cstdlib>
 
 #include <debug/Crash.hpp>
+#include <ios/Logger.hpp>
 #include <system/SIMD.hpp>
 
 namespace SUNphi
@@ -35,7 +36,9 @@ namespace SUNphi
   void freeMem(T* &ptr) ///< Pointer getting freed, set to zero
   {
     free(ptr);
-    ptr=nullptr;
+    
+    ptr=
+      nullptr;
   }
 }
 

@@ -155,19 +155,21 @@ namespace SUNphi
     void alloc()
     {
       // Mark down that we are creating
-      created=true;
+      created=
+	true;
       
       // Compute the size
-      totSize=TK::maxStaticIdx;
+      totSize=
+	TK::maxStaticIdx;
       for(const auto &i : dynSizes)
-	totSize*=i;
+	totSize*=
+	  i;
       
       // Allocate
       v=getRawAlignedMem<T>(totSize);
       
 #ifdef DEBUG_STOR
-      using namespace std;
-      cout<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+      runLog()<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__;
 #endif
     }
     
@@ -210,8 +212,7 @@ namespace SUNphi
     ~TensStor()
     {
 #ifdef DEBUG_STOR
-      using namespace std;
-      cout<<"TensStor destructor: "<<v<<", "<<__PRETTY_FUNCTION__<<endl;
+      runLog()<<"TensStor destructor: "<<v<<", "<<__PRETTY_FUNCTION__;
 #endif
       
       // Free
