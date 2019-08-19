@@ -20,12 +20,24 @@ namespace SUNphi
   template <class T=char>
   T* getRawAlignedMem(const size_t nel)
   {
-    void* ptr;
-    int rc=posix_memalign(&ptr,ALIGNMENT,sizeof(T)*nel);
+    /// Total size to allocate
+    const size_t size=
+      sizeof(T)*nel;
+    
+    /// Result
+    void* ptr=
+      nullptr;
+    
+    /// Returned condition
+    int rc=
+      posix_memalign(&ptr,
+		     ALIGNMENT,size);
+    
     if(rc)
-      CRASH<<"Failed to allocate "<<(int64_t)nel<<" elements of size "<<(int64_t)sizeof(T)<<" with alignement "<<(int64_t)ALIGNMENT;
-      
-    return static_cast<T*>(ptr);
+      CRASH<<"Failed to allocate "<<nel<<" elements of size "<<sizeof(T)<<" with alignement "<<ALIGNMENT;
+    
+    return
+      static_cast<T*>(ptr);
   }
   
   /// Free memory and zero the pointer
