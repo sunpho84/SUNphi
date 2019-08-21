@@ -1,12 +1,12 @@
 #ifndef _VALWITHEXTREME_HPP
 #define _VALWITHEXTREME_HPP
 
-/// \file ValwithExtreme.hpp
+/// \file ValWithExtreme.hpp
 ///
 /// \brief Defines a class which keeps track of extreme of a quantity
 ///
-/// The class holds value in the internal variable \val
-/// The extreme value is host in the \extr variable
+/// The class holds value in the internal variable \c val
+/// The extreme value is host in the \c extr variable
 /// When the class is implicitly access
 
 #include <metaprogramming/SwallowSemicolon.hpp>
