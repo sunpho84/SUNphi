@@ -20,17 +20,20 @@ do
     n=$(($n+1))
 done
 
-# mark all arguments
+# take note of all arguments
 args=($*)
 
+# take target
+target=${args[$pos]}
+
 # try to replace the ".o"
-echo ${args[$pos]}|sed 's|.o$|.s|'|read asm
+asm=$(echo $target|sed 's|.o$|.s|')
 
 # if the replace went fine, run the assembler generation
 # this avoid linking and other stages
-if [ $PIPESTATUS[1] == 0 ]
+if [ "$asm" != "$target" ]
 then
-    args[$pos]=${asm}
+    args[$pos]="${asm}"
     
     ${args[@]} -S    
 fi
