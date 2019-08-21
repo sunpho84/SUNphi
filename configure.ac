@@ -95,6 +95,13 @@ AX_SUBPACKAGE(dwarf,libdwarf/dwarf.h,dwarf,dwarf_child,DWARF,$default_dwarf)
 # yaml-cpp library
 AX_SUBPACKAGE(yaml,yaml-cpp/yaml.h,yaml-cpp,YAML::Emitter,YAML,mandatory)
 
+# Check if we enable assembler code generation
+AX_SIMPLE_ENABLE([asm-code],[no],[Enable assembler code generation])
+if test "$enable_asm_code" == "yes"
+then
+	CXX="$(readlink -f $srcdir)/config/createAsm.sh $CXX"
+fi
+
 # Configure doxygen
 DX_INIT_DOXYGEN($PACKAGE_NAME,[config/Doxyfile],[docs])
 DX_PDF_FEATURE(OFF)
@@ -102,7 +109,7 @@ DX_PS_FEATURE(OFF)
 DX_MAN_FEATURE(ON)
 DX_HTML_FEATURE(ON)
 AC_SUBST([DOXYGEN_OUTPUT_DIR],[docs])
- 
+
 # Result of conf to screen
 AC_MSG_RESULT([
 --------------------------------------------------
