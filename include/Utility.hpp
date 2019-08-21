@@ -15,5 +15,6 @@
 #include <utility/SingleInstance.hpp>
 #include <utility/String.hpp>
 #include <utility/Unused.hpp>
+#include <utility/ValWithExtreme.hpp>
 
 #endif
