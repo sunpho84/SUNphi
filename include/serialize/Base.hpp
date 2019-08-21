@@ -53,7 +53,7 @@ namespace SUNphi
   /// Stream to an output anything with a \c serialize member
   template <typename S,
 	    typename T,
-	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,T>),
+	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,const T&>),
 	    SFINAE_ON_TEMPLATE_ARG(hasMember_serialize<T>)>
   S& operator<<(S&& stream,
 		const T& ser)
