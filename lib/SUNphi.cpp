@@ -17,6 +17,7 @@
 #include <ios/MinimalLogger.hpp>
 #include <ios/TextFormat.hpp>
 #include <random/TrueRandomGenerator.hpp>
+#include <system/Memory.hpp>
 #include <system/Mpi.hpp>
 #include <system/Timer.hpp>
 #include <utility/Aliver.hpp>
@@ -215,6 +216,9 @@ namespace SUNphi
   
   /// Global true random generator
   TrueRandomGenerator trueRandomGenerator;
+  
+  /// Memory manager
+  Memory memory;
   
   /// Presentation of the library
   Aliver aliver;
