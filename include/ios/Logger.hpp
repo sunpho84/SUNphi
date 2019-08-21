@@ -210,9 +210,9 @@ namespace SUNphi
       template <typename T,                                       // Type of the quantity to print
 		typename=EnableIf<not canPrint<LoggerLine,T>>,    // SFINAE needed to avoid ambiguous overload
 		typename=EnableIf<canPrint<File,T>>>              // SFINAE needed to avoid ambiguous overload
-      LoggerLine& operator<<(T&& t)                             ///< Object to print
+      LoggerLine& operator<<(const T& t)                          ///< Object to print
       {
-	logger.file()<<forw<T>(t);
+	logger.file()<<t;
 	
 	return
 	  *this;
