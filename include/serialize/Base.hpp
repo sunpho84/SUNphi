@@ -36,7 +36,7 @@ namespace SUNphi
   
   /// Stream to an output a YAML node
   template <typename S,
-	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,YAML::Node>)>
+	    SFINAE_ON_TEMPLATE_ARG(not canPrint<S,const YAML::Node&>)>
   S& operator<<(S&& stream,
 		const YAML::Node& node)
   {
