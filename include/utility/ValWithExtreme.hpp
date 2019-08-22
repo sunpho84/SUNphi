@@ -9,9 +9,6 @@
 /// The extreme value is host in the \c extr variable
 /// When the class is implicitly access
 
-#include <metaprogramming/SwallowSemicolon.hpp>
-#include <ios/Logger.hpp>
-
 namespace SUNphi
 {
   /// Possible extreme types
@@ -45,7 +42,6 @@ namespace SUNphi
 	val(val),
 	extr(extr)
       {
-	SCOPE_INDENT(runLog);
       }
       
       /// Destructor

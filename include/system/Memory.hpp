@@ -11,6 +11,7 @@
 #include <debug/Crash.hpp>
 #include <ios/Logger.hpp>
 #include <system/SIMD.hpp>
+#include <utility/ValWithExtreme.hpp>
 
 namespace SUNphi
 {
@@ -19,17 +20,12 @@ namespace SUNphi
     /// List of dynamical allocated memory
     std::map<void*,size_t> list;
     
-    /// Maximally used memory
-    size_t maxUsed;
-    
-    /// Currently used memory
-    size_t curUsed;
+    /// Used memory
+    ValWithExtreme<size_t> used;
     
   public:
     
-    Memory() :
-      maxUsed(0),
-      curUsed(0)
+    Memory()
     {
     }
     
@@ -59,11 +55,8 @@ namespace SUNphi
 	  list[ptr]=
 	    size;
 	  
-	  curUsed+=
+	  used+=
 	    size;
-	  
-	  maxUsed=
-	    std::max(maxUsed,size);
 	}
       
       return
@@ -89,7 +82,7 @@ namespace SUNphi
 	  ptr=
 	    nullptr;
 	  
-	  curUsed-=
+	  used-=
 	    el->second;
 	}
       else
@@ -102,7 +95,7 @@ namespace SUNphi
 	for(auto& el : list)
 	  runLog()<<"Freeing "<<el.first<<" size "<<el.second;
       
-      runLog()<<"Maximal memory used: "<<maxUsed<<" byte, finally used: "<<curUsed;
+      runLog()<<"Maximal memory used: "<<used.extreme()<<" byte, finally used: "<<used;
     }
   };
   
