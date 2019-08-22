@@ -87,27 +87,34 @@ namespace SUNphi
 	extr;
     }
     
+    /// Reset to standard value
+    void reset()
+    {
+      switch(E)
+	{
+	case MINIMUM:
+	  extr=
+	    std::numeric_limits<T>::max();
+	  break;
+	case MAXIMUM:
+	  extr=
+	    std::numeric_limits<T>::min();
+	  break;
+	}
+    }
+    
     /// Constructor
     template <typename V=T>
     ValWithExtreme(const V& init) :
-      val(init)
+      val(init),
+      extr(init)
     {
     }
     
     /// Default constructor
     ValWithExtreme()
     {
-	switch(E)
-	  {
-	  case MINIMUM:
-	    extr=
-	      std::numeric_limits<T>::max();
-	    break;
-	  case MAXIMUM:
-	    extr=
-	      std::numeric_limits<T>::min();
-	    break;
-	  }
+      reset();
     }
     
     /// Implicit cast to const value reference

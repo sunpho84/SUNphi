@@ -21,7 +21,10 @@ namespace SUNphi
     std::map<void*,size_t> list;
     
     /// Used memory
-    ValWithMax<size_t> used;
+    ValWithMax<size_t> usedSize;
+    
+    /// Cached memory
+    ValWithMax<size_t> cachedSize;
     
   public:
     
@@ -55,7 +58,7 @@ namespace SUNphi
 	  list[ptr]=
 	    size;
 	  
-	  used+=
+	  usedSize+=
 	    size;
 	}
       
@@ -77,13 +80,13 @@ namespace SUNphi
 	{
 	  ::free(ptr);
 	  
-	  list.erase(el);
-	  
 	  ptr=
 	    nullptr;
 	  
-	  used-=
+	  usedSize-=
 	    el->second;
+	  
+	  list.erase(el);
 	}
       else
 	CRASH<<"Unable to find dinamically allocated memory "<<ptr;
@@ -95,7 +98,7 @@ namespace SUNphi
 	for(auto& el : list)
 	  runLog()<<"Freeing "<<el.first<<" size "<<el.second;
       
-      runLog()<<"Maximal memory used: "<<used.extreme()<<" byte, finally used: "<<used;
+      runLog()<<"Maximal memory used: "<<usedSize.extreme()<<" byte, finally used: "<<usedSize;
     }
   };
   

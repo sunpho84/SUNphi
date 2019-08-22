@@ -30,7 +30,8 @@ namespace SUNphi
     public ConstrainIsTensKind<TK> // Check that TK is a TensKind
   {
     /// Tuple containg all mapped type
-    using type=typename TK::types;
+    using type=
+      typename TK::types;
     
     /// Internal storage
     T* v;
@@ -42,10 +43,12 @@ namespace SUNphi
   public:
     
     /// Tensor Kind mapped
-    using Tk=TK;
+    using Tk=
+      TK;
     
     /// Debug access to internal storage
-    T* &_v=v;
+    T* &_v=
+      v;
     
     /// Debug store size
     int totSize;
