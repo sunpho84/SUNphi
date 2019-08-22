@@ -10,5 +10,6 @@ var searchData=
   ['compsize',['compSize',['../d9/d41/structSUNphi_1_1HasMember__compSize_1_1Fallback.html#a15452fead4122d911e6b55bca6de4a1d',1,'SUNphi::HasMember_compSize::Fallback']]],
   ['contains',['contains',['../d8/df8/classSUNphi_1_1TensKind.html#a437e8eac96fb02e9137c51a0df99573d',1,'SUNphi::TensKind']]],
   ['coordsofpointshashtable',['coordsOfPointsHashTable',['../d2/d37/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a167ff626c511ed2ebe0bca79c3c8d80b',1,'SUNphi::GridHashable&lt; T, NDims, Coord, Idx, true &gt;']]],
-  ['created',['created',['../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d',1,'SUNphi::TensStor']]]
+  ['created',['created',['../d3/d22/classSUNphi_1_1TensStor.html#a7815fd4680b99c8ea6b949bf64979a8d',1,'SUNphi::TensStor']]],
+  ['curused',['curUsed',['../d9/dc6/classSUNphi_1_1Memory.html#a285f5a90464fdc3d32532e40851ccbb2',1,'SUNphi::Memory']]]
 ];

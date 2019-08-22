@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['w128_5ft',['w128_t',['../d2/d7c/unionSUNphi_1_1SFMTRandomGen_1_1w128__t.html',1,'SUNphi::SFMTRandomGen']]],
-  ['wrapper',['Wrapper',['../d1/d77/classSUNphi_1_1Wrapper.html',1,'SUNphi']]]
+  ['valwithextreme',['ValWithExtreme',['../d8/def/classSUNphi_1_1ValWithExtreme.html',1,'SUNphi']]],
+  ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]],
+  ['vector_3c_20int_20_3e',['Vector&lt; Int &gt;',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]]
 ];

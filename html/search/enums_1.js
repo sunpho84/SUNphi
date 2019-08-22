@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['left_5fright_5ft',['LEFT_RIGHT_T',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ae1680898a597819fa81093bc8e9b5fdc',1,'SUNphi::SFMTRandomGen']]]
+  ['gridflag',['GridFlag',['../db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c',1,'SUNphi']]]
 ];

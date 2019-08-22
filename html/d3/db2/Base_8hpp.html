@@ -167,7 +167,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac96764c9a6336c235e94a27dbc62d956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to an output a YAML node.  <a href="../../d3/db2/Base_8hpp.html#ac96764c9a6336c235e94a27dbc62d956">More...</a><br /></td></tr>
 <tr class="separator:ac96764c9a6336c235e94a27dbc62d956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1c25b985a663d7ea708f92b35f1501"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9c1c25b985a663d7ea708f92b35f1501"></a>
-template&lt;typename S , typename T , TypeIf&lt;(not canPrint&lt; S, T &gt;), void * &gt;  = nullptr, TypeIf&lt;(hasMember_serialize&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
+template&lt;typename S , typename T , TypeIf&lt;(not canPrint&lt; S, const T &amp; &gt;), void * &gt;  = nullptr, TypeIf&lt;(hasMember_serialize&lt; T &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a9c1c25b985a663d7ea708f92b35f1501"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/db2/Base_8hpp.html#a9c1c25b985a663d7ea708f92b35f1501">SUNphi::operator&lt;&lt;</a> (S &amp;&amp;stream, const T &amp;ser)</td></tr>
 <tr class="memdesc:a9c1c25b985a663d7ea708f92b35f1501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to an output anything with a <code>serialize</code> member. <br /></td></tr>
 <tr class="separator:a9c1c25b985a663d7ea708f92b35f1501"><td class="memSeparator" colspan="2">&#160;</td></tr>

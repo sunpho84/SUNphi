@@ -172,6 +172,7 @@ var annotated_dup =
       [ "IsPresent", "dd/de6/structSUNphi_1_1IsPresent.html", "dd/de6/structSUNphi_1_1IsPresent" ],
       [ "Logger", "d3/d78/classSUNphi_1_1Logger.html", "d3/d78/classSUNphi_1_1Logger" ],
       [ "MasterRandomGenerator", "d3/da1/classSUNphi_1_1MasterRandomGenerator.html", "d3/da1/classSUNphi_1_1MasterRandomGenerator" ],
+      [ "Memory", "d9/dc6/classSUNphi_1_1Memory.html", "d9/dc6/classSUNphi_1_1Memory" ],
       [ "Mpi", "df/d09/classSUNphi_1_1Mpi.html", "df/d09/classSUNphi_1_1Mpi" ],
       [ "MulAdder", "dc/d5d/classSUNphi_1_1MulAdder.html", "dc/d5d/classSUNphi_1_1MulAdder" ],
       [ "Mutex", "d6/d3d/structSUNphi_1_1Mutex.html", "d6/d3d/structSUNphi_1_1Mutex" ],
@@ -207,6 +208,7 @@ var annotated_dup =
       [ "TwinTensCompOf< Col >", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html", "d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4" ],
       [ "TwinTensCompOf< Spin >", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html", "dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4" ],
       [ "UMinuser", "dd/d03/classSUNphi_1_1UMinuser.html", "dd/d03/classSUNphi_1_1UMinuser" ],
+      [ "ValWithExtreme", "d8/def/classSUNphi_1_1ValWithExtreme.html", "d8/def/classSUNphi_1_1ValWithExtreme" ],
       [ "Vector", "df/dc0/classSUNphi_1_1Vector.html", "df/dc0/classSUNphi_1_1Vector" ],
       [ "Wrapper", "d1/d77/classSUNphi_1_1Wrapper.html", "d1/d77/classSUNphi_1_1Wrapper" ]
     ] ],

@@ -7,6 +7,8 @@ var searchData=
   ['maxknownsubmultiple',['maxKnownSubMultiple',['../d1/d96/structSUNphi_1_1TensComp.html#ae29a38b5b9a7ff35e0798d43279090c3',1,'SUNphi::TensComp']]],
   ['maxoflist',['maxOfList',['../d5/d3e/IntListOperations_8hpp.html#afd3edf213b2838b37e655757c305d047',1,'SUNphi']]],
   ['maxstaticidx',['maxStaticIdx',['../d8/df8/classSUNphi_1_1TensKind.html#a5e449207cc5e6c071717ed8651922ee5',1,'SUNphi::TensKind']]],
+  ['maxused',['maxUsed',['../d9/dc6/classSUNphi_1_1Memory.html#a77e36e4bf6abdb7856693be7622f9b34',1,'SUNphi::Memory']]],
+  ['memory',['memory',['../d4/d18/Memory_8hpp.html#a71c72610c1d37f4ec1bd3c2d69e6e184',1,'SUNphi']]],
   ['mergeablecomps',['MergeableComps',['../d1/de4/structSUNphi_1_1HasMember__MergeableComps_1_1Fallback.html#a210ea99755250764d9f2855c4ced4d8b',1,'SUNphi::HasMember_MergeableComps::Fallback']]],
   ['mexp',['MEXP',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ac3e08a254fddc1a56865d898e7f4f5ee',1,'SUNphi::SFMTRandomGen']]],
   ['minoflist',['minOfList',['../d5/d3e/IntListOperations_8hpp.html#a9bcedb4b0596b7e77f6f0620b3e944c4',1,'SUNphi']]],

@@ -1,5 +1,5 @@
 var Memory_8hpp =
 [
-    [ "freeMem", "d4/d18/Memory_8hpp.html#a35a11a502f5f7157229fe91c36aaa5a3", null ],
-    [ "getRawAlignedMem", "d4/d18/Memory_8hpp.html#a617976906032089be21d99331835da8f", null ]
+    [ "Memory", "d9/dc6/classSUNphi_1_1Memory.html", "d9/dc6/classSUNphi_1_1Memory" ],
+    [ "memory", "d4/d18/Memory_8hpp.html#a71c72610c1d37f4ec1bd3c2d69e6e184", null ]
 ];

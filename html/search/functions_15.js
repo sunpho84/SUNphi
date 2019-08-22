@@ -5,6 +5,7 @@ var searchData=
   ['_7efile',['~File',['../d5/d99/classSUNphi_1_1File.html#a27c461aa4630ff678f37f9c1f16ea4f1',1,'SUNphi::File']]],
   ['_7eloggerline',['~LoggerLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff24f1c1ec41656011d19f21c2fcf6ed',1,'SUNphi::Logger::LoggerLine']]],
   ['_7empi',['~Mpi',['../df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da',1,'SUNphi::Mpi']]],
+  ['_7eproxyval',['~ProxyVal',['../df/dd6/classSUNphi_1_1ValWithExtreme_1_1ProxyVal.html#ac8e65251ebe0787aa4fe569d3b9a5cc9',1,'SUNphi::ValWithExtreme::ProxyVal']]],
   ['_7erelbinder',['~RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#acc575a7af4e8426e0502581cae4caaab',1,'SUNphi::RelBinder']]],
   ['_7escopechangevar',['~ScopeChangeVar',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a3936e43e92529113ed1415941c37603f',1,'SUNphi::ScopeChangeVar']]],
   ['_7escopedoer',['~ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a4f5bf9f92bc5fefd1f1bbfd2499f1717',1,'SUNphi::ScopeDoer']]],

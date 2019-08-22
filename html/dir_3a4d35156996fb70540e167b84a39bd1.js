@@ -13,5 +13,6 @@ var dir_3a4d35156996fb70540e167b84a39bd1 =
       [ "SingleInstance", "db/d2f/classSUNphi_1_1SingleInstance.html", "db/d2f/classSUNphi_1_1SingleInstance" ]
     ] ],
     [ "String.hpp", "d8/d32/String_8hpp.html", "d8/d32/String_8hpp" ],
-    [ "Unused.hpp", "db/dde/Unused_8hpp.html", "db/dde/Unused_8hpp" ]
+    [ "Unused.hpp", "db/dde/Unused_8hpp.html", "db/dde/Unused_8hpp" ],
+    [ "ValWithExtreme.hpp", "d7/d16/ValWithExtreme_8hpp.html", "d7/d16/ValWithExtreme_8hpp" ]
 ];
