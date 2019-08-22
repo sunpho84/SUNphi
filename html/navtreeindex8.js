@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"dd/d10/SpaceTime_8hpp.html":[3,0,2,7,2],
 "dd/d10/SpaceTime_8hpp.html#a4a9c193cd452ad7e0b5d38fca763c5cc":[3,0,2,7,2,2],
 "dd/d10/SpaceTime_8hpp.html#aa84901504c2f92deee364906be8fd6de":[3,0,2,7,2,3],
 "dd/d10/SpaceTime_8hpp.html#ad42df6f4e786eb21661f8f399acb69a7":[3,0,2,7,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "de/d58/classSUNphi_1_1Adder.html#a0945beceeea78e1104d09dedbbbddfb1":[2,0,0,39,16],
 "de/d58/classSUNphi_1_1Adder.html#a0b7408ed04423ae8a59d2aef62abaea4":[2,0,0,39,2],
 "de/d58/classSUNphi_1_1Adder.html#a133e8a3627baa8f2ef908b5cdff58152":[2,0,0,39,35],
-"de/d58/classSUNphi_1_1Adder.html#a15da6f3c9613c0d5475c90e7a48c3c72":[2,0,0,39,29],
-"de/d58/classSUNphi_1_1Adder.html#a19398d70958488df85ad7467d80ffb5b":[2,0,0,39,13]
+"de/d58/classSUNphi_1_1Adder.html#a15da6f3c9613c0d5475c90e7a48c3c72":[2,0,0,39,29]
 };

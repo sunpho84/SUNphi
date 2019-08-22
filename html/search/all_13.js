@@ -15,6 +15,7 @@ var searchData=
   ['unsignedof',['UnsignedOf',['../d0/d81/TypeTraits_8hpp.html#acbe553b607c13ed330f2d218e221ab35',1,'SUNphi']]],
   ['unsignedsize',['UnsignedSize',['../df/dc0/classSUNphi_1_1Vector.html#a491d67a0f82a935991d7251c10cdf02d',1,'SUNphi::Vector']]],
   ['unused_2ehpp',['Unused.hpp',['../db/dde/Unused_8hpp.html',1,'']]],
+  ['used',['used',['../d9/dc6/classSUNphi_1_1Memory.html#a4f93b0df831e0ac557c619bbf42cff85',1,'SUNphi::Memory']]],
   ['using',['USING',['../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52',1,'BaseSmET.hpp']]],
   ['utility_2ehpp',['Utility.hpp',['../d4/d03/Utility_8hpp.html',1,'']]]
 ];

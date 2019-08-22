@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"de/d58/classSUNphi_1_1Adder.html#a19398d70958488df85ad7467d80ffb5b":[2,0,0,39,13],
 "de/d58/classSUNphi_1_1Adder.html#a1d6ded1dcd22920fde3d904c29f61374":[2,0,0,39,27],
 "de/d58/classSUNphi_1_1Adder.html#a276569c261ce7b5cbd12efad6f000890":[2,0,0,39,7],
 "de/d58/classSUNphi_1_1Adder.html#a302bf10f8751e25cd44cf91bf0a0b988":[2,0,0,39,25],
@@ -227,8 +228,8 @@ var NAVTREEINDEX9 =
 "dir_f7c9792946d4ae97dc97b9de2773b6b2.html":[3,0,2,7],
 "dir_fba38f648377aa56ae5d69782adf9e53.html":[3,0,2,5],
 "files.html":[3,0],
-"functions.html":[2,3,0],
 "functions.html":[2,3,0,0],
+"functions.html":[2,3,0],
 "functions_0x7e.html":[2,3,0,23],
 "functions_a.html":[2,3,0,1],
 "functions_b.html":[2,3,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "functions_func_f.html":[2,3,1,6],
 "functions_func_g.html":[2,3,1,7],
 "functions_func_h.html":[2,3,1,8],
-"functions_func_i.html":[2,3,1,9],
-"functions_func_l.html":[2,3,1,10]
+"functions_func_i.html":[2,3,1,9]
 };

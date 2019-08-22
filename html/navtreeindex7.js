@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"db/dde/Unused_8hpp.html#aec797c5e33c3c2b48b8bc89e51da83bb":[3,0,2,15,9,0],
 "db/dde/Unused_8hpp_source.html":[3,0,2,15,9],
 "db/de9/classSUNphi_1_1Crasher.html":[2,0,0,125],
 "db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149":[2,0,0,125,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "dd/d03/classSUNphi_1_1UMinuser.html#ae05ad03fafa91f2ae9a6d16d650910b5":[2,0,0,202,3],
 "dd/d03/classSUNphi_1_1UMinuser.html#af59b8f5d84d0074990b5096a83b31833":[2,0,0,202,1],
 "dd/d03/classSUNphi_1_1UMinuser.html#af7b5c253b3b3f556363f8cca5c296aa4":[2,0,0,202,12],
-"dd/d03/classSUNphi_1_1UMinuser.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,202,29],
-"dd/d10/SpaceTime_8hpp.html":[3,0,2,7,2]
+"dd/d03/classSUNphi_1_1UMinuser.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,202,29]
 };
