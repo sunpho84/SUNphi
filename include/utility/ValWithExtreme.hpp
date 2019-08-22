@@ -9,6 +9,8 @@
 /// The extreme value is host in the \c extr variable
 /// When the class is implicitly access
 
+#include <limits>
+
 namespace SUNphi
 {
   /// Possible extreme types
@@ -16,7 +18,7 @@ namespace SUNphi
   
   /// Class which keeps track of extreme values of a given type
   template <typename T,
-	    Extreme E=MAXIMUM>
+	    Extreme E>
   class ValWithExtreme
   {
     /// Stored value
@@ -87,10 +89,25 @@ namespace SUNphi
     
     /// Constructor
     template <typename V=T>
-    ValWithExtreme(const V& init=0) :
-      val(init),
-      extr(init)
+    ValWithExtreme(const V& init) :
+      val(init)
     {
+    }
+    
+    /// Default constructor
+    ValWithExtreme()
+    {
+	switch(E)
+	  {
+	  case MINIMUM:
+	    extr=
+	      std::numeric_limits<T>::max();
+	    break;
+	  case MAXIMUM:
+	    extr=
+	      std::numeric_limits<T>::min();
+	    break;
+	  }
     }
     
     /// Implicit cast to const value reference
@@ -108,6 +125,11 @@ namespace SUNphi
     	ProxyVal(val,extr);
     }
   };
+  
+  /// class to keep a value and its maximum
+  template <typename T>
+  using ValWithMax=
+    ValWithExtreme<T,MAXIMUM>;
 }
 
 #endif

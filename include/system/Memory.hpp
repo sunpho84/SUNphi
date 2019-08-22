@@ -21,7 +21,7 @@ namespace SUNphi
     std::map<void*,size_t> list;
     
     /// Used memory
-    ValWithExtreme<size_t> used;
+    ValWithMax<size_t> used;
     
   public:
     
