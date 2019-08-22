@@ -162,7 +162,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7d5331096776736ddfdffb7450b28862"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:a7d5331096776736ddfdffb7450b28862"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/db2/Base_8hpp.html#a7d5331096776736ddfdffb7450b28862">SUNphi::hasMember_serializeHelper</a> ()</td></tr>
 <tr class="separator:a7d5331096776736ddfdffb7450b28862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac96764c9a6336c235e94a27dbc62d956"><td class="memTemplParams" colspan="2">template&lt;typename S , TypeIf&lt;(not canPrint&lt; S, YAML::Node &gt;), void * &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ac96764c9a6336c235e94a27dbc62d956"><td class="memTemplParams" colspan="2">template&lt;typename S , TypeIf&lt;(not canPrint&lt; S, const YAML::Node &amp; &gt;), void * &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ac96764c9a6336c235e94a27dbc62d956"><td class="memTemplItemLeft" align="right" valign="top">S &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d3/db2/Base_8hpp.html#ac96764c9a6336c235e94a27dbc62d956">SUNphi::operator&lt;&lt;</a> (S &amp;&amp;stream, const YAML::Node &amp;node)</td></tr>
 <tr class="memdesc:ac96764c9a6336c235e94a27dbc62d956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream to an output a YAML node.  <a href="../../d3/db2/Base_8hpp.html#ac96764c9a6336c235e94a27dbc62d956">More...</a><br /></td></tr>
 <tr class="separator:ac96764c9a6336c235e94a27dbc62d956"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,7 +240,7 @@ template&lt;typename Type &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S , TypeIf&lt;(not canPrint&lt; S, YAML::Node &gt;), void * &gt;  = nullptr&gt; </div>
+template&lt;typename S , TypeIf&lt;(not canPrint&lt; S, const YAML::Node &amp; &gt;), void * &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">S&amp; SUNphi::operator&lt;&lt; </td>
