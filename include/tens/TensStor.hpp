@@ -220,7 +220,7 @@ namespace SUNphi
       
       // Free
       if(created)
-	memory.free(v);
+	memory.release(v);
     }
   };
   

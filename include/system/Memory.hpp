@@ -15,32 +15,30 @@
 
 namespace SUNphi
 {
+  /// Memory manager
   class Memory
   {
     /// List of dynamical allocated memory
-    std::map<void*,size_t> list;
+    std::map<void*,size_t> used;
     
-    /// Used memory
+    /// List of cached allocated memory
+    std::map<size_t,std::vector<void*>> cached;
+    
+    /// Size of used memory
     ValWithMax<size_t> usedSize;
     
-    /// Cached memory
+    /// Size of cached memory
     ValWithMax<size_t> cachedSize;
     
-  public:
-    
-    Memory()
-    {
-    }
+    /// Use or not cache
+    bool useCache{true};
     
     /// Get aligned memory
     ///
     /// Call the system routine which allocate memory
-    template <class T=char>
-    T* getRawAligned(const size_t nel)
+    void* allocateRawAligned(const size_t size)
     {
-      /// Total size to allocate
-      const size_t size=
-	sizeof(T)*nel;
+      // runLog()<<"Raw allocating "<<size;
       
       /// Result
       void* ptr=
@@ -52,53 +50,226 @@ namespace SUNphi
 		       ALIGNMENT,size);
       
       if(rc)
-	CRASH<<"Failed to allocate "<<nel<<" elements of size "<<sizeof(T)<<" with alignement "<<ALIGNMENT;
+	CRASH<<"Failed to allocate "<<size<<" with alignement "<<ALIGNMENT;
+      
+      return
+	ptr;
+    }
+    
+    /// Add to the list of used memory
+    void pushToUsed(void* ptr,
+		    const size_t size)
+    {
+      used[ptr]=
+	size;
+      
+      usedSize+=
+	size;
+      
+      // runLog()<<"Pushing to used "<<ptr<<" "<<size<<", number of used:"<<used.size();
+    }
+    
+    /// Removes a pointer from the used list, without actually freeing associated memory
+    ///
+    /// Returns the size of the memory pointed
+    size_t popFromUsed(void* ptr) ///< Pointer to the memory to move to cache
+    {
+      // runLog()<<"Popping from used "<<ptr;
+      
+      auto el=
+	used.find(ptr);
+      
+      if(el==used.end())
+	CRASH<<"Unable to find dinamically allocated memory "<<ptr;
+      
+      /// Size of memory
+      const size_t size=
+	el->second;
+      
+      usedSize-=
+	size;
+      
+      used.erase(el);
+      
+      return
+	size;
+    }
+    
+    /// Adds a memory to cache
+    void pushToCache(const size_t size,
+		     void* ptr)
+    {
+      cached[size].push_back(ptr);
+      
+      cachedSize+=
+	size;
+      
+      // runLog()<<"Pushing to cache "<<size<<" "<<ptr<<", cache size: "<<cached.size();
+    }
+    
+    /// Pop from the cache, returning to use
+    void* popFromCache(const size_t& size)
+    {
+      // runLog()<<"Try to popping from cache "<<size;
+      
+      /// List of memory with searched size
+      auto list=
+	cached.find(size);
+      
+      if(list==cached.end())
+	return
+	  nullptr;
       else
 	{
-	  list[ptr]=
+	  /// Get latest cached memory
+	  void* ptr=
+	    list->second.back();
+	  
+	  list->second.pop_back();
+	  
+	  cachedSize-=
 	    size;
 	  
-	  usedSize+=
-	    size;
+	  if(list->second.size()==0)
+	    cached.erase(list);
+	  
+	  return
+	    ptr;
 	}
+    }
+    
+    /// Move the allocated memory to cache
+    void moveToCache(void* ptr) ///< Pointer to the memory to move to cache
+    {
+      // runLog()<<"Moving to cache "<<ptr;
+      
+      /// Size of pointed memory
+      const size_t size=
+	popFromUsed(ptr);
+      
+      pushToCache(size,ptr);
+    }
+    
+  public:
+    
+    /// Enable cache usage
+    void enableCache()
+    {
+      useCache=
+	true;
+    }
+    
+    /// Disable cache usage
+    void disableCache()
+    {
+      useCache=
+	false;
+      
+      clearCache(); 
+    }
+    
+    /// Allocate or get from cache after computing the proper size
+    template <class T=char>
+    T* getRawAligned(const size_t nel)
+    {
+      /// Total size to allocate
+      const size_t size=
+	sizeof(T)*nel;
+      
+      /// Allocated memory
+      void* ptr=
+	popFromCache(size);
+      
+      if(ptr==nullptr)
+	ptr=
+	  allocateRawAligned(size);
+      
+      pushToUsed(ptr,size);
       
       return
 	static_cast<T*>(ptr);
     }
     
-    /// Free memory and zero the pointer
+    /// Decleare unused the memory
     template <class T>
-    void free(T* &_ptr) ///< Pointer getting freed, set to zero
+    void release(T* ptr) ///< Pointer getting freed
     {
-      void* &ptr=
-	reinterpret_cast<void*&>(_ptr);
-      
-      auto el=
-	list.find(ptr);
-      
-      if(el!=list.end())
-	{
-	  ::free(ptr);
-	  
-	  ptr=
-	    nullptr;
-	  
-	  usedSize-=
-	    el->second;
-	  
-	  list.erase(el);
-	}
+      if(useCache)
+	moveToCache(static_cast<void*>(ptr));
       else
-	CRASH<<"Unable to find dinamically allocated memory "<<ptr;
+	{
+	  popFromUsed(ptr);
+	  free(ptr);
+	}
     }
     
+    /// Release all used memory
+    void releaseAllUsedMemory()
+    {
+      /// Iterator on elements to release
+      auto el=
+	used.begin();
+      
+      while(el!=used.end())
+	{
+	  // runLog()<<"Releasing "<<el.first<<" size "<<el.second;
+	  
+	  /// Pointer to memory to release
+	  void* ptr=
+	    el->first;
+	  
+	  // Increment iterator before releasing
+	  el++;
+	  
+	  release(ptr);
+	}
+    }
+    
+    /// Release all memory from cache
+    void clearCache()
+    {
+      /// Iterator to elements of the cached memory list
+      auto el=
+	cached.begin();
+      
+      while(el!=cached.end())
+	{
+	  /// Number of elements to free
+	  const size_t n=
+	    el->second.size();
+	  
+	  /// Size to be removed
+	  const size_t size=
+	    el->first;
+	  
+	  // Increment before erasing
+	  el++;
+	  
+	  for(size_t i=0;i<n;i++)
+	    {
+	      // runLog()<<"Removing from cache size "<<el.first;
+	      
+	      /// Memory to free
+	      void* ptr=
+		popFromCache(size);
+	      
+	      free(ptr);
+	    }
+	}
+    }
+    
+    /// Destruct the memory manager
+    ///
+    /// First
     ~Memory()
     {
-      if(list.size())
-	for(auto& el : list)
-	  runLog()<<"Freeing "<<el.first<<" size "<<el.second;
+      releaseAllUsedMemory();
       
       runLog()<<"Maximal memory used: "<<usedSize.extreme()<<" byte, finally used: "<<usedSize;
+      
+      clearCache();
+      
+      runLog()<<"Maximal memory cached: "<<cachedSize.extreme()<<" byte, finally used: "<<cachedSize;
     }
   };
   
