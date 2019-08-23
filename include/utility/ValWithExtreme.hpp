@@ -11,6 +11,8 @@
 
 #include <limits>
 
+#include <metaprogramming/SwallowSemicolon.hpp>
+
 namespace SUNphi
 {
   /// Possible extreme types
@@ -27,55 +29,31 @@ namespace SUNphi
     /// Extreme value
     T extr;
     
-    /// Proxy holding value and extreme, needed to update extreme at destruction
-    class ProxyVal
+    /// Update the extreme
+    ValWithExtreme& updateExtreme()
     {
-      /// Reference to stored value
-      T& val;
+      /// Result of whether it's extreme or not
+      bool is;
       
-      /// Reference to extreme value
-      T& extr;
+      switch(E)
+	{
+	case MINIMUM:
+	  is=
+	    (val<extr);
+	  break;
+	case MAXIMUM:
+	  is=
+	    (val>extr);
+	  break;
+	}
       
-    public:
-      
-      /// Constructor
-      ProxyVal(T& val,
-	       T& extr) :
-	val(val),
-	extr(extr)
-      {
-      }
-      
-      /// Destructor
-      ~ProxyVal()
-      {
-	/// Result of whether it's extreme or not
-	bool is;
-	
-	switch(E)
-	  {
-	  case MINIMUM:
-	    is=
-	      (val<extr);
-	    break;
-	  case MAXIMUM:
-	    is=
-	      (val>extr);
-	    break;
-	  }
-	
-	if(is)
-	  extr=
-	    val;
-      }
-      
-      /// Implicit cast to value
-      operator T&()
-      {
-	return
+      if(is)
+	extr=
 	  val;
-      }
-    };
+      
+      return
+	*this;
+    }
     
   public:
     
@@ -125,12 +103,27 @@ namespace SUNphi
     	val;
     }
     
-    /// Implicit cast to proxy
-    operator T&()
-    {
-      return
-    	ProxyVal(val,extr);
-    }
+    /// Provide an unary operator \c OP
+#define PROVIDE_UNARY_OPERATOR(OP)		\
+    /*! Unary operator \c OP with update */	\
+    template <typename V>			\
+    ValWithExtreme& operator OP (const V& oth)	\
+    {						\
+    val OP					\
+    oth;					\
+						\
+    return					\
+      updateExtreme();				\
+    }						\
+    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    
+    PROVIDE_UNARY_OPERATOR(+=);
+    
+    PROVIDE_UNARY_OPERATOR(-=);
+    
+    PROVIDE_UNARY_OPERATOR(=);
+    
+#undef PROVIDE_UNARY_OPERATOR
   };
   
   /// class to keep a value and its maximum
