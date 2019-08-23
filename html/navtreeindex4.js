@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"d6/d2b/Combinatorial_8hpp.html":[3,0,2,15,2],
 "d6/d2b/Combinatorial_8hpp_source.html":[3,0,2,15,2],
 "d6/d3d/structSUNphi_1_1Mutex.html":[2,0,0,170],
 "d6/d3d/structSUNphi_1_1Mutex.html#a4b94701f3873a79416fb695caec1cec8":[2,0,0,170,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d8/d1c/classSUNphi_1_1Tens.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,191,13],
 "d8/d1c/classSUNphi_1_1Tens.html#aabd00464353ba18b8399dd70acb45a7b":[2,0,0,191,27],
 "d8/d1c/classSUNphi_1_1Tens.html#ab35c629418604756feded25a087f31ca":[2,0,0,191,9],
-"d8/d1c/classSUNphi_1_1Tens.html#ab692c6c951b0ec11da186a4f03808cfb":[2,0,0,191,11],
-"d8/d1c/classSUNphi_1_1Tens.html#ac3da8e5493150be956a0a72f7ff873ae":[2,0,0,191,0]
+"d8/d1c/classSUNphi_1_1Tens.html#ab692c6c951b0ec11da186a4f03808cfb":[2,0,0,191,11]
 };

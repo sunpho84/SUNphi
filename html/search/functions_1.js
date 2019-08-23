@@ -6,7 +6,7 @@ var searchData=
   ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html#a481c041d4913e5799b787dba04b024e7',1,'SUNphi::Aliver']]],
   ['aliverhelper',['aliverHelper',['../d2/d0a/Aliver_8hpp.html#aefb3bd85afa3e1418572d526cbe3021d',1,'SUNphi']]],
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
-  ['allocaterawaligned',['allocateRawAligned',['../d9/dc6/classSUNphi_1_1Memory.html#ae184cc2b4343b942fab44dca3734aa7b',1,'SUNphi::Memory']]],
+  ['allocaterawaligned',['allocateRawAligned',['../d9/dc6/classSUNphi_1_1Memory.html#adbbc433b4be3c4cc851dd043bfdd775d',1,'SUNphi::Memory']]],
   ['allreduce',['allReduce',['../df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1',1,'SUNphi::Mpi']]],
   ['asmutable',['asMutable',['../d0/d81/TypeTraits_8hpp.html#ac958ebeb40834e959e0f6847a91d0ffe',1,'SUNphi']]],
   ['assertcoordsareinrange',['assertCoordsAreInRange',['../dd/dca/classSUNphi_1_1Grid.html#a160a49645ad23cb4e66912a145008f06',1,'SUNphi::Grid']]],

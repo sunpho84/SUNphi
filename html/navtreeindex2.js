@@ -209,7 +209,8 @@ var NAVTREEINDEX2 =
 "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html":[2,0,0,158,2],
 "d4/d0a/structSUNphi_1_1HasMember__Tk_1_1Fallback.html#aea96dc710e55bd66d48f4c2617812eec":[2,0,0,158,2,0],
 "d4/d18/Memory_8hpp.html":[3,0,2,11,0],
-"d4/d18/Memory_8hpp.html#a71c72610c1d37f4ec1bd3c2d69e6e184":[3,0,2,11,0,1],
+"d4/d18/Memory_8hpp.html#a03d83b460541e5ff9cae283d9f55afb2":[3,0,2,11,0,1],
+"d4/d18/Memory_8hpp.html#a71c72610c1d37f4ec1bd3c2d69e6e184":[3,0,2,11,0,2],
 "d4/d18/Memory_8hpp_source.html":[3,0,2,11,0],
 "d4/d25/System_8hpp.html":[3,0,2,28],
 "d4/d25/System_8hpp_source.html":[3,0,2,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d4/d4b/classSUNphi_1_1Assigner.html#aaa1c2a1a409749d2ba19a25ed7c51a77":[2,0,0,41,14],
 "d4/d4b/classSUNphi_1_1Assigner.html#ab5e251b5769fdf1b63c86800fb1d4a7a":[2,0,0,41,4],
 "d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b":[2,0,0,41,11],
-"d4/d4b/classSUNphi_1_1Assigner.html#abfa43b03b21af3d0a409cc68672684d3":[2,0,0,41,15],
-"d4/d4b/classSUNphi_1_1Assigner.html#ae428c0589b26060d587c69a498085fb4":[2,0,0,41,23]
+"d4/d4b/classSUNphi_1_1Assigner.html#abfa43b03b21af3d0a409cc68672684d3":[2,0,0,41,15]
 };

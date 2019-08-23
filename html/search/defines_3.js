@@ -3,6 +3,7 @@ var searchData=
   ['debug_5ftens_5fcomponents',['DEBUG_TENS_COMPONENTS',['../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce',1,'TensClass.hpp']]],
   ['declare_5ftens_5fcomps_5fare_5ftwin',['DECLARE_TENS_COMPS_ARE_TWIN',['../d3/d89/TwinsComp_8hpp.html#ac775d245e45bbce66b04ac6843e1fd14',1,'TwinsComp.hpp']]],
   ['declauto',['DECLAUTO',['../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0',1,'UniversalReferences.hpp']]],
+  ['default_5falignment',['DEFAULT_ALIGNMENT',['../d4/d18/Memory_8hpp.html#a03d83b460541e5ff9cae283d9f55afb2',1,'Memory.hpp']]],
   ['define_5fbase_5ftype',['DEFINE_BASE_TYPE',['../d0/d81/TypeTraits_8hpp.html#a299b799ebc40964ec602bf3e6bcca276',1,'TypeTraits.hpp']]],
   ['define_5fbinary_5foperator_5fimplementation_5fcheck',['DEFINE_BINARY_OPERATOR_IMPLEMENTATION_CHECK',['../d0/d81/TypeTraits_8hpp.html#a1fa2058ed52013bcd7060509d667dbea',1,'TypeTraits.hpp']]],
   ['define_5fgetter_5fwith_5fdefault',['DEFINE_GETTER_WITH_DEFAULT',['../dc/d6b/BaseSmET_8hpp.html#a4d007574a60ba5a69923d28beb0e6fa0',1,'BaseSmET.hpp']]],
