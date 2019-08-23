@@ -93,6 +93,7 @@ namespace SUNphi
     {
       // runLog()<<"Popping from used "<<ptr;
       
+      /// Iterator to search result
       auto el=
 	used.find(ptr);
       
@@ -124,6 +125,14 @@ namespace SUNphi
       // runLog()<<"Pushing to cache "<<size<<" "<<ptr<<", cache size: "<<cached.size();
     }
     
+    /// Check if a pointer is suitably aligned
+    static bool isAligned(const void* ptr,
+			  const size_t alignment)
+    {
+      return
+	reinterpret_cast<uintptr_t>(ptr)%alignment==0;
+    }
+    
     /// Pop from the cache, returning to use
     void* popFromCache(const size_t& size,
 		       const size_t& alignment)
@@ -131,30 +140,41 @@ namespace SUNphi
       // runLog()<<"Try to popping from cache "<<size;
       
       /// List of memory with searched size
-      auto list=
+      auto cachedIt=
 	cached.find(size);
       
-      if(list==cached.end())
+      if(cachedIt==cached.end())
 	return
 	  nullptr;
       else
 	{
-	  /// Get latest cached memory
-	  void* ptr=
-	    list->second.back();
+	  /// Vector of pointers
+	  auto& list=
+	    cachedIt->second;
 	  
-	  if(reinterpret_cast<uintptr_t>(ptr)%alignment!=0)
+	  /// Get latest cached memory with appropriate alignment
+	  auto it=
+	    list.end()-1;
+	  
+	  while(it!=list.begin()-1 and not isAligned(*it,alignment))
+	    it--;
+	  
+	  if(it==list.begin()-1)
 	    return
 	      nullptr;
 	  else
 	    {
-	      list->second.pop_back();
+	      /// Returned pointer, copied here before erasing
+	      void* ptr=
+		*it;
+	      
+	      list.erase(it);
 	      
 	      cachedSize-=
 		size;
 	      
-	      if(list->second.size()==0)
-		cached.erase(list);
+	      if(list.size()==0)
+		cached.erase(cachedIt);
 	      
 	      return
 		ptr;
@@ -189,22 +209,26 @@ namespace SUNphi
       useCache=
 	false;
       
-      clearCache(); 
+      clearCache();
     }
     
     /// Allocate or get from cache after computing the proper size
     template <class T=char>
-    T* getRawAligned(const size_t nel,
-		     const size_t alignment)
+    T* provideAligned(const size_t nel,
+		      const size_t alignment)
     {
       /// Total size to allocate
       const size_t size=
 	sizeof(T)*nel;
       
       /// Allocated memory
-      void* ptr=
+      void* ptr;
+      
+      // Search in the cache
+      ptr=
 	popFromCache(size,alignment);
       
+      // If not found in the cache, allocate new memory
       if(ptr==nullptr)
 	ptr=
 	  allocateRawAligned(size,alignment);
@@ -287,24 +311,29 @@ namespace SUNphi
     
     /// Print to a stream
     template <typename T>
-    friend T& operator<<(T&& stream,
-			 const Memory& memory)
+    auto& printStatistics(T&& stream)
     {
       return
-	stream<<"Maximal memory used: "<<memory.usedSize.extreme()<<" bytes, currently used: "<<memory.usedSize
-	      <<" bytes, number of allocation: "<<memory.nUnalignedAlloc<<" unaligned, "<<memory.nAlignedAlloc<<" aligned\n"
-	      <<"Maximal memory cached: "<<memory.cachedSize.extreme()<<" bytes, currently used: "<<memory.cachedSize
-	      <<" bytes, number of reused: "<<memory.nCachedReused;
+	stream<<"Maximal memory used: "<<usedSize.extreme()<<" bytes, currently used: "<<usedSize
+	      <<" bytes, number of allocation: "<<nUnalignedAlloc<<" unaligned, "<<nAlignedAlloc<<" aligned\n"
+	      <<"Maximal memory cached: "<<cachedSize.extreme()<<" bytes, currently used: "<<cachedSize
+	      <<" bytes, number of reused: "<<nCachedReused;
+    }
+    
+    /// Create the memory manager
+    Memory()
+    {
+      runLog()<<"Starting the memory manager";
     }
     
     /// Destruct the memory manager
-    ///
-    /// First
     ~Memory()
     {
+      runLog()<<"Stopping the memory manager";
+      
       SCOPE_INDENT(runLog);
       
-      runLog()<<(*this);
+      printStatistics(runLog());
       
       releaseAllUsedMemory();
       
