@@ -18,6 +18,5 @@ var searchData=
   ['forallpoints',['forAllPoints',['../dd/dca/classSUNphi_1_1Grid.html#af217e84bd0b605e882ed57728ecaaa90',1,'SUNphi::Grid']]],
   ['foreach',['forEach',['../dc/d21/TupleElements_8hpp.html#a64e78927e6b14005d3a43ac2a861264e',1,'SUNphi']]],
   ['forw',['forw',['../d2/d7d/UniversalReferences_8hpp.html#a9251c65c4d182426d0be38507c64b84c',1,'SUNphi']]],
-  ['free',['free',['../d9/dc6/classSUNphi_1_1Memory.html#af32011706bb59a36f1da005beac15908',1,'SUNphi::Memory']]],
   ['fuffa',['fuffa',['../de/da3/classfuffa.html#ac3815f1c5a714dee575b904f413c0400',1,'fuffa']]]
 ];

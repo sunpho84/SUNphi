@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['cached',['cached',['../d9/dc6/classSUNphi_1_1Memory.html#a7d8bf2fdc76df4bd355a8bdca2375721',1,'SUNphi::Memory']]],
+  ['cachedsize',['cachedSize',['../d9/dc6/classSUNphi_1_1Memory.html#a650e645a35c6cd394f97ea45a575e189',1,'SUNphi::Memory']]],
   ['canbeconverted',['canBeConverted',['../d0/d81/TypeTraits_8hpp.html#ada4b857c07c2d9392292181763ade3f4',1,'SUNphi']]],
   ['canprint',['canPrint',['../d0/d81/TypeTraits_8hpp.html#a596acec6fec77d67693f05e82c964782',1,'SUNphi']]],
   ['children',['children',['../d6/de9/classSUNphi_1_1Timer.html#ab5e2a7af3e2e1a24faf564cf1fba2154',1,'SUNphi::Timer']]],

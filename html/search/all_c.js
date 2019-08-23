@@ -38,6 +38,7 @@ var searchData=
   ['minimallogger_2ehpp',['MinimalLogger.hpp',['../d8/d9a/MinimalLogger_8hpp.html',1,'']]],
   ['minoflist',['minOfList',['../d5/d3e/IntListOperations_8hpp.html#a9bcedb4b0596b7e77f6f0620b3e944c4',1,'SUNphi']]],
   ['moveoffset',['moveOffset',['../db/d33/Grid_8hpp.html#ae80082b2e607318ad8e682431f6c7a45',1,'SUNphi']]],
+  ['movetocache',['moveToCache',['../d9/dc6/classSUNphi_1_1Memory.html#aa790cd28a4ace824b243d659b779be8b',1,'SUNphi::Memory']]],
   ['mpi',['Mpi',['../df/d09/classSUNphi_1_1Mpi.html',1,'SUNphi']]],
   ['mpi',['Mpi',['../df/d09/classSUNphi_1_1Mpi.html#a120ff923dfb29171e7afbe428007fc4e',1,'SUNphi::Mpi::Mpi()'],['../d8/d6a/Mpi_8hpp.html#aad036f41502907a2ac92b432c057010f',1,'SUNphi::mpi()']]],
   ['mpi_2ehpp',['Mpi.hpp',['../d8/d6a/Mpi_8hpp.html',1,'']]],

@@ -5,6 +5,8 @@ var searchData=
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
   ['pool_2ehpp',['Pool.hpp',['../df/d0f/Pool_8hpp.html',1,'']]],
+  ['popfromcache',['popFromCache',['../d9/dc6/classSUNphi_1_1Memory.html#ae62d7e9bf75517aa1cbc49747f0f0ab8',1,'SUNphi::Memory']]],
+  ['popfromused',['popFromUsed',['../d9/dc6/classSUNphi_1_1Memory.html#a6728336b014f857f2ccb013aad38da02',1,'SUNphi::Memory']]],
   ['pos',['Pos',['../d4/d3d/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_01_4_01_4.html#a49a98bc1860a18b7051d9c1fe13d1ce0',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List... &gt; &gt;::Pos()'],['../d6/db9/classSUNphi_1_1Binder.html#a0e76d982c48186380d1dbc5eef523708',1,'SUNphi::Binder::pos()']]],
   ['pos_5ft',['Pos_t',['../de/d58/classSUNphi_1_1Adder.html#a4dde56f09aa7f3a174b89cc532adbdd6',1,'SUNphi::Adder::Pos_t()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641',1,'SUNphi::MulAdder::Pos_t()']]],
   ['position_2ehpp',['Position.hpp',['../dc/d58/Position_8hpp.html',1,'']]],
@@ -69,8 +71,10 @@ var searchData=
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],
   ['provide_5fstatic_5fmember_5fwith_5finitializator',['PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR',['../de/d4a/StaticMemberWithInitializator_8hpp.html#a24de0a6aac394ff9725aaac35fcb66ee',1,'StaticMemberWithInitializator.hpp']]],
   ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]],
-  ['proxyval',['ProxyVal',['../df/dd6/classSUNphi_1_1ValWithExtreme_1_1ProxyVal.html',1,'SUNphi::ValWithExtreme']]],
   ['proxyval',['ProxyVal',['../df/dd6/classSUNphi_1_1ValWithExtreme_1_1ProxyVal.html#adee30e968855dbe4e0daa5efdbaeb7f9',1,'SUNphi::ValWithExtreme::ProxyVal']]],
+  ['proxyval',['ProxyVal',['../df/dd6/classSUNphi_1_1ValWithExtreme_1_1ProxyVal.html',1,'SUNphi::ValWithExtreme']]],
   ['pushback',['pushBack',['../d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802',1,'SUNphi::Binarizer']]],
+  ['pushtocache',['pushToCache',['../d9/dc6/classSUNphi_1_1Memory.html#ad5a599ef27c5e52f852b1e2da5b36814',1,'SUNphi::Memory']]],
+  ['pushtoused',['pushToUsed',['../d9/dc6/classSUNphi_1_1Memory.html#aacc8c6fe3728357aafb47fc8b044a5e7',1,'SUNphi::Memory']]],
   ['puttodefault',['putToDefault',['../d1/d39/classSUNphi_1_1SerializableClass.html#a9c48ee3b6ccfe69fb99e289fc5cf0dc7',1,'SUNphi::SerializableClass::putToDefault()'],['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#ab52ba6ca8a07a767c9efebe183ff92be',1,'SUNphi::SerializableDefaultValue&lt; T, true &gt;::putToDefault()'],['../d4/de2/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01false_01_4.html#adc366b98fb715d4b1d056727d882956f',1,'SUNphi::SerializableDefaultValue&lt; T, false &gt;::putToDefault()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a7acb7797e28819be059d6258e1b02e71',1,'SUNphi::SerializableSequence::putToDefault()']]]
 ];

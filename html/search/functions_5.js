@@ -1,6 +1,7 @@
 var searchData=
 [
   ['element',['element',['../da/def/structSUNphi_1_1IntSeq.html#a92a9fa6ac6fb87d2da6d604037cc7843',1,'SUNphi::IntSeq']]],
+  ['enablecache',['enableCache',['../d9/dc6/classSUNphi_1_1Memory.html#a61b9102105bf986f7b61d886952efee8',1,'SUNphi::Memory']]],
   ['encode',['encode',['../d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html#ae9f9375caf71a771cdbfa1aeef6ec40f',1,'YAML::convert&lt; T, EnableIf&lt; hasMember_serialize&lt; T &gt; &gt; &gt;']]],
   ['encrypt',['encrypt',['../d8/db1/Encrypter_8hpp.html#a3f50ab9c45a41c9ac3b5a024bea4d45a',1,'SUNphi::Sitmo']]],
   ['encryptcounter',['encryptCounter',['../d9/d59/classSUNphi_1_1Sitmo.html#a8024913efb3328b0c330f5034e3ae722',1,'SUNphi::Sitmo']]],

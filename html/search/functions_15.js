@@ -4,6 +4,7 @@ var searchData=
   ['_7ebinder',['~Binder',['../d6/db9/classSUNphi_1_1Binder.html#a589984804033b1d927da66a272505ede',1,'SUNphi::Binder']]],
   ['_7efile',['~File',['../d5/d99/classSUNphi_1_1File.html#a27c461aa4630ff678f37f9c1f16ea4f1',1,'SUNphi::File']]],
   ['_7eloggerline',['~LoggerLine',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#aff24f1c1ec41656011d19f21c2fcf6ed',1,'SUNphi::Logger::LoggerLine']]],
+  ['_7ememory',['~Memory',['../d9/dc6/classSUNphi_1_1Memory.html#a8a71ababcfb8f1f86cd4be17e38f573e',1,'SUNphi::Memory']]],
   ['_7empi',['~Mpi',['../df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da',1,'SUNphi::Mpi']]],
   ['_7eproxyval',['~ProxyVal',['../df/dd6/classSUNphi_1_1ValWithExtreme_1_1ProxyVal.html#ac8e65251ebe0787aa4fe569d3b9a5cc9',1,'SUNphi::ValWithExtreme::ProxyVal']]],
   ['_7erelbinder',['~RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#acc575a7af4e8426e0502581cae4caaab',1,'SUNphi::RelBinder']]],

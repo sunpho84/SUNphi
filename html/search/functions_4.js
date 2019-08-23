@@ -6,6 +6,7 @@ var searchData=
   ['deserialize',['deSerialize',['../d1/d39/classSUNphi_1_1SerializableClass.html#af192d55378fe3fb86ebf203ee689b131',1,'SUNphi::SerializableClass::deSerialize()'],['../dd/d5c/classSUNphi_1_1Serializable.html#a6e11489dd98571a8698c7acdcdf269db',1,'SUNphi::Serializable::deSerialize()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a52918c4c0f0b4cf9395c79f9108f4928',1,'SUNphi::SerializableSequence::deSerialize()']]],
   ['dimoforidir',['dimOfOriDir',['../dd/dca/classSUNphi_1_1Grid.html#a95f3352942a9f5996d742083675cfe90',1,'SUNphi::Grid']]],
   ['dir',['dir',['../de/dda/Dir_8hpp.html#ae2e5d0c42dbe9855d3b20935ca39145c',1,'SUNphi']]],
+  ['disablecache',['disableCache',['../d9/dc6/classSUNphi_1_1Memory.html#ab80f0348b08609c6b5772aced4aec9c5',1,'SUNphi::Memory']]],
   ['discard',['discard',['../d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb',1,'SUNphi::Sitmo']]],
   ['durationin',['durationIn',['../d8/dbf/Timer_8hpp.html#a38e5c40dcbca7b595dcdb47e5da2ebb8',1,'SUNphi']]],
   ['durationinsec',['durationInSec',['../d8/dbf/Timer_8hpp.html#adf3578cd196a53f921b491c71e425d0f',1,'SUNphi']]],

@@ -6,6 +6,7 @@ var searchData=
   ['checknospurioussubnodes',['checkNoSpuriousSubNodes',['../d1/d39/classSUNphi_1_1SerializableClass.html#afdd21411a65982510939841b958b8430',1,'SUNphi::SerializableClass']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
   ['clear',['clear',['../d2/d66/classSUNphi_1_1Binarizer.html#ae696b825421f3c10df78bfca35367a95',1,'SUNphi::Binarizer']]],
+  ['clearcache',['clearCache',['../d9/dc6/classSUNphi_1_1Memory.html#a5577b6fe3d98d6b66add357510cc6562',1,'SUNphi::Memory']]],
   ['close',['close',['../d5/d99/classSUNphi_1_1File.html#ad7d75aba05cb909c51f33de509c7b572',1,'SUNphi::File']]],
   ['cncol',['cnCol',['../d4/df5/SUN_8hpp.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d9/dfb/Spin_8hpp.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],

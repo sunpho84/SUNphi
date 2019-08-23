@@ -22,6 +22,7 @@ var searchData=
   ['all_5franks',['ALL_RANKS',['../df/d09/classSUNphi_1_1Mpi.html#ad4d63f013ed16da4e22ee5e1b6c4bc36',1,'SUNphi::Mpi']]],
   ['allbuttype',['AllButType',['../d8/df8/classSUNphi_1_1TensKind.html#aad1e33d53335ae4f28cb9be6264bcef4',1,'SUNphi::TensKind']]],
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
+  ['allocaterawaligned',['allocateRawAligned',['../d9/dc6/classSUNphi_1_1Memory.html#ae184cc2b4343b942fab44dca3734aa7b',1,'SUNphi::Memory']]],
   ['allows_5fall_5franks_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_RANKS_TO_PRINT_FOR_THIS_SCOPE',['../d8/d6a/Mpi_8hpp.html#a171fcfa8bdaf0dbe624b098bb502be51',1,'Mpi.hpp']]],
   ['allows_5fall_5fthreads_5fto_5fprint_5ffor_5fthis_5fscope',['ALLOWS_ALL_THREADS_TO_PRINT_FOR_THIS_SCOPE',['../db/dbc/Thread_8hpp.html#a18246ca4fc6d0f99de8b8860a84b5856',1,'Thread.hpp']]],
   ['allreduce',['allReduce',['../df/d09/classSUNphi_1_1Mpi.html#af4bab2c25c5563a8cba8abd59d8ca7c1',1,'SUNphi::Mpi']]],
@@ -52,7 +53,7 @@ var searchData=
   ['assign',['assign',['../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)'],['../d0/d6d/Transpose_8hpp.html#afde6f5de64de3abb2035ab4b14d70b19',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs)']]],
   ['assign_2ehpp',['Assign.hpp',['../d1/d9b/Assign_8hpp.html',1,'']]],
   ['assignable',['ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d',1,'BaseSmET.hpp']]],
-  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
+  ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
   ['averagemeasure',['averageMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a',1,'SUNphi::Timer']]]
 ];

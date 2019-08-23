@@ -1,6 +1,7 @@
 var searchData=
 [
   ['element',['element',['../da/def/structSUNphi_1_1IntSeq.html#a92a9fa6ac6fb87d2da6d604037cc7843',1,'SUNphi::IntSeq']]],
+  ['enablecache',['enableCache',['../d9/dc6/classSUNphi_1_1Memory.html#a61b9102105bf986f7b61d886952efee8',1,'SUNphi::Memory']]],
   ['enableif',['EnableIf',['../d0/d81/TypeTraits_8hpp.html#a36390d39df970fd50dd457210d0079f4',1,'SUNphi']]],
   ['enableifisadder',['EnableIfIsAdder',['../da/d65/Add_8hpp.html#a58a8d5185557a7cd9524ff30488f8101',1,'SUNphi']]],
   ['enableifisassigner',['EnableIfIsAssigner',['../d1/d9b/Assign_8hpp.html#a29c2f2f3b3f624835dbc946fa7682e3a',1,'SUNphi']]],

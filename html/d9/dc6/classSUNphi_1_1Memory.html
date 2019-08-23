@@ -109,52 +109,164 @@ $(document).ready(function(){initNavTree('d9/dc6/classSUNphi_1_1Memory.html','..
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d5/d60/classSUNphi_1_1Memory-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::Memory Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html" title="Memory manager. ">Memory</a> manager.  
+ <a href="../../d9/dc6/classSUNphi_1_1Memory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a61b9102105bf986f7b61d886952efee8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61b9102105bf986f7b61d886952efee8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a61b9102105bf986f7b61d886952efee8">enableCache</a> ()</td></tr>
+<tr class="memdesc:a61b9102105bf986f7b61d886952efee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable cache usage. <br /></td></tr>
+<tr class="separator:a61b9102105bf986f7b61d886952efee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80f0348b08609c6b5772aced4aec9c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab80f0348b08609c6b5772aced4aec9c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#ab80f0348b08609c6b5772aced4aec9c5">disableCache</a> ()</td></tr>
+<tr class="memdesc:ab80f0348b08609c6b5772aced4aec9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable cache usage. <br /></td></tr>
+<tr class="separator:ab80f0348b08609c6b5772aced4aec9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e2144cce020eaf2cb5a9f1e3e8fbe8b"><td class="memTemplParams" colspan="2">template&lt;class T  = char&gt; </td></tr>
 <tr class="memitem:a5e2144cce020eaf2cb5a9f1e3e8fbe8b"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a5e2144cce020eaf2cb5a9f1e3e8fbe8b">getRawAligned</a> (const size_t nel)</td></tr>
+<tr class="memdesc:a5e2144cce020eaf2cb5a9f1e3e8fbe8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate or get from cache after computing the proper size.  <a href="#a5e2144cce020eaf2cb5a9f1e3e8fbe8b">More...</a><br /></td></tr>
 <tr class="separator:a5e2144cce020eaf2cb5a9f1e3e8fbe8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af32011706bb59a36f1da005beac15908"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:af32011706bb59a36f1da005beac15908"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#af32011706bb59a36f1da005beac15908">free</a> (T *&amp;_ptr)</td></tr>
-<tr class="memdesc:af32011706bb59a36f1da005beac15908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory and zero the pointer.  <a href="#af32011706bb59a36f1da005beac15908">More...</a><br /></td></tr>
-<tr class="separator:af32011706bb59a36f1da005beac15908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7598560e0ebea87bd8af92399bc4ff5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ad7598560e0ebea87bd8af92399bc4ff5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#ad7598560e0ebea87bd8af92399bc4ff5">release</a> (T *ptr)</td></tr>
+<tr class="memdesc:ad7598560e0ebea87bd8af92399bc4ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decleare unused the memory.  <a href="#ad7598560e0ebea87bd8af92399bc4ff5">More...</a><br /></td></tr>
+<tr class="separator:ad7598560e0ebea87bd8af92399bc4ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4648ceb5ea12a537e6546b38a0e78a0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a4648ceb5ea12a537e6546b38a0e78a0c">releaseAllUsedMemory</a> ()</td></tr>
+<tr class="memdesc:a4648ceb5ea12a537e6546b38a0e78a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all used memory.  <a href="#a4648ceb5ea12a537e6546b38a0e78a0c">More...</a><br /></td></tr>
+<tr class="separator:a4648ceb5ea12a537e6546b38a0e78a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5577b6fe3d98d6b66add357510cc6562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a5577b6fe3d98d6b66add357510cc6562">clearCache</a> ()</td></tr>
+<tr class="memdesc:a5577b6fe3d98d6b66add357510cc6562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release all memory from cache.  <a href="#a5577b6fe3d98d6b66add357510cc6562">More...</a><br /></td></tr>
+<tr class="separator:a5577b6fe3d98d6b66add357510cc6562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a71ababcfb8f1f86cd4be17e38f573e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a8a71ababcfb8f1f86cd4be17e38f573e">~Memory</a> ()</td></tr>
+<tr class="separator:a8a71ababcfb8f1f86cd4be17e38f573e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae184cc2b4343b942fab44dca3734aa7b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#ae184cc2b4343b942fab44dca3734aa7b">allocateRawAligned</a> (const size_t size)</td></tr>
+<tr class="separator:ae184cc2b4343b942fab44dca3734aa7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc8c6fe3728357aafb47fc8b044a5e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacc8c6fe3728357aafb47fc8b044a5e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#aacc8c6fe3728357aafb47fc8b044a5e7">pushToUsed</a> (void *ptr, const size_t size)</td></tr>
+<tr class="memdesc:aacc8c6fe3728357aafb47fc8b044a5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add to the list of used memory. <br /></td></tr>
+<tr class="separator:aacc8c6fe3728357aafb47fc8b044a5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6728336b014f857f2ccb013aad38da02"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a6728336b014f857f2ccb013aad38da02">popFromUsed</a> (void *ptr)</td></tr>
+<tr class="separator:a6728336b014f857f2ccb013aad38da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a599ef27c5e52f852b1e2da5b36814"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5a599ef27c5e52f852b1e2da5b36814"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#ad5a599ef27c5e52f852b1e2da5b36814">pushToCache</a> (const size_t size, void *ptr)</td></tr>
+<tr class="memdesc:ad5a599ef27c5e52f852b1e2da5b36814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a memory to cache. <br /></td></tr>
+<tr class="separator:ad5a599ef27c5e52f852b1e2da5b36814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62d7e9bf75517aa1cbc49747f0f0ab8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#ae62d7e9bf75517aa1cbc49747f0f0ab8">popFromCache</a> (const size_t &amp;size)</td></tr>
+<tr class="memdesc:ae62d7e9bf75517aa1cbc49747f0f0ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop from the cache, returning to use.  <a href="#ae62d7e9bf75517aa1cbc49747f0f0ab8">More...</a><br /></td></tr>
+<tr class="separator:ae62d7e9bf75517aa1cbc49747f0f0ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa790cd28a4ace824b243d659b779be8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#aa790cd28a4ace824b243d659b779be8b">moveToCache</a> (void *ptr)</td></tr>
+<tr class="memdesc:aa790cd28a4ace824b243d659b779be8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the allocated memory to cache.  <a href="#aa790cd28a4ace824b243d659b779be8b">More...</a><br /></td></tr>
+<tr class="separator:aa790cd28a4ace824b243d659b779be8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a30c30d6c6726e94850b08e032dc80e9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30c30d6c6726e94850b08e032dc80e9a"></a>
-std::map&lt; void *, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a30c30d6c6726e94850b08e032dc80e9a">list</a></td></tr>
-<tr class="memdesc:a30c30d6c6726e94850b08e032dc80e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of dynamical allocated memory. <br /></td></tr>
-<tr class="separator:a30c30d6c6726e94850b08e032dc80e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f93b0df831e0ac557c619bbf42cff85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f93b0df831e0ac557c619bbf42cff85"></a>
-<a class="el" href="../../d7/d16/ValWithExtreme_8hpp.html#ab5aefd01eb084a6de24389849e3bc18d">ValWithMax</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a4f93b0df831e0ac557c619bbf42cff85">used</a></td></tr>
-<tr class="memdesc:a4f93b0df831e0ac557c619bbf42cff85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used memory. <br /></td></tr>
-<tr class="separator:a4f93b0df831e0ac557c619bbf42cff85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae7acbb47229d73d0efd886ce7e1e16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae7acbb47229d73d0efd886ce7e1e16"></a>
+std::map&lt; void *, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a4ae7acbb47229d73d0efd886ce7e1e16">used</a></td></tr>
+<tr class="memdesc:a4ae7acbb47229d73d0efd886ce7e1e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of dynamical allocated memory. <br /></td></tr>
+<tr class="separator:a4ae7acbb47229d73d0efd886ce7e1e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8bf2fdc76df4bd355a8bdca2375721"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d8bf2fdc76df4bd355a8bdca2375721"></a>
+std::map&lt; size_t, std::vector&lt; void * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a7d8bf2fdc76df4bd355a8bdca2375721">cached</a></td></tr>
+<tr class="memdesc:a7d8bf2fdc76df4bd355a8bdca2375721"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of cached allocated memory. <br /></td></tr>
+<tr class="separator:a7d8bf2fdc76df4bd355a8bdca2375721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03fbc9302d4880108973a0d401cee6ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03fbc9302d4880108973a0d401cee6ea"></a>
+<a class="el" href="../../d7/d16/ValWithExtreme_8hpp.html#ab5aefd01eb084a6de24389849e3bc18d">ValWithMax</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a03fbc9302d4880108973a0d401cee6ea">usedSize</a></td></tr>
+<tr class="memdesc:a03fbc9302d4880108973a0d401cee6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of used memory. <br /></td></tr>
+<tr class="separator:a03fbc9302d4880108973a0d401cee6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650e645a35c6cd394f97ea45a575e189"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a650e645a35c6cd394f97ea45a575e189"></a>
+<a class="el" href="../../d7/d16/ValWithExtreme_8hpp.html#ab5aefd01eb084a6de24389849e3bc18d">ValWithMax</a>&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a650e645a35c6cd394f97ea45a575e189">cachedSize</a></td></tr>
+<tr class="memdesc:a650e645a35c6cd394f97ea45a575e189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of cached memory. <br /></td></tr>
+<tr class="separator:a650e645a35c6cd394f97ea45a575e189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e14afdc0734d733bcd87e97266cce71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e14afdc0734d733bcd87e97266cce71"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html#a9e14afdc0734d733bcd87e97266cce71">useCache</a> {true}</td></tr>
+<tr class="memdesc:a9e14afdc0734d733bcd87e97266cce71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use or not cache. <br /></td></tr>
+<tr class="separator:a9e14afdc0734d733bcd87e97266cce71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="af32011706bb59a36f1da005beac15908"></a>
+<div class="textblock"><p><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html" title="Memory manager. ">Memory</a> manager. </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8a71ababcfb8f1f86cd4be17e38f573e"></a>
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SUNphi::Memory::free </td>
+          <td class="memname">SUNphi::Memory::~Memory </td>
           <td>(</td>
-          <td class="paramtype">T *&amp;&#160;</td>
-          <td class="paramname"><em>_ptr</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destruct the memory manager</p>
+<p>First </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00264">264</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae184cc2b4343b942fab44dca3734aa7b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* SUNphi::Memory::allocateRawAligned </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get aligned memory</p>
+<p>Call the system routine which allocate memory </p>
+<p>Result</p>
+<p>Returned condition </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5577b6fe3d98d6b66add357510cc6562"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Memory::clearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -165,15 +277,13 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Free memory and zero the pointer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_ptr</td><td>Pointer getting freed, set to zero </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Release all memory from cache. </p>
+<p>Iterator to elements of the cached memory list</p>
+<p>Number of elements to free</p>
+<p>Size to be removed</p>
+<p><a class="el" href="../../d9/dc6/classSUNphi_1_1Memory.html" title="Memory manager. ">Memory</a> to free </p>
 
-<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00229">229</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
 
 </div>
 </div>
@@ -200,13 +310,177 @@ template&lt;class T  = char&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get aligned memory</p>
-<p>Call the system routine which allocate memory </p>
-<p>Total size to allocate</p>
-<p>Result</p>
-<p>Returned condition </p>
 
-<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+<p>Allocate or get from cache after computing the proper size. </p>
+<p>Total size to allocate</p>
+<p>Allocated memory </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00173">173</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa790cd28a4ace824b243d659b779be8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Memory::moveToCache </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move the allocated memory to cache. </p>
+<p>Size of pointed memory </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory to move to cache </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00142">142</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae62d7e9bf75517aa1cbc49747f0f0ab8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* SUNphi::Memory::popFromCache </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pop from the cache, returning to use. </p>
+<p>List of memory with searched size</p>
+<p>Get latest cached memory </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00111">111</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6728336b014f857f2ccb013aad38da02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t SUNphi::Memory::popFromUsed </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a pointer from the used list, without actually freeing associated memory</p>
+<p>Returns the size of the memory pointed </p>
+<p>Size of memory </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory to move to cache </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00075">75</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7598560e0ebea87bd8af92399bc4ff5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Memory::release </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decleare unused the memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer getting freed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00195">195</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4648ceb5ea12a537e6546b38a0e78a0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Memory::releaseAllUsedMemory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release all used memory. </p>
+<p>Iterator on elements to release</p>
+<p>Pointer to memory to release </p>
+
+<p>Definition at line <a class="el" href="../../d4/d18/Memory_8hpp_source.html#l00207">207</a> of file <a class="el" href="../../d4/d18/Memory_8hpp_source.html">Memory.hpp</a>.</p>
 
 </div>
 </div>
