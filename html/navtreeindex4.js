@@ -157,6 +157,7 @@ var NAVTREEINDEX4 =
 "d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a9f3a4767fd88beeaa5294bac23638ffa":[2,0,0,176,3],
 "d7/d12/structSUNphi_1_1ConstrainHasMember__refs.html":[2,0,0,107],
 "d7/d16/ValWithExtreme_8hpp.html":[3,0,2,15,10],
+"d7/d16/ValWithExtreme_8hpp.html#a1133e0c223041ae6e922e97d76a0494a":[3,0,2,15,10,1],
 "d7/d16/ValWithExtreme_8hpp.html#ab5aefd01eb084a6de24389849e3bc18d":[3,0,2,15,10,2],
 "d7/d16/ValWithExtreme_8hpp.html#aedd26208e698dcef81d053c2c3f4eac5":[3,0,2,15,10,3],
 "d7/d16/ValWithExtreme_8hpp.html#aedd26208e698dcef81d053c2c3f4eac5ada996a8e882c91542a870b710f4b7cf8":[3,0,2,15,10,3,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "d8/d1c/classSUNphi_1_1Tens.html#a858c74ca6c447d72bb7f713478585448":[2,0,0,191,3],
 "d8/d1c/classSUNphi_1_1Tens.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,191,13],
 "d8/d1c/classSUNphi_1_1Tens.html#aabd00464353ba18b8399dd70acb45a7b":[2,0,0,191,27],
-"d8/d1c/classSUNphi_1_1Tens.html#ab35c629418604756feded25a087f31ca":[2,0,0,191,9],
-"d8/d1c/classSUNphi_1_1Tens.html#ab692c6c951b0ec11da186a4f03808cfb":[2,0,0,191,11]
+"d8/d1c/classSUNphi_1_1Tens.html#ab35c629418604756feded25a087f31ca":[2,0,0,191,9]
 };

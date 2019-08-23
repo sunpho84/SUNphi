@@ -2,7 +2,9 @@ var searchData=
 [
   ['n',['N',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ae8108d4019ec60e33c16ffc2a7f54d3e',1,'SUNphi::SFMTRandomGen']]],
   ['n32',['N32',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ae6b42e288a400117d457be993523d3d2',1,'SUNphi::SFMTRandomGen']]],
+  ['nalignedalloc',['nAlignedAlloc',['../d9/dc6/classSUNphi_1_1Memory.html#a42a77894522c9dc1a41ee701414bc28a',1,'SUNphi::Memory']]],
   ['name',['name',['../d6/de9/classSUNphi_1_1Timer.html#ac16ddc1fd1036f73c10325c5504972f1',1,'SUNphi::Timer::name()'],['../d8/dd2/structSUNphi_1_1HasMember__name_1_1Fallback.html#a11f1efcf36cc89ba03d2e0c3ce96bf5e',1,'SUNphi::HasMember_name::Fallback::name()'],['../dd/d5c/classSUNphi_1_1Serializable.html#a8f6d3a7f1ef6afb62d416e18088367d5',1,'SUNphi::Serializable::name()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#a00a1486c987dd6311c32b0d531234622',1,'SUNphi::SerializableSequence::name()']]],
+  ['ncachedreused',['nCachedReused',['../d9/dc6/classSUNphi_1_1Memory.html#a58acd0bbbcfd5adf9c88804a1adb15d1',1,'SUNphi::Memory']]],
   ['ncn_5fcol',['NCN_Col',['../d4/df5/SUN_8hpp.html#a37b64c0a12ba1ed70d40a9cd81b76d25',1,'SUNphi']]],
   ['ncn_5fspin',['NCN_Spin',['../d9/dfb/Spin_8hpp.html#a6da8f6f82d5819d1a6ed09ea9cf2b883',1,'SUNphi']]],
   ['ncol',['NCOL',['../d4/df5/SUN_8hpp.html#aeea08fdb768379f4f657584f4f0ab64d',1,'SUNphi']]],
@@ -35,5 +37,6 @@ var searchData=
   ['nsmet',['NSmET',['../d6/db9/classSUNphi_1_1Binder.html#a974012f0823c16fe6ce12df1cd7e5931',1,'SUNphi::Binder::NSmET()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#abd16f15cace6e08875c01ed5b409ba87',1,'SUNphi::ScalarWrapper::NSmET()'],['../de/d58/classSUNphi_1_1Adder.html#a7bff2e987af7b2aaa0462ca901f0b40a',1,'SUNphi::Adder::NSmET()'],['../d2/d24/classSUNphi_1_1Conjer.html#aec0c2e26f9d26cf9e6b4aafcf07f2aef',1,'SUNphi::Conjer::NSmET()'],['../d5/dd3/classSUNphi_1_1Transposer.html#a30e427c7ee5fe45cb616d7d2e91d0ec3',1,'SUNphi::Transposer::NSmET()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#a3037ebf406a818a94e6f99083ea1e1a8',1,'SUNphi::MulAdder::NSmET()'],['../d5/d1c/classSUNphi_1_1RelBinder.html#a6f0c894d0eb4186da2ef1c2ca8254d42',1,'SUNphi::RelBinder::NSmET()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a555201f8556666a5a4fc1b0da625e6d3',1,'SUNphi::UMinuser::NSmET()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a447ad04ae7e4874ba6bcf4b63b660aba',1,'SUNphi::Wrapper::NSmET()']]],
   ['nspin',['NSPIN',['../d9/dfb/Spin_8hpp.html#a5f332d2a92f2dd6aca45e1e4d538b5f6',1,'SUNphi']]],
   ['nstartedchildren',['nStartedChildren',['../d6/de9/classSUNphi_1_1Timer.html#a94f62d7f3d4bf068ca3937352acd8b00',1,'SUNphi::Timer']]],
-  ['ntypes',['nTypes',['../d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a',1,'SUNphi::TensKind']]]
+  ['ntypes',['nTypes',['../d8/df8/classSUNphi_1_1TensKind.html#a1e3a9fe0237fc5acc27b7d7809cf622a',1,'SUNphi::TensKind']]],
+  ['nunalignedalloc',['nUnalignedAlloc',['../d9/dc6/classSUNphi_1_1Memory.html#a6398404fce5f85f924bca85c87c040c9',1,'SUNphi::Memory']]]
 ];

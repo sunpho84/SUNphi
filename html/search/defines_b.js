@@ -37,5 +37,6 @@ var searchData=
   ['provide_5fsmet_5fassignement_5foperator',['PROVIDE_SMET_ASSIGNEMENT_OPERATOR',['../d1/d9b/Assign_8hpp.html#a3a7842df4daae14f086e6349fb8a2ab7',1,'Assign.hpp']]],
   ['provide_5fsmet_5fref',['PROVIDE_SMET_REF',['../d3/d78/Reference_8hpp.html#a5d649e7888c0e097f62cfbab810753df',1,'Reference.hpp']]],
   ['provide_5fstatic_5fmember_5fwith_5finitializator',['PROVIDE_STATIC_MEMBER_WITH_INITIALIZATOR',['../de/d4a/StaticMemberWithInitializator_8hpp.html#a24de0a6aac394ff9725aaac35fcb66ee',1,'StaticMemberWithInitializator.hpp']]],
-  ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]]
+  ['provide_5ftk',['PROVIDE_TK',['../dc/d6b/BaseSmET_8hpp.html#a4c6e0c9eb58d214d0994b2c5e5a58a76',1,'BaseSmET.hpp']]],
+  ['provide_5funary_5foperator',['PROVIDE_UNARY_OPERATOR',['../d7/d16/ValWithExtreme_8hpp.html#a1133e0c223041ae6e922e97d76a0494a',1,'ValWithExtreme.hpp']]]
 ];
