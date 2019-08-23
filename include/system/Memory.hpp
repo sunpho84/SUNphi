@@ -37,6 +37,15 @@ namespace SUNphi
     /// Use or not cache
     bool useCache{true};
     
+    /// Number of unaligned allocation performed
+    size_t nUnalignedAlloc{0};
+    
+    /// Number of aligned allocation performed
+    size_t nAlignedAlloc{0};
+    
+    /// Number of cached memory reused
+    size_t nCachedReused{0};
+    
     /// Get aligned memory
     ///
     /// Call the system routine which allocate memory
@@ -57,6 +66,8 @@ namespace SUNphi
       
       if(rc)
 	CRASH<<"Failed to allocate "<<size<<" with alignement "<<ALIGNMENT;
+      
+      nAlignedAlloc++;
       
       return
 	ptr;
@@ -102,8 +113,8 @@ namespace SUNphi
     }
     
     /// Adds a memory to cache
-    void pushToCache(const size_t size,
-		     void* ptr)
+    void pushToCache(void* ptr,          ///< Memory to cache
+		     const size_t size)  ///> Memory size
     {
       cached[size].push_back(ptr);
       
@@ -160,7 +171,7 @@ namespace SUNphi
       const size_t size=
 	popFromUsed(ptr);
       
-      pushToCache(size,ptr);
+      pushToCache(ptr,size);
     }
     
   public:
@@ -197,6 +208,8 @@ namespace SUNphi
       if(ptr==nullptr)
 	ptr=
 	  allocateRawAligned(size,alignment);
+      else
+	nCachedReused++;
       
       pushToUsed(ptr,size);
       
@@ -272,18 +285,30 @@ namespace SUNphi
 	}
     }
     
+    /// Print to a stream
+    template <typename T>
+    friend T& operator<<(T&& stream,
+			 const Memory& memory)
+    {
+      return
+	stream<<"Maximal memory used: "<<memory.usedSize.extreme()<<" bytes, currently used: "<<memory.usedSize
+	      <<" bytes, number of allocation: "<<memory.nUnalignedAlloc<<" unaligned, "<<memory.nAlignedAlloc<<" aligned\n"
+	      <<"Maximal memory cached: "<<memory.cachedSize.extreme()<<" bytes, currently used: "<<memory.cachedSize
+	      <<" bytes, number of reused: "<<memory.nCachedReused;
+    }
+    
     /// Destruct the memory manager
     ///
     /// First
     ~Memory()
     {
+      SCOPE_INDENT(runLog);
+      
+      runLog()<<(*this);
+      
       releaseAllUsedMemory();
       
-      runLog()<<"Maximal memory used: "<<usedSize.extreme()<<" byte, finally used: "<<usedSize;
-      
       clearCache();
-      
-      runLog()<<"Maximal memory cached: "<<cachedSize.extreme()<<" byte, finally used: "<<cachedSize;
     }
   };
   
