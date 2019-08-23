@@ -15,6 +15,10 @@
 
 namespace SUNphi
 {
+  /// Minimal alignment
+#define DEFAULT_ALIGNMENT			\
+  16
+  
   /// Memory manager
   class Memory
   {
@@ -36,7 +40,8 @@ namespace SUNphi
     /// Get aligned memory
     ///
     /// Call the system routine which allocate memory
-    void* allocateRawAligned(const size_t size)
+    void* allocateRawAligned(const size_t size,         ///< Amount of memory to allocate
+			     const size_t alignment)    ///< Required alignment
     {
       // runLog()<<"Raw allocating "<<size;
       
@@ -47,7 +52,8 @@ namespace SUNphi
       /// Returned condition
       int rc=
 	posix_memalign(&ptr,
-		       ALIGNMENT,size);
+		       alignment,
+		       size);
       
       if(rc)
 	CRASH<<"Failed to allocate "<<size<<" with alignement "<<ALIGNMENT;
@@ -108,7 +114,8 @@ namespace SUNphi
     }
     
     /// Pop from the cache, returning to use
-    void* popFromCache(const size_t& size)
+    void* popFromCache(const size_t& size,
+		       const size_t& alignment)
     {
       // runLog()<<"Try to popping from cache "<<size;
       
@@ -125,16 +132,22 @@ namespace SUNphi
 	  void* ptr=
 	    list->second.back();
 	  
-	  list->second.pop_back();
-	  
-	  cachedSize-=
-	    size;
-	  
-	  if(list->second.size()==0)
-	    cached.erase(list);
-	  
-	  return
-	    ptr;
+	  if(reinterpret_cast<uintptr_t>(ptr)%alignment!=0)
+	    return
+	      nullptr;
+	  else
+	    {
+	      list->second.pop_back();
+	      
+	      cachedSize-=
+		size;
+	      
+	      if(list->second.size()==0)
+		cached.erase(list);
+	      
+	      return
+		ptr;
+	    }
 	}
     }
     
@@ -170,7 +183,8 @@ namespace SUNphi
     
     /// Allocate or get from cache after computing the proper size
     template <class T=char>
-    T* getRawAligned(const size_t nel)
+    T* getRawAligned(const size_t nel,
+		     const size_t alignment)
     {
       /// Total size to allocate
       const size_t size=
@@ -178,11 +192,11 @@ namespace SUNphi
       
       /// Allocated memory
       void* ptr=
-	popFromCache(size);
+	popFromCache(size,alignment);
       
       if(ptr==nullptr)
 	ptr=
-	  allocateRawAligned(size);
+	  allocateRawAligned(size,alignment);
       
       pushToUsed(ptr,size);
       
@@ -251,7 +265,7 @@ namespace SUNphi
 	      
 	      /// Memory to free
 	      void* ptr=
-		popFromCache(size);
+		popFromCache(size,DEFAULT_ALIGNMENT);
 	      
 	      free(ptr);
 	    }

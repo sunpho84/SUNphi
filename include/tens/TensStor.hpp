@@ -169,7 +169,8 @@ namespace SUNphi
 	  i;
       
       // Allocate
-      v=memory.getRawAligned<T>(totSize);
+      v=
+	memory.getRawAligned<T>(totSize,ALIGNMENT);
       
 #ifdef DEBUG_STOR
       runLog()<<"TensStor constructor: "<<v<<", "<<__PRETTY_FUNCTION__;
