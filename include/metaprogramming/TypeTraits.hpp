@@ -272,6 +272,14 @@ namespace SUNphi
   
   /////////////////////////////////////////////////////////////////
   
+  /// Checks if it is pointer
+  template <typename T>
+  [[ maybe_unused ]]
+  static constexpr bool isPointer=
+    std::is_pointer_v<T>;
+  
+  /////////////////////////////////////////////////////////////////
+  
   /// Returns the type T without any reference or qualifier or pointer
   ///
   /// Helper to the actual implementation
@@ -282,7 +290,7 @@ namespace SUNphi
       return
 	fundamentalHelper<RemoveCV<T>>();
     else
-      if constexpr(std::is_pointer_v<T>)
+      if constexpr(isPointer<T>)
 	return
 	  fundamentalHelper<std::remove_pointer_t<T>>();
       else
