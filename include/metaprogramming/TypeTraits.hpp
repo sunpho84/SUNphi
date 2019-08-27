@@ -270,6 +270,31 @@ namespace SUNphi
   using Unqualified=
     RemoveCV<RemRef<T>>;
   
+  /////////////////////////////////////////////////////////////////
+  
+  /// Returns the type T without any reference or qualifier or pointer
+  ///
+  /// Helper to the actual implementation
+  template <typename T>
+  constexpr auto fundamentalHelper()
+  {
+    if constexpr(isConst<T>)
+      return
+	fundamentalHelper<RemoveCV<T>>();
+    else
+      if constexpr(std::is_pointer_v<T>)
+	return
+	  fundamentalHelper<std::remove_pointer_t<T>>();
+      else
+	return
+	  std::decay_t<T>{};
+  }
+  
+  /// Returns the type T without any reference or qualifier or pointer
+  template <typename T>
+  using Fundamental=
+    decltype(fundamentalHelper<T>());
+  
   /////////////////////////////////////////////////////////////////////
   
   /// Identifies whether Base is a base class of Derived
