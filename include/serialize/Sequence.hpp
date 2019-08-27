@@ -95,7 +95,7 @@ namespace SUNphi
 	    node[name];
 	  
 	  if constexpr(isTupleLike<S>)
-	    forEach(static_cast<S>(*this),[&](auto&& s)
+	    forEach(static_cast<const S&>(*this),[&](auto&& s)
 		    {
 		      if constexpr(hasMember_serialize<S>)
 			subNode.push_back(s.serialize(onlyNonDefault));
@@ -103,7 +103,7 @@ namespace SUNphi
 			subNode.push_back(s);
 		    });
 	  else
-	    for(auto& s: static_cast<S>(*this))
+	    for(auto& s: static_cast<const S&>(*this))
 	      {
 		if constexpr(hasMember_serialize<S>)
 		  subNode.push_back(s.serialize(onlyNonDefault));
