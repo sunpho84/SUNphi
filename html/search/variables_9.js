@@ -34,6 +34,7 @@ var searchData=
   ['isorderedintseq',['isOrderedIntSeq',['../dd/df8/IntSeq_8hpp.html#a302d28a5e97d3f2dafd2064ed7d1ff02',1,'SUNphi']]],
   ['isorderedintseq_3c_20intseq_3c_20ints_2e_2e_2e_20_3e_20_3e',['isOrderedIntSeq&lt; IntSeq&lt; Ints... &gt; &gt;',['../dd/df8/IntSeq_8hpp.html#a6be5c1f600f694603d91fc5ffe099091',1,'SUNphi']]],
   ['isorderedunique',['isOrderedUnique',['../da/def/structSUNphi_1_1IntSeq.html#a9d8e5fa6a7e4eda04f5af8183296fcb4',1,'SUNphi::IntSeq']]],
+  ['ispointer',['isPointer',['../d0/d81/TypeTraits_8hpp.html#acd186f0ee67c413384d79a9fa975495e',1,'SUNphi']]],
   ['isrelbinder',['isRelBinder',['../d3/da4/RelBind_8hpp.html#a2dd97253408750e775872e3ad51946a1',1,'SUNphi']]],
   ['isrvalue',['isRvalue',['../d0/d81/TypeTraits_8hpp.html#a1eb85031c83b699bc6b54c6a864b1af2',1,'SUNphi']]],
   ['issame',['isSame',['../d0/d81/TypeTraits_8hpp.html#afc7db564dd647bc10933eb0a67248b8c',1,'SUNphi']]],

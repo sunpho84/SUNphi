@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9":[2,0,0,68,3],
+"de/d33/classSUNphi_1_1Combinatorial.html#a7c14f77824a6eeffca84ce0c26ac115a":[2,0,0,68,7],
+"de/d33/classSUNphi_1_1Combinatorial.html#a823c0c48c01b210d5898944667b61090":[2,0,0,68,5],
 "de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544":[2,0,0,68,4],
 "de/d33/classSUNphi_1_1Combinatorial.html#ab592ed93974b4c7c392533999649853b":[2,0,0,68,8],
 "de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382":[2,0,0,68,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "dir_f7c9792946d4ae97dc97b9de2773b6b2.html":[3,0,2,7],
 "dir_fba38f648377aa56ae5d69782adf9e53.html":[3,0,2,5],
 "files.html":[3,0],
-"functions.html":[2,3,0,0],
-"functions.html":[2,3,0],
-"functions_0x7e.html":[2,3,0,23],
-"functions_a.html":[2,3,0,1]
+"functions.html":[2,3,0]
 };

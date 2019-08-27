@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"dd/d03/classSUNphi_1_1UMinuser.html#a250963a27e69504afb8aa56f71e094ab":[2,0,0,202,6],
+"dd/d03/classSUNphi_1_1UMinuser.html#a2e541ec625bc9f387f4fdd4544f04053":[2,0,0,202,21],
+"dd/d03/classSUNphi_1_1UMinuser.html#a302bf10f8751e25cd44cf91bf0a0b988":[2,0,0,202,24],
 "dd/d03/classSUNphi_1_1UMinuser.html#a3564a907f7fd329a541967473fc7ecb4":[2,0,0,202,9],
 "dd/d03/classSUNphi_1_1UMinuser.html#a3c824ee17126b082722f9c25550b9878":[2,0,0,202,19],
 "dd/d03/classSUNphi_1_1UMinuser.html#a3ee705e52aed50aafeb90cc1f9c5f616":[2,0,0,202,34],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db":[2,0,0,68,9],
 "de/d33/classSUNphi_1_1Combinatorial.html#a4378a6636e517eac8bca8b2a24dc2041":[2,0,0,68,11],
 "de/d33/classSUNphi_1_1Combinatorial.html#a44f777aa4d55d45f059cbec485973be5":[2,0,0,68,6],
-"de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1":[2,0,0,68,1],
-"de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9":[2,0,0,68,3],
-"de/d33/classSUNphi_1_1Combinatorial.html#a7c14f77824a6eeffca84ce0c26ac115a":[2,0,0,68,7],
-"de/d33/classSUNphi_1_1Combinatorial.html#a823c0c48c01b210d5898944667b61090":[2,0,0,68,5]
+"de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1":[2,0,0,68,1]
 };

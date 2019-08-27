@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b":[3,0,2,12,4,1],
+"d1/d7a/TensStor_8hpp_source.html":[3,0,2,12,4],
+"d1/d89/Dwarf_8hpp.html":[3,0,2,1,3],
 "d1/d89/Dwarf_8hpp_source.html":[3,0,2,1,3],
 "d1/d8b/SUNphi_8hpp.html":[3,0,2,27],
 "d1/d8b/SUNphi_8hpp_source.html":[3,0,2,27],
@@ -246,8 +249,5 @@ var NAVTREEINDEX1 =
 "d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83":[3,0,2,1,2,0],
 "d2/df5/Demangle_8hpp_source.html":[3,0,2,1,2],
 "d3/d04/structSUNphi_1_1BaseConjer.html":[2,0,0,48],
-"d3/d11/classSUNphi_1_1ScopeIndenter.html":[2,0,0,178],
-"d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70":[2,0,0,178,2],
-"d3/d11/classSUNphi_1_1ScopeIndenter.html#ab5ce6af7c29362f8cc5234c8e8aa8980":[2,0,0,178,1],
-"d3/d11/classSUNphi_1_1ScopeIndenter.html#aff0dc8f2d51cae1546a249300387e605":[2,0,0,178,0]
+"d3/d11/classSUNphi_1_1ScopeIndenter.html":[2,0,0,178]
 };
