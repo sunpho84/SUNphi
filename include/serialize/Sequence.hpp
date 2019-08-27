@@ -25,20 +25,9 @@ namespace SUNphi
     : public S
     , public Binarizable<SerializableSequence<S>>
   {
-    /// Helper to determine the mapped type
-    static auto _mappedTypeHelper()
-    {
-      if constexpr(isTupleLike<S>)
-	return
-	  get<0>(S{});
-      else
-	return
-	  S{}[0];
-    }
-    
     /// Fundamental type
     using T=
-      decltype(_mappedTypeHelper());
+      decltype((*static_cast<S*>(nullptr))[0]);
     
   public:
     
@@ -53,7 +42,7 @@ namespace SUNphi
       const
     {
       return
-	static_cast<S>(*this)==def;
+	static_cast<const S&>(*this)==def;
     }
     
     /// Put to default value
@@ -67,9 +56,9 @@ namespace SUNphi
     template <typename...TDef>
     SerializableSequence(const char* name,      ///< Name of the sequence
 			 TDef&&...def)          ///< Initializer
-      : S(forw<TDef>(def)...)
+      : S(def...)
       , name(name)
-      , def(static_cast<S>(*this))
+      , def(def...)
     {
     }
     
