@@ -115,7 +115,7 @@ namespace SUNphi
     
     /// Adds a memory to cache
     void pushToCache(void* ptr,          ///< Memory to cache
-		     const size_t size)  ///> Memory size
+		     const size_t size)  ///< Memory size
     {
       cached[size].push_back(ptr);
       

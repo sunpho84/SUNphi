@@ -265,6 +265,7 @@ namespace SUNphi
       out;
   }
   
+  /// Slice all keys of a map
   template <typename T1,
 	    typename T2>
   auto getAllKeys(const std::map<T1,T2>& m)
@@ -273,6 +274,7 @@ namespace SUNphi
       getAllFirstOrSecond<false>(m);
   }
   
+  /// Slice all values of a map
   template <typename T1,
 	    typename T2>
   auto getAllVal(const std::map<T1,T2>& m)
