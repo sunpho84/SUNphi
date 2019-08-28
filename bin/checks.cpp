@@ -242,8 +242,9 @@ void checkGrid()
 		 GridFlag::SHIFTED_BC>;
   
   /// Check that volume is as expected
-  auto checkVolume=[](const auto grid,
-		      const int64_t expVolume)
+  auto checkVolume=
+    [](const auto grid,
+       const int64_t expVolume)
     {
       /// Voluem of the grid
       const int64_t volume=
@@ -713,10 +714,12 @@ void checkCombinatorial()
   /// Set the combinatorial
   Combinatorial c(nMaxPerSlot,nObj);
   
-  for(auto i : c.getLast())
-    {
-      runLog()<<i;
-    }
+  /// Last combinatorial
+  const auto l=
+    c.getLast();
+  
+  if(l[0]!=1 or l[1]!=2 or l[2]!=0 or l[3]!=0)
+    CRASH<<"First combinatorial not working";
   
   TEST_PASSED;
 }
@@ -772,9 +775,14 @@ void checkSerializer()
   DEFINE_SERIALIZABLE_CLASS(SubTestClass)
   {
   public:
-    SERIALIZABLE_PAIR(std::string,std::string,p,std::pair<std::string,std::string>{"fi","se"});
     
-    SERIALIZABLE_VECTOR(double,v,3);
+    /// Pair to be used
+    using P=
+      std::pair<std::string,std::string>;
+    
+    SERIALIZABLE_SCALAR(P,p,"fi","se");
+    
+    SERIALIZABLE_SCALAR(std::vector<double>,v,3);
     SERIALIZABLE_SCALAR(double,b,1.0);
     
     LIST_SERIALIZABLE_MEMBERS(p,v,b);
@@ -798,10 +806,10 @@ void checkSerializer()
   test1().subTestClass().b=
     345235.1413;
   
-  test1().subTestClass().v[2]=
+  test1().subTestClass().v()[2]=
     4;
   
-  test1().subTestClass().p.first=
+  test1().subTestClass().p().first=
     "primo";
   
   test1().ciccio=
@@ -819,8 +827,8 @@ void checkSerializer()
     CRASH<<"Expected "<<test1().A<<" for " #A ", obtained in binarized: "<<test3().A<<"\n"<<test1<<"\n\n"<<test3;
   
   CHECK(subTestClass().b);
-  CHECK(subTestClass().v[2]);
-  CHECK(subTestClass().p.first);
+  CHECK(subTestClass().v()[2]);
+  CHECK(subTestClass().p().first);
   CHECK(ciccio());
   
 #undef CHECK
