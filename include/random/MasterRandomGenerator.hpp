@@ -27,7 +27,7 @@ namespace SUNphi
       _MasterRandomGenerator::state_size;
     
     /// Seed state
-    SERIALIZABLE_VECTOR_WITH_TAG(uint64_t,_seeds,"Seeds",nSeeds);
+    SERIALIZABLE_SCALAR_WITH_TAG(std::vector<uint64_t>,_seeds,"Seeds",nSeeds);
     
     /// Constant access to the seeds
     const std::vector<uint64_t>& seeds=
@@ -60,7 +60,7 @@ namespace SUNphi
     /// Fills _seeds using the true random generator
     MasterRandomGenerator()
     {
-      std::generate(_seeds.begin(),_seeds.end(),std::ref(trueRandomGenerator));
+      std::generate(_seeds().begin(),_seeds().end(),std::ref(trueRandomGenerator));
       
       reset();
     }
