@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('db/d33/Grid_8hpp.html','../../');});
 <div class="textblock"><code>#include &lt;array&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../db/dd7/Crash_8hpp_source.html">debug/Crash.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d1/deb/Arithmetic_8hpp_source.html">math/Arithmetic.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d4/dba/CRTP_8hpp_source.html">metaprogramming/CRTP.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../df/d95/Bits_8hpp_source.html">utility/Bits.hpp</a>&gt;</code><br />
@@ -190,8 +191,8 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines hypercubic cartesian grids. </p>
-<p>An hypercubic grid with number of dimensions fixed at compile time. Periodic boundary conditions are imposed at all faces and lexicographic indexing with first-neighbours connectivity is embedded. The coordinates od points and neighbors can be hashed, deciding at compile time.</p>
-<p>Given the number of dimensions, the two orientations are provided, such that the 2*nDims neighbors are stored alternating first all backwards, thenforward directions. </p>
+<p>An hypercubic grid with number of dimensions fixed at compile time. Periodic boundary conditions are imposed at all faces and lexicographic indexing with first-neighbours connectivity is embedded. The coordinates of points and neighbors can be hashed, deciding at compile time.</p>
+<p>Given the number of dimensions, the two orientations are provided, such that the 2*nDims neighbors are stored putting first all backwards, then forward directions. </p>
 
 <p>Definition in file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -207,7 +208,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div><div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh</div></div><!-- fragment -->
 <p>Provide the type Coords. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00029">29</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +225,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    combineFlags&lt;GridFlag::HASHED&gt;</div></div><!-- fragment -->
 <p>Default parameters for grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +241,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    {-1,+1}</div></div><!-- fragment -->
 <p>Offset to move <code>BW</code> or <code>FW</code>. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00045">45</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

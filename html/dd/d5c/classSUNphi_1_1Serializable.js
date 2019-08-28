@@ -1,7 +1,7 @@
 var classSUNphi_1_1Serializable =
 [
     [ "Type", "dd/d5c/classSUNphi_1_1Serializable.html#aec919dd1eb9a1544e1db9238bdb87ad2", null ],
-    [ "Serializable", "dd/d5c/classSUNphi_1_1Serializable.html#a03dec2804c67fc8ac71015619a33df62", null ],
+    [ "Serializable", "dd/d5c/classSUNphi_1_1Serializable.html#a01ece8c8c469faf9fe1a584280647026", null ],
     [ "binarize", "dd/d5c/classSUNphi_1_1Serializable.html#a6656f95d65d21642a4beccecba141c52", null ],
     [ "deBinarize", "dd/d5c/classSUNphi_1_1Serializable.html#a7e44d2fe52873ef55d1b7709feded45c", null ],
     [ "deSerialize", "dd/d5c/classSUNphi_1_1Serializable.html#a6e11489dd98571a8698c7acdcdf269db", null ],

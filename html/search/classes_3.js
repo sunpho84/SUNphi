@@ -1,7 +1,7 @@
 var searchData=
 [
   ['canprint',['CanPrint',['../de/dfd/structSUNphi_1_1CanPrint.html',1,'SUNphi']]],
-  ['check',['Check',['../d1/dce/structSUNphi_1_1HasMember__eval_1_1Check.html',1,'SUNphi::HasMember_eval']]],
+  ['check',['Check',['../d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html',1,'SUNphi::HasMember_refs']]],
   ['check',['Check',['../d9/d2d/structSUNphi_1_1HasMember__name_1_1Check.html',1,'SUNphi::HasMember_name']]],
   ['check',['Check',['../dd/dcb/structSUNphi_1_1HasMember__isAliasing_1_1Check.html',1,'SUNphi::HasMember_isAliasing']]],
   ['check',['Check',['../d8/d57/structSUNphi_1_1HasMember__compSize_1_1Check.html',1,'SUNphi::HasMember_compSize']]],
@@ -16,7 +16,7 @@ var searchData=
   ['check',['Check',['../d1/d4f/structSUNphi_1_1HasMember__MergeableComps_1_1Check.html',1,'SUNphi::HasMember_MergeableComps']]],
   ['check',['Check',['../de/db0/structSUNphi_1_1HasMember__binarize_1_1Check.html',1,'SUNphi::HasMember_binarize']]],
   ['check',['Check',['../dd/d74/structSUNphi_1_1HasMember__deBinarize_1_1Check.html',1,'SUNphi::HasMember_deBinarize']]],
-  ['check',['Check',['../d8/d91/structSUNphi_1_1HasMember__refs_1_1Check.html',1,'SUNphi::HasMember_refs']]],
+  ['check',['Check',['../d1/dce/structSUNphi_1_1HasMember__eval_1_1Check.html',1,'SUNphi::HasMember_eval']]],
   ['check',['Check',['../df/d96/structSUNphi_1_1HasMember__Tk_1_1Check.html',1,'SUNphi::HasMember_Tk']]],
   ['check',['Check',['../d8/d99/structSUNphi_1_1HasMember__assertMergeableWith_1_1Check.html',1,'SUNphi::HasMember_assertMergeableWith']]],
   ['check',['Check',['../d7/d44/structSUNphi_1_1HasMember__isDefault_1_1Check.html',1,'SUNphi::HasMember_isDefault']]],

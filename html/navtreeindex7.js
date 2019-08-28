@@ -1,6 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"db/d94/structSUNphi_1_1HasMember__isDefault.html#a9cc520d38de5cbd46dffaa478e4cb851":[2,0,0,147,4],
 "db/d94/structSUNphi_1_1HasMember__isDefault.html#ad7698f78618570dd51ae812b4b7dd2de":[2,0,0,147,6],
 "db/d94/structSUNphi_1_1HasMember__isDefault.html#aef2822b3de5f523b411de93fef116883":[2,0,0,147,3],
 "db/d94/structSUNphi_1_1HasMember__isDefault.html#afcf8a9079d3594af01946aaffc6ec0fb":[2,0,0,147,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX7 =
 "dd/d03/classSUNphi_1_1UMinuser.html#a1d6ded1dcd22920fde3d904c29f61374":[2,0,0,202,26],
 "dd/d03/classSUNphi_1_1UMinuser.html#a1ef4551ac315963eeda13347e7874b8f":[2,0,0,202,22],
 "dd/d03/classSUNphi_1_1UMinuser.html#a21aa5c1ad278ee026ea9636e4a265a9f":[2,0,0,202,23],
-"dd/d03/classSUNphi_1_1UMinuser.html#a23f8b2a670f4f1ca67318ce60205a1f1":[2,0,0,202,14]
+"dd/d03/classSUNphi_1_1UMinuser.html#a23f8b2a670f4f1ca67318ce60205a1f1":[2,0,0,202,14],
+"dd/d03/classSUNphi_1_1UMinuser.html#a250963a27e69504afb8aa56f71e094ab":[2,0,0,202,6]
 };

@@ -1,8 +1,7 @@
 var classSUNphi_1_1SerializableSequence =
 [
-    [ "T", "da/dd6/classSUNphi_1_1SerializableSequence.html#a9bba8dc8b1b0a82fdda009f6fbc64328", null ],
+    [ "T", "da/dd6/classSUNphi_1_1SerializableSequence.html#a0d798ab1baacf94adfafff6ca3586ee2", null ],
     [ "SerializableSequence", "da/dd6/classSUNphi_1_1SerializableSequence.html#ac1aac07d9bf4231beea0d99cbb0951d4", null ],
-    [ "_mappedTypeHelper", "da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1", null ],
     [ "binarize", "da/dd6/classSUNphi_1_1SerializableSequence.html#a6656f95d65d21642a4beccecba141c52", null ],
     [ "deBinarize", "da/dd6/classSUNphi_1_1SerializableSequence.html#a7e44d2fe52873ef55d1b7709feded45c", null ],
     [ "deSerialize", "da/dd6/classSUNphi_1_1SerializableSequence.html#a52918c4c0f0b4cf9395c79f9108f4928", null ],

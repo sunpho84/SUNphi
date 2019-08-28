@@ -151,9 +151,10 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a2f42a94d69623a7716188894ff745092"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
 <tr class="memitem:a2f42a94d69623a7716188894ff745092"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a2f42a94d69623a7716188894ff745092">operator()</a> (Ts &amp;&amp;...ts)</td></tr>
 <tr class="separator:a2f42a94d69623a7716188894ff745092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03dec2804c67fc8ac71015619a33df62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a03dec2804c67fc8ac71015619a33df62">Serializable</a> (const char *<a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a8f6d3a7f1ef6afb62d416e18088367d5">name</a>, const T &amp;def={})</td></tr>
-<tr class="memdesc:a03dec2804c67fc8ac71015619a33df62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a serializable with default value.  <a href="#a03dec2804c67fc8ac71015619a33df62">More...</a><br /></td></tr>
-<tr class="separator:a03dec2804c67fc8ac71015619a33df62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ece8c8c469faf9fe1a584280647026"><td class="memTemplParams" colspan="2">template&lt;typename... P&gt; </td></tr>
+<tr class="memitem:a01ece8c8c469faf9fe1a584280647026"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a01ece8c8c469faf9fe1a584280647026">Serializable</a> (const char *<a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a8f6d3a7f1ef6afb62d416e18088367d5">name</a>, P &amp;&amp;...def)</td></tr>
+<tr class="memdesc:a01ece8c8c469faf9fe1a584280647026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a serializable with default value.  <a href="#a01ece8c8c469faf9fe1a584280647026">More...</a><br /></td></tr>
+<tr class="separator:a01ece8c8c469faf9fe1a584280647026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d9eda8f14173fb3e97753af1f87fa90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d9eda8f14173fb3e97753af1f87fa90"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d5c/classSUNphi_1_1Serializable.html#a0d9eda8f14173fb3e97753af1f87fa90">isDefault</a> () const </td></tr>
 <tr class="memdesc:a0d9eda8f14173fb3e97753af1f87fa90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the value is default or not. <br /></td></tr>
@@ -435,11 +436,13 @@ class SUNphi::Serializable&lt; T &gt;</h3>
 
 <p>Definition at line <a class="el" href="../../d3/db2/Base_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d3/db2/Base_8hpp_source.html">Base.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a03dec2804c67fc8ac71015619a33df62"></a>
+<a class="anchor" id="a01ece8c8c469faf9fe1a584280647026"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename... P&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -453,8 +456,8 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>def</em> = <code>{}</code>&#160;</td>
+          <td class="paramtype">P &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -478,7 +481,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +558,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -583,7 +586,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00116">116</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00118">118</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +594,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -614,7 +617,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -622,7 +625,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -655,7 +658,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -663,7 +666,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename... Ts&gt; </div>
 <table class="mlabels">
@@ -700,7 +703,7 @@ template&lt;typename... Ts&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -723,7 +726,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -731,7 +734,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -764,7 +767,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +775,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -795,7 +798,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -803,7 +806,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -836,7 +839,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -844,7 +847,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -867,7 +870,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -875,7 +878,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -908,7 +911,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -916,7 +919,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -939,7 +942,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -947,7 +950,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -980,7 +983,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -988,7 +991,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1011,7 +1014,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1022,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1052,7 +1055,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1060,7 +1063,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1083,7 +1086,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1094,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1124,7 +1127,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1135,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1155,7 +1158,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1166,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1196,7 +1199,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1207,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1227,7 +1230,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1238,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1268,7 +1271,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1276,7 +1279,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1299,7 +1302,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1310,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1340,7 +1343,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1351,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1371,7 +1374,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1382,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1412,7 +1415,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1420,7 +1423,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1444,7 +1447,7 @@ template&lt;typename O &gt; </div>
 <p>Assignment operator</p>
 <p>Need to stay on his own </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00161">161</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00163">163</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1455,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1475,7 +1478,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1483,7 +1486,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1516,7 +1519,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1524,7 +1527,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1547,7 +1550,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1555,7 +1558,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1588,7 +1591,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1599,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void * &gt;  = nullptr&gt; </div>
 <table class="mlabels">
@@ -1619,7 +1622,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00154">154</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00156">156</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1627,7 +1630,7 @@ template&lt;typename O , TypeIf&lt;(not isSame&lt; O, Serializable &gt;), void *
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <div class="memtemplate">
 template&lt;typename O &gt; </div>
 <table class="mlabels">
@@ -1660,7 +1663,7 @@ template&lt;typename O &gt; </div>
 </div><div class="memdoc">
 <p>Assignment operator </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00155">155</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00157">157</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1668,7 +1671,7 @@ template&lt;typename O &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1696,7 +1699,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1724,7 +1727,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1747,7 +1750,7 @@ template&lt;typename T &gt; </div>
 <p>Returns a YAML node. </p>
 <p>Returned value </p>
 
-<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00105">105</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d15/Serializable_8hpp_source.html#l00107">107</a> of file <a class="el" href="../../d0/d15/Serializable_8hpp_source.html">Serializable.hpp</a>.</p>
 
 </div>
 </div>
@@ -1756,7 +1759,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

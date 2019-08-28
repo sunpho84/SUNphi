@@ -111,7 +111,6 @@ $(document).ready(function(){initNavTree('da/dd6/classSUNphi_1_1SerializableSequ
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="../../da/ddd/classSUNphi_1_1SerializableSequence-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::SerializableSequence&lt; S &gt; Class Template Reference</div>  </div>
@@ -195,17 +194,10 @@ class {</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bba8dc8b1b0a82fdda009f6fbc64328"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a9bba8dc8b1b0a82fdda009f6fbc64328">T</a> = decltype(<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1">_mappedTypeHelper</a>())</td></tr>
-<tr class="memdesc:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fundamental type. <br /></td></tr>
-<tr class="separator:a9bba8dc8b1b0a82fdda009f6fbc64328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a4ee863182a67b64dbc95350054aa53b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee863182a67b64dbc95350054aa53b1"></a>
-static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1">_mappedTypeHelper</a> ()</td></tr>
-<tr class="memdesc:a4ee863182a67b64dbc95350054aa53b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to determine the mapped type. <br /></td></tr>
-<tr class="separator:a4ee863182a67b64dbc95350054aa53b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d798ab1baacf94adfafff6ca3586ee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d798ab1baacf94adfafff6ca3586ee2"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html#a0d798ab1baacf94adfafff6ca3586ee2">T</a> = decltype((*static_cast&lt; S * &gt;(nullptr))[0])</td></tr>
+<tr class="memdesc:a0d798ab1baacf94adfafff6ca3586ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fundamental type. <br /></td></tr>
+<tr class="separator:a0d798ab1baacf94adfafff6ca3586ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename S&gt;<br />
@@ -261,7 +253,7 @@ template&lt;typename... TDef&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00068">68</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00058">58</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -366,7 +358,7 @@ template&lt;typename S&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00131">131</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00121">121</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +395,7 @@ template&lt;typename... Ts&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +488,7 @@ template&lt;typename S&gt; </div>
 <p>Returns a YAML node after serializing to it. </p>
 <p>Create the subnode </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00077">77</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>
@@ -527,7 +519,7 @@ template&lt;typename S&gt; </div>
 <p>Returns a YAML node. </p>
 <p>Returned value </p>
 
-<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00120">120</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d0/d11/Sequence_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d0/d11/Sequence_8hpp_source.html">Sequence.hpp</a>.</p>
 
 </div>
 </div>

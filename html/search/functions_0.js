@@ -32,7 +32,6 @@ var searchData=
   ['_5flastlarger',['_lastLarger',['../d3/dbe/IntListOrder_8hpp.html#ac64cb60c4cd5f2b0106dbf9534ec781f',1,'SUNphi']]],
   ['_5flastnon',['_lastNon',['../d3/dbe/IntListOrder_8hpp.html#a7d7e4c41371a685730eba04429d8512a',1,'SUNphi']]],
   ['_5flastsmaller',['_lastSmaller',['../d3/dbe/IntListOrder_8hpp.html#a261279a15ea845358fafe918dc159313',1,'SUNphi']]],
-  ['_5fmappedtypehelper',['_mappedTypeHelper',['../da/dd6/classSUNphi_1_1SerializableSequence.html#a4ee863182a67b64dbc95350054aa53b1',1,'SUNphi::SerializableSequence']]],
   ['_5fmaxoflist',['_maxOfList',['../d5/d3e/IntListOperations_8hpp.html#abcdfe80aefc0be41af4d9f99539fa7bc',1,'SUNphi']]],
   ['_5fminoflist',['_minOfList',['../d5/d3e/IntListOperations_8hpp.html#a987e6d39930ca776c8a8c378b9534284',1,'SUNphi']]],
   ['_5fnnarysmetcompsmergeability',['_nnarySmETCompsMergeability',['../d2/d69/NnarySmET_8hpp.html#a9419991bf4f7c055766775902d4be59e',1,'SUNphi']]],
