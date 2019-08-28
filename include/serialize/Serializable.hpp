@@ -58,14 +58,16 @@ namespace SUNphi
     const char* name;
     
     /// Creates a serializable with default value
+    template <typename...P>
     explicit Serializable(const char* name,    ///< Name to be used
-			  const T& def={})     ///< Default, if passed
+			  P&&...def)           ///< Default, if passed
       :
-      SerializableDefaultValue<T,not isMap>(def),
+      SerializableDefaultValue<T,not isMap>(def...),
+      value(forw<P>(def)...),
       name(name)
     {
-      if constexpr(not isMap)
-	this->putToDefault();
+      // if constexpr(not isMap)
+      // 	this->putToDefault();
     }
     
     /// Check if the value is default or not

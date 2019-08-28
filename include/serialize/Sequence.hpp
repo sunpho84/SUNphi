@@ -25,6 +25,7 @@ namespace SUNphi
     : public S
     , public Binarizable<SerializableSequence<S>>
   {
+    
     /// Fundamental type
     using T=
       decltype((*static_cast<S*>(nullptr))[0]);
@@ -94,7 +95,7 @@ namespace SUNphi
 	  else
 	    for(auto& s: static_cast<const S&>(*this))
 	      {
-		if constexpr(hasMember_serialize<S>)
+		if constexpr(hasMember_serialize<decltype(s)>)
 		  subNode.push_back(s.serialize(onlyNonDefault));
 		else
 		  subNode.push_back(s);
