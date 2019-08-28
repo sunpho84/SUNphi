@@ -12,6 +12,7 @@
 
 #include <containers/Vector.hpp>
 #include <debug/Crash.hpp>
+#include <ios/Logger.hpp>
 
 namespace SUNphi
 {
@@ -19,7 +20,7 @@ namespace SUNphi
   template <typename Int=int64_t> // Integer type
   class Combinatorial
   {
-    /// Type used for the size of vectors
+    /// Type used to enumerate the slots
     using Slot=
       typename Vector<Int>::Size;
     
@@ -33,7 +34,8 @@ namespace SUNphi
     Vector<Int> nPerSlot;
     
     /// Get the first or last combo
-    Vector<Int> getFistOrLast(bool firstLast) const
+    Vector<Int> getFistOrLast(const bool& firstLast)
+      const
     {
       /// Returned value
       Vector<Int> res(nSlots());
@@ -44,17 +46,25 @@ namespace SUNphi
       
       /// First slot to assign
       Slot firstSlot=
-	(firstLast==false)?nSlots()-1:0;
+	(firstLast==false)
+	?
+	(nSlots()-1)
+	:
+	0;
       
       /// Last slot to assign
       Slot lastSlot=
-	(firstLast==false)?-1:nSlots();
+	(firstLast==false)
+	?
+	-1
+	:
+	nSlots();
       
       /// Offset to move
       Slot dSlot=
 	sign(lastSlot-firstSlot);
       
-      // Moe across all slots
+      // Move across all slots
       for(Slot iSlot=firstSlot;iSlot!=lastSlot;iSlot+=dSlot)
 	{
 	  // Assign to current slot
@@ -84,38 +94,43 @@ namespace SUNphi
       // // Scan the slots backward until the first non empty is found
       // Slot firstNonEmpty=
       // 	nSlots()-1;
-    }     
+    }
     
     /// Get current combo
-    const Vector<Int>& curCombo() const
+    const Vector<Int>& curCombo()
+      const
     {
       return
 	nPerSlot;
     }
     
     /// Get the firt combo
-    Vector<Int> getFirst() const
+    Vector<Int> getFirst()
+      const
     {
       return
 	getFistOrLast(false);
     }
     
     /// Get the last combo
-    Vector<Int> getLast() const
+    Vector<Int> getLast()
+      const
     {
       return
 	getFistOrLast(true);
     }
     
     /// Number of slots
-    Slot nSlots() const
+    Slot nSlots()
+      const
     {
       return
 	nMaxPerSlot.size();
     }
     
     /// Maximal number of objects that can be accommodated
-    Int nMaxObj() const
+    Int nMaxObj()
+      const
     {
       return
 	nMaxPerSlot.summatorial();
