@@ -1,15 +1,18 @@
 var searchData=
 [
+  ['generatenext',['generateNext',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a5c54c7ec571e11bedc56ed920f55a8b8',1,'SUNphi::Sitmo::Rng']]],
+  ['generatenth',['generateNth',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a9d83e4a91b6b27d65bb2846f7e0b68e0',1,'SUNphi::Sitmo::Rng']]],
   ['get',['get',['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getacter',['getActer',['../df/dc0/classSUNphi_1_1Vector.html#a2f3886703a75ed136611f43bd008d7e0',1,'SUNphi::Vector']]],
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
+  ['getallfirstorsecond',['getAllFirstOrSecond',['../de/dd9/Vector_8hpp.html#a172481f864d3e4e84eedb18c3a73f764',1,'SUNphi']]],
   ['getbacktracelist',['getBackTraceList',['../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb',1,'SUNphi']]],
   ['getcomparer',['getComparer',['../df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5',1,'SUNphi::Vector']]],
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
   ['getexclusiveaccess',['getExclusiveAccess',['../d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43',1,'SUNphi::Logger']]],
   ['getfirst',['getFirst',['../de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9',1,'SUNphi::Combinatorial']]],
-  ['getfistorlast',['getFistOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544',1,'SUNphi::Combinatorial']]],
+  ['getfistorlast',['getFistOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea',1,'SUNphi::Combinatorial']]],
   ['getfuncname',['getFuncName',['../db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899',1,'SUNphi::Crasher']]],
   ['gethead',['getHead',['../dc/d21/TupleElements_8hpp.html#a80105860987af904efaa86d980d8063e',1,'SUNphi']]],
   ['getifwaitingforwork',['getIfWaitingForWork',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a3764c64514006caf8e78c9e8ab8850f5',1,'SUNphi::ThreadPool']]],
@@ -29,5 +32,6 @@ var searchData=
   ['gettail',['getTail',['../dc/d21/TupleElements_8hpp.html#a73969b2e282453e65ed9666b1dea3c4c',1,'SUNphi']]],
   ['getthreadid',['getThreadId',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2',1,'SUNphi::ThreadPool']]],
   ['gettruecondition',['getTrueCondition',['../df/dc0/classSUNphi_1_1Vector.html#a621bc927519a5c64369d738ee07cb521',1,'SUNphi::Vector']]],
-  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]]
+  ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]],
+  ['group',['group',['../df/dc0/classSUNphi_1_1Vector.html#a9fbe6b218448c653ed243567b26f1308',1,'SUNphi::Vector']]]
 ];

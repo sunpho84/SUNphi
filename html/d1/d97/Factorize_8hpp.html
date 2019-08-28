@@ -121,26 +121,29 @@ $(document).ready(function(){initNavTree('d1/d97/Factorize_8hpp.html','../../');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac728c27faf9b21f9472930644b10f103"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/Factorize_8hpp.html#ac728c27faf9b21f9472930644b10f103">SUNphi::factorize</a> (T n)</td></tr>
-<tr class="memdesc:ac728c27faf9b21f9472930644b10f103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="../../d1/d97/Factorize_8hpp.html#ac728c27faf9b21f9472930644b10f103">More...</a><br /></td></tr>
-<tr class="separator:ac728c27faf9b21f9472930644b10f103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00d9728fa86d1cd34db46dd682efb19"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:ae00d9728fa86d1cd34db46dd682efb19"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; I &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/Factorize_8hpp.html#ae00d9728fa86d1cd34db46dd682efb19">SUNphi::factorize</a> (I n)</td></tr>
+<tr class="memdesc:ae00d9728fa86d1cd34db46dd682efb19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="../../d1/d97/Factorize_8hpp.html#ae00d9728fa86d1cd34db46dd682efb19">More...</a><br /></td></tr>
+<tr class="separator:ae00d9728fa86d1cd34db46dd682efb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e73fc428e99aef35b15e5960a126538"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:a5e73fc428e99aef35b15e5960a126538"><td class="memTemplItemLeft" align="right" valign="top">std::map&lt; I, I &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538">SUNphi::factorizeGrouping</a> (const I &amp;i)</td></tr>
+<tr class="separator:a5e73fc428e99aef35b15e5960a126538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Factorizes a number with a simple algorithm. </p>
 
 <p>Definition in file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_ac728c27faf9b21f9472930644b10f103"></a>
+<a class="anchor" id="file_ae00d9728fa86d1cd34db46dd682efb19"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename I &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;T&gt; SUNphi::factorize </td>
+          <td class="memname">std::vector&lt;I&gt; SUNphi::factorize </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
+          <td class="paramtype">I&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -162,6 +165,28 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a5e73fc428e99aef35b15e5960a126538"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename I &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;I,I&gt; SUNphi::factorizeGrouping </td>
+          <td>(</td>
+          <td class="paramtype">const I &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Factorize grouping number</p>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="../../d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538">factorizeGrouping</a>(12); <span class="comment">// {{2,2},{3,1}}</span></div></div><!-- fragment --> <p>Ungrouped factors </p>
+
+<p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
 
 </div>
 </div>

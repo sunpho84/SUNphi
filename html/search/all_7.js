@@ -1,15 +1,18 @@
 var searchData=
 [
+  ['generatenext',['generateNext',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a5c54c7ec571e11bedc56ed920f55a8b8',1,'SUNphi::Sitmo::Rng']]],
+  ['generatenth',['generateNth',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a9d83e4a91b6b27d65bb2846f7e0b68e0',1,'SUNphi::Sitmo::Rng']]],
   ['get',['get',['../d0/d81/TypeTraits_8hpp.html#a353ff120044ca6e0c3abe289e0630990',1,'SUNphi::internal::get()'],['../dc/d21/TupleElements_8hpp.html#a82133fd401b9dcb4ae7ace4fd98f2840',1,'SUNphi::get(T &amp;&amp;t)'],['../dc/d21/TupleElements_8hpp.html#abe00a5f3b8ae90e5cf6febab8b08e16c',1,'SUNphi::get(T &amp;&amp;t)']]],
   ['getacter',['getActer',['../df/dc0/classSUNphi_1_1Vector.html#a2f3886703a75ed136611f43bd008d7e0',1,'SUNphi::Vector']]],
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
+  ['getallfirstorsecond',['getAllFirstOrSecond',['../de/dd9/Vector_8hpp.html#a172481f864d3e4e84eedb18c3a73f764',1,'SUNphi']]],
   ['getbacktracelist',['getBackTraceList',['../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb',1,'SUNphi']]],
   ['getcomparer',['getComparer',['../df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5',1,'SUNphi::Vector']]],
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
   ['getexclusiveaccess',['getExclusiveAccess',['../d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43',1,'SUNphi::Logger']]],
   ['getfirst',['getFirst',['../de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9',1,'SUNphi::Combinatorial']]],
-  ['getfistorlast',['getFistOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544',1,'SUNphi::Combinatorial']]],
+  ['getfistorlast',['getFistOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea',1,'SUNphi::Combinatorial']]],
   ['getflag',['getFlag',['../d0/d45/Flags_8hpp.html#adc11adcd711380f1211bc92f8c3e3484',1,'SUNphi']]],
   ['getfuncname',['getFuncName',['../db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899',1,'SUNphi::Crasher']]],
   ['gethead',['getHead',['../dc/d21/TupleElements_8hpp.html#a80105860987af904efaa86d980d8063e',1,'SUNphi']]],
@@ -44,5 +47,6 @@ var searchData=
   ['gridshiftablebc',['GridShiftableBC',['../df/da9/classSUNphi_1_1GridShiftableBC.html',1,'SUNphi']]],
   ['gridshiftablebc_3c_20grid_3c_20ndims_2c_20coord_2c_20idx_2c_20flags_20_3e_2c_20ndims_2c_20coord_2c_20idx_2c_20getflag_3c_20flags_2c_20gridflag_3a_3ashifted_5fbc_20_3e_20_3e',['GridShiftableBC&lt; Grid&lt; NDims, Coord, Idx, Flags &gt;, NDims, Coord, Idx, getFlag&lt; Flags, GridFlag::SHIFTED_BC &gt; &gt;',['../df/da9/classSUNphi_1_1GridShiftableBC.html',1,'SUNphi']]],
   ['gridshiftablebc_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20false_20_3e',['GridShiftableBC&lt; T, NDims, Coord, Idx, false &gt;',['../d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html',1,'SUNphi']]],
-  ['gridshiftablebc_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20true_20_3e',['GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html',1,'SUNphi']]]
+  ['gridshiftablebc_3c_20t_2c_20ndims_2c_20coord_2c_20idx_2c_20true_20_3e',['GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html',1,'SUNphi']]],
+  ['group',['group',['../df/dc0/classSUNphi_1_1Vector.html#a9fbe6b218448c653ed243567b26f1308',1,'SUNphi::Vector']]]
 ];

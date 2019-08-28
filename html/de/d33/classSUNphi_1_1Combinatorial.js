@@ -4,7 +4,7 @@ var classSUNphi_1_1Combinatorial =
     [ "Combinatorial", "de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1", null ],
     [ "curCombo", "de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e", null ],
     [ "getFirst", "de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9", null ],
-    [ "getFistOrLast", "de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544", null ],
+    [ "getFistOrLast", "de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea", null ],
     [ "getLast", "de/d33/classSUNphi_1_1Combinatorial.html#a823c0c48c01b210d5898944667b61090", null ],
     [ "nMaxObj", "de/d33/classSUNphi_1_1Combinatorial.html#a44f777aa4d55d45f059cbec485973be5", null ],
     [ "nSlots", "de/d33/classSUNphi_1_1Combinatorial.html#a7c14f77824a6eeffca84ce0c26ac115a", null ],

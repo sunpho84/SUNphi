@@ -30,6 +30,7 @@ var searchData=
   ['normalizedmax',['normalizedMax',['../d0/dde/structSUNphi_1_1__RangeSeq.html#a66df314974e5a4c34bf2ae8683f13b3d',1,'SUNphi::_RangeSeq']]],
   ['not_5fpresent',['NOT_PRESENT',['../dc/d58/Position_8hpp.html#a1704de9acff8e8441dbcf1abc9b5cc01',1,'SUNphi']]],
   ['nperslot',['nPerSlot',['../de/d33/classSUNphi_1_1Combinatorial.html#a4378a6636e517eac8bca8b2a24dc2041',1,'SUNphi::Combinatorial']]],
+  ['nreserved',['nReserved',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a28112386d906773a1010454b5ccca751',1,'SUNphi::Sitmo::Rng']]],
   ['nrw_5fcol',['NRW_Col',['../d4/df5/SUN_8hpp.html#a8194485c27988603bf011890e00fcb15',1,'SUNphi']]],
   ['nrw_5fspin',['NRW_Spin',['../d9/dfb/Spin_8hpp.html#a8532480c6ab7f3851c3f18eefc919400',1,'SUNphi']]],
   ['nseeds',['nSeeds',['../d3/da1/classSUNphi_1_1MasterRandomGenerator.html#a6f25c0fa58743f61a2cb5fa0fe0ff1b1',1,'SUNphi::MasterRandomGenerator']]],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"d4/d4b/classSUNphi_1_1Assigner.html#aaa1c2a1a409749d2ba19a25ed7c51a77":[2,0,0,41,14],
 "d4/d4b/classSUNphi_1_1Assigner.html#ab5e251b5769fdf1b63c86800fb1d4a7a":[2,0,0,41,4],
 "d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b":[2,0,0,41,11],
 "d4/d4b/classSUNphi_1_1Assigner.html#abfa43b03b21af3d0a409cc68672684d3":[2,0,0,41,15],
@@ -34,6 +35,11 @@ var NAVTREEINDEX3 =
 "d4/d96/IntSeqSplit_8hpp.html#a0a9b8c90e309f5bde54d2b81863a5177":[3,0,2,2,8,4],
 "d4/d96/IntSeqSplit_8hpp.html#ae60031ca05f637ebafadef8570b5d931":[3,0,2,2,8,3],
 "d4/d96/IntSeqSplit_8hpp_source.html":[3,0,2,2,8],
+"d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html":[2,0,0,2,0,0],
+"d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html#a12200b6d3e71fb2aaddfbf70ede00062":[2,0,0,2,0,0,1],
+"d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html#a7b7fb76e56127f8b1ea203967a406d0a":[2,0,0,2,0,0,3],
+"d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html#a80deccf5c726770540984dfc036579e6":[2,0,0,2,0,0,2],
+"d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html#aa4ccde313e7ed79e1ae2c4e236afd5ce":[2,0,0,2,0,0,0],
 "d4/dba/CRTP_8hpp.html":[3,0,2,6,0],
 "d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882":[3,0,2,6,0,1],
 "d4/dba/CRTP_8hpp.html#a68082647627071fee369d4da4b495a37":[3,0,2,6,0,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX3 =
 "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a9a507cafdc5f729a4ac0bc4edcbb8f24":[2,0,0,135,1],
 "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#aa2330739a3291e12cc25c974a6431e06":[2,0,0,135,6],
 "d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#ab7a09431303711e88017fddd4efbbc43":[2,0,0,135,3],
-"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#adf825c0a10f9060d883ca2b9805eb5b8":[2,0,0,135,9],
-"d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html":[2,0,0,148,2],
-"d5/df0/structSUNphi_1_1HasMember__isStoring_1_1Fallback.html#ab3a9bde0e088b2cd295436f481257d0c":[2,0,0,148,2,0],
-"d5/df6/structSUNphi_1_1ConstrainHasMember__assertMergeableWith.html":[2,0,0,90],
-"d6/d07/structSUNphi_1_1HasMember__serializableMembers_1_1Derived.html":[2,0,0,155,1],
-"d6/d07/structSUNphi_1_1HasMember__serializableMembers_1_1Derived.html#a194daba3dd5029c1268d447c40f5edbb":[2,0,0,155,1,0],
-"d6/d0f/structSUNphi_1_1HasMember__Fund_1_1Fallback.html":[2,0,0,143,2]
+"d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#adf825c0a10f9060d883ca2b9805eb5b8":[2,0,0,135,9]
 };

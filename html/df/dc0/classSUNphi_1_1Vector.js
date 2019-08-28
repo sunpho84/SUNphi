@@ -2,7 +2,9 @@ var classSUNphi_1_1Vector =
 [
     [ "Size", "df/dc0/classSUNphi_1_1Vector.html#a5116fba1a194138c47c59eeb9bebcc19", null ],
     [ "UnsignedSize", "df/dc0/classSUNphi_1_1Vector.html#a491d67a0f82a935991d7251c10cdf02d", null ],
-    [ "Vector", "df/dc0/classSUNphi_1_1Vector.html#a53713cf362de640a3bf474f71d851a1f", null ],
+    [ "Vector", "df/dc0/classSUNphi_1_1Vector.html#ae16bcc82fec8a59dc4ace7a5d58ff095", null ],
+    [ "Vector", "df/dc0/classSUNphi_1_1Vector.html#af6856f9620028d26d63a8576b823c2f1", null ],
+    [ "Vector", "df/dc0/classSUNphi_1_1Vector.html#ada5004ee766a667d2373d61f61c0e035", null ],
     [ "Vector", "df/dc0/classSUNphi_1_1Vector.html#a1922d3f580fab56a279973633b17a79c", null ],
     [ "findFirst", "df/dc0/classSUNphi_1_1Vector.html#a3aae580c5bca9d59695912ae0e1c5660", null ],
     [ "findFirstWhereNot", "df/dc0/classSUNphi_1_1Vector.html#a45a5b68e9006ce09c91f126e3f34651a", null ],
@@ -12,6 +14,7 @@ var classSUNphi_1_1Vector =
     [ "getComparer", "df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5", null ],
     [ "getNullAction", "df/dc0/classSUNphi_1_1Vector.html#ad140b85de6743cfe0954daf2575faf4c", null ],
     [ "getTrueCondition", "df/dc0/classSUNphi_1_1Vector.html#a621bc927519a5c64369d738ee07cb521", null ],
+    [ "group", "df/dc0/classSUNphi_1_1Vector.html#a9fbe6b218448c653ed243567b26f1308", null ],
     [ "loopUntil", "df/dc0/classSUNphi_1_1Vector.html#acc18cf9d2eeef5d251e79781d07e76fd", null ],
     [ "productorial", "df/dc0/classSUNphi_1_1Vector.html#a17781892c3dbe68eba33c7c6290eef85", null ],
     [ "productorial", "df/dc0/classSUNphi_1_1Vector.html#ab579d50cf7444f1a57d607894f88325f", null ],

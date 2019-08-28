@@ -157,14 +157,14 @@ Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 Private Types</h2></td></tr>
 <tr class="memitem:ad2c9c2ec2f8ebd9ed47caf2aafa7fe01"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2c9c2ec2f8ebd9ed47caf2aafa7fe01"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> = typename <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;::Size</td></tr>
-<tr class="memdesc:ad2c9c2ec2f8ebd9ed47caf2aafa7fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used for the size of vectors. <br /></td></tr>
+<tr class="memdesc:ad2c9c2ec2f8ebd9ed47caf2aafa7fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to enumerate the slots. <br /></td></tr>
 <tr class="separator:ad2c9c2ec2f8ebd9ed47caf2aafa7fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a8438a648132de952ad2e18f4986e8544"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a8438a648132de952ad2e18f4986e8544">getFistOrLast</a> (bool firstLast) const </td></tr>
-<tr class="memdesc:a8438a648132de952ad2e18f4986e8544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first or last combo.  <a href="#a8438a648132de952ad2e18f4986e8544">More...</a><br /></td></tr>
-<tr class="separator:a8438a648132de952ad2e18f4986e8544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada16b11e92d5331ceddceebe561a73ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea">getFistOrLast</a> (const bool &amp;firstLast) const </td></tr>
+<tr class="memdesc:ada16b11e92d5331ceddceebe561a73ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first or last combo.  <a href="#ada16b11e92d5331ceddceebe561a73ea">More...</a><br /></td></tr>
+<tr class="separator:ada16b11e92d5331ceddceebe561a73ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -187,7 +187,7 @@ class SUNphi::Combinatorial&lt; Int &gt;</h3>
 
 <p>Implements a looper over all combinations of a given kind. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4ed5ebc58bba3152247c3f16b445f7e1"></a>
 <div class="memitem">
@@ -232,12 +232,12 @@ template&lt;typename Int  = int64_t&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00125">125</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8438a648132de952ad2e18f4986e8544"></a>
+<a class="anchor" id="ada16b11e92d5331ceddceebe561a73ea"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -249,7 +249,7 @@ template&lt;typename Int  = int64_t&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt;Int&gt; <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::getFistOrLast </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">const bool &amp;&#160;</td>
           <td class="paramname"><em>firstLast</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -268,7 +268,7 @@ template&lt;typename Int  = int64_t&gt; </div>
 <p>Last slot to assign</p>
 <p>Offset to move </p>
 
-<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 
 </div>
 </div>

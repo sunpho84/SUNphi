@@ -22,7 +22,8 @@ var NAVTREEINDEX1 =
 "d1/d96/structSUNphi_1_1TensComp.html#ae29a38b5b9a7ff35e0798d43279090c3":[2,0,0,192,6],
 "d1/d96/structSUNphi_1_1TensComp.html#aff07721fd4455f1b9859c166766f8e7c":[2,0,0,192,7],
 "d1/d97/Factorize_8hpp.html":[3,0,2,5,1],
-"d1/d97/Factorize_8hpp.html#ac728c27faf9b21f9472930644b10f103":[3,0,2,5,1,0],
+"d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538":[3,0,2,5,1,1],
+"d1/d97/Factorize_8hpp.html#ae00d9728fa86d1cd34db46dd682efb19":[3,0,2,5,1,0],
 "d1/d97/Factorize_8hpp_source.html":[3,0,2,5,1],
 "d1/d97/classSUNphi_1_1internal_1_1FallTrhough.html":[2,0,0,1,0],
 "d1/d9b/Assign_8hpp.html":[3,0,2,10,2],
@@ -141,11 +142,11 @@ var NAVTREEINDEX1 =
 "d2/d66/classSUNphi_1_1Binarizer.html#a5070a05d0f6a57bfa795de362c47ff9e":[2,0,0,62,16],
 "d2/d66/classSUNphi_1_1Binarizer.html#a5a0ae8cb12a8090584d90aee2eb36c74":[2,0,0,62,14],
 "d2/d66/classSUNphi_1_1Binarizer.html#a5c4239a61640ebe2398d09c800fb6802":[2,0,0,62,13],
-"d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672":[2,0,0,62,4],
 "d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672":[2,0,0,62,5],
+"d2/d66/classSUNphi_1_1Binarizer.html#a8808eeed4a4decf63245ea01ee552672":[2,0,0,62,4],
 "d2/d66/classSUNphi_1_1Binarizer.html#a8f22c3e0601f3d8f6d1a8d3bc64eed06":[2,0,0,62,15],
-"d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81":[2,0,0,62,2],
 "d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81":[2,0,0,62,3],
+"d2/d66/classSUNphi_1_1Binarizer.html#aa05912f8d199e0c72a96968d4af56d81":[2,0,0,62,2],
 "d2/d66/classSUNphi_1_1Binarizer.html#ab2511ba72b981863ad37e2e3c8c16301":[2,0,0,62,17],
 "d2/d66/classSUNphi_1_1Binarizer.html#abd962bd8037f43179c84f7d3ab181c0d":[2,0,0,62,11],
 "d2/d66/classSUNphi_1_1Binarizer.html#ada71e33ffefe29f3508a631428ecaa63":[2,0,0,62,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d2/df5/Demangle_8hpp.html":[3,0,2,1,2],
 "d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83":[3,0,2,1,2,0],
 "d2/df5/Demangle_8hpp_source.html":[3,0,2,1,2],
-"d3/d04/structSUNphi_1_1BaseConjer.html":[2,0,0,48],
-"d3/d11/classSUNphi_1_1ScopeIndenter.html":[2,0,0,178]
+"d3/d04/structSUNphi_1_1BaseConjer.html":[2,0,0,48]
 };

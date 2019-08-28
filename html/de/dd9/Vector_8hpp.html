@@ -106,7 +106,8 @@ $(document).ready(function(){initNavTree('de/dd9/Vector_8hpp.html','../../');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Vector.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -117,9 +118,11 @@ $(document).ready(function(){initNavTree('de/dd9/Vector_8hpp.html','../../');});
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;numeric&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d1/deb/Arithmetic_8hpp_source.html">math/Arithmetic.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d0/d81/TypeTraits_8hpp_source.html">metaprogramming/TypeTraits.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d4/d77/SFINAE_8hpp_source.html">metaprogramming/SFINAE.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="../../d2/d7d/UniversalReferences_8hpp_source.html">metaprogramming/UniversalReferences.hpp</a>&gt;</code><br />
 </div>
 <p><a href="../../de/dd9/Vector_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -128,12 +131,48 @@ $(document).ready(function(){initNavTree('de/dd9/Vector_8hpp.html','../../');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">SUNphi::Vector&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a172481f864d3e4e84eedb18c3a73f764"><td class="memTemplParams" colspan="2">template&lt;bool FirstSecond, typename T1 , typename T2 , typename TOut  = Conditional&lt;FirstSecond,T2,T1&gt;&gt; </td></tr>
+<tr class="memitem:a172481f864d3e4e84eedb18c3a73f764"><td class="memTemplItemLeft" align="right" valign="top">Vector&lt; TOut &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dd9/Vector_8hpp.html#a172481f864d3e4e84eedb18c3a73f764">SUNphi::getAllFirstOrSecond</a> (const std::map&lt; T1, T2 &gt; &amp;m)</td></tr>
+<tr class="separator:a172481f864d3e4e84eedb18c3a73f764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dae55e2d2fc1c94bebc60d655f745af"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0dae55e2d2fc1c94bebc60d655f745af"></a>
+template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a0dae55e2d2fc1c94bebc60d655f745af"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SUNphi::getAllKeys</b> (const std::map&lt; T1, T2 &gt; &amp;m)</td></tr>
+<tr class="separator:a0dae55e2d2fc1c94bebc60d655f745af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69f6df3f3d03928f708d52d9838124a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab69f6df3f3d03928f708d52d9838124a"></a>
+template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:ab69f6df3f3d03928f708d52d9838124a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SUNphi::getAllVal</b> (const std::map&lt; T1, T2 &gt; &amp;m)</td></tr>
+<tr class="separator:ab69f6df3f3d03928f708d52d9838124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the definition of vectors, and useful routines related. </p>
 
 <p>Definition in file <a class="el" href="../../de/dd9/Vector_8hpp_source.html">Vector.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a172481f864d3e4e84eedb18c3a73f764"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool FirstSecond, typename T1 , typename T2 , typename TOut  = Conditional&lt;FirstSecond,T2,T1&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;TOut&gt; SUNphi::getAllFirstOrSecond </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; T1, T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Result </p>
+
+<p>Definition at line <a class="el" href="../../de/dd9/Vector_8hpp_source.html#l00251">251</a> of file <a class="el" href="../../de/dd9/Vector_8hpp_source.html">Vector.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

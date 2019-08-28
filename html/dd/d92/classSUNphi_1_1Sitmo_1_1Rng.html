@@ -108,10 +108,13 @@ $(document).ready(function(){initNavTree('dd/d92/classSUNphi_1_1Sitmo_1_1Rng.htm
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="../../d9/dc8/classSUNphi_1_1Sitmo_1_1Rng-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SUNphi::Sitmo::Rng Class Reference</div>  </div>
@@ -132,6 +135,12 @@ Inheritance diagram for SUNphi::Sitmo::Rng:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html">State</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the state of the generator.  <a href="../../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a1f3d5cd3f8f26926454296dec7ebe964"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f3d5cd3f8f26926454296dec7ebe964"></a>
@@ -147,8 +156,35 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab754917af4e7b50a8726bba76a82c1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae715bbb029f50285ef3b272a38b280d7"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:ae715bbb029f50285ef3b272a38b280d7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#ae715bbb029f50285ef3b272a38b280d7">seed</a> (F &amp;f)</td></tr>
-<tr class="memdesc:ae715bbb029f50285ef3b272a38b280d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put a seed from a random generator.  <a href="#ae715bbb029f50285ef3b272a38b280d7">More...</a><br /></td></tr>
+<tr class="memdesc:ae715bbb029f50285ef3b272a38b280d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a seed from a random generator.  <a href="#ae715bbb029f50285ef3b272a38b280d7">More...</a><br /></td></tr>
 <tr class="separator:ae715bbb029f50285ef3b272a38b280d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e32ba3dae3d2762df490ac9f766838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a06e32ba3dae3d2762df490ac9f766838">seed</a> (const uint32_t &amp;s)</td></tr>
+<tr class="memdesc:a06e32ba3dae3d2762df490ac9f766838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed from a seed.  <a href="#a06e32ba3dae3d2762df490ac9f766838">More...</a><br /></td></tr>
+<tr class="separator:a06e32ba3dae3d2762df490ac9f766838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d83e4a91b6b27d65bb2846f7e0b68e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a1f3d5cd3f8f26926454296dec7ebe964">ResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a9d83e4a91b6b27d65bb2846f7e0b68e0">generateNth</a> (const uint64_t &amp;offset)</td></tr>
+<tr class="memdesc:a9d83e4a91b6b27d65bb2846f7e0b68e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a number with a given offset w.r.t current state.  <a href="#a9d83e4a91b6b27d65bb2846f7e0b68e0">More...</a><br /></td></tr>
+<tr class="separator:a9d83e4a91b6b27d65bb2846f7e0b68e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f48f424fc6225bbce4e00df3f23fd72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f48f424fc6225bbce4e00df3f23fd72"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a5f48f424fc6225bbce4e00df3f23fd72">reserve</a> (const uint64_t &amp;n)</td></tr>
+<tr class="memdesc:a5f48f424fc6225bbce4e00df3f23fd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserve a number of random number. <br /></td></tr>
+<tr class="separator:a5f48f424fc6225bbce4e00df3f23fd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17826fdc076deb8e1fadda427b2a735f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17826fdc076deb8e1fadda427b2a735f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a17826fdc076deb8e1fadda427b2a735f">release</a> ()</td></tr>
+<tr class="memdesc:a17826fdc076deb8e1fadda427b2a735f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the reserved number of random number, increasing the state. <br /></td></tr>
+<tr class="separator:a17826fdc076deb8e1fadda427b2a735f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e45d2cce786b0a7630939d6a10c30c3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a0e45d2cce786b0a7630939d6a10c30c3">scopeReserve</a> (const uint64_t &amp;n)</td></tr>
+<tr class="separator:a0e45d2cce786b0a7630939d6a10c30c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907a4c2afa7c4ab99b4d6c7e27bfbbaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a907a4c2afa7c4ab99b4d6c7e27bfbbaa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a907a4c2afa7c4ab99b4d6c7e27bfbbaa">skip</a> (const uint64_t &amp;n)</td></tr>
+<tr class="memdesc:a907a4c2afa7c4ab99b4d6c7e27bfbbaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip n numbers. <br /></td></tr>
+<tr class="separator:a907a4c2afa7c4ab99b4d6c7e27bfbbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c54c7ec571e11bedc56ed920f55a8b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a1f3d5cd3f8f26926454296dec7ebe964">ResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a5c54c7ec571e11bedc56ed920f55a8b8">generateNext</a> ()</td></tr>
+<tr class="memdesc:a5c54c7ec571e11bedc56ed920f55a8b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a number in the current stream and increase of 1.  <a href="#a5c54c7ec571e11bedc56ed920f55a8b8">More...</a><br /></td></tr>
+<tr class="separator:a5c54c7ec571e11bedc56ed920f55a8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbb8e0148c216a648d462e6bb3552de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcbb8e0148c216a648d462e6bb3552de"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#adcbb8e0148c216a648d462e6bb3552de">Rng</a> (const uint32_t &amp;s=<a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a70bb7418a5be4aa02c3e1c8d492006a2">DEFAULT_SEED</a>)</td></tr>
+<tr class="memdesc:adcbb8e0148c216a648d462e6bb3552de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:adcbb8e0148c216a648d462e6bb3552de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae42b3328de0ad6084034318c5b2acf1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#ae42b3328de0ad6084034318c5b2acf1e">operator~</a> ()</td></tr>
 <tr class="separator:ae42b3328de0ad6084034318c5b2acf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66b07b306e85d9d075dfbcdd22680a9c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html#a66b07b306e85d9d075dfbcdd22680a9c">operator~</a> () const</td></tr>
@@ -194,14 +230,41 @@ class {</td></tr>
 <tr class="memitem:ae25493694a198c9fb5916d2ca817f338"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:ae25493694a198c9fb5916d2ca817f338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a22f0f85490961e5cff8af8bc4e04ccb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22f0f85490961e5cff8af8bc4e04ccb4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a22f0f85490961e5cff8af8bc4e04ccb4">lock</a> ()</td></tr>
+<tr class="memdesc:a22f0f85490961e5cff8af8bc4e04ccb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the generator. <br /></td></tr>
+<tr class="separator:a22f0f85490961e5cff8af8bc4e04ccb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4984ac8e437a104c1c681b55f0caac3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4984ac8e437a104c1c681b55f0caac3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#aa4984ac8e437a104c1c681b55f0caac3">unLock</a> ()</td></tr>
+<tr class="memdesc:aa4984ac8e437a104c1c681b55f0caac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the generator. <br /></td></tr>
+<tr class="separator:aa4984ac8e437a104c1c681b55f0caac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a65cff8816130e19d0e5aac918c03a47b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65cff8816130e19d0e5aac918c03a47b"></a>
-<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a27496980ca58399179e685a53382ac1d">Sitmo::Key</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>key</b> { &quot;key&quot; , }</td></tr>
-<tr class="separator:a65cff8816130e19d0e5aac918c03a47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7854f5f3c8cbcc2664e4f7c07d045b7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7854f5f3c8cbcc2664e4f7c07d045b7f"></a>
-<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a3c65fe07410555f7bdff1502307c4823">Sitmo::Word</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> { &quot;state&quot; , }</td></tr>
-<tr class="separator:a7854f5f3c8cbcc2664e4f7c07d045b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf7ea211a637b76fed72d7053217140"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bf7ea211a637b76fed72d7053217140"></a>
+<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html#a27496980ca58399179e685a53382ac1d">Key</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a6bf7ea211a637b76fed72d7053217140">key</a> { &quot;seed&quot; ,}</td></tr>
+<tr class="memdesc:a6bf7ea211a637b76fed72d7053217140"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed, used to encrypt. <br /></td></tr>
+<tr class="separator:a6bf7ea211a637b76fed72d7053217140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc58d433b491c639b5ab4ecc9864d2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bc58d433b491c639b5ab4ecc9864d2c"></a>
+<a class="el" href="../../da/dd6/classSUNphi_1_1SerializableSequence.html">SerializableSequence</a>&lt; <a class="el" href="../../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a8bc58d433b491c639b5ab4ecc9864d2c">state</a> { &quot;state&quot; , }</td></tr>
+<tr class="memdesc:a8bc58d433b491c639b5ab4ecc9864d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html" title="Holds the state of the generator. ">State</a> of the random number generator. <br /></td></tr>
+<tr class="separator:a8bc58d433b491c639b5ab4ecc9864d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28112386d906773a1010454b5ccca751"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28112386d906773a1010454b5ccca751"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a28112386d906773a1010454b5ccca751">nReserved</a> {0}</td></tr>
+<tr class="memdesc:a28112386d906773a1010454b5ccca751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of reserved random number. <br /></td></tr>
+<tr class="separator:a28112386d906773a1010454b5ccca751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d1e87fa85bd4997b905e2deb467627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92d1e87fa85bd4997b905e2deb467627"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a92d1e87fa85bd4997b905e2deb467627">locked</a> {false}</td></tr>
+<tr class="memdesc:a92d1e87fa85bd4997b905e2deb467627"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html" title="Holds the state of the generator. ">State</a> whether the rng is locked or not. <br /></td></tr>
+<tr class="separator:a92d1e87fa85bd4997b905e2deb467627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a70bb7418a5be4aa02c3e1c8d492006a2"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a70bb7418a5be4aa02c3e1c8d492006a2">DEFAULT_SEED</a></td></tr>
+<tr class="memdesc:a70bb7418a5be4aa02c3e1c8d492006a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default seed.  <a href="#a70bb7418a5be4aa02c3e1c8d492006a2">More...</a><br /></td></tr>
+<tr class="separator:a70bb7418a5be4aa02c3e1c8d492006a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class encapsulating the <a class="el" href="../../d9/d59/classSUNphi_1_1Sitmo.html" title="Class encapsulating the Sitmo random generator. ">Sitmo</a> random generator. </p>
@@ -347,6 +410,65 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5c54c7ec571e11bedc56ed920f55a8b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a1f3d5cd3f8f26926454296dec7ebe964">ResultType</a> SUNphi::Sitmo::Rng::generateNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a number in the current stream and increase of 1. </p>
+<p>Holds the lock on the stream </p>
+
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00262">262</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d83e4a91b6b27d65bb2846f7e0b68e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#a1f3d5cd3f8f26926454296dec7ebe964">ResultType</a> SUNphi::Sitmo::Rng::generateNth </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate a number with a given offset w.r.t current state. </p>
+<p>Temporary result of the encyipter</p>
+<p>Output to be returned</p>
+<p>Shifted state </p>
+
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00185">185</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac38174ece3d16b2035384ffa32adbe0e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -372,32 +494,6 @@ Private Attributes</h2></td></tr>
 <p>Default value </p>
 
 <p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a66b07b306e85d9d075dfbcdd22680a9c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a> &amp; <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass</a>&lt; <a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a>  &gt;::operator~ </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Constant cast operator to class <code>T</code> </p>
-
-<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
 
 </div>
 </div>
@@ -427,6 +523,60 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a66b07b306e85d9d075dfbcdd22680a9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a> &amp; <a class="el" href="../../d1/d39/classSUNphi_1_1SerializableClass.html">SUNphi::SerializableClass</a>&lt; <a class="el" href="../../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html">Rng</a>  &gt;::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constant cast operator to class <code>T</code> </p>
+
+<p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e45d2cce786b0a7630939d6a10c30c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto SUNphi::Sitmo::Rng::scopeReserve </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reserves, returning a scope-locker</p>
+<p>Automatically releases the lock and advances when the locker goes out of scope </p>
+
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00239">239</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ae715bbb029f50285ef3b272a38b280d7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -451,14 +601,43 @@ template&lt;typename F &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Put a seed from a random generator. </p>
+<p>Draw a seed from a random generator. </p>
 <p>Result type of the callabale generator</p>
-<p>Number of calls to be issued to fill the stste</p>
+<p>Number of calls to be issued to fill the state</p>
 <p>Partial key</p>
 <p>Access to the key in a way which allows to fill with the generator</p>
 <p>Fill the key </p>
 
-<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00054">54</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00145">145</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06e32ba3dae3d2762df490ac9f766838"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SUNphi::Sitmo::Rng::seed </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Seed from a seed. </p>
+<p>Partial word to be used </p>
+
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00174">174</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +663,7 @@ template&lt;typename F &gt; </div>
 </div><div class="memdoc">
 <p>Gets the reference to the serializable members </p>
 
-<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
 
 </div>
 </div>
@@ -510,7 +689,7 @@ template&lt;typename F &gt; </div>
 </div><div class="memdoc">
 <p>Gets the reference to the serializable members </p>
 
-<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00141">141</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,6 +770,31 @@ template&lt;typename F &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html#l00088">88</a> of file <a class="el" href="../../df/dd4/serialize_2Map_8hpp_source.html">Map.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a70bb7418a5be4aa02c3e1c8d492006a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t SUNphi::Sitmo::Rng::DEFAULT_SEED</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    3472291050</div></div><!-- fragment -->
+<p>Default seed. </p>
+
+<p>Definition at line <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d2/dd9/Sitmo2_8hpp_source.html">Sitmo2.hpp</a>.</p>
 
 </div>
 </div>

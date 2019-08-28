@@ -16,8 +16,8 @@ var searchData=
   ['serializabledefaultvalue_3c_20t_2c_20not_20isserializablemap_3c_20t_20_3e_20_3e',['SerializableDefaultValue&lt; T, not isSerializableMap&lt; T &gt; &gt;',['../dc/d2a/classSUNphi_1_1SerializableDefaultValue.html',1,'SUNphi']]],
   ['serializabledefaultvalue_3c_20t_2c_20true_20_3e',['SerializableDefaultValue&lt; T, true &gt;',['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html',1,'SUNphi']]],
   ['serializablesequence',['SerializableSequence',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
-  ['serializablesequence_3c_20sunphi_3a_3asitmo_3a_3akey_20_3e',['SerializableSequence&lt; SUNphi::Sitmo::Key &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
-  ['serializablesequence_3c_20sunphi_3a_3asitmo_3a_3aword_20_3e',['SerializableSequence&lt; SUNphi::Sitmo::Word &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
+  ['serializablesequence_3c_20key_20_3e',['SerializableSequence&lt; Key &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
+  ['serializablesequence_3c_20sunphi_3a_3asitmo_3a_3arng_3a_3astate_20_3e',['SerializableSequence&lt; SUNphi::Sitmo::Rng::State &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['sfmtrandomgen',['SFMTRandomGen',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
@@ -37,5 +37,6 @@ var searchData=
   ['smet_3c_20transposer_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['SmET&lt; Transposer&lt; _Refs... &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20uminuser_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['SmET&lt; UMinuser&lt; _Refs... &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
   ['smet_3c_20wrapper_3c_20_5frefs_2e_2e_2e_20_3e_20_3e',['SmET&lt; Wrapper&lt; _Refs... &gt; &gt;',['../d1/d31/structSUNphi_1_1SmET.html',1,'SUNphi']]],
-  ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]]
+  ['spacetime',['Spacetime',['../da/d14/structSUNphi_1_1Spacetime.html',1,'SUNphi']]],
+  ['state',['State',['../d4/da5/classSUNphi_1_1Sitmo_1_1Rng_1_1State.html',1,'SUNphi::Sitmo::Rng']]]
 ];

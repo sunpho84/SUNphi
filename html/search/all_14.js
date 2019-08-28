@@ -9,7 +9,7 @@ var searchData=
   ['valwithextreme_3c_20size_5ft_20_3e',['ValWithExtreme&lt; size_t &gt;',['../d8/def/classSUNphi_1_1ValWithExtreme.html',1,'SUNphi']]],
   ['valwithmax',['ValWithMax',['../d7/d16/ValWithExtreme_8hpp.html#ab5aefd01eb084a6de24389849e3bc18d',1,'SUNphi']]],
   ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]],
-  ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html#a53713cf362de640a3bf474f71d851a1f',1,'SUNphi::Vector::Vector(Args &amp;&amp;...args)'],['../df/dc0/classSUNphi_1_1Vector.html#a1922d3f580fab56a279973633b17a79c',1,'SUNphi::Vector::Vector(std::initializer_list&lt; T &gt; il)']]],
+  ['vector',['Vector',['../df/dc0/classSUNphi_1_1Vector.html#ae16bcc82fec8a59dc4ace7a5d58ff095',1,'SUNphi::Vector::Vector(const Vector &amp;oth)'],['../df/dc0/classSUNphi_1_1Vector.html#af6856f9620028d26d63a8576b823c2f1',1,'SUNphi::Vector::Vector(Arg &amp;&amp;arg, Args &amp;&amp;...args)'],['../df/dc0/classSUNphi_1_1Vector.html#ada5004ee766a667d2373d61f61c0e035',1,'SUNphi::Vector::Vector()'],['../df/dc0/classSUNphi_1_1Vector.html#a1922d3f580fab56a279973633b17a79c',1,'SUNphi::Vector::Vector(std::initializer_list&lt; T &gt; il)']]],
   ['vector_2ehpp',['Vector.hpp',['../de/dd9/Vector_8hpp.html',1,'']]],
   ['vector_3c_20int_20_3e',['Vector&lt; Int &gt;',['../df/dc0/classSUNphi_1_1Vector.html',1,'SUNphi']]],
   ['voidif',['VoidIf',['../d0/d81/TypeTraits_8hpp.html#a0599cb789276721d74cf627d5afb69d6',1,'SUNphi']]],
