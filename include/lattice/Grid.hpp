@@ -8,17 +8,18 @@
 /// An hypercubic grid with number of dimensions fixed at compile
 /// time. Periodic boundary conditions are imposed at all faces and
 /// lexicographic indexing with first-neighbours connectivity is
-/// embedded. The coordinates od points and neighbors can be hashed,
+/// embedded. The coordinates of points and neighbors can be hashed,
 /// deciding at compile time.
 ///
 /// Given the number of dimensions, the two orientations are provided,
-/// such that the 2*nDims neighbors are stored alternating first all
-/// backwards, thenforward directions.
+/// such that the 2*nDims neighbors are stored putting first all
+/// backwards, then forward directions.
 
 #include <array>
 #include <vector>
 
 #include <debug/Crash.hpp>
+#include <ios/Logger.hpp>
 #include <math/Arithmetic.hpp>
 #include <metaprogramming/CRTP.hpp>
 #include <utility/Bits.hpp>
@@ -166,17 +167,20 @@ namespace SUNphi
     {
       CRTP_THIS.assertPointIsInRange(i);
       
-      return coordsOfPointsHashTable[i];
+      return
+	coordsOfPointsHashTable[i];
     }
     
     /// Return the neighbor in the given oriented dir
     Idx neighOfPoint(const Idx i,
-		     const int oriDir) const
+		     const int oriDir)
+      const
     {
       CRTP_THIS.assertPointIsInRange(i);
       CRTP_THIS.assertOriDirIsInRange(oriDir);
       
-      return neighsOfPointsHashTable[i][oriDir];
+      return
+	neighsOfPointsHashTable[i][oriDir];
     }
     
     /// Tag asserting that hashing
@@ -206,20 +210,25 @@ namespace SUNphi
     PROVIDE_CRTP_CAST_OPERATOR(T);
     
     /// Get the coords of given point, computing it
-    Coords coordsOfPoint(Idx i) const
+    Coords coordsOfPoint(Idx i)
+      const
     {
-      return CRTP_THIS.computeCoordsOfPoint(i);
+      return
+	CRTP_THIS.computeCoordsOfPoint(i);
     }
     
     /// Return the neighbor in the given oriented dir, computing it
     Idx neighOfPoint(const Idx i,
-		     const int oriDir) const
+		     const int oriDir)
+      const
     {
-      return CRTP_THIS.computeNeighOfPoint(i,oriDir);
+      return
+	CRTP_THIS.computeNeighOfPoint(i,oriDir);
     }
     
     /// Fill all the HashTables (dummy version)
-    void fillHashTables() const
+    void fillHashTables()
+      const
     {
     }
     
@@ -350,15 +359,18 @@ namespace SUNphi
   public:
     
     /// Gets the shifting face
-    constexpr int shiftedFace() const
+    constexpr int shiftedFace()
+      const
     {
       return NOT_PRESENT;
     }
     
     /// Gets the shifting of the given direction
-    constexpr int shiftOfBC(int mu) const
+    constexpr int shiftOfBC(int mu)
+      const
     {
-      return 0;
+      return
+	0;
     }
     
     /// Returns the shifted coord due to boundary passing
@@ -408,12 +420,14 @@ namespace SUNphi
     void setVolume()
     {
       /// Output volume, initially 1
-      _volume=1;
+      _volume=
+	1;
       
       // Loop on all dimension, taking product
       forAllDims([&](int mu)
 		{
-		  _volume*=side(mu);
+		  _volume*=
+		    side(mu);
 		});
     }
     
@@ -442,13 +456,15 @@ namespace SUNphi
     /// Get the volume
     const Idx& volume() const
     {
-      return _volume;
+      return
+	_volume;
     }
     
     /// Get the given side
     Coord side(const int mu) const
     {
-      return _sides[mu];
+      return
+	_sides[mu];
     }
     
     /// Check that a given point is in range
@@ -515,22 +531,27 @@ namespace SUNphi
     /// Orientation of an oriented directions
     static Orientation oriOfOriDir(const int oriDir)
     {
+      /// Output orientation
       Orientation out;
       
       // Check smallest bit
       if(bitOf(oriDir,0))
-	out=FW;
+	out=
+	  FW;
       else
-	out=BW;
+	out=
+	  BW;
       
-      return out;
+      return
+	out;
     }
     
     /// Dimension of an oriented directions
     int dimOfOriDir(const int oriDir) const
     {
       // Divide by two
-      return oriDir>>1;
+      return
+	oriDir>>1;
     }
     
     /// Oriented direction given orientation and dimension
@@ -578,7 +599,8 @@ namespace SUNphi
 	  i=q;
 	}
       
-      return c;
+      return
+	c;
     }
     
     /// Compute the point of given coords
@@ -601,7 +623,8 @@ namespace SUNphi
 		    out*s+cs[mu];
 		});
       
-      return out;
+      return
+	out;
     }
     
     /// Returns the coordinates shifted in the asked direction
@@ -649,7 +672,8 @@ namespace SUNphi
 		       dest;
     		 });
       
-      return out;
+      return
+	out;
     }
     
     /// Compute the neighbor in the oriented direction oriDir of point i
@@ -660,7 +684,8 @@ namespace SUNphi
       assertPointIsInRange(i);
       assertOriDirIsInRange(oriDir);
       
-      return pointOfCoords(shiftedCoords(this->coordsOfPoint(i),oriDir));
+      return
+	pointOfCoords(shiftedCoords(this->coordsOfPoint(i),oriDir));
     }
     
     /// Construct from sides

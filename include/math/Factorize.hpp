@@ -19,7 +19,8 @@ namespace SUNphi
     if(n<=0)
       {
 	CRASH<<"Unable to factorize"<<n;
-	return {};
+	return
+	  {};
       }
     
     // Simple case with 1 or 2: returns the number itself
@@ -47,9 +48,11 @@ namespace SUNphi
     while(n!=1)
       {
 	/// Dividend
-	const int t=n/d;
+	const int t=
+	  n/d;
 	/// Remainder
-	const int r=n-t*d;
+	const int r=
+	  n-t*d;
 	
 	// If no remainder
 	if(r==0)
@@ -69,7 +72,8 @@ namespace SUNphi
 	      2;
       }
     
-    return out;
+    return
+      out;
   }
 }
 
