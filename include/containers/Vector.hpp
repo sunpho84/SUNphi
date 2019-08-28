@@ -9,10 +9,12 @@
 
 #include <functional>
 #include <numeric>
+#include <map>
 #include <vector>
 
 #include <math/Arithmetic.hpp>
 #include <metaprogramming/TypeTraits.hpp>
+#include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
 namespace SUNphi
@@ -47,10 +49,24 @@ namespace SUNphi
 	static_cast<Size>(unsignedSize);
     };
     
+    /// Copy constructor
+    Vector(const Vector& oth) : std::vector<T>(static_cast<const std::vector<T>&>(oth))
+    {
+    }
+    
     /// Forward constructor to std::vector
-    template <typename...Args>
-    Vector(Args&&...args) :
-      std::vector<T>(forw<Args>(args)...)
+    template <typename Arg,
+	      typename...Args,
+	      SFINAE_ON_TEMPLATE_ARG(not isSame<const Vector&,Arg>)>
+    Vector(Arg&& arg,
+	   Args&&...args) :
+      std::vector<T>(forw<Arg>(arg),
+		     forw<Args>(args)...)
+    {
+    }
+
+    /// Default constructor
+    Vector()
     {
     }
     
@@ -206,7 +222,64 @@ namespace SUNphi
 	loopUntil<false>(size()-1,-1,getComparer(val),getNullAction());
     }
     
+    /// Group the vector returning a map
+    ///
+    /// Example
+    /// \code
+    ///
+    /// Vector v({2,2,3});
+    /// v.group(); // {{2,2},{3,1}}
+    /// \endcode
+    std::map<T,T> group()
+      const
+    {
+      /// Result containing grouped factors
+      std::map<T,T> res;
+      
+      for(auto& f : *this)
+	res[f]++;
+      
+      return
+	res;
+    }
   };
+  
+  template <bool FirstSecond,
+	    typename T1,
+	    typename T2,
+	    typename TOut=Conditional<FirstSecond,T2,T1>>
+  Vector<TOut> getAllFirstOrSecond(const std::map<T1,T2>& m)
+  {
+    /// Result
+    Vector<TOut> out;
+    
+    out.reserve(m.size());
+    
+    for(auto& it : m)
+      if constexpr(FirstSecond==true)
+	out.push_back(it.second);
+      else
+	out.push_back(it.first);
+    
+    return
+      out;
+  }
+  
+  template <typename T1,
+	    typename T2>
+  auto getAllKeys(const std::map<T1,T2>& m)
+  {
+    return
+      getAllFirstOrSecond<false>(m);
+  }
+  
+  template <typename T1,
+	    typename T2>
+  auto getAllVal(const std::map<T1,T2>& m)
+  {
+    return
+      getAllFirstOrSecond<true>(m);
+  }
 }
 
 #endif
