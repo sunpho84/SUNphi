@@ -836,6 +836,48 @@ void checkSerializer()
   TEST_PASSED;
 }
 
+/// Check storing of max
+void checkValWithMax()
+{
+  /// First addend
+  const int64_t first=
+    12;
+  
+  /// Second addend
+  const int64_t second=
+    13;
+  
+  /// Third addend (to subtract)
+  const int64_t third=
+    23;
+  
+  /// Val to check max
+  ValWithMax<int64_t> a=
+    first;
+  
+  a+=
+    second;
+  
+  a-=
+    third;
+  
+  /// Expected maximum
+  const int64_t expExtr=
+    first+second;
+ 
+  /// Expected final
+  const int64_t expFin=
+    first+second-third;
+ 
+  if(a.extreme()!=expExtr)
+    CRASH<<"Extreme expected: "<<expExtr<<", obtained: "<<a.extreme();
+  
+  if(a!=expFin)
+    CRASH<<"Final expected: "<<expFin<<", obtained: "<<a;
+  
+  TEST_PASSED;
+}
+
 //////////////////////////////// TESTS TO BE FINISHED /////////////////////////////////
 
 void checkIsAliasing()
@@ -1332,6 +1374,8 @@ int main()
   checkSitmo();
   
   checkSerializer();
+  
+  checkValWithMax();
   
   return 0;
 }
