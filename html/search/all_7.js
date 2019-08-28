@@ -7,8 +7,6 @@ var searchData=
   ['getallbutpos',['getAllButPos',['../dc/d21/TupleElements_8hpp.html#afb1d4e6a729cc833b8f75f171f21456e',1,'SUNphi']]],
   ['getallbuttype',['getAllButType',['../dc/d21/TupleElements_8hpp.html#ace8b3e99e738342e1db2a2e5e589772c',1,'SUNphi']]],
   ['getallfirstorsecond',['getAllFirstOrSecond',['../de/dd9/Vector_8hpp.html#a172481f864d3e4e84eedb18c3a73f764',1,'SUNphi']]],
-  ['getallkeys',['getAllKeys',['../de/dd9/Vector_8hpp.html#a0dae55e2d2fc1c94bebc60d655f745af',1,'SUNphi']]],
-  ['getallval',['getAllVal',['../de/dd9/Vector_8hpp.html#ab69f6df3f3d03928f708d52d9838124a',1,'SUNphi']]],
   ['getbacktracelist',['getBackTraceList',['../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb',1,'SUNphi']]],
   ['getcomparer',['getComparer',['../df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5',1,'SUNphi::Vector']]],
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
