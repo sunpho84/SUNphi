@@ -21,7 +21,7 @@ int main()
   
   MasterRandomGenerator mrg;
   
-  runLog()<<mrg.serialize();
+  RUNLOG<<mrg.serialize();
   std::ostringstream os;
   os<<*static_cast<_MasterRandomGenerator*>(&mrg);
   runLog()<<os.str()<<" "<<_MasterRandomGenerator::word_size;

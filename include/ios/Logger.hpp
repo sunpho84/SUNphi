@@ -428,4 +428,9 @@ namespace SUNphi
   extern Logger runLog;
 }
 
+/// Create the line
+#define RUNLOG \
+  runLog()
+
+
 #endif
