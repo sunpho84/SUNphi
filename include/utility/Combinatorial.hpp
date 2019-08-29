@@ -134,11 +134,14 @@ namespace SUNphi
       nPerSlot[iSlot]--;
     }
     
-    /// Go to previous or next combo, returning true if was possible to do it
+    /// Go to next combo, returning true if was possible to do it
     bool advance()
     {
+      /// Slot to move
       Slot iSlot=
 	0;
+      
+      /// Returned value
       bool found=
 	false;
       
@@ -146,6 +149,7 @@ namespace SUNphi
 	{
 	  found=
 	    canBeMovedRight(iSlot);
+	  
 	  if(not found)
 	    iSlot++;
 	}
@@ -157,13 +161,42 @@ namespace SUNphi
 	found;
     }
     
-    /// Get current combo
-    const Vector<Int>& curCombo()
+    /// Go to previous combo, returning true if was possible to do it
+    bool rewind()
+    {
+      /// Slot to move
+      Slot iSlot=
+	1;
+      
+      /// Returned value
+      bool found=
+	false;
+      
+      while(not found and iSlot<nSlots())
+	{
+	  found=
+	    canBeMovedLeft(iSlot);
+	  
+	  if(not found)
+	    iSlot++;
+	}
+      
+      if(found)
+	moveLeft(iSlot);
+      
+      return
+	found;
+    }
+    
+    /// Const cast to the combinatorial
+    const Vector<Int>& operator()()
       const
     {
       return
 	nPerSlot;
     }
+    
+    PROVIDE_ALSO_NON_CONST_METHOD(operator());
     
     /// Get the firt combo
     Vector<Int> getFirst()
@@ -171,6 +204,20 @@ namespace SUNphi
     {
       return
 	getFistOrLast(false);
+    }
+    
+    /// Set to first combo
+    void setToFirst()
+    {
+      nPerSlot=
+	getFirst();
+    }
+    
+    /// Set to last combo
+    void setToLast()
+    {
+      nPerSlot=
+	getLast();
     }
     
     /// Get the last combo
@@ -207,8 +254,7 @@ namespace SUNphi
 	CRASH<<"Can accommodate at most "<<nMaxObj()<<" objects but "<<nObj<<" asked";
       
       // Set first
-      nPerSlot=
-	getFirst();
+      setToFirst();
     }
   };
 }

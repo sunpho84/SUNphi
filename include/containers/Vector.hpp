@@ -244,7 +244,7 @@ namespace SUNphi
     }
   };
   
-  
+  /// Gets first or second entry of the map
   template <bool FirstSecond,
 	    typename T1,
 	    typename T2,
