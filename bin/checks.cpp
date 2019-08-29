@@ -704,7 +704,7 @@ void checkVectorClass()
 void checkCombinatorial()
 {
   /// Maximal number of object for each slot
-  const Vector<int> nMaxPerSlot=
+  const Vector<int64_t> nMaxPerSlot=
     {1,2,3,2};
   
   /// Number of objects
@@ -714,12 +714,22 @@ void checkCombinatorial()
   /// Set the combinatorial
   Combinatorial c(nMaxPerSlot,nObj);
   
-  /// Last combinatorial
+  /// First combinatorial
   const auto l=
-    c.getLast();
+    c.getFirst();
   
-  if(l[0]!=1 or l[1]!=2 or l[2]!=0 or l[3]!=0)
+  /// Expected
+  const Vector<int64_t> expFirst=
+    {1,2,0,0};
+  
+  if(expFirst!=c())
     CRASH<<"First combinatorial not working";
+  
+  c.advance();
+  c.rewind();
+  
+  if(expFirst!=c())
+    CRASH<<"Advancing and rewinding not coming back to first combinatorial";
   
   TEST_PASSED;
 }
