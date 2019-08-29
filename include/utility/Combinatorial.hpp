@@ -33,19 +33,48 @@ namespace SUNphi
     /// Current combination
     Vector<Int> nPerSlot;
     
+    /// Assign n elements n the range, putting the maximum available in each of them
+    ///
+    /// Returns the number of non-assigned elements
+    Int assignToSlots(Vector<Int>& res,      ///< Result
+		      Int nObjToAss,         ///< Number of elements to assign
+		      const Slot& firstSlot, ///< First slot where to assign
+		      const Slot& lastSlot,  ///< Last slot where to assign
+		      const Slot& dSlot)     ///< Offset between slots
+      const
+    {
+      // Move across all slots
+      if(firstSlot!=lastSlot)
+	for(Slot iSlot=firstSlot;
+	    iSlot!=lastSlot+dSlot;
+	    iSlot+=dSlot)
+	  {
+	    // Assign to current slot
+	    res[iSlot]=
+	      std::min(nObjToAss,nMaxPerSlot[iSlot]);
+	    
+	    // Remove the assigned
+	    nObjToAss-=
+	      res[iSlot];
+	  }
+      
+      return
+	nObjToAss;
+    }
+    
     /// Get the first or last combo
-    Vector<Int> getFistOrLast(const bool& firstLast)
+    Vector<Int> getFirstOrLast(const bool& firstLast)
       const
     {
       /// Returned value
       Vector<Int> res(nSlots());
       
       /// Number of objects to assign
-      Int nObjToAss=
+      const Int nObjToAss=
 	nObj;
       
       /// First slot to assign
-      Slot firstSlot=
+      const Slot firstSlot=
 	(firstLast==true)
 	?
 	(nSlots()-1)
@@ -53,40 +82,38 @@ namespace SUNphi
 	0;
       
       /// Last slot to assign
-      Slot lastSlot=
+      const Slot lastSlot=
 	(firstLast==true)
 	?
-	-1
+	0
 	:
-	nSlots();
+	(nSlots()-1);
       
       /// Offset to move
-      Slot dSlot=
+      const Slot dSlot=
 	sign(lastSlot-firstSlot);
       
-      // Move across all slots
-      for(Slot iSlot=firstSlot;
-	  iSlot!=lastSlot;
-	  iSlot+=dSlot)
-	{
-	  // Assign to current slot
-	  res[iSlot]=
-	    std::min(nObjToAss,nMaxPerSlot[iSlot]);
-	  
-	  // Remove the assigned
-	  nObjToAss-=
-	    res[iSlot];
-	}
+      /// Residual objects to assign
+      const Int nResObjToAss=
+	assignToSlots(res,nObjToAss,firstSlot,lastSlot,dSlot);
       
       // Check that all have been assigned
-      if(nObjToAss>0)
-	CRASH<<"Should have ended without objects to assign, have: "<<nObjToAss;
+      if(nResObjToAss>0)
+	CRASH<<"Should have ended without objects to assign, have: "<<nResObjToAss;
       
       return
 	res;
     }
     
   public:
+    
+    /// Check if it is possible to combine the nObj into the slots
+    static bool isPossibleToAccomodate(const Vector<Int>& nMaxPerSlot,       ///< Maximal number of objects per slot
+				       const int nObj)                       ///< Number of objects
+    {
+      return
+	nMaxPerSlot.summatorial()>=nObj;
+    }
     
     /// Check if the slot is free
     bool isSlotFree(const Slot& iSlot)
@@ -145,17 +172,27 @@ namespace SUNphi
       bool found=
 	false;
       
+      /// Number of object before the slot
+      Int nUpToSlot=
+	0;
+      
       while(not found and iSlot<nSlots()-1)
 	{
 	  found=
 	    canBeMovedRight(iSlot);
+	  
+	  nUpToSlot+=
+	    nPerSlot[iSlot];
 	  
 	  if(not found)
 	    iSlot++;
 	}
       
       if(found)
-	moveRight(iSlot);
+	{
+	  moveRight(iSlot);
+	  assignToSlots(nPerSlot,nUpToSlot-1,0,iSlot,+1);
+	}
       
       return
 	found;
@@ -203,7 +240,7 @@ namespace SUNphi
       const
     {
       return
-	getFistOrLast(false);
+	getFirstOrLast(false);
     }
     
     /// Set to first combo
@@ -225,7 +262,7 @@ namespace SUNphi
       const
     {
       return
-	getFistOrLast(true);
+	getFirstOrLast(true);
     }
     
     /// Number of slots
@@ -250,13 +287,44 @@ namespace SUNphi
       : nMaxPerSlot(nMaxPerSlot),nObj(nObj)
     {
       // Check that the slots can accommodate the objects
-      if(nMaxObj()<nObj)
-	CRASH<<"Can accommodate at most "<<nMaxObj()<<" objects but "<<nObj<<" asked";
+      if(not isPossibleToAccomodate(nMaxPerSlot,nObj))
+	 CRASH<<"Can accommodate at most "<<nMaxObj()<<" objects but "<<nObj<<" asked";
       
       // Set first
       setToFirst();
     }
   };
+  
+  /// Loop on all combinations
+  ///
+  /// Run the provided function, passing the combo at each iteration,
+  /// and returning the total number of combinations
+  template <typename Int,
+	    typename Fun>
+  Int loopOnAllCombinations(const Vector<Int>& nMaxPerSlot,       ///< Maximal number of objects per slot
+			    const int nObj,                       ///< Number of objects
+			    const Fun& fun)                       ///< Function to be called
+  {
+    /// Count
+    Int n=
+      0;
+    
+    if(Combinatorial<Int>::isPossibleToAccomodate(nMaxPerSlot,nObj))
+      {
+	/// Combination generator
+	Combinatorial combo(nMaxPerSlot,nObj);
+	
+	do
+	  {
+	    fun(combo());
+	    n++;
+	  }
+	while(combo.advance());
+      }
+    
+    return
+      n;
+  }
 }
 
 #endif
