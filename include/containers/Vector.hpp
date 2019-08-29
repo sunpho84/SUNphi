@@ -64,7 +64,7 @@ namespace SUNphi
 		     forw<Args>(args)...)
     {
     }
-
+    
     /// Default constructor
     Vector()
     {
@@ -243,6 +243,7 @@ namespace SUNphi
 	res;
     }
   };
+  
   
   template <bool FirstSecond,
 	    typename T1,

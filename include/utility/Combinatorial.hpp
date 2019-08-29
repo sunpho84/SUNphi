@@ -46,7 +46,7 @@ namespace SUNphi
       
       /// First slot to assign
       Slot firstSlot=
-	(firstLast==false)
+	(firstLast==true)
 	?
 	(nSlots()-1)
 	:
@@ -54,7 +54,7 @@ namespace SUNphi
       
       /// Last slot to assign
       Slot lastSlot=
-	(firstLast==false)
+	(firstLast==true)
 	?
 	-1
 	:
@@ -65,7 +65,9 @@ namespace SUNphi
 	sign(lastSlot-firstSlot);
       
       // Move across all slots
-      for(Slot iSlot=firstSlot;iSlot!=lastSlot;iSlot+=dSlot)
+      for(Slot iSlot=firstSlot;
+	  iSlot!=lastSlot;
+	  iSlot+=dSlot)
 	{
 	  // Assign to current slot
 	  res[iSlot]=
@@ -86,14 +88,73 @@ namespace SUNphi
     
   public:
     
-    /// Go to previous or next combo, returning true if was possible to do it
-    bool rewindOrAdvance(const bool& rewindAdvance)
+    /// Check if the slot is free
+    bool isSlotFree(const Slot& iSlot)
+      const
     {
-      // Size 
+      return
+	nPerSlot[iSlot]==0;
+    }
+    
+    /// Check if the slot is fully occupied
+    bool isSlotFullyOccupied(const Slot& iSlot)
+      const
+    {
+      return
+	nPerSlot[iSlot]==nMaxPerSlot[iSlot];
+    }
+    
+    /// Check if 1 object can be moved from the slot to the right one
+    bool canBeMovedRight(const Slot& iSlot)
+      const
+    {
+      return
+	(not (isSlotFullyOccupied(iSlot+1) or isSlotFree(iSlot)));
+    }
+    
+    /// Move right one element from the slot
+    void moveRight(const Slot& iSlot)
+    {
+      nPerSlot[iSlot]--;
+      nPerSlot[iSlot+1]++;
+    }
+    
+    /// Check if 1 object can be moved from the slot to the left one
+    bool canBeMovedLeft(const Slot& iSlot)
+      const
+    {
+      return
+	(not (isSlotFullyOccupied(iSlot-1) or isSlotFree(iSlot)));
+    }
+    
+    /// Move left one element from the slot
+    void moveLeft(const Slot& iSlot)
+    {
+      nPerSlot[iSlot-1]++;
+      nPerSlot[iSlot]--;
+    }
+    
+    /// Go to previous or next combo, returning true if was possible to do it
+    bool advance()
+    {
+      Slot iSlot=
+	0;
+      bool found=
+	false;
       
-      // // Scan the slots backward until the first non empty is found
-      // Slot firstNonEmpty=
-      // 	nSlots()-1;
+      while(not found and iSlot<nSlots()-1)
+	{
+	  found=
+	    canBeMovedRight(iSlot);
+	  if(not found)
+	    iSlot++;
+	}
+      
+      if(found)
+	moveRight(iSlot);
+      
+      return
+	found;
     }
     
     /// Get current combo
