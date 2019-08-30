@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gridflag',['GridFlag',['../db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c',1,'SUNphi']]]
+  ['extreme',['Extreme',['../d7/d16/ValWithExtreme_8hpp.html#aedd26208e698dcef81d053c2c3f4eac5',1,'SUNphi']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['back_5fforw',['BACK_FORW',['../dc/d58/Position_8hpp.html#abdc8a9e1fd94dbdf880f660f531d27bc',1,'SUNphi']]],
   ['backtracesymbol',['BackTraceSymbol',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html',1,'SUNphi']]],
   ['backtracing_2ecpp',['BackTracing.cpp',['../dc/dd4/BackTracing_8cpp.html',1,'']]],
   ['backtracing_2ehpp',['BackTracing.hpp',['../d3/dbc/BackTracing_8hpp.html',1,'']]],

@@ -12,5 +12,8 @@ var searchData=
   ['ismasterrank',['isMasterRank',['../df/d09/classSUNphi_1_1Mpi.html#a783f8bcab5c963bb833c38a7e50b0d23',1,'SUNphi::Mpi']]],
   ['ismasterthread',['isMasterThread',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a61a371f57f115f5b94be7e71065676b6',1,'SUNphi::ThreadPool']]],
   ['isopen',['isOpen',['../d5/d99/classSUNphi_1_1File.html#a6a95c7608210e34cd4de7f5aa3060ecc',1,'SUNphi::File']]],
+  ['ispossibletoaccomodate',['isPossibleToAccomodate',['../de/d33/classSUNphi_1_1Combinatorial.html#ab38dbd7e6f304429fd382bf8cdc7a45c',1,'SUNphi::Combinatorial']]],
+  ['isslotfree',['isSlotFree',['../de/d33/classSUNphi_1_1Combinatorial.html#a83d065ddd03e37fcd20c49708f5bf031',1,'SUNphi::Combinatorial']]],
+  ['isslotfullyoccupied',['isSlotFullyOccupied',['../de/d33/classSUNphi_1_1Combinatorial.html#afcd51448508bf202f020a8ed1a67ccab',1,'SUNphi::Combinatorial']]],
   ['isstarted',['isStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad43b39c7903964f83b51b36704867a74',1,'SUNphi::Timer']]]
 ];

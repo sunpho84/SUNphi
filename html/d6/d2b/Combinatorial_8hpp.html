@@ -106,7 +106,8 @@ $(document).ready(function(){initNavTree('d6/d2b/Combinatorial_8hpp.html','../..
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Combinatorial.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -127,13 +128,75 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial&lt; Int &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a looper over all combinations of a given kind.  <a href="../../de/d33/classSUNphi_1_1Combinatorial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memTemplParams" colspan="2">template&lt;typename Int , typename Fun &gt; </td></tr>
+<tr class="memitem:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memTemplItemLeft" align="right" valign="top">Int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d2b/Combinatorial_8hpp.html#a3ddcc608b12ac50a37d0a3aff4ea14ba">SUNphi::loopOnAllCombinations</a> (const Vector&lt; Int &gt; &amp;nMaxPerSlot, const int nObj, const Fun &amp;fun, BACK_FORW BackForw=FORW)</td></tr>
+<tr class="separator:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the definition of combinatorial routines. </p>
 <p>For the time being we limits ourselves to the combinatorial system </p>
 
 <p>Definition in file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_a3ddcc608b12ac50a37d0a3aff4ea14ba"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int , typename Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Int SUNphi::loopOnAllCombinations </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nMaxPerSlot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Fun &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d58/Position_8hpp.html#abdc8a9e1fd94dbdf880f660f531d27bc">BACK_FORW</a>&#160;</td>
+          <td class="paramname"><em>BackForw</em> = <code>FORW</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop on all combinations</p>
+<p>Run the provided function, passing the combo at each iteration, and returning the total number of combinations. If BackForw is true, loop forward, otherwise loop backward </p>
+<p>Count</p>
+<p>Combination generator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nMaxPerSlot</td><td>Maximal number of objects per slot </td></tr>
+    <tr><td class="paramname">nObj</td><td>Number of objects </td></tr>
+    <tr><td class="paramname">fun</td><td>Function to be called </td></tr>
+    <tr><td class="paramname">BackForw</td><td>Loop direction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00329">329</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

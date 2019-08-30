@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"d9/dc6/classSUNphi_1_1Memory.html#ad7598560e0ebea87bd8af92399bc4ff5":[2,0,0,167,14],
 "d9/dc6/classSUNphi_1_1Memory.html#ad865fefe994e70645ced16e30fa073de":[2,0,0,167,8],
 "d9/dc6/classSUNphi_1_1Memory.html#adbbc433b4be3c4cc851dd043bfdd775d":[2,0,0,167,2],
 "d9/ddd/IntSeqGetEl_8hpp.html":[3,0,2,2,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5":[3,0,2,4,0,8],
 "db/d33/Grid_8hpp.html#ae80082b2e607318ad8e682431f6c7a45":[3,0,2,4,0,13],
 "db/d33/Grid_8hpp_source.html":[3,0,2,4,0],
-"db/d7f/structSUNphi_1_1HasMember__resize.html":[2,0,0,154],
-"db/d7f/structSUNphi_1_1HasMember__resize.html#a7322ca429f27e9859c3e90d594e730a6":[2,0,0,154,5]
+"db/d7f/structSUNphi_1_1HasMember__resize.html":[2,0,0,154]
 };

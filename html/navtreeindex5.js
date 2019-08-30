@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"d8/d1c/classSUNphi_1_1Tens.html#a595759dbf7d61d7010fc539c2a432e72":[2,0,0,191,14],
 "d8/d1c/classSUNphi_1_1Tens.html#a5c1f526cb8d648078a77d33eaaea6be2":[2,0,0,191,15],
 "d8/d1c/classSUNphi_1_1Tens.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,191,7],
 "d8/d1c/classSUNphi_1_1Tens.html#a695131ecaef2370a1057c332ceac2238":[2,0,0,191,12],
@@ -171,7 +172,6 @@ var NAVTREEINDEX5 =
 "d9/d59/classSUNphi_1_1Sitmo.html":[2,0,0,188],
 "d9/d59/classSUNphi_1_1Sitmo.html#a1488f6be4df4e5e78decdc093696e542":[2,0,0,188,17],
 "d9/d59/classSUNphi_1_1Sitmo.html#a219187dafedde8f2598b9a131dba5ff6":[2,0,0,188,18],
-"d9/d59/classSUNphi_1_1Sitmo.html#a26b5a1197a71dbfbeed56cbc299b463f":[2,0,0,188,16],
 "d9/d59/classSUNphi_1_1Sitmo.html#a27496980ca58399179e685a53382ac1d":[2,0,0,188,0],
 "d9/d59/classSUNphi_1_1Sitmo.html#a3508ff2c2670efa2ef90199b957687c3":[2,0,0,188,19],
 "d9/d59/classSUNphi_1_1Sitmo.html#a3c65fe07410555f7bdff1502307c4823":[2,0,0,188,1],
@@ -188,6 +188,7 @@ var NAVTREEINDEX5 =
 "d9/d59/classSUNphi_1_1Sitmo.html#ad4577f99e276ec98e591e0b080e21deb":[2,0,0,188,4],
 "d9/d59/classSUNphi_1_1Sitmo.html#ad9f59655f5105c8b7f428fc15b0b928b":[2,0,0,188,12],
 "d9/d59/classSUNphi_1_1Sitmo.html#ada6109918f60efb5f44d81753ec80474":[2,0,0,188,11],
+"d9/d59/classSUNphi_1_1Sitmo.html#adec396eb9df42e2855945787dc01556d":[2,0,0,188,16],
 "d9/d59/classSUNphi_1_1Sitmo.html#ae5917fa9a7fc84a5020a1ccc8bd11ee7":[2,0,0,188,20],
 "d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e":[2,0,0,188,13],
 "d9/d59/classSUNphi_1_1Sitmo.html#af60790b3a5c06020c78d1ebd3e1cb511":[2,0,0,188,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "d9/dc6/classSUNphi_1_1Memory.html#aa790cd28a4ace824b243d659b779be8b":[2,0,0,167,7],
 "d9/dc6/classSUNphi_1_1Memory.html#aa8de1157d5bcf67e31b69c66838eb427":[2,0,0,167,0],
 "d9/dc6/classSUNphi_1_1Memory.html#aacc8c6fe3728357aafb47fc8b044a5e7":[2,0,0,167,13],
-"d9/dc6/classSUNphi_1_1Memory.html#ab80f0348b08609c6b5772aced4aec9c5":[2,0,0,167,4],
-"d9/dc6/classSUNphi_1_1Memory.html#ad7598560e0ebea87bd8af92399bc4ff5":[2,0,0,167,14]
+"d9/dc6/classSUNphi_1_1Memory.html#ab80f0348b08609c6b5772aced4aec9c5":[2,0,0,167,4]
 };

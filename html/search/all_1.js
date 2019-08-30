@@ -14,9 +14,10 @@ var searchData=
   ['address',['address',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html#a5767ecc26193a2aa29b04a6aab499de5',1,'SUNphi::BackTraceSymbol']]],
   ['adj',['adj',['../d8/d3a/Adj_8hpp.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
   ['adj_2ehpp',['Adj.hpp',['../d8/d3a/Adj_8hpp.html',1,'']]],
+  ['advance',['advance',['../de/d33/classSUNphi_1_1Combinatorial.html#a172068c38361dfddf99a192c9255cb74',1,'SUNphi::Combinatorial']]],
   ['alignment',['ALIGNMENT',['../d0/d24/SIMD_8hpp.html#a6d59cd1088324b6c67903e9f88adacd0',1,'SUNphi']]],
-  ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html',1,'SUNphi']]],
   ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html#a481c041d4913e5799b787dba04b024e7',1,'SUNphi::Aliver::Aliver()'],['../d2/d0a/Aliver_8hpp.html#a26e7fb087e5f8c2b14896ba23904aa0c',1,'SUNphi::aliver()']]],
+  ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html',1,'SUNphi']]],
   ['aliver_2ehpp',['Aliver.hpp',['../d2/d0a/Aliver_8hpp.html',1,'']]],
   ['aliverhelper',['aliverHelper',['../d2/d0a/Aliver_8hpp.html#aefb3bd85afa3e1418572d526cbe3021d',1,'SUNphi']]],
   ['all_5franks',['ALL_RANKS',['../df/d09/classSUNphi_1_1Mpi.html#ad4d63f013ed16da4e22ee5e1b6c4bc36',1,'SUNphi::Mpi']]],
@@ -55,5 +56,6 @@ var searchData=
   ['assignable',['ASSIGNABLE',['../dc/d6b/BaseSmET_8hpp.html#aa5c5a5a8cab75f51b43d6c9b0ffda42d',1,'BaseSmET.hpp']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html',1,'SUNphi']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
+  ['assigntoslots',['assignToSlots',['../de/d33/classSUNphi_1_1Combinatorial.html#ad10978d476fde0903f8264f0ffc55319',1,'SUNphi::Combinatorial']]],
   ['averagemeasure',['averageMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a',1,'SUNphi::Timer']]]
 ];

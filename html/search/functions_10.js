@@ -17,6 +17,8 @@ var searchData=
   ['setkey',['setKey',['../d9/d59/classSUNphi_1_1Sitmo.html#aedffda54c97a277cfdfe06e03fb84f3e',1,'SUNphi::Sitmo']]],
   ['setshiftbc',['setShiftBC',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a28343325c44d8c429875cdfe3cf3a401',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;']]],
   ['setsides',['setSides',['../dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54',1,'SUNphi::Grid']]],
+  ['settofirst',['setToFirst',['../de/d33/classSUNphi_1_1Combinatorial.html#a7686e413f23834ac8a5a7c18449e64ca',1,'SUNphi::Combinatorial']]],
+  ['settolast',['setToLast',['../de/d33/classSUNphi_1_1Combinatorial.html#a14dea10cb05e072b17f9c0b19598df7c',1,'SUNphi::Combinatorial']]],
   ['setvolume',['setVolume',['../dd/dca/classSUNphi_1_1Grid.html#ae26d5182f71a1f5dfe1edca74ed8a498',1,'SUNphi::Grid']]],
   ['shift128',['shift128',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#a2bd1571abaf75ecb18f69a90a1dbad00',1,'SUNphi::SFMTRandomGen']]],
   ['shiftedcoords',['shiftedCoords',['../dd/dca/classSUNphi_1_1Grid.html#aa281541592b5700ce0d42d8757782fa3',1,'SUNphi::Grid']]],

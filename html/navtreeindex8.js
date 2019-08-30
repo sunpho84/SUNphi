@@ -1,5 +1,12 @@
 var NAVTREEINDEX8 =
 {
+"dc/de1/Bind_8hpp.html#aee1f08c3429a08809917dfee2f962a97":[3,0,2,10,5,5],
+"dc/de1/Bind_8hpp_source.html":[3,0,2,10,5],
+"dc/df8/appendix_8cpp.html":[3,0,0,0],
+"dc/df8/appendix_8cpp_source.html":[3,0,0,0],
+"dd/d03/classSUNphi_1_1UMinuser.html":[2,0,0,202],
+"dd/d03/classSUNphi_1_1UMinuser.html#a05dabeecb881bb9123ce52c010f47894":[2,0,0,202,0],
+"dd/d03/classSUNphi_1_1UMinuser.html#a094477d325d23dae12af9ff25e7de6b0":[2,0,0,202,31],
 "dd/d03/classSUNphi_1_1UMinuser.html#a09993c040b59746359b9a40c37fc920a":[2,0,0,202,18],
 "dd/d03/classSUNphi_1_1UMinuser.html#a15da6f3c9613c0d5475c90e7a48c3c72":[2,0,0,202,28],
 "dd/d03/classSUNphi_1_1UMinuser.html#a1d6ded1dcd22920fde3d904c29f61374":[2,0,0,202,26],
@@ -242,12 +249,5 @@ var NAVTREEINDEX8 =
 "dd/df8/IntSeq_8hpp.html#a6be5c1f600f694603d91fc5ffe099091":[3,0,2,2,3,14],
 "dd/df8/IntSeq_8hpp.html#ad83e07565c46761a5d55dce9c28f4847":[3,0,2,2,3,8],
 "dd/df8/IntSeq_8hpp.html#addbca57cd3b0fe9c03fd72e0b7103a2d":[3,0,2,2,3,12],
-"dd/df8/IntSeq_8hpp_source.html":[3,0,2,2,3],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html":[2,0,0,193,1],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html#a1273a7a936c2247410f95dec81b2703c":[2,0,0,193,1,2],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html#aa82862c44adf1e1569d1a1155bf5b597":[2,0,0,193,1,3],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html#abdceed6d2501040b5a2ce2481c012979":[2,0,0,193,1,0],
-"de/d0e/classSUNphi_1_1TensKind_1_1__BlendWithTypes_3_01Tuple_3_01Oths_8_8_8_01_4_01_4.html#ad6fcf37adb26f0bf39ad1612d1d791dc":[2,0,0,193,1,1],
-"de/d10/Ios_8hpp.html":[3,0,2,19],
-"de/d10/Ios_8hpp_source.html":[3,0,2,19]
+"dd/df8/IntSeq_8hpp_source.html":[3,0,2,2,3]
 };

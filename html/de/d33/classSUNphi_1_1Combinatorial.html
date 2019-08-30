@@ -109,6 +109,8 @@ $(document).ready(function(){initNavTree('de/d33/classSUNphi_1_1Combinatorial.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -125,18 +127,59 @@ $(document).ready(function(){initNavTree('de/d33/classSUNphi_1_1Combinatorial.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab592ed93974b4c7c392533999649853b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab592ed93974b4c7c392533999649853b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab592ed93974b4c7c392533999649853b">rewindOrAdvance</a> (const bool &amp;rewindAdvance)</td></tr>
-<tr class="memdesc:ab592ed93974b4c7c392533999649853b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to previous or next combo, returning true if was possible to do it. <br /></td></tr>
-<tr class="separator:ab592ed93974b4c7c392533999649853b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea4aea6ad06dedc876a783995b5987e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adea4aea6ad06dedc876a783995b5987e"></a>
-const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e">curCombo</a> () const </td></tr>
-<tr class="memdesc:adea4aea6ad06dedc876a783995b5987e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current combo. <br /></td></tr>
-<tr class="separator:adea4aea6ad06dedc876a783995b5987e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83d065ddd03e37fcd20c49708f5bf031"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83d065ddd03e37fcd20c49708f5bf031"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a83d065ddd03e37fcd20c49708f5bf031">isSlotFree</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot) const </td></tr>
+<tr class="memdesc:a83d065ddd03e37fcd20c49708f5bf031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the slot is free. <br /></td></tr>
+<tr class="separator:a83d065ddd03e37fcd20c49708f5bf031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd51448508bf202f020a8ed1a67ccab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd51448508bf202f020a8ed1a67ccab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#afcd51448508bf202f020a8ed1a67ccab">isSlotFullyOccupied</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot) const </td></tr>
+<tr class="memdesc:afcd51448508bf202f020a8ed1a67ccab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the slot is fully occupied. <br /></td></tr>
+<tr class="separator:afcd51448508bf202f020a8ed1a67ccab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bb85df2ba6b841de56b3ee60dfd06e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33bb85df2ba6b841de56b3ee60dfd06e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a33bb85df2ba6b841de56b3ee60dfd06e">canBeMovedRight</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot) const </td></tr>
+<tr class="memdesc:a33bb85df2ba6b841de56b3ee60dfd06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 1 object can be moved from the slot to the right one. <br /></td></tr>
+<tr class="separator:a33bb85df2ba6b841de56b3ee60dfd06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bd50ccffcfd8fe279da5d1f61c13d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0bd50ccffcfd8fe279da5d1f61c13d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#af0bd50ccffcfd8fe279da5d1f61c13d1">moveRight</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot)</td></tr>
+<tr class="memdesc:af0bd50ccffcfd8fe279da5d1f61c13d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move right one element from the slot. <br /></td></tr>
+<tr class="separator:af0bd50ccffcfd8fe279da5d1f61c13d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2e82bff39ff5f1b6d70bb66d69f4b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d2e82bff39ff5f1b6d70bb66d69f4b8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a7d2e82bff39ff5f1b6d70bb66d69f4b8">canBeMovedLeft</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot) const </td></tr>
+<tr class="memdesc:a7d2e82bff39ff5f1b6d70bb66d69f4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 1 object can be moved from the slot to the left one. <br /></td></tr>
+<tr class="separator:a7d2e82bff39ff5f1b6d70bb66d69f4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3259497f5c6604a1258e1c1d41329a15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3259497f5c6604a1258e1c1d41329a15"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a3259497f5c6604a1258e1c1d41329a15">moveLeft</a> (const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;iSlot)</td></tr>
+<tr class="memdesc:a3259497f5c6604a1258e1c1d41329a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move left one element from the slot. <br /></td></tr>
+<tr class="separator:a3259497f5c6604a1258e1c1d41329a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172068c38361dfddf99a192c9255cb74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a172068c38361dfddf99a192c9255cb74">advance</a> ()</td></tr>
+<tr class="memdesc:a172068c38361dfddf99a192c9255cb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to next combo, returning true if was possible to do it.  <a href="#a172068c38361dfddf99a192c9255cb74">More...</a><br /></td></tr>
+<tr class="separator:a172068c38361dfddf99a192c9255cb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e257699d2deea9014b17f8e7e1e11f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a1e257699d2deea9014b17f8e7e1e11f0">rewind</a> ()</td></tr>
+<tr class="memdesc:a1e257699d2deea9014b17f8e7e1e11f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to previous combo, returning true if was possible to do it.  <a href="#a1e257699d2deea9014b17f8e7e1e11f0">More...</a><br /></td></tr>
+<tr class="separator:a1e257699d2deea9014b17f8e7e1e11f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfde5505aca6612d001a2fa4f340d0b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfde5505aca6612d001a2fa4f340d0b7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#abfde5505aca6612d001a2fa4f340d0b7">rewindOrAdvance</a> (const <a class="el" href="../../dc/d58/Position_8hpp.html#abdc8a9e1fd94dbdf880f660f531d27bc">BACK_FORW</a> &amp;BackForw)</td></tr>
+<tr class="memdesc:abfde5505aca6612d001a2fa4f340d0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go backward or advance depending on the passed parameter. <br /></td></tr>
+<tr class="separator:abfde5505aca6612d001a2fa4f340d0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce1cc8619caec0202b4d53a9e9ad4cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ce1cc8619caec0202b4d53a9e9ad4cc"></a>
+const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a1ce1cc8619caec0202b4d53a9e9ad4cc">operator()</a> () const </td></tr>
+<tr class="memdesc:a1ce1cc8619caec0202b4d53a9e9ad4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const cast to the combinatorial. <br /></td></tr>
+<tr class="separator:a1ce1cc8619caec0202b4d53a9e9ad4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0fa7eb003feae856e6c36177ca2615"><td class="memTemplParams" colspan="2">template&lt;typename... Ts&gt; </td></tr>
+<tr class="memitem:acb0fa7eb003feae856e6c36177ca2615"><td class="memTemplItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#acb0fa7eb003feae856e6c36177ca2615">operator()</a> (Ts &amp;&amp;...ts)</td></tr>
+<tr class="separator:acb0fa7eb003feae856e6c36177ca2615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65255bf9e0166c2a5fac70da06c553d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65255bf9e0166c2a5fac70da06c553d9"></a>
 <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9">getFirst</a> () const </td></tr>
 <tr class="memdesc:a65255bf9e0166c2a5fac70da06c553d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the firt combo. <br /></td></tr>
 <tr class="separator:a65255bf9e0166c2a5fac70da06c553d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7686e413f23834ac8a5a7c18449e64ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7686e413f23834ac8a5a7c18449e64ca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a7686e413f23834ac8a5a7c18449e64ca">setToFirst</a> ()</td></tr>
+<tr class="memdesc:a7686e413f23834ac8a5a7c18449e64ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to first combo. <br /></td></tr>
+<tr class="separator:a7686e413f23834ac8a5a7c18449e64ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dea10cb05e072b17f9c0b19598df7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14dea10cb05e072b17f9c0b19598df7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a14dea10cb05e072b17f9c0b19598df7c">setToLast</a> ()</td></tr>
+<tr class="memdesc:a14dea10cb05e072b17f9c0b19598df7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to last combo. <br /></td></tr>
+<tr class="separator:a14dea10cb05e072b17f9c0b19598df7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823c0c48c01b210d5898944667b61090"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a823c0c48c01b210d5898944667b61090"></a>
 <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a823c0c48c01b210d5898944667b61090">getLast</a> () const </td></tr>
 <tr class="memdesc:a823c0c48c01b210d5898944667b61090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last combo. <br /></td></tr>
@@ -149,9 +192,22 @@ const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt
 Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a44f777aa4d55d45f059cbec485973be5">nMaxObj</a> () const </td></tr>
 <tr class="memdesc:a44f777aa4d55d45f059cbec485973be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal number of objects that can be accommodated. <br /></td></tr>
 <tr class="separator:a44f777aa4d55d45f059cbec485973be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ed5ebc58bba3152247c3f16b445f7e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1">Combinatorial</a> (const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;<a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db">nMaxPerSlot</a>, const int <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382">nObj</a>)</td></tr>
-<tr class="memdesc:a4ed5ebc58bba3152247c3f16b445f7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying the maximal number of objects per slot.  <a href="#a4ed5ebc58bba3152247c3f16b445f7e1">More...</a><br /></td></tr>
-<tr class="separator:a4ed5ebc58bba3152247c3f16b445f7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dd8219cb784cd4ecc23c3ba1dfd5a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ae0dd8219cb784cd4ecc23c3ba1dfd5a9">Combinatorial</a> (const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;<a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db">nMaxPerSlot</a>, const int <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382">nObj</a>, const bool lastOrFirst=false)</td></tr>
+<tr class="memdesc:ae0dd8219cb784cd4ecc23c3ba1dfd5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor specifying the maximal number of objects per slot.  <a href="#ae0dd8219cb784cd4ecc23c3ba1dfd5a9">More...</a><br /></td></tr>
+<tr class="separator:ae0dd8219cb784cd4ecc23c3ba1dfd5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab38dbd7e6f304429fd382bf8cdc7a45c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab38dbd7e6f304429fd382bf8cdc7a45c">isPossibleToAccomodate</a> (const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;<a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#a2ad1e9f5eb3e0c0a6d187e7e7681e9db">nMaxPerSlot</a>, const int <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab6cdeda2b3a852fc8cb5b977353ec382">nObj</a>)</td></tr>
+<tr class="memdesc:ab38dbd7e6f304429fd382bf8cdc7a45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if it is possible to combine the nObj into the slots.  <a href="#ab38dbd7e6f304429fd382bf8cdc7a45c">More...</a><br /></td></tr>
+<tr class="separator:ab38dbd7e6f304429fd382bf8cdc7a45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6143c803d42746be99359f9debe491b0"><td class="memItemLeft" ><a class="anchor" id="a6143c803d42746be99359f9debe491b0"></a>
+class {</td></tr>
+<tr class="memitem:a6143c803d42746be99359f9debe491b0"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6143c803d42746be99359f9debe491b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -162,9 +218,11 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ada16b11e92d5331ceddceebe561a73ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea">getFistOrLast</a> (const bool &amp;firstLast) const </td></tr>
-<tr class="memdesc:ada16b11e92d5331ceddceebe561a73ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first or last combo.  <a href="#ada16b11e92d5331ceddceebe561a73ea">More...</a><br /></td></tr>
-<tr class="separator:ada16b11e92d5331ceddceebe561a73ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10978d476fde0903f8264f0ffc55319"><td class="memItemLeft" align="right" valign="top">Int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad10978d476fde0903f8264f0ffc55319">assignToSlots</a> (<a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;res, Int nObjToAss, const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;firstSlot, const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;pastLastSlot, const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;dSlot) const </td></tr>
+<tr class="separator:ad10978d476fde0903f8264f0ffc55319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5461f8cfa3137615013d78b0c640630"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ab5461f8cfa3137615013d78b0c640630">getFirstOrLast</a> (const <a class="el" href="../../dc/d58/Position_8hpp.html#ad96e32a3976dd23858e5cbfc77699036">FIRST_OR_LAST</a> &amp;firstLast) const </td></tr>
+<tr class="memdesc:ab5461f8cfa3137615013d78b0c640630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first or last combo.  <a href="#ab5461f8cfa3137615013d78b0c640630">More...</a><br /></td></tr>
+<tr class="separator:ab5461f8cfa3137615013d78b0c640630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -189,7 +247,7 @@ class SUNphi::Combinatorial&lt; Int &gt;</h3>
 
 <p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4ed5ebc58bba3152247c3f16b445f7e1"></a>
+<a class="anchor" id="ae0dd8219cb784cd4ecc23c3ba1dfd5a9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -208,7 +266,13 @@ template&lt;typename Int  = int64_t&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>nObj</em>&#160;</td>
+          <td class="paramname"><em>nObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>lastOrFirst</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -228,16 +292,17 @@ template&lt;typename Int  = int64_t&gt; </div>
   <table class="params">
     <tr><td class="paramname">nMaxPerSlot</td><td>Maximal number of objects per slot </td></tr>
     <tr><td class="paramname">nObj</td><td>Number of objects </td></tr>
+    <tr><td class="paramname">lastOrFirst</td><td>Starts from first or last combo </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00140">140</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00305">305</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ada16b11e92d5331ceddceebe561a73ea"></a>
+<a class="anchor" id="a172068c38361dfddf99a192c9255cb74"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -247,9 +312,109 @@ template&lt;typename Int  = int64_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt;Int&gt; <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::getFistOrLast </td>
+          <td class="memname">bool <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::advance </td>
           <td>(</td>
-          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Go to next combo, returning true if was possible to do it. </p>
+<p>Slot to move</p>
+<p>Returned value</p>
+<p>Number of object up to the slot </p>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00164">164</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad10978d476fde0903f8264f0ffc55319"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Int <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::assignToSlots </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Int&#160;</td>
+          <td class="paramname"><em>nObjToAss</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>firstSlot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>pastLastSlot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html#ad2c9c2ec2f8ebd9ed47caf2aafa7fe01">Slot</a> &amp;&#160;</td>
+          <td class="paramname"><em>dSlot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Assign n elements n the range, putting the maximum available in each of them</p>
+<p>Returns the number of non-assigned elements </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">res</td><td>Result </td></tr>
+    <tr><td class="paramname">nObjToAss</td><td>Number of elements to assign </td></tr>
+    <tr><td class="paramname">firstSlot</td><td>First slot where to assign </td></tr>
+    <tr><td class="paramname">pastLastSlot</td><td>Slot before which to stop assigning </td></tr>
+    <tr><td class="paramname">dSlot</td><td>Offset between slots </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00039">39</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5461f8cfa3137615013d78b0c640630"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt;Int&gt; <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::getFirstOrLast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d58/Position_8hpp.html#ad96e32a3976dd23858e5cbfc77699036">FIRST_OR_LAST</a> &amp;&#160;</td>
           <td class="paramname"><em>firstLast</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -266,9 +431,126 @@ template&lt;typename Int  = int64_t&gt; </div>
 <p>Number of objects to assign</p>
 <p>First slot to assign</p>
 <p>Last slot to assign</p>
-<p>Offset to move </p>
+<p>Offset to move</p>
+<p>Residual objects to assign </p>
 
-<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00037">37</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00065">65</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab38dbd7e6f304429fd382bf8cdc7a45c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::isPossibleToAccomodate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; Int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>nMaxPerSlot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>nObj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if it is possible to combine the nObj into the slots. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nMaxPerSlot</td><td>Maximal number of objects per slot </td></tr>
+    <tr><td class="paramname">nObj</td><td>Number of objects </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00110">110</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acb0fa7eb003feae856e6c36177ca2615"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int  = int64_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(auto) <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Ts &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>ts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overload the <code>operator()  const method</code> passing all args </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ts</td><td>Arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00256">256</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e257699d2deea9014b17f8e7e1e11f0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Int  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../de/d33/classSUNphi_1_1Combinatorial.html">SUNphi::Combinatorial</a>&lt; Int &gt;::rewind </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Go to previous combo, returning true if was possible to do it. </p>
+<p>Slot to move</p>
+<p>Returned value</p>
+<p>Number of object before the slot </p>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00201">201</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 
 </div>
 </div>

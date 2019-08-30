@@ -14,7 +14,7 @@ var searchData=
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
   ['getexclusiveaccess',['getExclusiveAccess',['../d3/d78/classSUNphi_1_1Logger.html#a010f8989ef50fbb3045f64923cc61a43',1,'SUNphi::Logger']]],
   ['getfirst',['getFirst',['../de/d33/classSUNphi_1_1Combinatorial.html#a65255bf9e0166c2a5fac70da06c553d9',1,'SUNphi::Combinatorial']]],
-  ['getfistorlast',['getFistOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#ada16b11e92d5331ceddceebe561a73ea',1,'SUNphi::Combinatorial']]],
+  ['getfirstorlast',['getFirstOrLast',['../de/d33/classSUNphi_1_1Combinatorial.html#ab5461f8cfa3137615013d78b0c640630',1,'SUNphi::Combinatorial']]],
   ['getfuncname',['getFuncName',['../db/de9/classSUNphi_1_1Crasher.html#ae3f107b0117c329247764bbad4687899',1,'SUNphi::Crasher']]],
   ['gethead',['getHead',['../dc/d21/TupleElements_8hpp.html#a80105860987af904efaa86d980d8063e',1,'SUNphi']]],
   ['getifwaitingforwork',['getIfWaitingForWork',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a3764c64514006caf8e78c9e8ab8850f5',1,'SUNphi::ThreadPool']]],

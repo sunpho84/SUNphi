@@ -3,6 +3,7 @@ var searchData=
   ['add',['add',['../da/d65/Add_8hpp.html#a5872359ff930d8bd62bf794615caf226',1,'SUNphi']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e',1,'SUNphi::Adder']]],
   ['adj',['adj',['../d8/d3a/Adj_8hpp.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
+  ['advance',['advance',['../de/d33/classSUNphi_1_1Combinatorial.html#a172068c38361dfddf99a192c9255cb74',1,'SUNphi::Combinatorial']]],
   ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html#a481c041d4913e5799b787dba04b024e7',1,'SUNphi::Aliver']]],
   ['aliverhelper',['aliverHelper',['../d2/d0a/Aliver_8hpp.html#aefb3bd85afa3e1418572d526cbe3021d',1,'SUNphi']]],
   ['alloc',['alloc',['../d3/d22/classSUNphi_1_1TensStor.html#a0b9686bd4cf4272ed2693a090980faca',1,'SUNphi::TensStor']]],
@@ -17,5 +18,6 @@ var searchData=
   ['assertpoolonly',['assertPoolOnly',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a36bf02245f197dfe42ccd43441ba7175',1,'SUNphi::ThreadPool']]],
   ['assign',['assign',['../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)'],['../d0/d6d/Transpose_8hpp.html#afde6f5de64de3abb2035ab4b14d70b19',1,'SUNphi::assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs)']]],
   ['assigner',['Assigner',['../d4/d4b/classSUNphi_1_1Assigner.html#ab884b34f6d376470301a4deb4d25114b',1,'SUNphi::Assigner']]],
+  ['assigntoslots',['assignToSlots',['../de/d33/classSUNphi_1_1Combinatorial.html#ad10978d476fde0903f8264f0ffc55319',1,'SUNphi::Combinatorial']]],
   ['averagemeasure',['averageMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a1e419a27299b5a2effbc72c54aea3b4a',1,'SUNphi::Timer']]]
 ];

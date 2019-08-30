@@ -2,6 +2,8 @@ var searchData=
 [
   ['canbefactorofsimdvector',['canBeFactorOfSIMDVector',['../d0/d24/SIMD_8hpp.html#aaea3412d741b6e8789dc707f3c554b50',1,'SUNphi']]],
   ['canbeget',['canBeGet',['../d0/d81/TypeTraits_8hpp.html#acc287481ee5ba55b4fadb87da259edac',1,'SUNphi']]],
+  ['canbemovedleft',['canBeMovedLeft',['../de/d33/classSUNphi_1_1Combinatorial.html#a7d2e82bff39ff5f1b6d70bb66d69f4b8',1,'SUNphi::Combinatorial']]],
+  ['canbemovedright',['canBeMovedRight',['../de/d33/classSUNphi_1_1Combinatorial.html#a33bb85df2ba6b841de56b3ee60dfd06e',1,'SUNphi::Combinatorial']]],
   ['canbesizeofsimdvector',['canBeSizeOfSIMDVector',['../d0/d24/SIMD_8hpp.html#a51a19a9535fb9c3814c5cc55ece63f8f',1,'SUNphi']]],
   ['checknospurioussubnodes',['checkNoSpuriousSubNodes',['../d1/d39/classSUNphi_1_1SerializableClass.html#afdd21411a65982510939841b958b8430',1,'SUNphi::SerializableClass']]],
   ['childrenstarted',['childrenStarted',['../d6/de9/classSUNphi_1_1Timer.html#ad97e92c9b5b9704b46ac6e0cf0d846f5',1,'SUNphi::Timer']]],
@@ -11,7 +13,7 @@ var searchData=
   ['cncol',['cnCol',['../d4/df5/SUN_8hpp.html#a0de5ec06b96b71590411d112e8a0c238',1,'SUNphi']]],
   ['cnspin',['cnSpin',['../d9/dfb/Spin_8hpp.html#ae67431cc88d9ae4ab19cdc9b2df41b5b',1,'SUNphi']]],
   ['col',['col',['../d4/df5/SUN_8hpp.html#a2d529bf95ff829484286833ae8aa9c39',1,'SUNphi']]],
-  ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html#a4ed5ebc58bba3152247c3f16b445f7e1',1,'SUNphi::Combinatorial']]],
+  ['combinatorial',['Combinatorial',['../de/d33/classSUNphi_1_1Combinatorial.html#ae0dd8219cb784cd4ecc23c3ba1dfd5a9',1,'SUNphi::Combinatorial']]],
   ['compsize',['compSize',['../d6/db9/classSUNphi_1_1Binder.html#a1e2a3be24132515bd6522b80e5ad9c40',1,'SUNphi::Binder::compSize()'],['../d8/d1c/classSUNphi_1_1Tens.html#ab35c629418604756feded25a087f31ca',1,'SUNphi::Tens::compSize()'],['../d3/d22/classSUNphi_1_1TensStor.html#aa0de0c6e7a28b3d29d14cce6fe9a8766',1,'SUNphi::TensStor::compSize() const '],['../d3/d22/classSUNphi_1_1TensStor.html#a490600eebc864f10f297a66c14713ad0',1,'SUNphi::TensStor::compSize() const '],['../d4/d4b/classSUNphi_1_1Assigner.html#a9d64a7def7fa86ff59dfbca02a48ee6c',1,'SUNphi::Assigner::compSize()'],['../db/d12/classSUNphi_1_1ScalarWrapper.html#aa2e8dcbc29e1a66ecd5b96a5a3c44d75',1,'SUNphi::ScalarWrapper::compSize()'],['../de/d58/classSUNphi_1_1Adder.html#a49fee2fc5fa5be29277dd347eb8ae801',1,'SUNphi::Adder::compSize()'],['../d2/d24/classSUNphi_1_1Conjer.html#a7c06020cfbe2fbdb4ea34ae883554418',1,'SUNphi::Conjer::compSize()'],['../d5/dd3/classSUNphi_1_1Transposer.html#aae45901162f2d10a9ef96a5172cc5a66',1,'SUNphi::Transposer::compSize()'],['../dc/d5d/classSUNphi_1_1MulAdder.html#af534f9a021ee75bbf8bb5d09c90e26e4',1,'SUNphi::MulAdder::compSize()'],['../d5/d1c/classSUNphi_1_1RelBinder.html#ad08fef0416a1bbc577ebeefbb8e6cfda',1,'SUNphi::RelBinder::compSize()'],['../dd/d03/classSUNphi_1_1UMinuser.html#a5955cdcd9d42edddefe576d9f273101d',1,'SUNphi::UMinuser::compSize()'],['../d1/d77/classSUNphi_1_1Wrapper.html#a72eab6d21134957955f412ffad9ac5fe',1,'SUNphi::Wrapper::compSize()']]],
   ['compsrangegroupssize',['compsRangeGroupsSize',['../d3/d22/classSUNphi_1_1TensStor.html#a7b398b886d230381a7ee635aaf4cbe6e',1,'SUNphi::TensStor']]],
   ['compsrangesize',['compsRangeSize',['../d3/d22/classSUNphi_1_1TensStor.html#a0b8fb7206d7da3d9197da0c1a245fbc6',1,'SUNphi::TensStor']]],
@@ -26,6 +28,5 @@ var searchData=
   ['crashonerror',['crashOnError',['../df/d09/classSUNphi_1_1Mpi.html#ac423ccc74e978b39fb9cb794532ff3ff',1,'SUNphi::Mpi']]],
   ['cstring',['cString',['../d8/d32/String_8hpp.html#a9bef329ab1e417fc38ce15db59027624',1,'SUNphi::cString(const char *in)'],['../d8/d32/String_8hpp.html#a209d82c3897d63fd48add4ada6abb8ce',1,'SUNphi::cString(const std::string &amp;in)']]],
   ['cumulativemeasure',['cumulativeMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a8730f74ff7d2d34611c44f4a00c610da',1,'SUNphi::Timer']]],
-  ['curcombo',['curCombo',['../de/d33/classSUNphi_1_1Combinatorial.html#adea4aea6ad06dedc876a783995b5987e',1,'SUNphi::Combinatorial']]],
   ['currentmeasure',['currentMeasure',['../d6/de9/classSUNphi_1_1Timer.html#a7c3cbd6f70491b9fb0c21ff42fc2d23a',1,'SUNphi::Timer']]]
 ];
