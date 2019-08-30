@@ -34,6 +34,11 @@ namespace SUNphi
       (I!=NOT_PRESENT);
   };
   
+  /// Enumerate first and last
+  enum FIRST_OR_LAST{FIRST,LAST};
+  
+  /// Enumerate the possibity to loop backward or forward
+  enum BACK_FORW{BACK,FORW};
 }
 
 #endif
