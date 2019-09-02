@@ -7,5 +7,6 @@
 
 #include <math/Arithmetic.hpp>
 #include <math/Factorize.hpp>
+#include <math/Partition.hpp>
 
 #endif
