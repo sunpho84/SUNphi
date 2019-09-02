@@ -360,6 +360,73 @@ namespace SUNphi
     return
       n;
   }
+  
+  /// Loop on all submultiple of the passed number
+  ///
+  /// Run the provided function, passing the submultiple at each iteration,
+  /// and returning the total number of submultiple
+  template <typename I,
+	    typename F>
+  I loopOnAllSubmultiplesOf(const I& i,                      ///< Number on which to run the loop
+			    const F& fun,                    ///< Function to run at each iteration
+			    const BACK_FORW& backForw=FORW)  ///< Loop direction
+  {
+    /// List all factors
+    const Vector<I> facts=
+      factorize(i);
+    
+    /// Independent factors and maximal number they can be taken
+    const std::map<I,I> indepFactsAndMax=
+      facts.group();
+    
+    /// Independent factors
+    const Vector<I> indepFacts=
+      getAllKeys(indepFactsAndMax);
+    
+    /// Maximal number of times a factor can be taken
+    const Vector<I> nMaxPerFact=
+      getAllVal(indepFactsAndMax);
+    
+    /// Number of factors
+    const int nFacts=
+      facts.size();
+    
+    /// Number of independent factors
+    const int nIndepFacts=
+      indepFacts.size();
+    
+    /// Number of submultiples
+    I nSubMultiples=
+      0;
+    
+    for(int nFactsTaken=0;
+	nFactsTaken<=nFacts;
+	nFactsTaken++)
+      nSubMultiples+=
+	loopOnAllCombinations(nMaxPerFact,
+			      nFactsTaken,
+			      [&fun,&nIndepFacts,&indepFacts](const Vector<I>& takenPerIndepFact)
+			      {
+				/// Multiple
+				I val=
+				  1;
+				
+				for(I iIndepFact=0;
+				    iIndepFact<nIndepFacts;
+				    iIndepFact++)
+				  for(I iTaken=1;
+				      iTaken<=takenPerIndepFact[iIndepFact];
+				      iTaken++)
+				    val*=
+				      indepFacts[iIndepFact];
+				
+				fun(val);
+			      },
+			      backForw);
+    
+    return
+      nSubMultiples;
+  }
 }
 
 #endif
