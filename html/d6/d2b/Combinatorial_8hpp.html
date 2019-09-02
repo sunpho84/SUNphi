@@ -134,6 +134,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memTemplParams" colspan="2">template&lt;typename Int , typename Fun &gt; </td></tr>
 <tr class="memitem:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memTemplItemLeft" align="right" valign="top">Int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d2b/Combinatorial_8hpp.html#a3ddcc608b12ac50a37d0a3aff4ea14ba">SUNphi::loopOnAllCombinations</a> (const Vector&lt; Int &gt; &amp;nMaxPerSlot, const int nObj, const Fun &amp;fun, BACK_FORW BackForw=FORW)</td></tr>
 <tr class="separator:a3ddcc608b12ac50a37d0a3aff4ea14ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761565a8df2c8565703873f89e33fe0f"><td class="memTemplParams" colspan="2">template&lt;typename I , typename F &gt; </td></tr>
+<tr class="memitem:a761565a8df2c8565703873f89e33fe0f"><td class="memTemplItemLeft" align="right" valign="top">I&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d2b/Combinatorial_8hpp.html#a761565a8df2c8565703873f89e33fe0f">SUNphi::loopOnAllSubmultiplesOf</a> (const I &amp;i, const F &amp;fun, const BACK_FORW &amp;backForw=FORW)</td></tr>
+<tr class="separator:a761565a8df2c8565703873f89e33fe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5caba32693162298a9c125b71b40d6e"><td class="memTemplParams" colspan="2">template&lt;typename Fun , typename INpart , typename INToPart &gt; </td></tr>
+<tr class="memitem:af5caba32693162298a9c125b71b40d6e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/d2b/Combinatorial_8hpp.html#af5caba32693162298a9c125b71b40d6e">SUNphi::loopOnAllAdditivePartitioningOf</a> (const INpart &amp;nOfPart, const INToPart &amp;nToPart, const Fun &amp;fun)</td></tr>
+<tr class="separator:af5caba32693162298a9c125b71b40d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the definition of combinatorial routines. </p>
@@ -141,6 +147,52 @@ Functions</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_af5caba32693162298a9c125b71b40d6e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fun , typename INpart , typename INToPart &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto SUNphi::loopOnAllAdditivePartitioningOf </td>
+          <td>(</td>
+          <td class="paramtype">const INpart &amp;&#160;</td>
+          <td class="paramname"><em>nOfPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const INToPart &amp;&#160;</td>
+          <td class="paramname"><em>nToPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Fun &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop on all additive partitioning of <code>n</code> </p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code" href="../../d6/d2b/Combinatorial_8hpp.html#af5caba32693162298a9c125b71b40d6e">loopOnAllAdditivePartitioningOf</a>(2,7,foo); <span class="comment">/// foo(0,7);foo(1,6);...</span></div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nOfPart</td><td>Number of partitions </td></tr>
+    <tr><td class="paramname">nToPart</td><td>Number to partition </td></tr>
+    <tr><td class="paramname">fun</td><td>Function invocated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00451">451</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="file_a3ddcc608b12ac50a37d0a3aff4ea14ba"></a>
 <div class="memitem">
 <div class="memproto">
@@ -193,6 +245,60 @@ template&lt;typename Int , typename Fun &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00329">329</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="file_a761565a8df2c8565703873f89e33fe0f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename I , typename F &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">I SUNphi::loopOnAllSubmultiplesOf </td>
+          <td>(</td>
+          <td class="paramtype">const I &amp;&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const F &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/d58/Position_8hpp.html#abdc8a9e1fd94dbdf880f660f531d27bc">BACK_FORW</a> &amp;&#160;</td>
+          <td class="paramname"><em>backForw</em> = <code>FORW</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop on all submultiple of the passed number</p>
+<p>Run the provided function, passing the submultiple at each iteration, and returning the total number of submultiple </p>
+<p>List all factors</p>
+<p>Independent factors and maximal number they can be taken</p>
+<p>Independent factors</p>
+<p>Maximal number of times a factor can be taken</p>
+<p>Number of factors</p>
+<p>Number of independent factors</p>
+<p>Number of submultiples</p>
+<p>Multiple </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Number on which to run the loop </td></tr>
+    <tr><td class="paramname">fun</td><td>Function to run at each iteration </td></tr>
+    <tr><td class="paramname">backForw</td><td>Loop direction </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html#l00370">370</a> of file <a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">Combinatorial.hpp</a>.</p>
 
 </div>
 </div>

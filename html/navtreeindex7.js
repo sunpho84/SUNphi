@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"db/d33/Grid_8hpp_source.html":[3,0,2,4,0],
+"db/d7f/structSUNphi_1_1HasMember__resize.html":[2,0,0,154],
 "db/d7f/structSUNphi_1_1HasMember__resize.html#a7322ca429f27e9859c3e90d594e730a6":[2,0,0,154,5],
 "db/d7f/structSUNphi_1_1HasMember__resize.html#aa5db04378547718afb671baf4e5cb72d":[2,0,0,154,4],
 "db/d7f/structSUNphi_1_1HasMember__resize.html#ab80d2903c3a906fceae5f328b4289c0a":[2,0,0,154,7],
@@ -101,6 +103,10 @@ var NAVTREEINDEX7 =
 "dc/d2f/structSUNphi_1_1NnarySmET.html#a8a9c2568012d35075077fb60465f129f":[2,0,0,171,3],
 "dc/d2f/structSUNphi_1_1NnarySmET.html#afa3fc6cfc6c8bfa110266c728c2d6d54":[2,0,0,171,9],
 "dc/d35/classSUNphi_1_1GridHashable.html":[2,0,0,130],
+"dc/d4d/Partition_8hpp.html":[3,0,2,5,2],
+"dc/d4d/Partition_8hpp.html#a19d283f88c34c8042c44d877212ba22b":[3,0,2,5,2,1],
+"dc/d4d/Partition_8hpp.html#a378daa6a067ffec8a652b0a8dd5cab2c":[3,0,2,5,2,0],
+"dc/d4d/Partition_8hpp_source.html":[3,0,2,5,2],
 "dc/d50/structSUNphi_1_1HasMember__getMergedCompsView_1_1Check.html":[2,0,0,144,0],
 "dc/d50/structSUNphi_1_1__IntSeqCat_3_01IntSeq_3_01Ints1_8_8_8_01_4_00_01IntSeq_3_01Ints2_8_8_8_01_4_00_01T_8_8_8_01_4.html":[2,0,0,19],
 "dc/d50/structSUNphi_1_1__IntSeqCat_3_01IntSeq_3_01Ints1_8_8_8_01_4_00_01IntSeq_3_01Ints2_8_8_8_01_4_00_01T_8_8_8_01_4.html#a7ba1c3b58119818a6e618aa6817966b9":[2,0,0,19,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX7 =
 "dc/dda/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01false_00_01N_00_01IntSeq_3_01R_8_8_8_01_4_01_4.html#a2aaf1cfa4aeb70ce80f57bf5df8e0fb6":[2,0,0,160,1,0],
 "dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html":[2,0,0,153,2],
 "dc/ddd/structSUNphi_1_1HasMember__refs_1_1Fallback.html#a4aae4936252607fd0d3e8ece3e15e3b8":[2,0,0,153,2,0],
-"dc/de1/Bind_8hpp.html":[3,0,2,10,5],
-"dc/de1/Bind_8hpp.html#a039c2450684887ce0d2ba6ba7a08a562":[3,0,2,10,5,4],
-"dc/de1/Bind_8hpp.html#a05f22ac629fb941d46721c8a5a574b0d":[3,0,2,10,5,6],
-"dc/de1/Bind_8hpp.html#a149981a35c9bfdd4bce95d3526bcde3e":[3,0,2,10,5,8],
-"dc/de1/Bind_8hpp.html#a3fb2172ecc4d86b4d06a703ccd1978f6":[3,0,2,10,5,7],
-"dc/de1/Bind_8hpp.html#a5a84960eea00cd7668bc7ee060548c58":[3,0,2,10,5,3],
-"dc/de1/Bind_8hpp.html#a89b430ea7899ab76eb45b47ea636df1d":[3,0,2,10,5,9]
+"dc/de1/Bind_8hpp.html":[3,0,2,10,5]
 };

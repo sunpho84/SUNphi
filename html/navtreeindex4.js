@@ -10,7 +10,9 @@ var NAVTREEINDEX4 =
 "d6/d17/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4.html":[2,0,0,160,2],
 "d6/d17/structSUNphi_1_1IntSeq_1_1__AppendFirstN_3_01true_00_01N_00_01IntSeq_3_01HeadR_00_01TailR_8_8_8_01_4_01_4.html#ace3c369e09b3048104ce94b01d26082b":[2,0,0,160,2,0],
 "d6/d2b/Combinatorial_8hpp.html":[3,0,2,15,2],
-"d6/d2b/Combinatorial_8hpp.html#a3ddcc608b12ac50a37d0a3aff4ea14ba":[3,0,2,15,2,1],
+"d6/d2b/Combinatorial_8hpp.html#a3ddcc608b12ac50a37d0a3aff4ea14ba":[3,0,2,15,2,2],
+"d6/d2b/Combinatorial_8hpp.html#a761565a8df2c8565703873f89e33fe0f":[3,0,2,15,2,3],
+"d6/d2b/Combinatorial_8hpp.html#af5caba32693162298a9c125b71b40d6e":[3,0,2,15,2,1],
 "d6/d2b/Combinatorial_8hpp_source.html":[3,0,2,15,2],
 "d6/d3d/structSUNphi_1_1Mutex.html":[2,0,0,170],
 "d6/d3d/structSUNphi_1_1Mutex.html#a4b94701f3873a79416fb695caec1cec8":[2,0,0,170,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "d8/d1c/classSUNphi_1_1Tens.html#a3576c6b972d3185a9e0555dcc703869b":[2,0,0,191,18],
 "d8/d1c/classSUNphi_1_1Tens.html#a3f5ed01aad92159a9e3c96cf87811f57":[2,0,0,191,6],
 "d8/d1c/classSUNphi_1_1Tens.html#a4507e7d4389353645bf8afef12f973da":[2,0,0,191,2],
-"d8/d1c/classSUNphi_1_1Tens.html#a4879a838048563b5a0580f4e5882f065":[2,0,0,191,22],
-"d8/d1c/classSUNphi_1_1Tens.html#a4b46ea85ccd68848ca76d967b1f07222":[2,0,0,191,21],
-"d8/d1c/classSUNphi_1_1Tens.html#a57b71fd459eb2d2d828ecd2d3f9c4cbb":[2,0,0,191,1]
+"d8/d1c/classSUNphi_1_1Tens.html#a4879a838048563b5a0580f4e5882f065":[2,0,0,191,22]
 };

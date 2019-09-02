@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>SUNphi: include/math/Factorize.hpp File Reference</title>
+<title>SUNphi: include/math/Partition.hpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -87,7 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d1/d97/Factorize_8hpp.html','../../');});
+$(document).ready(function(){initNavTree('dc/d4d/Partition_8hpp.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -108,85 +108,129 @@ $(document).ready(function(){initNavTree('d1/d97/Factorize_8hpp.html','../../');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Factorize.hpp File Reference</div>  </div>
+<div class="title">Partition.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Factorizes a number with a simple algorithm.  
+<p>Factorizes numbers into partitions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="../../d9/d11/Logger_8hpp_source.html">ios/Logger.hpp</a>&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="../../d1/d97/Factorize_8hpp_source.html">math/Factorize.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d6/d2b/Combinatorial_8hpp_source.html">utility/Combinatorial.hpp</a>&gt;</code><br />
 </div>
-<p><a href="../../d1/d97/Factorize_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="../../dc/d4d/Partition_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a16c1637da6f63f894b2a6915ee28fad1"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
-<tr class="memitem:a16c1637da6f63f894b2a6915ee28fad1"><td class="memTemplItemLeft" align="right" valign="top">constexpr Vector&lt; I &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/Factorize_8hpp.html#a16c1637da6f63f894b2a6915ee28fad1">SUNphi::factorize</a> (I n)</td></tr>
-<tr class="memdesc:a16c1637da6f63f894b2a6915ee28fad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factorizes a number with a simple algorithm.  <a href="../../d1/d97/Factorize_8hpp.html#a16c1637da6f63f894b2a6915ee28fad1">More...</a><br /></td></tr>
-<tr class="separator:a16c1637da6f63f894b2a6915ee28fad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e73fc428e99aef35b15e5960a126538"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
-<tr class="memitem:a5e73fc428e99aef35b15e5960a126538"><td class="memTemplItemLeft" align="right" valign="top">std::map&lt; I, I &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538">SUNphi::factorizeGrouping</a> (const I &amp;i)</td></tr>
-<tr class="separator:a5e73fc428e99aef35b15e5960a126538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378daa6a067ffec8a652b0a8dd5cab2c"><td class="memTemplParams" colspan="2">template&lt;typename I , typename Fun &gt; </td></tr>
+<tr class="memitem:a378daa6a067ffec8a652b0a8dd5cab2c"><td class="memTemplItemLeft" align="right" valign="top">I&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d4d/Partition_8hpp.html#a378daa6a067ffec8a652b0a8dd5cab2c">SUNphi::Impl::loopOnAllFactorizingPartitioning</a> (Vector&lt; I &gt; &amp;partition, const I &amp;n, const Fun &amp;fun, const int &amp;pos=0)</td></tr>
+<tr class="separator:a378daa6a067ffec8a652b0a8dd5cab2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d283f88c34c8042c44d877212ba22b"><td class="memTemplParams" colspan="2">template&lt;typename I , typename Fun &gt; </td></tr>
+<tr class="memitem:a19d283f88c34c8042c44d877212ba22b"><td class="memTemplItemLeft" align="right" valign="top">I&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d4d/Partition_8hpp.html#a19d283f88c34c8042c44d877212ba22b">SUNphi::loopOnAllFactorizingPartitioning</a> (const I &amp;n, const Fun &amp;fun, const int &amp;nFacts)</td></tr>
+<tr class="separator:a19d283f88c34c8042c44d877212ba22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Factorizes a number with a simple algorithm. </p>
+<div class="textblock"><p>Factorizes numbers into partitions. </p>
 
-<p>Definition in file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
+<p>Definition in file <a class="el" href="../../dc/d4d/Partition_8hpp_source.html">Partition.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="file_a16c1637da6f63f894b2a6915ee28fad1"></a>
+<a class="anchor" id="file_a378daa6a067ffec8a652b0a8dd5cab2c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename I &gt; </div>
+template&lt;typename I , typename Fun &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Vector&lt;I&gt; SUNphi::factorize </td>
+          <td class="memname">I SUNphi::Impl::loopOnAllFactorizingPartitioning </td>
           <td>(</td>
-          <td class="paramtype">I&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; I &gt; &amp;&#160;</td>
+          <td class="paramname"><em>partition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const I &amp;&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Fun &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>pos</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Factorizes a number with a simple algorithm. </p>
-<p>Result of the factorization</p>
-<p>List of all known primes before 100</p>
-<p>Iterator to the initial value of the divisor</p>
-<p>Divisor</p>
-<p>Dividend</p>
-<p>Remainder </p>
+<p>Loop on all factorizing partition of n</p>
+<p>Internal implementation, proceeds recursively calling the function until the position is the end </p>
+<p>Number of partition found </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>Number to factorize </td></tr>
+    <tr><td class="paramname">partition</td><td>Progressively built partition </td></tr>
+    <tr><td class="paramname">n</td><td>Numbr to factorize </td></tr>
+    <tr><td class="paramname">fun</td><td>Function to be called </td></tr>
+    <tr><td class="paramname">pos</td><td>Position filled at this iteration </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d4d/Partition_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../dc/d4d/Partition_8hpp_source.html">Partition.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="file_a5e73fc428e99aef35b15e5960a126538"></a>
+<a class="anchor" id="file_a19d283f88c34c8042c44d877212ba22b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename I &gt; </div>
+template&lt;typename I , typename Fun &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;I,I&gt; SUNphi::factorizeGrouping </td>
+          <td class="memname">I SUNphi::loopOnAllFactorizingPartitioning </td>
           <td>(</td>
           <td class="paramtype">const I &amp;&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const Fun &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>nFacts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Factorize grouping number</p>
-<p>Example: </p><div class="fragment"><div class="line"><a class="code" href="../../d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538">factorizeGrouping</a>(12); <span class="comment">// {{2,2},{3,1}}</span></div></div><!-- fragment --> <p>Ungrouped factors </p>
+<p>Loop on all factorizing partition of n</p>
+<p>Returns the number of partitions obtained </p>
+<p>Built partition </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Number to factorize </td></tr>
+    <tr><td class="paramname">fun</td><td>Function to be invocated at each turn </td></tr>
+    <tr><td class="paramname">nFacts</td><td>Size of the partition </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="../../d1/d97/Factorize_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d1/d97/Factorize_8hpp_source.html">Factorize.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d4d/Partition_8hpp_source.html#l00062">62</a> of file <a class="el" href="../../dc/d4d/Partition_8hpp_source.html">Partition.hpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +239,7 @@ template&lt;typename I &gt; </div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="../../d1/d97/Factorize_8hpp.html">Factorize.hpp</a></li>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_fba38f648377aa56ae5d69782adf9e53.html">math</a></li><li class="navelem"><a class="el" href="../../dc/d4d/Partition_8hpp.html">Partition.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>

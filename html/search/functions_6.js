@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['factorize',['factorize',['../d1/d97/Factorize_8hpp.html#ae00d9728fa86d1cd34db46dd682efb19',1,'SUNphi']]],
+  ['factorize',['factorize',['../d1/d97/Factorize_8hpp.html#a16c1637da6f63f894b2a6915ee28fad1',1,'SUNphi']]],
   ['factorizegrouping',['factorizeGrouping',['../d1/d97/Factorize_8hpp.html#a5e73fc428e99aef35b15e5960a126538',1,'SUNphi']]],
   ['father',['father',['../d6/de9/classSUNphi_1_1Timer.html#a373c8895ca3f3a2de54dad0d90451832',1,'SUNphi::Timer::father() const '],['../d6/de9/classSUNphi_1_1Timer.html#aa6b186fa2aed7c8bf800feb994cda281',1,'SUNphi::Timer::father(Ts &amp;&amp;...ts)']]],
   ['file',['file',['../d3/d78/classSUNphi_1_1Logger.html#ac595c1ebbfb6f0f7ba444aed32475fbc',1,'SUNphi::Logger::file() const '],['../d3/d78/classSUNphi_1_1Logger.html#a9a7f380be5cf7b49ebe4f954bd3202d2',1,'SUNphi::Logger::file(Ts &amp;&amp;...ts)']]],

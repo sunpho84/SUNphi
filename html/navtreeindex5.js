@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"d8/d1c/classSUNphi_1_1Tens.html#a4b46ea85ccd68848ca76d967b1f07222":[2,0,0,191,21],
+"d8/d1c/classSUNphi_1_1Tens.html#a57b71fd459eb2d2d828ecd2d3f9c4cbb":[2,0,0,191,1],
 "d8/d1c/classSUNphi_1_1Tens.html#a595759dbf7d61d7010fc539c2a432e72":[2,0,0,191,14],
 "d8/d1c/classSUNphi_1_1Tens.html#a5c1f526cb8d648078a77d33eaaea6be2":[2,0,0,191,15],
 "d8/d1c/classSUNphi_1_1Tens.html#a6751965c1c2a68bbad6aae8f1856903c":[2,0,0,191,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "d9/dc6/classSUNphi_1_1Memory.html#a9e14afdc0734d733bcd87e97266cce71":[2,0,0,167,21],
 "d9/dc6/classSUNphi_1_1Memory.html#aa44be6f321702697136f462bb9579f3e":[2,0,0,167,10],
 "d9/dc6/classSUNphi_1_1Memory.html#aa790cd28a4ace824b243d659b779be8b":[2,0,0,167,7],
-"d9/dc6/classSUNphi_1_1Memory.html#aa8de1157d5bcf67e31b69c66838eb427":[2,0,0,167,0],
-"d9/dc6/classSUNphi_1_1Memory.html#aacc8c6fe3728357aafb47fc8b044a5e7":[2,0,0,167,13],
-"d9/dc6/classSUNphi_1_1Memory.html#ab80f0348b08609c6b5772aced4aec9c5":[2,0,0,167,4]
+"d9/dc6/classSUNphi_1_1Memory.html#aa8de1157d5bcf67e31b69c66838eb427":[2,0,0,167,0]
 };
