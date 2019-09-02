@@ -371,6 +371,14 @@ namespace SUNphi
 			    const F& fun,                    ///< Function to run at each iteration
 			    const BACK_FORW& backForw=FORW)  ///< Loop direction
   {
+    if(i==1)
+      {
+	fun(i);
+	
+	return
+	  1;
+      }
+    
     /// List all factors
     const Vector<I> facts=
       factorize(i);
@@ -426,6 +434,26 @@ namespace SUNphi
     
     return
       nSubMultiples;
+  }
+  
+  /// Loop on all additive partitioning of \c n
+  ///
+  /// Example:
+  ///
+  /// \code
+  ///
+  /// loopOnAllAdditivePartitioningOf(2,7,foo); /// foo(0,7);foo(1,6);...
+  ///
+  /// \endcode
+  template <typename Fun,
+	    typename INpart,
+	    typename INToPart>
+  auto loopOnAllAdditivePartitioningOf(const INpart& nOfPart,   ///< Number of partitions
+				       const INToPart& nToPart, ///< Number to partition
+				       const Fun& fun)          ///< Function invocated
+  {
+    return
+      loopOnAllCombinations(Vector<INToPart>(nOfPart,nToPart),nToPart,fun);
   }
 }
 
