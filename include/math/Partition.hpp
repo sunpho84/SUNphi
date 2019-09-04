@@ -64,10 +64,28 @@ namespace SUNphi
 				     const int& nFacts) ///< Size of the partition
   {
     /// Built partition
-    Vector<int64_t> partition(nFacts);
+    Vector<I> partition(nFacts);
     
     return
       Impl::loopOnAllFactorizingPartitioning(partition,n,fun);
+  }
+  
+  /// Gets the list of all factorizing partition of n
+  template <typename I>
+  Vector<Vector<I>> listAllFactorizingPartitioning(const I& n,        ///< Number to factorize
+						   const int& nFacts) ///< Size of the partition
+  {
+    Vector<Vector<I>> list;
+    
+    loopOnAllFactorizingPartitioning(n,
+				     [&list](const Vector<I>& partition)
+				     {
+				       list.push_back(partition);
+				     },
+				     nFacts);
+    
+    return
+      list;
   }
 }
 
