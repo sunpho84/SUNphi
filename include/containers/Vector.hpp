@@ -6,6 +6,7 @@
 /// \brief Header file for the definition of vectors, and useful routines related
 
 #include <iostream>
+#include <sstream>
 
 #include <functional>
 #include <numeric>
@@ -42,7 +43,7 @@ namespace SUNphi
     {
       /// Gets the unsigned size
       const UnsignedSize unsignedSize=
-	static_cast<const std::vector<T>>(*this).size();
+	std::vector<T>::size();
       
       /// Converts to sign
       return
@@ -50,7 +51,8 @@ namespace SUNphi
     };
     
     /// Copy constructor
-    Vector(const Vector& oth) : std::vector<T>(static_cast<const std::vector<T>&>(oth))
+    Vector(const Vector& oth) :
+      std::vector<T>(oth.begin(),oth.end())
     {
     }
     
@@ -181,7 +183,8 @@ namespace SUNphi
       while(pos!=last and cond(*this,pos)==falseTrue)
 	{
 	  act(*this,pos);
-	  pos+=off;
+	  pos+=
+	    off;
 	}
       
       return
@@ -194,7 +197,7 @@ namespace SUNphi
       const
     {
       return
-	loopUntil<false>(0,size(),cond,getNullAction());
+	loopUntil<true>(0,size(),cond,getNullAction());
     }
     
     /// Finds the last element where the condition is false
@@ -214,12 +217,53 @@ namespace SUNphi
       	loopUntil<false>(0,size(),getComparer(val),getNullAction());
     }
     
+    /// Finds the first element different from \c val
+    Size findFirstDiffFrom(const T& val)              ///< Element to find
+      const
+    {
+      return
+	findFirstWhereNot(getComparer(val));
+    }
+    
     /// Finds the last element \c val
     Size findLast(const T& val)              ///< Element to find
       const
     {
       return
 	loopUntil<false>(size()-1,-1,getComparer(val),getNullAction());
+    }
+    
+    /// Finds the last element different from \c val
+    Size findLastDiffFrom(const T& val)              ///< Element to find
+      const
+    {
+      return
+	findLastWhereNot(getComparer(val));
+    }
+    
+    /// Gets a string of form {1,2,3...}
+    std::string getStr()
+      const
+    {
+      /// Generator of the string
+      std::ostringstream os;
+      
+      // Open bracket
+      os<<"{";
+      
+      // First element
+      if(size())
+	os<<this->front();
+      
+      // Other elements
+      for(Size iEl=1;iEl<size();iEl++)
+	os<<","<<(*this)[iEl];
+      
+      // Close bracket
+      os<<"}";
+      
+      return
+	os.str();
     }
     
     /// Group the vector returning a map
@@ -241,6 +285,25 @@ namespace SUNphi
       
       return
 	res;
+    }
+    
+    /// Returns the result and remainder of the division
+    template <typename TOut>
+    void divWithMod(Vector<TOut>& quotient,   ///< Result of the division
+		    Vector<TOut>& remainder,  ///< Remainder of the division
+		    const Vector& divisor)    ///< Divisor to be used
+      const
+    {
+      for(Size i=0;
+	  i<this->size();
+	  i++)
+	{
+	  quotient[i]=
+	    (*this)[i]/divisor[i];
+	  
+	  remainder[i]=
+	    (*this)[i]%divisor[i];
+	}
     }
   };
   

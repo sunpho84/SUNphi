@@ -44,7 +44,7 @@ namespace SUNphi
     {
       /// Draw the value on every node
       ResultType val=
-	static_cast<std::random_device*>(this)->operator()();
+	std::random_device::operator()();
       
       // Broadcast from the preferred node
       if(returningRank!=Mpi::ALL_RANKS)
