@@ -215,5 +215,6 @@ var annotated_dup =
     [ "YAML", null, [
       [ "convert< T, EnableIf< hasMember_serialize< T > > >", "d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4.html", "d6/daa/structYAML_1_1convert_3_01T_00_01EnableIf_3_01hasMember__serialize_3_01T_01_4_01_4_01_4" ]
     ] ],
-    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ]
+    [ "fuffa", "de/da3/classfuffa.html", "de/da3/classfuffa" ],
+    [ "PartitioningLevel", "d5/db6/classPartitioningLevel.html", "d5/db6/classPartitioningLevel" ]
 ];

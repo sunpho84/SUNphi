@@ -1,7 +1,8 @@
 var searchData=
 [
   ['fakelogger',['fakeLogger',['../d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92',1,'SUNphi::Logger']]],
-  ['fend',['fEnd',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a7eb2803ca62638d743e932c26bbfd708',1,'SUNphi::ScopeDoer']]],
+  ['fathersisters',['fatherSisters',['../d5/db6/classPartitioningLevel.html#a443d518a50eca9db5fac1c0c0b5426c7',1,'PartitioningLevel']]],
+  ['fend',['fEnd',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a14eb5135766677534a2a3e578e2e5893',1,'SUNphi::ScopeDoer']]],
   ['file',['file',['../d5/d99/classSUNphi_1_1File.html#a51c487adb0d5ac01a52b41203557805f',1,'SUNphi::File']]],
   ['firslarger',['firsLarger',['../d3/dbe/IntListOrder_8hpp.html#acfd6aa2ab268d1e6cefeff93fc36af37',1,'SUNphi']]],
   ['firslarger_3c_20i_20_3e',['firsLarger&lt; I &gt;',['../d3/dbe/IntListOrder_8hpp.html#a0fc77ba4fc2b28ff2cb1143bafe67815',1,'SUNphi']]],

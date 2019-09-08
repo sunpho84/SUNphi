@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"d3/d04/structSUNphi_1_1BaseConjer.html":[2,0,0,48],
 "d3/d11/classSUNphi_1_1ScopeIndenter.html":[2,0,0,178],
 "d3/d11/classSUNphi_1_1ScopeIndenter.html#a3b4c24da4e44387506c4605c08c04c70":[2,0,0,178,2],
 "d3/d11/classSUNphi_1_1ScopeIndenter.html#ab5ce6af7c29362f8cc5234c8e8aa8980":[2,0,0,178,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "d4/d4b/classSUNphi_1_1Assigner.html#a87c2586b420f9055c93e4c4b7168a21d":[2,0,0,41,0],
 "d4/d4b/classSUNphi_1_1Assigner.html#a99343008afb55b392d925add508508eb":[2,0,0,41,16],
 "d4/d4b/classSUNphi_1_1Assigner.html#a9bb60671abb4857ef4fe686ab40dcd34":[2,0,0,41,5],
-"d4/d4b/classSUNphi_1_1Assigner.html#a9d64a7def7fa86ff59dfbca02a48ee6c":[2,0,0,41,13],
-"d4/d4b/classSUNphi_1_1Assigner.html#aa72ff6049df73f14eed40690014e2efe":[2,0,0,41,9]
+"d4/d4b/classSUNphi_1_1Assigner.html#a9d64a7def7fa86ff59dfbca02a48ee6c":[2,0,0,41,13]
 };

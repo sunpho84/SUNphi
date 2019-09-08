@@ -9,6 +9,7 @@ var searchData=
   ['getallfirstorsecond',['getAllFirstOrSecond',['../de/dd9/Vector_8hpp.html#a172481f864d3e4e84eedb18c3a73f764',1,'SUNphi']]],
   ['getallkeys',['getAllKeys',['../de/dd9/Vector_8hpp.html#a0dae55e2d2fc1c94bebc60d655f745af',1,'SUNphi']]],
   ['getallval',['getAllVal',['../de/dd9/Vector_8hpp.html#ab69f6df3f3d03928f708d52d9838124a',1,'SUNphi']]],
+  ['getallwithunfixedvol',['getAllWithUnfixedVol',['../d5/db6/classPartitioningLevel.html#adc9f3454d50b71c72970e284cb38f301',1,'PartitioningLevel']]],
   ['getbacktracelist',['getBackTraceList',['../d3/dbc/BackTracing_8hpp.html#a3c13c8f0c61f375cac25993fb38413cb',1,'SUNphi']]],
   ['getcomparer',['getComparer',['../df/dc0/classSUNphi_1_1Vector.html#a971a7093c7f95e5c37a2eba6ab1babb5',1,'SUNphi::Vector']]],
   ['geterrno',['getErrNo',['../db/de9/classSUNphi_1_1Crasher.html#a189a37d75135763c2c98444e05f75149',1,'SUNphi::Crasher']]],
@@ -31,9 +32,11 @@ var searchData=
   ['getrc',['getRc',['../d5/d99/classSUNphi_1_1File.html#a665d456cfb5524539df4772b9488078c',1,'SUNphi::File']]],
   ['getshiftedcoordperptomove',['getShiftedCoordPerpToMove',['../d5/def/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01true_01_4.html#a1c73d5e6e947b31966757f172d36c0de',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, true &gt;::getShiftedCoordPerpToMove()'],['../d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#af7527c8f5c6c06036019c93488abe426',1,'SUNphi::GridShiftableBC&lt; T, NDims, Coord, Idx, false &gt;::getShiftedCoordPerpToMove()']]],
   ['getstor',['getStor',['../d8/d1c/classSUNphi_1_1Tens.html#adbdd48967cfd28ef9c73f149856875b4',1,'SUNphi::Tens::getStor() const '],['../d8/d1c/classSUNphi_1_1Tens.html#a3576c6b972d3185a9e0555dcc703869b',1,'SUNphi::Tens::getStor()'],['../dc/d8f/TensClass_8hpp.html#a1d354395c6ec69f519a1908b3d1e1bed',1,'SUNphi::getStor(SMET &amp;&amp;smet, DummyTypes...)'],['../dc/d8f/TensClass_8hpp.html#aa92285dd832c749cd0f3d0adf3e634c5',1,'SUNphi::getStor(SMET &amp;&amp;smet)'],['../dc/d8f/TensClass_8hpp.html#a9c14cafe315cb0ed6d3820f2b5bbaa34',1,'SUNphi::getStor(SMET &amp;&amp;smet)']]],
+  ['getstr',['getStr',['../df/dc0/classSUNphi_1_1Vector.html#a44d3fc83f5828212dbfb8597c5b059ea',1,'SUNphi::Vector']]],
   ['gettail',['getTail',['../dc/d21/TupleElements_8hpp.html#a73969b2e282453e65ed9666b1dea3c4c',1,'SUNphi']]],
   ['getthreadid',['getThreadId',['../dc/d0f/classSUNphi_1_1ThreadPool.html#a341aafd8c7563e1cb288f618f28961e2',1,'SUNphi::ThreadPool']]],
   ['gettruecondition',['getTrueCondition',['../df/dc0/classSUNphi_1_1Vector.html#a621bc927519a5c64369d738ee07cb521',1,'SUNphi::Vector']]],
+  ['getvol',['getVol',['../d5/db6/classPartitioningLevel.html#adf4ee0738b10717fedb06840319d8838',1,'PartitioningLevel']]],
   ['grid',['Grid',['../dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79',1,'SUNphi::Grid::Grid()'],['../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb',1,'SUNphi::Grid()']]],
   ['group',['group',['../df/dc0/classSUNphi_1_1Vector.html#a9fbe6b218448c653ed243567b26f1308',1,'SUNphi::Vector']]]
 ];

@@ -1,9 +1,11 @@
 var searchData=
 [
   ['partition_2ehpp',['Partition.hpp',['../dc/d4d/Partition_8hpp.html',1,'']]],
+  ['partitioninglevel',['PartitioningLevel',['../d5/db6/classPartitioningLevel.html',1,'PartitioningLevel&lt; I &gt;'],['../d5/db6/classPartitioningLevel.html#a8543bc06aada7a6794ebdfde73cbaa6e',1,'PartitioningLevel::PartitioningLevel()']]],
   ['path',['path',['../db/de9/classSUNphi_1_1Crasher.html#a3681de8832e8aceed938094e719b03b4',1,'SUNphi::Crasher']]],
   ['periodcertification',['periodCertification',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ad9039de99d24298f49b9b96c6386d2e9',1,'SUNphi::SFMTRandomGen']]],
   ['physics_2ehpp',['Physics.hpp',['../d0/d5e/Physics_8hpp.html',1,'']]],
+  ['plpp',['PLPP',['../d5/db6/classPartitioningLevel.html#a65dc325f21eb2217224cf2b1bfa88da1',1,'PartitioningLevel']]],
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
   ['pool_2ehpp',['Pool.hpp',['../df/d0f/Pool_8hpp.html',1,'']]],
   ['popfromcache',['popFromCache',['../d9/dc6/classSUNphi_1_1Memory.html#ad865fefe994e70645ced16e30fa073de',1,'SUNphi::Memory']]],

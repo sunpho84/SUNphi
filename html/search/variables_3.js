@@ -4,7 +4,7 @@ var searchData=
   ['cachedsize',['cachedSize',['../d9/dc6/classSUNphi_1_1Memory.html#a650e645a35c6cd394f97ea45a575e189',1,'SUNphi::Memory']]],
   ['canbeconverted',['canBeConverted',['../d0/d81/TypeTraits_8hpp.html#ada4b857c07c2d9392292181763ade3f4',1,'SUNphi']]],
   ['canprint',['canPrint',['../d0/d81/TypeTraits_8hpp.html#a596acec6fec77d67693f05e82c964782',1,'SUNphi']]],
-  ['children',['children',['../d6/de9/classSUNphi_1_1Timer.html#ab5e2a7af3e2e1a24faf564cf1fba2154',1,'SUNphi::Timer']]],
+  ['children',['children',['../d6/de9/classSUNphi_1_1Timer.html#ab5e2a7af3e2e1a24faf564cf1fba2154',1,'SUNphi::Timer::children()'],['../d5/db6/classPartitioningLevel.html#a342c5ced08f01f67b8920cd18192fe74',1,'PartitioningLevel::children()']]],
   ['ciphered',['ciphered',['../d9/d59/classSUNphi_1_1Sitmo.html#adec396eb9df42e2855945787dc01556d',1,'SUNphi::Sitmo']]],
   ['colorchanged',['colorChanged',['../d9/dbe/classSUNphi_1_1Logger_1_1LoggerLine.html#af5cc88ba9650595db64c3b9aa80b071d',1,'SUNphi::Logger::LoggerLine']]],
   ['combineflags',['combineFlags',['../d0/d45/Flags_8hpp.html#a5a00ab4ef375318959380967abc92878',1,'SUNphi']]],

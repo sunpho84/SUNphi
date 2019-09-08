@@ -179,8 +179,8 @@ var NAVTREEINDEX1 =
 "d2/d69/NnarySmET_8hpp.html#ad378640872660b64ac332626a34f7e28":[3,0,2,10,8,13],
 "d2/d69/NnarySmET_8hpp.html#add895140544e5c3ce25a9994a81dcf89":[3,0,2,10,8,19],
 "d2/d69/NnarySmET_8hpp.html#ae52f53997fe1f814a668b58f11caebfe":[3,0,2,10,8,14],
-"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,31],
 "d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,30],
+"d2/d69/NnarySmET_8hpp.html#ae820446f40d55de97c9fccae82551383":[3,0,2,10,8,31],
 "d2/d69/NnarySmET_8hpp.html#ae9afd2594bd82b20b0a55b28cc2ae062":[3,0,2,10,8,22],
 "d2/d69/NnarySmET_8hpp.html#aea54762dc3c5e7ab672f598af517e24a":[3,0,2,10,8,18],
 "d2/d69/NnarySmET_8hpp.html#af025591265a6f05e1c577f57cd92bab1":[3,0,2,10,8,29],
@@ -232,10 +232,11 @@ var NAVTREEINDEX1 =
 "d2/dad/UnaryMinus_8hpp.html#afb071e5c750597f2ed9d00fbba26f938":[3,0,2,10,13,6],
 "d2/dad/UnaryMinus_8hpp_source.html":[3,0,2,10,13],
 "d2/db3/classSUNphi_1_1ScopeDoer.html":[2,0,0,177],
-"d2/db3/classSUNphi_1_1ScopeDoer.html#a4f5bf9f92bc5fefd1f1bbfd2499f1717":[2,0,0,177,1],
-"d2/db3/classSUNphi_1_1ScopeDoer.html#a51192951f63e3e4c0bc66671e4285144":[2,0,0,177,0],
-"d2/db3/classSUNphi_1_1ScopeDoer.html#a7eb2803ca62638d743e932c26bbfd708":[2,0,0,177,2],
-"d2/db3/classSUNphi_1_1ScopeDoer.html#adbd9bd89347e6e617ab978c56d204793":[2,0,0,177,3],
+"d2/db3/classSUNphi_1_1ScopeDoer.html#a0791e75f87b40476dd818a69128d73ab":[2,0,0,177,4],
+"d2/db3/classSUNphi_1_1ScopeDoer.html#a0f3f957fa19c3e813865e477b052b3e8":[2,0,0,177,1],
+"d2/db3/classSUNphi_1_1ScopeDoer.html#a14eb5135766677534a2a3e578e2e5893":[2,0,0,177,3],
+"d2/db3/classSUNphi_1_1ScopeDoer.html#a4329f6dfbcd05cf26d4c80634e700cea":[2,0,0,177,2],
+"d2/db3/classSUNphi_1_1ScopeDoer.html#a715aad964a7a137ce5c41ff582cf81cf":[2,0,0,177,0],
 "d2/dc3/structSUNphi_1_1BaseMulAdder.html":[2,0,0,50],
 "d2/dd9/Sitmo2_8hpp_source.html":[3,0,2,8,4],
 "d2/df0/Binarize_8hpp.html":[3,0,2,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "d2/df0/Binarize_8hpp_source.html":[3,0,2,9,1],
 "d2/df5/Demangle_8hpp.html":[3,0,2,1,2],
 "d2/df5/Demangle_8hpp.html#af57cd77e5ea501f45f24c919e3b76c83":[3,0,2,1,2,0],
-"d2/df5/Demangle_8hpp_source.html":[3,0,2,1,2],
-"d3/d04/structSUNphi_1_1BaseConjer.html":[2,0,0,48]
+"d2/df5/Demangle_8hpp_source.html":[3,0,2,1,2]
 };

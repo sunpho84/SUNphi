@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['partitioninglevel',['PartitioningLevel',['../d5/db6/classPartitioningLevel.html#a8543bc06aada7a6794ebdfde73cbaa6e',1,'PartitioningLevel']]],
   ['periodcertification',['periodCertification',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ad9039de99d24298f49b9b96c6386d2e9',1,'SUNphi::SFMTRandomGen']]],
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
   ['popfromcache',['popFromCache',['../d9/dc6/classSUNphi_1_1Memory.html#ad865fefe994e70645ced16e30fa073de',1,'SUNphi::Memory']]],
