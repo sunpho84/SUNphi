@@ -241,6 +241,13 @@ namespace SUNphi
 	findLastWhereNot(getComparer(val));
     }
     
+    /// Check if the value is contained
+    bool isContained(const T& val)
+      const
+    {
+      return
+	findFirst(val)!=size();
+    }
     /// Gets a string of form {1,2,3...}
     std::string getStr()
       const
