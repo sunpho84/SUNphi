@@ -17,6 +17,7 @@
 #include <metaprogramming/TypeTraits.hpp>
 #include <metaprogramming/SFINAE.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
+#include <utility/ScopeDoer.hpp>
 
 namespace SUNphi
 {
@@ -248,6 +249,16 @@ namespace SUNphi
       return
 	findFirst(val)!=size();
     }
+    
+    /// Push back a value and pop it back when going out of scope
+    [[ nodiscard ]] auto scopePushBack(const T& val)
+    {
+      this->push_back(val);
+	
+      return
+	ScopeDoer([this](){this->pop_back();});
+    }
+    
     /// Gets a string of form {1,2,3...}
     std::string getStr()
       const
