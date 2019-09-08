@@ -13,9 +13,8 @@ namespace SUNphi
   /// action had an effect or not, such that the undo is issued or not
   /// at the destruction. The action performed at the end needs not to
   /// return anything (can return whatever).
-  template <typename FBegin, // Type of the function which is called at creation
-	    typename FEnd>   // Type of the function which is called at destruction
-  class ScopeDoer
+  template <typename FEnd>   // Type of the function which is called at destruction
+  class [[ nodiscard ]] ScopeDoer
   {
     /// Function to be called at destroy
     FEnd fEnd;
@@ -25,13 +24,22 @@ namespace SUNphi
     
   public:
     
-    /// Create, do and set what to do at undo
+    /// Create, do and set what to do at destruction
+    template <typename FBegin> // Type of the function which is called at creation
     ScopeDoer(FBegin fBegin,
 	      FEnd fEnd) :
       fEnd(fEnd)
     {
       undoAtEnd=
 	fBegin();
+    }
+    
+    /// Create, set what to do at destruction
+    ScopeDoer(FEnd fEnd) :
+      fEnd(fEnd)
+    {
+      undoAtEnd=
+	true;
     }
     
     /// Destroy undoing
