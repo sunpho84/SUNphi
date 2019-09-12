@@ -5,6 +5,8 @@
 ///
 /// \brief Scope-based action
 
+#include <utility>
+
 namespace SUNphi
 {
   /// Class which does something when created and something else when destroyed
@@ -22,7 +24,27 @@ namespace SUNphi
     /// Store whether we need to undo at the end
     bool undoAtEnd;
     
+    /// Forbids copy constructor
+    ScopeDoer(const ScopeDoer&) = delete;
+    
   public:
+    
+    /// Check if will undo
+    bool willUndo()
+      const
+    {
+      return
+	undoAtEnd;
+    }
+    
+    /// Move constructor
+    ScopeDoer(ScopeDoer&& oth) :
+      fEnd(std::move(oth.fEnd)),
+      undoAtEnd(oth.undoAtEnd)
+      {
+	oth.undoAtEnd=
+	  false;
+      }
     
     /// Create, do and set what to do at destruction
     template <typename FBegin> // Type of the function which is called at creation
@@ -50,49 +72,26 @@ namespace SUNphi
     }
   };
   
-  // /// Deduction guide for ScopeDoer
-  // template <typename FBegin,
-  // 	    typename FEnd>
-  // ScopeDoer(FBegin fBegin,
-  // 	    FEnd fEnd)
-  //   -> ScopeDoer<FBegin,FEnd>;
-  
-  /// Change the variable for the object scope
-  template <typename T>
-  class ScopeChangeVar
+  /// Set a variable for the scope, change it back at the end
+  template <typename T,
+	    typename TV>
+  auto getScopeChangeVar(T& ref,         ///< Reference
+			 const TV& val)  ///< Value to set
   {
-    /// Reference
-    T& ref;
-    
     /// Old value
-    const T oldVal;
+    T oldVal=
+      ref;
     
-  public:
+    ref=
+      val;
     
-    /// Create and increase indent level
-    ScopeChangeVar(T& ref,        ///< Reference to change
-		   const T& val)  ///< Value to set
-      : ref(ref),oldVal(ref)
-    {
-      // Set the new value
-      ref=
-  	val;
-    }
-    
-    /// Delete and decrease indent level
-    ~ScopeChangeVar()
-    {
-      // Set back the old value
-      ref=
-  	oldVal;
-    }
-  };
-  
-  /// Deduction guide for ScopeChangeVar
-  template <typename T>
-  ScopeChangeVar(T& ref,
-		 const T& val)
-    -> ScopeChangeVar<T>;
+    return
+      ScopeDoer([&ref,oldVal]()
+		{
+		  ref=
+		    oldVal;
+		});
+  }
 }
 
 #endif
