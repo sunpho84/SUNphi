@@ -19,7 +19,7 @@ namespace SUNphi
   
   /// Set for current scope
 #define SET_FOR_CURRENT_SCOPE(NAME,VAR,...)			\
-  ScopeChangeVar NAME3(SET,NAME,__LINE__)(VAR,__VA_ARGS__)
+  auto NAME3(SET,NAME,__LINE__)=getScopeChangeVar(VAR,__VA_ARGS__)
   
   /// Set the precision for current scope
 #define SCOPE_REAL_PRECISION(STREAM,VAL)					\
