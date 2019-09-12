@@ -181,7 +181,6 @@ var annotated_dup =
       [ "RwCol", "d8/dc9/structSUNphi_1_1RwCol.html", "d8/dc9/structSUNphi_1_1RwCol" ],
       [ "RwSpin", "dd/ded/structSUNphi_1_1RwSpin.html", "dd/ded/structSUNphi_1_1RwSpin" ],
       [ "ScalarWrapper", "db/d12/classSUNphi_1_1ScalarWrapper.html", "db/d12/classSUNphi_1_1ScalarWrapper" ],
-      [ "ScopeChangeVar", "d7/d0a/classSUNphi_1_1ScopeChangeVar.html", "d7/d0a/classSUNphi_1_1ScopeChangeVar" ],
       [ "ScopeDoer", "d2/db3/classSUNphi_1_1ScopeDoer.html", "d2/db3/classSUNphi_1_1ScopeDoer" ],
       [ "ScopeIndenter", "d3/d11/classSUNphi_1_1ScopeIndenter.html", "d3/d11/classSUNphi_1_1ScopeIndenter" ],
       [ "ScopeMutexLocker", "dd/db8/structSUNphi_1_1ScopeMutexLocker.html", null ],

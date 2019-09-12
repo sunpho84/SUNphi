@@ -1,7 +1,6 @@
 var searchData=
 [
   ['scalarwrapper',['ScalarWrapper',['../db/d12/classSUNphi_1_1ScalarWrapper.html',1,'SUNphi']]],
-  ['scopechangevar',['ScopeChangeVar',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html',1,'SUNphi']]],
   ['scopedoer',['ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html',1,'SUNphi']]],
   ['scopeindenter',['ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html',1,'SUNphi']]],
   ['scopemutexlocker',['ScopeMutexLocker',['../dd/db8/structSUNphi_1_1ScopeMutexLocker.html',1,'SUNphi']]],

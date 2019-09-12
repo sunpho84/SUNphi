@@ -115,30 +115,68 @@ $(document).ready(function(){initNavTree('de/d6a/ScopeDoer_8hpp.html','../../');
 
 <p>Scope-based action.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;utility&gt;</code><br />
+</div>
 <p><a href="../../de/d6a/ScopeDoer_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">SUNphi::ScopeDoer&lt; FEnd &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html">SUNphi::ScopeChangeVar&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the variable for the object scope.  <a href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a24376a565f23eb8535c38c528ab49996"><td class="memTemplParams" colspan="2"><a class="anchor" id="a24376a565f23eb8535c38c528ab49996"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a24376a565f23eb8535c38c528ab49996"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d6a/ScopeDoer_8hpp.html#a24376a565f23eb8535c38c528ab49996">SUNphi::ScopeChangeVar</a> (T &amp;ref, const T &amp;val) -&gt; ScopeChangeVar&lt; T &gt;</td></tr>
-<tr class="memdesc:a24376a565f23eb8535c38c528ab49996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for <a class="el" href="../../d7/d0a/classSUNphi_1_1ScopeChangeVar.html" title="Change the variable for the object scope. ">ScopeChangeVar</a>. <br /></td></tr>
-<tr class="separator:a24376a565f23eb8535c38c528ab49996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4bd2950223475f28433571b2f78f45"><td class="memTemplParams" colspan="2">template&lt;typename T , typename TV &gt; </td></tr>
+<tr class="memitem:aeb4bd2950223475f28433571b2f78f45"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d6a/ScopeDoer_8hpp.html#aeb4bd2950223475f28433571b2f78f45">SUNphi::getScopeChangeVar</a> (T &amp;ref, const TV &amp;val)</td></tr>
+<tr class="memdesc:aeb4bd2950223475f28433571b2f78f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a variable for the scope, change it back at the end.  <a href="../../de/d6a/ScopeDoer_8hpp.html#aeb4bd2950223475f28433571b2f78f45">More...</a><br /></td></tr>
+<tr class="separator:aeb4bd2950223475f28433571b2f78f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Scope-based action. </p>
 
 <p>Definition in file <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html">ScopeDoer.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="file_aeb4bd2950223475f28433571b2f78f45"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename TV &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto SUNphi::getScopeChangeVar </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>ref</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TV &amp;&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a variable for the scope, change it back at the end. </p>
+<p>Old value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ref</td><td>Reference </td></tr>
+    <tr><td class="paramname">val</td><td>Value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html#l00078">78</a> of file <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html">ScopeDoer.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

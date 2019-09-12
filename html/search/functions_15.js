@@ -7,7 +7,6 @@ var searchData=
   ['_7ememory',['~Memory',['../d9/dc6/classSUNphi_1_1Memory.html#a8a71ababcfb8f1f86cd4be17e38f573e',1,'SUNphi::Memory']]],
   ['_7empi',['~Mpi',['../df/d09/classSUNphi_1_1Mpi.html#a1f231e49a1f69929a9e90fb9b7bab3da',1,'SUNphi::Mpi']]],
   ['_7erelbinder',['~RelBinder',['../d5/d1c/classSUNphi_1_1RelBinder.html#acc575a7af4e8426e0502581cae4caaab',1,'SUNphi::RelBinder']]],
-  ['_7escopechangevar',['~ScopeChangeVar',['../d7/d0a/classSUNphi_1_1ScopeChangeVar.html#a3936e43e92529113ed1415941c37603f',1,'SUNphi::ScopeChangeVar']]],
   ['_7escopedoer',['~ScopeDoer',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a4329f6dfbcd05cf26d4c80634e700cea',1,'SUNphi::ScopeDoer']]],
   ['_7escopeindenter',['~ScopeIndenter',['../d3/d11/classSUNphi_1_1ScopeIndenter.html#ab5ce6af7c29362f8cc5234c8e8aa8980',1,'SUNphi::ScopeIndenter']]],
   ['_7esingleinstance',['~SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html#a817e2b39c6f0d786ac83c41cf021ebbb',1,'SUNphi::SingleInstance']]],

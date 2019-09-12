@@ -109,6 +109,7 @@ $(document).ready(function(){initNavTree('d2/db3/classSUNphi_1_1ScopeDoer.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d6/d3d/classSUNphi_1_1ScopeDoer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -120,6 +121,14 @@ $(document).ready(function(){initNavTree('d2/db3/classSUNphi_1_1ScopeDoer.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aca9e2d436a516f014f3dce2d1bb89dc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca9e2d436a516f014f3dce2d1bb89dc3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#aca9e2d436a516f014f3dce2d1bb89dc3">willUndo</a> () const </td></tr>
+<tr class="memdesc:aca9e2d436a516f014f3dce2d1bb89dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if will undo. <br /></td></tr>
+<tr class="separator:aca9e2d436a516f014f3dce2d1bb89dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0781f8eb5dc0ed8de5a91e1afb1ab6f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0781f8eb5dc0ed8de5a91e1afb1ab6f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#a0781f8eb5dc0ed8de5a91e1afb1ab6f7">ScopeDoer</a> (<a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a> &amp;&amp;oth)</td></tr>
+<tr class="memdesc:a0781f8eb5dc0ed8de5a91e1afb1ab6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. <br /></td></tr>
+<tr class="separator:a0781f8eb5dc0ed8de5a91e1afb1ab6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a715aad964a7a137ce5c41ff582cf81cf"><td class="memTemplParams" colspan="2"><a class="anchor" id="a715aad964a7a137ce5c41ff582cf81cf"></a>
 template&lt;typename FBegin &gt; </td></tr>
 <tr class="memitem:a715aad964a7a137ce5c41ff582cf81cf"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#a715aad964a7a137ce5c41ff582cf81cf">ScopeDoer</a> (FBegin fBegin, FEnd <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#a14eb5135766677534a2a3e578e2e5893">fEnd</a>)</td></tr>
@@ -133,6 +142,13 @@ template&lt;typename FBegin &gt; </td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#a4329f6dfbcd05cf26d4c80634e700cea">~ScopeDoer</a> ()</td></tr>
 <tr class="memdesc:a4329f6dfbcd05cf26d4c80634e700cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy undoing. <br /></td></tr>
 <tr class="separator:a4329f6dfbcd05cf26d4c80634e700cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aaa2881e25512f63c0319d50aa94a3b70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa2881e25512f63c0319d50aa94a3b70"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html#aaa2881e25512f63c0319d50aa94a3b70">ScopeDoer</a> (const <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a> &amp;)=delete</td></tr>
+<tr class="memdesc:aaa2881e25512f63c0319d50aa94a3b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forbids copy constructor. <br /></td></tr>
+<tr class="separator:aaa2881e25512f63c0319d50aa94a3b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -152,7 +168,7 @@ class SUNphi::ScopeDoer&lt; FEnd &gt;</h3>
 <p>Class which does something when created and something else when destroyed</p>
 <p>The action performed at the beginning must return whether the action had an effect or not, such that the undo is issued or not at the destruction. The action performed at the end needs not to return anything (can return whatever). </p>
 
-<p>Definition at line <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html">ScopeDoer.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html">ScopeDoer.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/utility/<a class="el" href="../../de/d6a/ScopeDoer_8hpp_source.html">ScopeDoer.hpp</a></li>
 </ul>
