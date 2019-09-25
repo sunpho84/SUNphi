@@ -26,12 +26,16 @@
 #include <utility/Flags.hpp>
 #include <utility/Position.hpp>
 
-/// Provide the type Coords
-#define PROVIDE_COORDS				\
+/// Provide the type needed to deal with grids
+#define PROVIDE_COORDS_TYPES			\
   /*! Type to hold sizes, coordinate, etc */	\
   typedef std::array<Coord,NDims> Coords;	\
   /*! Type to hold the neighbors */		\
-  typedef std::array<Coord,2*NDims> Neigh
+  typedef std::array<Coord,2*NDims> Neigh;	\
+  /*! Type to hold volume */			\
+  typedef Idx Vol;				\
+  /*! Type to hold sides */			\
+  typedef Coords Sides
 
 /// Flag to enable Grid debug
 #define GRID_DEBUG \
@@ -81,7 +85,7 @@ namespace SUNphi
 		     true>
   {
     
-    PROVIDE_COORDS;
+    PROVIDE_COORDS_TYPES;
     
   private:
     
@@ -203,7 +207,7 @@ namespace SUNphi
 		     false>
   {
     
-    PROVIDE_COORDS;
+    PROVIDE_COORDS_TYPES;
     
   public:
     
@@ -235,7 +239,6 @@ namespace SUNphi
     /// Tag asserting not hashing
     static constexpr char hashingTag[]=
       "Not Hashing";
-    
   };
   
   /////////////////////////////////////////////////////////////////
@@ -264,7 +267,7 @@ namespace SUNphi
 			true>
   {
     
-    PROVIDE_COORDS;
+    PROVIDE_COORDS_TYPES;
     
     /// Direction identifying the face which is shifted
     int _shiftedFace{0};
@@ -354,7 +357,7 @@ namespace SUNphi
 			Idx,
 			false>
   {
-    PROVIDE_COORDS;
+    PROVIDE_COORDS_TYPES;
     
   public:
     
@@ -407,7 +410,7 @@ namespace SUNphi
 			   getFlag<Flags,GridFlag::SHIFTED_BC>>
   {
   public:
-    PROVIDE_COORDS;
+    PROVIDE_COORDS_TYPES;
     
   private:
     /// Side of the grid
@@ -689,7 +692,7 @@ namespace SUNphi
     }
     
     /// Construct from sides
-    Grid(const Coords& sides)
+    Grid(const Coords& sides={})
     {
       setSides(sides);
     }

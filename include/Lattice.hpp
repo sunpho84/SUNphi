@@ -6,5 +6,6 @@
 /// \brief Header file for the inclusion of all Lattice functionalities
 
 #include <lattice/Grid.hpp>
+#include <lattice/Partitioner.hpp>
 
 #endif
