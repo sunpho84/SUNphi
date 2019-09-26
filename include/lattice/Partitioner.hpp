@@ -30,17 +30,27 @@ namespace SUNphi
   {
     PROVIDE_COORDS_TYPES;
     
-    /// Reference to tje actual grid
-    const void* actualGrid;
-    
     /// Volume of the grid, stored as optional value
     ///
     /// Storing as optional allows to check if the value is set or not
     /// in a coincise way
-    std::optional<Vol> volume;
+    std::optional<Vol> mutable volume;
+    
+  public:
+    
+    /// Reference to tje actual grid
+    const void* actualGrid;
+    
+    /// Unset the volume
+    void unSetVol()
+      const
+    {
+      volume.reset();
+    }
     
     /// Set the volume to \c v
-    bool setVol(const Vol& v)
+    bool setVol(const Vol& v=0)
+      const
     {
       if(volumeIsSet() and volume!=v)
 	return
@@ -55,13 +65,16 @@ namespace SUNphi
 	}
     }
     
-    /// Unset the volume
-    void unSetVol()
+    /// Get the volume
+    const Vol& getVol()
+      const
     {
-      volume.reset();
+      return
+	volume.value();
     }
     
-  public:
+    /// Name for debug purpose
+    const char* name;
     
     /// Function to invocate setting the sides of a grid
     const std::function<void(const Sides&)> setSidesOfGrid;
@@ -76,8 +89,10 @@ namespace SUNphi
     
     /// Constructor taking the grid and type-erasing it
     template <typename G>
-    ShadowGrid(G&& actualGrid) :
+    ShadowGrid(G&& actualGrid,
+	       const char* name) :
       actualGrid(&actualGrid),
+      name(name),
       setSidesOfGrid([&actualGrid](const Sides& sides)
 		     {
 		       actualGrid.setSides(sides);
@@ -93,7 +108,7 @@ namespace SUNphi
     
     /// Comparison operator
     bool operator<(const ShadowGrid& oth)
-    const
+      const
     {
       return
   	actualGrid<oth.actualGrid;
@@ -109,17 +124,180 @@ namespace SUNphi
   public:
     
     /// Short alias of the ShadowGrid
-    using Grid=
+    using SGrid=
      ShadowGrid<NDims,Coord,Idx>;
     
+    /// List of relatives
+    std::array<const SGrid*,3> relatives;
+    
+    /// Position of father, child1 and child2 in the list of relatives
+    enum{FATHER,CHILD1,CHILD2,NO_RELATIVE};
+    
     /// Pointer to the grid to be partitioned
-    const Grid* father;
+    const SGrid*& father=
+      relatives[FATHER];
     
     /// Pointer to the dividing grid
-    const Grid* child1;
+    const SGrid*& child1=
+      relatives[CHILD2];
     
     /// Pointer to the divisor grid
-    const Grid* child2;
+    const SGrid*& child2=
+      relatives[CHILD2];
+    
+    /// Returns whether we can deduce something:
+    ///
+    /// - father and child1 is set, so child2 can be deduced
+    /// - father and child2 is set, so child1 can be deduced
+    /// - child1 and child2 is set, so father can be deduced
+    int getDeducible()
+      const
+    {
+      /// Take trace of the last relative not fixed
+      int lastNotFixedRel=
+	NO_RELATIVE;
+      
+      /// Count how many relatives are fixed
+      int nFixed=
+	0;
+      
+      for(int iRel=0;iRel<3;iRel++)
+	if(relatives[iRel]->volumeIsSet())
+	  nFixed++;
+	  else
+	    lastNotFixedRel=
+	      iRel;
+	
+      if(nFixed==2)
+	return
+	  lastNotFixedRel;
+      else
+	return
+	  NO_RELATIVE;
+    }
+    
+    /// Constructor
+    PartitioningRelation(const SGrid* father,
+			 const SGrid* child1,
+			 const SGrid* child2)
+      : relatives{father,child1,child2}
+    {
+      if(&father==&child1)
+	CRASH<<"Father "<<father->name<<" must be different from child1 "<<child1->name;
+      
+      if(&father==&child2)
+	CRASH<<"Father "<<father->name<<" must be different from child2 "<<child2->name;
+      
+      if(&child1==&child2)
+	CRASH<<"Child1 "<<child1->name<<" must be different from child2 "<<child2->name;
+    }
+    
+    /// Comparison operator
+    bool operator<(const PartitioningRelation& oth)
+      const
+    {
+      return
+	relatives<oth.relatives;
+    }
+    
+  };
+  
+  /// A program made of a set of pair of instructions
+  class PartitioningProgram
+  {
+    /// Action to be performed in the list
+    using Action=
+	std::function<bool(void)>;
+    
+    /// Pair of actions to be performed forward or backward
+    using Move=
+	std::pair<Action,Action>;
+    
+    /// List of instrcutions to be executed
+    Vector<Move> instructions;
+    
+    /// Data used for loops
+    Vector<int> data;
+    
+  public:
+    
+    /// Adds an instruction into the program
+    void add(Action&& fw,   ///< Instruction to be executed when advancing
+	     Action&& bw)   ///< Instruction to be exectued when rewinding
+    {
+      instructions.emplace_back(fw,bw);
+    }
+    
+    /// Runs the program
+    void exec()
+    {
+      /// Index of the current instruction
+      int i=
+	0;
+      
+      /// Current direction of motion
+      BACK_FORW dir=
+	FORW;
+      
+      do
+	{
+	  RUNLOG<<"Instruction "<<i;
+	  
+	  SCOPE_INDENT(runLog);
+	  
+	  if(dir==FORW)
+	    {
+	      RUNLOG<<"Moving forward";
+	      
+	      SCOPE_INDENT(runLog);
+	      
+	      if(instructions[i].second())
+		{
+		  RUNLOG<<"Success, moving to next instruction";
+		  
+		  i++;
+		  
+		  if(i==instructions.size())
+		    {
+		      RUNLOG<<"Arrived to the end of the program, rewinding";
+		      
+		      i--;
+		      
+		      dir=
+			BACK;
+		    }
+		}
+	      else
+		{
+		  RUNLOG<<"Failed, reverting move backward";
+		  
+		  dir=
+		    BACK;
+		}
+	    }
+	  else
+	    {
+	      RUNLOG<<"Moving backward";
+	      
+	      SCOPE_INDENT(runLog);
+	      
+	      if(instructions[i].first())
+		{
+		  RUNLOG<<"Success, reverting move forward";
+		  
+		  dir=
+		    FORW;
+		}
+	      else
+		{
+		  RUNLOG<<"Failed, moving to previous instruction";
+		  
+		  i--;
+		}
+	    }
+	}
+      while(i>=0);
+    }
   };
   
   /// Partition a set of grids enforcing to obay to certain rules
@@ -128,672 +306,462 @@ namespace SUNphi
 	    typename Idx=int64_t>                          // Type of index of points
   class Partitioner
   {
+    PROVIDE_COORDS_TYPES;
+    
     /// Short alias for a Partition relation
     using PartRel=
       PartitioningRelation<NDims,Coord,Idx>;
     
     /// Short alias of the ShadowGrid
-    using Grid=
+    using SGrid=
      ShadowGrid<NDims,Coord,Idx>;
     
     /// List of relation to be satisfied between all the grid to be partitioned
     std::set<PartRel> partitionRelations;
     
     /// List of grids to be partitioned
-    std::set<Grid> grids;
+    std::set<SGrid> grids;
+    
+    /// Find the shadow of an actual grid
+    template <typename G>
+    const SGrid* findShadowOfGrid(G&& actualGrid)
+      const
+    {
+      /// Result of research
+      auto res=
+	std::find_if(grids.begin(),grids.end(),[&actualGrid](const SGrid& grid){return grid.actualGrid==&actualGrid;});
+      
+      if(res!=grids.end())
+	return
+	  &*res;
+      else
+	return
+	  nullptr;
+    }
     
   public:
     
+    /// Determines if the volume has an upper bound coming from direct
+    /// fathers or if the volume is set
+    bool volumeIsBound(const SGrid* grid)
+      const
+    {
+      if(grid->volumeIsSet())
+	return
+	  true;
+      
+      for(auto& father : this->getAllFathersOf(grid))
+	if(father->volumeIsSet())
+	  return
+	    true;
+      
+      return
+	false;
+    }
+    
     /// Adds a grid to the list of grids to be partitioned
     template <typename G>
-    const Grid* addGrid(G&& grid)
+    const SGrid* addGrid(G&& grid,
+			const char* name)
     {
       return
-	&*grids.emplace(grid).first;
+	&*grids.emplace(grid,name).first;
     }
-  };
-}
-
-/*
-  const int nDims=
-    4;
-  
-  SimpleGrid<> glb(nDims,"glb");
-  
-  SimpleGrid<> eo(nDims,"eo");
-  
-  SimpleGrid<> glbEo(nDims,"glbEo");
-  
-  SimpleGrid<> proc(nDims,"proc");
-  
-  SimpleGrid<> locEo(nDims,"locEo");
-  
-  SimpleGrid<> doubleSIMD(nDims,"doubleSIMD");
-  
-  SimpleGrid<> doubleVirtEo(nDims,"doubleVirtEo");
-  
-  SimpleGrid<> floatSIMD(nDims,"floatSIMD");
-  
-  SimpleGrid<> floatVirtEo(nDims,"floatVirtEo");
-  
-  if(not glb.setVol(48*48*48*96))
-    CRASH<<"Could not set glb vol";
-  
-  if(not floatSIMD.setVol(16))
-    CRASH<<"Could not set float SIMD";
-  
-  if(not doubleSIMD.setVol(8))
-    CRASH<<"Could not set double SIMD";
-  
-  if(not eo.setVol(2))
-    CRASH<<"Could not set eo";
-  
-  if(not proc.setVol(128))
-    CRASH<<"Could not set proc vol";
-  RUNLOG<<"Proc vol: "<<proc.getVol();
-  
-  Partitioner<> p;
-  
-  p.add(glb,eo,glbEo).
-    add(glbEo,proc,locEo).
-    add(locEo,floatSIMD,floatVirtEo).
-    add(locEo,doubleSIMD,doubleVirtEo);
-  
-  p.printDot();
-  
-  for(auto& it : p.getAllNodesWithUnfixedVol())
-    RUNLOG<<it->grid->name<<", volume is bound: "<<p.volumeIsBound(it);
-  
-  auto c=
-    p.compile();
-  
-  int i=
-    0;
-  
-  BACK_FORW dir=
-    FORW;
-  
-  do
+    
+    /// Adds a partition relation
+    template <typename GF,
+	      typename GC1,
+	      typename GC2>
+    const PartRel* addPartitionRelation(GF&& father,
+					GC1&& child1,
+					GC2&& child2)
     {
-      RUNLOG<<"Instruction "<<i;
+      /// Find father
+      const SGrid* sFather=
+	findShadowOfGrid(father);
       
+      /// Find child1
+      const SGrid* sChild1=
+	findShadowOfGrid(child1);
+      
+      /// Find child2
+      const SGrid* sChild2=
+	findShadowOfGrid(child2);
+      
+      if(sFather==nullptr)
+	CRASH<<"Father not found";
+      
+      if(sChild1==nullptr)
+	CRASH<<"Child1 not found";
+      
+      if(sChild2==nullptr)
+	CRASH<<"Child2 not found";
+      
+      return
+	&*partitionRelations.emplace(sFather,sChild1,sChild2).first;
+    }
+    
+    /// Gets the list of fathers to be checked
+    auto getFathersToBeChecked(const SGrid* grid)
+      const
+    {
+      /// Returned list
+      Vector<const SGrid*> fathersToBeChecked;
+      
+      for(auto& father : this->getAllFathersOf(grid))
+	if(father->volumeIsSet())
+	    fathersToBeChecked.push_back(father);
+      
+      return
+	fathersToBeChecked;
+    }
+    
+    /// Gets the list of children to be checked
+    auto getChildrenToBeChecked(const SGrid* grid)
+      const
+    {
+      /// Returned list
+      Vector<const SGrid*> childrenToBeChecked;
+      
+      for(auto& childPair : this->getAllChildrenOf(grid))
+	for(auto& child : {childPair.first,childPair.second})
+	  if(child->volumeIsSet())
+	    {
+	      SCOPE_INDENT(runLog);
+	      
+	      RUNLOG<<child->name<<" volume is set, will need to be checked";
+	      
+	      childrenToBeChecked.push_back(child);
+	    }
+      
+      return
+	childrenToBeChecked;
+    }
+    
+    /// Returns a function which check the validity of a grid and move to next instruction
+    auto getGridChecker(const SGrid* grid)
+      const
+    {
       SCOPE_INDENT(runLog);
       
-      if(dir==FORW)
-	{
-	  RUNLOG<<"Moving forward";
-	  
-	  SCOPE_INDENT(runLog);
-	  
-	  if(c[i].second())
-	    {
-	      RUNLOG<<"Success, moving to next instruction";
-	      
-	      i++;
-	    }
-	  else
-	    {
-	      RUNLOG<<"Failed, reverting move backward";
-	      
-	      dir=
-		BACK;
-	    }
-	}
-      else
-	{
-	  RUNLOG<<"Moving backward";
-	  
-	  SCOPE_INDENT(runLog);
-	      
-	  if(c[i].first())
-	    {
-	      RUNLOG<<"Success, reverting move forward";
-	      
-	      dir=
-		FORW;
-	    }
-	  else
-	    {
-	      RUNLOG<<"Failed, moving to previous instruction";
-	      
-	      i--;
-	    }
-	}
-    }
-  while(i>=0 and i<c.size());
-} 
-
-template <typename I=int64_t>
-class SimpleGrid
-{
-public:
-  /// Volume of the grid
-  I vol;
-  
-  /// Sides of the grid
-  Vector<I> sides;
-  
-  /// Name of the partitioning
-  const std::string name;
-  
-  /// Returns the volume
-  const I& getVol()
-    const
-  {
-    return
-      vol;
-  }
-  
-  /// Determines if the volume is set
-  bool volumeIsSet()
-    const
-  {
-    return
-      vol!=0;
-  }
-  
-  /// Constuct a simple grid
-  SimpleGrid(const int nDim,             ///< Number of dimension
-	     const std::string& name) :  ///< Name of the grid
-        vol(0),
-	sides(nDim,0),
-	name(name)
-	
-  {
-  }
-  
-};
-
-
-
-  auto gridsOfNodes(const Vector<const Node*>& listOfNodes)
-    const
-  {
-    Vector<SimpleGrid<>*> listOfGrids(listOfNodes.size());
-    
-    std::transform(listOfNodes.begin(),listOfNodes.end(),listOfGrids.begin(),[](const Node* node){return node->grid;});
-    
-    return
-      listOfGrids;
-  }
-  
-  /////////////////////////////////////////////////////////////////
-  
-  auto getChildrenToBeChecked(const Node* node)
-    const
-  {
-    Vector<const Node*> childrenToBeChecked;
-    
-    for(auto& childPair : this->getAllChildrenOf(node))
-      for(auto& child : {childPair.first,childPair.second})
-	if(child->grid->volumeIsSet())
-	  childrenToBeChecked.push_back(child);
-    
-    return
-      childrenToBeChecked;
-  }
-  
-  auto getNodeChecker(const Node* node)
-    const
-  {
-    return
-      [grid=node->grid,
-       fathersToBeChecked=gridsOfNodes(getFathersToBeChecked(node)),
-       childrenToBeChecked=gridsOfNodes(getChildrenToBeChecked(node))]()
-      {
-	const I& vol=
-	  grid->getVol();
-	
-	for(auto& father : fathersToBeChecked)
-	  if(father->getVol()%vol!=0)
-	    return
-	      false;
-	
-	for(auto& child : childrenToBeChecked)
-	  if(vol%child->getVol()!=0)
-	    return
-	      false;
-	
-	return
-	  true;
-      };
-  }
-  
-  auto getVolSetter(const Node* node,
-		    const I& vol)
-  {
-    return
-      [grid=node->grid,
-       vol,
-       checker=getNodeChecker(node)]()
-      {
-	RUNLOG<<"Setting volume of "<<grid->name<<" to "<<vol;
-	grid->setVol(vol);
-	
-	return
-	  checker();
-      };
-  }
-  
-  auto getFatherVolDeducer(const Node* node,
-			   const Node* child1,
-			   const Node* child2)
-  {
-    return
-      [grid=node->grid,
-       child1grid=child1->grid,
-       child2grid=child2->grid,
-       checker=getNodeChecker(node)]()
-      {
-	const I vol=
-	  child1grid->getVol()*child2grid->getVol();
-	
-	RUNLOG<<"Setting volume of father "<<grid->name<<" to "<<vol<<" deduced by its children "<<child1grid->name<<" and "<<child2grid->name;
-	grid->setVol(vol);
-	
-	return
-	  checker();
-      };
-  }
-  
-  auto getChildVolDeducer(const Node* node,
-			   const Node* father,
-			   const Node* sister)
-  {
-    return
-      [grid=node->grid,
-       fatherGrid=father->grid,
-       sisterGrid=sister->grid,
-       checker=getNodeChecker(node)]()
-      {
-	const I vol=
-	  fatherGrid->getVol()/sisterGrid->getVol();
-	
-	RUNLOG<<"Setting volume of children "<<grid->name<<" to "<<vol<<" deduced by its father "<<fatherGrid->name<<" and "<<sisterGrid->name;
-	grid->setVol(vol);
-	
-	return
-	  checker();
-      };
-  }
-
-  //     // 	{
-  //     // 	const I& childVol=
-  //     // 	  child->getVol();
-	
-  //     // 	if(childVol and v%childVol!=0)
-  //     // 	  return
-  //     // 	    false;
-  //     // }
-    
-    
-  //   bool wentWell=
-  //     true;
-    
-  //   auto fatherSister=
-  //     fatherSisters.begin();
-    
-  //   while(wentWell and fatherSister!=fatherSisters.end())
-  //     {
-  // 	PartitioningLevel& father=
-  // 	  *fatherSister->first;
-	
-  // 	PartitioningLevel& sister=
-  // 	  *fatherSister->second;
-	
-  // 	if(father.getVol())
-  // 	  {
-  // 	    RUNLOG<<"Father "<<father.name<<" has already set volume";
-  // 	    if(not sister.getVol())
-  // 	      {
-  // 		RUNLOG<<"Sister "<<sister.name<<" has no set volume";
-		
-  // 		SCOPE_INDENT(runLog);
-  // 		wentWell&=
-  // 		  sister.setVol(father.getVol()/v);
-  // 	      }
-  // 	    else
-  // 	      RUNLOG<<"Also sister "<<sister.name<<" had set volume";
-  // 	  }
-  // 	else
-  // 	  {
-  // 	    RUNLOG<<"Father "<<father.name<<" has no set volume";
-  // 	    if(sister.getVol())
-  // 	      {
-  // 		RUNLOG<<"Sister "<<sister.name<<" had it, computing father "<<father.name<<" volume";
-		
-  // 		SCOPE_INDENT(runLog);
-  // 		wentWell&=
-  // 		  father.setVol(v*sister.getVol());
-  // 	      }
-  // 	    else
-  // 	      RUNLOG<<"Neither sister "<<sister.name<<" had set volume, cannot fix anything";
-  // 	  }
-	
-  // 	fatherSister++;
-  //     }
-    
-  //   if(fatherSisters.size()==0)
-  //     RUNLOG<<grid.name<<" has no father";
-    
-  //   if(auto childPair=children.begin();wentWell)
-  //     while(wentWell and childPair!=children.end())
-  // 	{
-  // 	  auto& firstChild=
-  // 	    *(childPair->first);
-	  
-  // 	  auto& secondChild=
-  // 	    *(childPair->second);
-	  
-  // 	  const I firstVol=
-  // 	    firstChild.getVol();
-	  
-  // 	  const I secondVol=
-  // 	    secondChild.getVol();
-	  
-  // 	  if(firstVol and not secondVol)
-  // 	    {
-  // 	      RUNLOG<<"Second child "<<secondChild.name<<" has no set volume";
-	      
-  // 	      SCOPE_INDENT(runLog);
-	      
-  // 	      wentWell&=
-  // 		secondChild.setVol(v/firstVol);
-  // 	    }
-	  
-  // 	  if(secondVol and not firstVol)
-  // 	    {
-  // 	      RUNLOG<<"First child "<<firstChild.name<<" has no set volume";
-	      
-  // 	      SCOPE_INDENT(runLog);
-	      
-  // 	      wentWell&=
-  // 		childPair->first->setVol(v/secondVol);
-  // 	    }
-	  
-  // 	  childPair++;
-  // 	}
-    
-  //   if(wentWell)
-  //     RUNLOG<<"Volume of "<<grid.name<<" set to "<<v;
-  //   else
-  //     {
-  // 	RUNLOG<<"Could not set volume of "<<grid.name<<" to "<<v;
-  // 	grid.vol=
-  // 	  0;
-  //     }
-    
-  //   return
-  //     wentWell;
-  // }
-  
-  // auto fixedVolSetter(const Node* node,
-  // 		      const I& vol)
-  // {
-  //   return
-  //     [this,node,&vol]()
-  //     {
-  // 	if(not volSetter(node,vol)())
-  // 	  CRASH<<"Cannot fix volume of grid "<<node->name();
-  // 	else
-  // 	  RUNLOG<<"Fixed volume of grid "<<node->name()<<" to"<<vol;
-	
-  // 	return
-  // 	  true;
-  //     };
-  // }
-  
-  auto getVolUnsetter(const Node* node)
-  {
-    return
-       [node]()
-       {
-	 node->grid->unSetVol();
-	 
-	 return
-	   false;
-       };
-  }
-  
-public:
-  
-  /// Determines if the volume has an upper bound coming from direct
-  /// fathers or if the volume is set
-  bool volumeIsBound(const Node* node)
-    const
-  {
-    if(node->grid->volumeIsSet())
+      RUNLOG<<"Creating the checker for "<<grid->name;
+      
       return
-	true;
+	[grid,
+	 fathersToBeChecked=getFathersToBeChecked(grid),
+	 childrenToBeChecked=getChildrenToBeChecked(grid)]()
+	{
+	  RUNLOG<<"Checking grid "<<grid->name;
+	  
+	  /// Current grid volume
+	  const Vol& vol=
+	    grid->getVol();
+	  
+	  /// Keep track if constraints are satisfied
+	  bool isOk=
+	    true;
+	  
+	  /// Looping on fathers
+	  auto father=
+	    fathersToBeChecked.begin();
+	  
+	  while(isOk and father!=fathersToBeChecked.end())
+	    {
+	      /// Volume of father
+	      const auto fatherVol=
+		(*father)->getVol();
+	      
+	      isOk&=
+		(fatherVol%vol==0);
+	      
+	      if(not isOk)
+		RUNLOG<<"Father "<<(*father)->name<<" has volume "<<fatherVol<<" not divisible by his child "<<grid->name<<" "<<vol;
+	      
+	      father++;
+	    }
+	  
+	  /// Looping on children
+	  auto child=
+	    childrenToBeChecked.begin();
+	  
+	  while(isOk and child!=childrenToBeChecked.end())
+	    {
+	      /// Volume of child
+	      const auto childVol=
+		(*child)->getVol();
+	      
+	      isOk&=
+		(vol%childVol==0);
+	      
+	      if(not isOk)
+		RUNLOG<<"Child "<<(*child)->name<<" has volume "<<vol<<" not dividing his father "<<grid->name<<" "<<vol;
+	      
+	      child++;
+	    }
+	  
+	  return
+	    isOk;
+	};
+    }
     
-    for(auto& father : this->getAllFathersOf(node))
-      if(father->grid->volumeIsSet())
-	return
-	  true;
-    
-    return
-      false;
-  }
-  
-  Partitioner& add(SimpleGrid<I>& father,
-		   SimpleGrid<I>& child1,
-		   SimpleGrid<I>& child2)
-  {
-    if(&father==&child1)
-      CRASH<<"Father "<<father.name<<" must be different from child1 "<<child1.name;
-    
-    if(&father==&child2)
-      CRASH<<"Father "<<father.name<<" must be different from child2 "<<child2.name;
-    
-    if(&child1==&child2)
-      CRASH<<"Child1 "<<child1.name<<" must be different from child2 "<<child2.name;
-    
-    connections.insert({addNode(father),addNode(child1),addNode(child2)});
-    
-    return
-      *this;
-  }
-  
-  void printDot()
-    const
-  {
-    
-    std::map<const Node*,int> iChild;
-    
-    for(auto& g : connections)
-      {
-	int& i=
-	  iChild[g[0]];
+    // /// Returns a function which tries to set the volume
+    // template <typename V>
+    // auto getVolSetter(const SGrid* grid,
+    // 		      const V& vol)
+    // {
+    //   return
+    //   [grid,
+    //    vol,
+    //    checker=getGridChecker(grid)]()
+    //   {
+    // 	RUNLOG<<"Setting volume of "<<grid->name<<" to "<<vol;
+    // 	grid->setVol(vol);
 	
-	runLog()<<g[0]->name()<<" -> "<<g[0]->name()<<i;
+    // 	return
+    // 	  checker();
+    //   };
+    // }
+    
+    /// Returns a function which unset the volume
+    auto getVolUnsetter(const SGrid* grid)
+    {
+      return
+	[grid]()
+	{
+	  grid->unSetVol();
+	};
+    }
+    
+    /// Returns a function which tries to set the volume deducing it from children
+    template <typename C,
+	      typename F>
+    auto getFatherVolDeducer(const SGrid* grid,
+			     const SGrid* child1,
+			     const SGrid* child2,
+			     C&& checker,
+			     F&& nextInstruction)
+    {
+      return
+	[grid,
+	 child1,
+	 child2,
+	 checker,
+	 nextInstruction]()
+	{
+	  /// Deduced volume
+	  const auto vol=
+	    child1->getVol()*child2->getVol();
+	  
+	  RUNLOG<<"Setting volume of father "<<grid->name<<" to "<<vol<<" deduced by its children "<<child1->name<<" and "<<child2->name;
+	  grid->setVol(vol);
+	  
+	  if(checker())
+	    nextInstruction();
+	  
+	  grid->unSetVol();
+	};
+    }
+    
+    /// Returns a function which tries to set the volume deducing it from father and sister
+    template <typename C,
+	      typename F>
+    auto getChildVolDeducer(const SGrid* grid,
+			    const SGrid* father,
+			    const SGrid* sister,
+			    C&& checker,
+			    F&& nextInstruction)
+    {
+      return
+	[grid,
+	 father,
+	 sister,
+	 checker,
+	 nextInstruction]()
+	{
+	  /// Deduced volume
+	  const auto vol=
+	    father->getVol()/sister->getVol();
+	  
+	  RUNLOG<<"Setting volume of children "<<grid->name<<" to "<<vol<<" deduced by its father "<<father->name<<" and "<<sister->name;
+	  grid->setVol(vol);
+	  
+	  if(checker())
+	   nextInstruction();
+	  
+	  grid->unSetVol();
+	};
+    }
+    
+    /// Returns a list of all enforsable relations
+    auto listAllEnforsableRelations()
+      const
+    {
+      Vector<std::pair<const PartRel*,int>> list;
+      
+      for(auto& p : partitionRelations)
+	{
+	  const int iDeducible=
+	    p.getDeducible();
+	  
+	  if(iDeducible!=PartRel::NO_RELATIVE)
+	    list.emplace_back(&p,iDeducible);
+	}
+      
+      return
+	list;
+    }
+    
+    /// Gets all fathers of a given grid
+    Vector<const SGrid*> getAllFathersOf(const SGrid* grid)
+      const
+    {
+      /// Returned list
+      Vector<const SGrid*> res;
+      
+      for(auto& p: partitionRelations)
 	for(int j=1;j<=2;j++)
-	  runLog()<<g[0]->name()<<i<<" -> "<<g[j]->name();
+	  if(p.relatives[j]==grid)
+	    res.push_back(p.relatives[PartRel::FATHER]);
+      
+      return
+	res;
+    }
+    
+    /// Gets all children of a given grid
+    Vector<std::pair<const SGrid*,const SGrid*>> getAllChildrenOf(const SGrid* grid)
+      const
+    {
+      /// Result
+      Vector<std::pair<const SGrid*,const SGrid*>> res;
+      
+      for(auto& p : partitionRelations)
+	if(p.relatives[PartRel::FATHER]==grid)
+	  res.push_back({p.relatives[PartRel::CHILD1],p.relatives[PartRel::CHILD2]});
+      
+      return
+	res;
+    }
+    
+    /// List all grids of the partitioning with fixed or unfixed volume, according to the parameter
+    Vector<const SGrid*> getAllGridsWithFixedOrUnfixedVol(const bool f)
+      const
+    {
+      /// List to be returned
+      Vector<const SGrid*> list;
+      
+      for(auto& grid : grids)
+	if(grid.volumeIsSet()==f)
+	  list.push_back(&grid);
+      
+      return
+	list;
+    }
+    
+    /// List all grids of the partitioning with fixed volume
+    Vector<const SGrid*> getAllGridsWithFixedVol()
+      const
+    {
+      return
+	getAllGridsWithFixedOrUnfixedVol(true);
+    }
+    
+    /// List all grids of the partitioning with unfixed volume
+    Vector<const SGrid*> getAllGridsWithUnfixedVol()
+      const
+    {
+      return
+	getAllGridsWithFixedOrUnfixedVol(false);
+    }
+    
+    /// Print the partition relation in a Dot format
+    void printDot()
+      const
+    {
+      /// Labels of all partitions
+      std::map<const SGrid*,int> iChild;
+      
+      for(auto& g : partitionRelations)
+	{
+	  /// Label of the father node
+	  int& i=
+	    iChild[g.father];
+	  
+	  RUNLOG<<g.father->name()<<" -> "<<g.father->name()<<i;
+	  
+	  for(auto& child : {g.child1,g.child2})
+	    RUNLOG<<g.father->name()<<i<<" -> "<<child->name();
 	
 	i++;
       }
-  }
-  
-  Vector<const Node*> getAllFathersOf(const Node* node)
-    const
-  {
-    Vector<const Node*> res;
+    }
     
-    for(auto& c: connections)
-      for(int j=1;j<=2;j++)
-	if(c[j]==node)
-	  res.push_back(c[0]);
+    using Instruction=
+       std::function<void(void)>;
     
-    return
-      res;
-  }
-  
-  auto listAllEnforsableConnections()
-    const
-  {
-    Vector<std::pair<const Connection*,int>> list;
-    
-    for(auto& c : connections)
-      {
-	int lastNotFixed=
-	  0;
-	
-	int nFixed=
-	  0;
-	
-	for(int i=0;i<3;i++)
-	  if(c[i]->grid->volumeIsSet())
-	    nFixed++;
+    /// Returns the compiled partitioner
+    Instruction compile(const Instruction& fun,
+			Vector<ScopeDoer<Instruction>>& cleanup)
+    {
+      if(getAllGridsWithUnfixedVol().size()==0)
+	return
+	  fun;
+      
+      /// List of enforcible relations
+      const auto enforcibleRelations=
+	listAllEnforsableRelations();
+      
+      RUNLOG<<"Number of enforcible relations: "<<enforcibleRelations.size();
+      
+      if(enforcibleRelations.size())
+	{
+	  /// Enforcible relation and index of relative to enforce
+	  auto& rw=
+	    enforcibleRelations.front();
+	  
+	  /// Relation to be enforced
+	  auto& r=
+	    rw.first->relatives;
+	  
+	  /// Index of relative to enforce
+	  const int w=
+	    rw.second;
+	  
+	  RUNLOG<<"Could enforce connection between "<<r[0]->name<<" and its children "<<r[1]->name<<" and "<<r[2]->name<<" to element "<<w;
+	  
+	  r[w]->setVol();
+	  cleanup.emplace_back(getVolUnsetter(r[w]));
+	  
+	  auto checker=
+	    getGridChecker(r[w]);
+	  
+	  /// Next instruction
+	  auto nextInstruction=
+	    compile(fun,cleanup);
+	  
+	  if(w==0)
+	    return
+	      getFatherVolDeducer(r[0],r[1],r[2],checker,nextInstruction);
 	  else
-	    lastNotFixed=
-	      i;
-	
-	if(nFixed==2)
-	  list.emplace_back(&c,lastNotFixed);
-      }
+	    return
+	      getChildVolDeducer(r[w],r[0],r[3-w],checker,nextInstruction);
+	}
+      
+      return
+	[]()
+	{
+	  CRASH<<"Trying to execute an ill-formed program";
+	};
+    }
     
-    return
-      list;
-  }
-  
-  Vector<std::pair<const Node*,const Node*>> getAllChildrenOf(const Node* node)
-    const
-  {
-    Vector<std::pair<const Node*,const Node*>> res;
+    std::function<void(void)> compile(const std::function<void(void)>& fun)
+    {
+      Vector<ScopeDoer<Instruction>> cleanup;
+      
+      return
+	compile(fun,cleanup);
+    }
     
-    for(auto& c: connections)
-      if(c[0]==node)
-	res.push_back({c[1],c[2]});
-    
-    return
-      res;
-  }
-  
-  /// List all elements of the partitioning with unfixed nodes
-  template <bool F>
-  Vector<const Node*> getAllNodesWithFixedOrUnfixedVol()
-    const
-  {
-    /// List to be returned
-    Vector<const Node*> list;
-    
-    for(auto& node : nodes)
-      if(node.grid->volumeIsSet()==F)
-	list.push_back(&node);
-    
-    return
-      list;
-  }
-  
-  Vector<const Node*> getAllNodesWithFixedVol()
-    const
-  {
-    return
-      getAllNodesWithFixedOrUnfixedVol<true>();
-  }
-  
-  Vector<const Node*> getAllNodesWithUnfixedVol()
-    const
-  {
-    return
-      getAllNodesWithFixedOrUnfixedVol<false>();
-  }
-  
-  using Action=
-	std::function<bool(void)>;
-  
-  using Move=
-	std::pair<Action,Action>;
-  
-  Vector<Move> compile()
-  {
-    constexpr I MARK_FIXED=
-      -10;
-    
-    Vector<Move> res;
-    
-    int nNodesToBeExplored=
-      nodes.size();
-    
-    for(auto& node : getAllNodesWithFixedVol())
-      {
-	res.push_back({getVolUnsetter(node),getVolSetter(node,node->grid->getVol())});
-	
-	nNodesToBeExplored--;
-      }
-    
-    Vector<decltype(getScopeChangeVar(*(I*){nullptr},I{}))> listOfSetVolume;
-    
-    bool somethingDone;
-    
-    do
-      {
-	somethingDone=
-	  false;
-	
-	const auto enforcibleConnections=
-	  listAllEnforsableConnections();
-	
-	if(enforcibleConnections.size())
-	  {
-	    somethingDone=
-	      true;
-	    
-	    auto& cw=
-	      enforcibleConnections.front();
-	    
-	    auto& c=
-	      *cw.first;
-	    
-	    const int w=
-	      cw.second;
-	    
-	    RUNLOG<<"Could enforce connection between "<<c[0]->name()<<" and its children "<<c[1]->name()<<" and "<<c[2]->name()<<" to element "<<w;
-	    
-	    if(w==0)
-	      res.push_back({getVolUnsetter(c[0]),getFatherVolDeducer(c[0],c[1],c[2])});
-	    else
-	      res.push_back({getVolUnsetter(c[w]),getChildVolDeducer(c[w],c[0],c[3-w])});
-	    
-	    listOfSetVolume.emplace_back(getScopeChangeVar(c[w]->grid->vol,MARK_FIXED));
-	  }
-      }
-    while(somethingDone);
-    
-    // while(nNodesToBeExplored)
-    //   {
-    // 	for(auto& node : getAllNodesWithUnfixedVol())
-    // 	  if()
-    //   }
-    
-    return
-      res;
-  }
-  
-  // /// Visit all nodes executing the passed function on current node
-  // /// and appending to the list of visited
-  // ///
-  // /// Internal implementation
-  // template <typename F>
-  // void visitAll(Vector<const Node*>& visited,   ///< List of visited nodes
-  // 		const F& fun)                   ///< Function to be run on this node
-  // {
-  //   visited.push_back(this);
-    
-  //   fun(this);
-    
-  //   for(auto& fatherSister : fatherSisters)
-  //     if(auto& father=fatherSister.first;not visited.isContained(father))
-  // 	father->visitAll(visited,fun);
-    
-  //   for(auto& childPair : children)
-  //     for(auto& child : {childPair.first,childPair.second})
-  // 	if(not visited.isContained(child))
-  // 	  child->visitAll(visited,fun);
-  // }
-  
-};
-
- 
-*/
+  };
+}
 
 #endif

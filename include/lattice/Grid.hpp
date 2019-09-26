@@ -410,6 +410,7 @@ namespace SUNphi
 			   getFlag<Flags,GridFlag::SHIFTED_BC>>
   {
   public:
+    
     PROVIDE_COORDS_TYPES;
     
   private:
