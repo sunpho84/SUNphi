@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['actualgrid',['actualGrid',['../d4/d48/classSUNphi_1_1ShadowGrid.html#a5e0172bdaff102a9ef72019bf2719620',1,'SUNphi::ShadowGrid']]],
   ['adapter',['adapter',['../d5/d1c/classSUNphi_1_1RelBinder.html#a829319995809aa5456718e40579d0271',1,'SUNphi::RelBinder']]],
   ['addflags',['addFlags',['../d0/d45/Flags_8hpp.html#ac498ba60d979d9b5c832e56ac5345396',1,'SUNphi']]],
   ['address',['address',['../df/d4a/classSUNphi_1_1BackTraceSymbol.html#a5767ecc26193a2aa29b04a6aab499de5',1,'SUNphi::BackTraceSymbol']]],

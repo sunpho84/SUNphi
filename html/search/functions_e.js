@@ -1,6 +1,7 @@
 var searchData=
 [
   ['partitioninglevel',['PartitioningLevel',['../d5/db6/classPartitioningLevel.html#a8543bc06aada7a6794ebdfde73cbaa6e',1,'PartitioningLevel']]],
+  ['partitioningrelation',['PartitioningRelation',['../d4/df0/classSUNphi_1_1PartitioningRelation.html#a1a27e6882c24ae8a558f043fa96fc43b',1,'SUNphi::PartitioningRelation']]],
   ['periodcertification',['periodCertification',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html#ad9039de99d24298f49b9b96c6386d2e9',1,'SUNphi::SFMTRandomGen']]],
   ['pointofcoords',['pointOfCoords',['../dd/dca/classSUNphi_1_1Grid.html#a953ddc2566fe66389163e819959f0337',1,'SUNphi::Grid']]],
   ['popfromcache',['popFromCache',['../d9/dc6/classSUNphi_1_1Memory.html#ad865fefe994e70645ced16e30fa073de',1,'SUNphi::Memory']]],
@@ -9,6 +10,7 @@ var searchData=
   ['printbailout',['printBailout',['../df/df6/classSUNphi_1_1Aliver.html#ad4469a6555e11dfb2a8031a9698cff4e',1,'SUNphi::Aliver']]],
   ['printbanner',['printBanner',['../df/df6/classSUNphi_1_1Aliver.html#afb0918d628d2032e1481c711d428c733',1,'SUNphi::Aliver']]],
   ['printconfigurepars',['printConfigurePars',['../df/df6/classSUNphi_1_1Aliver.html#a3269b85b8523ff32a7db149eec2d9823',1,'SUNphi::Aliver']]],
+  ['printdot',['printDot',['../d6/dc9/classSUNphi_1_1Partitioner.html#a4bf0145ae460a2cde4a6047fac697717',1,'SUNphi::Partitioner']]],
   ['printgitinfo',['printGitInfo',['../df/df6/classSUNphi_1_1Aliver.html#aef591141a8eadf136ec6ad3c59c3b42c',1,'SUNphi::Aliver']]],
   ['printstatistics',['printStatistics',['../d9/dc6/classSUNphi_1_1Memory.html#aa44be6f321702697136f462bb9579f3e',1,'SUNphi::Memory']]],
   ['printstdliberr',['printStdLibErr',['../db/de9/classSUNphi_1_1Crasher.html#a350b87adaed580721a6a9b5adc2ceaa2',1,'SUNphi::Crasher']]],

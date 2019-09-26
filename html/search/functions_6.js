@@ -16,6 +16,7 @@ var searchData=
   ['findlast',['findLast',['../df/dc0/classSUNphi_1_1Vector.html#afc39d6a0678bbc8ccde52095174aa100',1,'SUNphi::Vector']]],
   ['findlastdifffrom',['findLastDiffFrom',['../df/dc0/classSUNphi_1_1Vector.html#a4a7fb34c1ea95ed1e96ae56113f91df3',1,'SUNphi::Vector']]],
   ['findlastwherenot',['findLastWhereNot',['../df/dc0/classSUNphi_1_1Vector.html#a8711a99b4b93c0950ddd941c14642061',1,'SUNphi::Vector']]],
+  ['findshadowofgrid',['findShadowOfGrid',['../d6/dc9/classSUNphi_1_1Partitioner.html#a5a2a3df914ba0f7a5ab1daf7dcaf158b',1,'SUNphi::Partitioner']]],
   ['foralldims',['forAllDims',['../dd/dca/classSUNphi_1_1Grid.html#a73a43907a0c67cd7d40b28c6fddb9d9c',1,'SUNphi::Grid']]],
   ['foralloridirs',['forAllOriDirs',['../dd/dca/classSUNphi_1_1Grid.html#ae7050a44a46b68c14f58f03c7ea454e5',1,'SUNphi::Grid']]],
   ['forallpoints',['forAllPoints',['../dd/dca/classSUNphi_1_1Grid.html#af217e84bd0b605e882ed57728ecaaa90',1,'SUNphi::Grid']]],

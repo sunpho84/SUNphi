@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['partrel',['PartRel',['../d6/dc9/classSUNphi_1_1Partitioner.html#a031f9315bf5944d4e9e3ecaabd350b97',1,'SUNphi::Partitioner']]],
   ['plpp',['PLPP',['../d5/db6/classPartitioningLevel.html#a65dc325f21eb2217224cf2b1bfa88da1',1,'PartitioningLevel']]],
   ['pos',['Pos',['../d4/d3d/classSUNphi_1_1__FilterVariadicClass_3_01F_00_01V_3_01List_8_8_8_01_4_01_4.html#a49a98bc1860a18b7051d9c1fe13d1ce0',1,'SUNphi::_FilterVariadicClass&lt; F, V&lt; List... &gt; &gt;']]],
   ['posofref1prestcsinrestk',['PosOfRef1PresTcsInResTk',['../d4/d4b/classSUNphi_1_1Assigner.html#ab5e251b5769fdf1b63c86800fb1d4a7a',1,'SUNphi::Assigner']]],

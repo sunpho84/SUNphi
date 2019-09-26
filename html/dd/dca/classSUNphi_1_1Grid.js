@@ -2,7 +2,9 @@ var classSUNphi_1_1Grid =
 [
     [ "Coords", "dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af", null ],
     [ "Neigh", "dd/dca/classSUNphi_1_1Grid.html#a072a659b92ccf74423fc61f069002a6c", null ],
-    [ "Grid", "dd/dca/classSUNphi_1_1Grid.html#a7857b9ab1bb20d0254632433eefb1a79", null ],
+    [ "Sides", "dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5", null ],
+    [ "Vol", "dd/dca/classSUNphi_1_1Grid.html#af9153d76d4f9233da3ee1d7f4a35b729", null ],
+    [ "Grid", "dd/dca/classSUNphi_1_1Grid.html#a6e71ed4fb4add7a0627448623aeb4df3", null ],
     [ "assertCoordsAreInRange", "dd/dca/classSUNphi_1_1Grid.html#a160a49645ad23cb4e66912a145008f06", null ],
     [ "assertOriDirIsInRange", "dd/dca/classSUNphi_1_1Grid.html#ac6f7b944aa208b1578afec3785ccfa99", null ],
     [ "assertPointIsInRange", "dd/dca/classSUNphi_1_1Grid.html#a8e0b1efb63f5ffc132b423df8a84be2a", null ],

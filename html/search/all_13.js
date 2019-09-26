@@ -12,6 +12,7 @@ var searchData=
   ['universalreferences_2ehpp',['UniversalReferences.hpp',['../d2/d7d/UniversalReferences_8hpp.html',1,'']]],
   ['unlock',['unlock',['../d6/d3d/structSUNphi_1_1Mutex.html#a4b94701f3873a79416fb695caec1cec8',1,'SUNphi::Mutex::unlock()'],['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#aa4984ac8e437a104c1c681b55f0caac3',1,'SUNphi::Sitmo::Rng::unLock()']]],
   ['unqualified',['Unqualified',['../d0/d81/TypeTraits_8hpp.html#a265d16e4d44bac1a54f236b14192f3f0',1,'SUNphi']]],
+  ['unsetvol',['unSetVol',['../d4/d48/classSUNphi_1_1ShadowGrid.html#a2dd8ef9eef8dbb61e451f0abef72bb86',1,'SUNphi::ShadowGrid']]],
   ['unsignedof',['UnsignedOf',['../d0/d81/TypeTraits_8hpp.html#acbe553b607c13ed330f2d218e221ab35',1,'SUNphi']]],
   ['unsignedsize',['UnsignedSize',['../df/dc0/classSUNphi_1_1Vector.html#a491d67a0f82a935991d7251c10cdf02d',1,'SUNphi::Vector']]],
   ['unused_2ehpp',['Unused.hpp',['../db/dde/Unused_8hpp.html',1,'']]],

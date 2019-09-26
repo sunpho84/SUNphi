@@ -1,6 +1,7 @@
 var searchData=
 [
   ['fakelogger',['fakeLogger',['../d3/d78/classSUNphi_1_1Logger.html#af5f06caba063ed8f40231606b7265c92',1,'SUNphi::Logger']]],
+  ['father',['father',['../d4/df0/classSUNphi_1_1PartitioningRelation.html#a2709025089901e79dd2b6aa12f77959f',1,'SUNphi::PartitioningRelation']]],
   ['fathersisters',['fatherSisters',['../d5/db6/classPartitioningLevel.html#a443d518a50eca9db5fac1c0c0b5426c7',1,'PartitioningLevel']]],
   ['fend',['fEnd',['../d2/db3/classSUNphi_1_1ScopeDoer.html#a14eb5135766677534a2a3e578e2e5893',1,'SUNphi::ScopeDoer']]],
   ['file',['file',['../d5/d99/classSUNphi_1_1File.html#a51c487adb0d5ac01a52b41203557805f',1,'SUNphi::File']]],

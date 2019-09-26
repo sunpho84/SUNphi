@@ -8,7 +8,7 @@ var searchData=
   ['provide_5fbinary_5fsmet_5fsimple_5fcreator',['PROVIDE_BINARY_SMET_SIMPLE_CREATOR',['../da/d5e/BinarySmET_8hpp.html#a4ca5acac4158b6d31fd3e10e7c6de606',1,'BinarySmET.hpp']]],
   ['provide_5fcall_5foperator',['PROVIDE_CALL_OPERATOR',['../dc/d6b/BaseSmET_8hpp.html#a2119b365ac7541eea87358611afd9879',1,'BaseSmET.hpp']]],
   ['provide_5fconst_5for_5fnot_5fdefault_5fevaluator',['PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR',['../d1/d9b/Assign_8hpp.html#ac676f53d30c2e27ebc3df2a25081e1ad',1,'Assign.hpp']]],
-  ['provide_5fcoords',['PROVIDE_COORDS',['../db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5',1,'Grid.hpp']]],
+  ['provide_5fcoords_5ftypes',['PROVIDE_COORDS_TYPES',['../db/d33/Grid_8hpp.html#a6985c605f87df7e76f48cdeb2dac0efc',1,'Grid.hpp']]],
   ['provide_5fcrtp_5fcast_5foperator',['PROVIDE_CRTP_CAST_OPERATOR',['../d4/dba/CRTP_8hpp.html#a11605cdec950f2c700cec58fd6759882',1,'CRTP.hpp']]],
   ['provide_5fenable_5fif_5ffor',['PROVIDE_ENABLE_IF_FOR',['../d0/d81/TypeTraits_8hpp.html#a50600a1583e7fdcb867f8b2708ac6e77',1,'TypeTraits.hpp']]],
   ['provide_5fenable_5fif_5ffor_5fis_5ftype',['PROVIDE_ENABLE_IF_FOR_IS_TYPE',['../d0/d81/TypeTraits_8hpp.html#a3805621571899a3cccc4f1a6904af31a',1,'TypeTraits.hpp']]],

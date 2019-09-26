@@ -2,6 +2,8 @@ var classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_
 [
     [ "Coords", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a51fd79268f7555a3a1b367c7b04ec8a4", null ],
     [ "Neigh", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a1856778317bd2273589f6fe0f01f35dc", null ],
+    [ "Sides", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#af53c0e44679a781fcfe4b47af38b682e", null ],
+    [ "Vol", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a7e15d00cbaf789d06fad7ed6ef1d6fb1", null ],
     [ "coordsOfPoint", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a9a6921aec7d50a5d3e4d8b9dae10fcdf", null ],
     [ "fillHashTables", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a690484e7846916abfdce10bb9ec85b6b", null ],
     [ "neighOfPoint", "dd/d4b/classSUNphi_1_1GridHashable_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a2987e6582f899fac271d0fa82c181333", null ],

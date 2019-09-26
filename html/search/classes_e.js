@@ -18,6 +18,7 @@ var searchData=
   ['serializablesequence_3c_20key_20_3e',['SerializableSequence&lt; Key &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['serializablesequence_3c_20sunphi_3a_3asitmo_3a_3arng_3a_3astate_20_3e',['SerializableSequence&lt; SUNphi::Sitmo::Rng::State &gt;',['../da/dd6/classSUNphi_1_1SerializableSequence.html',1,'SUNphi']]],
   ['sfmtrandomgen',['SFMTRandomGen',['../d7/d04/classSUNphi_1_1SFMTRandomGen.html',1,'SUNphi']]],
+  ['shadowgrid',['ShadowGrid',['../d4/d48/classSUNphi_1_1ShadowGrid.html',1,'SUNphi']]],
   ['singleinstance',['SingleInstance',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20aliver_20_3e',['SingleInstance&lt; Aliver &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],
   ['singleinstance_3c_20fuffa_3c_20t_20_3e_20_3e',['SingleInstance&lt; fuffa&lt; T &gt; &gt;',['../db/d2f/classSUNphi_1_1SingleInstance.html',1,'SUNphi']]],

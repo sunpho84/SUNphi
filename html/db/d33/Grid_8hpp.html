@@ -150,9 +150,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ae34b65e2fcd1e8bd8f1a70c66612aad5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5">PROVIDE_COORDS</a></td></tr>
-<tr class="memdesc:ae34b65e2fcd1e8bd8f1a70c66612aad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the type Coords.  <a href="#ae34b65e2fcd1e8bd8f1a70c66612aad5">More...</a><br /></td></tr>
-<tr class="separator:ae34b65e2fcd1e8bd8f1a70c66612aad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6985c605f87df7e76f48cdeb2dac0efc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/Grid_8hpp.html#a6985c605f87df7e76f48cdeb2dac0efc">PROVIDE_COORDS_TYPES</a></td></tr>
+<tr class="memdesc:a6985c605f87df7e76f48cdeb2dac0efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the type needed to deal with grids.  <a href="#a6985c605f87df7e76f48cdeb2dac0efc">More...</a><br /></td></tr>
+<tr class="separator:a6985c605f87df7e76f48cdeb2dac0efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a562b8131f1b0d66fdf0f3a1b36100517"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a562b8131f1b0d66fdf0f3a1b36100517"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d33/Grid_8hpp.html#a562b8131f1b0d66fdf0f3a1b36100517">GRID_DEBUG</a>&#160;&#160;&#160;true</td></tr>
 <tr class="memdesc:a562b8131f1b0d66fdf0f3a1b36100517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to enable Grid debug. <br /></td></tr>
@@ -196,17 +196,17 @@ Variables</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ae34b65e2fcd1e8bd8f1a70c66612aad5"></a>
+<a class="anchor" id="a6985c605f87df7e76f48cdeb2dac0efc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PROVIDE_COORDS</td>
+          <td class="memname">#define PROVIDE_COORDS_TYPES</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div><div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh</div></div><!-- fragment -->
-<p>Provide the type Coords. </p>
+<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div><div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh;  \           \</div><div class="line">  typedef Idx Vol;              \           \</div><div class="line">  typedef Coords Sides</div></div><!-- fragment -->
+<p>Provide the type needed to deal with grids. </p>
 
 <p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
@@ -225,7 +225,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    combineFlags&lt;GridFlag::HASHED&gt;</div></div><!-- fragment -->
 <p>Default parameters for grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00055">55</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    {-1,+1}</div></div><!-- fragment -->
 <p>Offset to move <code>BW</code> or <code>FW</code>. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00046">46</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['data',['data',['../d6/d69/classSUNphi_1_1PartitioningProgram.html#a7de5a89babd4d5299ac5d2aee069e1bd',1,'SUNphi::PartitioningProgram']]],
   ['debinarize',['deBinarize',['../d9/d63/structSUNphi_1_1HasMember__deBinarize_1_1Fallback.html#a889ef948ee9609229b0c804e689eb8bb',1,'SUNphi::HasMember_deBinarize::Fallback']]],
   ['debug_5fthreads',['DEBUG_THREADS',['../db/dbc/Thread_8hpp.html#a03a4f901a8dbb985f457bdfdecbd787a',1,'Thread.hpp']]],
   ['def',['def',['../de/dae/classSUNphi_1_1SerializableDefaultValue_3_01T_00_01true_01_4.html#a2302ce16a3f7c14dc51b42f0d460caf9',1,'SUNphi::SerializableDefaultValue&lt; T, true &gt;::def()'],['../da/dd6/classSUNphi_1_1SerializableSequence.html#af7f7236957688d158e81a4328184f11b',1,'SUNphi::SerializableSequence::def()']]],

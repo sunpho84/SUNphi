@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['add',['add',['../da/d65/Add_8hpp.html#a5872359ff930d8bd62bf794615caf226',1,'SUNphi']]],
+  ['add',['add',['../d6/d69/classSUNphi_1_1PartitioningProgram.html#a889a1755dfb11ad42d15f2ab9565df00',1,'SUNphi::PartitioningProgram::add()'],['../da/d65/Add_8hpp.html#a5872359ff930d8bd62bf794615caf226',1,'SUNphi::add()']]],
   ['adder',['Adder',['../de/d58/classSUNphi_1_1Adder.html#a8712c19b25e3554e2dae71e15c65065e',1,'SUNphi::Adder']]],
+  ['addgrid',['addGrid',['../d6/dc9/classSUNphi_1_1Partitioner.html#affb9138582ee111de13c8e4d40dcdbf2',1,'SUNphi::Partitioner']]],
+  ['addpartitionrelation',['addPartitionRelation',['../d6/dc9/classSUNphi_1_1Partitioner.html#aa3f7b7700e6bb5c2f229837bb7a78b70',1,'SUNphi::Partitioner']]],
   ['adj',['adj',['../d8/d3a/Adj_8hpp.html#a855b8db955c1f92e1f04c22c0ec834e3',1,'SUNphi']]],
   ['advance',['advance',['../de/d33/classSUNphi_1_1Combinatorial.html#a172068c38361dfddf99a192c9255cb74',1,'SUNphi::Combinatorial']]],
   ['aliver',['Aliver',['../df/df6/classSUNphi_1_1Aliver.html#a481c041d4913e5799b787dba04b024e7',1,'SUNphi::Aliver']]],

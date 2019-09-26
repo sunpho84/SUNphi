@@ -8,7 +8,7 @@ var Grid_8hpp =
     [ "GridShiftableBC< T, NDims, Coord, Idx, false >", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4" ],
     [ "Grid", "dd/dca/classSUNphi_1_1Grid.html", "dd/dca/classSUNphi_1_1Grid" ],
     [ "GRID_DEBUG", "db/d33/Grid_8hpp.html#a562b8131f1b0d66fdf0f3a1b36100517", null ],
-    [ "PROVIDE_COORDS", "db/d33/Grid_8hpp.html#ae34b65e2fcd1e8bd8f1a70c66612aad5", null ],
+    [ "PROVIDE_COORDS_TYPES", "db/d33/Grid_8hpp.html#a6985c605f87df7e76f48cdeb2dac0efc", null ],
     [ "GridFlag", "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6c", [
       [ "HASHED", "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca92b1a7d5a98a43c91fa0c6c435f4b3a8", null ],
       [ "SHIFTED_BC", "db/d33/Grid_8hpp.html#a27cd85d7ce87fe68bd4ccfe8b0116e6ca931c8be36bfdf49a1a7d2fa9879a0005", null ],
