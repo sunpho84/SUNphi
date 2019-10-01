@@ -54,7 +54,7 @@ var searchData=
   ['rewindoradvance',['rewindOrAdvance',['../de/d33/classSUNphi_1_1Combinatorial.html#abfde5505aca6612d001a2fa4f340d0b7',1,'SUNphi::Combinatorial']]],
   ['rng',['Rng',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html#adcbb8e0148c216a648d462e6bb3552de',1,'SUNphi::Sitmo::Rng']]],
   ['rng',['Rng',['../dd/d92/classSUNphi_1_1Sitmo_1_1Rng.html',1,'SUNphi::Sitmo']]],
-  ['runlog',['runLog',['../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4',1,'SUNphi::runLog()'],['../dd/d2b/SUNphi_8cpp.html#aa522c31e7d45dde0b53600b1749d78a6',1,'SUNphi::runLog(&quot;/dev/stdout&quot;)'],['../d9/d11/Logger_8hpp.html#a780f817fe9f8ef795bd2e3c165c9d1ad',1,'RUNLOG():&#160;Logger.hpp']]],
+  ['runlog',['RUNLOG',['../d9/d11/Logger_8hpp.html#a780f817fe9f8ef795bd2e3c165c9d1ad',1,'RUNLOG():&#160;Logger.hpp'],['../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4',1,'SUNphi::runLog()'],['../dd/d2b/SUNphi_8cpp.html#aa522c31e7d45dde0b53600b1749d78a6',1,'SUNphi::runLog(&quot;/dev/stdout&quot;)']]],
   ['rvalue_5fref',['RVALUE_REF',['../d0/d81/TypeTraits_8hpp.html#a1ad2bab3a59f777bdd42b868c4f0e67f',1,'TypeTraits.hpp']]],
   ['rw',['Rw',['../dc/d09/structSUNphi_1_1TwinTensCompOf_3_01Spin_01_4.html#a9b85b4d3903690f6c777d11b5800b740',1,'SUNphi::TwinTensCompOf&lt; Spin &gt;::Rw()'],['../d3/d3a/structSUNphi_1_1TwinTensCompOf_3_01Col_01_4.html#ab8eb572fc9bc9674a77042e1a5b8e66f',1,'SUNphi::TwinTensCompOf&lt; Col &gt;::Rw()']]],
   ['rwcol',['rwCol',['../d4/df5/SUN_8hpp.html#a35370ddf1fda4f823c41fddfebcb98c8',1,'SUNphi']]],
