@@ -34,6 +34,8 @@
   typedef std::array<Coord,2*NDims> Neigh;	\
   /*! Type to hold volume */			\
   typedef Idx Vol;				\
+  /*! Type to hold side */			\
+  typedef Coord Side;				\
   /*! Type to hold sides */			\
   typedef Coords Sides
 
@@ -414,8 +416,9 @@ namespace SUNphi
     PROVIDE_COORDS_TYPES;
     
   private:
+    
     /// Side of the grid
-    Coords _sides;
+    Sides _sides;
     
     /// Volume of the grid
     Idx _volume;
@@ -458,21 +461,32 @@ namespace SUNphi
       2*NDims;
     
     /// Get the volume
-    const Idx& volume() const
+    const Idx& volume()
+      const
     {
       return
 	_volume;
     }
     
     /// Get the given side
-    Coord side(const int mu) const
+    Side side(const int mu)
+      const
     {
       return
 	_sides[mu];
     }
     
+    /// Get all sides
+    Sides sides()
+      const
+    {
+      return
+	_sides;
+    }
+    
     /// Check that a given point is in range
-    void assertPointIsInRange(const Idx& i) const
+    void assertPointIsInRange(const Idx& i)
+      const
     {
       if constexpr(GRID_DEBUG)
 	if(i<0 or i>=volume())
@@ -480,7 +494,8 @@ namespace SUNphi
     }
     
     /// Check that a given oriented dir is in range
-    void assertOriDirIsInRange(const int& oriDir) const
+    void assertOriDirIsInRange(const int& oriDir)
+      const
     {
       if constexpr(GRID_DEBUG)
         if(oriDir<0 or oriDir>=2*NDims)
@@ -488,13 +503,14 @@ namespace SUNphi
     }
     
     /// Check that a given set of coords are in range
-    void assertCoordsAreInRange(const Coords& cs) const
+    void assertCoordsAreInRange(const Coords& cs)
+      const
     {
       if constexpr(GRID_DEBUG)
         forAllDims([&](int mu)
 		  {
 		    /// Maximal value
-		    const Coord& m=
+		    const Side& m=
 		      side(mu);
 		    
 		    /// Coord mu value
@@ -565,7 +581,7 @@ namespace SUNphi
     }
     
     /// Set the sides and trigger the volume change
-    void setSides(const Coords& extSides)
+    void setSides(const Sides& extSides)
     {
       _sides=
 	extSides;
@@ -587,7 +603,7 @@ namespace SUNphi
       for(int mu=nDims-1;mu>=0;mu--)
 	{
 	  /// Dividend, corresponding to the \c mu side length
-	  const Coord& d=
+	  const Side& d=
 	    side(mu);
 	  
 	  /// Quozient, corresponding to the index of the remaining \c nDims-1 components
@@ -619,7 +635,7 @@ namespace SUNphi
       forAllDims([&](int mu)
 		{
 		  /// Grid side
-		  const Coord& s=
+		  const Side& s=
 		    side(mu);
 		  
 		  // Increment the coordinate
@@ -693,7 +709,7 @@ namespace SUNphi
     }
     
     /// Construct from sides
-    Grid(const Coords& sides={})
+    Grid(const Sides& sides={})
     {
       setSides(sides);
     }
@@ -702,8 +718,8 @@ namespace SUNphi
   
   /// Deduction guide for bracket list
   template <int NDims,
-	    typename Coord>
-  Grid(const Coord(&sides)[NDims])
+	    typename Side>
+  Grid(const Side(&sides)[NDims])
     -> Grid<NDims,int>;
 }
 

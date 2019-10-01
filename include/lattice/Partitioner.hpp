@@ -38,6 +38,9 @@ namespace SUNphi
     /// in a coincise way
     std::optional<Vol> mutable volume;
     
+    /// Sdes of the grid
+    std::optional<Coords> mutable sides;
+    
   public:
     
     /// Reference to the actual grid
@@ -48,6 +51,13 @@ namespace SUNphi
       const
     {
       volume.reset();
+    }
+    
+    /// Unset the sides
+    void unSetSides()
+      const
+    {
+      sides.reset();
     }
     
     /// Set the volume to \c v
@@ -67,6 +77,25 @@ namespace SUNphi
 	}
     }
     
+    /// Set the sides to \c s
+    bool setSides(const Sides& s)
+      const
+    {
+      if(sidesAreSet() and sides!=s)
+	return
+	  false;
+      else
+	{
+	  sides=
+	    s;
+	  
+	  setVol(getVolFromSides());
+	  
+	  return
+	    true;
+	}
+    }
+    
     /// Get the volume
     const Vol& getVol()
       const
@@ -75,11 +104,43 @@ namespace SUNphi
 	volume.value();
     }
     
+    /// Get the sides
+    const Sides& getSides()
+      const
+    {
+      return
+	sides.value();
+    }
+    
+    /// Get a given side
+    const Side& getSide(int mu)
+      const
+    {
+      return
+	getSides()[mu];
+    }
+    
+    /// Get the volume from sides
+    const Vol getVolFromSides()
+      const
+    {
+      /// Returned value
+      Vol v=
+	1;
+      
+      for(int mu=0;mu<getSides().size();mu++)
+	v*=
+	  getSide(mu);
+      
+      return
+	v;
+    }
+    
     /// Name for debug purpose
     const char* name;
     
-    /// Function to invocate setting the sides of a grid
-    const std::function<void(const Sides&)> setSidesOfGrid;
+    /// Function to invocate setting the sides of the actual grid
+    const std::function<void(const Sides&)> setSidesOfActualGrid;
     
     /// Check if the volume is set
     bool volIsSet()
@@ -89,23 +150,46 @@ namespace SUNphi
 	static_cast<bool>(volume);
     }
     
+    /// Check if the sides are set
+    bool sidesAreSet()
+      const
+    {
+      return
+	static_cast<bool>(sides);
+    }
+    
     /// Constructor taking the grid and type-erasing it
     template <typename G>
     ShadowGrid(G&& actualGrid,
 	       const char* name) :
       actualGrid(&actualGrid),
       name(name),
-      setSidesOfGrid([&actualGrid](const Sides& sides)
+      setSidesOfActualGrid([&actualGrid](const Sides& sides)
 		     {
 		       actualGrid.setSides(sides);
 		     })
     {
-      const auto actualVolume=
-	actualGrid.volume();
+      /// Reads the sides
+      bool actualGridHasSetVolume=
+	true;
       
-      if(actualVolume)
-	volume=
-	  actualVolume;
+      actualGrid.forAllDims([&](int mu)
+			     {
+			       actualGridHasSetVolume&=
+				 (actualGrid.side(mu)!=0);
+			     });
+      
+      if(actualGridHasSetVolume)
+	setSides(actualGrid.sides());
+      else
+	{
+	  /// Reads the volume
+	  const auto actualVolume=
+	    actualGrid.volume();
+	  
+	  if(actualVolume)
+	    setVol(actualVolume);
+	}
     }
     
     /// Comparison operator
