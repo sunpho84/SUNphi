@@ -10,6 +10,8 @@
 
 #include <lattice/Grid.hpp>
 
+#include <debug/Warning.hpp>
+#include <math/Partition.hpp>
 #include <metaprogramming/UniversalReferences.hpp>
 
 namespace SUNphi
@@ -38,7 +40,7 @@ namespace SUNphi
     
   public:
     
-    /// Reference to tje actual grid
+    /// Reference to the actual grid
     const void* actualGrid;
     
     /// Unset the volume
@@ -49,10 +51,10 @@ namespace SUNphi
     }
     
     /// Set the volume to \c v
-    bool setVol(const Vol& v=0)
+    bool setVol(const Vol& v)
       const
     {
-      if(volumeIsSet() and volume!=v)
+      if(volIsSet() and volume!=v)
 	return
 	  false;
       else
@@ -80,7 +82,7 @@ namespace SUNphi
     const std::function<void(const Sides&)> setSidesOfGrid;
     
     /// Check if the volume is set
-    bool volumeIsSet()
+    bool volIsSet()
       const
     {
       return
@@ -139,7 +141,7 @@ namespace SUNphi
     
     /// Pointer to the dividing grid
     const SGrid*& child1=
-      relatives[CHILD2];
+      relatives[CHILD1];
     
     /// Pointer to the divisor grid
     const SGrid*& child2=
@@ -162,7 +164,7 @@ namespace SUNphi
 	0;
       
       for(int iRel=0;iRel<3;iRel++)
-	if(relatives[iRel]->volumeIsSet())
+	if(relatives[iRel]->volIsSet())
 	  nFixed++;
 	  else
 	    lastNotFixedRel=
@@ -199,7 +201,6 @@ namespace SUNphi
       return
 	relatives<oth.relatives;
     }
-    
   };
   
   /// A program made of a set of pair of instructions
@@ -316,6 +317,10 @@ namespace SUNphi
     using SGrid=
      ShadowGrid<NDims,Coord,Idx>;
     
+    /// Instruction to be exectuted
+    using Instruction=
+       std::function<void(void)>;
+    
     /// List of relation to be satisfied between all the grid to be partitioned
     std::set<PartRel> partitionRelations;
     
@@ -339,19 +344,31 @@ namespace SUNphi
 	  nullptr;
     }
     
+    /// Pretend to set a volume for a grid
+    void pretendToSetVol(const SGrid* grid,
+			 Vector<ScopeDoer<Instruction>>& cleanup)
+    {
+      /// Dummy volue to set
+      constexpr Vol dummyVol=
+	0;
+      
+      grid->setVol(dummyVol);
+      cleanup.emplace_back(getVolUnsetter(grid));
+    }
+    
   public:
     
     /// Determines if the volume has an upper bound coming from direct
     /// fathers or if the volume is set
-    bool volumeIsBound(const SGrid* grid)
+    bool volIsBound(const SGrid* grid)
       const
     {
-      if(grid->volumeIsSet())
+      if(grid->volIsSet())
 	return
 	  true;
       
       for(auto& father : this->getAllFathersOf(grid))
-	if(father->volumeIsSet())
+	if(father->volIsSet())
 	  return
 	    true;
       
@@ -409,7 +426,7 @@ namespace SUNphi
       Vector<const SGrid*> fathersToBeChecked;
       
       for(auto& father : this->getAllFathersOf(grid))
-	if(father->volumeIsSet())
+	if(father->volIsSet())
 	    fathersToBeChecked.push_back(father);
       
       return
@@ -425,10 +442,8 @@ namespace SUNphi
       
       for(auto& childPair : this->getAllChildrenOf(grid))
 	for(auto& child : {childPair.first,childPair.second})
-	  if(child->volumeIsSet())
+	  if(child->volIsSet())
 	    {
-	      SCOPE_INDENT(runLog);
-	      
 	      RUNLOG<<child->name<<" volume is set, will need to be checked";
 	      
 	      childrenToBeChecked.push_back(child);
@@ -443,7 +458,6 @@ namespace SUNphi
       const
     {
       SCOPE_INDENT(runLog);
-      
       RUNLOG<<"Creating the checker for "<<grid->name;
       
       return
@@ -451,6 +465,7 @@ namespace SUNphi
 	 fathersToBeChecked=getFathersToBeChecked(grid),
 	 childrenToBeChecked=getChildrenToBeChecked(grid)]()
 	{
+	  SCOPE_INDENT(runLog);
 	  RUNLOG<<"Checking grid "<<grid->name;
 	  
 	  /// Current grid volume
@@ -474,8 +489,7 @@ namespace SUNphi
 	      isOk&=
 		(fatherVol%vol==0);
 	      
-	      if(not isOk)
-		RUNLOG<<"Father "<<(*father)->name<<" has volume "<<fatherVol<<" not divisible by his child "<<grid->name<<" "<<vol;
+	      RUNLOG<<"Father "<<(*father)->name<<" has volume "<<fatherVol<<(isOk?" ":" not")<<" divisible by his child "<<grid->name<<" "<<vol;
 	      
 	      father++;
 	    }
@@ -493,8 +507,7 @@ namespace SUNphi
 	      isOk&=
 		(vol%childVol==0);
 	      
-	      if(not isOk)
-		RUNLOG<<"Child "<<(*child)->name<<" has volume "<<vol<<" not dividing his father "<<grid->name<<" "<<vol;
+	      RUNLOG<<"Child "<<(*child)->name<<" has volume "<<vol<<(isOk?" ":" not")<<" dividing his father "<<grid->name<<" "<<vol;
 	      
 	      child++;
 	    }
@@ -533,70 +546,68 @@ namespace SUNphi
     }
     
     /// Returns a function which tries to set the volume deducing it from children
-    template <typename C,
-	      typename F>
+    template <typename F>
     auto getFatherVolDeducer(const SGrid* grid,
 			     const SGrid* child1,
 			     const SGrid* child2,
-			     C&& checker,
 			     F&& nextInstruction)
     {
       return
 	[grid,
 	 child1,
 	 child2,
-	 checker,
 	 nextInstruction]()
 	{
 	  /// Deduced volume
 	  const auto vol=
 	    child1->getVol()*child2->getVol();
 	  
-	  RUNLOG<<"Setting volume of father "<<grid->name<<" to "<<vol<<" deduced by its children "<<child1->name<<" and "<<child2->name;
+	  SCOPE_INDENT(runLog);
+	  RUNLOG<<"Setting volume of father "<<grid->name<<" to "<<vol<<" deduced by its children "<<child1->name<<" ("<<child1->getVol()<<") and "<<child2->name<<" ("<<child2->getVol()<<")";
+	  
 	  grid->setVol(vol);
 	  
-	  if(checker())
-	    nextInstruction();
+	  nextInstruction();
 	  
 	  grid->unSetVol();
 	};
     }
     
     /// Returns a function which tries to set the volume deducing it from father and sister
-    template <typename C,
-	      typename F>
+    template <typename F>
     auto getChildVolDeducer(const SGrid* grid,
 			    const SGrid* father,
 			    const SGrid* sister,
-			    C&& checker,
 			    F&& nextInstruction)
     {
       return
 	[grid,
 	 father,
 	 sister,
-	 checker,
 	 nextInstruction]()
 	{
 	  /// Deduced volume
-	  const auto vol=
+	  const Vol vol=
 	    father->getVol()/sister->getVol();
 	  
-	  RUNLOG<<"Setting volume of children "<<grid->name<<" to "<<vol<<" deduced by its father "<<father->name<<" and "<<sister->name;
+	  SCOPE_INDENT(runLog);
+	  RUNLOG<<"Setting volume of children "<<grid->name<<" to "<<vol<<" deduced by its father "<<father->name<<" ("<<father->getVol()<<") and "<<sister->name<<" ("<<sister->getVol()<<")";
 	  grid->setVol(vol);
-	  
-	  if(checker())
-	   nextInstruction();
+	  nextInstruction();
 	  
 	  grid->unSetVol();
 	};
     }
     
-    /// Returns a list of all enforsable relations
-    auto listAllEnforsableRelations()
+    /// Type to host an enforcceable relation
+    using EnforceableRel=
+      std::pair<const PartRel*,int>;
+    
+    /// Returns a list of all enforceable relations
+    auto listAllEnforceableRelations()
       const
     {
-      Vector<std::pair<const PartRel*,int>> list;
+      Vector<EnforceableRel> list;
       
       for(auto& p : partitionRelations)
 	{
@@ -650,7 +661,7 @@ namespace SUNphi
       Vector<const SGrid*> list;
       
       for(auto& grid : grids)
-	if(grid.volumeIsSet()==f)
+	if(grid.volIsSet()==f)
 	  list.push_back(&grid);
       
       return
@@ -695,56 +706,201 @@ namespace SUNphi
       }
     }
     
-    using Instruction=
-       std::function<void(void)>;
+    /// Return the greatest divisor of all the volumes
+    static Vol greatestDivisorOfVolumes(const Vector<const SGrid*>& list)
+    {
+      /// Greatest common divisor to be returned
+      Vol gcd=
+	    0;
+      
+      for(auto& f : list)
+	gcd=
+	  greatestCommonDivisor(gcd,f->getVol());
+      
+      return
+	gcd;
+    }
+    
+    /// Return the least common multiple of all the volumes
+    static Vol leastCommonMultipleOfVolumes(const Vector<const SGrid*>& list)
+    {
+      /// Least common multiple to be returned
+      Vol lcm=
+	1;
+      
+      for(auto& c : list)
+	lcm=
+	  leastCommonMultiple(lcm,c->getVol());
+      
+      return
+	lcm;
+    }
+    
+    /// Return a conditional executer
+    template <typename C,
+	      typename F>
+    Instruction getConditionalExecuter(C&& checker,
+				       F&& fun)
+    {
+      return
+	[checker,
+	 fun]()
+	{
+	  if(checker())
+	    fun();
+	};
+    }
+    
+    /// Returns a function that enforce a given relation
+    template <typename Fun>
+    Instruction getRelationEnforcer(const EnforceableRel& enfRel,
+				    Vector<ScopeDoer<Instruction>>& cleanup,
+				    Fun fun)
+    {
+      /// Relation to be enforced
+      auto& r=
+	enfRel.first->relatives;
+      
+      /// Index of relative to enforce
+      const int w=
+	enfRel.second;
+      
+      RUNLOG<<"Could enforce connection between "<<r[0]->name<<" and its children "<<r[1]->name<<" and "<<r[2]->name<<" to element "<<w;
+      
+      pretendToSetVol(r[w],cleanup);
+      
+      /// Checker to be created before proceeding in the compilation
+      auto checker=
+	getGridChecker(r[w]);
+      
+      /// Next instruction
+      auto nextInstruction=
+	getConditionalExecuter(checker,compile(fun,cleanup));
+      
+      if(w==0)
+	return
+	  getFatherVolDeducer(r[0],r[1],r[2],nextInstruction);
+      else
+	return
+	  getChildVolDeducer(r[w],r[0],r[3-w],nextInstruction);
+    }
+    
+    /// Returns a function which loops on all possible volume of \c g
+    Instruction getVolumeLooper(const SGrid* g,
+				const Instruction& fun,
+				Vector<ScopeDoer<Instruction>>& cleanup)
+    {
+      SCOPE_INDENT(runLog);
+      RUNLOG<<"Grid "<<g->name<<" can be looped";
+      
+      /// Precompute the list of fathers to check
+      Vector<const SGrid*> fathersList;
+      for(auto& f : getAllFathersOf(g))
+	if(f->volIsSet())
+	  fathersList.push_back(f);
+      
+      /// Precompute the list of children to check
+      Vector<const SGrid*> childrenList;
+      for(auto& c : getAllChildrenOf(g))
+	for(auto& cp : {c.first,c.second})
+	  if(cp->volIsSet())
+	    childrenList.push_back(cp);
+      
+      pretendToSetVol(g,cleanup);
+      
+      /// Next instruction
+      auto nextInstruction=
+	compile(fun,cleanup);
+      
+      /// Returned instruction
+      auto instruction=
+	[g,
+	 fathersList,
+	 childrenList,
+	 nextInstruction]()
+	{
+	  SCOPE_INDENT(runLog);
+	  RUNLOG<<"Looping on "<<g->name;
+	  
+	  /// Greatest divisor of all fathers'volume
+	  Vol gcdFatherVol=
+	    greatestDivisorOfVolumes(fathersList);
+	  
+	  RUNLOG<<"Volume must divide "<<gcdFatherVol;
+	  
+	  /// Least common multiple of all children's volume
+	  Vol lcmChildrenVol=
+	    leastCommonMultipleOfVolumes(childrenList);
+	  
+	  RUNLOG<<"Volume must be divisible by "<<lcmChildrenVol;
+	  
+	  if(gcdFatherVol%lcmChildrenVol==0)
+	    {
+	      /// Volume to be looped is the quotient between fathers and children
+	      const Vol volToPart=
+		gcdFatherVol/lcmChildrenVol;
+	      
+	      RUNLOG<<"VolToPart: "<<volToPart;
+	      
+	      loopOnAllSubmultiplesOf(volToPart,
+				      [g,
+				       nextInstruction,
+				       lcmChildrenVol]
+				      (const Vol& v)
+				      {
+					/// The volume to be assigned is the product with the children
+					const Vol actualVol=
+					  v*lcmChildrenVol;
+					
+					g->setVol(actualVol);
+					
+					SCOPE_INDENT(runLog);
+					RUNLOG<<"Grid "<<g->name<<" set to "<<actualVol;
+					nextInstruction();
+					
+					g->unSetVol();
+				      });
+	    }
+	};
+      
+      return
+	instruction;
+    }
     
     /// Returns the compiled partitioner
-    Instruction compile(const Instruction& fun,
-			Vector<ScopeDoer<Instruction>>& cleanup)
+    Instruction compile(const Instruction& fun,                   ///< Function to be executed at inner instruction
+			Vector<ScopeDoer<Instruction>>& cleanup)  ///< Collection of tasks to cleanup after compilation ends
     {
-      if(getAllGridsWithUnfixedVol().size()==0)
+      /// List of all unfixed volume
+      auto unfixedVolGridList=
+	getAllGridsWithUnfixedVol();
+      
+      if(unfixedVolGridList.size()==0)
 	return
 	  fun;
       
-      /// List of enforcible relations
-      const auto enforcibleRelations=
-	listAllEnforsableRelations();
+      /////////////////////////////////////////////////////////////////
       
-      RUNLOG<<"Number of enforcible relations: "<<enforcibleRelations.size();
+      /// List of enforceable relations
+      const auto enforceableRelations=
+	listAllEnforceableRelations();
       
-      if(enforcibleRelations.size())
-	{
-	  /// Enforcible relation and index of relative to enforce
-	  auto& rw=
-	    enforcibleRelations.front();
-	  
-	  /// Relation to be enforced
-	  auto& r=
-	    rw.first->relatives;
-	  
-	  /// Index of relative to enforce
-	  const int w=
-	    rw.second;
-	  
-	  RUNLOG<<"Could enforce connection between "<<r[0]->name<<" and its children "<<r[1]->name<<" and "<<r[2]->name<<" to element "<<w;
-	  
-	  r[w]->setVol();
-	  cleanup.emplace_back(getVolUnsetter(r[w]));
-	  
-	  auto checker=
-	    getGridChecker(r[w]);
-	  
-	  /// Next instruction
-	  auto nextInstruction=
-	    compile(fun,cleanup);
-	  
-	  if(w==0)
-	    return
-	      getFatherVolDeducer(r[0],r[1],r[2],checker,nextInstruction);
-	  else
-	    return
-	      getChildVolDeducer(r[w],r[0],r[3-w],checker,nextInstruction);
-	}
+      RUNLOG<<"Number of enforceable relations: "<<enforceableRelations.size();
+      
+      if(enforceableRelations.size())
+	return
+	  getRelationEnforcer(enforceableRelations.front(),cleanup,fun);
+      
+      /////////////////////////////////////////////////////////////////
+      
+      for(auto& g : unfixedVolGridList)
+	if(volIsBound(g))
+	  return
+	    getVolumeLooper(g,fun,cleanup);
+      
+      /////////////////////////////////////////////////////////////////
+      
+      WARNING<<"The program cannot be run";
       
       return
 	[]()
@@ -753,14 +909,15 @@ namespace SUNphi
 	};
     }
     
-    std::function<void(void)> compile(const std::function<void(void)>& fun)
+    /// Compile the partitioner
+    Instruction compile(const Instruction& fun)
     {
+      /// Contains all quantity to be cleaned after compilation
       Vector<ScopeDoer<Instruction>> cleanup;
       
       return
 	compile(fun,cleanup);
     }
-    
   };
 }
 
