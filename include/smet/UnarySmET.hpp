@@ -72,9 +72,10 @@ namespace SUNphi
   int compSize(SFINAE_WORSEN_DEFAULT_VERSION_ARGS) const		\
   {									\
     SFINAE_WORSEN_DEFAULT_VERSION_ARGS_CHECK;				\
-    return ref.template compSize<TC>();					\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    									\
+    return								\
+      ref.template compSize<TC>();					\
+  }
   
   /// Set the size of a specific component
 #define PROVIDE_COMP_SIZES_FOR(TC,...)					\
@@ -84,8 +85,7 @@ namespace SUNphi
   int compSize() const							\
   {									\
     __VA_ARGS__;							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -96,8 +96,7 @@ namespace SUNphi
 	    typename=EnableIf<isSame<Unqualified<Oth>,Unqualified<Ref>>>> \
   explicit UNARY_SMET(Oth&& oth) : ref(forw<Oth>(oth))			\
   {									\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Defines the assignement operator, calling assign
 #define PROVIDE_UNARY_SMET_ASSIGNEMENT_OPERATOR(UNARY_SMET /*!< Name of the UnarySmET */) \
@@ -112,9 +111,9 @@ namespace SUNphi
       }									\
     assign(*this,forw<Oth>(oth));					\
 									\
-    return *this;							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    return								\
+      *this;								\
+  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -160,9 +159,10 @@ namespace SUNphi
     QUALIFIER								\
   {									\
     STATIC_ASSERT_ARE_N_TYPES(TK::nTypes,args);				\
-    return ref.eval(forw<const Args>(args)...);				\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+									\
+    return								\
+      ref.eval(forw<const Args>(args)...);				\
+  }
   
   /// Provides both const and non-const evaluators
 #define PROVIDE_UNARY_SMET_DEFAULT_EVALUATOR				\

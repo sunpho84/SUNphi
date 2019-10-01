@@ -380,8 +380,7 @@ namespace SUNphi
   {									\
     return								\
       CALL_CLASS_CONST_METHOD_REMOVING_CONST(NAME(forw<Ts>(ts)...));	\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /////////////////////////////////////////////////////////////////
   

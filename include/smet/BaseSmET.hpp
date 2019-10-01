@@ -130,8 +130,7 @@ namespace SUNphi
   bool isAliasing(const Tref& alias) const		\
   {							\
     __VA_ARGS__;					\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Set aliasing according to a passed pointer (provided class member)
   ///
@@ -192,8 +191,7 @@ namespace SUNphi
   DECLAUTO getMaximallyMergedCompsView()				\
   {									\
     return getMergedCompsView<MergeableComps>();			\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// States that the class has no mergeable component
 #define NOT_MERGEABLE				\
@@ -284,9 +282,9 @@ namespace SUNphi
       if constexpr(0)							\
 	std::cout<<"Using CRTP to cast call operator"<<std::endl;       \
 									\
-      return (~(*this)).eval(forw<Oth>(oth)...);			\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+      return								\
+	(~(*this)).eval(forw<Oth>(oth)...);	\
+    }
     
     PROVIDE_CALL_OPERATOR();
     PROVIDE_CALL_OPERATOR(const);

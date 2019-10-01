@@ -83,8 +83,7 @@ namespace SUNphi
     {							\
       return						\
 	buf.end();					\
-    }							\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_BEGIN_END(/* */);
     PROVIDE_BEGIN_END(const);

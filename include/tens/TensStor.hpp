@@ -64,8 +64,7 @@ namespace SUNphi
       /* printf("Index: %d\n",id);*/ /*debug*/				\
       									\
       return v[id];							\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_EVAL(NON_CONST_QUALIF);
     PROVIDE_EVAL(CONST_QUALIF);

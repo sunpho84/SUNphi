@@ -21,8 +21,7 @@
       =VALUE;								\
     									\
     return _ ## NAME;							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
 
 
 #endif

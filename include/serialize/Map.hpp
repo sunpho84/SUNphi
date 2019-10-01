@@ -39,8 +39,7 @@ namespace SUNphi
   {									\
     return								\
       std::forward_as_tuple(__VA_ARGS__);				\
-  } 									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Provides serialization features to a class
   template <typename T>

@@ -110,12 +110,11 @@ namespace SUNphi
     ValWithExtreme& operator OP (const V& oth)	\
     {						\
     val OP					\
-    oth;					\
+      oth;					\
 						\
     return					\
       updateExtreme();				\
-    }						\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_UNARY_OPERATOR(+=);
     

@@ -138,8 +138,7 @@ namespace SUNphi
     {							\
       return						\
 	first OP second.value;				\
-    }							\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     /// Provide a simple binary operator
 #define PROVIDE_SIMPLE_BINARY_OPERATOR(OP)			\
@@ -150,8 +149,7 @@ namespace SUNphi
     {								\
       return							\
 	value OP oth;						\
-    }								\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_ALL_BINARY_OPERATORS(PROVIDE_SIMPLE_BINARY_OPERATOR);
     PROVIDE_ALL_BINARY_OPERATORS(PROVIDE_SIMPLE_FRIEND_BINARY_OPERATOR);

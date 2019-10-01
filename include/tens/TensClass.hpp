@@ -187,8 +187,7 @@ namespace SUNphi
 									\
       return								\
 	v->eval(forw<const Comps>(comps)...);				\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_EVALUATOR(NON_CONST_QUALIF);
     PROVIDE_EVALUATOR(CONST_QUALIF);

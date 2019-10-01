@@ -26,8 +26,7 @@ namespace SUNphi
   {							\
     return						\
       *static_cast<const CLASS*>(this);			\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Access to the inheriting class
 #define CRTP_THIS \

@@ -53,8 +53,7 @@ namespace SUNphi
 	    typename=EnableIf<isSame<Unqualified<SMET2>,Unqualified<Ref2>>>> \
   explicit BINARY_SMET(SMET1&& smet1,SMET2&& smet2) : ref1(forw<SMET1>(smet1)),ref2(forw<SMET2>(smet2)) \
   {									\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -87,8 +86,7 @@ namespace SUNphi
     return						\
       ref1.isAliasing(alias) or				\
       ref2.isAliasing(alias);				\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Determine mergeability of pair of \c TensKind
   namespace PairOfTensKindMergeability

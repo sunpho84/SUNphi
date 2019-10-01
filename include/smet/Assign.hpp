@@ -46,8 +46,7 @@ namespace SUNphi
 									\
     return								\
       *this;								\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   // Base type to qualify as an \c Assigner
   DEFINE_BASE_TYPE(Assigner);
@@ -118,8 +117,7 @@ namespace SUNphi
       STATIC_ASSERT_ARE_N_TYPES(Tk::nTypes,args);			\
       									\
       return ref2.eval(forw<Args>(args)...);				\
-    }									\
-    SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    }
     
     PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(NON_CONST_QUALIF);
     PROVIDE_CONST_OR_NOT_DEFAULT_EVALUATOR(CONST_QUALIF);

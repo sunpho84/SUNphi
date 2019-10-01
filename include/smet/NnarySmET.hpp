@@ -31,9 +31,9 @@ namespace SUNphi
   template <typename T>	                        /* Argument type */	\
   static DECLAUTO representativeFunction(T&& t) /*!< Argument    */	\
   {									\
-    return forw<T>(t);							\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    return								\
+      forw<T>(t);				\
+  }
   
   /// Nnary SmET
   template <typename T>  /// Inheriting type
@@ -169,8 +169,7 @@ namespace SUNphi
       return get<I>(refs).template compSize<TC>();		        \
     else								\
       return compSize<TC,I+1>();					\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /// Defines the \c Fund type using the call to \c representativeFunction
 #define PROVIDE_FUND_ACCORDING_TO_REPRESENTATIVE_FUNCTION		\
@@ -387,8 +386,7 @@ namespace SUNphi
 	    typename=EnableIf<((isSame<Unqualified<SMETS>,Unqualified<_Refs>>) && ...)>> \
   explicit NNARY_SMET(SMETS&&...smets) : refs(forw<SMETS>(smets)...)	\
   {									\
-  }									\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+  }
   
   /////////////////////////////////////////////////////////////////
   
@@ -426,9 +424,9 @@ namespace SUNphi
   {							\
     CRASH<<"Fixme";					\
 							\
-    return true;					\
-  }							\
-  SWALLOW_SEMICOLON_AT_CLASS_SCOPE
+    return						\
+      true;						\
+  }
   
   /// Provides \c Fund, \c eval and \c mergedComps according to \c representativeFunction
 #define REPRESENTATIVE_FUNCTION_WINS_ALL				\
