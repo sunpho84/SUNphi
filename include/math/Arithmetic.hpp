@@ -64,6 +64,41 @@ namespace SUNphi
     return
       0;
   }
+  
+  /// Return greatest common divisor between a and b
+  template <typename I1,
+	    typename I2>
+  auto greatestCommonDivisor(const I1& _a,
+			     const I2& _b)
+  {
+    /// Inner type to be used
+    using I=
+      decltype(_a/_b);
+    
+    /// Cast to I of \c _a
+    I a=
+      _a;
+    
+    /// Cast to I of \c _b
+    I b=
+      _b;
+    
+    while(a!=0)
+      {
+	/// Store temporarily a
+	const I c=
+	  a;
+	
+	a=
+	  b%a;
+	
+	b=
+	  c;
+      }
+    
+    return
+      b;
+  }
 }
 
 #endif
