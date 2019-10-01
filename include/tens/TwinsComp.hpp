@@ -24,7 +24,7 @@ namespace SUNphi
   template <class T,                         // Type to declare not twinned
 	    class=ConstrainIsTensComp<T>>    // Constrain the T to be a TensComp
   [[ maybe_unused ]]
-  constexpr bool hasTwin=
+  constexpr inline bool hasTwin=
     false;
   
   /// Specify the twin component of a given TensComp
@@ -49,14 +49,14 @@ namespace SUNphi
   						\
   /*! Declare that T1 has a twin */		\
   template <>					\
-  constexpr bool hasTwin<T1> =			\
+  constexpr inline bool hasTwin<T1> =		\
     true;					\
   						\
   MAYBE_UNUSED(hasTwin<T1>);			\
 						\
   /*! Declare that T2 has a twin */		\
   template <>					\
-  constexpr bool hasTwin<T2> =			\
+  constexpr inline bool hasTwin<T2> =		\
     true;					\
 						\
   MAYBE_UNUSED(hasTwin<T2>);			\
