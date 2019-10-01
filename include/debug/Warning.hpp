@@ -7,7 +7,7 @@
 
 /// Starts a new line in bold brown
 #define WARNING					\
-  runLog()<<TextColor::BROWN<<TextStyle::BOLD
+  runLog()<<TextColor::BROWN<<TextStyle::BOLD<<"WARNING "
 
 namespace SUNphi
 {
