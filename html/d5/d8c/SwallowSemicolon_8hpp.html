@@ -119,8 +119,6 @@ $(document).ready(function(){initNavTree('d5/d8c/SwallowSemicolon_8hpp.html','..
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af78aafc0cd716f679c6879a0fba48da0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a>&#160;&#160;&#160;class {}</td></tr>
-<tr class="separator:af78aafc0cd716f679c6879a0fba48da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fef1fcd49e2b4bdbc23f0c35109e24d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></td></tr>
 <tr class="separator:a3fef1fcd49e2b4bdbc23f0c35109e24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,22 +127,6 @@ Macros</h2></td></tr>
 
 <p>Definition in file <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">SwallowSemicolon.hpp</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="af78aafc0cd716f679c6879a0fba48da0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE&#160;&#160;&#160;class {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Eat a dangling semicolon inside a class</p>
-<p>Example:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#define DEFINE_MEMBER_WITH_GETTER(TYPE,NAME) \</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;TYPE NAME;                   \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;TYPE get_ ## NAME()              \</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{                        \</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;return NAME;                 \</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}                        \</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;class test_</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;DEFINE_MEMBER_WITH_GETTER(int,a);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">SwallowSemicolon.hpp</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a3fef1fcd49e2b4bdbc23f0c35109e24d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +140,7 @@ Macros</h2></td></tr>
 </div><!-- fragment --><p>Eat a dangling semicolon at global scope</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#define DEFINE_FOOER(TYPE,NAME)          \</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;TYPE NAME()                      \</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{                            \</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;doing something...                   \</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}                            \</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;DEFINE_FOER(int,ciccio);</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00049">49</a> of file <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">SwallowSemicolon.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00026">26</a> of file <a class="el" href="../../d5/d8c/SwallowSemicolon_8hpp_source.html">SwallowSemicolon.hpp</a>.</p>
 
 </div>
 </div>

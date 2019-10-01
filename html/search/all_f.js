@@ -34,6 +34,7 @@ var searchData=
   ['posoftypes',['PosOfTypes',['../de/d2d/TupleOrder_8hpp.html#a7e49560fe5650ab279ff170b7fc6643e',1,'SUNphi']]],
   ['posoftypesnotasserting',['PosOfTypesNotAsserting',['../de/d2d/TupleOrder_8hpp.html#abc7e2f156d73be4e7b75c0b2f13d06d9',1,'SUNphi']]],
   ['prependtime',['prependTime',['../d3/d78/classSUNphi_1_1Logger.html#a2a001323890441081aa9693c73770e82',1,'SUNphi::Logger']]],
+  ['pretendtosetvol',['pretendToSetVol',['../d6/dc9/classSUNphi_1_1Partitioner.html#aa55ed4dfc1bf2f00a9b53190e6c4b128',1,'SUNphi::Partitioner']]],
   ['printbacktracelist',['printBacktraceList',['../d3/dbc/BackTracing_8hpp.html#ab3877df412abddaeeaa4d9441c0b4a55',1,'SUNphi']]],
   ['printbailout',['printBailout',['../df/df6/classSUNphi_1_1Aliver.html#ad4469a6555e11dfb2a8031a9698cff4e',1,'SUNphi::Aliver']]],
   ['printbanner',['printBanner',['../df/df6/classSUNphi_1_1Aliver.html#afb0918d628d2032e1481c711d428c733',1,'SUNphi::Aliver']]],

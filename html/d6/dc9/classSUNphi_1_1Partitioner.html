@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('d6/dc9/classSUNphi_1_1Partitioner.html
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -126,14 +127,15 @@ $(document).ready(function(){initNavTree('d6/dc9/classSUNphi_1_1Partitioner.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a436dd808d8526c2e135b0a1c88713ddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a436dd808d8526c2e135b0a1c88713ddc"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Instruction</b> = std::function&lt; void(void)&gt;</td></tr>
-<tr class="separator:a436dd808d8526c2e135b0a1c88713ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87237639196db698d093acc77f0dd1a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87237639196db698d093acc77f0dd1a4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a87237639196db698d093acc77f0dd1a4">EnforceableRel</a> = std::pair&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a031f9315bf5944d4e9e3ecaabd350b97">PartRel</a> *, int &gt;</td></tr>
+<tr class="memdesc:a87237639196db698d093acc77f0dd1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type to host an enforcceable relation. <br /></td></tr>
+<tr class="separator:a87237639196db698d093acc77f0dd1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d5f332e114ecb811944872a09d4bb29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a5d5f332e114ecb811944872a09d4bb29">volumeIsBound</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid) const </td></tr>
-<tr class="separator:a5d5f332e114ecb811944872a09d4bb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e473bcb7f75e099c8350b6a908095e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a89e473bcb7f75e099c8350b6a908095e">volIsBound</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid) const </td></tr>
+<tr class="separator:a89e473bcb7f75e099c8350b6a908095e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb9138582ee111de13c8e4d40dcdbf2"><td class="memTemplParams" colspan="2"><a class="anchor" id="affb9138582ee111de13c8e4d40dcdbf2"></a>
 template&lt;typename G &gt; </td></tr>
 <tr class="memitem:affb9138582ee111de13c8e4d40dcdbf2"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#affb9138582ee111de13c8e4d40dcdbf2">addGrid</a> (G &amp;&amp;grid, const char *name)</td></tr>
@@ -156,18 +158,18 @@ template&lt;typename G &gt; </td></tr>
 auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a31b1809c32f94c0da93e66bd2b4e81f1">getVolUnsetter</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid)</td></tr>
 <tr class="memdesc:a31b1809c32f94c0da93e66bd2b4e81f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which unset the volume. <br /></td></tr>
 <tr class="separator:a31b1809c32f94c0da93e66bd2b4e81f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eeef8764370afb2f0e294ac58f19548"><td class="memTemplParams" colspan="2">template&lt;typename C , typename F &gt; </td></tr>
-<tr class="memitem:a5eeef8764370afb2f0e294ac58f19548"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a5eeef8764370afb2f0e294ac58f19548">getFatherVolDeducer</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *child1, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *child2, C &amp;&amp;checker, F &amp;&amp;nextInstruction)</td></tr>
-<tr class="memdesc:a5eeef8764370afb2f0e294ac58f19548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which tries to set the volume deducing it from children.  <a href="#a5eeef8764370afb2f0e294ac58f19548">More...</a><br /></td></tr>
-<tr class="separator:a5eeef8764370afb2f0e294ac58f19548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98b33449a9314933b16a994b852a2c8"><td class="memTemplParams" colspan="2">template&lt;typename C , typename F &gt; </td></tr>
-<tr class="memitem:ab98b33449a9314933b16a994b852a2c8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#ab98b33449a9314933b16a994b852a2c8">getChildVolDeducer</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *father, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *sister, C &amp;&amp;checker, F &amp;&amp;nextInstruction)</td></tr>
-<tr class="memdesc:ab98b33449a9314933b16a994b852a2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which tries to set the volume deducing it from father and sister.  <a href="#ab98b33449a9314933b16a994b852a2c8">More...</a><br /></td></tr>
-<tr class="separator:ab98b33449a9314933b16a994b852a2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639ff8a74ade655002739aeb48bf87c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a639ff8a74ade655002739aeb48bf87c6"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a639ff8a74ade655002739aeb48bf87c6">listAllEnforsableRelations</a> () const </td></tr>
-<tr class="memdesc:a639ff8a74ade655002739aeb48bf87c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all enforsable relations. <br /></td></tr>
-<tr class="separator:a639ff8a74ade655002739aeb48bf87c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0dd7262c2f831a891fd6dc365fd8c8"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:afe0dd7262c2f831a891fd6dc365fd8c8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#afe0dd7262c2f831a891fd6dc365fd8c8">getFatherVolDeducer</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *child1, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *child2, F &amp;&amp;nextInstruction)</td></tr>
+<tr class="memdesc:afe0dd7262c2f831a891fd6dc365fd8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which tries to set the volume deducing it from children.  <a href="#afe0dd7262c2f831a891fd6dc365fd8c8">More...</a><br /></td></tr>
+<tr class="separator:afe0dd7262c2f831a891fd6dc365fd8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c39232cc2fba3ef8f21c29cef9a1b2"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a62c39232cc2fba3ef8f21c29cef9a1b2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a62c39232cc2fba3ef8f21c29cef9a1b2">getChildVolDeducer</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *father, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *sister, F &amp;&amp;nextInstruction)</td></tr>
+<tr class="memdesc:a62c39232cc2fba3ef8f21c29cef9a1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which tries to set the volume deducing it from father and sister.  <a href="#a62c39232cc2fba3ef8f21c29cef9a1b2">More...</a><br /></td></tr>
+<tr class="separator:a62c39232cc2fba3ef8f21c29cef9a1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9827e314d85fc6f8b4b59791c26dad0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9827e314d85fc6f8b4b59791c26dad0"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#ad9827e314d85fc6f8b4b59791c26dad0">listAllEnforceableRelations</a> () const </td></tr>
+<tr class="memdesc:ad9827e314d85fc6f8b4b59791c26dad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of all enforceable relations. <br /></td></tr>
+<tr class="separator:ad9827e314d85fc6f8b4b59791c26dad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7894d24723f5c8d1fd52416e592f960"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#ab7894d24723f5c8d1fd52416e592f960">getAllFathersOf</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid) const </td></tr>
 <tr class="memdesc:ab7894d24723f5c8d1fd52416e592f960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets all fathers of a given grid.  <a href="#ab7894d24723f5c8d1fd52416e592f960">More...</a><br /></td></tr>
 <tr class="separator:ab7894d24723f5c8d1fd52416e592f960"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,12 +190,33 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a4bf0145ae460a2cde4a6047fac697717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a4bf0145ae460a2cde4a6047fac697717">printDot</a> () const </td></tr>
 <tr class="memdesc:a4bf0145ae460a2cde4a6047fac697717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the partition relation in a Dot format.  <a href="#a4bf0145ae460a2cde4a6047fac697717">More...</a><br /></td></tr>
 <tr class="separator:a4bf0145ae460a2cde4a6047fac697717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77ff09439c84b213cd87c598c5c3d694"><td class="memItemLeft" align="right" valign="top">Instruction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a77ff09439c84b213cd87c598c5c3d694">compile</a> (const Instruction &amp;fun, <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; Instruction &gt;&gt; &amp;cleanup)</td></tr>
+<tr class="memitem:ad48f940fea0322d859f654ff1a9c9a22"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad48f940fea0322d859f654ff1a9c9a22"></a>
+template&lt;typename C , typename F &gt; </td></tr>
+<tr class="memitem:ad48f940fea0322d859f654ff1a9c9a22"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#ad48f940fea0322d859f654ff1a9c9a22">getConditionalExecuter</a> (C &amp;&amp;checker, F &amp;&amp;fun)</td></tr>
+<tr class="memdesc:ad48f940fea0322d859f654ff1a9c9a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a conditional executer. <br /></td></tr>
+<tr class="separator:ad48f940fea0322d859f654ff1a9c9a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a9d33f627c6156550b3983cff6aff7"><td class="memTemplParams" colspan="2">template&lt;typename Fun &gt; </td></tr>
+<tr class="memitem:a34a9d33f627c6156550b3983cff6aff7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a34a9d33f627c6156550b3983cff6aff7">getRelationEnforcer</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a87237639196db698d093acc77f0dd1a4">EnforceableRel</a> &amp;enfRel, <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;cleanup, Fun fun)</td></tr>
+<tr class="memdesc:a34a9d33f627c6156550b3983cff6aff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function that enforce a given relation.  <a href="#a34a9d33f627c6156550b3983cff6aff7">More...</a><br /></td></tr>
+<tr class="separator:a34a9d33f627c6156550b3983cff6aff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af302a1c7d948b85666391b8db93c8832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af302a1c7d948b85666391b8db93c8832">getVolumeLooper</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *g, const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;fun, <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;cleanup)</td></tr>
+<tr class="memdesc:af302a1c7d948b85666391b8db93c8832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a function which loops on all possible volume of <code>g</code>.  <a href="#af302a1c7d948b85666391b8db93c8832">More...</a><br /></td></tr>
+<tr class="separator:af302a1c7d948b85666391b8db93c8832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ff09439c84b213cd87c598c5c3d694"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a77ff09439c84b213cd87c598c5c3d694">compile</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;fun, <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;cleanup)</td></tr>
 <tr class="memdesc:a77ff09439c84b213cd87c598c5c3d694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the compiled partitioner.  <a href="#a77ff09439c84b213cd87c598c5c3d694">More...</a><br /></td></tr>
 <tr class="separator:a77ff09439c84b213cd87c598c5c3d694"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9f4de92eff548252220721e96863bcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9f4de92eff548252220721e96863bcd"></a>
-std::function&lt; void(void)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>compile</b> (const std::function&lt; void(void)&gt; &amp;fun)</td></tr>
-<tr class="separator:ae9f4de92eff548252220721e96863bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa984799a7695ff1c29ff8beea8b0c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a6aa984799a7695ff1c29ff8beea8b0c2">compile</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;fun)</td></tr>
+<tr class="memdesc:a6aa984799a7695ff1c29ff8beea8b0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile the partitioner.  <a href="#a6aa984799a7695ff1c29ff8beea8b0c2">More...</a><br /></td></tr>
+<tr class="separator:a6aa984799a7695ff1c29ff8beea8b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a08186f99629b4842f3ba99dec9e4c55e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af202700394d8a3a0a3db51e3302f13ef">Vol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a08186f99629b4842f3ba99dec9e4c55e">greatestDivisorOfVolumes</a> (const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> * &gt; &amp;list)</td></tr>
+<tr class="memdesc:a08186f99629b4842f3ba99dec9e4c55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the greatest divisor of all the volumes.  <a href="#a08186f99629b4842f3ba99dec9e4c55e">More...</a><br /></td></tr>
+<tr class="separator:a08186f99629b4842f3ba99dec9e4c55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b41435c27c575b0f341e6bd2b99657"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af202700394d8a3a0a3db51e3302f13ef">Vol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aa1b41435c27c575b0f341e6bd2b99657">leastCommonMultipleOfVolumes</a> (const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> * &gt; &amp;list)</td></tr>
+<tr class="memdesc:aa1b41435c27c575b0f341e6bd2b99657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least common multiple of all the volumes.  <a href="#aa1b41435c27c575b0f341e6bd2b99657">More...</a><br /></td></tr>
+<tr class="separator:aa1b41435c27c575b0f341e6bd2b99657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -203,6 +226,8 @@ Private Types</h2></td></tr>
 <tr class="separator:ad34549bcc11407b8b6f1a2ad706aa3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af202700394d8a3a0a3db51e3302f13ef"><td class="memItemLeft" align="right" valign="top">typedef Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af202700394d8a3a0a3db51e3302f13ef">Vol</a></td></tr>
 <tr class="separator:af202700394d8a3a0a3db51e3302f13ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed98e7887e3ad3643b31dfbe285490e3"><td class="memItemLeft" align="right" valign="top">typedef Coord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aed98e7887e3ad3643b31dfbe285490e3">Side</a></td></tr>
+<tr class="separator:aed98e7887e3ad3643b31dfbe285490e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51bae8d82e5c4d22b594722d7ff45806"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#afc41791c88469f3a8e73a9b6c7df2917">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a51bae8d82e5c4d22b594722d7ff45806">Sides</a></td></tr>
 <tr class="separator:a51bae8d82e5c4d22b594722d7ff45806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031f9315bf5944d4e9e3ecaabd350b97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a031f9315bf5944d4e9e3ecaabd350b97"></a>
@@ -213,6 +238,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> = <a class="el" href="../../d4/d48/classSUNphi_1_1ShadowGrid.html">ShadowGrid</a>&lt; NDims, Coord, Idx &gt;</td></tr>
 <tr class="memdesc:aff366e5ab3dcc61e0227da2d150794d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short alias of the <a class="el" href="../../d4/d48/classSUNphi_1_1ShadowGrid.html">ShadowGrid</a>. <br /></td></tr>
 <tr class="separator:aff366e5ab3dcc61e0227da2d150794d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436dd808d8526c2e135b0a1c88713ddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a436dd808d8526c2e135b0a1c88713ddc"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> = std::function&lt; void(void)&gt;</td></tr>
+<tr class="memdesc:a436dd808d8526c2e135b0a1c88713ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instruction to be exectuted. <br /></td></tr>
+<tr class="separator:a436dd808d8526c2e135b0a1c88713ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -220,6 +249,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a5a2a3df914ba0f7a5ab1daf7dcaf158b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a5a2a3df914ba0f7a5ab1daf7dcaf158b">findShadowOfGrid</a> (G &amp;&amp;actualGrid) const </td></tr>
 <tr class="memdesc:a5a2a3df914ba0f7a5ab1daf7dcaf158b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the shadow of an actual grid.  <a href="#a5a2a3df914ba0f7a5ab1daf7dcaf158b">More...</a><br /></td></tr>
 <tr class="separator:a5a2a3df914ba0f7a5ab1daf7dcaf158b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55ed4dfc1bf2f00a9b53190e6c4b128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aa55ed4dfc1bf2f00a9b53190e6c4b128">pretendToSetVol</a> (const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *grid, <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;cleanup)</td></tr>
+<tr class="memdesc:aa55ed4dfc1bf2f00a9b53190e6c4b128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretend to set a volume for a grid.  <a href="#aa55ed4dfc1bf2f00a9b53190e6c4b128">More...</a><br /></td></tr>
+<tr class="separator:aa55ed4dfc1bf2f00a9b53190e6c4b128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -238,7 +270,7 @@ class SUNphi::Partitioner&lt; NDims, Coord, Idx &gt;</h3>
 
 <p>Partition a set of grids enforcing to obay to certain rules. </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00307">307</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00392">392</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="afc41791c88469f3a8e73a9b6c7df2917"></a>
 <div class="memitem">
@@ -261,7 +293,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 <p>Type to hold sizes, coordinate, etc </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +318,32 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 <p>Type to hold the neighbors </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed98e7887e3ad3643b31dfbe285490e3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Coord <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::<a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aed98e7887e3ad3643b31dfbe285490e3">Side</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Type to hold side </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +368,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 <p>Type to hold sides </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +393,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 <p>Type to hold volume </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00309">309</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00394">394</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +445,7 @@ template&lt;typename GF , typename GC1 , typename GC2 &gt; </div>
 <p>Find child1</p>
 <p>Find child2 </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00375">375</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00476">476</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -402,15 +459,15 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Instruction <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::compile </td>
+          <td class="memname"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::compile </td>
           <td>(</td>
-          <td class="paramtype">const Instruction &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;&#160;</td>
           <td class="paramname"><em>fun</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; Instruction &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>cleanup</em>&#160;</td>
         </tr>
         <tr>
@@ -427,13 +484,48 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 
 <p>Returns the compiled partitioner. </p>
-<p>List of enforcible relations</p>
-<p>Enforcible relation and index of relative to enforce</p>
-<p>Relation to be enforced</p>
-<p>Index of relative to enforce</p>
-<p>Next instruction </p>
+<p>List of all unfixed volume</p>
+<p>List of enforceable relations </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fun</td><td>Function to be executed at inner instruction </td></tr>
+    <tr><td class="paramname">cleanup</td><td>Collection of tasks to cleanup after compilation ends </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00702">702</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00955">955</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6aa984799a7695ff1c29ff8beea8b0c2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::compile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;&#160;</td>
+          <td class="paramname"><em>fun</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile the partitioner. </p>
+<p>Contains all quantity to be cleaned after compilation </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00997">997</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +558,7 @@ template&lt;typename G &gt; </div>
 <p>Find the shadow of an actual grid. </p>
 <p>Result of research </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00327">327</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -497,7 +589,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>Gets all children of a given grid. </p>
 <p>Result </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00631">631</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00726">726</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +620,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>Gets all fathers of a given grid. </p>
 <p>Returned list </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00615">615</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00710">710</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,7 +651,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>List all grids of the partitioning with fixed or unfixed volume, according to the parameter. </p>
 <p>List to be returned </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00646">646</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00741">741</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -588,20 +680,19 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 
 <p>Gets the list of children to be checked. </p>
-<p>Returned list</p>
-<p>Indent current scope </p>
+<p>Returned list </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00420">420</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00521">521</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab98b33449a9314933b16a994b852a2c8"></a>
+<a class="anchor" id="a62c39232cc2fba3ef8f21c29cef9a1b2"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
 <div class="memtemplate">
-template&lt;typename C , typename F &gt; </div>
+template&lt;typename F &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -627,12 +718,6 @@ template&lt;typename C , typename F &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">C &amp;&amp;&#160;</td>
-          <td class="paramname"><em>checker</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">F &amp;&amp;&#160;</td>
           <td class="paramname"><em>nextInstruction</em>&#160;</td>
         </tr>
@@ -650,9 +735,10 @@ template&lt;typename C , typename F &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns a function which tries to set the volume deducing it from father and sister. </p>
-<p>Deduced volume </p>
+<p>Deduced volume</p>
+<p>Indent current scope </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00568">568</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00662">662</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -683,17 +769,17 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>Gets the list of fathers to be checked. </p>
 <p>Returned list </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00405">405</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00506">506</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5eeef8764370afb2f0e294ac58f19548"></a>
+<a class="anchor" id="afe0dd7262c2f831a891fd6dc365fd8c8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
 <div class="memtemplate">
-template&lt;typename C , typename F &gt; </div>
+template&lt;typename F &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -719,12 +805,6 @@ template&lt;typename C , typename F &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">C &amp;&amp;&#160;</td>
-          <td class="paramname"><em>checker</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">F &amp;&amp;&#160;</td>
           <td class="paramname"><em>nextInstruction</em>&#160;</td>
         </tr>
@@ -742,9 +822,10 @@ template&lt;typename C , typename F &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns a function which tries to set the volume deducing it from children. </p>
-<p>Deduced volume </p>
+<p>Deduced volume</p>
+<p>Indent current scope </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00538">538</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00634">634</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -774,6 +855,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 
 <p>Returns a function which check the validity of a grid and move to next instruction. </p>
 <p>Indent current scope</p>
+<p>Indent current scope</p>
 <p>Current grid volume</p>
 <p>Keep track if constraints are satisfied</p>
 <p>Looping on fathers</p>
@@ -781,7 +863,219 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>Looping on children</p>
 <p>Volume of child </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00442">442</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00541">541</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34a9d33f627c6156550b3983cff6aff7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename Fun &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::getRelationEnforcer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a87237639196db698d093acc77f0dd1a4">EnforceableRel</a> &amp;&#160;</td>
+          <td class="paramname"><em>enfRel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>cleanup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fun&#160;</td>
+          <td class="paramname"><em>fun</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a function that enforce a given relation. </p>
+<p>Relation to be enforced</p>
+<p>Index of relative to enforce</p>
+<p>Checker to be created before proceeding in the compilation</p>
+<p>Next instruction </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00840">840</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af302a1c7d948b85666391b8db93c8832"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::getVolumeLooper </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &amp;&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>cleanup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a function which loops on all possible volume of <code>g</code>. </p>
+<p>Indent current scope</p>
+<p>Precompute the list of fathers to check</p>
+<p>Precompute the list of children to check</p>
+<p>Next instruction</p>
+<p>Returned instruction</p>
+<p>Indent current scope</p>
+<p>Greatest divisor of all fathers'volume</p>
+<p>Least common multiple of all children's volume</p>
+<p>Volume to be looped is the quotient between fathers and children</p>
+<p>The volume to be assigned is the product with the children</p>
+<p>Indent current scope </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00873">873</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08186f99629b4842f3ba99dec9e4c55e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af202700394d8a3a0a3db51e3302f13ef">Vol</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::greatestDivisorOfVolumes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the greatest divisor of all the volumes. </p>
+<p>Greatest common divisor to be returned </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00794">794</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1b41435c27c575b0f341e6bd2b99657"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#af202700394d8a3a0a3db51e3302f13ef">Vol</a> <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::leastCommonMultipleOfVolumes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the least common multiple of all the volumes. </p>
+<p>Least common multiple to be returned </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00809">809</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa55ed4dfc1bf2f00a9b53190e6c4b128"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::pretendToSetVol </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *&#160;</td>
+          <td class="paramname"><em>grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dc0/classSUNphi_1_1Vector.html">Vector</a>&lt; <a class="el" href="../../d2/db3/classSUNphi_1_1ScopeDoer.html">ScopeDoer</a>&lt; <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc">Instruction</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>cleanup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pretend to set a volume for a grid. </p>
+<p>Dummy volue to set </p>
+
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00432">432</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
@@ -812,11 +1106,11 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 <p>Labels of all partitions</p>
 <p>Label of the father node </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00677">677</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00772">772</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5d5f332e114ecb811944872a09d4bb29"></a>
+<a class="anchor" id="a89e473bcb7f75e099c8350b6a908095e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -826,7 +1120,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::volumeIsBound </td>
+          <td class="memname">bool <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html">SUNphi::Partitioner</a>&lt; NDims, Coord, Idx &gt;::volIsBound </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d6/dc9/classSUNphi_1_1Partitioner.html#aff366e5ab3dcc61e0227da2d150794d8">SGrid</a> *&#160;</td>
           <td class="paramname"><em>grid</em></td><td>)</td>
@@ -841,7 +1135,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t&gt
 </div><div class="memdoc">
 <p>Determines if the volume has an upper bound coming from direct fathers or if the volume is set </p>
 
-<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00346">346</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html#l00447">447</a> of file <a class="el" href="../../d8/d91/Partitioner_8hpp_source.html">Partitioner.hpp</a>.</p>
 
 </div>
 </div>

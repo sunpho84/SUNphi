@@ -143,6 +143,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a072a659b92ccf74423fc61f069002a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9153d76d4f9233da3ee1d7f4a35b729"><td class="memItemLeft" align="right" valign="top">typedef Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#af9153d76d4f9233da3ee1d7f4a35b729">Vol</a></td></tr>
 <tr class="separator:af9153d76d4f9233da3ee1d7f4a35b729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5100c8dc5f4284b1548e2da84e3635e6"><td class="memItemLeft" align="right" valign="top">typedef Coord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5100c8dc5f4284b1548e2da84e3635e6">Side</a></td></tr>
+<tr class="separator:a5100c8dc5f4284b1548e2da84e3635e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a29b82171406bc1c8f51c8ff569f0d5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5">Sides</a></td></tr>
 <tr class="separator:a1a29b82171406bc1c8f51c8ff569f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -152,10 +154,14 @@ Public Member Functions</h2></td></tr>
 const Idx &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ab680ef17ae0414c8a5b0b9fd05f27455">volume</a> () const </td></tr>
 <tr class="memdesc:ab680ef17ae0414c8a5b0b9fd05f27455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the volume. <br /></td></tr>
 <tr class="separator:ab680ef17ae0414c8a5b0b9fd05f27455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb77871bb8ab636d1479b770b1fff424"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb77871bb8ab636d1479b770b1fff424"></a>
-Coord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#aeb77871bb8ab636d1479b770b1fff424">side</a> (const int mu) const </td></tr>
-<tr class="memdesc:aeb77871bb8ab636d1479b770b1fff424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the given side. <br /></td></tr>
-<tr class="separator:aeb77871bb8ab636d1479b770b1fff424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e84bdf6e1e020d746aa7bc236e3a6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8e84bdf6e1e020d746aa7bc236e3a6c"></a>
+<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5100c8dc5f4284b1548e2da84e3635e6">Side</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ad8e84bdf6e1e020d746aa7bc236e3a6c">side</a> (const int mu) const </td></tr>
+<tr class="memdesc:ad8e84bdf6e1e020d746aa7bc236e3a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the given side. <br /></td></tr>
+<tr class="separator:ad8e84bdf6e1e020d746aa7bc236e3a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0610f34ac85541d3da8b21377dd2225"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0610f34ac85541d3da8b21377dd2225"></a>
+<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5">Sides</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#af0610f34ac85541d3da8b21377dd2225">sides</a> () const </td></tr>
+<tr class="memdesc:af0610f34ac85541d3da8b21377dd2225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all sides. <br /></td></tr>
+<tr class="separator:af0610f34ac85541d3da8b21377dd2225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e0b1efb63f5ffc132b423df8a84be2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e0b1efb63f5ffc132b423df8a84be2a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a8e0b1efb63f5ffc132b423df8a84be2a">assertPointIsInRange</a> (const Idx &amp;i) const </td></tr>
 <tr class="memdesc:a8e0b1efb63f5ffc132b423df8a84be2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check that a given point is in range. <br /></td></tr>
@@ -179,10 +185,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#acb986468a63babb7173c03ea6d54ba61">oriDirOfOriAndDim</a> (const <a class="el" href="../../db/d33/Grid_8hpp.html#ac682f0879a1c598390150ca77ce82479">Orientation</a> ori, const int dim) const </td></tr>
 <tr class="memdesc:acb986468a63babb7173c03ea6d54ba61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oriented direction given orientation and dimension. <br /></td></tr>
 <tr class="separator:acb986468a63babb7173c03ea6d54ba61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c3494ad24093adc0878101c1f068d54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c3494ad24093adc0878101c1f068d54"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1c3494ad24093adc0878101c1f068d54">setSides</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af">Coords</a> &amp;extSides)</td></tr>
-<tr class="memdesc:a1c3494ad24093adc0878101c1f068d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sides and trigger the volume change. <br /></td></tr>
-<tr class="separator:a1c3494ad24093adc0878101c1f068d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c02ed6116e31376eb09e7855804899"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0c02ed6116e31376eb09e7855804899"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#aa0c02ed6116e31376eb09e7855804899">setSides</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5">Sides</a> &amp;extSides)</td></tr>
+<tr class="memdesc:aa0c02ed6116e31376eb09e7855804899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the sides and trigger the volume change. <br /></td></tr>
+<tr class="separator:aa0c02ed6116e31376eb09e7855804899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5850895ea94cf20491e1833e03909d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1f5850895ea94cf20491e1833e03909d">computeCoordsOfPoint</a> (Idx i) const </td></tr>
 <tr class="memdesc:a1f5850895ea94cf20491e1833e03909d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte the coordinate of point i.  <a href="#a1f5850895ea94cf20491e1833e03909d">More...</a><br /></td></tr>
 <tr class="separator:a1f5850895ea94cf20491e1833e03909d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,10 +200,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:abf782d6411839bd65ef3dc7dccb659c4"><td class="memItemLeft" align="right" valign="top">Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#abf782d6411839bd65ef3dc7dccb659c4">computeNeighOfPoint</a> (const Idx i, const int oriDir) const </td></tr>
 <tr class="memdesc:abf782d6411839bd65ef3dc7dccb659c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the neighbor in the oriented direction oriDir of point i.  <a href="#abf782d6411839bd65ef3dc7dccb659c4">More...</a><br /></td></tr>
 <tr class="separator:abf782d6411839bd65ef3dc7dccb659c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e71ed4fb4add7a0627448623aeb4df3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e71ed4fb4add7a0627448623aeb4df3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a6e71ed4fb4add7a0627448623aeb4df3">Grid</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af">Coords</a> &amp;sides={})</td></tr>
-<tr class="memdesc:a6e71ed4fb4add7a0627448623aeb4df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from sides. <br /></td></tr>
-<tr class="separator:a6e71ed4fb4add7a0627448623aeb4df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0508969813d3805b60f6aba3536e5b5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0508969813d3805b60f6aba3536e5b5a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a0508969813d3805b60f6aba3536e5b5a">Grid</a> (const <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5">Sides</a> &amp;<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#af0610f34ac85541d3da8b21377dd2225">sides</a>={})</td></tr>
+<tr class="memdesc:a0508969813d3805b60f6aba3536e5b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from sides. <br /></td></tr>
+<tr class="separator:a0508969813d3805b60f6aba3536e5b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -239,10 +245,10 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a984d2c3b815f52dfd0eec934d33c53ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a984d2c3b815f52dfd0eec934d33c53ac"></a>
-<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#ae8356963adc46d8ba34bf2bd080cf5af">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a984d2c3b815f52dfd0eec934d33c53ac">_sides</a></td></tr>
-<tr class="memdesc:a984d2c3b815f52dfd0eec934d33c53ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side of the grid. <br /></td></tr>
-<tr class="separator:a984d2c3b815f52dfd0eec934d33c53ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd73725701c4c945a36f1b2ec959b7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bd73725701c4c945a36f1b2ec959b7d"></a>
+<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1a29b82171406bc1c8f51c8ff569f0d5">Sides</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a1bd73725701c4c945a36f1b2ec959b7d">_sides</a></td></tr>
+<tr class="memdesc:a1bd73725701c4c945a36f1b2ec959b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Side of the grid. <br /></td></tr>
+<tr class="separator:a1bd73725701c4c945a36f1b2ec959b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa574b761d7b14da4e5093ad3531b137"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa574b761d7b14da4e5093ad3531b137"></a>
 Idx&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#afa574b761d7b14da4e5093ad3531b137">_volume</a></td></tr>
 <tr class="memdesc:afa574b761d7b14da4e5093ad3531b137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume of the grid. <br /></td></tr>
@@ -254,7 +260,7 @@ class SUNphi::Grid&lt; NDims, Coord, Idx, Flags &gt;</h3>
 
 <p>A grid of points spanning an hypercubic grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00400">400</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00402">402</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ae8356963adc46d8ba34bf2bd080cf5af"></a>
 <div class="memitem">
@@ -269,7 +275,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 </div><div class="memdoc">
 <p>Type to hold sizes, coordinate, etc </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00414">414</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +292,24 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 </div><div class="memdoc">
 <p>Type to hold the neighbors </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00414">414</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5100c8dc5f4284b1548e2da84e3635e6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, int Flags = GRID_DEFAULT_FLAGS&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef Coord <a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html">SUNphi::Grid</a>&lt; NDims, Coord, Idx, Flags &gt;::<a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html#a5100c8dc5f4284b1548e2da84e3635e6">Side</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Type to hold side </p>
+
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +326,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 </div><div class="memdoc">
 <p>Type to hold sides </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00414">414</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +343,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 </div><div class="memdoc">
 <p>Type to hold volume </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00414">414</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00416">416</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +376,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <p>Maximal value</p>
 <p>Coord mu value </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00491">491</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00506">506</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +410,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <p>Quozient, corresponding to the index of the remaining <code>nDims-1</code> components</p>
 <p>Remainder, corresponding to the coordinate </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00580">580</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00596">596</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +457,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00684">684</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00700">700</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -472,7 +495,7 @@ template&lt;typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00511">511</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00527">527</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -510,7 +533,7 @@ template&lt;typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00519">519</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00535">535</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +571,7 @@ template&lt;typename F &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00527">527</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00543">543</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -579,7 +602,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <p>Orientation of an oriented directions. </p>
 <p>Output orientation </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00536">536</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00552">552</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -612,7 +635,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <p>Returned point</p>
 <p><a class="el" href="../../dd/dca/classSUNphi_1_1Grid.html" title="A grid of points spanning an hypercubic grid. ">Grid</a> side </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00611">611</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00627">627</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +665,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <p>Set the volume, calling computing routine. </p>
 <p>Output volume, initially 1 </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00424">424</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00427">427</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +726,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00637">637</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00653">653</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -730,7 +753,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      Flags</div></div><!-- fragment -->
 <p>Flags of the class. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00441">441</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00444">444</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -756,7 +779,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      getFlag&lt;flags,GridFlag::HASHED&gt;</div></div><!-- fragment -->
 <p>Extract the flag determining whether is hashing. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00445">445</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00448">448</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -782,7 +805,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      getFlag&lt;flags,GridFlag::SHIFTED_BC&gt;</div></div><!-- fragment -->
 <p>Extract the flag determining whether BC might be shifted. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00449">449</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00452">452</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +831,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      NDims</div></div><!-- fragment -->
 <p>Number of dimensions. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00453">453</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00456">456</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -834,7 +857,7 @@ template&lt;int NDims = 4, typename Coord  = int32_t, typename Idx  = int64_t, i
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      2*NDims</div></div><!-- fragment -->
 <p>Number of oriented directions. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00457">457</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00460">460</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

@@ -469,7 +469,7 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Set aliasing according to a passed pointer (provided class member)</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>This is mostly broken </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00139">139</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00138">138</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -486,12 +486,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">    template &lt;<span class="keyword">typename</span>...Oth&gt;     <span class="comment">/* Type of the other quantity     */</span>  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">    DECLAUTO</a> operator()(Oth&amp;&amp;...oth) QUALIFIER  \</div><div class="line">    {                                   \</div><div class="line">      if constexpr(0)                           \</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Using CRTP to cast call operator&quot;</span>&lt;&lt;std::endl;       \</div><div class="line">                                    \</div><div class="line">      return (~(*<span class="keyword">this</span>)).eval(forw&lt;Oth&gt;(oth)...);            \</div><div class="line">    }                                   <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
-<div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">    template &lt;<span class="keyword">typename</span>...Oth&gt;     <span class="comment">/* Type of the other quantity     */</span>  <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">    DECLAUTO</a> operator()(Oth&amp;&amp;...oth) QUALIFIER  \</div><div class="line">    {                                   \</div><div class="line">      if constexpr(0)                           \</div><div class="line">    std::cout&lt;&lt;<span class="stringliteral">&quot;Using CRTP to cast call operator&quot;</span>&lt;&lt;std::endl;       \</div><div class="line">                                    \</div><div class="line">      return                                \</div><div class="line">    (~(*this)).eval(forw&lt;Oth&gt;(oth)...); \</div><div class="line">    }</div><div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment -->
 <p>Provide the call operator with a given qualifier. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00279">279</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00277">277</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +542,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Provides a <code>getMergedCompsView</code> method, taking Is as template parameter. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00218">218</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00216">216</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,8 +569,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">LONG_DESCRIPTION                    \</div><div class="line">  template &lt;typename Tref&gt;              \</div><div class="line">  bool isAliasing(<span class="keyword">const</span> Tref&amp; alias) <span class="keyword">const</span>      \</div><div class="line">  {                         \</div><div class="line">    __VA_ARGS__;                    \</div><div class="line">  }                         <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
-</div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">LONG_DESCRIPTION                    \</div><div class="line">  template &lt;typename Tref&gt;              \</div><div class="line">  bool isAliasing(<span class="keyword">const</span> Tref&amp; alias) <span class="keyword">const</span>      \</div><div class="line">  {                         \</div><div class="line">    __VA_ARGS__;                    \</div><div class="line">  }</div></div><!-- fragment -->
 <p>Provides a <code>isAliasing</code> method, taking <code>alias</code> as argument. </p>
 
 <p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00127">127</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
@@ -601,13 +599,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a>(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</div><div class="line">                                    \           \</div><div class="line">  template &lt;<span class="keyword">typename</span> Is,                        \</div><div class="line">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</div><div class="line">  static constexpr <span class="keywordtype">void</span> assertMergeableWith()               \</div><div class="line">  {                                 \</div><div class="line">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,<span class="stringliteral">&quot;Unable to merge this components&quot;</span>); \</div><div class="line">  }                                 \</div><div class="line">                                    \           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMaximallyMergedCompsView()                \</div><div class="line">  {                                 \</div><div class="line">    return getMergedCompsView&lt;MergeableComps&gt;();            \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">  SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="BaseSmET_8hpp_html_a8c1e18cde1d9bcf226b3b9457181cd52"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a></div><div class="ttdeci">#define USING(DESCRIPTION, LONG_DESCRIPTION, NAME,...)</div><div class="ttdoc">Provides an attribute. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00027">BaseSmET.hpp:27</a></div></div>
-<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a>(,LONG_DESCRIPTION,MergeableComps,__VA_ARGS__); \</div><div class="line">                                    \           \</div><div class="line">  template &lt;<span class="keyword">typename</span> Is,                        \</div><div class="line">        typename=EnableIf&lt;isIntSeq&lt;Is&gt;&gt;&gt;                \</div><div class="line">  static constexpr <span class="keywordtype">void</span> assertMergeableWith()               \</div><div class="line">  {                                 \</div><div class="line">    static_assert(Unqualified&lt;MergeableComps&gt;::template isSubsetOf&lt;Is&gt;,<span class="stringliteral">&quot;Unable to merge this components&quot;</span>); \</div><div class="line">  }                                 \</div><div class="line">                                    \           <a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">\</a></div><div class="line"><a class="code" href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">  DECLAUTO</a> getMaximallyMergedCompsView()                \</div><div class="line">  {                                 \</div><div class="line">    return getMergedCompsView&lt;MergeableComps&gt;();            \</div><div class="line">  }</div><div class="ttc" id="BaseSmET_8hpp_html_a8c1e18cde1d9bcf226b3b9457181cd52"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a8c1e18cde1d9bcf226b3b9457181cd52">USING</a></div><div class="ttdeci">#define USING(DESCRIPTION, LONG_DESCRIPTION, NAME,...)</div><div class="ttdoc">Provides an attribute. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00027">BaseSmET.hpp:27</a></div></div>
 <div class="ttc" id="UniversalReferences_8hpp_html_a2bb7a9062a47cadd6e4c13285953aff0"><div class="ttname"><a href="../../d2/d7d/UniversalReferences_8hpp.html#a2bb7a9062a47cadd6e4c13285953aff0">DECLAUTO</a></div><div class="ttdeci">#define DECLAUTO</div><div class="ttdoc">Short name for decltype(auto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d7d/UniversalReferences_8hpp_source.html#l00036">UniversalReferences.hpp:36</a></div></div>
 </div><!-- fragment --><p>Provide the MergeableComps type, <code>assertMergebaleWith</code> and <code>getMaximallyMergedCompsView</code> </p>
 <p>The type must be an ordered <code>IntSeq</code> indicating the splitting point of the <code>TensKind</code>, as in this example:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;// Maximal splitting</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;Using Tk=</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  TensKind&lt;Spin,Col&gt;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;PROVIDE_MERGEABLE_COMPS(/*! Description */,IntSeq&lt;0,2&gt;);</div></div><!-- fragment --> 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00180">180</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00179">179</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -640,11 +637,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(LONG_DESCRIPTION,               \</div><div class="line">              InsertIntSeqInOrderedIntSeq&lt;          \</div><div class="line">              IntSeq&lt;POS,POS+1&gt;,    \</div><div class="line">              IN_MERGEABLE_COMPS,   \</div><div class="line">              IntSeq&lt;0,0&gt;,          \</div><div class="line">              <span class="keyword">true</span>&gt;)               </div><div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00180">BaseSmET.hpp:180</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a>(LONG_DESCRIPTION,               \</div><div class="line">              InsertIntSeqInOrderedIntSeq&lt;          \</div><div class="line">              IntSeq&lt;POS,POS+1&gt;,    \</div><div class="line">              IN_MERGEABLE_COMPS,   \</div><div class="line">              IntSeq&lt;0,0&gt;,          \</div><div class="line">              <span class="keyword">true</span>&gt;)               </div><div class="ttc" id="BaseSmET_8hpp_html_a04fb747dea87a85731b3dbc922b2eacd"><div class="ttname"><a href="../../dc/d6b/BaseSmET_8hpp.html#a04fb747dea87a85731b3dbc922b2eacd">PROVIDE_MERGEABLE_COMPS</a></div><div class="ttdeci">#define PROVIDE_MERGEABLE_COMPS(LONG_DESCRIPTION,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d6b/BaseSmET_8hpp_source.html#l00179">BaseSmET.hpp:179</a></div></div>
 </div><!-- fragment -->
 <p>States that the class has no mergeable component. </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00203">203</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00201">201</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +661,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  using PosOfRef ## ID ## TcsInResTk=                   \</div><div class="line">    PosOfTypesNotAsserting&lt;typename Tk::types,typename TK ## ID::types&gt;; \</div><div class="line">                                    \ \</div><div class="line">  using PosOfRef ## ID ## PresTcsInResTk=               \</div><div class="line">    FilterVariadicClassPos&lt;IsPresent,PosOfRef ## ID ## TcsInResTk&gt;; \</div><div class="line">                                    \           \</div><div class="line">  template &lt;typename MD&gt; <span class="comment">/* Required merging delimiters */</span>      \</div><div class="line">  using MergedDelims ## ID=                     \</div><div class="line">    IntSeqGetElsAfterAppending&lt;TK ## ID::nTypes,false,MD,PosOfRef ## ID ## TcsInResTk&gt;</div></div><!-- fragment --><p>Provides the <code>MergedDelim</code> attribute for Refs of a given <code>ID</code> </p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000007">Todo:</a></b></dt><dd>Add some more explenation... </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00238">238</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00236">236</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -713,8 +710,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    \           \           \           \</div><div class="line">  template &lt;<span class="keyword">typename</span> Lhs,                              <span class="comment">/* Type of the lhs \c SmET              */</span> \</div><div class="line">        typename Rhs,                              <span class="comment">/* Type of the rhs \c SMET              */</span> <a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">\</a></div><div class="line"><a class="code" href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">	    SFINAE_ON_TEMPLATE_ARG</a>(is ## SMET&lt;Rhs&gt;)&gt;   <span class="comment">/* Enable only for the \c SMET required */</span> \</div><div class="line">  void <a class="code" href="../../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147">assign</a>(Lhs&amp;&amp; lhs,    \</div><div class="line">          Rhs&amp;&amp; rhs)    \</div><div class="line">  {                                 \</div><div class="line">    if(1)                               \</div><div class="line">      {                                 \</div><div class="line">    using <span class="keyword">namespace </span><a class="code" href="../../d8/dcc/namespacestd.html">std</a>;                        \</div><div class="line">    cout&lt;&lt;<span class="stringliteral">&quot;Moving &quot;</span> #SMET <span class="stringliteral">&quot;to lhs&quot;</span>&lt;&lt;endl;               \</div><div class="line">      }                                 \</div><div class="line">    assign(LHS_FUN(forw&lt;Lhs&gt;(lhs)),rhs.ref);                \</div><div class="line">  }                                 <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">  SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
-<div class="ttc" id="Assign_8hpp_html_ac0df41a952400f51a5e936770034b147"><div class="ttname"><a href="../../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147">SUNphi::assign</a></div><div class="ttdeci">void assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d9b/Assign_8hpp_source.html#l00140">Assign.hpp:140</a></div></div>
-<div class="ttc" id="SwallowSemicolon_8hpp_html_a3fef1fcd49e2b4bdbc23f0c35109e24d"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00049">SwallowSemicolon.hpp:49</a></div></div>
+<div class="ttc" id="Assign_8hpp_html_ac0df41a952400f51a5e936770034b147"><div class="ttname"><a href="../../d1/d9b/Assign_8hpp.html#ac0df41a952400f51a5e936770034b147">SUNphi::assign</a></div><div class="ttdeci">void assign(Lhs &amp;&amp;lhs, Rhs &amp;&amp;rhs, DummyTypes...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d9b/Assign_8hpp_source.html#l00138">Assign.hpp:138</a></div></div>
+<div class="ttc" id="SwallowSemicolon_8hpp_html_a3fef1fcd49e2b4bdbc23f0c35109e24d"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#a3fef1fcd49e2b4bdbc23f0c35109e24d">SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_GLOBAL_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00026">SwallowSemicolon.hpp:26</a></div></div>
 <div class="ttc" id="SFINAE_8hpp_html_a2a92e61beb69be134a70c3ecbc4cd3e1"><div class="ttname"><a href="../../d4/d77/SFINAE_8hpp.html#a2a92e61beb69be134a70c3ecbc4cd3e1">SFINAE_ON_TEMPLATE_ARG</a></div><div class="ttdeci">#define SFINAE_ON_TEMPLATE_ARG(...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d77/SFINAE_8hpp_source.html#l00024">SFINAE.hpp:24</a></div></div>
 </div><!-- fragment --><p>Defines a simple way to swap an SmET from rhs to lhs</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd><p class="startdd">why can't we make only const &amp; on rhs? </p>
@@ -722,7 +719,7 @@ Variables</h2></td></tr>
 </dd></dl>
 <p>&lt; External builder </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00301">301</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00299">299</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,14 +737,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a>(eval,__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(compSize,__VA_ARGS__);       <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(isAliasing,__VA_ARGS__);     <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(isAssignable,__VA_ARGS__);       <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(isStoring,__VA_ARGS__);      <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(MergeableComps,__VA_ARGS__);     <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(assertMergeableWith,__VA_ARGS__);    <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(getMergedCompsView,__VA_ARGS__); <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(<a class="code" href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">Tk</a>,__VA_ARGS__);         <a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">\</a></div><div class="line"><a class="code" href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">  STATIC_ASSERT_HAS_MEMBER</a>(Fund,__VA_ARGS__)</div><div class="ttc" id="namespaceSUNphi_1_1__RelBindInternalChecks_html_abfc881e409b80ef0f9da6860c9ee22a4"><div class="ttname"><a href="../../df/d7d/namespaceSUNphi_1_1__RelBindInternalChecks.html#abfc881e409b80ef0f9da6860c9ee22a4">SUNphi::_RelBindInternalChecks::Tk</a></div><div class="ttdeci">TensKind&lt; Tc1, Tc2 &gt; Tk</div><div class="ttdoc">TensorKind of the expression. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/da4/RelBind_8hpp_source.html#l00259">RelBind.hpp:259</a></div></div>
-<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00561">TypeTraits.hpp:561</a></div></div>
+<div class="ttc" id="TypeTraits_8hpp_html_a9f33da613c7ec375f2ceae55997e2ee1"><div class="ttname"><a href="../../d0/d81/TypeTraits_8hpp.html#a9f33da613c7ec375f2ceae55997e2ee1">STATIC_ASSERT_HAS_MEMBER</a></div><div class="ttdeci">#define STATIC_ASSERT_HAS_MEMBER(TAG,...)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d81/TypeTraits_8hpp_source.html#l00560">TypeTraits.hpp:560</a></div></div>
 </div><!-- fragment --><p>Defines the check for a SmET</p>
 <dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd><p class="startdd">add costRead </p>
 <p>add costEval </p>
 <p class="enddd">add isAliasing </p>
 </dd></dl>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00259">259</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00257">257</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -933,7 +930,7 @@ template&lt;typename Type &gt; </div>
 </div><div class="memdoc">
 <p>Intemediate function to distinguish the non-class case </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -993,7 +990,7 @@ template&lt;typename Type &gt; </div>
 </div><div class="memdoc">
 <p>Intemediate function to distinguish the non-class case </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00231">231</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1030,7 @@ template&lt;typename Type &gt; </div>
 </div><div class="memdoc">
 <p>Intemediate function to distinguish the non-class case </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1070,7 @@ template&lt;typename Type &gt; </div>
 </div><div class="memdoc">
 <p>Intemediate function to distinguish the non-class case </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1129,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) assertMergeableWith</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00215">215</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00213">213</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1183,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) getMergedCompsView</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00233">233</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00231">231</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1222,7 +1219,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) isAssignable</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00153">153</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00152">152</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>
@@ -1258,7 +1255,7 @@ template&lt;typename Type &gt; </div>
 <p>Detect if <code>Type</code> has member (variable or method) MergeableComps</p>
 <p>Uses SFINAE to induce ambiguity in the detection of the member </p>
 
-<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00212">212</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html#l00210">210</a> of file <a class="el" href="../../dc/d6b/BaseSmET_8hpp_source.html">BaseSmET.hpp</a>.</p>
 
 </div>
 </div>

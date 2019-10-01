@@ -19,6 +19,7 @@ var searchData=
   ['inserttruetwinnedpos',['InsertTrueTwinnedPos',['../d8/df8/classSUNphi_1_1TensKind.html#aac74bdcfef58ce9fffe7e5418efc2f68',1,'SUNphi::TensKind']]],
   ['inserttruetwinnedposoftuple',['InsertTrueTwinnedPosOfTuple',['../d3/d89/TwinsComp_8hpp.html#afe2b4376fdd1cfa02460b88b5bbe852a',1,'SUNphi']]],
   ['instant',['Instant',['../d8/dbf/Timer_8hpp.html#a75d696e3b4708391d314bca82abbe472',1,'SUNphi']]],
+  ['instruction',['Instruction',['../d6/dc9/classSUNphi_1_1Partitioner.html#a436dd808d8526c2e135b0a1c88713ddc',1,'SUNphi::Partitioner']]],
   ['instructions',['instructions',['../d6/d69/classSUNphi_1_1PartitioningProgram.html#ac050e94b9aea9dc9a9aea49f20009698',1,'SUNphi::PartitioningProgram']]],
   ['intlistgetel_2ehpp',['IntListGetEl.hpp',['../da/d00/IntListGetEl_8hpp.html',1,'']]],
   ['intlistoperations_2ehpp',['IntListOperations.hpp',['../d5/d3e/IntListOperations_8hpp.html',1,'']]],

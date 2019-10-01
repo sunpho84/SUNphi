@@ -174,11 +174,11 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0b1be5741231d25243006d58dec4eecb"></a>
-template&lt;int NDims, typename Coord &gt; </td></tr>
-<tr class="memitem:a0b1be5741231d25243006d58dec4eecb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d33/Grid_8hpp.html#a0b1be5741231d25243006d58dec4eecb">SUNphi::Grid</a> (const Coord(&amp;sides)[NDims]) -&gt; Grid&lt; NDims, int &gt;</td></tr>
-<tr class="memdesc:a0b1be5741231d25243006d58dec4eecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br /></td></tr>
-<tr class="separator:a0b1be5741231d25243006d58dec4eecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7436d3c2235728a9682ff12055b7fb3a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7436d3c2235728a9682ff12055b7fb3a"></a>
+template&lt;int NDims, typename Side &gt; </td></tr>
+<tr class="memitem:a7436d3c2235728a9682ff12055b7fb3a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/d33/Grid_8hpp.html#a7436d3c2235728a9682ff12055b7fb3a">SUNphi::Grid</a> (const Side(&amp;sides)[NDims]) -&gt; Grid&lt; NDims, int &gt;</td></tr>
+<tr class="memdesc:a7436d3c2235728a9682ff12055b7fb3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deduction guide for bracket list. <br /></td></tr>
+<tr class="separator:a7436d3c2235728a9682ff12055b7fb3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -205,7 +205,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div><div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh;  \           \</div><div class="line">  typedef Idx Vol;              \           \</div><div class="line">  typedef Coords Sides</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line">    \</div><div class="line">  typedef std::array&lt;Coord,NDims&gt; Coords;   \       \</div><div class="line">  typedef std::array&lt;Coord,2*NDims&gt; Neigh;  \           \</div><div class="line">  typedef Idx Vol;              \           \</div><div class="line">  typedef Coord Side;               \           \</div><div class="line">  typedef Coords Sides</div></div><!-- fragment -->
 <p>Provide the type needed to deal with grids. </p>
 
 <p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
@@ -225,7 +225,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    combineFlags&lt;GridFlag::HASHED&gt;</div></div><!-- fragment -->
 <p>Default parameters for grid. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00059">59</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    {-1,+1}</div></div><!-- fragment -->
 <p>Offset to move <code>BW</code> or <code>FW</code>. </p>
 
-<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../db/d33/Grid_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../db/d33/Grid_8hpp_source.html">Grid.hpp</a>.</p>
 
 </div>
 </div>

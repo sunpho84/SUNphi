@@ -40,16 +40,16 @@ var NAVTREEINDEX =
 [
 ".html",
 "d1/d7a/TensStor_8hpp.html#a1a9fe1be16ec1238d547811e25c7358b",
-"d2/df0/Binarize_8hpp.html#aa352562a9784899e7c13543c4cbecf3a",
-"d4/d4b/classSUNphi_1_1Assigner.html#a0cec6cc86dbecb8d68ff15e3f2c4eb1f",
-"d5/dd3/classSUNphi_1_1Transposer.html#a09430932afa1895571644cb219ecd732",
-"d7/d05/TrueRandomGenerator_8hpp.html#a9c7bc8007b11140431020e8e6320a4c9",
-"d9/d21/SmET_8hpp.html",
-"da/df3/Wrap_8hpp.html#a05f2194c956d5dc8de2a1e3b866ab65c",
-"dc/d5d/classSUNphi_1_1MulAdder.html#af534f9a021ee75bbf8bb5d09c90e26e4",
-"dd/d8d/structSUNphi_1_1__RelBindInternalChecks_1_1Tc2.html#aff07721fd4455f1b9859c166766f8e7c",
-"de/dee/structSUNphi_1_1Compl.html#a184b55c1c6edab8deb0340485991e897",
-"namespaces.html"
+"d2/df0/Binarize_8hpp.html#a652db0f1ea68e3c3bbbefedf9b4ef06b",
+"d4/d48/classSUNphi_1_1ShadowGrid.html#a5656b679056ac33a7e6c4c2bf08917bd",
+"d5/db6/classPartitioningLevel.html#ad0d8f61c0bb796293be5b20c97f6b804",
+"d7/d03/structSUNphi_1_1HasMember__Tk.html#a3427456e0d672c2e65172d131ffd28e2",
+"d9/d02/structSUNphi_1_1ConstrainHasMember__isAliasing.html",
+"da/def/structSUNphi_1_1IntSeq.html#a064d619da46d1aef19bdbd40f050dae8",
+"dc/d5d/classSUNphi_1_1MulAdder.html#a469eb7e3a604ef10223065248389e641a404d2838c7bca02feca06123637ce361",
+"dd/d61/structSUNphi_1_1CnSpin.html#aaa97bc58a55b2ed4a12b8a8e2fbee9dc",
+"de/da3/classfuffa.html#ac3815f1c5a714dee575b904f413c0400",
+"functions_vars_k.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -2,6 +2,7 @@ var classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01fal
 [
     [ "Coords", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#afd0a86b338970550a34e6eb1e31308bc", null ],
     [ "Neigh", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a2925c7f923c561b203ecd64a17b8b3f2", null ],
+    [ "Side", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#acde2ce82fdb609b472d2783249e1df05", null ],
     [ "Sides", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#ae1d09786911e88bc25e37302a8869fde", null ],
     [ "Vol", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#a6029d4ee1f594c1b6d1ab51fcaa770c3", null ],
     [ "getShiftedCoordPerpToMove", "d4/dd1/classSUNphi_1_1GridShiftableBC_3_01T_00_01NDims_00_01Coord_00_01Idx_00_01false_01_4.html#af7527c8f5c6c06036019c93488abe426", null ],

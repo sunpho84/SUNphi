@@ -194,8 +194,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"> \</div><div class="line">    template &lt;<span class="keyword">class</span>...Comps,                              <span class="comment">/* Component types                                        */</span> \</div><div class="line">          class=ConstrainAreIntegrals&lt;Comps...&gt;,      <span class="comment">/* Force the components to be integer-like                */</span> \</div><div class="line">          class=ConstrainNTypes&lt;Tk::nTypes,Comps...&gt;&gt; <span class="comment">/* Constrain the component to be in the same number of Tk */</span> \</div><div class="line">    QUALIFIER Fund&amp; eval(<span class="keyword">const</span> Comps&amp;...comps) QUALIFIER   \</div><div class="line">    {                                   \</div><div class="line">      if(<a class="code" href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a>)                     \</div><div class="line">    ((<a class="code" href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">runLog</a>()&lt;&lt;<span class="stringliteral">&quot;Components: &quot;</span>&lt;&lt;&amp;v) * ... *comps);          \</div><div class="line">                                    \</div><div class="line">      return                                \</div><div class="line">    v-&gt;eval(forw&lt;const Comps&gt;(comps)...);               \</div><div class="line">    }                                   <a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">\</a></div><div class="line"><a class="code" href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">    SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttc" id="Logger_8hpp_html_a19393a3bdd006493fb56d5af4118a1d4"><div class="ttname"><a href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">SUNphi::runLog</a></div><div class="ttdeci">Logger runLog</div><div class="ttdoc">Global logger. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/MinimalLogger_8hpp_source.html#l00015">MinimalLogger.hpp:15</a></div></div>
-<div class="ttc" id="SwallowSemicolon_8hpp_html_af78aafc0cd716f679c6879a0fba48da0"><div class="ttname"><a href="../../d5/d8c/SwallowSemicolon_8hpp.html#af78aafc0cd716f679c6879a0fba48da0">SWALLOW_SEMICOLON_AT_CLASS_SCOPE</a></div><div class="ttdeci">#define SWALLOW_SEMICOLON_AT_CLASS_SCOPE</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8c/SwallowSemicolon_8hpp_source.html#l00030">SwallowSemicolon.hpp:30</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"> \</div><div class="line">    template &lt;<span class="keyword">class</span>...Comps,                              <span class="comment">/* Component types                                        */</span> \</div><div class="line">          class=ConstrainAreIntegrals&lt;Comps...&gt;,      <span class="comment">/* Force the components to be integer-like                */</span> \</div><div class="line">          class=ConstrainNTypes&lt;Tk::nTypes,Comps...&gt;&gt; <span class="comment">/* Constrain the component to be in the same number of Tk */</span> \</div><div class="line">    QUALIFIER Fund&amp; eval(<span class="keyword">const</span> Comps&amp;...comps) QUALIFIER   \</div><div class="line">    {                                   \</div><div class="line">      if(<a class="code" href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a>)                     \</div><div class="line">    ((<a class="code" href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">runLog</a>()&lt;&lt;<span class="stringliteral">&quot;Components: &quot;</span>&lt;&lt;&amp;v) * ... *comps);          \</div><div class="line">                                    \</div><div class="line">      return                                \</div><div class="line">    v-&gt;eval(forw&lt;const Comps&gt;(comps)...);               \</div><div class="line">    }</div><div class="ttc" id="Logger_8hpp_html_a19393a3bdd006493fb56d5af4118a1d4"><div class="ttname"><a href="../../d9/d11/Logger_8hpp.html#a19393a3bdd006493fb56d5af4118a1d4">SUNphi::runLog</a></div><div class="ttdeci">Logger runLog</div><div class="ttdoc">Global logger. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d9a/MinimalLogger_8hpp_source.html#l00015">MinimalLogger.hpp:15</a></div></div>
 <div class="ttc" id="TensClass_8hpp_html_a22dc080000bca54b7cc61def5e2ae9ce"><div class="ttname"><a href="../../dc/d8f/TensClass_8hpp.html#a22dc080000bca54b7cc61def5e2ae9ce">DEBUG_TENS_COMPONENTS</a></div><div class="ttdeci">#define DEBUG_TENS_COMPONENTS</div><div class="ttdoc">Enable or not printing the components. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d8f/TensClass_8hpp_source.html#l00174">TensClass.hpp:174</a></div></div>
 </div><!-- fragment -->
 <p>Provides either the const or non-const evaluator. </p>
@@ -292,7 +291,7 @@ template&lt;typename SMET , typename... DummyTypes&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00209">209</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00208">208</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +319,7 @@ template&lt;typename SMET , TypeIf&lt;(isNnarySmET&lt; SMET &gt; and not isTens&
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00221">221</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00220">220</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
@@ -348,7 +347,7 @@ template&lt;typename SMET , TypeIf&lt;(isNnarySmET&lt; SMET &gt; and isTens&lt; 
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00231">231</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html#l00230">230</a> of file <a class="el" href="../../dc/d8f/TensClass_8hpp_source.html">TensClass.hpp</a>.</p>
 
 </div>
 </div>
