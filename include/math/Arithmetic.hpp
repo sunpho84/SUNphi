@@ -99,6 +99,16 @@ namespace SUNphi
     return
       b;
   }
+  
+  /// Return least common multiple between \c a and \c b
+  template <typename I1,
+	    typename I2>
+  auto leastCommonMultiple(const I1& a,
+			   const I2& b)
+  {
+    return
+      a/greatestCommonDivisor(a,b)*b;
+  }
 }
 
 #endif
